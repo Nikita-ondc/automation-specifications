@@ -1,5 +1,5 @@
 meta:
-  domain: ONDC:FIS13
+  domain: 'ONDC:FIS13'
   version: 2.0.0
   flowId: CD_Balance_Error_Hospicash_Insurance
   config_version: 0.0.0001
@@ -8,11 +8,11 @@ meta:
   flowName: CD Balance Error Hospicash Insurance
 transaction_data:
   transaction_id: 34cc979b-9d34-41db-b0e6-1bba96e6efc0
-  latest_timestamp: 1970-01-01T00:00:00.000Z
+  latest_timestamp: '1970-01-01T00:00:00.000Z'
   bap_id: bap.example.com
-  bap_uri: https://bap.example.com
+  bap_uri: 'https://bap.example.com'
   bpp_id: bpp.example.com
-  bpp_uri: https://bpp.example.com
+  bpp_uri: 'https://bpp.example.com'
 steps:
   - api: search
     action_id: search_purchase_journey_hospicash
@@ -21,23 +21,26 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZSgKICBleGlzdGluZ1BheWxvYWQsCiAgc2Vzc2lvbkRhdGEKKSB7CiAgZGVsZXRlIGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LmJwcF91cmkKICBkZWxldGUgZXhpc3RpbmdQYXlsb2FkLmNvbnRleHQuYnBwX2lkCgogIGNvbnN0IG5vdyA9IG5ldyBEYXRlKCkKICBjb25zdCBlbmQgPSBuZXcgRGF0ZShub3cpCiAgZW5kLnNldERhdGUobm93LmdldERhdGUoKSArIDIpCgogIGlmIChleGlzdGluZ1BheWxvYWQubWVzc2FnZT8uaW50ZW50Py5mdWxmaWxsbWVudD8uc3RvcHM/LlswXT8udGltZT8ucmFuZ2UpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmludGVudC5mdWxmaWxsbWVudC5zdG9wc1swXS50aW1lLnJhbmdlLnN0YXJ0ID0gbm93LnRvSVNPU3RyaW5nKCkKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmludGVudC5mdWxmaWxsbWVudC5zdG9wc1swXS50aW1lLnJhbmdlLmVuZCA9IGVuZC50b0lTT1N0cmluZygpCiAgfQoKICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkCn0K
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmKCF0YXJnZXRQYXlsb2FkKXsKICAgIHJldHVybiB7dmFsaWQ6ZmFsc2UsY29kZTo0MDAsZGVzY3JpcHRpb246InBheWxvYWQgbWlzc2luZyJ9CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CmNvbnNvbGUubG9nKCJzZXNzaW9uRGF0YWFhYWFhIikKCiAgaWYgKCFzZXNzaW9uRGF0YSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBzZXNzaW9uRGF0YSIgfTsKICB9CgogIGlmICghc2Vzc2lvbkRhdGEuY29sbGVjdGVkX2J5KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGNvbGxlY3RlZF9ieSBpbiBzZXNzaW9uRGF0YSIgfTsKICB9CgogIGlmICghWyJCQVAiLCAiQlBQIl0uaW5jbHVkZXMoc2Vzc2lvbkRhdGEuY29sbGVjdGVkX2J5KSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiSW52YWxpZCBjb2xsZWN0ZWRfYnkgaW4gc2Vzc2lvbkRhdGEiIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
-          domain: ONDC:FIS13
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
+          domain: 'ONDC:FIS13'
           location:
             city:
-              code: "*"
+              code: '*'
             country:
               code: IND
-          message_id: 05bfc195-6be4-44d0-b681-9ac6e122ea16
-          timestamp: 2026-03-17T09:02:44.076Z
-          transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
+          message_id: f4a40953-19cf-44f3-b5a6-3d3a03c19e63
+          timestamp: '2026-02-11T12:06:15.006Z'
+          transaction_id: 081cdf69-d8c3-465b-9d54-1d5f0bcf9f6b
           ttl: PT30S
           version: 2.0.0
         message:
@@ -45,57 +48,38 @@ steps:
             category:
               descriptor:
                 code: MICRO_HOSPICASH_INSURANCE
-            payment:
-              collected_by: BPP
             provider:
               id: P1
               items:
-                - category_ids:
-                    - C2
-                  descriptor:
-                    name: Micro Hospicash Insurance
-                    short_desc: ABC Individual Insurance Class
-                  id: I1
+                - id: I1
                   tags:
                     - descriptor:
                         code: BAP_INPUTS
                       list:
                         - descriptor:
                             code: BUYER_NAME
-                            short_desc: Describes the format as 'Salutation | First Name | Middle Name |
-                              Last Name'
-                          value: ""
+                          value: Mr. | Joe | Wick | Adams
                         - descriptor:
                             code: BUYER_PHONE_NUMBER
-                            short_desc: "Format: Country code + 10-digit mobile number (e.g.,
-                              91-9876543210)"
-                          value: ""
+                          value: +91-9988776655
                         - descriptor:
                             code: BUYER_PAN_NUMBER
-                            short_desc: PAN number in alphanumeric format
-                          value: ""
+                          value: RLPIS315T
                         - descriptor:
                             code: BUYER_DOB
-                            short_desc: "Format: DD/MM/YYYY"
-                          value: ""
+                          value: 17/12/2001
                         - descriptor:
                             code: BUYER_GENDER
-                            short_desc: "Values: male, female, transgender"
-                          value: ""
+                          value: M
                         - descriptor:
                             code: SUM_INSURED
-                            short_desc: Numerical value without separators
-                          value: ""
+                          value: '100000'
                         - descriptor:
                             code: BUYER_EMAIL
-                          value: ""
+                          value: john.doe@example.com
                         - descriptor:
                             code: TENURE
-                            short_desc: ISO 8601 duration format (e.g., P6M, P1Y)
-                          value: ""
-                  time:
-                    duration: P1Y
-                    label: TENURE
+                          value: P1M
               tags:
                 - descriptor:
                     code: MASTER_POLICY
@@ -103,6 +87,8 @@ steps:
                     - descriptor:
                         code: POLICY_ID
                       value: e103b4a5-10f8-42c7-b888-dbf0e2edd696
+            payment:
+              collected_by: BPP
             tags:
               - descriptor:
                   code: BAP_TERMS
@@ -111,10 +97,10 @@ steps:
                 list:
                   - descriptor:
                       code: STATIC_TERMS
-                    value: https://api.example-bap.com/booking/terms
+                    value: 'https://api.example-bap.com/booking/terms'
                   - descriptor:
                       code: OFFLINE_CONTRACT
-                    value: "true"
+                    value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -124,30 +110,35 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        collected_by: $.message.intent.payment.collected_by
+        provider_id: $.message.intent.provider.id
+        tags: '$.message.intent.provider.tags[*]'
+        user_tags: '$.message.intent.provider.items[*].tags[*]'
       inputs:
         oldInputs:
           - name: hospicash_insurance_form
             label: Hospicash Insurance Form
             type: search_hospicash_fis13
-            payloadField: ""
+            payloadField: ''
         id: old_inputs
     examples:
       - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
+        description: >-
+          Auto-generated example for action "search" in flow
           "CD_Balance_Error_Hospicash_Insurance"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
-            domain: ONDC:FIS13
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
+            domain: 'ONDC:FIS13'
             location:
               city:
-                code: "*"
+                code: '*'
               country:
                 code: IND
             message_id: 05bfc195-6be4-44d0-b681-9ac6e122ea16
-            timestamp: 2026-03-17T09:02:44.076Z
+            timestamp: '2026-03-17T09:02:44.076Z'
             transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
             ttl: PT30S
             version: 2.0.0
@@ -173,37 +164,39 @@ steps:
                         list:
                           - descriptor:
                               code: BUYER_NAME
-                              short_desc: Describes the format as 'Salutation | First Name | Middle Name |
-                                Last Name'
-                            value: ""
+                              short_desc: >-
+                                Describes the format as 'Salutation | First Name
+                                | Middle Name | Last Name'
+                            value: ''
                           - descriptor:
                               code: BUYER_PHONE_NUMBER
-                              short_desc: "Format: Country code + 10-digit mobile number (e.g.,
-                                91-9876543210)"
-                            value: ""
+                              short_desc: >-
+                                Format: Country code + 10-digit mobile number
+                                (e.g., 91-9876543210)
+                            value: ''
                           - descriptor:
                               code: BUYER_PAN_NUMBER
                               short_desc: PAN number in alphanumeric format
-                            value: ""
+                            value: ''
                           - descriptor:
                               code: BUYER_DOB
-                              short_desc: "Format: DD/MM/YYYY"
-                            value: ""
+                              short_desc: 'Format: DD/MM/YYYY'
+                            value: ''
                           - descriptor:
                               code: BUYER_GENDER
-                              short_desc: "Values: male, female, transgender"
-                            value: ""
+                              short_desc: 'Values: male, female, transgender'
+                            value: ''
                           - descriptor:
                               code: SUM_INSURED
                               short_desc: Numerical value without separators
-                            value: ""
+                            value: ''
                           - descriptor:
                               code: BUYER_EMAIL
-                            value: ""
+                            value: ''
                           - descriptor:
                               code: TENURE
-                              short_desc: ISO 8601 duration format (e.g., P6M, P1Y)
-                            value: ""
+                              short_desc: 'ISO 8601 duration format (e.g., P6M, P1Y)'
+                            value: ''
                     time:
                       duration: P1Y
                       label: TENURE
@@ -222,10 +215,10 @@ steps:
                   list:
                     - descriptor:
                         code: STATIC_TERMS
-                      value: https://api.example-bap.com/booking/terms
+                      value: 'https://api.example-bap.com/booking/terms'
                     - descriptor:
                         code: OFFLINE_CONTRACT
-                      value: "true"
+                      value: 'true'
         type: request
   - api: on_search
     action_id: on_search_purchase_journey_hospicash
@@ -234,25 +227,28 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CgogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmNhdGFsb2cucHJvdmlkZXJzLmZvckVhY2gocHJvdmlkZXIgPT4gewogICAgcHJvdmlkZXIuaWQgPSBzZXNzaW9uRGF0YS5wcm92aWRlcl9pZFswXQogICAgcHJvdmlkZXIudGFncyA9IHNlc3Npb25EYXRhLnRhZ3MKICAgIGNvbnN0IHBhcmVudElkTWFwID0ge30KICAgIC8vIHByb3ZpZGVyLml0ZW1zPy5mb3JFYWNoKGl0ZW0gPT4gewogICAgLy8gICBpZiAoIWl0ZW0ucGFyZW50X2l0ZW1faWQpIHsKICAgIC8vICAgICBjb25zdCBuZXdJZCA9IHNlc3Npb25EYXRhLnBhcmVudF9pdGVtX2lkWzBdCiAgICAvLyAgICAgcGFyZW50SWRNYXBbaXRlbS5pZF0gPSBuZXdJZAogICAgLy8gICAgIGl0ZW0uaWQgPSBuZXdJZAogICAgLy8gICB9CiAgICAvLyB9KQoKICAgIHByb3ZpZGVyLml0ZW1zPy5mb3JFYWNoKGl0ZW0gPT4gewogICAgICBpZiAoaXRlbS5wYXJlbnRfaXRlbV9pZCkgewogICAgICAgIGNvbnN0IG5ld0NoaWxkSWQgPSB1dWlkdjQoKQogICAgICAgIGl0ZW0uaWQgPSBuZXdDaGlsZElkCiAgICAgICAgaXRlbS5wYXJlbnRfaXRlbV9pZCA9IGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmNhdGFsb2cucHJvdmlkZXJzWzBdLml0ZW1zWzBdLmlkCiAgICAgIH0KICAgIH0pCiAgfSkKCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZAp9Cg==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmKCF0YXJnZXRQYXlsb2FkKXsKICAgIHJldHVybiB7dmFsaWQ6ZmFsc2UsY29kZTo0MDAsZGVzY3JpcHRpb246InBheWxvYWQgbWlzc2luZyJ9CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CmNvbnNvbGUubG9nKCJzZXNzaW9uRGF0YWFhYWFhIikKCiAgaWYgKCFzZXNzaW9uRGF0YSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBzZXNzaW9uRGF0YSIgfTsKICB9CgogIGlmICghc2Vzc2lvbkRhdGEuY29sbGVjdGVkX2J5KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGNvbGxlY3RlZF9ieSBpbiBzZXNzaW9uRGF0YSIgfTsKICB9CgogIGlmICghWyJCQVAiLCAiQlBQIl0uaW5jbHVkZXMoc2Vzc2lvbkRhdGEuY29sbGVjdGVkX2J5KSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiSW52YWxpZCBjb2xsZWN0ZWRfYnkgaW4gc2Vzc2lvbkRhdGEiIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: on_search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-          domain: ONDC:FIS13
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller'
+          domain: 'ONDC:FIS13'
           location:
             city:
-              code: "*"
+              code: '*'
             country:
               code: IND
-          message_id: 05bfc195-6be4-44d0-b681-9ac6e122ea16
-          timestamp: 2026-03-17T09:02:44.173Z
-          transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
+          message_id: f4a40953-19cf-44f3-b5a6-3d3a03c19e63
+          timestamp: '2026-02-11T12:06:15.166Z'
+          transaction_id: 081cdf69-d8c3-465b-9d54-1d5f0bcf9f6b
           ttl: PT30S
           version: 2.0.0
         message:
@@ -260,69 +256,81 @@ steps:
             descriptor:
               name: ABC Insurance Ltd
             providers:
-              - categories:
-                  - descriptor:
-                      code: MICRO_INSURANCE
-                      name: Micro Insurance
-                    id: C1
-                  - descriptor:
-                      code: MICRO_HOSPICASH_INSURANCE
-                      name: Micro Hospicash Insurance
-                    id: C2
-                    parent_category_id: C1
+              - id: P1
                 descriptor:
-                  images:
-                    - size_type: xs
-                      url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
-                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
-                    Motor, Marine etc
+                  long_desc: >-
+                    ABC Insurance Ltd. Deals in multiple Insurance Services like
+                    Health, Motor, Marine etc
                   name: ABC Insurance Ltd.
-                  short_desc: "ABC Insurance Ltd. India "
-                id: P1
+                  short_desc: 'ABC Insurance Ltd. India '
+                  images:
+                    - url: >-
+                        https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
+                      size_type: xs
+                categories:
+                  - id: C1
+                    descriptor:
+                      name: Micro Insurance
+                      code: MICRO_INSURANCE
+                  - id: C2
+                    parent_category_id: C1
+                    descriptor:
+                      name: Micro Hospicash Insurance
+                      code: MICRO_HOSPICASH_INSURANCE
+                tags:
+                  - descriptor:
+                      code: MASTER_POLICY
+                    list:
+                      - descriptor:
+                          code: POLICY_ID
+                        value: e103b4a5-10f8-42c7-b888-dbf0e2edd696
                 items:
-                  - category_ids:
+                  - id: I1
+                    category_ids:
                       - C2
                     descriptor:
                       name: Micro Hospicash Insurance
                       short_desc: ABC Individual Insurance Class
-                    id: I1
                     time:
                       duration: P1Y
                       label: TENURE
-                  - category_ids:
+                  - id: CHILD_ITEM_ID_I1
+                    parent_item_id: I1
+                    category_ids:
                       - C2
                     descriptor:
                       name: Micro Hospicash Insurance Plan
                       short_desc: Individual Insurance Class
-                    id: CHILD_ITEM_ID_I1
-                    parent_item_id: I1
                     price:
                       currency: INR
-                      value: "900"
+                      value: '900'
+                    time:
+                      duration: P1Y
+                      label: TENURE
                     tags:
                       - descriptor:
-                          code: GENERAL_INFO
                           name: General Information
+                          code: GENERAL_INFO
                         list:
                           - descriptor:
                               code: COVERAGE_AMOUNT
-                            value: "10000000"
+                            value: '10000000'
                           - descriptor:
                               code: DAILY_CASH_BENEFIT
-                            value: "1000"
+                            value: '1000'
                           - descriptor:
                               code: MAX_HOSPITALIZATION_DAYS
                             value: P10D
                           - descriptor:
                               code: ICU_BENEFIT_PER_DAY
-                            value: "5000"
+                            value: '5000'
                           - descriptor:
                               code: SURGICAL_BENEFIT
                               short_desc: Describes One-time payout for eligible surgery
-                            value: "50000"
+                            value: '50000'
                           - descriptor:
                               code: CONVALESCENCE_BENEFIT
-                            value: "500000"
+                            value: '500000'
                           - descriptor:
                               code: MINIMUM_DAYS_FOR_CONVALESCENCE_BENEFIT
                             value: P7D
@@ -334,86 +342,86 @@ steps:
                             value: P7D
                           - descriptor:
                               code: MINIMUM_AGE_LIMIT
-                            value: "18"
+                            value: '18'
                           - descriptor:
                               code: MAXIMUM_AGE_LIMIT
-                            value: "60"
+                            value: '60'
                           - descriptor:
                               code: BASE_PRICE
                               name: Base Price
                               short_desc: Base Price
-                            value: "900"
+                            value: '900'
                           - descriptor:
                               code: CONVIENCE_FEE
                               name: Convience Fee
                               short_desc: Convience Fee
-                            value: "50"
+                            value: '50'
                           - descriptor:
                               code: PROCESSING_FEE
                               name: Processing Fee
                               short_desc: Processing Fee
-                            value: "10"
+                            value: '10'
                           - descriptor:
                               code: TAX
                               name: Tax
                               short_desc: Tax
-                            value: "40"
+                            value: '40'
                           - descriptor:
                               code: OFFER_VALIDITY
                               name: Offer validity
                               short_desc: Describes the offer validity
                             value: P15D
                       - descriptor:
-                          code: INCLUSIONS
                           name: Inclusions
+                          code: INCLUSIONS
                         list:
                           - descriptor:
                               name: Hospitalization
                           - descriptor:
                               name: Surgery
                       - descriptor:
-                          code: EXCLUSIONS
                           name: Exclusions
+                          code: EXCLUSIONS
                         list:
                           - descriptor:
                               name: Physiotherapy
-                    time:
-                      duration: P1Y
-                      label: TENURE
-                  - category_ids:
+                  - id: CHILD_ITEM_ID_I2
+                    parent_item_id: I1
+                    category_ids:
                       - C2
                     descriptor:
                       name: Micro Hospicash Insurance Plus Plan
                       short_desc: Single Transit Insurance
-                    id: CHILD_ITEM_ID_I2
-                    parent_item_id: I1
                     price:
                       currency: INR
-                      value: "1000"
+                      value: '1000'
+                    time:
+                      duration: P1Y
+                      label: TENURE
                     tags:
                       - descriptor:
-                          code: GENERAL_INFO
                           name: General Information
+                          code: GENERAL_INFO
                         list:
                           - descriptor:
                               code: COVERAGE_AMOUNT
-                            value: "10000000"
+                            value: '10000000'
                           - descriptor:
                               code: DAILY_CASH_BENEFIT
-                            value: "1000"
+                            value: '1000'
                           - descriptor:
                               code: MAX_HOSPITALIZATION_DAYS
                             value: P10D
                           - descriptor:
                               code: ICU_BENEFIT_PER_DAY
-                            value: "5000"
+                            value: '5000'
                           - descriptor:
                               code: SURGICAL_BENEFIT
                               short_desc: Describes One-time payout for eligible surgery
-                            value: "50000"
+                            value: '50000'
                           - descriptor:
                               code: CONVALESCENCE_BENEFIT
-                            value: "500000"
+                            value: '500000'
                           - descriptor:
                               code: MINIMUM_DAYS_FOR_CONVALESCENCE_BENEFIT
                             value: P7D
@@ -425,38 +433,38 @@ steps:
                             value: P7D
                           - descriptor:
                               code: MINIMUM_AGE_LIMIT
-                            value: "18"
+                            value: '18'
                           - descriptor:
                               code: MAXIMUM_AGE_LIMIT
-                            value: "60"
+                            value: '60'
                           - descriptor:
                               code: BASE_PRICE
                               name: Base Price
                               short_desc: Base Price
-                            value: "1000"
+                            value: '1000'
                           - descriptor:
                               code: CONVIENCE_FEE
                               name: Convience Fee
                               short_desc: Convience Fee
-                            value: "50"
+                            value: '50'
                           - descriptor:
                               code: PROCESSING_FEE
                               name: Processing Fee
                               short_desc: Processing Fee
-                            value: "10"
+                            value: '10'
                           - descriptor:
                               code: TAX
                               name: Tax
                               short_desc: Tax
-                            value: "40"
+                            value: '40'
                           - descriptor:
                               code: OFFER_VALIDITY
                               name: Offer validity
                               short_desc: Describes the offer validity
                             value: P15D
                       - descriptor:
-                          code: INCLUSIONS
                           name: Inclusions
+                          code: INCLUSIONS
                         list:
                           - descriptor:
                               name: Hospitalization
@@ -465,23 +473,13 @@ steps:
                           - descriptor:
                               name: Surgery
                       - descriptor:
-                          code: EXCLUSIONS
                           name: Exclusions
+                          code: EXCLUSIONS
                         list:
                           - descriptor:
                               name: Physiotherapy
-                    time:
-                      duration: P1Y
-                      label: TENURE
                 payments:
                   - collected_by: BPP
-                tags:
-                  - descriptor:
-                      code: MASTER_POLICY
-                    list:
-                      - descriptor:
-                          code: POLICY_ID
-                        value: e103b4a5-10f8-42c7-b888-dbf0e2edd696
             tags:
               - descriptor:
                   code: BPP_TERMS
@@ -490,10 +488,10 @@ steps:
                 list:
                   - descriptor:
                       code: STATIC_TERMS
-                    value: https://api.example-bap.com/booking/terms
+                    value: 'https://api.example-bap.com/booking/terms'
                   - descriptor:
                       code: OFFLINE_CONTRACT
-                    value: "true"
+                    value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -503,26 +501,37 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        items: '$.message.catalog.providers[*].items[*]'
+        on_search_tags: '$.message.catalog.providers[*].tags[*]'
+        on_search_provider: '$.message.catalog.providers[*]'
+        item: '$.message.catalog.providers[*].items[*]'
+        fulfillments: '$.message.catalog.providers[*].fulfillments[*]'
+        convience_fee: >-
+          $.message.catalog.providers[*].items[*].tags[?(@.descriptor.code=='GENERAL_INFO')].list[?(@.descriptor.code=='CONVIENCE_FEE')].value
+        processing_fee: >-
+          $.message.catalog.providers[*].items[*].tags[?(@.descriptor.code=='GENERAL_INFO')].list[?(@.descriptor.code=='PROCESSING_FEE')].value
       inputs: {}
     examples:
       - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
+        description: >-
+          Auto-generated example for action "on_search" in flow
           "CD_Balance_Error_Hospicash_Insurance"
         payload:
           context:
             action: on_search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-            domain: ONDC:FIS13
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
+            domain: 'ONDC:FIS13'
             location:
               city:
-                code: "*"
+                code: '*'
               country:
                 code: IND
             message_id: 05bfc195-6be4-44d0-b681-9ac6e122ea16
-            timestamp: 2026-03-17T09:02:44.173Z
+            timestamp: '2026-03-17T09:02:44.173Z'
             transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
             ttl: PT30S
             version: 2.0.0
@@ -544,11 +553,13 @@ steps:
                   descriptor:
                     images:
                       - size_type: xs
-                        url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
-                    long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
-                      Motor, Marine etc
+                        url: >-
+                          https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
+                    long_desc: >-
+                      ABC Insurance Ltd. Deals in multiple Insurance Services
+                      like Health, Motor, Marine etc
                     name: ABC Insurance Ltd.
-                    short_desc: "ABC Insurance Ltd. India "
+                    short_desc: 'ABC Insurance Ltd. India '
                   id: P1
                   items:
                     - category_ids:
@@ -569,7 +580,7 @@ steps:
                       parent_item_id: I1
                       price:
                         currency: INR
-                        value: "900"
+                        value: '900'
                       tags:
                         - descriptor:
                             code: GENERAL_INFO
@@ -577,23 +588,23 @@ steps:
                           list:
                             - descriptor:
                                 code: COVERAGE_AMOUNT
-                              value: "10000000"
+                              value: '10000000'
                             - descriptor:
                                 code: DAILY_CASH_BENEFIT
-                              value: "1000"
+                              value: '1000'
                             - descriptor:
                                 code: MAX_HOSPITALIZATION_DAYS
                               value: P10D
                             - descriptor:
                                 code: ICU_BENEFIT_PER_DAY
-                              value: "5000"
+                              value: '5000'
                             - descriptor:
                                 code: SURGICAL_BENEFIT
                                 short_desc: Describes One-time payout for eligible surgery
-                              value: "50000"
+                              value: '50000'
                             - descriptor:
                                 code: CONVALESCENCE_BENEFIT
-                              value: "500000"
+                              value: '500000'
                             - descriptor:
                                 code: MINIMUM_DAYS_FOR_CONVALESCENCE_BENEFIT
                               value: P7D
@@ -605,30 +616,30 @@ steps:
                               value: P7D
                             - descriptor:
                                 code: MINIMUM_AGE_LIMIT
-                              value: "18"
+                              value: '18'
                             - descriptor:
                                 code: MAXIMUM_AGE_LIMIT
-                              value: "60"
+                              value: '60'
                             - descriptor:
                                 code: BASE_PRICE
                                 name: Base Price
                                 short_desc: Base Price
-                              value: "900"
+                              value: '900'
                             - descriptor:
                                 code: CONVIENCE_FEE
                                 name: Convience Fee
                                 short_desc: Convience Fee
-                              value: "50"
+                              value: '50'
                             - descriptor:
                                 code: PROCESSING_FEE
                                 name: Processing Fee
                                 short_desc: Processing Fee
-                              value: "10"
+                              value: '10'
                             - descriptor:
                                 code: TAX
                                 name: Tax
                                 short_desc: Tax
-                              value: "40"
+                              value: '40'
                             - descriptor:
                                 code: OFFER_VALIDITY
                                 name: Offer validity
@@ -660,7 +671,7 @@ steps:
                       parent_item_id: I1
                       price:
                         currency: INR
-                        value: "1000"
+                        value: '1000'
                       tags:
                         - descriptor:
                             code: GENERAL_INFO
@@ -668,23 +679,23 @@ steps:
                           list:
                             - descriptor:
                                 code: COVERAGE_AMOUNT
-                              value: "10000000"
+                              value: '10000000'
                             - descriptor:
                                 code: DAILY_CASH_BENEFIT
-                              value: "1000"
+                              value: '1000'
                             - descriptor:
                                 code: MAX_HOSPITALIZATION_DAYS
                               value: P10D
                             - descriptor:
                                 code: ICU_BENEFIT_PER_DAY
-                              value: "5000"
+                              value: '5000'
                             - descriptor:
                                 code: SURGICAL_BENEFIT
                                 short_desc: Describes One-time payout for eligible surgery
-                              value: "50000"
+                              value: '50000'
                             - descriptor:
                                 code: CONVALESCENCE_BENEFIT
-                              value: "500000"
+                              value: '500000'
                             - descriptor:
                                 code: MINIMUM_DAYS_FOR_CONVALESCENCE_BENEFIT
                               value: P7D
@@ -696,30 +707,30 @@ steps:
                               value: P7D
                             - descriptor:
                                 code: MINIMUM_AGE_LIMIT
-                              value: "18"
+                              value: '18'
                             - descriptor:
                                 code: MAXIMUM_AGE_LIMIT
-                              value: "60"
+                              value: '60'
                             - descriptor:
                                 code: BASE_PRICE
                                 name: Base Price
                                 short_desc: Base Price
-                              value: "1000"
+                              value: '1000'
                             - descriptor:
                                 code: CONVIENCE_FEE
                                 name: Convience Fee
                                 short_desc: Convience Fee
-                              value: "50"
+                              value: '50'
                             - descriptor:
                                 code: PROCESSING_FEE
                                 name: Processing Fee
                                 short_desc: Processing Fee
-                              value: "10"
+                              value: '10'
                             - descriptor:
                                 code: TAX
                                 name: Tax
                                 short_desc: Tax
-                              value: "40"
+                              value: '40'
                             - descriptor:
                                 code: OFFER_VALIDITY
                                 name: Offer validity
@@ -761,10 +772,10 @@ steps:
                   list:
                     - descriptor:
                         code: STATIC_TERMS
-                      value: https://api.example-bap.com/booking/terms
+                      value: 'https://api.example-bap.com/booking/terms'
                     - descriptor:
                         code: OFFLINE_CONTRACT
-                      value: "true"
+                      value: 'true'
         type: request
   - api: select
     action_id: select
@@ -773,25 +784,28 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXMgPSBzZXNzaW9uRGF0YS51c2VyX2lucHV0cwogIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmlkID0gc2Vzc2lvbkRhdGEucHJvdmlkZXJfaWRbMF0KCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZAp9Cg==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQubWVzc2FnZSB8fCAhdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2UgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyLnByb3ZpZGVyIHx8ICFvcmRlci5wcm92aWRlci5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwcm92aWRlci5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgaWYgKCFBcnJheS5pc0FycmF5KG9yZGVyLml0ZW1zKSB8fCBvcmRlci5pdGVtcy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbXMgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IGl0ZW0gPSBvcmRlci5pdGVtc1swXTsKIAogIGNvbnN0IHNlc3Npb25JdGVtcyA9IHNlc3Npb25EYXRhPy5pdGVtczsKICBpZiAoQXJyYXkuaXNBcnJheShzZXNzaW9uSXRlbXMpICYmIHNlc3Npb25JdGVtcy5sZW5ndGggPiAwKSB7CiAgICBjb25zdCBleGlzdHMgPSBzZXNzaW9uSXRlbXMuc29tZSgoaSkgPT4gaT8uaWQgPT09IGl0ZW0uaWQpOwogICAgaWYgKCFleGlzdHMpIHsKICAgICAgcmV0dXJuIHsKICAgICAgICB2YWxpZDogZmFsc2UsCiAgICAgICAgY29kZTogNDAwLAogICAgICAgIGRlc2NyaXB0aW9uOiAiaXRlbXMuaWQgbm90IGZvdW5kIGluIHNlc3Npb25EYXRhLml0ZW1zIgogICAgICB9OwogICAgfQogIH0KCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CgogIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbkRhdGEiIH07CiAgfQoKICBpZiAoCiAgICAhc2Vzc2lvbkRhdGEuZm9ybV9kYXRhIHx8CiAgICAhc2Vzc2lvbkRhdGEuZm9ybV9kYXRhLmNvbnN1bWVyX2luZm9ybWF0aW9uX2Zvcm0gfHwKICAgICFzZXNzaW9uRGF0YS5mb3JtX2RhdGEuY29uc3VtZXJfaW5mb3JtYXRpb25fZm9ybS5mb3JtX3N1Ym1pc3Npb25faWQKICApIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIk1pc3NpbmcgZm9ybV9kYXRhLmNvbnN1bWVyX2luZm9ybWF0aW9uX2Zvcm0uZm9ybV9zdWJtaXNzaW9uX2lkIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogIGlmICgKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnNlbGVjdGVkX3Byb3ZpZGVyKSB8fAogICAgc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfcHJvdmlkZXIubGVuZ3RoID09PSAwCiAgKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlbGVjdGVkX3Byb3ZpZGVyIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogIGlmICghc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfcHJvdmlkZXJbMF0uaWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2VsZWN0ZWRfcHJvdmlkZXIuaWQgaW4gc2Vzc2lvbkRhdGEiCiAgICB9OwogIH0KCiAgaWYgKAogICAgIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuaXRlbSkgfHwKICAgIHNlc3Npb25EYXRhLml0ZW0ubGVuZ3RoID09PSAwCiAgKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW0gaW4gc2Vzc2lvbkRhdGEiCiAgICB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YS5pdGVtWzBdLmlkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW0uaWQgaW4gc2Vzc2lvbkRhdGEiCiAgICB9OwogIH0KCiAgaWYgKAogICAgIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuZm9ybV9pZCkgfHwKICAgIHNlc3Npb25EYXRhLmZvcm1faWQubGVuZ3RoID09PSAwCiAgKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIGZvcm1faWQgaW4gc2Vzc2lvbkRhdGEiCiAgICB9OwogIH0KCiAKCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
           action: select
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-          domain: ONDC:FIS13
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller'
+          domain: 'ONDC:FIS13'
           location:
             city:
-              code: "*"
+              code: '*'
             country:
               code: IND
-          message_id: 41e16956-4cb2-499f-b89e-4a1f6df50297
-          timestamp: 2026-03-17T09:02:58.316Z
-          transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
+          message_id: d59cc073-5575-4445-874f-c7e93ba268a4
+          timestamp: '2026-02-11T12:06:36.300Z'
+          transaction_id: 081cdf69-d8c3-465b-9d54-1d5f0bcf9f6b
           ttl: PT30S
           version: 2.0.0
         message:
@@ -810,6 +824,9 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        selected_items: $.message.order.items
+        selected_fulfillments: '$.message.order.fulfillments[*]'
+        selected_provider: $.message.order.provider
       inputs:
         oldInputs:
           - name: select_input
@@ -818,23 +835,25 @@ steps:
         id: old_inputs
     examples:
       - name: Example for action "select"
-        description: Auto-generated example for action "select" in flow
+        description: >-
+          Auto-generated example for action "select" in flow
           "CD_Balance_Error_Hospicash_Insurance"
         payload:
           context:
             action: select
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-            domain: ONDC:FIS13
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
+            domain: 'ONDC:FIS13'
             location:
               city:
-                code: "*"
+                code: '*'
               country:
                 code: IND
             message_id: 41e16956-4cb2-499f-b89e-4a1f6df50297
-            timestamp: 2026-03-17T09:02:58.316Z
+            timestamp: '2026-03-17T09:02:58.316Z'
             transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
             ttl: PT30S
             version: 2.0.0
@@ -853,31 +872,102 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgbGV0IGJyZWFrdXAgPSBbXQogIGxldCB0b3RhbEFtdAoKICBsZXQgb3JkZXJJdGVtcyA9IFtdCiAgc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfaXRlbXMuZmxhdCgpLmZvckVhY2goc2VsZWN0ZWRJdGVtID0+IHsKICAgIGNvbnN0IGZ1bGxJdGVtID0gc2Vzc2lvbkRhdGEuaXRlbXMuZmluZChpdGVtID0+IGl0ZW0uaWQgPT09IHNlbGVjdGVkSXRlbS5pZCkKICAgIGlmIChmdWxsSXRlbSkgewogICAgICBjb25zdCBnZW5lcmFsSW5mbyA9IGZ1bGxJdGVtLnRhZ3M/LmZpbmQoCiAgICAgICAgZiA9PiBmLmRlc2NyaXB0b3I/LmNvZGUgPT09ICJHRU5FUkFMX0lORk8iCiAgICAgICkKCiAgICAgIGlmIChnZW5lcmFsSW5mbz8ubGlzdCkgewogICAgICAgIGNvbnN0IGl0ZW1CcmVha3VwID0gZ2VuZXJhbEluZm8ubGlzdAogICAgICAgICAgLmZpbHRlcihlbnRyeSA9PgogICAgICAgICAgICBbIkJBU0VfUFJJQ0UiLCAiQ09OVklFTkNFX0ZFRSIsICJQUk9DRVNTSU5HX0ZFRSIsICJUQVgiXS5pbmNsdWRlcygKICAgICAgICAgICAgICBlbnRyeS5kZXNjcmlwdG9yPy5jb2RlCiAgICAgICAgICAgICkKICAgICAgICAgICkKICAgICAgICAgIC5tYXAoZW50cnkgPT4gKHsKICAgICAgICAgICAgdGl0bGU6IGVudHJ5LmRlc2NyaXB0b3IuY29kZSwKICAgICAgICAgICAgcHJpY2U6IHsKICAgICAgICAgICAgICB2YWx1ZTogZW50cnkudmFsdWUsCiAgICAgICAgICAgICAgY3VycmVuY3k6IGZ1bGxJdGVtLnByaWNlPy5jdXJyZW5jeSB8fCAiSU5SIgogICAgICAgICAgICB9CiAgICAgICAgICB9KSkKCiAgICAgICAgYnJlYWt1cC5wdXNoKC4uLml0ZW1CcmVha3VwKQoKICAgICAgICB0b3RhbEFtdCA9CiAgICAgICAgICAodG90YWxBbXQgfHwgMCkgKwogICAgICAgICAgaXRlbUJyZWFrdXAucmVkdWNlKChzdW0sIGIpID0+IHN1bSArIE51bWJlcihiLnByaWNlLnZhbHVlIHx8IDApLCAwKQogICAgICB9CiAgICAgIGNvbnN0IGV4Y2x1ZGVkQ29kZXMgPSBbCiAgICAgICAgIkJBU0VfUFJJQ0UiLAogICAgICAgICJDT05WSUVOQ0VfRkVFIiwKICAgICAgICAiUFJPQ0VTU0lOR19GRUUiLAogICAgICAgICJUQVgiLAogICAgICAgICJPRkZFUl9WQUxJRElUWSIKICAgICAgXQoKICAgICAgY29uc3QgZmlsdGVyZWRUYWdzID0gZnVsbEl0ZW0udGFncwogICAgICAgIC5tYXAodGFnID0+IHsKICAgICAgICAgIGlmICgKICAgICAgICAgICAgWyJHRU5FUkFMX0lORk8iLCAiSU5DTFVTSU9OUyIsICJFWENMVVNJT05TIl0uaW5jbHVkZXMoCiAgICAgICAgICAgICAgdGFnLmRlc2NyaXB0b3IuY29kZQogICAgICAgICAgICApCiAgICAgICAgICApIHsKICAgICAgICAgICAgY29uc3QgZmlsdGVyZWRMaXN0ID0gdGFnLmxpc3Q/LmZpbHRlcigKICAgICAgICAgICAgICBpdGVtID0+ICFleGNsdWRlZENvZGVzLmluY2x1ZGVzKGl0ZW0uZGVzY3JpcHRvcj8uY29kZSkKICAgICAgICAgICAgKQogICAgICAgICAgICByZXR1cm4geyAuLi50YWcsIGxpc3Q6IGZpbHRlcmVkTGlzdCB9CiAgICAgICAgICB9CiAgICAgICAgICByZXR1cm4gbnVsbAogICAgICAgIH0pCiAgICAgICAgLmZpbHRlcihCb29sZWFuKQoKICAgICAgb3JkZXJJdGVtcy5wdXNoKHsKICAgICAgICAuLi5mdWxsSXRlbSwKICAgICAgICB0YWdzOiBmaWx0ZXJlZFRhZ3MKICAgICAgfSkKICAgIH0KICB9KQoKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcyA9IG9yZGVySXRlbXMKICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZSA9IHsKICAgIC4uLihleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZSB8fCB7fSksCiAgICBpZDogdXVpZHY0KCksCiAgICBicmVha3VwLAogICAgcHJpY2U6IHsKICAgICAgY3VycmVuY3k6ICJJTlIiLAogICAgICB2YWx1ZTogU3RyaW5nKHRvdGFsQW10KQogICAgfQogIH0KCiAgY29uc3Qgbm9taW5lZVRhZyA9IGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50cwogICAgLmZsYXRNYXAoZiA9PiBmLnRhZ3MgfHwgW10pCiAgICAuZmluZCh0ID0+IHQuZGVzY3JpcHRvcj8uY29kZSA9PT0gIk5PTUlORUVfREVUQUlMUyIpCgogIGlmIChub21pbmVlVGFnPy5saXN0KSB7CiAgICBjb25zdCBub21pbmVlRmllbGQgPSBub21pbmVlVGFnLmxpc3QuZmluZCgKICAgICAgbCA9PiBsLmRlc2NyaXB0b3I/LmNvZGUgPT09ICJOT01JTkVFX05BTUUiCiAgICApCiAgICBpZiAobm9taW5lZUZpZWxkKSB7CiAgICAgIG5vbWluZWVGaWVsZC52YWx1ZSA9ICItIgogICAgfQogIH0KCiAgY29uc3QgcHJvdmlkZXIgPSBzZXNzaW9uRGF0YS5vbl9zZWFyY2hfcHJvdmlkZXJbMF0KCiAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucHJvdmlkZXIgPSB7CiAgICBkZXNjcmlwdG9yOiBwcm92aWRlci5kZXNjcmlwdG9yLAogICAgaWQ6IHByb3ZpZGVyLmlkLAogICAgdGFnczogcHJvdmlkZXIudGFncwogIH0KCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZAp9Cg==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyLnByb3ZpZGVyPy5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwcm92aWRlci5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCgogIGlmICghQXJyYXkuaXNBcnJheShvcmRlci5pdGVtcykgfHwgb3JkZXIuaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zIGluIHBheWxvYWQiIH07CiAgfQogIGNvbnN0IGl0ZW0gPSBvcmRlci5pdGVtc1swXTsKIAogICAgICBjb25zdCBleHBlY3RlZFN1Ym1pc3Npb25JZCA9CiAgICAgIHNlc3Npb25EYXRhPy5mb3JtRGF0YT8uY29uc3VtZXJfaW5mb3JtYXRpb25fZm9ybT8uZm9ybV9zdWJtaXNzaW9uX2lkOwoKICAgIGlmIChleHBlY3RlZFN1Ym1pc3Npb25JZCkgewogICAgICBpZiAoIWl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3VibWlzc2lvbl9pZCkgewogICAgICAgIHJldHVybiB7CiAgICAgICAgICB2YWxpZDogZmFsc2UsCiAgICAgICAgICBjb2RlOiA0MDAsCiAgICAgICAgICBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbXMueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3VibWlzc2lvbl9pZCBpbiBwYXlsb2FkIgogICAgICAgIH07CiAgICAgIH0KCiAgICAgIGlmIChpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlLnN1Ym1pc3Npb25faWQgIT09IGV4cGVjdGVkU3VibWlzc2lvbklkKSB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgICAgIGNvZGU6IDQwMCwKICAgICAgICAgIGRlc2NyaXB0aW9uOiAiTWlzbWF0Y2ggc3VibWlzc2lvbl9pZCB3aXRoIHNlc3Npb25EYXRhIgogICAgICAgIH07CiAgICAgIH0KICAgIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0KCg==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CgogIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbkRhdGEiIH07CiAgfQoKICBjb25zdCBmb3JtSWQgPQogICAgc2Vzc2lvbkRhdGE/LmZvcm1faWQ/LlswXSB8fAogICAgc2Vzc2lvbkRhdGE/Lml0ZW0/LlswXT8ueGlucHV0Py5mb3JtPy5pZCB8fAogICAgc2Vzc2lvbkRhdGE/Lml0ZW1zPy5bMF0/LnhpbnB1dD8uZm9ybT8uaWQ7CgogIGlmICghZm9ybUlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGZvcm1faWQgaW4gc2Vzc2lvbkRhdGEiIH07CiAgfQoKICBjb25zdCBzdWJtaXNzaW9uSWQgPQogICAgc2Vzc2lvbkRhdGE/LmZvcm1EYXRhPy5jb25zdW1lcl9pbmZvcm1hdGlvbl9mb3JtPy5mb3JtX3N1Ym1pc3Npb25faWQ7CgogIGlmICghc3VibWlzc2lvbklkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIGZvcm1EYXRhLmNvbnN1bWVyX2luZm9ybWF0aW9uX2Zvcm0uZm9ybV9zdWJtaXNzaW9uX2lkIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
       defaultPayload:
         context:
           action: on_select
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-          domain: ONDC:FIS13
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller'
+          domain: 'ONDC:FIS13'
           location:
             city:
-              code: "*"
+              code: '*'
             country:
               code: IND
-          message_id: 41e16956-4cb2-499f-b89e-4a1f6df50297
-          timestamp: 2026-03-17T09:02:58.391Z
-          transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
+          message_id: d59cc073-5575-4445-874f-c7e93ba268a4
+          timestamp: '2026-02-11T12:06:36.429Z'
+          transaction_id: 081cdf69-d8c3-465b-9d54-1d5f0bcf9f6b
           ttl: PT30S
           version: 2.0.0
         message:
           order:
+            items:
+              - id: CHILD_ITEM_ID_I1
+                parent_item_id: I1
+                category_ids:
+                  - C2
+                descriptor:
+                  name: Micro Hospicash Insurance Plan
+                  short_desc: Individual Insurance Class
+                price:
+                  currency: INR
+                  value: '900'
+                tags:
+                  - descriptor:
+                      name: General Information
+                      code: GENERAL_INFO
+                    list:
+                      - descriptor:
+                          code: COVERAGE_AMOUNT
+                        value: '10000000'
+                      - descriptor:
+                          code: DAILY_CASH_BENEFIT
+                        value: '1000'
+                      - descriptor:
+                          code: MAX_HOSPITALIZATION_DAYS
+                        value: P10D
+                      - descriptor:
+                          code: ICU_BENEFIT_PER_DAY
+                        value: '5000'
+                      - descriptor:
+                          code: SURGICAL_BENEFIT
+                          short_desc: Describes One-time payout for eligible surgery
+                        value: '50000'
+                      - descriptor:
+                          code: CONVALESCENCE_BENEFIT
+                        value: '500000'
+                      - descriptor:
+                          code: MINIMUM_DAYS_FOR_CONVALESCENCE_BENEFIT
+                        value: P7D
+                      - descriptor:
+                          code: INITIAL_WAITING_PERIOD
+                        value: P7D
+                      - descriptor:
+                          code: DURATION_OF_COVER
+                        value: P7D
+                      - descriptor:
+                          code: MINIMUM_AGE_LIMIT
+                        value: '18'
+                      - descriptor:
+                          code: MAXIMUM_AGE_LIMIT
+                        value: '60'
+                  - descriptor:
+                      name: Inclusions
+                      code: INCLUSIONS
+                    list:
+                      - descriptor:
+                          name: Hospitalization
+                      - descriptor:
+                          name: Surgery
+                  - descriptor:
+                      name: Exclusions
+                      code: EXCLUSIONS
+                    list:
+                      - descriptor:
+                          name: Physiotherapy
+                time:
+                  duration: P1Y
+                  label: TENURE
             fulfillments:
               - id: F1
+                type: POLICY
                 tags:
                   - descriptor:
                       code: NOMINEE_DETAILS
@@ -886,77 +976,46 @@ steps:
                     list:
                       - descriptor:
                           code: NOMINEE_NAME
-                          short_desc: Describes the nominee name in the format as  'Salutation | First
-                            Name | Middle Name | Last Name' represents a full
-                            name structure, where the values are separated by a
-                            pipe (|) symbol
-                        value: "-"
+                          short_desc: >-
+                            Describes the nominee name in the format as 
+                            'Salutation | First Name | Middle Name | Last Name'
+                            represents a full name structure, where the values
+                            are separated by a pipe (|) symbol
+                        value: '-'
                       - descriptor:
                           code: NOMINEE_DOB
-                          short_desc: "Describes the nominee dob, as: DD/MM/YYYY, separated by a forward
-                            slash ( / )."
-                        value: "-"
+                          short_desc: >-
+                            Describes the nominee dob, as: DD/MM/YYYY, separated
+                            by a forward slash ( / ).
+                        value: '-'
                       - descriptor:
                           code: APPOINTEE_NAME
-                          short_desc: Describes the Appointee name in the format as  'Salutation | First
-                            Name | Middle Name | Last Name' represents a full
-                            name structure, where the values are separated by a
-                            pipe (|) symbol
-                        value: "-"
+                          short_desc: >-
+                            Describes the Appointee name in the format as 
+                            'Salutation | First Name | Middle Name | Last Name'
+                            represents a full name structure, where the values
+                            are separated by a pipe (|) symbol
+                        value: '-'
                       - descriptor:
                           code: APPOINTEE_DOB
-                          short_desc: "Describes the Appointee dob, as: DD/MM/YYYY, separated by a forward
-                            slash ( / )."
-                        value: "-"
+                          short_desc: >-
+                            Describes the Appointee dob, as: DD/MM/YYYY,
+                            separated by a forward slash ( / ).
+                        value: '-'
                       - descriptor:
                           code: GOOD_HEALTH_DECLARATION
-                        value: "-"
-                type: POLICY
-            items:
-              - category_ids:
-                  - C2
-                descriptor:
-                  name: Micro Hospicash Insurance Plan
-                  short_desc: Individual Insurance Class
-                id: CHILD_ITEM_ID_I1
-                parent_item_id: I1
-                price:
-                  currency: INR
-                  value: "900"
-                tags:
-                  - descriptor:
-                      code: GENERAL_INFO
-                      name: General Information
-                    list:
-                      - descriptor:
-                          code: COVERAGE_AMOUNT
-                        value: "10000000"
-                  - descriptor:
-                      code: INCLUSIONS
-                      name: Inclusions
-                    list:
-                      - descriptor:
-                          name: Hospitalization
-                      - descriptor:
-                          name: Surgery
-                  - descriptor:
-                      code: EXCLUSIONS
-                      name: Exclusions
-                    list:
-                      - descriptor:
-                          name: Physiotherapy
-                time:
-                  duration: P1Y
-                  label: TENURE
+                        value: '-'
             provider:
               descriptor:
-                images:
-                  - size_type: xs
-                    url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
-                long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
-                  Motor, Marine etc
+                long_desc: >-
+                  ABC Insurance Ltd. Deals in multiple Insurance Services like
+                  Health, Motor, Marine etc
                 name: ABC Insurance Ltd.
-                short_desc: "ABC Insurance Ltd. India "
+                short_desc: 'ABC Insurance Ltd. India '
+                images:
+                  - url: >-
+                      https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
+                    size_type: xs
               id: P1
               tags:
                 - descriptor:
@@ -966,27 +1025,27 @@ steps:
                         code: POLICY_ID
                       value: e103b4a5-10f8-42c7-b888-dbf0e2edd696
             quote:
+              id: OFFER_ID/PROPOSAL_ID
               breakup:
                 - price:
+                    value: '900'
                     currency: INR
-                    value: "900"
                   title: BASE_PRICE
                 - price:
+                    value: '50'
                     currency: INR
-                    value: "50"
                   title: CONVIENCE_FEE
                 - price:
+                    value: '40'
                     currency: INR
-                    value: "10"
-                  title: PROCESSING_FEE
-                - price:
-                    currency: INR
-                    value: "40"
                   title: TAX
-              id: OFFER_ID/PROPOSAL_ID
+                - price:
+                    value: '10'
+                    currency: INR
+                  title: PROCESSING_FEE
               price:
                 currency: INR
-                value: "1000"
+                value: '1000'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -996,26 +1055,36 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        items: '$.message.order.items[*]'
+        fulfillments: '$.message.order.fulfillments[*]'
+        provider_id: $.message.order.provider.id
+        quote: $.message.order.quote
+        providerData: $.message.order.provider
+        cancellation_terms: $.message.order.cancellation_terms
+        provider: $.message.order.provider
+        replacement_terms: $.message.order.replacement_terms
       inputs: {}
     examples:
       - name: Example for action "on_select"
-        description: Auto-generated example for action "on_select" in flow
+        description: >-
+          Auto-generated example for action "on_select" in flow
           "CD_Balance_Error_Hospicash_Insurance"
         payload:
           context:
             action: on_select
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-            domain: ONDC:FIS13
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
+            domain: 'ONDC:FIS13'
             location:
               city:
-                code: "*"
+                code: '*'
               country:
                 code: IND
             message_id: 41e16956-4cb2-499f-b89e-4a1f6df50297
-            timestamp: 2026-03-17T09:02:58.391Z
+            timestamp: '2026-03-17T09:02:58.391Z'
             transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
             ttl: PT30S
             version: 2.0.0
@@ -1031,31 +1100,35 @@ steps:
                       list:
                         - descriptor:
                             code: NOMINEE_NAME
-                            short_desc: Describes the nominee name in the format as  'Salutation | First
-                              Name | Middle Name | Last Name' represents a full
-                              name structure, where the values are separated by
-                              a pipe (|) symbol
-                          value: "-"
+                            short_desc: >-
+                              Describes the nominee name in the format as 
+                              'Salutation | First Name | Middle Name | Last
+                              Name' represents a full name structure, where the
+                              values are separated by a pipe (|) symbol
+                          value: '-'
                         - descriptor:
                             code: NOMINEE_DOB
-                            short_desc: "Describes the nominee dob, as: DD/MM/YYYY, separated by a forward
-                              slash ( / )."
-                          value: "-"
+                            short_desc: >-
+                              Describes the nominee dob, as: DD/MM/YYYY,
+                              separated by a forward slash ( / ).
+                          value: '-'
                         - descriptor:
                             code: APPOINTEE_NAME
-                            short_desc: Describes the Appointee name in the format as  'Salutation | First
-                              Name | Middle Name | Last Name' represents a full
-                              name structure, where the values are separated by
-                              a pipe (|) symbol
-                          value: "-"
+                            short_desc: >-
+                              Describes the Appointee name in the format as 
+                              'Salutation | First Name | Middle Name | Last
+                              Name' represents a full name structure, where the
+                              values are separated by a pipe (|) symbol
+                          value: '-'
                         - descriptor:
                             code: APPOINTEE_DOB
-                            short_desc: "Describes the Appointee dob, as: DD/MM/YYYY, separated by a forward
-                              slash ( / )."
-                          value: "-"
+                            short_desc: >-
+                              Describes the Appointee dob, as: DD/MM/YYYY,
+                              separated by a forward slash ( / ).
+                          value: '-'
                         - descriptor:
                             code: GOOD_HEALTH_DECLARATION
-                          value: "-"
+                          value: '-'
                   type: POLICY
               items:
                 - category_ids:
@@ -1067,7 +1140,7 @@ steps:
                   parent_item_id: I1
                   price:
                     currency: INR
-                    value: "900"
+                    value: '900'
                   tags:
                     - descriptor:
                         code: GENERAL_INFO
@@ -1075,7 +1148,7 @@ steps:
                       list:
                         - descriptor:
                             code: COVERAGE_AMOUNT
-                          value: "10000000"
+                          value: '10000000'
                     - descriptor:
                         code: INCLUSIONS
                         name: Inclusions
@@ -1097,11 +1170,13 @@ steps:
                 descriptor:
                   images:
                     - size_type: xs
-                      url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
-                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
-                    Motor, Marine etc
+                      url: >-
+                        https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
+                  long_desc: >-
+                    ABC Insurance Ltd. Deals in multiple Insurance Services like
+                    Health, Motor, Marine etc
                   name: ABC Insurance Ltd.
-                  short_desc: "ABC Insurance Ltd. India "
+                  short_desc: 'ABC Insurance Ltd. India '
                 id: P1
                 tags:
                   - descriptor:
@@ -1114,24 +1189,24 @@ steps:
                 breakup:
                   - price:
                       currency: INR
-                      value: "900"
+                      value: '900'
                     title: BASE_PRICE
                   - price:
                       currency: INR
-                      value: "50"
+                      value: '50'
                     title: CONVIENCE_FEE
                   - price:
                       currency: INR
-                      value: "10"
+                      value: '10'
                     title: PROCESSING_FEE
                   - price:
                       currency: INR
-                      value: "40"
+                      value: '40'
                     title: TAX
                 id: OFFER_ID/PROPOSAL_ID
                 price:
                   currency: INR
-                  value: "1000"
+                  value: '1000'
         type: request
   - api: init
     action_id: init_hospicash
@@ -1140,31 +1215,35 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CgogIGlmIChzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtcykgewogICAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXMgPSBzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtc1swXQogIH0KCiAgaWYgKHNlc3Npb25EYXRhLnNlbGVjdGVkX2Z1bGZpbGxtZW50cykgewogICAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuZnVsZmlsbG1lbnRzID0gc2Vzc2lvbkRhdGEuZnVsZmlsbG1lbnRzCiAgfQogIGlmIChzZXNzaW9uRGF0YS5zZWxlY3RlZF9wcm92aWRlcikgewogICAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucHJvdmlkZXIgPSBzZXNzaW9uRGF0YS5zZWxlY3RlZF9wcm92aWRlclswXQogIH0KCiAgZGVsZXRlIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLmJpbGxpbmcKICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkCn0K
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZD8uY29udGV4dCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBjb250ZXh0IGluIHBheWxvYWQiIH07CiAgfQogIGlmICh0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uICE9PSAiaW5pdCIpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIkludmFsaWQgYWN0aW9uIGluIGNvbnRleHQiIH07CiAgfQogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXIpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgbWVzc2FnZS5vcmRlciBpbiBwYXlsb2FkIiB9OwogIH0KICBjb25zdCBvcmRlciA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5vcmRlcjsKICBpZiAoIW9yZGVyPy5wcm92aWRlcj8uaWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgcHJvdmlkZXIuaWQgaW4gcGF5bG9hZCIgfTsKICB9CiAgICBpZiAoIUFycmF5LmlzQXJyYXkob3JkZXIuaXRlbXMpIHx8IG9yZGVyLml0ZW1zLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBpdGVtcyBpbiBwYXlsb2FkIiB9OwogIH0KIGNvbnN0IGl0ZW0gPSBvcmRlci5pdGVtc1swXTsKCiAgaWYgKCFpdGVtLmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zWzBdLmlkIGluIHBheWxvYWQiIH07CiAgfQoKICAgaWYgKCFBcnJheS5pc0FycmF5KG9yZGVyLnBheW1lbnRzKSB8fCBvcmRlci5wYXltZW50cy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgcGF5bWVudHMgaW4gcGF5bG9hZCIgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgaWYgKCFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZCkgewogICAgICAgICAgICByZXR1cm4geyAKICAgICAgICAgICAgICAgIHZhbGlkOiBmYWxzZSwgCiAgICAgICAgICAgICAgICBkZXNjcmlwdGlvbjogIk5vIHRyYW5zYWN0aW9uX2lkIGF2YWlsYWJsZSBpbiBzZXNzaW9uIGRhdGEiLAogICAgICAgICAgICAgICAgY29kZTonUkVRVUlSRURfVE5YX0lEJyAKICAgICAgICAgICAgfTsKICAgICAgICB9CiAgICAgICAgCiAgICAgICAgaWYgKCFzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtcyB8fCAhQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtcykgfHwgc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICAgICAgICAgIHJldHVybiB7IAogICAgICAgICAgICAgICAgdmFsaWQ6IGZhbHNlLCAKICAgICAgICAgICAgICAgIGRlc2NyaXB0aW9uIDogIk5vIHNlbGVjdGVkX2l0ZW1zIGF2YWlsYWJsZSBpbiBzZXNzaW9uIGRhdGEiICwKICAgICAgICAgICAgICAgIGNvZGU6Ik5PX1NFTEVDVEVEX0lURU1TX0FWQUlMQUJMRSIKICAgICAgICAgICAgfTsKICAgICAgICB9CiAgICAgICAgCiAgICAgIAogICAgICAgIGlmICghc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfcHJvdmlkZXIpIHsKICAgICAgICAgICAgcmV0dXJuIHsgCiAgICAgICAgICAgICAgICB2YWxpZDogZmFsc2UsIAogICAgICAgICAgICAgICAgZGVzY3JpcHRpb246ICJObyBzZWxlY3RlZF9wcm92aWRlciBhdmFpbGFibGUgaW4gc2Vzc2lvbiBkYXRhIiAsCiAgICAgICAgICAgICAgICBjb2RlIDogIk5PX1BST1ZJREVSX0lOX1NFU1NTSU9OIgogICAgICAgICAgICB9OwogICAgICAgIH0KICAgICAgICAKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: init
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-          domain: ONDC:FIS13
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller'
+          domain: 'ONDC:FIS13'
           location:
             city:
-              code: "*"
+              code: '*'
             country:
               code: IND
-          message_id: b2da9d99-f316-4834-8c17-f46cd05abf15
-          timestamp: 2026-03-17T09:03:06.655Z
-          transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
+          message_id: e4a95c84-f1be-4433-a839-6adb9cb9a105
+          timestamp: '2026-02-11T12:06:51.097Z'
+          transaction_id: 081cdf69-d8c3-465b-9d54-1d5f0bcf9f6b
           ttl: PT30S
           version: 2.0.0
         message:
           order:
             fulfillments:
               - id: F1
+                type: POLICY
                 tags:
                   - descriptor:
                       code: NOMINEE_DETAILS
@@ -1173,42 +1252,31 @@ steps:
                     list:
                       - descriptor:
                           code: NOMINEE_NAME
-                          short_desc: Describes the nominee name in the format as  'Salutation | First
-                            Name | Middle Name | Last Name' represents a full
-                            name structure, where the values are separated by a
-                            pipe (|) symbol
-                        value: doe
+                        value: Mr. | Steve | Wick | Adams
                       - descriptor:
                           code: NOMINEE_DOB
-                          short_desc: "Describes the nominee dob, as: DD/MM/YYYY, separated by a forward
-                            slash ( / )."
-                        value: 0333-03-31T00:00:00.000Z
+                        value: 17/12/2001
+                      - descriptor:
+                          code: NOMINEE_RELATIONSHIP
+                        value: Child
                       - descriptor:
                           code: APPOINTEE_NAME
-                          short_desc: Describes the Appointee name in the format as  'Salutation | First
-                            Name | Middle Name | Last Name' represents a full
-                            name structure, where the values are separated by a
-                            pipe (|) symbol
-                        value: "asew aasd "
+                        value: Mr. | John | Doe | Adams
                       - descriptor:
-                          code: APPOINTEE_DOB
-                          short_desc: "Describes the Appointee dob, as: DD/MM/YYYY, separated by a forward
-                            slash ( / )."
-                        value: 0333-03-31T00:00:00.000Z
+                          code: APPOINTEE_RELATIONSHIP
+                        value: Father
                       - descriptor:
                           code: GOOD_HEALTH_DECLARATION
-                        value: No
-                type: POLICY
+                        value: 'Yes'
             items:
               - id: CHILD_ITEM_ID_I1
                 parent_item_id: I1
-            payments:
-              - collected_by: BAP
-                id: PA1
-                status: NOT-PAID
-                type: PRE-ORDER
             provider:
               id: P1
+            payments:
+              - collected_by: BPP
+                status: NOT-PAID
+                type: ON-ORDER
             tags:
               - descriptor:
                   code: BAP_TERMS
@@ -1217,10 +1285,10 @@ steps:
                 list:
                   - descriptor:
                       code: STATIC_TERMS
-                    value: https://api.example-bap.com/booking/terms
+                    value: 'https://api.example-bap.com/booking/terms'
                   - descriptor:
                       code: OFFLINE_CONTRACT
-                    value: "true"
+                    value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -1230,52 +1298,71 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        billing: $.message.order.billing
+        payments: '$.message.order.payments[*]'
+        payment_collected_by: $.message.intent.payment.collected_by
+        bap_terms_tags: '$.message.order.tags[*]'
+        person_name: '$.message.order.fulfillments[*].tags[*].list[*].value'
+        fulfillments: '$.message.order.fulfillments[*]'
+        parent_item_id: '$.message.intent.provider.items[*].id'
       inputs:
         oldInputs:
           - name: nominee_name
             label: Enter nominee name
             type: text
-            payloadField: $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="NOMINEE_NAME")].value
+            payloadField: >-
+              $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="NOMINEE_NAME")].value
           - name: nominee_dob
             label: Enter nominee DOB
             type: date
-            payloadField: $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="NOMINEE_DOB")].value
-          - name: nominee_appointee_name
-            label: Enter nominee appointee name
+            payloadField: >-
+              $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="NOMINEE_DOB")].value
+          - name: nominee_relation
+            label: Enter nominee relationship
             type: text
-            payloadField: $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="APPOINTEE_NAME")].value
-          - name: nominee_appointee_dob
-            label: Enter nominee appointee DOB
-            type: date
-            payloadField: $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="APPOINTEE_DOB")].value
+            payloadField: >-
+              $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="NOMINEE_RELATIONSHIP")].value
+          - name: appointee_name
+            label: Enter appointee name
+            type: text
+            payloadField: >-
+              $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="APPOINTEE_NAME")].value
+          - name: appointee_relation
+            label: Enter appointee relationship
+            type: text
+            payloadField: >-
+              $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="APPOINTEE_RELATIONSHIP")].value
           - name: nominee_good_health_declaration
             label: Enter nominee good health declaration
             type: select
             values:
-              - Yes
-              - No
-            default: Yes
-            payloadField: $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="GOOD_HEALTH_DECLARATION")].value
+              - 'Yes'
+              - 'No'
+            default: 'Yes'
+            payloadField: >-
+              $.message.order.fulfillments[*].tags[*].list[?(@.descriptor.code=="GOOD_HEALTH_DECLARATION")].value
         id: old_inputs
     examples:
       - name: Example for action "init"
-        description: Auto-generated example for action "init" in flow
+        description: >-
+          Auto-generated example for action "init" in flow
           "CD_Balance_Error_Hospicash_Insurance"
         payload:
           context:
             action: init
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-            domain: ONDC:FIS13
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
+            domain: 'ONDC:FIS13'
             location:
               city:
-                code: "*"
+                code: '*'
               country:
                 code: IND
             message_id: b2da9d99-f316-4834-8c17-f46cd05abf15
-            timestamp: 2026-03-17T09:03:06.655Z
+            timestamp: '2026-03-17T09:03:06.655Z'
             transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
             ttl: PT30S
             version: 2.0.0
@@ -1291,31 +1378,35 @@ steps:
                       list:
                         - descriptor:
                             code: NOMINEE_NAME
-                            short_desc: Describes the nominee name in the format as  'Salutation | First
-                              Name | Middle Name | Last Name' represents a full
-                              name structure, where the values are separated by
-                              a pipe (|) symbol
+                            short_desc: >-
+                              Describes the nominee name in the format as 
+                              'Salutation | First Name | Middle Name | Last
+                              Name' represents a full name structure, where the
+                              values are separated by a pipe (|) symbol
                           value: doe
                         - descriptor:
                             code: NOMINEE_DOB
-                            short_desc: "Describes the nominee dob, as: DD/MM/YYYY, separated by a forward
-                              slash ( / )."
-                          value: 0333-03-31T00:00:00.000Z
+                            short_desc: >-
+                              Describes the nominee dob, as: DD/MM/YYYY,
+                              separated by a forward slash ( / ).
+                          value: '0333-03-31T00:00:00.000Z'
                         - descriptor:
                             code: APPOINTEE_NAME
-                            short_desc: Describes the Appointee name in the format as  'Salutation | First
-                              Name | Middle Name | Last Name' represents a full
-                              name structure, where the values are separated by
-                              a pipe (|) symbol
-                          value: "asew aasd "
+                            short_desc: >-
+                              Describes the Appointee name in the format as 
+                              'Salutation | First Name | Middle Name | Last
+                              Name' represents a full name structure, where the
+                              values are separated by a pipe (|) symbol
+                          value: 'asew aasd '
                         - descriptor:
                             code: APPOINTEE_DOB
-                            short_desc: "Describes the Appointee dob, as: DD/MM/YYYY, separated by a forward
-                              slash ( / )."
-                          value: 0333-03-31T00:00:00.000Z
+                            short_desc: >-
+                              Describes the Appointee dob, as: DD/MM/YYYY,
+                              separated by a forward slash ( / ).
+                          value: '0333-03-31T00:00:00.000Z'
                         - descriptor:
                             code: GOOD_HEALTH_DECLARATION
-                          value: No
+                          value: 'No'
                   type: POLICY
               items:
                 - id: CHILD_ITEM_ID_I1
@@ -1335,10 +1426,10 @@ steps:
                   list:
                     - descriptor:
                         code: STATIC_TERMS
-                      value: https://api.example-bap.com/booking/terms
+                      value: 'https://api.example-bap.com/booking/terms'
                     - descriptor:
                         code: OFFLINE_CONTRACT
-                      value: "true"
+                      value: 'true'
         type: request
   - api: on_init
     action_id: on_init_cd_balance_error
@@ -1347,29 +1438,32 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZSgKICBleGlzdGluZ1BheWxvYWQsCiAgc2Vzc2lvbkRhdGEKKSB7CiAgLy8gTW9zdGx5IHN0YXRpYyBlcnJvciByZXNwb25zZSwgYnV0IHdlIGNhbiB1cGRhdGUgYW5kIHJldHVybiBoZXJlIGlmIG5lZWRlZC4KICBjb25zdCB7IGNvbnRleHQsIG1lc3NhZ2UgfSA9IGV4aXN0aW5nUGF5bG9hZAogIHJldHVybiB7CiAgICBjb250ZXh0LAogICAgZXJyb3I6IHsKICAgICAgY29kZTogIjgxMjAxIiwKICAgICAgbWVzc2FnZTogIkluc3VmZmljaWVudCBDRCBCYWxhbmNlIgogICAgfQogIH0KfQ==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyLnByb3ZpZGVyPy5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwcm92aWRlci5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgaWYgKCFBcnJheS5pc0FycmF5KG9yZGVyLml0ZW1zKSB8fCBvcmRlci5pdGVtcy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbXMgaW4gcGF5bG9hZCIgfTsKICB9CgogIGlmICghb3JkZXI/LnF1b3RlPy5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBxdW90ZS5pZCBpbiBwYXlsb2FkIiB9OwogIH0KIGlmICghQXJyYXkuaXNBcnJheShvcmRlci5wYXltZW50cykgfHwgb3JkZXIucGF5bWVudHMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHBheW1lbnRzIGluIHBheWxvYWQiIH07CiAgfQogICAgY29uc3Qgb25PcmRlclBheW1lbnQgPSBvcmRlci5wYXltZW50cy5maW5kKHAgPT4gcC50eXBlID09PSAiT05fT1JERVIiKTsKICBpZiAoIW9uT3JkZXJQYXltZW50KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIE9OX09SREVSIHBheW1lbnQiIH07CiAgfQoKICBpZiAoIW9uT3JkZXJQYXltZW50LmNvbGxlY3RlZF9ieSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBjb2xsZWN0ZWRfYnkgaW4gT05fT1JERVIgcGF5bWVudCIgfTsKICB9CgogIAogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CgogIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbkRhdGEiCiAgICB9OwogIH0KCiAgIGlmICgKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnNlbGVjdGVkX3Byb3ZpZGVyKSB8fAogICAgc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfcHJvdmlkZXIubGVuZ3RoID09PSAwCiAgKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlbGVjdGVkX3Byb3ZpZGVyIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogIGlmICghc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfcHJvdmlkZXJbMF0/LmlkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlbGVjdGVkX3Byb3ZpZGVyWzBdLmlkIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogIGlmICgKICAgICghQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5pdGVtKSB8fCBzZXNzaW9uRGF0YS5pdGVtLmxlbmd0aCA9PT0gMCkgJiYKICAgICghQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5pdGVtcykgfHwgc2Vzc2lvbkRhdGEuaXRlbXMubGVuZ3RoID09PSAwKQogICkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBpdGVtL2l0ZW1zIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogCiAgY29uc3QgcXVvdGVJZCA9CiAgICBzZXNzaW9uRGF0YT8ucXVvdGVfaWQ/LlswXSB8fAogICAgc2Vzc2lvbkRhdGE/LnF1b3RlPy5pZCB8fAogICAgc2Vzc2lvbkRhdGE/Lm9yZGVyPy5xdW90ZT8uaWQ7CgogIGlmICghcXVvdGVJZCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBxdW90ZV9pZCBpbiBzZXNzaW9uRGF0YSIKICAgIH07CiAgfQoKIAogIGlmICgKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnNlbGVjdGVkX2xvY2F0aW9uX2lkKSB8fAogICAgc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfbG9jYXRpb25faWQubGVuZ3RoID09PSAwCiAgKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlbGVjdGVkX2xvY2F0aW9uX2lkIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgoKICByZXR1cm4gewogICAgdmFsaWQ6IHRydWUsCiAgICBjb2RlOiAyMDAsCiAgICBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiCiAgfTsKfQ==
       defaultPayload:
         context:
           action: on_init
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-          domain: ONDC:FIS13
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller'
+          domain: 'ONDC:FIS13'
           location:
             city:
-              code: "*"
+              code: '*'
             country:
               code: IND
-          message_id: b2da9d99-f316-4834-8c17-f46cd05abf15
-          timestamp: 2026-03-17T09:03:06.753Z
-          transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
+          message_id: e4a95c84-f1be-4433-a839-6adb9cb9a105
+          timestamp: '2026-02-11T12:06:51.308Z'
+          transaction_id: 081cdf69-d8c3-465b-9d54-1d5f0bcf9f6b
           ttl: PT30S
           version: 2.0.0
         error:
-          code: "81201"
+          code: '81201'
           message: Insufficient CD Balance
       saveData:
         transactionId: $.context.transaction_id
@@ -1380,33 +1474,37 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        error: $.error
       inputs: {}
     examples:
       - name: Example for action "on_init"
-        description: Auto-generated example for action "on_init" in flow
+        description: >-
+          Auto-generated example for action "on_init" in flow
           "CD_Balance_Error_Hospicash_Insurance"
         payload:
           context:
             action: on_init
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
-            domain: ONDC:FIS13
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:FIS13/2.0.0/seller
+            domain: 'ONDC:FIS13'
             location:
               city:
-                code: "*"
+                code: '*'
               country:
                 code: IND
             message_id: b2da9d99-f316-4834-8c17-f46cd05abf15
-            timestamp: 2026-03-17T09:03:06.753Z
+            timestamp: '2026-03-17T09:03:06.753Z'
             transaction_id: 03227264-0c21-46d7-bdf3-baf8bd1c7c86
             ttl: PT30S
             version: 2.0.0
           error:
-            code: "81201"
+            code: '81201'
             message: Insufficient CD Balance
         type: request
 transaction_history: []
-validationLib: ""
-helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
+validationLib: ''
+helperLib: >-
+  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
