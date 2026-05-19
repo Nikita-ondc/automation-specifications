@@ -72,9 +72,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: search
-            timestamp: 2026-05-19T17:46:20.440Z
+            timestamp: 2026-05-19T19:33:30.054Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 86877335-a9e5-4e03-94fb-68f0bb01199e
+            message_id: 86b74b36-b1dc-4e94-a6ab-43a9fad14411
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -449,9 +449,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_search
-            timestamp: 2026-05-19T17:46:20.469Z
+            timestamp: 2026-05-19T19:33:30.079Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 86877335-a9e5-4e03-94fb-68f0bb01199e
+            message_id: 86b74b36-b1dc-4e94-a6ab-43a9fad14411
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -468,7 +468,7 @@ steps:
               descriptor:
                 name: ICICI Bank
               providers:
-                - id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                - id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
                   descriptor:
                     images:
                       - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -477,33 +477,33 @@ steps:
                     short_desc: ICICI Bank Ltd
                     long_desc: ICICI Bank Ltd, India.
                   categories:
-                    - id: cat_loan_ecb26c25-4f1b-461e-ae64-b49e4c0b5d2b
+                    - id: cat_loan_e3aeb928-5853-4b50-ae55-233e26b468a3
                       descriptor:
                         code: LOAN
                         name: Loan
-                    - id: cat_personal_loan_893bbf67-21d6-4ef2-aa90-1d8b78e4e43a
-                      parent_category_id: cat_loan_ecb26c25-4f1b-461e-ae64-b49e4c0b5d2b
+                    - id: cat_personal_loan_4faf6eb8-bad0-4936-83bc-b003b00be2ee
+                      parent_category_id: cat_loan_e3aeb928-5853-4b50-ae55-233e26b468a3
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan
-                    - id: cat_bureau_loan_63c57b32-9899-4a78-aae8-4ca597abb0fc
-                      parent_category_id: cat_personal_loan_893bbf67-21d6-4ef2-aa90-1d8b78e4e43a
+                    - id: cat_bureau_loan_fdb0da11-278f-408c-8bea-2eb0795e9028
+                      parent_category_id: cat_personal_loan_4faf6eb8-bad0-4936-83bc-b003b00be2ee
                       descriptor:
                         code: BUREAU_LOAN
                         name: Bureau Loan
-                    - id: cat_pre_qualifier_2784d3dc-7254-465f-b8e4-345a3a3e5341
-                      parent_category_id: cat_loan_ecb26c25-4f1b-461e-ae64-b49e4c0b5d2b
+                    - id: cat_pre_qualifier_1f9cb5c6-d672-488c-af67-86ef9f5e2352
+                      parent_category_id: cat_loan_e3aeb928-5853-4b50-ae55-233e26b468a3
                       descriptor:
                         code: PRE_QUALIFIER
                         name: Pre Qualifier
                   items:
-                    - id: bureau_personal_loan_ba7287b5-cc88-41ba-8c25-c6c768307faa
+                    - id: bureau_personal_loan_1faaa465-5d5d-43fc-a1c9-02aa7b15edf1
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan without AA - Offline Journey
                       category_ids:
-                        - cat_personal_loan_893bbf67-21d6-4ef2-aa90-1d8b78e4e43a
-                        - cat_bureau_loan_63c57b32-9899-4a78-aae8-4ca597abb0fc
+                        - cat_personal_loan_4faf6eb8-bad0-4936-83bc-b003b00be2ee
+                        - cat_bureau_loan_fdb0da11-278f-408c-8bea-2eb0795e9028
                       fulfillment_ids:
                         - F1
                       tags:
@@ -555,19 +555,19 @@ steps:
                           headings:
                             - PERSONAL_INFORMATION
                         form:
-                          id: form_de82dc0c-938d-4c87-9f35-1a71f5de40df
+                          id: form_cacbd3f8-27d4-4eb9-b88f-629bb06e9920
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: bureau_personal_loan_fb7f8813-36b6-4dee-8502-7597349699cb
+                    - id: bureau_personal_loan_8ffb5096-9ffa-4858-a3c6-6811161eab69
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan without AA - Single Redirection
                       category_ids:
-                        - cat_personal_loan_893bbf67-21d6-4ef2-aa90-1d8b78e4e43a
-                        - cat_bureau_loan_63c57b32-9899-4a78-aae8-4ca597abb0fc
+                        - cat_personal_loan_4faf6eb8-bad0-4936-83bc-b003b00be2ee
+                        - cat_bureau_loan_fdb0da11-278f-408c-8bea-2eb0795e9028
                       fulfillment_ids:
                         - F2
                       tags:
@@ -619,18 +619,18 @@ steps:
                           headings:
                             - PERSONAL_INFORMATION
                         form:
-                          id: form_de82dc0c-938d-4c87-9f35-1a71f5de40df
+                          id: form_cacbd3f8-27d4-4eb9-b88f-629bb06e9920
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: personal_loan_e8c1a10a-a135-45e4-aba1-72e54acff8d3
+                    - id: personal_loan_dfad0339-c25a-40c9-a553-00ff8ad10d55
                       descriptor:
                         code: PRE_QUALIFIER
                         name: Pre Qualifier
                       category_ids:
-                        - cat_pre_qualifier_2784d3dc-7254-465f-b8e4-345a3a3e5341
+                        - cat_pre_qualifier_1f9cb5c6-d672-488c-af67-86ef9f5e2352
                       fulfillment_ids:
                         - F3
                       matched: true
@@ -795,7 +795,7 @@ steps:
           panName: Jyoti Sharma
           personalemail: jyoti.sharma@thewitslab.com
           officialemail: jyoti.sharma@thewitslab.com
-          dob: 2026-05-14
+          dob: 2026-05-05
           gender: female
           pan: BAJPC4350M
           contactNumber: "6284870148"
@@ -805,11 +805,11 @@ steps:
           udyamNumber: ""
           addressL1: ""
           addressL2: ""
-          city: ""
-          state: vjkjhkh
+          city: delhi
+          state: Delhi
           pincode: "160103"
           aa_id: ""
-          endUse: health
+          endUse: education
           derivedData: {}
           formId: FO1
         type: request
@@ -877,9 +877,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: select
-            timestamp: 2026-05-19T17:46:48.644Z
+            timestamp: 2026-05-19T19:33:56.899Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: d9fde04f-e8b6-40d1-b79b-df1cce2640fd
+            message_id: d19b6540-89d0-45ad-9b23-c914ab404a8b
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -894,7 +894,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
               items:
                 - id: ITEM_ID_PERSONAL_LOAN_2
                   xinput:
@@ -1234,9 +1234,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_select
-            timestamp: 2026-05-19T17:46:48.690Z
+            timestamp: 2026-05-19T19:33:56.922Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: d9fde04f-e8b6-40d1-b79b-df1cce2640fd
+            message_id: d19b6540-89d0-45ad-9b23-c914ab404a8b
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1251,7 +1251,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -1433,7 +1433,7 @@ steps:
                       headings:
                         - JOURNEY_OFFLINE
                     form:
-                      id: ekyc_details_bedd7622-2f0f-4097-99dd-e8db5b414953
+                      id: ekyc_details_96e94bf6-9c7b-4d2d-b958-5e4ad9da7383
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                       resubmit: false
@@ -1856,9 +1856,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-19T17:46:51.396Z
+            timestamp: 2026-05-19T19:34:01.238Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 272a6c2f-7936-482f-876b-6b1f292cf584
+            message_id: a1270cca-71da-4597-925b-c3f87ffffa63
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1873,7 +1873,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -2046,7 +2046,7 @@ steps:
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_bedd7622-2f0f-4097-99dd-e8db5b414953
+                      id: ekyc_details_96e94bf6-9c7b-4d2d-b958-5e4ad9da7383
                     form_response:
                       status: APPROVED
                       submission_id: e9764f76-27e1-4be5-894e-e228407b683d
@@ -2135,22 +2135,22 @@ steps:
         type: request
         description: please add relevant description
   - api: status
-    action_id: status_personal_loan
+    action_id: status_personal_loan_3
     owner: BAP
     responseFor: null
     unsolicited: false
     description: please add relevant description
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgaWYgKGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0KSB7CiAgICBleGlzdGluZ1BheWxvYWQuY29udGV4dC50aW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CiAgfQogIGlmIChleGlzdGluZ1BheWxvYWQuY29udGV4dD8udHJhbnNhY3Rpb25faWQpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLnJlZl9pZCA9IGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LnRyYW5zYWN0aW9uX2lkOwogICAgZGVsZXRlIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLnRyYW5zYWN0aW9uX2lkOwogIH0KCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZDsKfQ==
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyAgcGF5bG9hZCIgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbkRhdGEiIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           domain: ONDC:FIS12
           action: status
-          timestamp: 2026-05-19T09:49:26.933Z
-          transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-          message_id: 425a8c74-2f64-47a8-8af2-145455423854
+          timestamp: 2026-04-10T07:45:43.983Z
+          transaction_id: 82f5e67f-1081-42c4-b553-ab4023d1e250
+          message_id: 7ba1d44b-0d56-4531-a68e-a7cf76962006
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
@@ -2163,7 +2163,7 @@ steps:
             city:
               code: "*"
         message:
-          ref_id: a9aaecca-10b7-4d19-b640-b047a7c62196
+          ref_id: LOAN_LEAD_ID_OR_SIMILAR_ORDER_ID
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -2180,9 +2180,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: status
-            timestamp: 2026-05-19T17:46:51.435Z
+            timestamp: 2026-05-19T19:34:01.287Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 53d70508-28f6-4169-bd9b-986c56311704
+            message_id: 9d0d0992-2636-45c7-be3d-837736289f6e
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2199,22 +2199,22 @@ steps:
         type: request
         description: please add relevant description
   - api: on_status
-    action_id: on_status_personal_loan
+    action_id: on_status_personal_loan_3
     owner: BPP
-    responseFor: null
+    responseFor: status_personal_loan_3
     unsolicited: false
     description: please add relevant description
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAKCiAgaWYgKHNlc3Npb25EYXRhLm9yZGVyKSB7CiAgICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlciA9IHNlc3Npb25EYXRhLm9yZGVyWzBdCiAgfQoKICBpZiAoZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICBjb25zdCBub3cgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CiAgICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci51cGRhdGVkX2F0ID0gbm93OwogICAgY29uc29sZS5sb2coIlNldCBvcmRlci5jcmVhdGVkX2F0IGFuZCBvcmRlci51cGRhdGVkX2F0IHRvOiIsIG5vdyk7CiAgfQogIHJldHVybiBleGlzdGluZ1BheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgY29udGV4dCBpbiBwYXlsb2FkIiB9OwogIH0KCiAKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIgfTsKICB9CiAgY29uc3Qgb3JkZXI9dGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CgogIGlmICghb3JkZXIucHJvdmlkZXI/LmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHByb3ZpZGVyLmlkIGluIHBheWxvYWQiIH07CiAgfQoKIAogIGlmICghQXJyYXkuaXNBcnJheShvcmRlci5pdGVtcykgfHwgb3JkZXIuaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zIGluIHBheWxvYWQiIH07CiAgfQoKICBjb25zdCBpdGVtID0gb3JkZXIuaXRlbXNbMF07CgogIGlmICghaXRlbS5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBpdGVtc1swXS5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgaWYgKCFvcmRlcj8ucXVvdGU/LmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHF1b3RlLmlkIGluIHBheWxvYWQiIH07CiAgfQoKCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CgogIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbkRhdGEiIH07CiAgfQoKCgogIGlmICgKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLm9yZGVyX2lkKSB8fAogICAgc2Vzc2lvbkRhdGEub3JkZXJfaWQubGVuZ3RoID09PSAwCiAgKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG9yZGVyX2lkIGluIHNlc3Npb25EYXRhIiB9OwogIH0KCiAgaWYgKAogICAgIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEucHJvdmlkZXJfaWQpIHx8CiAgICBzZXNzaW9uRGF0YS5wcm92aWRlcl9pZC5sZW5ndGggPT09IDAKICApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgcHJvdmlkZXJfaWQgaW4gc2Vzc2lvbkRhdGEiIH07CiAgfQoKICBpZiAoCiAgICAoIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuaXRlbSkgfHwgc2Vzc2lvbkRhdGEuaXRlbS5sZW5ndGggPT09IDApICYmCiAgICAoIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuaXRlbXMpIHx8IHNlc3Npb25EYXRhLml0ZW1zLmxlbmd0aCA9PT0gMCkKICApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbS9pdGVtcyBpbiBzZXNzaW9uRGF0YSIgfTsKICB9CgogIGNvbnN0IGZvcm1JZCA9CiAgICBzZXNzaW9uRGF0YT8uZm9ybV9pZD8uWzBdIHx8CiAgICBzZXNzaW9uRGF0YT8uaXRlbT8uWzBdPy54aW5wdXQ/LmZvcm0/LmlkIHx8CiAgICBzZXNzaW9uRGF0YT8uaXRlbXM/LlswXT8ueGlucHV0Py5mb3JtPy5pZDsKCiAgaWYgKCFmb3JtSWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgZm9ybV9pZCBpbiBzZXNzaW9uRGF0YSIgfTsKICB9CgogIGNvbnN0IHN1Ym1pc3Npb25JZCA9CiAgICBzZXNzaW9uRGF0YT8udmVyaWZpY2F0aW9uX3N0YXR1cyB8fAogICAgc2Vzc2lvbkRhdGE/LnN1Ym1pc3Npb25faWQ/LlswXTsKCiAgaWYgKCFzdWJtaXNzaW9uSWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIk1pc3NpbmcgdmVyaWZpY2F0aW9uX3N0YXR1cyBvciBzdWJtaXNzaW9uX2lkIGluIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogIGlmICgKICAgICFzZXNzaW9uRGF0YT8ucXVvdGVfaWQKICAgCiAgKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHF1b3RlX2lkIGluIHNlc3Npb25EYXRhIiB9OwogIH0KCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
           domain: ONDC:FIS12
           action: on_status
-          timestamp: 2026-05-18T06:14:35.463Z
-          transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-          message_id: 1651e947-2870-4be9-b2f8-47626586adf1
+          timestamp: 2026-04-10T07:45:43.983Z
+          transaction_id: 82f5e67f-1081-42c4-b553-ab4023d1e250
+          message_id: 1595dc1e-f6d0-4f5a-a047-7ce2ce49845a
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
@@ -2497,6 +2497,13 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        order_id: $.message.order.id
+        provider_id: $.message.order.provider.id
+        loan_status: $.message.order.fulfillments[0].state.descriptor.code
+        quote_id: $.message.order.quote.id
+        quote: $.message.order.quote
+        form_id: $.message.order.items[0].xinput.form.id
+        payments: $.message.order.payments[*]
       inputs: {}
     examples:
       - name: example for on_status
@@ -2504,9 +2511,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-19T17:46:51.472Z
+            timestamp: 2026-05-19T19:34:01.311Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 2b23936d-792c-4b40-96bf-b76f44a65c65
+            message_id: 9d0d0992-2636-45c7-be3d-837736289f6e
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2521,7 +2528,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -2703,7 +2710,7 @@ steps:
                       headings:
                         - JOURNEY_OFFLINE
                     form:
-                      id: ekyc_details_bedd7622-2f0f-4097-99dd-e8db5b414953
+                      id: ekyc_details_96e94bf6-9c7b-4d2d-b958-5e4ad9da7383
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                       resubmit: false
@@ -2791,7 +2798,7 @@ steps:
                       value: "0"
                       currency: INR
                 ttl: PT15D
-              updated_at: 2026-05-19T17:46:51.482Z
+              updated_at: 2026-05-19T19:34:01.316Z
         type: request
         description: please add relevant description
   - api: on_status
@@ -3177,9 +3184,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-19T17:46:51.531Z
+            timestamp: 2026-05-19T19:34:01.344Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: f6311555-5db3-4160-b814-85407ff94c40
+            message_id: 278470a8-4204-45ad-a6a1-1f4ad2b29b6c
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3194,7 +3201,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -3376,7 +3383,7 @@ steps:
                       headings:
                         - JOURNEY_OFFLINE
                     form:
-                      id: ekyc_details_bedd7622-2f0f-4097-99dd-e8db5b414953
+                      id: ekyc_details_96e94bf6-9c7b-4d2d-b958-5e4ad9da7383
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                       resubmit: false
@@ -3464,7 +3471,7 @@ steps:
                       value: "0"
                       currency: INR
                 ttl: PT15D
-              updated_at: 2026-05-19T17:46:51.540Z
+              updated_at: 2026-05-19T19:34:01.349Z
         type: request
         description: please add relevant description
   - api: confirm
@@ -3543,9 +3550,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: confirm
-            timestamp: 2026-05-19T17:46:51.597Z
+            timestamp: 2026-05-19T19:34:01.381Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 6d12eb56-1f0f-4560-8e86-21d2bc3122b3
+            message_id: 9e8bb4c0-1d60-4985-af91-9afe8178cb92
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3560,12 +3567,12 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
               items:
                 - id: ITEM_ID_PERSONAL_LOAN_2
                   xinput:
                     form:
-                      id: ekyc_details_bedd7622-2f0f-4097-99dd-e8db5b414953
+                      id: ekyc_details_96e94bf6-9c7b-4d2d-b958-5e4ad9da7383
                     form_response:
                       status: SUCCESS
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -3996,9 +4003,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_confirm
-            timestamp: 2026-05-19T17:46:51.657Z
+            timestamp: 2026-05-19T19:34:01.427Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 6d12eb56-1f0f-4560-8e86-21d2bc3122b3
+            message_id: 9e8bb4c0-1d60-4985-af91-9afe8178cb92
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4012,9 +4019,9 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1779212811668_DEFAULT
+              id: LOAN_ORDER_1779219241433_DEFAULT
               provider:
-                id: personal_loan_provider_0c3c1091-647d-4fb7-8c14-1ad4e27189ae
+                id: personal_loan_provider_58accb4e-ace4-42a9-a64a-4103b6eb398a
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -4302,8 +4309,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-05-19T17:46:51.668Z
-              updated_at: 2026-05-19T17:46:51.668Z
+              created_at: 2026-05-19T19:34:01.433Z
+              updated_at: 2026-05-19T19:34:01.433Z
         type: request
         description: please add relevant description
   - api: update
@@ -4360,9 +4367,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: update
-            timestamp: 2026-05-19T17:46:51.732Z
+            timestamp: 2026-05-19T19:34:01.467Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: e4e9e04a-a7ea-40ed-a587-0515a0432994
+            message_id: a805d5a1-b4bc-4db7-a5c8-d5f778b8ba43
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4377,7 +4384,7 @@ steps:
           message:
             update_target: payments
             order:
-              id: LOAN_ORDER_1779212811668_DEFAULT
+              id: LOAN_ORDER_1779219241433_DEFAULT
               payments:
                 - time:
                     label: FORECLOSURE
@@ -4807,9 +4814,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_update
-            timestamp: 2026-05-19T17:46:51.810Z
+            timestamp: 2026-05-19T19:34:01.504Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: e4e9e04a-a7ea-40ed-a587-0515a0432994
+            message_id: a805d5a1-b4bc-4db7-a5c8-d5f778b8ba43
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4823,9 +4830,9 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1779212811668_DEFAULT
+              id: LOAN_ORDER_1779219241433_DEFAULT
               provider:
-                id: personal_loan_provider_faca42db-1481-4145-8150-2a180d107fbb
+                id: personal_loan_provider_d937f719-0d1c-4173-afb0-b81760bba8b4
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -5197,8 +5204,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-05-19T17:46:51.668Z
-              updated_at: 2026-05-19T17:46:51.823Z
+              created_at: 2026-05-19T19:34:01.433Z
+              updated_at: 2026-05-19T19:34:01.510Z
         type: request
         description: please add relevant description
   - api: dynamic_form
@@ -5648,9 +5655,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_update
-            timestamp: 2026-05-19T17:46:53.924Z
+            timestamp: 2026-05-19T19:34:03.480Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 86bbe5d5-9c1c-43a2-a6fb-c7668dc5060f
+            message_id: 8eaedf4a-c542-43ee-b89b-4fae19df40fb
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5664,9 +5671,9 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1779212811668_DEFAULT
+              id: LOAN_ORDER_1779219241433_DEFAULT
               provider:
-                id: personal_loan_provider_c1b33200-bbd4-49a1-bedd-9efb4d7dca1c
+                id: personal_loan_provider_a13b7f8e-08a8-4894-bae3-e7859e5c1f62
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -6036,8 +6043,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-05-19T17:46:51.668Z
-              updated_at: 2026-05-19T17:46:53.932Z
+              created_at: 2026-05-19T19:34:01.433Z
+              updated_at: 2026-05-19T19:34:03.486Z
         type: request
         description: please add relevant description
 transaction_history: []
