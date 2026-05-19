@@ -96,9 +96,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: search
-            timestamp: 2026-05-18T06:22:44.669Z
+            timestamp: 2026-05-19T10:59:19.720Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: 8d44f5fd-8ade-4574-9694-7ca874ee7cd2
+            message_id: 6b9c1cd3-ab00-4d21-a3f3-03075bd2af9f
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -435,9 +435,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_search
-            timestamp: 2026-05-18T06:22:44.691Z
+            timestamp: 2026-05-19T10:59:19.739Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: 8d44f5fd-8ade-4574-9694-7ca874ee7cd2
+            message_id: 6b9c1cd3-ab00-4d21-a3f3-03075bd2af9f
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -454,7 +454,7 @@ steps:
               descriptor:
                 name: ICICI Bank
               providers:
-                - id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                - id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                   descriptor:
                     images:
                       - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -463,33 +463,33 @@ steps:
                     short_desc: ICICI Bank Ltd
                     long_desc: ICICI Bank Ltd, India.
                   categories:
-                    - id: cat_loan_8f76c88f-7cde-4e81-928a-328ade5dc873
+                    - id: cat_loan_a6036cbb-8c56-4ba1-b8ef-4eb350790ac7
                       descriptor:
                         code: LOAN
                         name: Loan
-                    - id: cat_personal_loan_48380c1e-f46c-4ef1-85d1-376d0bf0ceee
-                      parent_category_id: cat_loan_8f76c88f-7cde-4e81-928a-328ade5dc873
+                    - id: cat_personal_loan_c8102c86-9372-4b91-b8ac-33135686080a
+                      parent_category_id: cat_loan_a6036cbb-8c56-4ba1-b8ef-4eb350790ac7
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan
-                    - id: cat_bureau_loan_fbeb506a-2db1-4e45-bb20-b504510af720
-                      parent_category_id: cat_personal_loan_48380c1e-f46c-4ef1-85d1-376d0bf0ceee
+                    - id: cat_bureau_loan_eb1cd77f-a2a1-4bbe-8506-8a1e7e8d9366
+                      parent_category_id: cat_personal_loan_c8102c86-9372-4b91-b8ac-33135686080a
                       descriptor:
                         code: BUREAU_LOAN
                         name: Bureau Loan
-                    - id: cat_aa_personal_loan_03992c87-0505-4a95-a706-b5f58721a9e2
-                      parent_category_id: cat_personal_loan_48380c1e-f46c-4ef1-85d1-376d0bf0ceee
+                    - id: cat_aa_personal_loan_03c079d2-da41-43e2-9153-2ef148249048
+                      parent_category_id: cat_personal_loan_c8102c86-9372-4b91-b8ac-33135686080a
                       descriptor:
                         code: AA_PERSONAL_LOAN
                         name: Account Aggregator Loan
                   items:
-                    - id: bureau_personal_loan_0ac32a4c-ebbf-4ba4-a8e6-66a3ab2349ef
+                    - id: bureau_personal_loan_68b869b2-7b76-4c41-b312-35f1c96f97e5
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan without AA
                       category_ids:
-                        - cat_personal_loan_48380c1e-f46c-4ef1-85d1-376d0bf0ceee
-                        - cat_bureau_loan_fbeb506a-2db1-4e45-bb20-b504510af720
+                        - cat_personal_loan_c8102c86-9372-4b91-b8ac-33135686080a
+                        - cat_bureau_loan_eb1cd77f-a2a1-4bbe-8506-8a1e7e8d9366
                       tags:
                         - descriptor:
                             code: GENERAL_INFO
@@ -539,19 +539,19 @@ steps:
                           headings:
                             - PERSONAL_INFORMATION
                         form:
-                          id: form_59c6852b-89d8-4ab9-84bc-c925b064d78e
+                          id: form_9788b7f9-7313-4539-9604-d25143cdf90f
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=b0b9338d-e381-43ab-95ff-e2b40cf49447&session_id=undefined
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                    - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan with AA
                       category_ids:
-                        - cat_personal_loan_48380c1e-f46c-4ef1-85d1-376d0bf0ceee
-                        - cat_aa_personal_loan_03992c87-0505-4a95-a706-b5f58721a9e2
+                        - cat_personal_loan_c8102c86-9372-4b91-b8ac-33135686080a
+                        - cat_aa_personal_loan_03c079d2-da41-43e2-9153-2ef148249048
                       tags:
                         - descriptor:
                             code: GENERAL_INFO
@@ -601,7 +601,7 @@ steps:
                           headings:
                             - Personal Information
                         form:
-                          id: form_59c6852b-89d8-4ab9-84bc-c925b064d78e
+                          id: form_9788b7f9-7313-4539-9604-d25143cdf90f
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=b0b9338d-e381-43ab-95ff-e2b40cf49447&session_id=undefined
                           resubmit: false
@@ -719,23 +719,22 @@ steps:
           panName: Jyoti Sharma
           personalemail: jyoti.sharma@thewitslab.com
           officialemail: jyoti.sharma@thewitslab.com
-          dob: 2026-05-14
+          dob: 2026-05-04
           gender: female
           pan: BAJPC4350M
           contactNumber: "6284870148"
           employmentType: salaried
           income: "78"
-          companyName: hiuhci
+          companyName: wits
           udyamNumber: "69779"
-          addressL1: hlkjlkj
+          addressL1: ""
           addressL2: ""
-          city: ""
-          state: ""
+          city: delhi
+          state: Delhi
           pincode: "160103"
           aa_id: ""
-          endUse: education
+          endUse: travel
           derivedData: {}
-          bureauConsent: on
           formId: FO1
         type: request
         description: please add relevant description
@@ -802,9 +801,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: select
-            timestamp: 2026-05-18T06:23:15.281Z
+            timestamp: 2026-05-19T10:59:57.130Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: a00189d1-6e1d-4317-8c99-26563c0f8f3b
+            message_id: 35dfe0cd-ec1b-4777-b2d5-d28e33bfb63f
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -819,12 +818,12 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   xinput:
                     form:
-                      id: form_59c6852b-89d8-4ab9-84bc-c925b064d78e
+                      id: form_9788b7f9-7313-4539-9604-d25143cdf90f
                     form_response:
                       status: SUCCESS
                       submission_id: F02_SUBMISSION_ID
@@ -932,7 +931,12 @@ steps:
               - id: ITEM_ID_PERSONAL_LOAN_2
                 descriptor:
                   code: PERSONAL_LOAN
-                  name: Personal Loan
+                  name: Personal Loan without AA - Single Redirection
+                category_ids:
+                  - "101123"
+                  - "101124"
+                fulfillment_ids:
+                  - F2
                 price:
                   currency: INR
                   value: "233900"
@@ -984,7 +988,9 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate
+                          short_desc: Effective annualized interest rate in percentage computed on net
+                            disbursed amount using IRR approach and reducing
+                            balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -994,8 +1000,8 @@ steps:
                       - descriptor:
                           code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                           name: Number of installments of repayment
-                          short_desc: Number of installments borrower has to pay
-                        value: "5"
+                          short_desc: Number of installments borrower has to make to payback the loan
+                        value: "45"
                       - descriptor:
                           code: TNC_LINK
                           name: Terms & Conditions
@@ -1010,25 +1016,31 @@ steps:
                       - descriptor:
                           code: INSTALLMENT_AMOUNT
                           name: Installment amount
-                          short_desc: Each installment amount
+                          short_desc: Each installment amount of repayment
                         value: "46360"
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link to the KFS document
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                            document related to a loan. When accessed, the
+                            document is returned in text/html format, with the
+                            loan details organized in a standard HTML table.
+                            This format makes it easy for the buyer's app to
+                            read and reformat the information as needed. For
+                            more details, refer to the "KFS_LINK format"
+                            document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
                     display: true
                 xinput:
                   head:
                     descriptor:
-                      name: KYC
+                      name: Single Redirection
                     index:
                       min: 0
-                      cur: 1
-                      max: 1
+                      cur: 0
+                      max: 0
                     headings:
-                      - SET_LOAN_AMOUNT
-                      - KYC
+                      - SINGLE_REDIRECTION
                   form:
                     id: FO3
                     mime_type: application/html
@@ -1036,11 +1048,55 @@ steps:
                     resubmit: false
                     multiple_sumbissions: false
                   required: true
+            fulfillments:
+              - id: F2
+                type: LOAN
+                customer:
+                  person:
+                    name: John Doe
+                  contact:
+                    phone: +91-9999999999
+                    email: john.doe@example.com
+                tags:
+                  - descriptor:
+                      name: Checklist
+                      code: CHECKLISTS
+                    display: false
+                    list:
+                      - descriptor:
+                          code: PERSONAL_INFORMATION
+                          name: Personal Information
+                          short_desc: Provide your Personal Info to proceed further
+                        value: SUCCESSFUL
+                      - descriptor:
+                          code: LOAN_OFFER
+                          name: Loan Offer
+                        value: FINALIZED
+                      - descriptor:
+                          code: SINGLE_REDIRECTION
+                          name: Single Redirection
+                        value: PENDING
+                      - descriptor:
+                          code: KYC
+                          name: VKYC
+                        value: PENDING
+                      - descriptor:
+                          code: REPAYMENT
+                          name: E-MANDATE
+                        value: PENDING
+                      - descriptor:
+                          code: BANK_ACCOUNT_VERIFICATION
+                          name: PENNY DROP
+                        value: PENDING
+                      - descriptor:
+                          code: LOAN_AGREEMENT
+                          name: CLICKWRAP
+                        value: PENDING
             quote:
-              id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+              id: LOAN_LEAD_ID_OR_SIMILAR
               price:
                 currency: INR
-                value: "233900"
+                value: "232300"
               breakup:
                 - title: PRINCIPAL
                   price:
@@ -1066,11 +1122,15 @@ steps:
                   price:
                     value: "197700"
                     currency: INR
+                - title: OTHER_UPFRONT_CHARGES
+                  price:
+                    value: "0"
+                    currency: INR
                 - title: OTHER_CHARGES
                   price:
                     value: "0"
                     currency: INR
-              ttl: P15D
+              ttl: PT15D
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -1099,9 +1159,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_select
-            timestamp: 2026-05-18T06:23:15.314Z
+            timestamp: 2026-05-19T10:59:57.161Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: a00189d1-6e1d-4317-8c99-26563c0f8f3b
+            message_id: 35dfe0cd-ec1b-4777-b2d5-d28e33bfb63f
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1116,7 +1176,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -1184,10 +1244,15 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   descriptor:
                     code: PERSONAL_LOAN
-                    name: Personal Loan
+                    name: Personal Loan without AA - Single Redirection
+                  category_ids:
+                    - "101123"
+                    - "101124"
+                  fulfillment_ids:
+                    - F2
                   price:
                     currency: INR
                     value: "233900"
@@ -1239,7 +1304,9 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate
+                            short_desc: Effective annualized interest rate in percentage computed on net
+                              disbursed amount using IRR approach and reducing
+                              balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -1249,8 +1316,8 @@ steps:
                         - descriptor:
                             code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                             name: Number of installments of repayment
-                            short_desc: Number of installments borrower has to pay
-                          value: "5"
+                            short_desc: Number of installments borrower has to make to payback the loan
+                          value: "45"
                         - descriptor:
                             code: TNC_LINK
                             name: Terms & Conditions
@@ -1265,37 +1332,87 @@ steps:
                         - descriptor:
                             code: INSTALLMENT_AMOUNT
                             name: Installment amount
-                            short_desc: Each installment amount
+                            short_desc: Each installment amount of repayment
                           value: "46360"
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link to the KFS document
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                              document related to a loan. When accessed, the
+                              document is returned in text/html format, with the
+                              loan details organized in a standard HTML table.
+                              This format makes it easy for the buyer's app to
+                              read and reformat the information as needed. For
+                              more details, refer to the "KFS_LINK format"
+                              document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
                   xinput:
                     head:
                       descriptor:
-                        name: KYC
+                        name: Single Redirection
                       index:
                         min: 0
-                        cur: 1
-                        max: 1
+                        cur: 0
+                        max: 0
                       headings:
-                        - SET_LOAN_AMOUNT
-                        - KYC
+                        - SINGLE_REDIRECTION
                     form:
-                      id: ekyc_details_8aeadf49-51f1-4aef-8ed3-299a45aa5819
+                      id: ekyc_details_5775e884-0c39-483e-a247-9c3b2ea194e8
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=b0b9338d-e381-43ab-95ff-e2b40cf49447&session_id=undefined
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
+              fulfillments:
+                - id: F2
+                  type: LOAN
+                  customer:
+                    person:
+                      name: John Doe
+                    contact:
+                      phone: +91-9999999999
+                      email: john.doe@example.com
+                  tags:
+                    - descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      display: false
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION
+                            name: Personal Information
+                            short_desc: Provide your Personal Info to proceed further
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_OFFER
+                            name: Loan Offer
+                          value: FINALIZED
+                        - descriptor:
+                            code: SINGLE_REDIRECTION
+                            name: Single Redirection
+                          value: PENDING
+                        - descriptor:
+                            code: KYC
+                            name: VKYC
+                          value: PENDING
+                        - descriptor:
+                            code: REPAYMENT
+                            name: E-MANDATE
+                          value: PENDING
+                        - descriptor:
+                            code: BANK_ACCOUNT_VERIFICATION
+                            name: PENNY DROP
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: CLICKWRAP
+                          value: PENDING
               quote:
-                id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+                id: LOAN_LEAD_ID_OR_SIMILAR
                 price:
                   currency: INR
-                  value: "233900"
+                  value: "232300"
                 breakup:
                   - title: PRINCIPAL
                     price:
@@ -1321,11 +1438,15 @@ steps:
                     price:
                       value: "197700"
                       currency: INR
+                  - title: OTHER_UPFRONT_CHARGES
+                    price:
+                      value: "0"
+                      currency: INR
                   - title: OTHER_CHARGES
                     price:
                       value: "0"
                       currency: INR
-                ttl: P15D
+                ttl: PT15D
         type: request
         description: please add relevant description
   - api: dynamic_form
@@ -1662,9 +1783,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-18T06:23:24.060Z
+            timestamp: 2026-05-19T10:59:59.236Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: e3f4205f-751f-43f6-a1f6-13ca122dd42c
+            message_id: b346f907-006a-43ce-a569-b6408fcb07ab
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1679,7 +1800,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -1747,10 +1868,15 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   descriptor:
                     code: PERSONAL_LOAN
-                    name: Personal Loan
+                    name: Personal Loan without AA - Single Redirection
+                  category_ids:
+                    - "101123"
+                    - "101124"
+                  fulfillment_ids:
+                    - F2
                   price:
                     currency: INR
                     value: "233900"
@@ -1802,7 +1928,9 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate
+                            short_desc: Effective annualized interest rate in percentage computed on net
+                              disbursed amount using IRR approach and reducing
+                              balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -1812,8 +1940,8 @@ steps:
                         - descriptor:
                             code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                             name: Number of installments of repayment
-                            short_desc: Number of installments borrower has to pay
-                          value: "5"
+                            short_desc: Number of installments borrower has to make to payback the loan
+                          value: "45"
                         - descriptor:
                             code: TNC_LINK
                             name: Terms & Conditions
@@ -1828,25 +1956,76 @@ steps:
                         - descriptor:
                             code: INSTALLMENT_AMOUNT
                             name: Installment amount
-                            short_desc: Each installment amount
+                            short_desc: Each installment amount of repayment
                           value: "46360"
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link to the KFS document
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                              document related to a loan. When accessed, the
+                              document is returned in text/html format, with the
+                              loan details organized in a standard HTML table.
+                              This format makes it easy for the buyer's app to
+                              read and reformat the information as needed. For
+                              more details, refer to the "KFS_LINK format"
+                              document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_8aeadf49-51f1-4aef-8ed3-299a45aa5819
+                      id: ekyc_details_5775e884-0c39-483e-a247-9c3b2ea194e8
                     form_response:
                       status: APPROVED
                       submission_id: e9764f76-27e1-4be5-894e-e228407b683d
+              fulfillments:
+                - id: F2
+                  type: LOAN
+                  customer:
+                    person:
+                      name: John Doe
+                    contact:
+                      phone: +91-9999999999
+                      email: john.doe@example.com
+                  tags:
+                    - descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      display: false
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION
+                            name: Personal Information
+                            short_desc: Provide your Personal Info to proceed further
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_OFFER
+                            name: Loan Offer
+                          value: FINALIZED
+                        - descriptor:
+                            code: SINGLE_REDIRECTION
+                            name: Single Redirection
+                          value: PENDING
+                        - descriptor:
+                            code: KYC
+                            name: VKYC
+                          value: PENDING
+                        - descriptor:
+                            code: REPAYMENT
+                            name: E-MANDATE
+                          value: PENDING
+                        - descriptor:
+                            code: BANK_ACCOUNT_VERIFICATION
+                            name: PENNY DROP
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: CLICKWRAP
+                          value: PENDING
               quote:
-                id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+                id: LOAN_LEAD_ID_OR_SIMILAR
                 price:
                   currency: INR
-                  value: "233900"
+                  value: "232300"
                 breakup:
                   - title: PRINCIPAL
                     price:
@@ -1872,11 +2051,15 @@ steps:
                     price:
                       value: "197700"
                       currency: INR
+                  - title: OTHER_UPFRONT_CHARGES
+                    price:
+                      value: "0"
+                      currency: INR
                   - title: OTHER_CHARGES
                     price:
                       value: "0"
                       currency: INR
-                ttl: P15D
+                ttl: PT15D
         type: request
         description: please add relevant description
   - api: status
@@ -1925,9 +2108,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: status
-            timestamp: 2026-05-18T06:23:24.094Z
+            timestamp: 2026-05-19T10:59:59.272Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: acf88681-8c60-4371-b76e-4f9cfae071fb
+            message_id: a55005fd-3d0b-4494-a4e9-670e20a7625e
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2250,9 +2433,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-18T06:23:24.118Z
+            timestamp: 2026-05-19T10:59:59.296Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: b3662931-1236-4cbd-a7e0-b7fca5c412bc
+            message_id: 6f2579bc-35d8-44f9-b904-fb706ecd2a63
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2267,7 +2450,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -2335,10 +2518,15 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   descriptor:
                     code: PERSONAL_LOAN
-                    name: Personal Loan
+                    name: Personal Loan without AA - Single Redirection
+                  category_ids:
+                    - "101123"
+                    - "101124"
+                  fulfillment_ids:
+                    - F2
                   price:
                     currency: INR
                     value: "233900"
@@ -2390,7 +2578,9 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate
+                            short_desc: Effective annualized interest rate in percentage computed on net
+                              disbursed amount using IRR approach and reducing
+                              balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -2400,8 +2590,8 @@ steps:
                         - descriptor:
                             code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                             name: Number of installments of repayment
-                            short_desc: Number of installments borrower has to pay
-                          value: "5"
+                            short_desc: Number of installments borrower has to make to payback the loan
+                          value: "45"
                         - descriptor:
                             code: TNC_LINK
                             name: Terms & Conditions
@@ -2416,37 +2606,87 @@ steps:
                         - descriptor:
                             code: INSTALLMENT_AMOUNT
                             name: Installment amount
-                            short_desc: Each installment amount
+                            short_desc: Each installment amount of repayment
                           value: "46360"
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link to the KFS document
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                              document related to a loan. When accessed, the
+                              document is returned in text/html format, with the
+                              loan details organized in a standard HTML table.
+                              This format makes it easy for the buyer's app to
+                              read and reformat the information as needed. For
+                              more details, refer to the "KFS_LINK format"
+                              document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
                   xinput:
                     head:
                       descriptor:
-                        name: KYC
+                        name: Single Redirection
                       index:
                         min: 0
-                        cur: 1
-                        max: 1
+                        cur: 0
+                        max: 0
                       headings:
-                        - SET_LOAN_AMOUNT
-                        - KYC
+                        - SINGLE_REDIRECTION
                     form:
-                      id: ekyc_details_8aeadf49-51f1-4aef-8ed3-299a45aa5819
+                      id: ekyc_details_5775e884-0c39-483e-a247-9c3b2ea194e8
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=b0b9338d-e381-43ab-95ff-e2b40cf49447&session_id=undefined
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
+              fulfillments:
+                - id: F2
+                  type: LOAN
+                  customer:
+                    person:
+                      name: John Doe
+                    contact:
+                      phone: +91-9999999999
+                      email: john.doe@example.com
+                  tags:
+                    - descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      display: false
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION
+                            name: Personal Information
+                            short_desc: Provide your Personal Info to proceed further
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_OFFER
+                            name: Loan Offer
+                          value: FINALIZED
+                        - descriptor:
+                            code: SINGLE_REDIRECTION
+                            name: Single Redirection
+                          value: PENDING
+                        - descriptor:
+                            code: KYC
+                            name: VKYC
+                          value: PENDING
+                        - descriptor:
+                            code: REPAYMENT
+                            name: E-MANDATE
+                          value: PENDING
+                        - descriptor:
+                            code: BANK_ACCOUNT_VERIFICATION
+                            name: PENNY DROP
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: CLICKWRAP
+                          value: PENDING
               quote:
-                id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+                id: LOAN_LEAD_ID_OR_SIMILAR
                 price:
                   currency: INR
-                  value: "233900"
+                  value: "232300"
                 breakup:
                   - title: PRINCIPAL
                     price:
@@ -2472,12 +2712,16 @@ steps:
                     price:
                       value: "197700"
                       currency: INR
+                  - title: OTHER_UPFRONT_CHARGES
+                    price:
+                      value: "0"
+                      currency: INR
                   - title: OTHER_CHARGES
                     price:
                       value: "0"
                       currency: INR
-                ttl: P15D
-              updated_at: 2026-05-18T06:23:24.126Z
+                ttl: PT15D
+              updated_at: 2026-05-19T10:59:59.302Z
         type: request
         description: please add relevant description
   - api: on_status
@@ -2787,9 +3031,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-18T06:23:24.162Z
+            timestamp: 2026-05-19T10:59:59.329Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: a48758e8-1b65-4566-8593-485b0d86f106
+            message_id: ed29a5f3-d0c1-47b6-9560-ecc37802b74d
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2804,7 +3048,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -2872,10 +3116,15 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   descriptor:
                     code: PERSONAL_LOAN
-                    name: Personal Loan
+                    name: Personal Loan without AA - Single Redirection
+                  category_ids:
+                    - "101123"
+                    - "101124"
+                  fulfillment_ids:
+                    - F2
                   price:
                     currency: INR
                     value: "233900"
@@ -2927,7 +3176,9 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate
+                            short_desc: Effective annualized interest rate in percentage computed on net
+                              disbursed amount using IRR approach and reducing
+                              balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -2937,8 +3188,8 @@ steps:
                         - descriptor:
                             code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                             name: Number of installments of repayment
-                            short_desc: Number of installments borrower has to pay
-                          value: "5"
+                            short_desc: Number of installments borrower has to make to payback the loan
+                          value: "45"
                         - descriptor:
                             code: TNC_LINK
                             name: Terms & Conditions
@@ -2953,37 +3204,87 @@ steps:
                         - descriptor:
                             code: INSTALLMENT_AMOUNT
                             name: Installment amount
-                            short_desc: Each installment amount
+                            short_desc: Each installment amount of repayment
                           value: "46360"
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link to the KFS document
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                              document related to a loan. When accessed, the
+                              document is returned in text/html format, with the
+                              loan details organized in a standard HTML table.
+                              This format makes it easy for the buyer's app to
+                              read and reformat the information as needed. For
+                              more details, refer to the "KFS_LINK format"
+                              document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
                   xinput:
                     head:
                       descriptor:
-                        name: KYC
+                        name: Single Redirection
                       index:
                         min: 0
-                        cur: 1
-                        max: 1
+                        cur: 0
+                        max: 0
                       headings:
-                        - SET_LOAN_AMOUNT
-                        - KYC
+                        - SINGLE_REDIRECTION
                     form:
-                      id: ekyc_details_8aeadf49-51f1-4aef-8ed3-299a45aa5819
+                      id: ekyc_details_5775e884-0c39-483e-a247-9c3b2ea194e8
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=b0b9338d-e381-43ab-95ff-e2b40cf49447&session_id=undefined
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
+              fulfillments:
+                - id: F2
+                  type: LOAN
+                  customer:
+                    person:
+                      name: John Doe
+                    contact:
+                      phone: +91-9999999999
+                      email: john.doe@example.com
+                  tags:
+                    - descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      display: false
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION
+                            name: Personal Information
+                            short_desc: Provide your Personal Info to proceed further
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_OFFER
+                            name: Loan Offer
+                          value: FINALIZED
+                        - descriptor:
+                            code: SINGLE_REDIRECTION
+                            name: Single Redirection
+                          value: PENDING
+                        - descriptor:
+                            code: KYC
+                            name: VKYC
+                          value: PENDING
+                        - descriptor:
+                            code: REPAYMENT
+                            name: E-MANDATE
+                          value: PENDING
+                        - descriptor:
+                            code: BANK_ACCOUNT_VERIFICATION
+                            name: PENNY DROP
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: CLICKWRAP
+                          value: PENDING
               quote:
-                id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+                id: LOAN_LEAD_ID_OR_SIMILAR
                 price:
                   currency: INR
-                  value: "233900"
+                  value: "232300"
                 breakup:
                   - title: PRINCIPAL
                     price:
@@ -3009,12 +3310,16 @@ steps:
                     price:
                       value: "197700"
                       currency: INR
+                  - title: OTHER_UPFRONT_CHARGES
+                    price:
+                      value: "0"
+                      currency: INR
                   - title: OTHER_CHARGES
                     price:
                       value: "0"
                       currency: INR
-                ttl: P15D
-              updated_at: 2026-05-18T06:23:24.169Z
+                ttl: PT15D
+              updated_at: 2026-05-19T10:59:59.334Z
         type: request
         description: please add relevant description
   - api: on_status
@@ -3327,9 +3632,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-18T06:23:24.220Z
+            timestamp: 2026-05-19T10:59:59.365Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: 35d5d0e6-a759-46da-b23d-08ad56ce275b
+            message_id: 49a75fd2-fc8a-4a7e-8067-abe8d66f9bc3
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3344,7 +3649,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -3412,10 +3717,15 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   descriptor:
                     code: PERSONAL_LOAN
-                    name: Personal Loan
+                    name: Personal Loan without AA - Single Redirection
+                  category_ids:
+                    - "101123"
+                    - "101124"
+                  fulfillment_ids:
+                    - F2
                   price:
                     currency: INR
                     value: "233900"
@@ -3467,7 +3777,9 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate
+                            short_desc: Effective annualized interest rate in percentage computed on net
+                              disbursed amount using IRR approach and reducing
+                              balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -3477,8 +3789,8 @@ steps:
                         - descriptor:
                             code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                             name: Number of installments of repayment
-                            short_desc: Number of installments borrower has to pay
-                          value: "5"
+                            short_desc: Number of installments borrower has to make to payback the loan
+                          value: "45"
                         - descriptor:
                             code: TNC_LINK
                             name: Terms & Conditions
@@ -3493,37 +3805,87 @@ steps:
                         - descriptor:
                             code: INSTALLMENT_AMOUNT
                             name: Installment amount
-                            short_desc: Each installment amount
+                            short_desc: Each installment amount of repayment
                           value: "46360"
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link to the KFS document
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                              document related to a loan. When accessed, the
+                              document is returned in text/html format, with the
+                              loan details organized in a standard HTML table.
+                              This format makes it easy for the buyer's app to
+                              read and reformat the information as needed. For
+                              more details, refer to the "KFS_LINK format"
+                              document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
                   xinput:
                     head:
                       descriptor:
-                        name: KYC
+                        name: Single Redirection
                       index:
                         min: 0
-                        cur: 1
-                        max: 1
+                        cur: 0
+                        max: 0
                       headings:
-                        - SET_LOAN_AMOUNT
-                        - KYC
+                        - SINGLE_REDIRECTION
                     form:
-                      id: ekyc_details_8aeadf49-51f1-4aef-8ed3-299a45aa5819
+                      id: ekyc_details_5775e884-0c39-483e-a247-9c3b2ea194e8
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=b0b9338d-e381-43ab-95ff-e2b40cf49447&session_id=undefined
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
+              fulfillments:
+                - id: F2
+                  type: LOAN
+                  customer:
+                    person:
+                      name: John Doe
+                    contact:
+                      phone: +91-9999999999
+                      email: john.doe@example.com
+                  tags:
+                    - descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      display: false
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION
+                            name: Personal Information
+                            short_desc: Provide your Personal Info to proceed further
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_OFFER
+                            name: Loan Offer
+                          value: FINALIZED
+                        - descriptor:
+                            code: SINGLE_REDIRECTION
+                            name: Single Redirection
+                          value: PENDING
+                        - descriptor:
+                            code: KYC
+                            name: VKYC
+                          value: PENDING
+                        - descriptor:
+                            code: REPAYMENT
+                            name: E-MANDATE
+                          value: PENDING
+                        - descriptor:
+                            code: BANK_ACCOUNT_VERIFICATION
+                            name: PENNY DROP
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: CLICKWRAP
+                          value: PENDING
               quote:
-                id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+                id: LOAN_LEAD_ID_OR_SIMILAR
                 price:
                   currency: INR
-                  value: "233900"
+                  value: "232300"
                 breakup:
                   - title: PRINCIPAL
                     price:
@@ -3549,12 +3911,16 @@ steps:
                     price:
                       value: "197700"
                       currency: INR
+                  - title: OTHER_UPFRONT_CHARGES
+                    price:
+                      value: "0"
+                      currency: INR
                   - title: OTHER_CHARGES
                     price:
                       value: "0"
                       currency: INR
-                ttl: P15D
-              updated_at: 2026-05-18T06:23:24.229Z
+                ttl: PT15D
+              updated_at: 2026-05-19T10:59:59.371Z
         type: request
         description: please add relevant description
   - api: on_status
@@ -3936,9 +4302,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-05-18T06:23:24.283Z
+            timestamp: 2026-05-19T10:59:59.405Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: 7f0941b9-a45d-4b61-8919-30c46b5c8a97
+            message_id: 601af1b4-968d-4559-ab84-8866d21df5df
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3953,7 +4319,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -4021,10 +4387,15 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   descriptor:
                     code: PERSONAL_LOAN
-                    name: Personal Loan
+                    name: Personal Loan without AA - Single Redirection
+                  category_ids:
+                    - "101123"
+                    - "101124"
+                  fulfillment_ids:
+                    - F2
                   price:
                     currency: INR
                     value: "233900"
@@ -4076,7 +4447,9 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate
+                            short_desc: Effective annualized interest rate in percentage computed on net
+                              disbursed amount using IRR approach and reducing
+                              balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -4086,8 +4459,8 @@ steps:
                         - descriptor:
                             code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                             name: Number of installments of repayment
-                            short_desc: Number of installments borrower has to pay
-                          value: "5"
+                            short_desc: Number of installments borrower has to make to payback the loan
+                          value: "45"
                         - descriptor:
                             code: TNC_LINK
                             name: Terms & Conditions
@@ -4102,37 +4475,87 @@ steps:
                         - descriptor:
                             code: INSTALLMENT_AMOUNT
                             name: Installment amount
-                            short_desc: Each installment amount
+                            short_desc: Each installment amount of repayment
                           value: "46360"
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link to the KFS document
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                              document related to a loan. When accessed, the
+                              document is returned in text/html format, with the
+                              loan details organized in a standard HTML table.
+                              This format makes it easy for the buyer's app to
+                              read and reformat the information as needed. For
+                              more details, refer to the "KFS_LINK format"
+                              document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
                   xinput:
                     head:
                       descriptor:
-                        name: KYC
+                        name: Single Redirection
                       index:
                         min: 0
-                        cur: 1
-                        max: 1
+                        cur: 0
+                        max: 0
                       headings:
-                        - SET_LOAN_AMOUNT
-                        - KYC
+                        - SINGLE_REDIRECTION
                     form:
-                      id: ekyc_details_8aeadf49-51f1-4aef-8ed3-299a45aa5819
+                      id: ekyc_details_5775e884-0c39-483e-a247-9c3b2ea194e8
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=b0b9338d-e381-43ab-95ff-e2b40cf49447&session_id=undefined
                       resubmit: false
                       multiple_sumbissions: false
                     required: true
+              fulfillments:
+                - id: F2
+                  type: LOAN
+                  customer:
+                    person:
+                      name: John Doe
+                    contact:
+                      phone: +91-9999999999
+                      email: john.doe@example.com
+                  tags:
+                    - descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      display: false
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION
+                            name: Personal Information
+                            short_desc: Provide your Personal Info to proceed further
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_OFFER
+                            name: Loan Offer
+                          value: FINALIZED
+                        - descriptor:
+                            code: SINGLE_REDIRECTION
+                            name: Single Redirection
+                          value: PENDING
+                        - descriptor:
+                            code: KYC
+                            name: VKYC
+                          value: PENDING
+                        - descriptor:
+                            code: REPAYMENT
+                            name: E-MANDATE
+                          value: PENDING
+                        - descriptor:
+                            code: BANK_ACCOUNT_VERIFICATION
+                            name: PENNY DROP
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: CLICKWRAP
+                          value: PENDING
               quote:
-                id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+                id: LOAN_LEAD_ID_OR_SIMILAR
                 price:
                   currency: INR
-                  value: "233900"
+                  value: "232300"
                 breakup:
                   - title: PRINCIPAL
                     price:
@@ -4158,12 +4581,16 @@ steps:
                     price:
                       value: "197700"
                       currency: INR
+                  - title: OTHER_UPFRONT_CHARGES
+                    price:
+                      value: "0"
+                      currency: INR
                   - title: OTHER_CHARGES
                     price:
                       value: "0"
                       currency: INR
-                ttl: P15D
-              updated_at: 2026-05-18T06:23:24.289Z
+                ttl: PT15D
+              updated_at: 2026-05-19T10:59:59.411Z
         type: request
         description: please add relevant description
   - api: confirm
@@ -4202,49 +4629,24 @@ steps:
               - id: ITEM_ID_PERSONAL_LOAN_2
                 xinput:
                   form:
-                    id: FO6
+                    id: FO3
                   form_response:
                     status: SUCCESS
-                    submission_id: F06_SUBMISSION_ID
+                    submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
             payments:
-              - id: PAYMENT_ID_PERSONAL_LOAN
-                collected_by: BPP
-                type: ON_ORDER
-                status: NOT-PAID
+              - type: ON_FULFILLMENT
+                id: LOAN_DISBURSMENT_ID
+                status: PAID
+                collected_by: CONSUMER
+                time:
+                  label: LOAN_DISBURSMENT
+                  timestamp: 2023-05-25T05:23:03.443Z
                 params:
-                  bank_code: XXXXXXXXX
+                  bank_code: XXXXXXXX
                   bank_account_number: xxxxxxxxxxxxxx
-                  virtual_payment_address: 9988199772@okicic
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: "1"
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_AMOUNT
-                        value: "1159"
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: neft
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: "5"
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: "true"
+                  transaction_id: 4429e52c-5d41-4e24-ac2e-42eb2fa8f72b
+                  amount: "197700"
+                  currency: INR
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -4267,9 +4669,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: confirm
-            timestamp: 2026-05-18T06:23:24.332Z
+            timestamp: 2026-05-19T10:59:59.450Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: 5d2a6c6d-36be-4927-bc95-562c76a8621b
+            message_id: db26bd44-dc5e-4f03-9403-7df735da0b2b
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4284,54 +4686,29 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
               items:
-                - id: aa_personal_loan_8b2948b6-ab09-4aec-8d3b-ad81f1fef460
+                - id: aa_personal_loan_2f70c3dd-7673-475c-9ded-cd8b9127cc97
                   xinput:
                     form:
-                      id: ekyc_details_8aeadf49-51f1-4aef-8ed3-299a45aa5819
+                      id: ekyc_details_5775e884-0c39-483e-a247-9c3b2ea194e8
                     form_response:
                       status: SUCCESS
-                      submission_id: F06_SUBMISSION_ID
+                      submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
               payments:
-                - id: PAYMENT_ID_PERSONAL_LOAN
-                  collected_by: BPP
-                  type: ON_ORDER
-                  status: NOT-PAID
+                - type: ON_FULFILLMENT
+                  id: LOAN_DISBURSMENT_ID
+                  status: PAID
+                  collected_by: CONSUMER
+                  time:
+                    label: LOAN_DISBURSMENT
+                    timestamp: 2023-05-25T05:23:03.443Z
                   params:
-                    bank_code: XXXXXXXXX
+                    bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
-                    virtual_payment_address: 9988199772@okicic
-                  tags:
-                    - descriptor:
-                        code: BUYER_FINDER_FEES
-                      display: false
-                      list:
-                        - descriptor:
-                            code: BUYER_FINDER_FEES_TYPE
-                          value: percent-annualized
-                        - descriptor:
-                            code: BUYER_FINDER_FEES_PERCENTAGE
-                          value: "1"
-                    - descriptor:
-                        code: SETTLEMENT_TERMS
-                      display: false
-                      list:
-                        - descriptor:
-                            code: SETTLEMENT_AMOUNT
-                          value: "833"
-                        - descriptor:
-                            code: SETTLEMENT_TYPE
-                          value: neft
-                        - descriptor:
-                            code: DELAY_INTEREST
-                          value: "5"
-                        - descriptor:
-                            code: STATIC_TERMS
-                          value: https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan
-                        - descriptor:
-                            code: OFFLINE_CONTRACT
-                          value: "true"
+                    transaction_id: 4429e52c-5d41-4e24-ac2e-42eb2fa8f72b
+                    amount: "197700"
+                    currency: INR
         type: request
         description: please add relevant description
   - api: on_confirm
@@ -4434,10 +4811,15 @@ steps:
                       value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                         Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
             items:
-              - id: ITEM_ID_PERSONAL_LOAN_2
+              - id: ITEM_ID_PERSONAL_LOAN_1
                 descriptor:
                   code: PERSONAL_LOAN
-                  name: Personal Loan
+                  name: Personal Loan without AA - Offline Journey
+                category_ids:
+                  - "101123"
+                  - "101124"
+                fulfillment_ids:
+                  - F1
                 price:
                   currency: INR
                   value: "233900"
@@ -4445,7 +4827,6 @@ steps:
                   - descriptor:
                       code: LOAN_INFO
                       name: Loan Information
-                    display: true
                     list:
                       - descriptor:
                           code: INTEREST_RATE
@@ -4490,7 +4871,9 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage
+                          short_desc: Effective annualized interest rate in percentage computed on net
+                            disbursed amount using IRR approach and reducing
+                            balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -4500,8 +4883,8 @@ steps:
                       - descriptor:
                           code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                           name: Number of installments of repayment
-                          short_desc: Number borrower must repay
-                        value: "5"
+                          short_desc: Number of installments borrower has to make to payback the loan
+                        value: "45"
                       - descriptor:
                           code: TNC_LINK
                           name: Terms & Conditions
@@ -4510,23 +4893,32 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off / look-up period
+                          short_desc: Cooling off/look-up period during which borrower shall not be
+                            charged any penalty
                         value: P30D
                       - descriptor:
                           code: INSTALLMENT_AMOUNT
                           name: Installment amount
-                          short_desc: Each installment amount
+                          short_desc: Each installment amount of repayment
                         value: "46360"
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: KFS details in HTML table format
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                            document related to a loan. When accessed, the
+                            document is returned in text/html format, with the
+                            loan details organized in a standard HTML table.
+                            This format makes it easy for the buyer's app to
+                            read and reformat the information as needed. For
+                            more details, refer to the "KFS_LINK format"
+                            document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
+                    display: true
             quote:
-              id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+              id: LOAN_LEAD_ID_OR_SIMILAR
               price:
                 currency: INR
-                value: "233900"
+                value: "232300"
               breakup:
                 - title: PRINCIPAL
                   price:
@@ -4556,9 +4948,11 @@ steps:
                   price:
                     value: "0"
                     currency: INR
-              ttl: P15D
+              ttl: PT15D
             fulfillments:
-              - customer:
+              - id: F1
+                type: LOAN
+                customer:
                   person:
                     name: John Doe
                   contact:
@@ -4566,48 +4960,55 @@ steps:
                     email: john.doe@example.com
                 state:
                   descriptor:
-                    code: SANCTIONED
-            payments:
-              - id: PAYMENT_ID_PERSONAL_LOAN
-                type: ON_ORDER
-                status: NOT-PAID
-                collected_by: BPP
+                    code: DISBURSED
                 tags:
                   - descriptor:
-                      code: BUYER_FINDER_FEES
+                      name: Checklist
+                      code: CHECKLISTS
                     display: false
                     list:
                       - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
+                          code: PERSONAL_INFORMATION
+                          name: Personal Information
+                        value: SUCCESSFUL
                       - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: "1"
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
+                          code: LOAN_OFFER
+                          name: Loan Offer
+                        value: SELECTED
                       - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
+                          code: JOURNEY_OFFLINE
+                          name: Journey Offline
+                        value: SUCCESSFUL
                       - descriptor:
-                          code: SETTLEMENT_BASIS
-                        value: INVOICE_RECEIPT
+                          code: KYC
+                          name: OFFLINE
+                        value: SUCCESSFUL
                       - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: "TRUE"
+                          code: REPAYMENT
+                          name: E-MANDATE
+                        value: SUCCESSFUL
                       - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
+                          code: BANK_ACCOUNT_VERIFICATION
+                          name: PENNY DROP
+                        value: SUCCESSFUL
                       - descriptor:
-                          code: STATIC_TERMS
-                        value: https://bpp.credit.becknprotocol.org/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: SETTLEMENT_AMOUNT
-                        value: "1159"
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: "true"
+                          code: LOAN_AGREEMENT
+                          name: CLICKWRAP
+                        value: SUCCESSFUL
+            payments:
+              - type: ON_FULFILLMENT
+                id: LOAN_DISBURSMENT_ID
+                status: PAID
+                collected_by: CONSUMER
+                time:
+                  label: LOAN_DISBURSMENT
+                  timestamp: 2023-05-25T05:23:03.443Z
+                params:
+                  bank_code: XXXXXXXX
+                  bank_account_number: xxxxxxxxxxxxxx
+                  transaction_id: 4429e52c-5d41-4e24-ac2e-42eb2fa8f72b
+                  amount: "197700"
+                  currency: INR
               - type: POST_FULFILLMENT
                 id: INSTALLMENT_ID_PERSONAL_LOAN
                 params:
@@ -4682,9 +5083,21 @@ steps:
                   code: LOAN_AGREEMENT
                   name: Loan Agreement Document
                   short_desc: Download your Loan Agreement document here
-                  long_desc: A Loan Agreement Document is a legal contract outlining terms...
+                  long_desc: A Loan Agreement Document is a legal contract outlining terms such as
+                    loan amount, interest rate, repayment schedule, and
+                    collateral, binding a lender and borrower in a formal
+                    financial arrangement.
                 mime_type: application/pdf
                 url: https://lender.com/loan/loan-agreement/O1.pdf
+              - descriptor:
+                  code: LOAN_CANCELLATION
+                  name: Loan Cancellation Document
+                  short_desc: Download your Loan Cancellation document here
+                  long_desc: A Loan Cancellation Document is a formal agreement used to terminate
+                    an existing loan, releasing the borrower from repayment
+                    obligations and confirming the loan's cancellation.
+                mime_type: application/pdf
+                url: https://lender.com/loan/loan-cancellation/O1.pdf
             created_at: 2023-05-25T05:23:03.443Z
             updated_at: 2023-05-25T05:23:03.443Z
       saveData:
@@ -4709,9 +5122,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_confirm
-            timestamp: 2026-05-18T06:23:24.421Z
+            timestamp: 2026-05-19T10:59:59.495Z
             transaction_id: b0b9338d-e381-43ab-95ff-e2b40cf49447
-            message_id: 5d2a6c6d-36be-4927-bc95-562c76a8621b
+            message_id: db26bd44-dc5e-4f03-9403-7df735da0b2b
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4725,9 +5138,9 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1779085404430_DEFAULT
+              id: LOAN_ORDER_1779188399501_DEFAULT
               provider:
-                id: personal_loan_provider_12c95a26-9bbe-4dba-a3df-a0b672b26c40
+                id: personal_loan_provider_9a601c03-16ba-4096-ae90-2b1951e57182
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -4795,10 +5208,15 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: ITEM_ID_PERSONAL_LOAN_2
+                - id: ITEM_ID_PERSONAL_LOAN_1
                   descriptor:
                     code: PERSONAL_LOAN
-                    name: Personal Loan
+                    name: Personal Loan without AA - Offline Journey
+                  category_ids:
+                    - "101123"
+                    - "101124"
+                  fulfillment_ids:
+                    - F1
                   price:
                     currency: INR
                     value: "233900"
@@ -4806,7 +5224,6 @@ steps:
                     - descriptor:
                         code: LOAN_INFO
                         name: Loan Information
-                      display: true
                       list:
                         - descriptor:
                             code: INTEREST_RATE
@@ -4851,7 +5268,9 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage
+                            short_desc: Effective annualized interest rate in percentage computed on net
+                              disbursed amount using IRR approach and reducing
+                              balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -4861,8 +5280,8 @@ steps:
                         - descriptor:
                             code: NUMBER_OF_INSTALLMENTS_OF_REPAYMENT
                             name: Number of installments of repayment
-                            short_desc: Number borrower must repay
-                          value: "5"
+                            short_desc: Number of installments borrower has to make to payback the loan
+                          value: "45"
                         - descriptor:
                             code: TNC_LINK
                             name: Terms & Conditions
@@ -4871,23 +5290,32 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off / look-up period
+                            short_desc: Cooling off/look-up period during which borrower shall not be
+                              charged any penalty
                           value: P30D
                         - descriptor:
                             code: INSTALLMENT_AMOUNT
                             name: Installment amount
-                            short_desc: Each installment amount
+                            short_desc: Each installment amount of repayment
                           value: "46360"
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: KFS details in HTML table format
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
+                              document related to a loan. When accessed, the
+                              document is returned in text/html format, with the
+                              loan details organized in a standard HTML table.
+                              This format makes it easy for the buyer's app to
+                              read and reformat the information as needed. For
+                              more details, refer to the "KFS_LINK format"
+                              document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
+                      display: true
               quote:
-                id: bcaa0931-47d7-42c9-aa83-3fb2b5048551
+                id: LOAN_LEAD_ID_OR_SIMILAR
                 price:
                   currency: INR
-                  value: "233900"
+                  value: "232300"
                 breakup:
                   - title: PRINCIPAL
                     price:
@@ -4917,9 +5345,11 @@ steps:
                     price:
                       value: "0"
                       currency: INR
-                ttl: P15D
+                ttl: PT15D
               fulfillments:
-                - customer:
+                - id: F1
+                  type: LOAN
+                  customer:
                     person:
                       name: John Doe
                     contact:
@@ -4927,8 +5357,42 @@ steps:
                       email: john.doe@example.com
                   state:
                     descriptor:
-                      code: SANCTIONED
+                      code: DISBURSED
                       name: Loan Disbursed
+                  tags:
+                    - descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      display: false
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION
+                            name: Personal Information
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_OFFER
+                            name: Loan Offer
+                          value: SELECTED
+                        - descriptor:
+                            code: JOURNEY_OFFLINE
+                            name: Journey Offline
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: KYC
+                            name: OFFLINE
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: REPAYMENT
+                            name: E-MANDATE
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: BANK_ACCOUNT_VERIFICATION
+                            name: PENNY DROP
+                          value: SUCCESSFUL
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: CLICKWRAP
+                          value: SUCCESSFUL
               payments: []
               cancellation_terms:
                 - fulfillment_state:
@@ -4949,11 +5413,23 @@ steps:
                     code: LOAN_AGREEMENT
                     name: Loan Agreement Document
                     short_desc: Download your Loan Agreement document here
-                    long_desc: A Loan Agreement Document is a legal contract outlining terms...
+                    long_desc: A Loan Agreement Document is a legal contract outlining terms such as
+                      loan amount, interest rate, repayment schedule, and
+                      collateral, binding a lender and borrower in a formal
+                      financial arrangement.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-agreement/O1.pdf
-              created_at: 2026-05-18T06:23:24.430Z
-              updated_at: 2026-05-18T06:23:24.430Z
+                - descriptor:
+                    code: LOAN_CANCELLATION
+                    name: Loan Cancellation Document
+                    short_desc: Download your Loan Cancellation document here
+                    long_desc: A Loan Cancellation Document is a formal agreement used to terminate
+                      an existing loan, releasing the borrower from repayment
+                      obligations and confirming the loan's cancellation.
+                  mime_type: application/pdf
+                  url: https://lender.com/loan/loan-cancellation/O1.pdf
+              created_at: 2026-05-19T10:59:59.501Z
+              updated_at: 2026-05-19T10:59:59.501Z
         type: request
         description: please add relevant description
 transaction_history: []
