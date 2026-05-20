@@ -132,16 +132,14 @@ _TESTS_:
           _CONTINUE_: "!(attr are present)"
           _RETURN_: attr any in enumList
         - _NAME_: OPTIONAL_PAYMENT_TAGS_GROUPS
+          validTags_a3: &a3
+            - BUYER_FINDER_FEES
+            - SETTLEMENT_TERMS
+          validValues_a5: &a5
+            - SETTLEMENT_TERMS
           tagPath: $.message.intent.payment.tags[*].descriptor.code
           _CONTINUE_: "!(tagPath are present)"
           _RETURN_:
-            - _NAME_: REQUIRED_BUYER_FINDER_FEES_TAG
-              validTags: &a3
-                - BUYER_FINDER_FEES
-                - SETTLEMENT_TERMS
-              tagPath: $.message.intent.payment.tags[*].descriptor.code
-              _CONTINUE_: "!(tagPath are present)"
-              _RETURN_: tagPath any in validTags
             - _NAME_: REQUIRED_BUYER_FINDER_FEES_LIST
               _SCOPE_: $.message.intent.payment.tags[?(@.descriptor.code=='BUYER_FINDER_FEES')]
               subTags: $.list[*].descriptor.code
@@ -158,12 +156,6 @@ _TESTS_:
                 - percent
                 - amount
               _RETURN_: attr all in enumList
-            - _NAME_: REQUIRED_SETTLEMENT_TERMS_TAG
-              validTags: &a5
-                - SETTLEMENT_TERMS
-              tagPath: $.message.intent.payment.tags[*].descriptor.code
-              _CONTINUE_: "!(tagPath are present)"
-              _RETURN_: tagPath any in validTags
             - _NAME_: REQUIRED_SETTLEMENT_TERMS_LIST
               _SCOPE_: $.message.intent.payment.tags[?(@.descriptor.code=='SETTLEMENT_TERMS')]
               subTags: $.list[*].descriptor.code
