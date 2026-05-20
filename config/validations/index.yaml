@@ -220,9 +220,11 @@ _TESTS_:
           _CONTINUE_: (var_category_code any in category_code_path)
           _RETURN_: attr are present
     - _NAME_: ON_SEARCH_PAYMENT
-      _SCOPE_: $.message.catalog.providers[*].categories[?(@.descriptor.code=='PERSONAL_LOAN')]
+      category_code: $.message.catalog.providers[*].categories[*].descriptor.code
+      category_match:
+        - PERSONAL_LOAN
       paymentspath: $.message.catalog.providers[*].payments[*].collected_by
-      _CONTINUE_: "!(paymentspath are present)"
+      _CONTINUE_: "!(category_code any in category_match) || !(paymentspath are present)"
       _RETURN_:
         - _NAME_: REQUIRED_PAYMENT_COLLECTED_BY
           attr: $.message.catalog.providers[*].payments[*].collected_by
