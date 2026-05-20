@@ -3,7 +3,9 @@ meta:
   version: 2.3.0
   flowId: master_search
   config_version: 0.0.0001
-  description: A borrower searches for available credit products in the marketplace; the lender responds with matching credit offerings and eligibility requirements.
+  description: A borrower searches for available credit products in the
+    marketplace; the lender responds with matching credit offerings and
+    eligibility requirements.
   use_case_id: ""
 transaction_data:
   transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
@@ -18,7 +20,9 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP initiates a search for available credit products in a specified geographic location, establishing the transaction identity and soliciting relevant offerings from BPPs.
+    description: The BAP initiates a search for available credit products in a
+      specified geographic location, establishing the transaction identity and
+      soliciting relevant offerings from BPPs.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZSA9IHsKICAgIGludGVudDogewogICAgICBjYXRlZ29yeTogewogICAgICAgIGRlc2NyaXB0b3I6IHsKICAgICAgICAgIGNvZGU6ICJMT0FOIgogICAgICAgIH0KICAgICAgfSwKICAgICAgcGF5bWVudDogewogICAgICAgIGNvbGxlY3RlZF9ieTogIkJQUCIKICAgICAgfSwKICAgICAgdGFnczogWwogICAgICAgIHsKICAgICAgICAgIGRpc3BsYXk6IGZhbHNlLAogICAgICAgICAgZGVzY3JpcHRvcjogewogICAgICAgICAgICBuYW1lOiAiQkFQIFRlcm1zIG9mIEVuZ2FnZW1lbnQiLAogICAgICAgICAgICBjb2RlOiAiQkFQX1RFUk1TIgogICAgICAgICAgfSwKICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgIGRlc2NyaXB0b3I6IHsKICAgICAgICAgICAgICAgIGNvZGU6ICJTVEFUSUNfVEVSTVMiCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB2YWx1ZTogJ2h0dHBzOi8vYmFwLmNyZWRpdC5iZWNrbnByb3RvY29sLmlvL3dvcmtpbmctY2FwaXRhbC9sb2Fucy93b3JraW5nLWNhcGl0YWwnCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICBkZXNjcmlwdG9yOiB7CiAgICAgICAgICAgICAgICBjb2RlOiAiT0ZGTElORV9DT05UUkFDVCIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHZhbHVlOiAidHJ1ZSIKICAgICAgICAgICAgfQogICAgICAgICAgXQogICAgICAgIH0KICAgICAgXQogICAgfQogIH07CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IGNhdGVnb3J5Q29kZSA9CiAgICB0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5pbnRlbnQ/LmNhdGVnb3J5Py5kZXNjcmlwdG9yPy5jb2RlOwoKICBpZiAoIWNhdGVnb3J5Q29kZSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBjYXRlZ29yeSBkZXNjcmlwdG9yIGNvZGUiCiAgICB9OwogIH0KCiAgcmV0dXJuIHsKICAgIHZhbGlkOiB0cnVlLAogICAgY29kZTogMjAwLAogICAgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IgogIH07Cn0=
@@ -56,9 +60,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: search
-            timestamp: 2026-04-28T11:31:51.192Z
+            timestamp: 2026-05-20T08:52:37.285Z
             transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
-            message_id: 87b99f0e-5dee-4e7a-a419-2c8d3ee8ace7
+            message_id: 15843adc-f3ef-498a-a534-2140b5824389
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -88,13 +92,17 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: please add relevant description
+        description: The BAP initiates a search for available credit products in a
+          specified geographic location, establishing the transaction identity
+          and soliciting relevant offerings from BPPs.
   - api: on_search
     action_id: on_Search_1
     owner: BPP
     responseFor: search_1
     unsolicited: false
-    description: The BPP responds to the BAP's search request with credit products matching the specified location and domain, establishing the transaction session and capturing essential identifiers for subsequent interactions.
+    description: The BPP responds to the BAP's search request with credit products
+      matching the specified location and domain, establishing the transaction
+      session and capturing essential identifiers for subsequent interactions.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -316,128 +324,6 @@ steps:
                       code: ADDITIONAL_UPLOAD
                       name: Additional Upload
                 items:
-                  - id: TERM_LOAN_ID_1
-                    descriptor:
-                      code: LOAN
-                      name: Term Loan with AA
-                    category_ids:
-                      - "101124"
-                      - "101117"
-                      - "101212"
-                    fulfillment_ids:
-                      - F6
-                    matched: true
-                    recommended: true
-                    xinput:
-                      head:
-                        descriptor:
-                          name: Personal Information
-                          code: PERSONAL_INFORMATION_BUSINESS_TERM
-                        headings:
-                          - PERSONAL_INFORMATION_BUSINESS_TERM
-                          - CONSENT_APPROVAL
-                      form:
-                        id: F01
-                        mime_type: none
-                        data:
-                          pan:
-                            type: string
-                          fullName:
-                            type: string
-                          dob:
-                            type: string
-                          addressL1:
-                            type: string
-                          addressL2:
-                            type: string
-                          pincode:
-                            type: string
-                          city:
-                            type: string
-                          state:
-                            type: string
-                          constitution:
-                            type: enum
-                          businessPan:
-                            type: string
-                          businessPanName:
-                            type: string
-                          doi:
-                            type: string
-                          natureOfBusiness:
-                            type: enum
-                          udyamNumber:
-                            type: string
-                          gst:
-                            type: string
-                          annualTurnover:
-                            type: string
-                          businessEmail:
-                            type: string
-                          businessAddressL1:
-                            type: string
-                          businessAddressL2:
-                            type: string
-                          businessCity:
-                            type: string
-                          businessState:
-                            type: string
-                          businessPincode:
-                            type: string
-                          bureauConsent:
-                            type: boolean
-                            defaultValue: true
-                          aa_id:
-                            type: string
-                        resubmit: false
-                        multiple_sumbissions: false
-                      required: true
-                  - id: TERM_LOAN_ID_3
-                    descriptor:
-                      code: LOAN
-                      name: Term Loan with GST
-                    category_ids:
-                      - "101124"
-                      - "101117"
-                      - "104139"
-                    fulfillment_ids:
-                      - F8
-                    matched: true
-                    recommended: true
-                    xinput:
-                      head:
-                        descriptor:
-                          name: Personal Information
-                          code: PERSONAL_INFORMATION_BUSINESS_TERM_GST
-                        headings:
-                          - PERSONAL_INFORMATION_BUSINESS_TERM_GST
-                      form:
-                        id: F01
-                        mime_type: none
-                        data:
-                          udyamNumber:
-                            type: string
-                          contactNumber:
-                            type: string
-                          email:
-                            type: string
-                          gstinProfile:
-                            type: file
-                          gstr1:
-                            type: file
-                          gstr2A:
-                            type: file
-                          gstr3B:
-                            type: file
-                          bureauConsent:
-                            type: boolean
-                          aa_id:
-                            type: string
-                          tnc:
-                            type: boolean
-                            display: https://icicibank.co.in/loans/tnc.html
-                        multiple_sumbissions: false
-                      required: true
                   - id: BUSINESS_TERM_LOAN_ID_2
                     descriptor:
                       code: LOAN
@@ -448,78 +334,6 @@ steps:
                       - "101211"
                     fulfillment_ids:
                       - F17
-                    matched: true
-                    recommended: true
-                    xinput:
-                      head:
-                        descriptor:
-                          name: Personal Information
-                          code: PERSONAL_INFORMATION_BUSINESS_TERM
-                        headings:
-                          - PERSONAL_INFORMATION_BUSINESS_TERM
-                      form:
-                        id: F01
-                        mime_type: none
-                        data:
-                          pan:
-                            type: string
-                          fullName:
-                            type: string
-                          dob:
-                            type: string
-                          addressL1:
-                            type: string
-                          addressL2:
-                            type: string
-                          pincode:
-                            type: string
-                          city:
-                            type: string
-                          state:
-                            type: string
-                          constitution:
-                            type: enum
-                          businessPan:
-                            type: string
-                          businessPanName:
-                            type: string
-                          doi:
-                            type: string
-                          natureOfBusiness:
-                            type: enum
-                          udyamNumber:
-                            type: string
-                          gst:
-                            type: string
-                          annualTurnover:
-                            type: string
-                          businessEmail:
-                            type: string
-                          businessAddressL1:
-                            type: string
-                          businessAddressL2:
-                            type: string
-                          businessCity:
-                            type: string
-                          businessState:
-                            type: string
-                          businessPincode:
-                            type: string
-                          bureauConsent:
-                            type: boolean
-                        resubmit: false
-                        multiple_sumbissions: false
-                      required: true
-                  - id: BUSINESS_TERM_LOAN_ID_1
-                    descriptor:
-                      code: LOAN
-                      name: Term Loan without AA
-                    category_ids:
-                      - "101124"
-                      - "101117"
-                      - "101211"
-                    fulfillment_ids:
-                      - F16
                     matched: true
                     recommended: true
                     xinput:
@@ -706,131 +520,7 @@ steps:
                         resubmit: false
                         multiple_sumbissions: false
                       required: true
-                  - id: ITEM_ID_LAMF_4
-                    descriptor:
-                      code: LOAN
-                      name: Loan Against Mutual Funds - RTA
-                    category_ids:
-                      - "101118"
-                      - "101120"
-                      - "101117"
-                    fulfillment_ids:
-                      - F15
-                    matched: true
-                    recommended: true
-                    xinput:
-                      head:
-                        descriptor:
-                          name: Personal Information
-                          code: PERSONAL_INFORMATION_LAMF
-                        headings:
-                          - PERSONAL_INFORMATION_LAMF
-                      form:
-                        id: F01
-                        mime_type: none
-                        data:
-                          userType:
-                            type: enum
-                          pan:
-                            type: string
-                          fullName:
-                            type: string
-                          constitution:
-                            type: enum
-                          gender:
-                            type: enum
-                          employmentType:
-                            type: enum
-                          dob:
-                            type: string
-                          annualIncome:
-                            type: string
-                          mobileNumber:
-                            type: string
-                          emailId:
-                            type: string
-                          addressL1:
-                            type: string
-                          addressL2:
-                            type: string
-                          pincode:
-                            type: string
-                          city:
-                            type: string
-                          state:
-                            type: string
-                          endUse:
-                            type: enum
-                          bureauConsent:
-                            type: boolean
-                          rtaName:
-                            type: enum
-                          statementUpload:
-                            type: file
-                        resubmit: false
-                        multiple_sumbissions: false
-                      required: true
                 fulfillments:
-                  - id: F6
-                    type: ONLINE
-                    tags:
-                      - display: false
-                        descriptor:
-                          name: Checklist
-                          code: CHECKLISTS
-                        list:
-                          - descriptor:
-                              code: PERSONAL_INFORMATION_BUSINESS_TERM
-                              name: Personal Information
-                            value: PENDING
-                          - descriptor:
-                              code: CONSENT_APPROVAL
-                              name: Consent Approval
-                            value: PENDING
-                          - descriptor:
-                              code: SET_LOAN_AMOUNT
-                              name: Set Loan Amount
-                            value: PENDING
-                          - descriptor:
-                              code: KYC
-                              name: Know Your Customer
-                            value: PENDING
-                          - descriptor:
-                              code: EMANDATE
-                              name: Emandate
-                            value: PENDING
-                          - descriptor:
-                              code: LOAN_AGREEMENT
-                              name: Loan Agreement
-                            value: PENDING
-                  - id: F8
-                    type: ONLINE
-                    tags:
-                      - display: false
-                        descriptor:
-                          name: Checklist
-                          code: CHECKLISTS
-                        list:
-                          - descriptor:
-                              code: PERSONAL_INFORMATION_BUSINESS_TERM_GST
-                              name: Personal Information
-                            value: PENDING
-                          - descriptor:
-                              code: SET_LOAN_AMOUNT
-                              name: Set Loan Amount
-                            value: PENDING
-                          - descriptor:
-                              code: KYC
-                              name: Know Your Customer
-                            value: PENDING
-                          - descriptor:
-                              code: EMANDATE
-                              name: Emandate
-                            value: PENDING
-                          - descriptor:
-                              code: LOAN_AGREEMENT
-                              name: Loan Agreement
-                            value: PENDING
                   - id: F18
                     type: SEMI_ONLINE
                     tags:
@@ -846,34 +536,6 @@ steps:
                           - descriptor:
                               code: JOURNEY_OFFLINE
                               name: Journey Offline
-                            value: PENDING
-                  - id: F16
-                    type: ONLINE
-                    tags:
-                      - display: false
-                        descriptor:
-                          name: Checklist
-                          code: CHECKLISTS
-                        list:
-                          - descriptor:
-                              code: PERSONAL_INFORMATION_BUSINESS_TERM
-                              name: Personal Information
-                            value: PENDING
-                          - descriptor:
-                              code: SET_LOAN_AMOUNT
-                              name: Set Loan Amount
-                            value: PENDING
-                          - descriptor:
-                              code: KYC
-                              name: Know Your Customer
-                            value: PENDING
-                          - descriptor:
-                              code: EMANDATE
-                              name: Emandate
-                            value: PENDING
-                          - descriptor:
-                              code: LOAN_AGREEMENT
-                              name: Loan Agreement
                             value: PENDING
                   - id: F17
                     type: SEMI_ONLINE
@@ -968,9 +630,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_search
-            timestamp: 2026-04-28T11:31:51.206Z
+            timestamp: 2026-05-20T08:52:37.295Z
             transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
-            message_id: 87b99f0e-5dee-4e7a-a419-2c8d3ee8ace7
+            message_id: 15843adc-f3ef-498a-a534-2140b5824389
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1181,128 +843,6 @@ steps:
                         code: ADDITIONAL_UPLOAD
                         name: Additional Upload
                   items:
-                    - id: TERM_LOAN_ID_1
-                      descriptor:
-                        code: LOAN
-                        name: Term Loan with AA
-                      category_ids:
-                        - "101124"
-                        - "101117"
-                        - "101212"
-                      fulfillment_ids:
-                        - F6
-                      matched: true
-                      recommended: true
-                      xinput:
-                        head:
-                          descriptor:
-                            name: Personal Information
-                            code: PERSONAL_INFORMATION_BUSINESS_TERM
-                          headings:
-                            - PERSONAL_INFORMATION_BUSINESS_TERM
-                            - CONSENT_APPROVAL
-                        form:
-                          id: F01
-                          mime_type: none
-                          data:
-                            pan:
-                              type: string
-                            fullName:
-                              type: string
-                            dob:
-                              type: string
-                            addressL1:
-                              type: string
-                            addressL2:
-                              type: string
-                            pincode:
-                              type: string
-                            city:
-                              type: string
-                            state:
-                              type: string
-                            constitution:
-                              type: enum
-                            businessPan:
-                              type: string
-                            businessPanName:
-                              type: string
-                            doi:
-                              type: string
-                            natureOfBusiness:
-                              type: enum
-                            udyamNumber:
-                              type: string
-                            gst:
-                              type: string
-                            annualTurnover:
-                              type: string
-                            businessEmail:
-                              type: string
-                            businessAddressL1:
-                              type: string
-                            businessAddressL2:
-                              type: string
-                            businessCity:
-                              type: string
-                            businessState:
-                              type: string
-                            businessPincode:
-                              type: string
-                            bureauConsent:
-                              type: boolean
-                              defaultValue: true
-                            aa_id:
-                              type: string
-                          resubmit: false
-                          multiple_sumbissions: false
-                        required: true
-                    - id: TERM_LOAN_ID_3
-                      descriptor:
-                        code: LOAN
-                        name: Term Loan with GST
-                      category_ids:
-                        - "101124"
-                        - "101117"
-                        - "104139"
-                      fulfillment_ids:
-                        - F8
-                      matched: true
-                      recommended: true
-                      xinput:
-                        head:
-                          descriptor:
-                            name: Personal Information
-                            code: PERSONAL_INFORMATION_BUSINESS_TERM_GST
-                          headings:
-                            - PERSONAL_INFORMATION_BUSINESS_TERM_GST
-                        form:
-                          id: F01
-                          mime_type: none
-                          data:
-                            udyamNumber:
-                              type: string
-                            contactNumber:
-                              type: string
-                            email:
-                              type: string
-                            gstinProfile:
-                              type: file
-                            gstr1:
-                              type: file
-                            gstr2A:
-                              type: file
-                            gstr3B:
-                              type: file
-                            bureauConsent:
-                              type: boolean
-                            aa_id:
-                              type: string
-                            tnc:
-                              type: boolean
-                              display: https://icicibank.co.in/loans/tnc.html
-                          multiple_sumbissions: false
-                        required: true
                     - id: BUSINESS_TERM_LOAN_ID_2
                       descriptor:
                         code: LOAN
@@ -1313,78 +853,6 @@ steps:
                         - "101211"
                       fulfillment_ids:
                         - F17
-                      matched: true
-                      recommended: true
-                      xinput:
-                        head:
-                          descriptor:
-                            name: Personal Information
-                            code: PERSONAL_INFORMATION_BUSINESS_TERM
-                          headings:
-                            - PERSONAL_INFORMATION_BUSINESS_TERM
-                        form:
-                          id: F01
-                          mime_type: none
-                          data:
-                            pan:
-                              type: string
-                            fullName:
-                              type: string
-                            dob:
-                              type: string
-                            addressL1:
-                              type: string
-                            addressL2:
-                              type: string
-                            pincode:
-                              type: string
-                            city:
-                              type: string
-                            state:
-                              type: string
-                            constitution:
-                              type: enum
-                            businessPan:
-                              type: string
-                            businessPanName:
-                              type: string
-                            doi:
-                              type: string
-                            natureOfBusiness:
-                              type: enum
-                            udyamNumber:
-                              type: string
-                            gst:
-                              type: string
-                            annualTurnover:
-                              type: string
-                            businessEmail:
-                              type: string
-                            businessAddressL1:
-                              type: string
-                            businessAddressL2:
-                              type: string
-                            businessCity:
-                              type: string
-                            businessState:
-                              type: string
-                            businessPincode:
-                              type: string
-                            bureauConsent:
-                              type: boolean
-                          resubmit: false
-                          multiple_sumbissions: false
-                        required: true
-                    - id: BUSINESS_TERM_LOAN_ID_1
-                      descriptor:
-                        code: LOAN
-                        name: Term Loan without AA
-                      category_ids:
-                        - "101124"
-                        - "101117"
-                        - "101211"
-                      fulfillment_ids:
-                        - F16
                       matched: true
                       recommended: true
                       xinput:
@@ -1571,131 +1039,7 @@ steps:
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: ITEM_ID_LAMF_4
-                      descriptor:
-                        code: LOAN
-                        name: Loan Against Mutual Funds - RTA
-                      category_ids:
-                        - "101118"
-                        - "101120"
-                        - "101117"
-                      fulfillment_ids:
-                        - F15
-                      matched: true
-                      recommended: true
-                      xinput:
-                        head:
-                          descriptor:
-                            name: Personal Information
-                            code: PERSONAL_INFORMATION_LAMF
-                          headings:
-                            - PERSONAL_INFORMATION_LAMF
-                        form:
-                          id: F01
-                          mime_type: none
-                          data:
-                            userType:
-                              type: enum
-                            pan:
-                              type: string
-                            fullName:
-                              type: string
-                            constitution:
-                              type: enum
-                            gender:
-                              type: enum
-                            employmentType:
-                              type: enum
-                            dob:
-                              type: string
-                            annualIncome:
-                              type: string
-                            mobileNumber:
-                              type: string
-                            emailId:
-                              type: string
-                            addressL1:
-                              type: string
-                            addressL2:
-                              type: string
-                            pincode:
-                              type: string
-                            city:
-                              type: string
-                            state:
-                              type: string
-                            endUse:
-                              type: enum
-                            bureauConsent:
-                              type: boolean
-                            rtaName:
-                              type: enum
-                            statementUpload:
-                              type: file
-                          resubmit: false
-                          multiple_sumbissions: false
-                        required: true
                   fulfillments:
-                    - id: F6
-                      type: ONLINE
-                      tags:
-                        - display: false
-                          descriptor:
-                            name: Checklist
-                            code: CHECKLISTS
-                          list:
-                            - descriptor:
-                                code: PERSONAL_INFORMATION_BUSINESS_TERM
-                                name: Personal Information
-                              value: PENDING
-                            - descriptor:
-                                code: CONSENT_APPROVAL
-                                name: Consent Approval
-                              value: PENDING
-                            - descriptor:
-                                code: SET_LOAN_AMOUNT
-                                name: Set Loan Amount
-                              value: PENDING
-                            - descriptor:
-                                code: KYC
-                                name: Know Your Customer
-                              value: PENDING
-                            - descriptor:
-                                code: EMANDATE
-                                name: Emandate
-                              value: PENDING
-                            - descriptor:
-                                code: LOAN_AGREEMENT
-                                name: Loan Agreement
-                              value: PENDING
-                    - id: F8
-                      type: ONLINE
-                      tags:
-                        - display: false
-                          descriptor:
-                            name: Checklist
-                            code: CHECKLISTS
-                          list:
-                            - descriptor:
-                                code: PERSONAL_INFORMATION_BUSINESS_TERM_GST
-                                name: Personal Information
-                              value: PENDING
-                            - descriptor:
-                                code: SET_LOAN_AMOUNT
-                                name: Set Loan Amount
-                              value: PENDING
-                            - descriptor:
-                                code: KYC
-                                name: Know Your Customer
-                              value: PENDING
-                            - descriptor:
-                                code: EMANDATE
-                                name: Emandate
-                              value: PENDING
-                            - descriptor:
-                                code: LOAN_AGREEMENT
-                                name: Loan Agreement
-                              value: PENDING
                     - id: F18
                       type: SEMI_ONLINE
                       tags:
@@ -1711,34 +1055,6 @@ steps:
                             - descriptor:
                                 code: JOURNEY_OFFLINE
                                 name: Journey Offline
-                              value: PENDING
-                    - id: F16
-                      type: ONLINE
-                      tags:
-                        - display: false
-                          descriptor:
-                            name: Checklist
-                            code: CHECKLISTS
-                          list:
-                            - descriptor:
-                                code: PERSONAL_INFORMATION_BUSINESS_TERM
-                                name: Personal Information
-                              value: PENDING
-                            - descriptor:
-                                code: SET_LOAN_AMOUNT
-                                name: Set Loan Amount
-                              value: PENDING
-                            - descriptor:
-                                code: KYC
-                                name: Know Your Customer
-                              value: PENDING
-                            - descriptor:
-                                code: EMANDATE
-                                name: Emandate
-                              value: PENDING
-                            - descriptor:
-                                code: LOAN_AGREEMENT
-                                name: Loan Agreement
                               value: PENDING
                     - id: F17
                       type: SEMI_ONLINE
@@ -1818,7 +1134,10 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: please add relevant description
+        description: The BPP responds to the BAP's search request with credit products
+          matching the specified location and domain, establishing the
+          transaction session and capturing essential identifiers for subsequent
+          interactions.
 transaction_history: []
 validationLib: ""
 helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
