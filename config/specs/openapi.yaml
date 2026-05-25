@@ -2027,7 +2027,7 @@ components:
           format: uri
         params:
           type: object
-          additionalProperties: false
+          additionalProperties: true
           properties:
             transaction_id:
               type: string
