@@ -3665,7 +3665,7 @@ steps:
   - api: on_issue
     action_id: on_issue_processing
     owner: BPP
-    responseFor: null
+    responseFor: issue_open
     unsolicited: false
     description: please add relevant description
     mock:
@@ -4715,7 +4715,7 @@ steps:
   - api: on_issue
     action_id: on_issue_processing_1
     owner: BPP
-    responseFor: null
+    responseFor: issue_resolution_reject
     unsolicited: false
     description: please add relevant description
     mock:
@@ -5723,7 +5723,7 @@ steps:
   - api: on_issue
     action_id: on_issue_processing_2
     owner: BPP
-    responseFor: null
+    responseFor: issue_escalate
     unsolicited: false
     description: please add relevant description
     mock:
@@ -6945,7 +6945,7 @@ steps:
   - api: on_issue
     action_id: on_issue_resolved
     owner: BPP
-    responseFor: null
+    responseFor: issue_resolution_accept
     unsolicited: false
     description: please add relevant description
     mock:

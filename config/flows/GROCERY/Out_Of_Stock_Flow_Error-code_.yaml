@@ -140,7 +140,7 @@ steps:
   - api: on_select
     action_id: on_select_out_of_stock
     owner: BPP
-    responseFor: select0
+    responseFor: select
     unsolicited: false
     description: BPP returns item breakup when item is out of stock
     mock:

@@ -1791,7 +1791,7 @@ steps:
   - api: on_update
     action_id: on_update_buyer_instructions
     owner: BPP
-    responseFor: null
+    responseFor: update_buyer_instructions
     unsolicited: false
     description: please add relevant description
     mock:
@@ -2258,7 +2258,7 @@ steps:
   - api: on_update
     action_id: on_update_delivery_address
     owner: BPP
-    responseFor: null
+    responseFor: update_delivery_address
     unsolicited: false
     description: please add relevant description
     mock:

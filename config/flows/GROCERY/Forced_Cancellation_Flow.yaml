@@ -3616,7 +3616,7 @@ steps:
   - api: on_cancel
     action_id: on_cancel_force
     owner: BPP
-    responseFor: null
+    responseFor: cancel_yes
     unsolicited: false
     description: please add relevant description
     mock:

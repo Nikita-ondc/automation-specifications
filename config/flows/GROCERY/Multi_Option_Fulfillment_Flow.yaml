@@ -493,7 +493,7 @@ steps:
   - api: on_init
     action_id: on_init_multi_fulfillment
     owner: BPP
-    responseFor: null
+    responseFor: init_multi_fulfillment
     unsolicited: false
     description: Response to Init call
     mock:
