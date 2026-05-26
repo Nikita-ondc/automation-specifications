@@ -467,7 +467,7 @@ steps:
   - api: on_init
     action_id: on_init_self_pickup
     owner: BPP
-    responseFor: null
+    responseFor: init_self_pickup
     unsolicited: false
     description: Response to Init call
     mock:

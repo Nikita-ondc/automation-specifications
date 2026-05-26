@@ -3610,7 +3610,7 @@ steps:
   - api: on_issue
     action_id: on_issue_processing_100
     owner: BPP
-    responseFor: null
+    responseFor: issue_open_100
     unsolicited: false
     description: please add relevant description
     mock:

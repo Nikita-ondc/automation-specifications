@@ -455,7 +455,7 @@ steps:
   - api: on_init
     action_id: on_init_cod
     owner: BPP
-    responseFor: null
+    responseFor: init_cod
     unsolicited: false
     description: Response to Init call
     mock:
@@ -1035,7 +1035,7 @@ steps:
   - api: on_confirm
     action_id: on_confirm_cod
     owner: BPP
-    responseFor: null
+    responseFor: confirm_cod
     unsolicited: false
     description: On-confirm Response to the confirm call
     mock:

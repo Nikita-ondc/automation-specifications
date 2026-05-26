@@ -1394,7 +1394,7 @@ steps:
   - api: on_confirm
     action_id: on_confirm_commercial_model
     owner: BPP
-    responseFor: null
+    responseFor: confirm_commercial_model
     unsolicited: false
     description: On-confirm Response to the confirm call
     mock:
