@@ -83,7 +83,6 @@ apiProperties:
       - select
       - search
       - on_search
-      - on_confirm
   init:
     async_predecessor: null
     # transaction_partner:
@@ -102,10 +101,12 @@ apiProperties:
     #   - on_select
     transaction_partner: []
   confirm:
+    # async_predecessor: null
+    # transaction_partner:
+    #   - init
+    #   - on_init
     async_predecessor: null
-    transaction_partner:
-      - init
-      - on_init
+    transaction_partner: []
   on_confirm:
     async_predecessor: null
     # transaction_partner:
