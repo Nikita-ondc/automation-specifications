@@ -216,3 +216,14 @@ flows:
     description: Retail 1.2.5 (Replacement)
     config:
       $ref: ./GROCERY/Replacement_Flow.yaml
+  - type: playground
+    id: Catalog_Rejection_Flow
+    usecase: GROCERY
+    tags:
+      - PRAMAAN
+      - OPTIONAL
+      - REPORTABLE
+      - WORKBENCH
+    description: Retail 1.2.5 (Catalog Rejection)
+    config:
+      $ref: ./GROCERY/Catalog_Rejection_Flow.yaml
