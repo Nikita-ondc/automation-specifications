@@ -209,7 +209,7 @@ steps:
   - api: on_search
     action_id: on_search
     owner: BPP
-    responseFor: null
+    responseFor: search
     unsolicited: false
     description: BPP returns the full catalog refresh
     mock:
