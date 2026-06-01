@@ -3733,7 +3733,7 @@ steps:
               updated_at: 2023-01-15T10:10:00.142Z
         type: request
         description: please add relevant description
-  - api: on_issue_close
+  - api: on_issue_status
     action_id: on_issue_resolved_100
     owner: BPP
     responseFor: null
