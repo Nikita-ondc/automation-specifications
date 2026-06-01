@@ -80,7 +80,7 @@ steps:
               type: object
               description: Features supported
               properties:
-                "99":
+                "0099":
                   type: boolean
                   title: Purchase finance (0099)
                 "007":
@@ -98,9 +98,9 @@ steps:
         sampleData:
           city_code: std:080
           feature_discovery:
-            "99": false
+            "0099": false
             "007": true
-            00C: false
+            "00C": false
             "016": true
     examples:
       - name: Example for action "search"

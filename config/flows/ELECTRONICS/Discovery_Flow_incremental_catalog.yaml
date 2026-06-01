@@ -1,5 +1,5 @@
 meta:
-  domain: ONDC:RET14
+  domain: 'ONDC:RET14'
   version: 1.2.5
   flowId: Discovery_Flow_incremental_catalog
   config_version: 0.0.0001
@@ -8,11 +8,11 @@ meta:
   flowName: Discovery Flow incremental catalog
 transaction_data:
   transaction_id: 47305ad5-3a0c-45e6-8e4c-b693a02b87a6
-  latest_timestamp: "1970-01-01T00:00:00.000Z"
+  latest_timestamp: '1970-01-01T00:00:00.000Z'
   bap_id: bap.example.com
-  bap_uri: https://bap.example.com
+  bap_uri: 'https://bap.example.com'
   bpp_id: bpp.example.com
-  bpp_uri: https://bpp.example.com
+  bpp_uri: 'https://bpp.example.com'
 steps:
   - api: search
     action_id: search_inc
@@ -21,27 +21,30 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKCXJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
-      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gInNlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJzZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAwOwoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQuY29udGV4dCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwYXlsb2FkIGNvbnRleHQiIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmFjdGlvbiAhPT0gQ1VSUkVOVF9TVEVQX0FQSSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ29udGV4dCBhY3Rpb24gZG9lcyBub3QgbWF0Y2ggc3RlcCBBUEk6ICIgKyB0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uIH07CiAgfQoKICBjb25zdCBtZXNzYWdlID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlOwogIGlmICghbWVzc2FnZSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIG9iamVjdCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgCgogIAoKICAKCiAgCgogIAoKICAvLyBEZXRlcm1pbmUgaWYgd2Ugc2hvdWxkIHNraXAgY3Jvc3Mtc3RlcCB2ZXJpZmljYXRpb24gZHVlIHRvIG1pc21hdGNoZWQgdHJhbnNhY3Rpb25zIGluIG1vY2sgZXhhbXBsZXMKICBsZXQgc2tpcENyb3NzU3RlcCA9IGZhbHNlOwogIGlmIChzZXNzaW9uRGF0YSkgewogICAgY29uc3QgcHJldlR4SWQgPSBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQpID8gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZFswXSA6IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ7CiAgICBjb25zdCBhY3RpdmVUeElkID0gcHJldlR4SWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgICBpZiAoYWN0aXZlVHhJZCAmJiB0YXJnZXRQYXlsb2FkLmNvbnRleHQudHJhbnNhY3Rpb25faWQgIT09IGFjdGl2ZVR4SWQpIHsKICAgICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgICB9CiAgfSBlbHNlIHsKICAgIHNraXBDcm9zc1N0ZXAgPSB0cnVlOwogIH0KCiAgaWYgKCFtZXNzYWdlLmludGVudCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIGludGVudCBpbiBzZWFyY2giIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
-      requirements: ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKCXJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: >-
+        ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gInNlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJzZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAwOwoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQuY29udGV4dCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwYXlsb2FkIGNvbnRleHQiIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmFjdGlvbiAhPT0gQ1VSUkVOVF9TVEVQX0FQSSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ29udGV4dCBhY3Rpb24gZG9lcyBub3QgbWF0Y2ggc3RlcCBBUEk6ICIgKyB0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uIH07CiAgfQoKICBjb25zdCBtZXNzYWdlID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlOwogIGlmICghbWVzc2FnZSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIG9iamVjdCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgCgogIAoKICAKCiAgCgogIAoKICAvLyBEZXRlcm1pbmUgaWYgd2Ugc2hvdWxkIHNraXAgY3Jvc3Mtc3RlcCB2ZXJpZmljYXRpb24gZHVlIHRvIG1pc21hdGNoZWQgdHJhbnNhY3Rpb25zIGluIG1vY2sgZXhhbXBsZXMKICBsZXQgc2tpcENyb3NzU3RlcCA9IGZhbHNlOwogIGlmIChzZXNzaW9uRGF0YSkgewogICAgY29uc3QgcHJldlR4SWQgPSBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQpID8gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZFswXSA6IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ7CiAgICBjb25zdCBhY3RpdmVUeElkID0gcHJldlR4SWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgICBpZiAoYWN0aXZlVHhJZCAmJiB0YXJnZXRQYXlsb2FkLmNvbnRleHQudHJhbnNhY3Rpb25faWQgIT09IGFjdGl2ZVR4SWQpIHsKICAgICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgICB9CiAgfSBlbHNlIHsKICAgIHNraXBDcm9zc1N0ZXAgPSB0cnVlOwogIH0KCiAgaWYgKCFtZXNzYWdlLmludGVudCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIGludGVudCBpbiBzZWFyY2giIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: >-
+        ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
-          city: "*"
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
+          city: '*'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET14
+          domain: 'ONDC:RET14'
           message_id: 22a23f17-82c0-4910-b9f7-bfc925865da7
-          timestamp: "2026-03-19T16:09:35.223Z"
+          timestamp: '2026-03-19T16:09:35.223Z'
           transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
           ttl: PT30S
         message:
           intent:
             payment:
-              "@ondc/org/buyer_app_finder_fee_type": percent
-              "@ondc/org/buyer_app_finder_fee_amount": "3"
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3'
             tags:
               - code: catalog_inc
                 list:
@@ -58,30 +61,34 @@ steps:
         city_code: $.context.city
         message_id: $.context.message_id
         city: $.context.city
-        inc_mode: $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
-        bap_features: $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
+        inc_mode: >-
+          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
+        bap_features: >-
+          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
       inputs: {}
     examples:
       - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow "Discovery_Flow_incremental_catalog"
+        description: >-
+          Auto-generated example for action "search" in flow
+          "Discovery_Flow_incremental_catalog"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
-            city: "*"
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
+            city: '*'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET14
+            domain: 'ONDC:RET14'
             message_id: 22a23f17-82c0-4910-b9f7-bfc925865da7
-            timestamp: "2026-03-19T16:09:35.223Z"
+            timestamp: '2026-03-19T16:09:35.223Z'
             transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
             ttl: PT30S
           message:
             intent:
               payment:
-                "@ondc/org/buyer_app_finder_fee_amount": "3"
-                "@ondc/org/buyer_app_finder_fee_type": percent
+                '@ondc/org/buyer_app_finder_fee_amount': '3'
+                '@ondc/org/buyer_app_finder_fee_type': percent
               tags:
                 - code: catalog_inc
                   list:
@@ -95,22 +102,25 @@ steps:
     unsolicited: true
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBkZWZhdWx0UGF5bG9hZCA9IHVwZGF0ZVRpbWVzdGFtcHMoZGVmYXVsdFBheWxvYWQpOwogIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAxOwoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQuY29udGV4dCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwYXlsb2FkIGNvbnRleHQiIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmFjdGlvbiAhPT0gQ1VSUkVOVF9TVEVQX0FQSSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ29udGV4dCBhY3Rpb24gZG9lcyBub3QgbWF0Y2ggc3RlcCBBUEk6ICIgKyB0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uIH07CiAgfQoKICBjb25zdCBtZXNzYWdlID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlOwogIGlmICghbWVzc2FnZSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIG9iamVjdCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgCgogIAoKICAKCiAgCgogIAoKICAvLyBEZXRlcm1pbmUgaWYgd2Ugc2hvdWxkIHNraXAgY3Jvc3Mtc3RlcCB2ZXJpZmljYXRpb24gZHVlIHRvIG1pc21hdGNoZWQgdHJhbnNhY3Rpb25zIGluIG1vY2sgZXhhbXBsZXMKICBsZXQgc2tpcENyb3NzU3RlcCA9IGZhbHNlOwogIGlmIChzZXNzaW9uRGF0YSkgewogICAgY29uc3QgcHJldlR4SWQgPSBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQpID8gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZFswXSA6IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ7CiAgICBjb25zdCBhY3RpdmVUeElkID0gcHJldlR4SWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgICBpZiAoYWN0aXZlVHhJZCAmJiB0YXJnZXRQYXlsb2FkLmNvbnRleHQudHJhbnNhY3Rpb25faWQgIT09IGFjdGl2ZVR4SWQpIHsKICAgICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgICB9CiAgfSBlbHNlIHsKICAgIHNraXBDcm9zc1N0ZXAgPSB0cnVlOwogIH0KCiAgY29uc3QgY2F0YWxvZyA9IG1lc3NhZ2UuY2F0YWxvZzsKICBpZiAoIWNhdGFsb2cpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgY2F0YWxvZyBpbiBvbl9zZWFyY2giIH07CiAgfQogIGNvbnN0IHByb3ZpZGVycyA9IGNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSB8fCBjYXRhbG9nLnByb3ZpZGVyczsKICBpZiAoIXByb3ZpZGVycyB8fCAhQXJyYXkuaXNBcnJheShwcm92aWRlcnMpIHx8IHByb3ZpZGVycy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIkNhdGFsb2cgaXMgbWlzc2luZyBwcm92aWRlcnMgbGlzdCIgfTsKICB9CiAgZm9yIChjb25zdCBwcm92aWRlciBvZiBwcm92aWRlcnMpIHsKICAgIGlmICghcHJvdmlkZXIuaWQpIHsKICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiUHJvdmlkZXIgaXMgbWlzc2luZyBJRCBpbiBjYXRhbG9nIiB9OwogICAgfQogICAgY29uc3QgaXRlbXMgPSBwcm92aWRlci5pdGVtcyB8fCBbXTsKICAgIGlmICghQXJyYXkuaXNBcnJheShpdGVtcykgfHwgaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIlByb3ZpZGVyICIgKyBwcm92aWRlci5pZCArICIgaXMgbWlzc2luZyBpdGVtcyBpbiBjYXRhbG9nIiB9OwogICAgfQogIH0KCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
-      requirements: ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAxOwoKICBpZiAoIXNlc3Npb25EYXRhKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlc3Npb24gZGF0YSIgfTsKICB9CgogIGNvbnN0IHR4SWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkIHx8IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uX2lkOwogIGlmICghdHhJZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbiBJRCBpbiBzZXNzaW9uIiB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkICYmICFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbklkIGluIHNlc3Npb24iIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBkZWZhdWx0UGF5bG9hZCA9IHVwZGF0ZVRpbWVzdGFtcHMoZGVmYXVsdFBheWxvYWQpOwogIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: >-
+        ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAxOwoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQuY29udGV4dCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwYXlsb2FkIGNvbnRleHQiIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmFjdGlvbiAhPT0gQ1VSUkVOVF9TVEVQX0FQSSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ29udGV4dCBhY3Rpb24gZG9lcyBub3QgbWF0Y2ggc3RlcCBBUEk6ICIgKyB0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uIH07CiAgfQoKICBjb25zdCBtZXNzYWdlID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlOwogIGlmICghbWVzc2FnZSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIG9iamVjdCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgCgogIAoKICAKCiAgCgogIAoKICAvLyBEZXRlcm1pbmUgaWYgd2Ugc2hvdWxkIHNraXAgY3Jvc3Mtc3RlcCB2ZXJpZmljYXRpb24gZHVlIHRvIG1pc21hdGNoZWQgdHJhbnNhY3Rpb25zIGluIG1vY2sgZXhhbXBsZXMKICBsZXQgc2tpcENyb3NzU3RlcCA9IGZhbHNlOwogIGlmIChzZXNzaW9uRGF0YSkgewogICAgY29uc3QgcHJldlR4SWQgPSBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQpID8gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZFswXSA6IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ7CiAgICBjb25zdCBhY3RpdmVUeElkID0gcHJldlR4SWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgICBpZiAoYWN0aXZlVHhJZCAmJiB0YXJnZXRQYXlsb2FkLmNvbnRleHQudHJhbnNhY3Rpb25faWQgIT09IGFjdGl2ZVR4SWQpIHsKICAgICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgICB9CiAgfSBlbHNlIHsKICAgIHNraXBDcm9zc1N0ZXAgPSB0cnVlOwogIH0KCiAgY29uc3QgY2F0YWxvZyA9IG1lc3NhZ2UuY2F0YWxvZzsKICBpZiAoIWNhdGFsb2cpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgY2F0YWxvZyBpbiBvbl9zZWFyY2giIH07CiAgfQogIGNvbnN0IHByb3ZpZGVycyA9IGNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSB8fCBjYXRhbG9nLnByb3ZpZGVyczsKICBpZiAoIXByb3ZpZGVycyB8fCAhQXJyYXkuaXNBcnJheShwcm92aWRlcnMpIHx8IHByb3ZpZGVycy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIkNhdGFsb2cgaXMgbWlzc2luZyBwcm92aWRlcnMgbGlzdCIgfTsKICB9CiAgZm9yIChjb25zdCBwcm92aWRlciBvZiBwcm92aWRlcnMpIHsKICAgIGlmICghcHJvdmlkZXIuaWQpIHsKICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiUHJvdmlkZXIgaXMgbWlzc2luZyBJRCBpbiBjYXRhbG9nIiB9OwogICAgfQogICAgY29uc3QgaXRlbXMgPSBwcm92aWRlci5pdGVtcyB8fCBbXTsKICAgIGlmICghQXJyYXkuaXNBcnJheShpdGVtcykgfHwgaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIlByb3ZpZGVyICIgKyBwcm92aWRlci5pZCArICIgaXMgbWlzc2luZyBpdGVtcyBpbiBjYXRhbG9nIiB9OwogICAgfQogIH0KCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: >-
+        ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAxOwoKICBpZiAoIXNlc3Npb25EYXRhKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlc3Npb24gZGF0YSIgfTsKICB9CgogIGNvbnN0IHR4SWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkIHx8IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uX2lkOwogIGlmICghdHhJZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbiBJRCBpbiBzZXNzaW9uIiB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkICYmICFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbklkIGluIHNlc3Npb24iIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: on_search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller
-          city: "*"
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller'
+          city: '*'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET14
+          domain: 'ONDC:RET14'
           message_id: 49c070c7-3ac1-46f5-9717-b7375f0d903a
-          timestamp: "2026-03-19T16:09:40.049Z"
+          timestamp: '2026-03-19T16:09:40.049Z'
           transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
           ttl: PT30S
         message:
@@ -121,42 +131,54 @@ steps:
                   - id: I1
                     time:
                       label: enable
-                      timestamp: "2024-08-12T05:30:48.998Z"
-                    parent_item_id: ""
+                      timestamp: '2024-08-12T05:30:48.998Z'
+                    parent_item_id: ''
                     descriptor:
                       name: Power Bank
-                      symbol: https://sellerNP.com/images/i1.png
-                      short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                      long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        A Power Bank is a portable charger designed to recharge
+                        your electronic devices when you're on the move. Ranging
+                        in size from slim, pocket-sized devices up to larger,
+                        higher-capacity Power Banks – they can be used to charge
+                        smartphones, tablets, earphones, smartwatches and other
+                        mobile devices.
+                      long_desc: >-
+                        A Power Bank is a portable charger designed to recharge
+                        your electronic devices when you're on the move. Ranging
+                        in size from slim, pocket-sized devices up to larger,
+                        higher-capacity Power Banks
                       images:
-                        - https://sellerNP.com/images/i1.png
-                      code: 5:ESS45300
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '5:ESS45300'
                     quantity:
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
+                          value: '1'
                       available:
-                        count: "99"
+                        count: '99'
                       maximum:
-                        count: "8"
+                        count: '8'
                     price:
                       currency: INR
-                      value: "2460"
-                      maximum_value: "2460"
+                      value: '2460'
+                      maximum_value: '2460'
                     category_id: Power Bank
                     location_id: L1
                     fulfillment_id: F1
-                    "@ondc/org/returnable": true
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/available_on_cod": false
-                    "@ondc/org/time_to_ship": P2D
-                    "@ondc/org/seller_pickup_return": true
-                    "@ondc/org/return_window": P7D
-                    "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                    "@ondc/org/statutory_reqs_packaged_commodities":
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
                       manufacturer_or_packer_name: Seller Business
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
                       common_or_generic_name_of_commodity: Power Bank
                       month_year_of_manufacture_packing_import: NA
                     tags:
@@ -169,15 +191,15 @@ steps:
                           - code: brand
                             value: Shiv Electricals
                           - code: weight
-                            value: "103"
+                            value: '103'
                           - code: model
-                            value: "2012"
+                            value: '2012'
                           - code: breadth
-                            value: "12.3"
+                            value: '12.3'
                           - code: length
-                            value: "10.2"
+                            value: '10.2'
                           - code: height
-                            value: "15.5"
+                            value: '15.5'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -189,25 +211,29 @@ steps:
         city_code: $.context.city
         bpp_id: $.context.bpp_id
         bpp_uri: $.context.bpp_uri
-        on_search_items: $.message.catalog['bpp/providers'][*].items[*]
-        np_type: $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
+        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
+        np_type: >-
+          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
       inputs: {}
     examples:
       - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow "Discovery_Flow_incremental_catalog"
+        description: >-
+          Auto-generated example for action "on_search" in flow
+          "Discovery_Flow_incremental_catalog"
         payload:
           context:
             action: on_search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller
-            city: "*"
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller
+            city: '*'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET14
+            domain: 'ONDC:RET14'
             message_id: 49c070c7-3ac1-46f5-9717-b7375f0d903a
-            timestamp: "2026-03-19T16:09:40.049Z"
+            timestamp: '2026-03-19T16:09:40.049Z'
             transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
             ttl: PT30S
           message:
@@ -215,44 +241,56 @@ steps:
               bpp/providers:
                 - id: P1
                   items:
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Power Bank
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
+                      '@ondc/org/time_to_ship': P2D
                       category_id: Power Bank
                       descriptor:
-                        code: 5:ESS45300
+                        code: '5:ESS45300'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          A Power Bank is a portable charger designed to
+                          recharge your electronic devices when you're on the
+                          move. Ranging in size from slim, pocket-sized devices
+                          up to larger, higher-capacity Power Banks
                         name: Power Bank
-                        short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: >-
+                          A Power Bank is a portable charger designed to
+                          recharge your electronic devices when you're on the
+                          move. Ranging in size from slim, pocket-sized devices
+                          up to larger, higher-capacity Power Banks – they can
+                          be used to charge smartphones, tablets, earphones,
+                          smartwatches and other mobile devices.
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I1
                       location_id: L1
-                      parent_item_id: ""
+                      parent_item_id: ''
                       price:
                         currency: INR
-                        maximum_value: "2460"
-                        value: "2460"
+                        maximum_value: '2460'
+                        value: '2460'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "8"
+                          count: '8'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
+                            value: '1'
                       tags:
                         - code: origin
                           list:
@@ -263,18 +301,18 @@ steps:
                             - code: brand
                               value: Shiv Electricals
                             - code: weight
-                              value: "103"
+                              value: '103'
                             - code: model
-                              value: "2012"
+                              value: '2012'
                             - code: breadth
-                              value: "12.3"
+                              value: '12.3'
                             - code: length
-                              value: "10.2"
+                              value: '10.2'
                             - code: height
-                              value: "15.5"
+                              value: '15.5'
                       time:
                         label: enable
-                        timestamp: "2026-03-19T16:09:40.049Z"
+                        timestamp: '2026-03-19T16:09:40.049Z'
         type: request
   - api: on_search
     action_id: on_search_inc_disable
@@ -283,22 +321,25 @@ steps:
     unsolicited: true
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSAiKiI7CiAgZGVmYXVsdFBheWxvYWQgPSB1cGRhdGVUaW1lc3RhbXBzKGRlZmF1bHRQYXlsb2FkKTsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jX2Rpc2FibGUiOwogIGNvbnN0IENVUlJFTlRfU1RFUF9JTkRFWCA9IDI7CgogIGlmICghdGFyZ2V0UGF5bG9hZCB8fCAhdGFyZ2V0UGF5bG9hZC5jb250ZXh0KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHBheWxvYWQgY29udGV4dCIgfTsKICB9CgogIGlmICh0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uICE9PSBDVVJSRU5UX1NURVBfQVBJKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJDb250ZXh0IGFjdGlvbiBkb2VzIG5vdCBtYXRjaCBzdGVwIEFQSTogIiArIHRhcmdldFBheWxvYWQuY29udGV4dC5hY3Rpb24gfTsKICB9CgogIGNvbnN0IG1lc3NhZ2UgPSB0YXJnZXRQYXlsb2FkLm1lc3NhZ2U7CiAgaWYgKCFtZXNzYWdlKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Ugb2JqZWN0IGluIHBheWxvYWQiIH07CiAgfQoKICAKCiAgCgogIAoKICAKCiAgCgogIC8vIERldGVybWluZSBpZiB3ZSBzaG91bGQgc2tpcCBjcm9zcy1zdGVwIHZlcmlmaWNhdGlvbiBkdWUgdG8gbWlzbWF0Y2hlZCB0cmFuc2FjdGlvbnMgaW4gbW9jayBleGFtcGxlcwogIGxldCBza2lwQ3Jvc3NTdGVwID0gZmFsc2U7CiAgaWYgKHNlc3Npb25EYXRhKSB7CiAgICBjb25zdCBwcmV2VHhJZCA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZCkgPyBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdIDogc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZDsKICAgIGNvbnN0IGFjdGl2ZVR4SWQgPSBwcmV2VHhJZCB8fCBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZDsKICAgIGlmIChhY3RpdmVUeElkICYmIHRhcmdldFBheWxvYWQuY29udGV4dC50cmFuc2FjdGlvbl9pZCAhPT0gYWN0aXZlVHhJZCkgewogICAgICBza2lwQ3Jvc3NTdGVwID0gdHJ1ZTsKICAgIH0KICB9IGVsc2UgewogICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgfQoKICBjb25zdCBjYXRhbG9nID0gbWVzc2FnZS5jYXRhbG9nOwogIGlmICghY2F0YWxvZykgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBjYXRhbG9nIGluIG9uX3NlYXJjaCIgfTsKICB9CiAgY29uc3QgcHJvdmlkZXJzID0gY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdIHx8IGNhdGFsb2cucHJvdmlkZXJzOwogIGlmICghcHJvdmlkZXJzIHx8ICFBcnJheS5pc0FycmF5KHByb3ZpZGVycykgfHwgcHJvdmlkZXJzLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ2F0YWxvZyBpcyBtaXNzaW5nIHByb3ZpZGVycyBsaXN0IiB9OwogIH0KICBmb3IgKGNvbnN0IHByb3ZpZGVyIG9mIHByb3ZpZGVycykgewogICAgaWYgKCFwcm92aWRlci5pZCkgewogICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJQcm92aWRlciBpcyBtaXNzaW5nIElEIGluIGNhdGFsb2ciIH07CiAgICB9CiAgICBjb25zdCBpdGVtcyA9IHByb3ZpZGVyLml0ZW1zIHx8IFtdOwogICAgaWYgKCFBcnJheS5pc0FycmF5KGl0ZW1zKSB8fCBpdGVtcy5sZW5ndGggPT09IDApIHsKICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiUHJvdmlkZXIgIiArIHByb3ZpZGVyLmlkICsgIiBpcyBtaXNzaW5nIGl0ZW1zIGluIGNhdGFsb2ciIH07CiAgICB9CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
-      requirements: ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jX2Rpc2FibGUiOwogIGNvbnN0IENVUlJFTlRfU1RFUF9JTkRFWCA9IDI7CgogIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbiBkYXRhIiB9OwogIH0KCiAgY29uc3QgdHhJZCA9IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgaWYgKCF0eElkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uIElEIGluIHNlc3Npb24iIH07CiAgfQoKICBpZiAoIXNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQgJiYgIXNlc3Npb25EYXRhLnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uSWQgaW4gc2Vzc2lvbiIgfTsKICB9CgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSAiKiI7CiAgZGVmYXVsdFBheWxvYWQgPSB1cGRhdGVUaW1lc3RhbXBzKGRlZmF1bHRQYXlsb2FkKTsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: >-
+        ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jX2Rpc2FibGUiOwogIGNvbnN0IENVUlJFTlRfU1RFUF9JTkRFWCA9IDI7CgogIGlmICghdGFyZ2V0UGF5bG9hZCB8fCAhdGFyZ2V0UGF5bG9hZC5jb250ZXh0KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHBheWxvYWQgY29udGV4dCIgfTsKICB9CgogIGlmICh0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uICE9PSBDVVJSRU5UX1NURVBfQVBJKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJDb250ZXh0IGFjdGlvbiBkb2VzIG5vdCBtYXRjaCBzdGVwIEFQSTogIiArIHRhcmdldFBheWxvYWQuY29udGV4dC5hY3Rpb24gfTsKICB9CgogIGNvbnN0IG1lc3NhZ2UgPSB0YXJnZXRQYXlsb2FkLm1lc3NhZ2U7CiAgaWYgKCFtZXNzYWdlKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Ugb2JqZWN0IGluIHBheWxvYWQiIH07CiAgfQoKICAKCiAgCgogIAoKICAKCiAgCgogIC8vIERldGVybWluZSBpZiB3ZSBzaG91bGQgc2tpcCBjcm9zcy1zdGVwIHZlcmlmaWNhdGlvbiBkdWUgdG8gbWlzbWF0Y2hlZCB0cmFuc2FjdGlvbnMgaW4gbW9jayBleGFtcGxlcwogIGxldCBza2lwQ3Jvc3NTdGVwID0gZmFsc2U7CiAgaWYgKHNlc3Npb25EYXRhKSB7CiAgICBjb25zdCBwcmV2VHhJZCA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZCkgPyBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdIDogc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZDsKICAgIGNvbnN0IGFjdGl2ZVR4SWQgPSBwcmV2VHhJZCB8fCBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZDsKICAgIGlmIChhY3RpdmVUeElkICYmIHRhcmdldFBheWxvYWQuY29udGV4dC50cmFuc2FjdGlvbl9pZCAhPT0gYWN0aXZlVHhJZCkgewogICAgICBza2lwQ3Jvc3NTdGVwID0gdHJ1ZTsKICAgIH0KICB9IGVsc2UgewogICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgfQoKICBjb25zdCBjYXRhbG9nID0gbWVzc2FnZS5jYXRhbG9nOwogIGlmICghY2F0YWxvZykgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBjYXRhbG9nIGluIG9uX3NlYXJjaCIgfTsKICB9CiAgY29uc3QgcHJvdmlkZXJzID0gY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdIHx8IGNhdGFsb2cucHJvdmlkZXJzOwogIGlmICghcHJvdmlkZXJzIHx8ICFBcnJheS5pc0FycmF5KHByb3ZpZGVycykgfHwgcHJvdmlkZXJzLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ2F0YWxvZyBpcyBtaXNzaW5nIHByb3ZpZGVycyBsaXN0IiB9OwogIH0KICBmb3IgKGNvbnN0IHByb3ZpZGVyIG9mIHByb3ZpZGVycykgewogICAgaWYgKCFwcm92aWRlci5pZCkgewogICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJQcm92aWRlciBJRCBpcyBtaXNzaW5nIGluIGNhdGFsb2ciIH07CiAgICB9CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: >-
+        ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2hfaW5jX2Rpc2FibGUiOwogIGNvbnN0IENVUlJFTlRfU1RFUF9JTkRFWCA9IDI7CgogIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbiBkYXRhIiB9OwogIH0KCiAgY29uc3QgdHhJZCA9IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgaWYgKCF0eElkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uIElEIGluIHNlc3Npb24iIH07CiAgfQoKICBpZiAoIXNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQgJiYgIXNlc3Npb25EYXRhLnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uSWQgaW4gc2Vzc2lvbiIgfTsKICB9CgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
       defaultPayload:
         context:
           action: on_search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller
-          city: "*"
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller'
+          city: '*'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET14
+          domain: 'ONDC:RET14'
           message_id: 49c070c7-3ac1-46f5-9717-b7375f0d903a
-          timestamp: "2026-03-19T16:09:40.049Z"
+          timestamp: '2026-03-19T16:09:40.049Z'
           transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
           ttl: PT30S
         message:
@@ -307,7 +348,7 @@ steps:
               - id: P1
                 time:
                   label: disable
-                  timestamp: "2025-01-08T10:20:00.000Z"
+                  timestamp: '2025-01-08T10:20:00.000Z'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -319,25 +360,29 @@ steps:
         city_code: $.context.city
         bpp_id: $.context.bpp_id
         bpp_uri: $.context.bpp_uri
-        on_search_items: $.message.catalog['bpp/providers'][*].items[*]
-        np_type: $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
+        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
+        np_type: >-
+          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
       inputs: {}
     examples:
       - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow "Discovery_Flow_incremental_catalog"
+        description: >-
+          Auto-generated example for action "on_search" in flow
+          "Discovery_Flow_incremental_catalog"
         payload:
           context:
             action: on_search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller
-            city: "*"
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller
+            city: '*'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET14
+            domain: 'ONDC:RET14'
             message_id: 49c070c7-3ac1-46f5-9717-b7375f0d903a
-            timestamp: "2026-03-19T16:09:40.049Z"
+            timestamp: '2026-03-19T16:09:40.049Z'
             transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
             ttl: PT30S
           message:
@@ -345,44 +390,56 @@ steps:
               bpp/providers:
                 - id: P1
                   items:
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Power Bank
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
+                      '@ondc/org/time_to_ship': P2D
                       category_id: Power Bank
                       descriptor:
-                        code: 5:ESS45300
+                        code: '5:ESS45300'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          A Power Bank is a portable charger designed to
+                          recharge your electronic devices when you're on the
+                          move. Ranging in size from slim, pocket-sized devices
+                          up to larger, higher-capacity Power Banks
                         name: Power Bank
-                        short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: >-
+                          A Power Bank is a portable charger designed to
+                          recharge your electronic devices when you're on the
+                          move. Ranging in size from slim, pocket-sized devices
+                          up to larger, higher-capacity Power Banks – they can
+                          be used to charge smartphones, tablets, earphones,
+                          smartwatches and other mobile devices.
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I1
                       location_id: L1
-                      parent_item_id: ""
+                      parent_item_id: ''
                       price:
                         currency: INR
-                        maximum_value: "2460"
-                        value: "2460"
+                        maximum_value: '2460'
+                        value: '2460'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "8"
+                          count: '8'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
+                            value: '1'
                       tags:
                         - code: origin
                           list:
@@ -393,18 +450,18 @@ steps:
                             - code: brand
                               value: Shiv Electricals
                             - code: weight
-                              value: "103"
+                              value: '103'
                             - code: model
-                              value: "2012"
+                              value: '2012'
                             - code: breadth
-                              value: "12.3"
+                              value: '12.3'
                             - code: length
-                              value: "10.2"
+                              value: '10.2'
                             - code: height
-                              value: "15.5"
+                              value: '15.5'
                       time:
                         label: enable
-                        timestamp: "2026-03-19T16:09:40.049Z"
+                        timestamp: '2026-03-19T16:09:40.049Z'
         type: request
   - api: search
     action_id: search_inc
@@ -413,27 +470,30 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKCXJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
-      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gInNlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJzZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAzOwoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQuY29udGV4dCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwYXlsb2FkIGNvbnRleHQiIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmFjdGlvbiAhPT0gQ1VSUkVOVF9TVEVQX0FQSSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ29udGV4dCBhY3Rpb24gZG9lcyBub3QgbWF0Y2ggc3RlcCBBUEk6ICIgKyB0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uIH07CiAgfQoKICBjb25zdCBtZXNzYWdlID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlOwogIGlmICghbWVzc2FnZSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIG9iamVjdCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgCgogIAoKICAKCiAgCgogIAoKICAvLyBEZXRlcm1pbmUgaWYgd2Ugc2hvdWxkIHNraXAgY3Jvc3Mtc3RlcCB2ZXJpZmljYXRpb24gZHVlIHRvIG1pc21hdGNoZWQgdHJhbnNhY3Rpb25zIGluIG1vY2sgZXhhbXBsZXMKICBsZXQgc2tpcENyb3NzU3RlcCA9IGZhbHNlOwogIGlmIChzZXNzaW9uRGF0YSkgewogICAgY29uc3QgcHJldlR4SWQgPSBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQpID8gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZFswXSA6IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ7CiAgICBjb25zdCBhY3RpdmVUeElkID0gcHJldlR4SWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgICBpZiAoYWN0aXZlVHhJZCAmJiB0YXJnZXRQYXlsb2FkLmNvbnRleHQudHJhbnNhY3Rpb25faWQgIT09IGFjdGl2ZVR4SWQpIHsKICAgICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgICB9CiAgfSBlbHNlIHsKICAgIHNraXBDcm9zc1N0ZXAgPSB0cnVlOwogIH0KCiAgaWYgKCFtZXNzYWdlLmludGVudCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIGludGVudCBpbiBzZWFyY2giIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
-      requirements: ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gInNlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJzZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAzOwoKICBpZiAoIXNlc3Npb25EYXRhKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlc3Npb24gZGF0YSIgfTsKICB9CgogIGNvbnN0IHR4SWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkIHx8IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uX2lkOwogIGlmICghdHhJZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbiBJRCBpbiBzZXNzaW9uIiB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkICYmICFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbklkIGluIHNlc3Npb24iIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKCXJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: >-
+        ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gInNlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJzZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAzOwoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQuY29udGV4dCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwYXlsb2FkIGNvbnRleHQiIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmFjdGlvbiAhPT0gQ1VSUkVOVF9TVEVQX0FQSSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ29udGV4dCBhY3Rpb24gZG9lcyBub3QgbWF0Y2ggc3RlcCBBUEk6ICIgKyB0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uIH07CiAgfQoKICBjb25zdCBtZXNzYWdlID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlOwogIGlmICghbWVzc2FnZSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIG9iamVjdCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgCgogIAoKICAKCiAgCgogIAoKICAvLyBEZXRlcm1pbmUgaWYgd2Ugc2hvdWxkIHNraXAgY3Jvc3Mtc3RlcCB2ZXJpZmljYXRpb24gZHVlIHRvIG1pc21hdGNoZWQgdHJhbnNhY3Rpb25zIGluIG1vY2sgZXhhbXBsZXMKICBsZXQgc2tpcENyb3NzU3RlcCA9IGZhbHNlOwogIGlmIChzZXNzaW9uRGF0YSkgewogICAgY29uc3QgcHJldlR4SWQgPSBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQpID8gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZFswXSA6IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ7CiAgICBjb25zdCBhY3RpdmVUeElkID0gcHJldlR4SWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgICBpZiAoYWN0aXZlVHhJZCAmJiB0YXJnZXRQYXlsb2FkLmNvbnRleHQudHJhbnNhY3Rpb25faWQgIT09IGFjdGl2ZVR4SWQpIHsKICAgICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgICB9CiAgfSBlbHNlIHsKICAgIHNraXBDcm9zc1N0ZXAgPSB0cnVlOwogIH0KCiAgaWYgKCFtZXNzYWdlLmludGVudCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlIGludGVudCBpbiBzZWFyY2giIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: >-
+        ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gInNlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJzZWFyY2hfaW5jIjsKICBjb25zdCBDVVJSRU5UX1NURVBfSU5ERVggPSAzOwoKICBpZiAoIXNlc3Npb25EYXRhKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHNlc3Npb24gZGF0YSIgfTsKICB9CgogIGNvbnN0IHR4SWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkIHx8IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uX2lkOwogIGlmICghdHhJZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbiBJRCBpbiBzZXNzaW9uIiB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkICYmICFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyB0cmFuc2FjdGlvbklkIGluIHNlc3Npb24iIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
-          city: "*"
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
+          city: '*'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET14
+          domain: 'ONDC:RET14'
           message_id: 22a23f17-82c0-4910-b9f7-bfc925865da7
-          timestamp: "2026-03-19T16:09:35.223Z"
+          timestamp: '2026-03-19T16:09:35.223Z'
           transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
           ttl: PT30S
         message:
           intent:
             payment:
-              "@ondc/org/buyer_app_finder_fee_type": percent
-              "@ondc/org/buyer_app_finder_fee_amount": "3"
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3'
             tags:
               - code: catalog_inc
                 list:
@@ -450,30 +510,34 @@ steps:
         city_code: $.context.city
         message_id: $.context.message_id
         city: $.context.city
-        inc_mode: $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
-        bap_features: $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
+        inc_mode: >-
+          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
+        bap_features: >-
+          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
       inputs: {}
     examples:
       - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow "Discovery_Flow_incremental_catalog"
+        description: >-
+          Auto-generated example for action "search" in flow
+          "Discovery_Flow_incremental_catalog"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
-            city: "*"
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer'
+            city: '*'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET14
+            domain: 'ONDC:RET14'
             message_id: 22a23f17-82c0-4910-b9f7-bfc925865da7
-            timestamp: "2026-03-19T16:09:35.223Z"
+            timestamp: '2026-03-19T16:09:35.223Z'
             transaction_id: 27bc41b7-4339-4676-8fcc-596c4f9c60f3
             ttl: PT30S
           message:
             intent:
               payment:
-                "@ondc/org/buyer_app_finder_fee_amount": "3"
-                "@ondc/org/buyer_app_finder_fee_type": percent
+                '@ondc/org/buyer_app_finder_fee_amount': '3'
+                '@ondc/org/buyer_app_finder_fee_type': percent
               tags:
                 - code: catalog_inc
                   list:
@@ -484,22 +548,22 @@ transaction_history:
   - action_id: search_inc
     payload:
       context:
-        domain: ONDC:RET14
+        domain: 'ONDC:RET14'
         action: search
-        timestamp: "2026-05-25T06:55:44.601Z"
+        timestamp: '2026-06-01T14:30:48.268Z'
         transaction_id: 47305ad5-3a0c-45e6-8e4c-b693a02b87a6
-        message_id: a9b20791-adad-43a0-8482-32cf118e83c2
+        message_id: 937dc0f9-a66d-4d3b-a24f-9020afeb0eda
         bap_id: bap.example.com
-        bap_uri: https://bap.example.com
+        bap_uri: 'https://bap.example.com'
         ttl: PT30S
         country: IND
-        city: "*"
+        city: '*'
         core_version: 1.2.5
       message:
         intent:
           payment:
-            "@ondc/org/buyer_app_finder_fee_amount": "3"
-            "@ondc/org/buyer_app_finder_fee_type": percent
+            '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3'
           tags:
             - code: catalog_inc
               list:
@@ -510,62 +574,77 @@ transaction_history:
   - action_id: on_search_inc
     payload:
       context:
-        domain: ONDC:RET14
+        domain: 'ONDC:RET14'
         action: on_search
-        timestamp: "2026-05-25T06:55:50.145Z"
+        timestamp: '2026-06-01T14:31:03.887Z'
         transaction_id: 47305ad5-3a0c-45e6-8e4c-b693a02b87a6
-        message_id: 3372392d-716e-4e6e-90bc-321678aba9f4
+        message_id: f187309c-1fc7-4ee7-8920-6e59b29b05df
         bap_id: bap.example.com
-        bap_uri: https://bap.example.com
+        bap_uri: 'https://bap.example.com'
         ttl: PT30S
         bpp_id: bpp.example.com
-        bpp_uri: https://bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
         country: IND
-        city: "*"
+        city: '*'
         core_version: 1.2.5
       message:
         catalog:
           bpp/providers:
             - id: P1
               items:
-                - "@ondc/org/available_on_cod": false
-                  "@ondc/org/cancellable": true
-                  "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                  "@ondc/org/return_window": P7D
-                  "@ondc/org/returnable": true
-                  "@ondc/org/seller_pickup_return": true
-                  "@ondc/org/statutory_reqs_packaged_commodities":
-                    common_or_generic_name_of_commodity: Power Bank
-                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                    manufacturer_or_packer_name: Seller Business
-                    month_year_of_manufacture_packing_import: NA
-                  "@ondc/org/time_to_ship": P2D
-                  category_id: Power Bank
+                - id: I1
+                  time:
+                    label: enable
+                    timestamp: '2026-06-01T14:31:03.887Z'
+                  parent_item_id: ''
                   descriptor:
-                    code: 5:ESS45300
-                    images:
-                      - https://sellerNP.com/images/i1.png
-                    long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
                     name: Power Bank
-                    short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                    symbol: https://sellerNP.com/images/i1.png
-                  fulfillment_id: F1
-                  id: I1
-                  location_id: L1
-                  parent_item_id: ""
-                  price:
-                    currency: INR
-                    maximum_value: "2460"
-                    value: "2460"
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      A Power Bank is a portable charger designed to recharge
+                      your electronic devices when you're on the move. Ranging
+                      in size from slim, pocket-sized devices up to larger,
+                      higher-capacity Power Banks – they can be used to charge
+                      smartphones, tablets, earphones, smartwatches and other
+                      mobile devices.
+                    long_desc: >-
+                      A Power Bank is a portable charger designed to recharge
+                      your electronic devices when you're on the move. Ranging
+                      in size from slim, pocket-sized devices up to larger,
+                      higher-capacity Power Banks
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '5:ESS45300'
                   quantity:
-                    available:
-                      count: "99"
-                    maximum:
-                      count: "8"
                     unitized:
                       measure:
                         unit: unit
-                        value: "1"
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '8'
+                  price:
+                    currency: INR
+                    value: '2460'
+                    maximum_value: '2460'
+                  category_id: Power Bank
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Power Bank
+                    month_year_of_manufacture_packing_import: NA
                   tags:
                     - code: origin
                       list:
@@ -576,102 +655,42 @@ transaction_history:
                         - code: brand
                           value: Shiv Electricals
                         - code: weight
-                          value: "103"
+                          value: '103'
                         - code: model
-                          value: "2012"
+                          value: '2012'
                         - code: breadth
-                          value: "12.3"
+                          value: '12.3'
                         - code: length
-                          value: "10.2"
+                          value: '10.2'
                         - code: height
-                          value: "15.5"
-                  time:
-                    label: enable
-                    timestamp: "2026-05-25T06:55:50.145Z"
+                          value: '15.5'
     action: on_search
     saved_info: {}
   - action_id: on_search_inc_disable
     payload:
       context:
-        domain: ONDC:RET14
+        domain: 'ONDC:RET14'
         action: on_search
-        timestamp: "2026-05-25T06:55:55.480Z"
+        timestamp: '2026-06-01T14:31:08.609Z'
         transaction_id: 47305ad5-3a0c-45e6-8e4c-b693a02b87a6
-        message_id: af13ad5a-0534-4387-a555-c3c5cb1a1328
+        message_id: 630fefa5-6b09-4622-819b-b12d3bea5416
         bap_id: bap.example.com
-        bap_uri: https://bap.example.com
+        bap_uri: 'https://bap.example.com'
         ttl: PT30S
         bpp_id: bpp.example.com
-        bpp_uri: https://bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
         country: IND
-        city: "*"
+        city: '*'
         core_version: 1.2.5
       message:
         catalog:
           bpp/providers:
             - id: P1
-              items:
-                - "@ondc/org/available_on_cod": false
-                  "@ondc/org/cancellable": true
-                  "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                  "@ondc/org/return_window": P7D
-                  "@ondc/org/returnable": true
-                  "@ondc/org/seller_pickup_return": true
-                  "@ondc/org/statutory_reqs_packaged_commodities":
-                    common_or_generic_name_of_commodity: Power Bank
-                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                    manufacturer_or_packer_name: Seller Business
-                    month_year_of_manufacture_packing_import: NA
-                  "@ondc/org/time_to_ship": P2D
-                  category_id: Power Bank
-                  descriptor:
-                    code: 5:ESS45300
-                    images:
-                      - https://sellerNP.com/images/i1.png
-                    long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
-                    name: Power Bank
-                    short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                    symbol: https://sellerNP.com/images/i1.png
-                  fulfillment_id: F1
-                  id: I1
-                  location_id: L1
-                  parent_item_id: ""
-                  price:
-                    currency: INR
-                    maximum_value: "2460"
-                    value: "2460"
-                  quantity:
-                    available:
-                      count: "99"
-                    maximum:
-                      count: "8"
-                    unitized:
-                      measure:
-                        unit: unit
-                        value: "1"
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: brand
-                          value: Shiv Electricals
-                        - code: weight
-                          value: "103"
-                        - code: model
-                          value: "2012"
-                        - code: breadth
-                          value: "12.3"
-                        - code: length
-                          value: "10.2"
-                        - code: height
-                          value: "15.5"
-                  time:
-                    label: enable
-                    timestamp: "2026-05-25T06:55:55.480Z"
+              time:
+                label: disable
+                timestamp: '2026-06-01T14:31:08.609Z'
     action: on_search
     saved_info: {}
-validationLib: ""
-helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cgpjb25zdCBpc29EdXJUb1NlYyA9IGR1cmF0aW9uID0+IHsKCWNvbnN0IGR1clJFID0gL1AoKFxkKylZKT8oKFxkKylNKT8oKFxkKylXKT8oKFxkKylEKT9UPygoXGQrKUgpPygoXGQrKU0pPygoXGQrKVMpPy8KCgljb25zdCBzcGxpdFRpbWUgPSBkdXJSRS5leGVjKGR1cmF0aW9uKQoJaWYgKCFzcGxpdFRpbWUpIHsKCQlyZXR1cm4gMAoJfQoKCWNvbnN0IHllYXJzID0gTnVtYmVyKHNwbGl0VGltZT8uWzJdKSB8fCAwCgljb25zdCBtb250aHMgPSBOdW1iZXIoc3BsaXRUaW1lPy5bNF0pIHx8IDAKCWNvbnN0IHdlZWtzID0gTnVtYmVyKHNwbGl0VGltZT8uWzZdKSB8fCAwCgljb25zdCBkYXlzID0gTnVtYmVyKHNwbGl0VGltZT8uWzhdKSB8fCAwCgljb25zdCBob3VycyA9IE51bWJlcihzcGxpdFRpbWU/LlsxMF0pIHx8IDAKCWNvbnN0IG1pbnV0ZXMgPSBOdW1iZXIoc3BsaXRUaW1lPy5bMTJdKSB8fCAwCgljb25zdCBzZWNvbmRzID0gTnVtYmVyKHNwbGl0VGltZT8uWzE0XSkgfHwgMAoKCWNvbnN0IHJlc3VsdCA9CgkJeWVhcnMgKiAzMTUzNjAwMCArCgkJbW9udGhzICogMjYyODI4OCArCgkJd2Vla3MgKiA2MDQ4MDAgKwoJCWRheXMgKiA4NjQwMCArCgkJaG91cnMgKiAzNjAwICsKCQltaW51dGVzICogNjAgKwoJCXNlY29uZHMKCglyZXR1cm4gcmVzdWx0Cn0KCmZ1bmN0aW9uIGdldFJhbmRvbUl0ZW0oaXRlbXMpIHsKCWlmIChpdGVtcy5sZW5ndGggPT09IDApIHsKCQlyZXR1cm4gdW5kZWZpbmVkCgl9Cgljb25zdCByYW5kb21JbmRleCA9IE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIGl0ZW1zLmxlbmd0aCkKCXJldHVybiBpdGVtc1tyYW5kb21JbmRleF0KfQoKZnVuY3Rpb24gdXBkYXRlVGltZXN0YW1wcyhvYmopIHsKCWNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkKCglmdW5jdGlvbiByZWN1cnNpdmVVcGRhdGUoY3VycmVudCkgewoJCWlmICh0eXBlb2YgY3VycmVudCAhPT0gIm9iamVjdCIgfHwgY3VycmVudCA9PT0gbnVsbCkgewoJCQlyZXR1cm4KCQl9CgoJCWZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKCQkJaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKCQkJCWN1cnJlbnRba2V5XSA9IGN1cnJlbnRUaW1lc3RhbXAKCQkJfSBlbHNlIGlmICh0eXBlb2YgY3VycmVudFtrZXldID09PSAib2JqZWN0IikgewoJCQkJcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSkKCQkJfQoJCX0KCX0KCglyZWN1cnNpdmVVcGRhdGUob2JqKQoJcmV0dXJuIG9iagp9Cgo=
+validationLib: ''
+helperLib: >-
+  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cgpjb25zdCBpc29EdXJUb1NlYyA9IGR1cmF0aW9uID0+IHsKCWNvbnN0IGR1clJFID0gL1AoKFxkKylZKT8oKFxkKylNKT8oKFxkKylXKT8oKFxkKylEKT9UPygoXGQrKUgpPygoXGQrKU0pPygoXGQrKVMpPy8KCgljb25zdCBzcGxpdFRpbWUgPSBkdXJSRS5leGVjKGR1cmF0aW9uKQoJaWYgKCFzcGxpdFRpbWUpIHsKCQlyZXR1cm4gMAoJfQoKCWNvbnN0IHllYXJzID0gTnVtYmVyKHNwbGl0VGltZT8uWzJdKSB8fCAwCgljb25zdCBtb250aHMgPSBOdW1iZXIoc3BsaXRUaW1lPy5bNF0pIHx8IDAKCWNvbnN0IHdlZWtzID0gTnVtYmVyKHNwbGl0VGltZT8uWzZdKSB8fCAwCgljb25zdCBkYXlzID0gTnVtYmVyKHNwbGl0VGltZT8uWzhdKSB8fCAwCgljb25zdCBob3VycyA9IE51bWJlcihzcGxpdFRpbWU/LlsxMF0pIHx8IDAKCWNvbnN0IG1pbnV0ZXMgPSBOdW1iZXIoc3BsaXRUaW1lPy5bMTJdKSB8fCAwCgljb25zdCBzZWNvbmRzID0gTnVtYmVyKHNwbGl0VGltZT8uWzE0XSkgfHwgMAoKCWNvbnN0IHJlc3VsdCA9CgkJeWVhcnMgKiAzMTUzNjAwMCArCgkJbW9udGhzICogMjYyODI4OCArCgkJd2Vla3MgKiA2MDQ4MDAgKwoJCWRheXMgKiA4NjQwMCArCgkJaG91cnMgKiAzNjAwICsKCQltaW51dGVzICogNjAgKwoJCXNlY29uZHMKCglyZXR1cm4gcmVzdWx0Cn0KCmZ1bmN0aW9uIGdldFJhbmRvbUl0ZW0oaXRlbXMpIHsKCWlmIChpdGVtcy5sZW5ndGggPT09IDApIHsKCQlyZXR1cm4gdW5kZWZpbmVkCgl9Cgljb25zdCByYW5kb21JbmRleCA9IE1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIGl0ZW1zLmxlbmd0aCkKCXJldHVybiBpdGVtc1tyYW5kb21JbmRleF0KfQoKZnVuY3Rpb24gdXBkYXRlVGltZXN0YW1wcyhvYmopIHsKCWNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCkKCglmdW5jdGlvbiByZWN1cnNpdmVVcGRhdGUoY3VycmVudCkgewoJCWlmICh0eXBlb2YgY3VycmVudCAhPT0gIm9iamVjdCIgfHwgY3VycmVudCA9PT0gbnVsbCkgewoJCQlyZXR1cm4KCQl9CgoJCWZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKCQkJaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKCQkJCWN1cnJlbnRba2V5XSA9IGN1cnJlbnRUaW1lc3RhbXAKCQkJfSBlbHNlIGlmICh0eXBlb2YgY3VycmVudFtrZXldID09PSAib2JqZWN0IikgewoJCQkJcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSkKCQkJfQoJCX0KCX0KCglyZWN1cnNpdmVVcGRhdGUob2JqKQoJcmV0dXJuIG9iagp9Cgo=
