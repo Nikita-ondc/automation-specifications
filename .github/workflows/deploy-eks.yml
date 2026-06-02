@@ -6,7 +6,7 @@ name: Build and Deploy ONIX Service
 on:
   push:
     branches:
-      - "draft-*"
+      - "release-*"
 
   workflow_dispatch:
     inputs:
