@@ -78,9 +78,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: search
-            timestamp: 2026-06-02T09:08:44.178Z
+            timestamp: 2026-06-02T10:50:53.988Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 47f5e2ce-a63c-4b55-b090-79d33f9d76ca
+            message_id: ca9747e6-6edb-4feb-a4f7-a13ee8fe83ad
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -456,9 +456,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_search
-            timestamp: 2026-06-02T09:08:44.197Z
+            timestamp: 2026-06-02T10:50:54.017Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 47f5e2ce-a63c-4b55-b090-79d33f9d76ca
+            message_id: ca9747e6-6edb-4feb-a4f7-a13ee8fe83ad
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -475,7 +475,7 @@ steps:
               descriptor:
                 name: ICICI Bank
               providers:
-                - id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                - id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                   descriptor:
                     images:
                       - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -484,33 +484,33 @@ steps:
                     short_desc: ICICI Bank Ltd
                     long_desc: ICICI Bank Ltd, India.
                   categories:
-                    - id: cat_loan_e68aa4af-504c-46e7-8d41-7edc098b04d9
+                    - id: cat_loan_54512df9-de37-4278-9b7b-9296bc289400
                       descriptor:
                         code: LOAN
                         name: Loan
-                    - id: cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                      parent_category_id: cat_loan_e68aa4af-504c-46e7-8d41-7edc098b04d9
+                    - id: cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                      parent_category_id: cat_loan_54512df9-de37-4278-9b7b-9296bc289400
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan
-                    - id: cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
-                      parent_category_id: cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
+                    - id: cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
+                      parent_category_id: cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
                       descriptor:
                         code: BUREAU_LOAN
                         name: Bureau Loan
-                    - id: cat_pre_qualifier_b0c61a7a-8616-433f-86be-02f20d431f10
-                      parent_category_id: cat_loan_e68aa4af-504c-46e7-8d41-7edc098b04d9
+                    - id: cat_pre_qualifier_41154955-dac8-45b8-a1f0-332ce1857441
+                      parent_category_id: cat_loan_54512df9-de37-4278-9b7b-9296bc289400
                       descriptor:
                         code: PRE_QUALIFIER
                         name: Pre Qualifier
                   items:
-                    - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                    - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan without AA - Offline Journey
                       category_ids:
-                        - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                        - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                        - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                        - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                       fulfillment_ids:
                         - F1
                       tags:
@@ -560,19 +560,19 @@ steps:
                           headings:
                             - PERSONAL_INFORMATION
                         form:
-                          id: form_f1422215-e36b-4626-8ca9-a66caa493b4b
+                          id: form_e7364014-a79f-48f1-9d20-d8e05db4d7fc
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: bureau_personal_loan_68bbbb51-7bd8-4796-8b18-4651c720ae02
+                    - id: bureau_personal_loan_fcb0f0bc-8ae2-40df-8ff3-621d6eadafe3
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan without AA - Single Redirection
                       category_ids:
-                        - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                        - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                        - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                        - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                       fulfillment_ids:
                         - F2
                       tags:
@@ -622,18 +622,18 @@ steps:
                           headings:
                             - PERSONAL_INFORMATION
                         form:
-                          id: form_f1422215-e36b-4626-8ca9-a66caa493b4b
+                          id: form_e7364014-a79f-48f1-9d20-d8e05db4d7fc
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: personal_loan_797ced06-cc27-4d7f-9426-05b82569ac55
+                    - id: personal_loan_61b8599a-8c66-4894-adee-eee315db62d9
                       descriptor:
                         code: PRE_QUALIFIER
                         name: Pre Qualifier
                       category_ids:
-                        - cat_pre_qualifier_b0c61a7a-8616-433f-86be-02f20d431f10
+                        - cat_pre_qualifier_41154955-dac8-45b8-a1f0-332ce1857441
                       fulfillment_ids:
                         - F3
                   fulfillments:
@@ -802,23 +802,22 @@ steps:
           panName: Jyoti Sharma
           personalemail: jyoti.sharma@thewitslab.com
           officialemail: jyoti.sharma@thewitslab.com
-          dob: 2026-06-24
+          dob: 2026-06-08
           gender: female
           pan: BAJPC4350M
-          contactNumber: "6284870148"
-          employmentType: salaried
+          contactNumber: "6284770148"
+          employmentType: selfEmployed
           income: "78"
           companyName: wits
-          udyamNumber: "69779"
+          udyamNumber: ""
           addressL1: hlkjlkj
           addressL2: hkkhll
           city: delhi
           state: Delhi
           pincode: "160103"
           aa_id: ""
-          endUse: travel
+          endUse: health
           derivedData: {}
-          bureauConsent: on
           formId: FO1
         type: request
         description: The BPP sends an HTML form to the BAP to collect offline personal
@@ -891,9 +890,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: select
-            timestamp: 2026-06-02T09:09:00.869Z
+            timestamp: 2026-06-02T10:51:18.377Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 802d645a-94be-4b0c-be4f-ea3ca9a9d7ae
+            message_id: 44e411d4-0600-4709-bd67-41cfb8231cbf
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -908,18 +907,18 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   xinput:
                     form:
-                      id: form_f1422215-e36b-4626-8ca9-a66caa493b4b
+                      id: form_e7364014-a79f-48f1-9d20-d8e05db4d7fc
                     form_response:
                       status: SUCCESS
-                      submission_id: 96c41498-af1f-4c11-950b-746adc3cafbf
+                      submission_id: 83092d5d-ee26-49b8-a978-c94870dca2ff
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
         type: request
@@ -1260,9 +1259,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_select
-            timestamp: 2026-06-02T09:09:00.895Z
+            timestamp: 2026-06-02T10:51:18.409Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 802d645a-94be-4b0c-be4f-ea3ca9a9d7ae
+            message_id: 44e411d4-0600-4709-bd67-41cfb8231cbf
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1277,7 +1276,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -1345,13 +1344,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -1459,7 +1458,7 @@ steps:
                       headings:
                         - JOURNEY_OFFLINE
                     form:
-                      id: ekyc_details_2afc9461-2b5d-4b37-9741-0f7f46cec524
+                      id: ekyc_details_7211e505-30cb-424b-b26b-eed1c4d944cb
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                       resubmit: false
@@ -1901,9 +1900,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:03.746Z
+            timestamp: 2026-06-02T10:51:22.274Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 59e77365-0a32-4789-9da9-f3e9af09bd95
+            message_id: b63eb6e8-2720-4ee2-8135-3cc595ddf2f7
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1918,7 +1917,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -1986,13 +1985,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -2091,7 +2090,7 @@ steps:
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_2afc9461-2b5d-4b37-9741-0f7f46cec524
+                      id: ekyc_details_7211e505-30cb-424b-b26b-eed1c4d944cb
                     form_response:
                       status: OFFLINE_PENDING
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -2237,9 +2236,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: status
-            timestamp: 2026-06-02T09:09:03.770Z
+            timestamp: 2026-06-02T10:51:22.302Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 8ffe609d-8626-4073-b4ef-0e89c386e9f1
+            message_id: 79fa9875-b660-4558-9ffd-e6b4d29d813b
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2582,9 +2581,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:03.799Z
+            timestamp: 2026-06-02T10:51:22.332Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 8ffe609d-8626-4073-b4ef-0e89c386e9f1
+            message_id: 79fa9875-b660-4558-9ffd-e6b4d29d813b
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2599,7 +2598,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -2667,13 +2666,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -2772,7 +2771,7 @@ steps:
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_2afc9461-2b5d-4b37-9741-0f7f46cec524
+                      id: ekyc_details_7211e505-30cb-424b-b26b-eed1c4d944cb
                     form_response:
                       status: OFFLINE_PENDING
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -3185,9 +3184,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:03.834Z
+            timestamp: 2026-06-02T10:51:22.375Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 656117c7-e17e-489a-b055-2c9fe5ef53ad
+            message_id: e3cc89d9-ca09-4bd7-aba3-8dea38c5de01
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3202,7 +3201,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -3270,13 +3269,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -3375,7 +3374,7 @@ steps:
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_2afc9461-2b5d-4b37-9741-0f7f46cec524
+                      id: ekyc_details_7211e505-30cb-424b-b26b-eed1c4d944cb
                     form_response:
                       status: COMPLETED
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -3533,9 +3532,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: confirm
-            timestamp: 2026-06-02T09:09:03.864Z
+            timestamp: 2026-06-02T10:51:22.409Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 6a520e12-0d72-4825-acf1-56278b847f04
+            message_id: 088f7368-ba9e-4e8b-bd4d-777e95b773bb
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3550,12 +3549,12 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   xinput:
                     form:
-                      id: ekyc_details_2afc9461-2b5d-4b37-9741-0f7f46cec524
+                      id: ekyc_details_7211e505-30cb-424b-b26b-eed1c4d944cb
                     form_response:
                       status: SUCCESS
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -3979,9 +3978,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_confirm
-            timestamp: 2026-06-02T09:09:03.891Z
+            timestamp: 2026-06-02T10:51:22.445Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 6a520e12-0d72-4825-acf1-56278b847f04
+            message_id: 088f7368-ba9e-4e8b-bd4d-777e95b773bb
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3995,10 +3994,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780391343896_DEFAULT
+              id: LOAN_ORDER_1780397482453_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -4066,13 +4065,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -4257,7 +4256,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-02T09:09:03.896Z
+                    timestamp: 2026-06-02T10:51:22.453Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -4353,8 +4352,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-06-02T09:09:03.896Z
-              updated_at: 2026-06-02T09:09:03.896Z
+              created_at: 2026-06-02T10:51:22.453Z
+              updated_at: 2026-06-02T10:51:22.453Z
         type: request
         description: The BPP confirms the loan booking in its core banking system and
           provides the official Loan Account ID, remittance values, and
@@ -4770,9 +4769,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:03.923Z
+            timestamp: 2026-06-02T10:51:22.482Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 84a4d1c1-36dd-4a20-8237-0640c1b02931
+            message_id: 84555f33-4b15-4c7b-b604-3cab0ee2546c
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4786,10 +4785,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780391343896_DEFAULT
+              id: LOAN_ORDER_1780397482453_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -4857,13 +4856,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -5048,7 +5047,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-02T09:09:03.928Z
+                    timestamp: 2026-06-02T10:51:22.489Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -5144,8 +5143,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-06-02T09:09:03.896Z
-              updated_at: 2026-06-02T09:09:03.928Z
+              created_at: 2026-06-02T10:51:22.453Z
+              updated_at: 2026-06-02T10:51:22.490Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, conveying either a
@@ -5562,9 +5561,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:03.956Z
+            timestamp: 2026-06-02T10:51:22.519Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 83211bef-41f2-41fa-8f04-d761be7fc796
+            message_id: 977877db-f7d6-47ed-93c6-b1774edd112e
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5578,10 +5577,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780391343896_DEFAULT
+              id: LOAN_ORDER_1780397482453_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -5649,13 +5648,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -5840,7 +5839,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-02T09:09:03.960Z
+                    timestamp: 2026-06-02T10:51:22.527Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -5936,8 +5935,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-06-02T09:09:03.896Z
-              updated_at: 2026-06-02T09:09:03.960Z
+              created_at: 2026-06-02T10:51:22.453Z
+              updated_at: 2026-06-02T10:51:22.527Z
         type: request
         description: The BPP sends an unsolicited on_status callback to inform the BAP
           about the current state of the personal loan application, including
@@ -6354,9 +6353,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:03.988Z
+            timestamp: 2026-06-02T10:51:22.559Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 44e155ef-8d68-4b71-9199-bd2246f13775
+            message_id: 09030732-6f4b-4607-9d29-e8e1a9bca6a1
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -6370,10 +6369,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780391343896_DEFAULT
+              id: LOAN_ORDER_1780397482453_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -6441,13 +6440,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -6632,7 +6631,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-02T09:09:03.993Z
+                    timestamp: 2026-06-02T10:51:22.566Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -6728,8 +6727,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-06-02T09:09:03.896Z
-              updated_at: 2026-06-02T09:09:03.993Z
+              created_at: 2026-06-02T10:51:22.453Z
+              updated_at: 2026-06-02T10:51:22.566Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, reflecting either
@@ -7148,9 +7147,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:04.037Z
+            timestamp: 2026-06-02T10:51:22.605Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 1d16b3bc-dc9c-46db-b0d3-053996511470
+            message_id: 600d0e3c-f0e8-4d2e-a848-78b1479e8c15
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -7164,10 +7163,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780391343896_DEFAULT
+              id: LOAN_ORDER_1780397482453_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -7235,13 +7234,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -7426,7 +7425,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-02T09:09:04.042Z
+                    timestamp: 2026-06-02T10:51:22.610Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -7522,8 +7521,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-06-02T09:09:03.896Z
-              updated_at: 2026-06-02T09:09:04.042Z
+              created_at: 2026-06-02T10:51:22.453Z
+              updated_at: 2026-06-02T10:51:22.611Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, reflecting either
@@ -7940,9 +7939,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-02T09:09:04.097Z
+            timestamp: 2026-06-02T10:51:22.669Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: bb66f2b4-498b-4504-b07e-2d079b497ef1
+            message_id: 3c4ecb41-d184-4b58-9e4a-bf4f691d5e22
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -7956,10 +7955,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780391343896_DEFAULT
+              id: LOAN_ORDER_1780397482453_DEFAULT
               status: COMPLETED
               provider:
-                id: personal_loan_provider_352a4a61-9c74-4a27-bf12-7a150f194e06
+                id: personal_loan_provider_eaa30235-438f-43fe-94cd-02661497d979
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -8027,13 +8026,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_eaf1d3f3-c664-413c-a641-32ce2aa0afb3
+                - id: bureau_personal_loan_a6ee82cd-d8b1-462a-9b68-169e7ba67cfe
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_b3eaa1ad-317e-4109-8549-66282e6ef314
-                    - cat_bureau_loan_bf7e7e38-1604-43bf-b1c2-37f7e6d92458
+                    - cat_personal_loan_ca34d4ad-7832-4cbd-a182-d59eb6ab2188
+                    - cat_bureau_loan_2cb97153-8c76-40af-bb19-7faf90b2194d
                   fulfillment_ids:
                     - F1
                   price:
@@ -8218,7 +8217,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-02T09:09:04.101Z
+                    timestamp: 2026-06-02T10:51:22.675Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -8314,8 +8313,8 @@ steps:
                       obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
-              created_at: 2026-06-02T09:09:03.896Z
-              updated_at: 2026-06-02T09:09:04.101Z
+              created_at: 2026-06-02T10:51:22.453Z
+              updated_at: 2026-06-02T10:51:22.675Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, reflecting either
