@@ -1,7 +1,7 @@
 meta:
   domain: ONDC:RET12
   version: 1.2.5
-  flowId: Delivery_Flow
+  flowId: Delivery_Flow_With_IGM_Rejection(v-2.0.0)
   config_version: 0.0.0001
   description: Buyer Search For Full Catalog Refresh and Incremental Changes
   use_case_id: FASHION
