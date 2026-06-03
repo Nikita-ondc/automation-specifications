@@ -21,7 +21,7 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZGVsZXRlIGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LmJwcF91cmkKICBkZWxldGUgZXhpc3RpbmdQYXlsb2FkLmNvbnRleHQuYnBwX2lkCiAgbGV0IGNvZGVzQXJyYXkgPSBzZXNzaW9uRGF0YT8udXNlcl9pbnB1dHM/LmZlYXR1cmVfZGlzY292ZXJ5IHx8IFtdCiAgY29uc3QgdGFncyA9IGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzCiAgaWYgKGNvZGVzQXJyYXkubGVuZ3RoID4gMCkKICAgIHRhZ3MucHVzaCh7CiAgICAgIGNvZGU6ICJiYXBfZmVhdHVyZXMiLAogICAgICBsaXN0OiBbCiAgICAgICAgLi4uY29kZXNBcnJheS5tYXAoY29kZSA9PiB7CiAgICAgICAgICByZXR1cm4gewogICAgICAgICAgICBjb2RlOiBjb2RlLAogICAgICAgICAgICB2YWx1ZTogInllcyIKICAgICAgICAgIH0KICAgICAgICB9KQogICAgICBdCiAgICB9KQogIHJldHVybiBleGlzdGluZ1BheWxvYWQKfQo=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -63,43 +63,130 @@ steps:
         bppUri: $.context.bpp_uri
         city_code: $.context.city
       inputs:
-        oldInputs:
-          - name: city_code
-            label: Enter the city code
-            type: text
-            payloadField: $.context.city
-          - name: feature_discovery
-            label: Features supported
-            type: checkbox
-            options:
-              - code: "006"
-                name: Return with pickup
-              - code: 00B
-                name: Replacement flow
-              - code: "012"
-                name: Cash on delivery (COD) order
-              - code: "017"
-                name: Seller Creds
-              - code: 01D
-                name: Option for multi-fulfillment order
-        id: old_inputs
+        id: ExampleInputId
+        jsonSchema:
+          $schema: http://json-schema.org/draft-07/schema#
+          type: object
+          properties:
+            city_code:
+              type: string
+              description: Enter the city code
+              minLength: 1
+            feature_discovery:
+              type: array
+              title: Features supported
+              uniqueItems: true
+              items:
+                type: string
+                oneOf:
+                  - const: "001"
+                    title: Item availability (001)
+                  - const: "002"
+                    title: Self-Pickup (002)
+                  - const: "003"
+                    title: Slotted delivery (003)
+                  - const: "004"
+                    title: Fulfillment by BNP (004)
+                  - const: "005"
+                    title: Force cancellation (005)
+                  - const: "006"
+                    title: Return with pickup (006)
+                  - const: "007"
+                    title: SNP collecting payment (007)
+                  - const: "008"
+                    title: Minimum order value (008)
+                  - const: "0091"
+                    title: Offer (discount) (0091)
+                  - const: "0092"
+                    title: Offer (buyXgetY) (0092)
+                  - const: "0093"
+                    title: Offer (freebie) (0093)
+                  - const: "0094"
+                    title: Offer (slab) (0094)
+                  - const: "0095"
+                    title: Offer (combo) (0095)
+                  - const: "0096"
+                    title: Offer (delivery) (0096)
+                  - const: "0097"
+                    title: Offer (exchange) (0097)
+                  - const: "0098"
+                    title: Offer (financing) (0098)
+                  - const: "0099"
+                    title: Purchase Finance by BNP (0099)
+                  - const: 00A
+                    title: Commercial model for BNP/SNP (00A)
+                  - const: 00B
+                    title: Replacement flow (00B)
+                  - const: 00C
+                    title: Exchange flow (00C)
+                  - const: 00D
+                    title: Cancel Return Request (00D)
+                  - const: 00E
+                    title: Update sale invoice (00E)
+                  - const: 00F
+                    title: Update delivery address (00F)
+                  - const: "010"
+                    title: Update delivery authorization (010)
+                  - const: "011"
+                    title: Buyer instructions (011)
+                  - const: "012"
+                    title: Cash on delivery (COD) order (012)
+                  - const: "013"
+                    title: Order price adjustment, not tied to return or cancel (013)
+                  - const: "014"
+                    title: Cross-category order flow (014)
+                  - const: "015"
+                    title: Breakup of fulfillment level taxes in quote (015)
+                  - const: "016"
+                    title: Customization of input type text (016)
+                  - const: "017"
+                    title: Seller Creds (017)
+                  - const: "018"
+                    title: Cross-linking make-to-order item in quote_trail (018)
+                  - const: "019"
+                    title: Streamline fulfillment attributes for hyperlocal (019)
+                  - const: 01A
+                    title: Item unitized count (01A)
+                  - const: 01B
+                    title: Minimum item quantity (01B)
+                  - const: 01C
+                    title: Identification of on-network LSP (01C)
+                  - const: 01D
+                    title: Option for multi-fulfillment order (01D)
+                  - const: 01E
+                    title: Cancellation terms (01E)
+                  - const: 01F
+                    title: Codified static terms (01F)
+                  - const: "020"
+                    title: Fulfillment delay (020)
+                  - const: "021"
+                    title: Catalog as download link (021)
+                  - const: "022"
+                    title: BNP promotions planned (022)
+                  - const: "023"
+                    title: Full catalog refresh (search by item) (023)
+                  - const: "024"
+                    title: Full catalog refresh (search by fulfillment end location) (024)
+                  - const: "025"
+                    title: BNP demand signals (025)
+          required:
+            - city_code
+          additionalProperties: false
     examples:
-      - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
-          "Discovery_Flow_full_catalog"
+      - name: example for search
         payload:
           context:
-            action: search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer
-            city: "0487"
-            core_version: 1.2.5
-            country: IND
             domain: ONDC:RET12
-            message_id: bfd9b0bd-f345-49fc-8aac-19e373fae370
-            timestamp: 2026-03-22T10:37:35.461Z
-            transaction_id: d0c422cf-b2d0-46a9-b2d4-b46b11427212
+            action: search
+            timestamp: 2026-05-29T10:19:56.910Z
+            transaction_id: 496b9719-40cf-4eb3-883f-33abfa2d45d9
+            message_id: 0eff80f5-217f-4c58-bb34-48d0f726d363
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
             ttl: PT30S
+            country: IND
+            city: "*"
+            core_version: 1.2.5
           message:
             intent:
               fulfillment:
@@ -116,7 +203,12 @@ steps:
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: effective_date
                       value: 2025-02-01T00:00:00.000Z
+                - code: bap_features
+                  list:
+                    - code: "023"
+                      value: yes
         type: request
+        description: please add relevant description
   - api: on_search
     action_id: on_search
     owner: BPP
@@ -124,7 +216,7 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgY29uc3QgcHJvdmlkZXJzID0gZXhpc3RpbmdQYXlsb2FkPy5tZXNzYWdlLmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdCgogIHNlc3Npb25EYXRhLmJhcF9mZWF0dXJlcz8uZm9yRWFjaChmZWF0dXJlID0+IHsKICAgIGNvbnNvbGUubG9nKGBGZWF0dXJlOiAke2ZlYXR1cmV9YCkKICB9KQogIGlmIChzZXNzaW9uRGF0YS5iYXBfZmVhdHVyZXM/LmluY2x1ZGVzKCIwMEIiKSkgewogICAgY29uc3QgcmVwbGFjZW1lbnRfdGVybXMgPSBbCiAgICAgIHsKICAgICAgICByZXBsYWNlX3dpdGhpbjogewogICAgICAgICAgZHVyYXRpb246ICJQOUQiCiAgICAgICAgfQogICAgICB9CiAgICBdCiAgICBwcm92aWRlcnMuZm9yRWFjaChwcm92aWRlciA9PiB7CiAgICAgIGNvbnN0IGl0ZW1zID0gcHJvdmlkZXI/Lml0ZW1zCiAgICAgIGl0ZW1zLmZvckVhY2goaXRlbSA9PiB7CiAgICAgICAgaXRlbS5yZXBsYWNlbWVudF90ZXJtcyA9IHJlcGxhY2VtZW50X3Rlcm1zCiAgICAgIH0pCiAgICB9KQogIH0KCiAgaWYgKHNlc3Npb25EYXRhLmJhcF9mZWF0dXJlcz8uaW5jbHVkZXMoIjAxNyIpKSB7CiAgICBjb25zdCBleGlzdGluZ1RpbWVzdGFtcCA9IG5ldyBEYXRlKGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LnRpbWVzdGFtcCkKICAgIGNvbnN0IG5ld1RpbWVzdGFtcCA9IG5ldyBEYXRlKAogICAgICBleGlzdGluZ1RpbWVzdGFtcC5nZXRUaW1lKCkgKyAyNCAqIDYwICogNjAgKiAxMDAwCiAgICApCiAgICBjb25zdCB0b1RpbWVzdGFtcCA9IG5ld1RpbWVzdGFtcC50b0lTT1N0cmluZygpCiAgICBjb25zdCBjcmVkcyA9IFsKICAgICAgewogICAgICAgIGlkOiAiOWYzYzJlMzItNmQxZi00YTQyLTllOWUtODhiNGU5YmJhYTEwIiwKICAgICAgICBkZXNjcmlwdG9yOiB7CiAgICAgICAgICBjb2RlOiAiU29jaWFsIFNlY3RvciIsCiAgICAgICAgICBzaG9ydF9kZXNjOiAiR0kiCiAgICAgICAgfSwKICAgICAgICB1cmw6ICJodHRwczovL21vY2suY2RuLmNvbS9pbWFnZXMvYmFkZ2UtaW1nIiwKICAgICAgICB0YWdzOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgIGNvZGU6ICJ2ZXJpZmljYXRpb24iLAogICAgICAgICAgICBsaXN0OiBbCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogInZlcmlmeV91cmwiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJodHRwczovL21vY2suZ2kuY29tL3ZlcmlmeT9pZD1naS0xMjM0NTY3OCciCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAidmVyaWZpZXIiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJDU1AtQUJDIgogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogImlzc3VlciIsCiAgICAgICAgICAgICAgICB2YWx1ZTogIkV4YW1wbGUgQXV0aG9yaXR5IgogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogInZhbGlkX2Zyb20iLAogICAgICAgICAgICAgICAgdmFsdWU6IGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LnRpbWVzdGFtcAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogInZhbGlkX3RvIiwKICAgICAgICAgICAgICAgIHZhbHVlOiB0b1RpbWVzdGFtcAogICAgICAgICAgICAgIH0KICAgICAgICAgICAgXQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgXQogICAgcHJvdmlkZXJzLmZvckVhY2gocHJvdmlkZXIgPT4gewogICAgICBwcm92aWRlci5jcmVkcyA9IGNyZWRzCiAgICB9KQogIH0KCiAgZXhpc3RpbmdQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICJzdGQ6MDgwIgogIHJldHVybiBleGlzdGluZ1BheWxvYWQKfQo=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -285,23 +377,22 @@ steps:
         city_code: $.context.city
       inputs: {}
     examples:
-      - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
-          "Discovery_Flow_full_catalog"
+      - name: example for on_search
         payload:
           context:
-            action: on_search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET12/1.2.5/buyer
-            bpp_id: api.rvjgarments.in
-            bpp_uri: https://api.rvjgarments.in
-            city: std:0487
-            core_version: 1.2.5
-            country: IND
             domain: ONDC:RET12
-            message_id: bfd9b0bd-f345-49fc-8aac-19e373fae370
-            timestamp: 2026-03-22T10:37:35.523Z
-            transaction_id: d0c422cf-b2d0-46a9-b2d4-b46b11427212
+            action: on_search
+            timestamp: 2026-05-29T10:19:56.919Z
+            transaction_id: 496b9719-40cf-4eb3-883f-33abfa2d45d9
+            message_id: 0eff80f5-217f-4c58-bb34-48d0f726d363
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: bpp.example.com
+            bpp_uri: https://bpp.example.com
+            country: IND
+            city: std:080
+            core_version: 1.2.5
           message:
             catalog:
               bpp/descriptor:
@@ -436,6 +527,7 @@ steps:
                     timestamp: 2024-03-22T09:15:00.000Z
                   ttl: P1D
         type: request
+        description: please add relevant description
 transaction_history: []
 validationLib: ""
-helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
+helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiBnZXRVcGRhdGVkQmlsbGluZyhzYXZlZEJpbGxpbmcsIGluaXRpYWxpemUgPSBmYWxzZSkgewoJaWYgKGluaXRpYWxpemUpIHsKCQljb25zdCBuZXdJc28gPSBuZXcgRGF0ZShuZXcgRGF0ZSgpLmdldFRpbWUoKSAtIDUgKiAxMDAwKS50b0lTT1N0cmluZygpOwoJCXNhdmVkQmlsbGluZy5jcmVhdGVkX2F0ID0gbmV3SXNvOwoJCXNhdmVkQmlsbGluZy51cGRhdGVkX2F0ID0gbmV3SXNvOwoJfQoJcmV0dXJuIHNhdmVkQmlsbGluZzsKfQ==
