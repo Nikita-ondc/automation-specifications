@@ -76,3 +76,11 @@ flows:
     description: Discovery Flow (Incremental Catalog) for BPC
     config:
       $ref: ./BPC/Search_and_Custom_Menu__Incremental_Push_.yaml
+  - type: playground
+    id: Discovery_Flow_incremental_catalog_refresh_pull
+    usecase: BPC
+    tags:
+      - WORKBENCH
+    description: Discovery Flow Incremental Catalog Refresh Pull
+    config:
+      $ref: ./BPC/Discovery_Flow_incremental_catalog_refresh_pull.yaml

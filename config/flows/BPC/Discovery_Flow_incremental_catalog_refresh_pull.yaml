@@ -1,0 +1,752 @@
+meta:
+  domain: 'ONDC:RET13'
+  version: 1.2.0
+  flowId: Discovery_Flow_incremental_catalog_refresh_pull
+  config_version: 0.0.0001
+  description: Buyer Search & Quotation
+  use_case_id: BPC
+  flowName: Discovery Flow incremental catalog refresh pull
+transaction_data:
+  transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
+  latest_timestamp: '1970-01-01T00:00:00.000Z'
+  bap_id: bap.example.com
+  bap_uri: 'https://bap.example.com'
+  bpp_id: bpp.example.com
+  bpp_uri: 'https://bpp.example.com'
+steps:
+  - api: search
+    action_id: search_inc
+    owner: BAP
+    responseFor: null
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAJZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaTsKCWRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJjb250ZXh0IGlzIG1pc3NpbmciLAogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzPy5bMF0/Lmxpc3Q/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAibWVzc2FnZS5pbnRlbnQudGFnc1swXS5saXN0WzBdIGlzIG1pc3NpbmciLAogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          action: search
+          bap_id: dev-automation.ondc.org
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer'
+          city: '*'
+          core_version: 1.2.0
+          country: IND
+          domain: 'ONDC:RET13'
+          message_id: 32bf1659-0da3-45be-8751-bb25020ba2d6
+          timestamp: '2026-03-20T12:42:13.448Z'
+          transaction_id: 7bb1d932-b12c-4a76-a656-635b078fb8f0
+          ttl: PT30S
+        message:
+          intent:
+            payment:
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3'
+            tags:
+              - code: catalog_inc
+                list:
+                  - code: mode
+                    value: start
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        inc_mode: >-
+          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
+        bap_features: >-
+          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
+      inputs: {}
+    examples:
+      - name: Example for action "search"
+        description: >-
+          Auto-generated example for action "search" in flow
+          "Discovery_Flow_incremental_catalog"
+        payload:
+          context:
+            action: search
+            bap_id: dev-automation.ondc.org
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer'
+            city: '*'
+            core_version: 1.2.0
+            country: IND
+            domain: 'ONDC:RET13'
+            message_id: 32bf1659-0da3-45be-8751-bb25020ba2d6
+            timestamp: '2026-03-20T12:42:13.448Z'
+            transaction_id: 7bb1d932-b12c-4a76-a656-635b078fb8f0
+            ttl: PT30S
+          message:
+            intent:
+              payment:
+                '@ondc/org/buyer_app_finder_fee_amount': '3'
+                '@ondc/org/buyer_app_finder_fee_type': percent
+              tags:
+                - code: catalog_inc
+                  list:
+                    - code: mode
+                      value: start
+        type: request
+  - api: on_search
+    action_id: on_search_inc
+    owner: BPP
+    responseFor: null
+    unsolicited: true
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAJZGVmYXVsdFBheWxvYWQgPSB1cGRhdGVUaW1lc3RhbXBzKGRlZmF1bHRQYXlsb2FkKTsKCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          action: on_search
+          bap_id: dev-automation.ondc.org
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer'
+          bpp_id: dev-automation.ondc.org
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/seller'
+          city: '*'
+          core_version: 1.2.0
+          country: IND
+          domain: 'ONDC:RET13'
+          message_id: 6a60b655-8649-4ca7-97d6-f8d9c52b1d44
+          timestamp: '2026-03-20T12:42:20.805Z'
+          transaction_id: 7bb1d932-b12c-4a76-a656-635b078fb8f0
+          ttl: PT30S
+        message:
+          catalog:
+            bpp/providers:
+              - id: P1
+                items:
+                  - id: I1
+                    time:
+                      label: enable
+                      timestamp: '2023-06-03T07:30:00.000Z'
+                    descriptor:
+                      name: Kesh King Ayurvedic Hair Oil
+                      code: '1:XXXXXXXXXXXXX'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Kesh King Ayurvedic Hair Oil
+                      long_desc: Kesh King Ayurvedic Hair Oil
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: millilitre
+                          value: '300'
+                      available:
+                        count: '20'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '300.00'
+                      maximum_value: '349.0'
+                    category_id: 'Hair Care - Shampoo, Oils, Conditioners'
+                    fulfillment_id: F1
+                    location_id: L1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Ramesh,info@keshking.com,18001035155'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Emami Ltd
+                      manufacturer_or_packer_address: 'Emami Ltd., 687 Anandapur, Kolkata 700107'
+                      common_or_generic_name_of_commodity: Hair Oil
+                      month_year_of_manufacture_packing_import: 06/2023
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: image
+                        list:
+                          - code: type
+                            value: back_image
+                          - code: url
+                            value: 'https://sellerNP.com/images/i1_back_image.png'
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Kesh King
+                          - code: colour
+                            value: '#000000'
+                          - code: colour_name
+                            value: Black
+                          - code: gender
+                            value: male
+                          - code: concern
+                            value: tangled_hair
+                          - code: ingredient
+                            value: neem
+                          - code: conscious
+                            value: natural
+                          - code: preference
+                            value: herbal
+                          - code: formulation
+                            value: liquid
+                          - code: skin_type
+                            value: normal
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
+        np_type: >-
+          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
+      inputs: {}
+    examples:
+      - name: Example for action "on_search"
+        description: >-
+          Auto-generated example for action "on_search" in flow
+          "Discovery_Flow_incremental_catalog"
+        payload:
+          context:
+            action: on_search
+            bap_id: dev-automation.ondc.org
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer'
+            bpp_id: dev-automation.ondc.org
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/seller
+            city: '*'
+            core_version: 1.2.0
+            country: IND
+            domain: 'ONDC:RET13'
+            message_id: 6a60b655-8649-4ca7-97d6-f8d9c52b1d44
+            timestamp: '2026-03-20T12:42:20.805Z'
+            transaction_id: 7bb1d932-b12c-4a76-a656-635b078fb8f0
+            ttl: PT30S
+          message:
+            catalog:
+              bpp/providers:
+                - id: P1
+                  items:
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Ramesh,info@keshking.com,18001035155'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Hair Oil
+                        manufacturer_or_packer_address: 'Emami Ltd., 687 Anandapur, Kolkata 700107'
+                        manufacturer_or_packer_name: Emami Ltd
+                        month_year_of_manufacture_packing_import: 06/2023
+                      '@ondc/org/time_to_ship': P1D
+                      category_id: 'Hair Care - Shampoo, Oils, Conditioners'
+                      descriptor:
+                        code: '1:XXXXXXXXXXXXX'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: Kesh King Ayurvedic Hair Oil
+                        name: Kesh King Ayurvedic Hair Oil
+                        short_desc: Kesh King Ayurvedic Hair Oil
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I1
+                      location_id: L1
+                      price:
+                        currency: INR
+                        maximum_value: '349.0'
+                        value: '300.00'
+                      quantity:
+                        available:
+                          count: '20'
+                        maximum:
+                          count: '10'
+                        unitized:
+                          measure:
+                            unit: millilitre
+                            value: '300'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: image
+                          list:
+                            - code: type
+                              value: back_image
+                            - code: url
+                              value: 'https://sellerNP.com/images/i1_back_image.png'
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: Kesh King
+                            - code: colour
+                              value: '#000000'
+                            - code: colour_name
+                              value: Black
+                            - code: gender
+                              value: male
+                            - code: concern
+                              value: tangled_hair
+                            - code: ingredient
+                              value: neem
+                            - code: conscious
+                              value: natural
+                            - code: preference
+                              value: herbal
+                            - code: formulation
+                              value: liquid
+                            - code: skin_type
+                              value: normal
+                      time:
+                        label: enable
+                        timestamp: '2026-03-20T12:42:20.805Z'
+        type: request
+  - api: search
+    action_id: search_inc_pull
+    owner: BAP
+    responseFor: null
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBzZWFyY2hfaW5jX3B1bGwuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEKICogQHJldHVybnMge09iamVjdH0KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKIGNvbnN0IGN1cnJlbnRUaW1lID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAvLyBEZWZhdWx0OiBsYXN0IDIgaG91cnMgd2luZG93CmNvbnN0IHN0YXJ0VGltZSA9IG5ldyBEYXRlKAogIERhdGUubm93KCkgLSAoMiAqIDYwICogNjAgKiAxMDAwKQopLnRvSVNPU3RyaW5nKCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC50aW1lc3RhbXAgPSBjdXJyZW50VGltZTsKCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiY2F0YWxvZ19pbmMiCiAgICApOwoKICBpZiAoY2F0YWxvZ0luY1RhZykgewogICAgY29uc3Qgc3RhcnRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJzdGFydF90aW1lIgogICAgKTsKCiAgICBjb25zdCBlbmRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJlbmRfdGltZSIKICAgICk7CgogICAgaWYgKHN0YXJ0VGltZU9iaikgewogICAgICBzdGFydFRpbWVPYmoudmFsdWUgPSBzdGFydFRpbWU7CiAgICB9CgogICAgaWYgKGVuZFRpbWVPYmopIHsKICAgICAgLy8gZW5kX3RpbWUgbXVzdCBtYXRjaCBjb250ZXh0LnRpbWVzdGFtcAogICAgICBlbmRUaW1lT2JqLnZhbHVlID0gY3VycmVudFRpbWU7CiAgICB9CiAgfQoKICBjb25zdCBiYXBUZXJtc1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiYmFwX3Rlcm1zIgogICAgKTsKCiAgaWYgKGJhcFRlcm1zVGFnKSB7CiAgICBjb25zdCBlZmZlY3RpdmVEYXRlID0gYmFwVGVybXNUYWcubGlzdC5maW5kKAogICAgICAoaXRlbSkgPT4gaXRlbS5jb2RlID09PSAiZWZmZWN0aXZlX2RhdGUiCiAgICApOwoKICAgIGlmIChlZmZlY3RpdmVEYXRlKSB7CiAgICAgIGVmZmVjdGl2ZURhdGUudmFsdWUgPSBjdXJyZW50VGltZTsKICAgIH0KICB9CgoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZD8uY29udGV4dCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dCBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLmludGVudC50YWdzIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncy5maW5kKAogICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJjYXRhbG9nX2luYyIKICApOwoKICBpZiAoIWNhdGFsb2dJbmNUYWcpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNhdGFsb2dfaW5jIHRhZyBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGNvbnN0IGJhcFRlcm1zVGFnID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gImJhcF90ZXJtcyIKICApOwoKICBpZiAoIWJhcFRlcm1zVGFnKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJiYXBfdGVybXMgdGFnIGlzIG1pc3NpbmciCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          domain: 'ONDC:RET13'
+          action: search
+          timestamp: '2026-06-03T17:12:39.304Z'
+          transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
+          message_id: 92633d10-3c52-4637-8d6e-c78eb6148297
+          bap_id: bap.example.com
+          bap_uri: 'https://bap.example.com'
+          ttl: PT30S
+          country: IND
+          city: '*'
+          core_version: 1.2.0
+        message:
+          intent:
+            payment:
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3.54'
+            tags:
+              - code: catalog_inc
+                list:
+                  - code: start_time
+                    value: ''
+                  - code: end_time
+                    value: ''
+              - code: bap_terms
+                list:
+                  - code: static_terms
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  - code: static_terms_new
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  - code: effective_date
+                    value: ''
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        catalog_inc_start_time: >-
+          $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='start_time')].value
+        catalog_inc_end_time: >-
+          $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='end_time')].value
+      inputs: {}
+  - api: on_search
+    action_id: on_search_inc_pull
+    owner: BPP
+    responseFor: null
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IHN0YXJ0VGltZSA9IHNlc3Npb25EYXRhLmNhdGFsb2dfaW5jX3N0YXJ0X3RpbWU/LlswXTsKICBjb25zdCBlbmRUaW1lID0gc2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXTsKCiAgaWYgKCFzdGFydFRpbWUgfHwgIWVuZFRpbWUpIHsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKICB9CiAgIGNvbnN0IGl0ZW1UaW1lc3RhbXAgPSBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKAogICAgc3RhcnRUaW1lLAogICAgZW5kVGltZQogICk7CgogIGNvbnN0IHByb3ZpZGVycyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSB8fCBbXTsKCiAgcHJvdmlkZXJzLmZvckVhY2goKHByb3ZpZGVyKSA9PiB7CiAgICBwcm92aWRlci5pdGVtcyA9IChwcm92aWRlci5pdGVtcyB8fCBbXSkubWFwKChpdGVtKSA9PiAoewogICAgICAuLi5pdGVtLAogICAgICB0aW1lOiB7CiAgICAgICAgbGFiZWw6ICJlbmFibGUiLAogICAgICAgIHRpbWVzdGFtcDogaXRlbVRpbWVzdGFtcAogICAgICB9CiAgICB9KSk7CiAgfSk7CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICdtZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSBpcyBtaXNzaW5nJwogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfc3RhcnRfdGltZT8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJzZXNzaW9uRGF0YS5jYXRhbG9nX2luY19zdGFydF90aW1lIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAic2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWUgaXMgbWlzc2luZyIKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
+      defaultPayload:
+        context:
+          domain: 'ONDC:RET13'
+          action: on_search
+          timestamp: '2026-06-03T17:12:48.106Z'
+          transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
+          message_id: 82c32385-e6c1-4ae6-bc73-735cfcdc5ba3
+          bap_id: bap.example.com
+          bap_uri: 'https://bap.example.com'
+          ttl: PT30S
+          bpp_id: bpp.example.com
+          bpp_uri: 'https://bpp.example.com'
+          country: IND
+          city: '*'
+          core_version: 1.2.0
+        message:
+          catalog:
+            bpp/providers:
+              - id: P1
+                items:
+                  - id: I1
+                    time:
+                      label: enable
+                      timestamp: '2023-06-03T07:30:00.000Z'
+                    descriptor:
+                      name: Kesh King Ayurvedic Hair Oil
+                      code: '1:XXXXXXXXXXXXX'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Kesh King Ayurvedic Hair Oil
+                      long_desc: Kesh King Ayurvedic Hair Oil
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: millilitre
+                          value: '300'
+                      available:
+                        count: '20'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '300.00'
+                      maximum_value: '349.0'
+                    category_id: 'Hair Care - Shampoo, Oils, Conditioners'
+                    fulfillment_id: F1
+                    location_id: L1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Ramesh,info@keshking.com,18001035155'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Emami Ltd
+                      manufacturer_or_packer_address: 'Emami Ltd., 687 Anandapur, Kolkata 700107'
+                      common_or_generic_name_of_commodity: Hair Oil
+                      month_year_of_manufacture_packing_import: 06/2023
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: image
+                        list:
+                          - code: type
+                            value: back_image
+                          - code: url
+                            value: 'https://sellerNP.com/images/i1_back_image.png'
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Kesh King
+                          - code: colour
+                            value: '#000000'
+                          - code: colour_name
+                            value: Black
+                          - code: gender
+                            value: male
+                          - code: concern
+                            value: tangled_hair
+                          - code: ingredient
+                            value: neem
+                          - code: conscious
+                            value: natural
+                          - code: preference
+                            value: herbal
+                          - code: formulation
+                            value: liquid
+                          - code: skin_type
+                            value: normal
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+      inputs: {}
+transaction_history:
+  - action_id: search_inc
+    payload:
+      context:
+        domain: 'ONDC:RET13'
+        action: search
+        timestamp: '2026-06-03T17:38:37.452Z'
+        transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
+        message_id: 53039a8f-b20e-45b8-aaaf-3395966459ee
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        country: IND
+        city: '*'
+        core_version: 1.2.0
+      message:
+        intent:
+          payment:
+            '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3'
+          tags:
+            - code: catalog_inc
+              list:
+                - code: mode
+                  value: start
+    action: search
+    saved_info: {}
+  - action_id: on_search_inc
+    payload:
+      context:
+        domain: 'ONDC:RET13'
+        action: on_search
+        timestamp: '2026-06-03T17:38:37.462Z'
+        transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
+        message_id: e4cb547e-e08e-43cd-a334-f45e11dcfb21
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        bpp_id: bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
+        country: IND
+        city: '*'
+        core_version: 1.2.0
+      message:
+        catalog:
+          bpp/providers:
+            - id: P1
+              items:
+                - id: I1
+                  time:
+                    label: enable
+                    timestamp: '2026-06-03T17:38:37.462Z'
+                  descriptor:
+                    name: Kesh King Ayurvedic Hair Oil
+                    code: '1:XXXXXXXXXXXXX'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Kesh King Ayurvedic Hair Oil
+                    long_desc: Kesh King Ayurvedic Hair Oil
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: millilitre
+                        value: '300'
+                    available:
+                      count: '20'
+                    maximum:
+                      count: '10'
+                  price:
+                    currency: INR
+                    value: '300.00'
+                    maximum_value: '349.0'
+                  category_id: 'Hair Care - Shampoo, Oils, Conditioners'
+                  fulfillment_id: F1
+                  location_id: L1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Ramesh,info@keshking.com,18001035155'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Emami Ltd
+                    manufacturer_or_packer_address: 'Emami Ltd., 687 Anandapur, Kolkata 700107'
+                    common_or_generic_name_of_commodity: Hair Oil
+                    month_year_of_manufacture_packing_import: 06/2023
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: image
+                      list:
+                        - code: type
+                          value: back_image
+                        - code: url
+                          value: 'https://sellerNP.com/images/i1_back_image.png'
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Kesh King
+                        - code: colour
+                          value: '#000000'
+                        - code: colour_name
+                          value: Black
+                        - code: gender
+                          value: male
+                        - code: concern
+                          value: tangled_hair
+                        - code: ingredient
+                          value: neem
+                        - code: conscious
+                          value: natural
+                        - code: preference
+                          value: herbal
+                        - code: formulation
+                          value: liquid
+                        - code: skin_type
+                          value: normal
+    action: on_search
+    saved_info: {}
+  - action_id: search_inc_pull
+    payload:
+      context:
+        domain: 'ONDC:RET13'
+        action: search
+        timestamp: '2026-06-03T17:38:37.472Z'
+        transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
+        message_id: 4b8e7b08-1c45-483e-b8cc-1de4c2b8c58a
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        country: IND
+        city: '*'
+        core_version: 1.2.0
+      message:
+        intent:
+          payment:
+            '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3.54'
+          tags:
+            - code: catalog_inc
+              list:
+                - code: start_time
+                  value: '2026-06-03T15:38:37.473Z'
+                - code: end_time
+                  value: '2026-06-03T17:38:37.472Z'
+            - code: bap_terms
+              list:
+                - code: static_terms
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: static_terms_new
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: effective_date
+                  value: '2026-06-03T17:38:37.472Z'
+    action: search
+    saved_info: {}
+  - action_id: on_search_inc_pull
+    payload:
+      context:
+        domain: 'ONDC:RET13'
+        action: on_search
+        timestamp: '2026-06-03T17:38:37.479Z'
+        transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
+        message_id: d44ea4fc-6f18-4c3d-a15f-e4eed957f573
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        bpp_id: bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
+        country: IND
+        city: '*'
+        core_version: 1.2.0
+      message:
+        catalog:
+          bpp/providers:
+            - id: P1
+              items:
+                - id: I1
+                  time:
+                    label: enable
+                    timestamp: '2026-06-03T17:28:29.780Z'
+                  descriptor:
+                    name: Kesh King Ayurvedic Hair Oil
+                    code: '1:XXXXXXXXXXXXX'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Kesh King Ayurvedic Hair Oil
+                    long_desc: Kesh King Ayurvedic Hair Oil
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: millilitre
+                        value: '300'
+                    available:
+                      count: '20'
+                    maximum:
+                      count: '10'
+                  price:
+                    currency: INR
+                    value: '300.00'
+                    maximum_value: '349.0'
+                  category_id: 'Hair Care - Shampoo, Oils, Conditioners'
+                  fulfillment_id: F1
+                  location_id: L1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Ramesh,info@keshking.com,18001035155'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Emami Ltd
+                    manufacturer_or_packer_address: 'Emami Ltd., 687 Anandapur, Kolkata 700107'
+                    common_or_generic_name_of_commodity: Hair Oil
+                    month_year_of_manufacture_packing_import: 06/2023
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: image
+                      list:
+                        - code: type
+                          value: back_image
+                        - code: url
+                          value: 'https://sellerNP.com/images/i1_back_image.png'
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Kesh King
+                        - code: colour
+                          value: '#000000'
+                        - code: colour_name
+                          value: Black
+                        - code: gender
+                          value: male
+                        - code: concern
+                          value: tangled_hair
+                        - code: ingredient
+                          value: neem
+                        - code: conscious
+                          value: natural
+                        - code: preference
+                          value: herbal
+                        - code: formulation
+                          value: liquid
+                        - code: skin_type
+                          value: normal
+    action: on_search
+    saved_info: {}
+validationLib: ''
+helperLib: >-
+  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiB1cGRhdGVUaW1lc3RhbXBzKG9iaikgewogIGNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIGZ1bmN0aW9uIHJlY3Vyc2l2ZVVwZGF0ZShjdXJyZW50KSB7CiAgICBpZiAodHlwZW9mIGN1cnJlbnQgIT09ICJvYmplY3QiIHx8IGN1cnJlbnQgPT09IG51bGwpIHsKICAgICAgcmV0dXJuOwogICAgfQoKICAgIGZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKICAgICAgaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKICAgICAgICBjdXJyZW50W2tleV0gPSBjdXJyZW50VGltZXN0YW1wOwogICAgICB9IGVsc2UgaWYgKHR5cGVvZiBjdXJyZW50W2tleV0gPT09ICJvYmplY3QiKSB7CiAgICAgICAgcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSk7CiAgICAgIH0KICAgIH0KICB9CgogIHJlY3Vyc2l2ZVVwZGF0ZShvYmopOwogIHJldHVybiBvYmo7Cn0KCgpmdW5jdGlvbiBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKHN0YXJ0VGltZSwgZW5kVGltZSkgewoJY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZShzdGFydFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IGVuZCA9IG5ldyBEYXRlKGVuZFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IHJhbmRvbVRpbWUgPQoJCU1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChlbmQgLSBzdGFydCArIDEpKSArIHN0YXJ0OwoJcmV0dXJuIG5ldyBEYXRlKHJhbmRvbVRpbWUpLnRvSVNPU3RyaW5nKCk7Cn0=
