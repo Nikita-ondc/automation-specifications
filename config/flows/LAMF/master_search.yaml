@@ -1,0 +1,1150 @@
+meta:
+  domain: ONDC:FIS12
+  version: 2.3.0
+  flowId: master_search
+  config_version: 0.0.0001
+  description: ""
+  use_case_id: ""
+transaction_data:
+  transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
+  latest_timestamp: 1970-01-01T00:00:00.000Z
+  bap_id: bap.example.com
+  bap_uri: https://bap.example.com
+  bpp_id: bpp.example.com
+  bpp_uri: https://bpp.example.com
+steps:
+  - api: search
+    action_id: search_1
+    owner: BAP
+    responseFor: null
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZSA9IHsKICAgIGludGVudDogewogICAgICBjYXRlZ29yeTogewogICAgICAgIGRlc2NyaXB0b3I6IHsKICAgICAgICAgIGNvZGU6ICJMT0FOIgogICAgICAgIH0KICAgICAgfSwKICAgICAgcGF5bWVudDogewogICAgICAgIGNvbGxlY3RlZF9ieTogIkJQUCIKICAgICAgfSwKICAgICAgdGFnczogWwogICAgICAgIHsKICAgICAgICAgIGRpc3BsYXk6IGZhbHNlLAogICAgICAgICAgZGVzY3JpcHRvcjogewogICAgICAgICAgICBuYW1lOiAiQkFQIFRlcm1zIG9mIEVuZ2FnZW1lbnQiLAogICAgICAgICAgICBjb2RlOiAiQkFQX1RFUk1TIgogICAgICAgICAgfSwKICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgewogICAgICAgICAgICAgIGRlc2NyaXB0b3I6IHsKICAgICAgICAgICAgICAgIGNvZGU6ICJTVEFUSUNfVEVSTVMiCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB2YWx1ZTogJ2h0dHBzOi8vYmFwLmNyZWRpdC5iZWNrbnByb3RvY29sLmlvL3dvcmtpbmctY2FwaXRhbC9sb2Fucy93b3JraW5nLWNhcGl0YWwnCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICBkZXNjcmlwdG9yOiB7CiAgICAgICAgICAgICAgICBjb2RlOiAiT0ZGTElORV9DT05UUkFDVCIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHZhbHVlOiAidHJ1ZSIKICAgICAgICAgICAgfQogICAgICAgICAgXQogICAgICAgIH0KICAgICAgXQogICAgfQogIH07CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IGNhdGVnb3J5Q29kZSA9CiAgICB0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5pbnRlbnQ/LmNhdGVnb3J5Py5kZXNjcmlwdG9yPy5jb2RlOwoKICBpZiAoIWNhdGVnb3J5Q29kZSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBjYXRlZ29yeSBkZXNjcmlwdG9yIGNvZGUiCiAgICB9OwogIH0KCiAgcmV0dXJuIHsKICAgIHZhbGlkOiB0cnVlLAogICAgY29kZTogMjAwLAogICAgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IgogIH07Cn0=
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          domain: ONDC:FIS12
+          action: search
+          timestamp: 2026-04-21T06:23:40.312Z
+          transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
+          message_id: da9697a4-e2bc-4565-bcf5-1556b8173b42
+          bap_id: bap.example.com
+          bap_uri: https://bap.example.com
+          ttl: PT30S
+          version: 2.3.0
+          location:
+            country:
+              code: IND
+            city:
+              code: "*"
+        message: {}
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.location.city.code
+      inputs: {}
+  - api: on_search
+    action_id: on_Search_1
+    owner: BPP
+    responseFor: search_1
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          domain: ONDC:FIS12
+          action: on_search
+          timestamp: 2026-04-21T06:59:03.948Z
+          transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
+          message_id: a7c973b7-3213-4969-a8e5-0f8996d24270
+          bap_id: bap.example.com
+          bap_uri: https://bap.example.com
+          ttl: PT30S
+          bpp_id: bpp.example.com
+          bpp_uri: https://bpp.example.com
+          version: 2.3.0
+          location:
+            country:
+              code: IND
+            city:
+              code: "*"
+        message:
+          catalog:
+            descriptor:
+              name: ICICI Bank
+            providers:
+              - id: PROVIDER_ID
+                descriptor:
+                  images:
+                    - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
+                      size_type: sm
+                  name: ICICI Bank
+                  short_desc: ICICI Bank Ltd
+                  long_desc: ICICI Bank Ltd, India.
+                categories:
+                  - id: "101110"
+                    descriptor:
+                      code: LOAN
+                      name: Loan
+                  - id: "104110"
+                    parent_category_id: "101110"
+                    descriptor:
+                      code: UNSECURED_PERSONAL
+                      name: Unsecured Personal
+                  - id: "104111"
+                    parent_category_id: "101110"
+                    descriptor:
+                      code: SECURED_PERSONAL
+                      name: Secured Personal
+                  - id: "104112"
+                    parent_category_id: "101110"
+                    descriptor:
+                      code: OFFERS
+                      name: offers
+                  - id: "104129"
+                    parent_category_id: "101110"
+                    descriptor:
+                      code: ADDITIONAL_DATA
+                      name: additional data
+                  - id: "101111"
+                    parent_category_id: "104110"
+                    descriptor:
+                      code: PERSONAL_FINANCING
+                      name: Personal Financing
+                  - id: "104115"
+                    parent_category_id: "104110"
+                    descriptor:
+                      code: CONSUMER_INVOICE_FINANCING
+                      name: consumer invoice financing
+                  - id: "101213"
+                    parent_category_id: "104115"
+                    descriptor:
+                      code: AGRI_PURCHASE_FINANCE
+                      name: Agri Purchase Finance
+                  - id: "101214"
+                    parent_category_id: "104115"
+                    descriptor:
+                      code: ELECTRONICS_PURCHASE_FINANCE
+                      name: Electronics Purchase Finance
+                  - id: "104116"
+                    parent_category_id: "101110"
+                    descriptor:
+                      code: BUSINESS
+                      name: Business
+                  - id: "101124"
+                    parent_category_id: "104116"
+                    descriptor:
+                      code: SOLE_PROPRIETORSHIP
+                      name: Sole Proprietorship
+                  - id: "104118"
+                    parent_category_id: "104116"
+                    descriptor:
+                      code: OTHER
+                      name: Other
+                  - id: "101217"
+                    parent_category_id: "104118"
+                    descriptor:
+                      code: PARTNERSHIP_FIRM
+                      name: Partnership Firm
+                  - id: "101125"
+                    parent_category_id: "104118"
+                    descriptor:
+                      code: PRIVATE_LTD
+                      name: Private Ltd
+                  - id: "101112"
+                    parent_category_id: "104118"
+                    descriptor:
+                      code: INVOICE_FINANCING
+                      name: Invoice Financing
+                  - id: "101115"
+                    parent_category_id: "104111"
+                    descriptor:
+                      code: GOLD_LOAN
+                      name: Gold Loan
+                  - id: " 101118"
+                    parent_category_id: "104111"
+                    descriptor:
+                      code: LAMF
+                      name: Loan Against Mutual Funds
+                  - id: "101117"
+                    parent_category_id: "104112"
+                    descriptor:
+                      code: TERM_LOAN
+                      name: Term Loan
+                  - id: "104125"
+                    parent_category_id: "104112"
+                    descriptor:
+                      code: CREDIT_LINE
+                      name: Credit Line
+                  - id: "104126"
+                    parent_category_id: "104125"
+                    descriptor:
+                      code: DOCUMENT_BASED_DRAWDOWN
+                      name: Document Based Drawdown
+                  - id: "104127"
+                    parent_category_id: "104125"
+                    descriptor:
+                      code: NON_DOCUMENT_BASED_DRAWDOWN
+                      name: Non Document Based Drawdown
+                  - id: "104130"
+                    parent_category_id: "104129"
+                    descriptor:
+                      code: BANKING
+                      name: Banking
+                  - id: "104137"
+                    parent_category_id: "104130"
+                    descriptor:
+                      code: STATEMENT_UPLOAD
+                      name: statement Upload
+                  - id: "101212"
+                    parent_category_id: "104130"
+                    descriptor:
+                      code: AA_BANKING
+                      name: AA Banking
+                  - id: "104131"
+                    parent_category_id: "104129"
+                    descriptor:
+                      code: GST
+                      name: gst
+                  - id: "104139"
+                    parent_category_id: "104131"
+                    descriptor:
+                      code: AA_GST
+                      name: AA gst
+                  - id: "104140"
+                    parent_category_id: "104131"
+                    descriptor:
+                      code: GSP
+                      name: gsp
+                  - id: "104141"
+                    parent_category_id: "104131"
+                    descriptor:
+                      code: RETURN_UPLOAD
+                      name: return upload
+                  - id: "104132"
+                    parent_category_id: "104129"
+                    descriptor:
+                      code: MUTUAL_FUND
+                      name: Mutual Fund
+                  - id: "104142"
+                    parent_category_id: "104132"
+                    descriptor:
+                      code: AA_LOAN
+                      name: AA Loan
+                  - id: "101119"
+                    parent_category_id: "104132"
+                    descriptor:
+                      code: MFC
+                      name: mfc
+                  - id: "101120"
+                    parent_category_id: "104132"
+                    descriptor:
+                      code: RTA
+                      name: rta
+                  - id: "104133"
+                    parent_category_id: "104129"
+                    descriptor:
+                      code: ITR
+                      name: ITR
+                  - id: "104145"
+                    parent_category_id: "104133"
+                    descriptor:
+                      code: UPLOAD
+                      name: upload
+                  - id: "101211"
+                    parent_category_id: "104129"
+                    descriptor:
+                      code: BUREAU_LOAN
+                      name: Bureau Loan
+                  - id: "104135"
+                    parent_category_id: "104129"
+                    descriptor:
+                      code: DERIVED_DATA
+                      name: Derived Data
+                  - id: "104136"
+                    parent_category_id: "104129"
+                    descriptor:
+                      code: ADDITIONAL_UPLOAD
+                      name: Additional Upload
+                items:
+                  - id: BUSINESS_TERM_LOAN_ID_2
+                    descriptor:
+                      code: LOAN
+                      name: Term Loan with offline & online journey
+                    category_ids:
+                      - "101124"
+                      - "101117"
+                      - "101211"
+                    fulfillment_ids:
+                      - F17
+                    matched: true
+                    recommended: true
+                    xinput:
+                      head:
+                        descriptor:
+                          name: Personal Information
+                          code: PERSONAL_INFORMATION_BUSINESS_TERM
+                        headings:
+                          - PERSONAL_INFORMATION_BUSINESS_TERM
+                      form:
+                        id: F01
+                        mime_type: none
+                        data:
+                          pan:
+                            type: string
+                          fullName:
+                            type: string
+                          dob:
+                            type: string
+                          addressL1:
+                            type: string
+                          addressL2:
+                            type: string
+                          pincode:
+                            type: string
+                          city:
+                            type: string
+                          state:
+                            type: string
+                          constitution:
+                            type: enum
+                          businessPan:
+                            type: string
+                          businessPanName:
+                            type: string
+                          doi:
+                            type: string
+                          natureOfBusiness:
+                            type: enum
+                          udyamNumber:
+                            type: string
+                          gst:
+                            type: string
+                          annualTurnover:
+                            type: string
+                          businessEmail:
+                            type: string
+                          businessAddressL1:
+                            type: string
+                          businessAddressL2:
+                            type: string
+                          businessCity:
+                            type: string
+                          businessState:
+                            type: string
+                          businessPincode:
+                            type: string
+                          bureauConsent:
+                            type: boolean
+                        resubmit: false
+                        multiple_sumbissions: false
+                      required: true
+                  - id: BUSINESS_TERM_LOAN_ID_1
+                    descriptor:
+                      code: LOAN
+                      name: Term Loan without AA
+                    category_ids:
+                      - "101124"
+                      - "101117"
+                      - "101211"
+                    fulfillment_ids:
+                      - F16
+                    matched: true
+                    recommended: true
+                    xinput:
+                      head:
+                        descriptor:
+                          name: Personal Information
+                          code: PERSONAL_INFORMATION_BUSINESS_TERM
+                        headings:
+                          - PERSONAL_INFORMATION_BUSINESS_TERM
+                      form:
+                        id: F01
+                        mime_type: none
+                        data:
+                          pan:
+                            type: string
+                          fullName:
+                            type: string
+                          dob:
+                            type: string
+                          addressL1:
+                            type: string
+                          addressL2:
+                            type: string
+                          pincode:
+                            type: string
+                          city:
+                            type: string
+                          state:
+                            type: string
+                          constitution:
+                            type: enum
+                          businessPan:
+                            type: string
+                          businessPanName:
+                            type: string
+                          doi:
+                            type: string
+                          natureOfBusiness:
+                            type: enum
+                          udyamNumber:
+                            type: string
+                          gst:
+                            type: string
+                          annualTurnover:
+                            type: string
+                          businessEmail:
+                            type: string
+                          businessAddressL1:
+                            type: string
+                          businessAddressL2:
+                            type: string
+                          businessCity:
+                            type: string
+                          businessState:
+                            type: string
+                          businessPincode:
+                            type: string
+                          bureauConsent:
+                            type: boolean
+                        resubmit: false
+                        multiple_sumbissions: false
+                      required: true
+                  - id: ITEM_ID_LAMF_5
+                    descriptor:
+                      code: LOAN
+                      name: LAMF - Single Redirection
+                    category_ids:
+                      - "101118"
+                      - "104127"
+                      - "101119"
+                    matched: true
+                    recommended: true
+                    fulfillment_ids:
+                      - F18
+                    xinput:
+                      head:
+                        descriptor:
+                          name: Personal Information
+                          code: PERSONAL_INFORMATION_LAMF
+                        headings:
+                          - PERSONAL_INFORMATION_LAMF
+                      form:
+                        id: F01
+                        mime_type: none
+                        data:
+                          userType:
+                            type: enum
+                          pan:
+                            type: string
+                          fullName:
+                            type: string
+                          constitution:
+                            type: enum
+                          gender:
+                            type: enum
+                          employmentType:
+                            type: enum
+                          dob:
+                            type: string
+                          annualIncome:
+                            type: string
+                          mobileNumber:
+                            type: string
+                          emailId:
+                            type: string
+                          addressL1:
+                            type: string
+                          addressL2:
+                            type: string
+                          pincode:
+                            type: string
+                          city:
+                            type: string
+                          state:
+                            type: string
+                          endUse:
+                            type: enum
+                          bureauConsent:
+                            type: boolean
+                          statementUpload:
+                            type: file
+                        resubmit: false
+                        multiple_sumbissions: false
+                      required: true
+                fulfillments:
+                  - id: F18
+                    type: SEMI_ONLINE
+                    tags:
+                      - display: false
+                        descriptor:
+                          name: Checklist
+                          code: CHECKLISTS
+                        list:
+                          - descriptor:
+                              code: PERSONAL_INFORMATION_LAMF
+                              name: Personal Information
+                            value: PENDING
+                          - descriptor:
+                              code: JOURNEY_OFFLINE
+                              name: Journey Offline
+                            value: PENDING
+                  - id: F16
+                    type: ONLINE
+                    tags:
+                      - display: false
+                        descriptor:
+                          name: Checklist
+                          code: CHECKLISTS
+                        list:
+                          - descriptor:
+                              code: PERSONAL_INFORMATION_BUSINESS_TERM
+                              name: Personal Information
+                            value: PENDING
+                          - descriptor:
+                              code: SET_LOAN_AMOUNT
+                              name: Set Loan Amount
+                            value: PENDING
+                          - descriptor:
+                              code: KYC
+                              name: Know Your Customer
+                            value: PENDING
+                          - descriptor:
+                              code: EMANDATE
+                              name: Emandate
+                            value: PENDING
+                          - descriptor:
+                              code: LOAN_AGREEMENT
+                              name: Loan Agreement
+                            value: PENDING
+                  - id: F17
+                    type: SEMI_ONLINE
+                    tags:
+                      - display: false
+                        descriptor:
+                          name: Checklist
+                          code: CHECKLISTS
+                        list:
+                          - descriptor:
+                              code: PERSONAL_INFORMATION_BUSINESS_TERM
+                              name: Personal Information
+                            value: PENDING
+                          - descriptor:
+                              code: SET_LOAN_AMOUNT
+                              name: Set Loan Amount
+                            value: PENDING
+                          - descriptor:
+                              code: KYC_OFFLINE
+                              name: Know Your Customer
+                            value: PENDING
+                          - descriptor:
+                              code: LOAN_AGREEMENT
+                              name: Loan Agreement
+                            value: PENDING
+                payments:
+                  - type: POST_FULFILLMENT
+                    id: INSTALLMENT_ID_PERSONAL_LOAN
+                    status: NOT-PAID
+                    collected_by: BPP
+                    time:
+                      label: INSTALLMENT
+                  - type: ON_FULFILLMENT
+                    id: LOAN_DISBURSMENT_ID
+                    status: NOT-PAID
+                    collected_by: CONSUMER
+                    time:
+                      label: LOAN_DISBURSMENT
+            tags:
+              - display: false
+                descriptor:
+                  name: BPP Terms of Engagement
+                  code: BPP_TERMS
+                list:
+                  - descriptor:
+                      code: STATIC_TERMS
+                    value: https://bpp.credit.becknprotocol.org/working-capital/loans/working-capital
+                  - descriptor:
+                      code: OFFLINE_CONTRACT
+                    value: "true"
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.location.city.code
+      inputs: {}
+transaction_history:
+  - action_id: search_1
+    payload:
+      context:
+        domain: ONDC:FIS12
+        action: search
+        timestamp: 2026-04-21T08:40:17.026Z
+        transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
+        message_id: 916d4dc8-a7bb-4fa8-a4f0-a6e2bb008839
+        bap_id: bap.example.com
+        bap_uri: https://bap.example.com
+        ttl: PT30S
+        version: 2.3.0
+        location:
+          country:
+            code: IND
+          city:
+            code: "*"
+      message:
+        intent:
+          category:
+            descriptor:
+              code: LOAN
+          payment:
+            collected_by: BPP
+          tags:
+            - display: false
+              descriptor:
+                name: BAP Terms of Engagement
+                code: BAP_TERMS
+              list:
+                - descriptor:
+                    code: STATIC_TERMS
+                  value: https://bap.credit.becknprotocol.io/working-capital/loans/working-capital
+                - descriptor:
+                    code: OFFLINE_CONTRACT
+                  value: "true"
+    action: search
+    saved_info: {}
+  - action_id: on_Search_1
+    payload:
+      context:
+        domain: ONDC:FIS12
+        action: on_search
+        timestamp: 2026-04-21T08:40:17.034Z
+        transaction_id: 4179de3c-7088-4732-9786-e1fdba540b56
+        message_id: 916d4dc8-a7bb-4fa8-a4f0-a6e2bb008839
+        bap_id: bap.example.com
+        bap_uri: https://bap.example.com
+        ttl: PT30S
+        bpp_id: bpp.example.com
+        bpp_uri: https://bpp.example.com
+        version: 2.3.0
+        location:
+          country:
+            code: IND
+          city:
+            code: "*"
+      message:
+        catalog:
+          descriptor:
+            name: ICICI Bank
+          providers:
+            - id: PROVIDER_ID
+              descriptor:
+                images:
+                  - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
+                    size_type: sm
+                name: ICICI Bank
+                short_desc: ICICI Bank Ltd
+                long_desc: ICICI Bank Ltd, India.
+              categories:
+                - id: "101110"
+                  descriptor:
+                    code: LOAN
+                    name: Loan
+                - id: "104110"
+                  parent_category_id: "101110"
+                  descriptor:
+                    code: UNSECURED_PERSONAL
+                    name: Unsecured Personal
+                - id: "104111"
+                  parent_category_id: "101110"
+                  descriptor:
+                    code: SECURED_PERSONAL
+                    name: Secured Personal
+                - id: "104112"
+                  parent_category_id: "101110"
+                  descriptor:
+                    code: OFFERS
+                    name: offers
+                - id: "104129"
+                  parent_category_id: "101110"
+                  descriptor:
+                    code: ADDITIONAL_DATA
+                    name: additional data
+                - id: "101111"
+                  parent_category_id: "104110"
+                  descriptor:
+                    code: PERSONAL_FINANCING
+                    name: Personal Financing
+                - id: "104115"
+                  parent_category_id: "104110"
+                  descriptor:
+                    code: CONSUMER_INVOICE_FINANCING
+                    name: consumer invoice financing
+                - id: "101213"
+                  parent_category_id: "104115"
+                  descriptor:
+                    code: AGRI_PURCHASE_FINANCE
+                    name: Agri Purchase Finance
+                - id: "101214"
+                  parent_category_id: "104115"
+                  descriptor:
+                    code: ELECTRONICS_PURCHASE_FINANCE
+                    name: Electronics Purchase Finance
+                - id: "104116"
+                  parent_category_id: "101110"
+                  descriptor:
+                    code: BUSINESS
+                    name: Business
+                - id: "101124"
+                  parent_category_id: "104116"
+                  descriptor:
+                    code: SOLE_PROPRIETORSHIP
+                    name: Sole Proprietorship
+                - id: "104118"
+                  parent_category_id: "104116"
+                  descriptor:
+                    code: OTHER
+                    name: Other
+                - id: "101217"
+                  parent_category_id: "104118"
+                  descriptor:
+                    code: PARTNERSHIP_FIRM
+                    name: Partnership Firm
+                - id: "101125"
+                  parent_category_id: "104118"
+                  descriptor:
+                    code: PRIVATE_LTD
+                    name: Private Ltd
+                - id: "101112"
+                  parent_category_id: "104118"
+                  descriptor:
+                    code: INVOICE_FINANCING
+                    name: Invoice Financing
+                - id: "101115"
+                  parent_category_id: "104111"
+                  descriptor:
+                    code: GOLD_LOAN
+                    name: Gold Loan
+                - id: " 101118"
+                  parent_category_id: "104111"
+                  descriptor:
+                    code: LAMF
+                    name: Loan Against Mutual Funds
+                - id: "101117"
+                  parent_category_id: "104112"
+                  descriptor:
+                    code: TERM_LOAN
+                    name: Term Loan
+                - id: "104125"
+                  parent_category_id: "104112"
+                  descriptor:
+                    code: CREDIT_LINE
+                    name: Credit Line
+                - id: "104126"
+                  parent_category_id: "104125"
+                  descriptor:
+                    code: DOCUMENT_BASED_DRAWDOWN
+                    name: Document Based Drawdown
+                - id: "104127"
+                  parent_category_id: "104125"
+                  descriptor:
+                    code: NON_DOCUMENT_BASED_DRAWDOWN
+                    name: Non Document Based Drawdown
+                - id: "104130"
+                  parent_category_id: "104129"
+                  descriptor:
+                    code: BANKING
+                    name: Banking
+                - id: "104137"
+                  parent_category_id: "104130"
+                  descriptor:
+                    code: STATEMENT_UPLOAD
+                    name: statement Upload
+                - id: "101212"
+                  parent_category_id: "104130"
+                  descriptor:
+                    code: AA_BANKING
+                    name: AA Banking
+                - id: "104131"
+                  parent_category_id: "104129"
+                  descriptor:
+                    code: GST
+                    name: gst
+                - id: "104139"
+                  parent_category_id: "104131"
+                  descriptor:
+                    code: AA_GST
+                    name: AA gst
+                - id: "104140"
+                  parent_category_id: "104131"
+                  descriptor:
+                    code: GSP
+                    name: gsp
+                - id: "104141"
+                  parent_category_id: "104131"
+                  descriptor:
+                    code: RETURN_UPLOAD
+                    name: return upload
+                - id: "104132"
+                  parent_category_id: "104129"
+                  descriptor:
+                    code: MUTUAL_FUND
+                    name: Mutual Fund
+                - id: "104142"
+                  parent_category_id: "104132"
+                  descriptor:
+                    code: AA_LOAN
+                    name: AA Loan
+                - id: "101119"
+                  parent_category_id: "104132"
+                  descriptor:
+                    code: MFC
+                    name: mfc
+                - id: "101120"
+                  parent_category_id: "104132"
+                  descriptor:
+                    code: RTA
+                    name: rta
+                - id: "104133"
+                  parent_category_id: "104129"
+                  descriptor:
+                    code: ITR
+                    name: ITR
+                - id: "104145"
+                  parent_category_id: "104133"
+                  descriptor:
+                    code: UPLOAD
+                    name: upload
+                - id: "101211"
+                  parent_category_id: "104129"
+                  descriptor:
+                    code: BUREAU_LOAN
+                    name: Bureau Loan
+                - id: "104135"
+                  parent_category_id: "104129"
+                  descriptor:
+                    code: DERIVED_DATA
+                    name: Derived Data
+                - id: "104136"
+                  parent_category_id: "104129"
+                  descriptor:
+                    code: ADDITIONAL_UPLOAD
+                    name: Additional Upload
+              items:
+                - id: BUSINESS_TERM_LOAN_ID_2
+                  descriptor:
+                    code: LOAN
+                    name: Term Loan with offline & online journey
+                  category_ids:
+                    - "101124"
+                    - "101117"
+                    - "101211"
+                  fulfillment_ids:
+                    - F17
+                  matched: true
+                  recommended: true
+                  xinput:
+                    head:
+                      descriptor:
+                        name: Personal Information
+                        code: PERSONAL_INFORMATION_BUSINESS_TERM
+                      headings:
+                        - PERSONAL_INFORMATION_BUSINESS_TERM
+                    form:
+                      id: F01
+                      mime_type: none
+                      data:
+                        pan:
+                          type: string
+                        fullName:
+                          type: string
+                        dob:
+                          type: string
+                        addressL1:
+                          type: string
+                        addressL2:
+                          type: string
+                        pincode:
+                          type: string
+                        city:
+                          type: string
+                        state:
+                          type: string
+                        constitution:
+                          type: enum
+                        businessPan:
+                          type: string
+                        businessPanName:
+                          type: string
+                        doi:
+                          type: string
+                        natureOfBusiness:
+                          type: enum
+                        udyamNumber:
+                          type: string
+                        gst:
+                          type: string
+                        annualTurnover:
+                          type: string
+                        businessEmail:
+                          type: string
+                        businessAddressL1:
+                          type: string
+                        businessAddressL2:
+                          type: string
+                        businessCity:
+                          type: string
+                        businessState:
+                          type: string
+                        businessPincode:
+                          type: string
+                        bureauConsent:
+                          type: boolean
+                      resubmit: false
+                      multiple_sumbissions: false
+                    required: true
+                - id: BUSINESS_TERM_LOAN_ID_1
+                  descriptor:
+                    code: LOAN
+                    name: Term Loan without AA
+                  category_ids:
+                    - "101124"
+                    - "101117"
+                    - "101211"
+                  fulfillment_ids:
+                    - F16
+                  matched: true
+                  recommended: true
+                  xinput:
+                    head:
+                      descriptor:
+                        name: Personal Information
+                        code: PERSONAL_INFORMATION_BUSINESS_TERM
+                      headings:
+                        - PERSONAL_INFORMATION_BUSINESS_TERM
+                    form:
+                      id: F01
+                      mime_type: none
+                      data:
+                        pan:
+                          type: string
+                        fullName:
+                          type: string
+                        dob:
+                          type: string
+                        addressL1:
+                          type: string
+                        addressL2:
+                          type: string
+                        pincode:
+                          type: string
+                        city:
+                          type: string
+                        state:
+                          type: string
+                        constitution:
+                          type: enum
+                        businessPan:
+                          type: string
+                        businessPanName:
+                          type: string
+                        doi:
+                          type: string
+                        natureOfBusiness:
+                          type: enum
+                        udyamNumber:
+                          type: string
+                        gst:
+                          type: string
+                        annualTurnover:
+                          type: string
+                        businessEmail:
+                          type: string
+                        businessAddressL1:
+                          type: string
+                        businessAddressL2:
+                          type: string
+                        businessCity:
+                          type: string
+                        businessState:
+                          type: string
+                        businessPincode:
+                          type: string
+                        bureauConsent:
+                          type: boolean
+                      resubmit: false
+                      multiple_sumbissions: false
+                    required: true
+                - id: ITEM_ID_LAMF_5
+                  descriptor:
+                    code: LOAN
+                    name: LAMF - Single Redirection
+                  category_ids:
+                    - "101118"
+                    - "104127"
+                    - "101119"
+                  matched: true
+                  recommended: true
+                  fulfillment_ids:
+                    - F18
+                  xinput:
+                    head:
+                      descriptor:
+                        name: Personal Information
+                        code: PERSONAL_INFORMATION_LAMF
+                      headings:
+                        - PERSONAL_INFORMATION_LAMF
+                    form:
+                      id: F01
+                      mime_type: none
+                      data:
+                        userType:
+                          type: enum
+                        pan:
+                          type: string
+                        fullName:
+                          type: string
+                        constitution:
+                          type: enum
+                        gender:
+                          type: enum
+                        employmentType:
+                          type: enum
+                        dob:
+                          type: string
+                        annualIncome:
+                          type: string
+                        mobileNumber:
+                          type: string
+                        emailId:
+                          type: string
+                        addressL1:
+                          type: string
+                        addressL2:
+                          type: string
+                        pincode:
+                          type: string
+                        city:
+                          type: string
+                        state:
+                          type: string
+                        endUse:
+                          type: enum
+                        bureauConsent:
+                          type: boolean
+                        statementUpload:
+                          type: file
+                      resubmit: false
+                      multiple_sumbissions: false
+                    required: true
+              fulfillments:
+                - id: F18
+                  type: SEMI_ONLINE
+                  tags:
+                    - display: false
+                      descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION_LAMF
+                            name: Personal Information
+                          value: PENDING
+                        - descriptor:
+                            code: JOURNEY_OFFLINE
+                            name: Journey Offline
+                          value: PENDING
+                - id: F16
+                  type: ONLINE
+                  tags:
+                    - display: false
+                      descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION_BUSINESS_TERM
+                            name: Personal Information
+                          value: PENDING
+                        - descriptor:
+                            code: SET_LOAN_AMOUNT
+                            name: Set Loan Amount
+                          value: PENDING
+                        - descriptor:
+                            code: KYC
+                            name: Know Your Customer
+                          value: PENDING
+                        - descriptor:
+                            code: EMANDATE
+                            name: Emandate
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: Loan Agreement
+                          value: PENDING
+                - id: F17
+                  type: SEMI_ONLINE
+                  tags:
+                    - display: false
+                      descriptor:
+                        name: Checklist
+                        code: CHECKLISTS
+                      list:
+                        - descriptor:
+                            code: PERSONAL_INFORMATION_BUSINESS_TERM
+                            name: Personal Information
+                          value: PENDING
+                        - descriptor:
+                            code: SET_LOAN_AMOUNT
+                            name: Set Loan Amount
+                          value: PENDING
+                        - descriptor:
+                            code: KYC_OFFLINE
+                            name: Know Your Customer
+                          value: PENDING
+                        - descriptor:
+                            code: LOAN_AGREEMENT
+                            name: Loan Agreement
+                          value: PENDING
+              payments:
+                - type: POST_FULFILLMENT
+                  id: INSTALLMENT_ID_PERSONAL_LOAN
+                  status: NOT-PAID
+                  collected_by: BPP
+                  time:
+                    label: INSTALLMENT
+                - type: ON_FULFILLMENT
+                  id: LOAN_DISBURSMENT_ID
+                  status: NOT-PAID
+                  collected_by: CONSUMER
+                  time:
+                    label: LOAN_DISBURSMENT
+          tags:
+            - display: false
+              descriptor:
+                name: BPP Terms of Engagement
+                code: BPP_TERMS
+              list:
+                - descriptor:
+                    code: STATIC_TERMS
+                  value: https://bpp.credit.becknprotocol.org/working-capital/loans/working-capital
+                - descriptor:
+                    code: OFFLINE_CONTRACT
+                  value: "true"
+    action: on_search
+    saved_info: {}
+validationLib: ""
+helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==

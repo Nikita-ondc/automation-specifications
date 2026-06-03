@@ -1,119 +1,139 @@
 flows:
   - type: playground
     id: master_search
-    usecase: UNIFIED CREDIT
+    meta:
+      order: 0
+    usecase: BUSINESS_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: A borrower searches for available credit products in the marketplace; the lender responds with matching credit offerings and eligibility requirements.
+    description: Master Search
     config:
-      $ref: ./UNIFIED CREDIT/master_search.yaml
+      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/master_search.yaml"
   - type: playground
     id: business_term_loan_with_offline_online_foreclosure
-    usecase: UNIFIED CREDIT
+    meta:
+      order: 1
+    usecase: BUSINESS_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: End-to-end business term loan origination from product discovery through multi-stage dynamic credit assessment to confirmation, with integrated support for online and offline channels and loan modification scenarios.
+      # - PERSONAL LOAN
+    description: Business Loan - Term Loan with Offline & Online Journey (ForeClosure)
     config:
-      $ref: ./UNIFIED CREDIT/Business_Term_Loan_with_offline_online_journey.yaml
+      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/business_term_loan_with_offline_online_foreclosure.yaml"
   - type: playground
     id: business_term_loan_with_offline_online_missed_emi
-    usecase: UNIFIED CREDIT
+    usecase: BUSINESS_LOAN
+    meta:
+      order: 2
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: Business term loan origination and refinancing for missed-EMI scenarios, supporting multi-stage dynamic qualification and application across both online and offline customer touchpoints.
+      # - PERSONAL LOAN
+    description: Business Loan - Term Loan with Offline & Online Journey (Missed EMI)
     config:
-      $ref: ./UNIFIED CREDIT/Business_Term_Loan_with_offline_online_missed_emi.yaml
+      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/business_term_loan_with_offline_online_missed_emi.yaml"
   - type: playground
     id: business_term_loan_with_offline_online_pre_part
-    usecase: UNIFIED CREDIT
+    meta:
+      order: 3
+    usecase: BUSINESS_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: Business term loan origination flow featuring multi-stage adaptive applications through dynamic forms, enabling seamless online and offline customer journeys from product discovery to confirmation. The workflow supports unified pre-approval pathways with flexible, context-aware underwriting stages designed for distributed commerce channels.
+      # - PERSONAL LOAN
+    description: Business Loan - Term Loan with Offline & Online Journey(Pre Part) 
     config:
-      $ref: ./UNIFIED CREDIT/Business_Term_Loan_with_offline_online_pre_part.yaml
+      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/business_term_loan_with_offline_online_pre_part.yaml"        
+  #LAMF
+  - type: playground
+    id: master_search
+    meta:
+      order: 0
+    usecase: LAMF_LOAN
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: Master Search
+    config:
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/master_search.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc_offline_journey
-    usecase: UNIFIED CREDIT
+    meta:
+      order: 1
+    usecase: LAMF_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: Credit line origination flow enabling customers to apply for credit products through merchant channels with dynamic form-based verification and offline-capable operations. The journey encompasses product discovery, application submission, adaptive KYC verification, and confirmation across both online and offline touchpoints.
+    description: LAMF Credit Line with Offline Journey
     config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC_Offline_Journey.yaml
-  - type: playground
-    id: lamf_credit_line_with_mfc_drawdown
-    usecase: UNIFIED CREDIT
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: Credit line origination flow enabling customers to apply for credit products through merchant channels with dynamic form-based verification and offline-capable operations. The journey encompasses product discovery, application submission, adaptive KYC verification, and confirmation across both online and offline touchpoints.
-    config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC_Offline_Journey_Drawdown.yaml
-  - type: playground
-    id: lamf_credit_line_with_mfc_drawdown_missed_emi
-    usecase: UNIFIED CREDIT
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: Credit line origination flow enabling customers to apply for credit products through merchant channels with dynamic form-based verification and offline-capable operations. The journey encompasses product discovery, application submission, adaptive KYC verification, and confirmation across both online and offline touchpoints.
-    config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC_Offline_Journey_Drawdown_missed_emi.yaml
-  - type: playground
-    id: lamf_credit_line_with_mfc_drawdown_foreclosure
-    usecase: UNIFIED CREDIT
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: Credit line origination flow enabling customers to apply for credit products through merchant channels with dynamic form-based verification and offline-capable operations. The journey encompasses product discovery, application submission, adaptive KYC verification, and confirmation across both online and offline touchpoints.
-    config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC_Offline_Journey_Drawdown_foreclosure.yaml
-  - type: playground
-    id: lamf_credit_line_with_mfc_drawdown_pre_part
-    usecase: UNIFIED CREDIT
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: Credit line origination flow enabling customers to apply for credit products through merchant channels with dynamic form-based verification and offline-capable operations. The journey encompasses product discovery, application submission, adaptive KYC verification, and confirmation across both online and offline touchpoints.
-    config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC_Offline_Journey_Drawdown_pre_part.yaml                
-  - type: playground
-    id: lamf_credit_line_with_mfc_foreclosure
-    usecase: UNIFIED CREDIT
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: A borrower secures a credit line against movable collateral, progressing through multiple verification and documentation stages with dynamic forms before final loan confirmation.
-    config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC.yaml
-  - type: playground
-    id: lamf_credit_line_with_mfc_missed_emi
-    usecase: UNIFIED CREDIT
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: A borrower applies for a credit line product to address a missed EMI obligation, navigating through multiple dynamic form submissions and status validations toward final confirmation and transaction settlement.
-    config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC_missed_emi.yaml
-  - type: playground
-    id: lamf_credit_line_with_mfc_pre_part
-    usecase: UNIFIED CREDIT
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: LAMF credit line enabling borrowers with previous EMI payment gaps to access revolving credit through dynamic multi-step pre-qualification and form-based underwriting.
-    config:
-      $ref: ./UNIFIED CREDIT/LAMF_Credit_Line_with_MFC_pre_part.yaml
-  - type: playground
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey.yaml"
+   - type: playground
     id: lamf_credit_line_with_mfc_single_redirection
-    usecase: UNIFIED CREDIT
+    meta:
+      order: 2
+    usecase: LAMF_LOAN
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: LAMF credit line enabling borrowers with previous EMI payment gaps to access revolving credit through dynamic multi-step pre-qualification and form-based underwriting.
+    description: LAMF Credit Line with MFC
     config:
-      $ref: ./UNIFIED CREDIT/lamf_credit_line_with_mfc_single_redirection_deployment_config.yaml    
-      
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/flows/lamf_credit_line_with_mfc_single_redirection.yaml"
+  - type: playground
+    id: lamf_credit_line_with_mfc
+    meta:
+      order: 3
+    usecase: LAMF_LOAN
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: LAMF Credit Line with MFC
+    config:
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/flows/lamf_credit_line_with_mfc.yaml"        
+ 
+  - type: playground
+    id: lamf_credit_line_with_mfc_offline_journey_drawdown
+    meta:
+      order: 4
+    usecase: LAMF_LOAN
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: Drawdown - LAMF Credit Line with Offline Journey
+    config:
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown.yaml"
+  - type: playground
+    id: lamf_credit_line_with_mfc_offline_journey_drawdown_foreclosure
+    meta:
+      order: 5
+    usecase: LAMF_LOAN
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: Drawdown - LAMF Credit Line with Offline Journey(ForeClosure)
+    config:
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_foreclosure.yaml"
+  - type: playground
+    id: lamf_credit_line_with_mfc_offline_journey_drawdown_missed_emi
+    meta:
+      order: 6
+    usecase: LAMF_LOAN
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: Drawdown - LAMF Credit Line with Offline Journey(Missed EMI)
+    config:
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_missed_emi.yaml"
+  - type: playground
+    id: lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part
+    meta:
+      order: 7
+    usecase: LAMF_LOAN
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: Drawdown - LAMF Credit Line with Offline Journey(Pre Part)
+    config:
+      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part.yaml"                
+ 
