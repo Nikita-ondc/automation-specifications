@@ -125,6 +125,14 @@ flows:
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog.yaml
   - type: playground
+    id: Discovery_Flow_incremental_catalog_refresh_pull
+    usecase: HEALTH&WELLNESS
+    tags:
+      - WORKBENCH
+    description: Retail 1.2.5 (Discovery Flow Incremental Catalog Refresh Pull)
+    config:
+      $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
+  - type: playground
     id: Force_Cancellation_Flow
     usecase: HEALTH&WELLNESS
     tags:
