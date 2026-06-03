@@ -1,0 +1,741 @@
+meta:
+  domain: 'ONDC:RET16'
+  version: 1.2.5
+  flowId: Discovery_Flow_incremental_catalog_refresh_pull
+  config_version: 0.0.0001
+  description: Buyer Search & Quotation
+  use_case_id: HOME&KITCHEN
+  flowName: Discovery_Flow_incremental_catalog_refresh_pull
+transaction_data:
+  transaction_id: d07b069a-327a-4054-9b28-89c051072f75
+  latest_timestamp: '1970-01-01T00:00:00.000Z'
+  bap_id: bap.example.com
+  bap_uri: 'https://bap.example.com'
+  bpp_id: bpp.example.com
+  bpp_uri: 'https://bpp.example.com'
+steps:
+  - api: search
+    action_id: search_inc
+    owner: BAP
+    responseFor: null
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAJZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaTsKCWRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJjb250ZXh0IGlzIG1pc3NpbmciLAogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzPy5bMF0/Lmxpc3Q/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAibWVzc2FnZS5pbnRlbnQudGFnc1swXS5saXN0WzBdIGlzIG1pc3NpbmciLAogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          action: search
+          bap_id: dev-automation.ondc.org
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
+          city: '*'
+          core_version: 1.2.5
+          country: IND
+          domain: 'ONDC:RET16'
+          message_id: 54bdb15a-dd01-4584-a3f3-6504cb71d744
+          timestamp: '2026-03-19T16:24:41.322Z'
+          transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
+          ttl: PT30S
+        message:
+          intent:
+            payment:
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3'
+            tags:
+              - code: catalog_inc
+                list:
+                  - code: mode
+                    value: start
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        message_id: $.context.message_id
+        city: $.context.city
+        inc_mode: >-
+          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
+        bap_features: >-
+          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
+      inputs: {}
+    examples:
+      - name: Example for action "search"
+        description: >-
+          Auto-generated example for action "search" in flow
+          "Discovery_Flow_incremental_catalog"
+        payload:
+          context:
+            action: search
+            bap_id: dev-automation.ondc.org
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
+            city: '*'
+            core_version: 1.2.5
+            country: IND
+            domain: 'ONDC:RET16'
+            message_id: 54bdb15a-dd01-4584-a3f3-6504cb71d744
+            timestamp: '2026-03-19T16:24:41.322Z'
+            transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
+            ttl: PT30S
+          message:
+            intent:
+              payment:
+                '@ondc/org/buyer_app_finder_fee_amount': '3'
+                '@ondc/org/buyer_app_finder_fee_type': percent
+              tags:
+                - code: catalog_inc
+                  list:
+                    - code: mode
+                      value: start
+        type: request
+  - api: on_search
+    action_id: on_search_inc
+    owner: BPP
+    responseFor: null
+    unsolicited: true
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAgIGRlZmF1bHRQYXlsb2FkID0gdXBkYXRlVGltZXN0YW1wcyhkZWZhdWx0UGF5bG9hZCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0gIioiOwogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          action: on_search
+          bap_id: dev-automation.ondc.org
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
+          bpp_id: dev-automation.ondc.org
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/seller'
+          city: '*'
+          core_version: 1.2.5
+          country: IND
+          domain: 'ONDC:RET16'
+          message_id: 09ae400d-61ba-4561-b273-c90fd0e1a7e2
+          timestamp: '2026-03-19T16:24:50.771Z'
+          transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
+          ttl: PT30S
+        message:
+          catalog:
+            bpp/providers:
+              - id: P1
+                items:
+                  - id: I1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T05:30:48.998Z'
+                    parent_item_id: ''
+                    descriptor:
+                      name: MINISO Two-Layer Drawer Organizer
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Hard, tough and durable cosmetic storage and organizer,
+                        Two-Layer Drawer Organizer Cosmetic Storage Box, White,
+                        Rectangular
+                      long_desc: >-
+                        Introducing the MINISO Two-Layer Drawer Organizer
+                        Cosmetic Storage Box in a sleek, modern White,
+                        Rectangular design. Crafted with toughness and
+                        durability in mind, this organizer is built to withstand
+                        daily use, ensuring your items stay secure and
+                        protected.Its compact design offers simplicity and
+                        perfection, allowing you to maximize space while
+                        maintaining an elegant aesthetic.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '5:ESS45300'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '8'
+                    price:
+                      currency: INR
+                      value: '2460'
+                      maximum_value: '2460'
+                    category_id: Kitchen Storage and Containers
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Kitchen Storage and Containers
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: >-
+                              MINISO Two-Layer Drawer Organizer - Cotton Cloth,
+                              With Rod, Multicolour, 1 pc
+                          - code: colour
+                            value: '#00FF00'
+                          - code: colour_name
+                            value: green
+                          - code: material
+                            value: polycarbonate
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
+        np_type: >-
+          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
+      inputs: {}
+    examples:
+      - name: Example for action "on_search"
+        description: >-
+          Auto-generated example for action "on_search" in flow
+          "Discovery_Flow_incremental_catalog"
+        payload:
+          context:
+            action: on_search
+            bap_id: dev-automation.ondc.org
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
+            bpp_id: dev-automation.ondc.org
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/seller
+            city: '*'
+            core_version: 1.2.5
+            country: IND
+            domain: 'ONDC:RET16'
+            message_id: 09ae400d-61ba-4561-b273-c90fd0e1a7e2
+            timestamp: '2026-03-19T16:24:50.771Z'
+            transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
+            ttl: PT30S
+          message:
+            catalog:
+              bpp/providers:
+                - id: P1
+                  items:
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Kitchen Storage and Containers
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P2D
+                      category_id: Kitchen Storage and Containers
+                      descriptor:
+                        code: '5:ESS45300'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Introducing the MINISO Two-Layer Drawer Organizer
+                          Cosmetic Storage Box in a sleek, modern White,
+                          Rectangular design. Crafted with toughness and
+                          durability in mind, this organizer is built to
+                          withstand daily use, ensuring your items stay secure
+                          and protected.Its compact design offers simplicity and
+                          perfection, allowing you to maximize space while
+                          maintaining an elegant aesthetic.
+                        name: MINISO Two-Layer Drawer Organizer
+                        short_desc: >-
+                          Hard, tough and durable cosmetic storage and
+                          organizer, Two-Layer Drawer Organizer Cosmetic Storage
+                          Box, White, Rectangular
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I1
+                      location_id: L1
+                      parent_item_id: ''
+                      price:
+                        currency: INR
+                        maximum_value: '2460'
+                        value: '2460'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '8'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: >-
+                                MINISO Two-Layer Drawer Organizer - Cotton
+                                Cloth, With Rod, Multicolour, 1 pc
+                            - code: colour
+                              value: '#00FF00'
+                            - code: colour_name
+                              value: green
+                            - code: material
+                              value: polycarbonate
+                      time:
+                        label: enable
+                        timestamp: '2026-03-19T16:24:50.771Z'
+        type: request
+  - api: search
+    action_id: search_inc_pull
+    owner: BAP
+    responseFor: null
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBzZWFyY2hfaW5jX3B1bGwuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEKICogQHJldHVybnMge09iamVjdH0KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKIGNvbnN0IGN1cnJlbnRUaW1lID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogY29uc29sZS5sb2coImN1cnJlbnRUaW1lIixKU09OLnN0cmluZ2lmeShjdXJyZW50VGltZSkpCiAgIC8vIERlZmF1bHQ6IGxhc3QgMiBob3VycyB3aW5kb3cKY29uc3Qgc3RhcnRUaW1lID0gbmV3IERhdGUoCiAgRGF0ZS5ub3coKSAtICgyICogNjAgKiA2MCAqIDEwMDApCikudG9JU09TdHJpbmcoKTsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LnRpbWVzdGFtcCA9IGN1cnJlbnRUaW1lOwoKICBjb25zdCBjYXRhbG9nSW5jVGFnID0KICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3MuZmluZCgKICAgICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJjYXRhbG9nX2luYyIKICAgICk7CgogIGlmIChjYXRhbG9nSW5jVGFnKSB7CiAgICBjb25zdCBzdGFydFRpbWVPYmogPSBjYXRhbG9nSW5jVGFnLmxpc3QuZmluZCgKICAgICAgKGl0ZW0pID0+IGl0ZW0uY29kZSA9PT0gInN0YXJ0X3RpbWUiCiAgICApOwoKICAgIGNvbnN0IGVuZFRpbWVPYmogPSBjYXRhbG9nSW5jVGFnLmxpc3QuZmluZCgKICAgICAgKGl0ZW0pID0+IGl0ZW0uY29kZSA9PT0gImVuZF90aW1lIgogICAgKTsKCiAgICBpZiAoc3RhcnRUaW1lT2JqKSB7CiAgICAgIHN0YXJ0VGltZU9iai52YWx1ZSA9IHN0YXJ0VGltZTsKICAgIH0KCiAgICBpZiAoZW5kVGltZU9iaikgewogICAgICAvLyBlbmRfdGltZSBtdXN0IG1hdGNoIGNvbnRleHQudGltZXN0YW1wCiAgICAgIGVuZFRpbWVPYmoudmFsdWUgPSBjdXJyZW50VGltZTsKICAgIH0KICB9CgogIGNvbnN0IGJhcFRlcm1zVGFnID0KICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3MuZmluZCgKICAgICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJiYXBfdGVybXMiCiAgICApOwoKICBpZiAoYmFwVGVybXNUYWcpIHsKICAgIGNvbnN0IGVmZmVjdGl2ZURhdGUgPSBiYXBUZXJtc1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJlZmZlY3RpdmVfZGF0ZSIKICAgICk7CgogICAgaWYgKGVmZmVjdGl2ZURhdGUpIHsKICAgICAgZWZmZWN0aXZlRGF0ZS52YWx1ZSA9IGN1cnJlbnRUaW1lOwogICAgfQogIH0KCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZD8uY29udGV4dCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dCBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLmludGVudC50YWdzIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncy5maW5kKAogICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJjYXRhbG9nX2luYyIKICApOwoKICBpZiAoIWNhdGFsb2dJbmNUYWcpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNhdGFsb2dfaW5jIHRhZyBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGNvbnN0IGJhcFRlcm1zVGFnID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gImJhcF90ZXJtcyIKICApOwoKICBpZiAoIWJhcFRlcm1zVGFnKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJiYXBfdGVybXMgdGFnIGlzIG1pc3NpbmciCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      defaultPayload:
+        context:
+          domain: 'ONDC:RET10'
+          action: search
+          country: IND
+          city: '*'
+          core_version: 1.2.5
+          bap_id: bnp.com
+          bap_uri: 'https://bnp.com/ondc'
+          transaction_id: T1
+          message_id: M1
+          timestamp: ''
+          ttl: PT30S
+        message:
+          intent:
+            payment:
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3.54'
+            tags:
+              - code: catalog_inc
+                list:
+                  - code: start_time
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  - code: end_time
+                    value: ''
+              - code: bap_terms
+                list:
+                  - code: static_terms
+                    value: ''
+                  - code: static_terms_new
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  - code: effective_date
+                    value: ''
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        catalog_inc_start_time: >-
+          $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='start_time')].value
+        catalog_inc_end_time: >-
+          $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='end_time')].value
+      inputs: {}
+  - api: on_search
+    action_id: on_search_inc_pull
+    owner: BPP
+    responseFor: null
+    unsolicited: false
+    description: please add relevant description
+    mock:
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IHN0YXJ0VGltZSA9IHNlc3Npb25EYXRhLmNhdGFsb2dfaW5jX3N0YXJ0X3RpbWU/LlswXTsKICBjb25zdCBlbmRUaW1lID0gc2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXTsKCiAgaWYgKCFzdGFydFRpbWUgfHwgIWVuZFRpbWUpIHsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKICB9CiAgIGNvbnN0IGl0ZW1UaW1lc3RhbXAgPSBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKAogICAgc3RhcnRUaW1lLAogICAgZW5kVGltZQogICk7CgogIGNvbnN0IHByb3ZpZGVycyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSB8fCBbXTsKCiAgcHJvdmlkZXJzLmZvckVhY2goKHByb3ZpZGVyKSA9PiB7CiAgICBwcm92aWRlci5pdGVtcyA9IChwcm92aWRlci5pdGVtcyB8fCBbXSkubWFwKChpdGVtKSA9PiAoewogICAgICAuLi5pdGVtLAogICAgICB0aW1lOiB7CiAgICAgICAgbGFiZWw6ICJlbmFibGUiLAogICAgICAgIHRpbWVzdGFtcDogaXRlbVRpbWVzdGFtcAogICAgICB9CiAgICB9KSk7CiAgfSk7CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICdtZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSBpcyBtaXNzaW5nJwogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfc3RhcnRfdGltZT8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJzZXNzaW9uRGF0YS5jYXRhbG9nX2luY19zdGFydF90aW1lIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAic2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWUgaXMgbWlzc2luZyIKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
+      defaultPayload:
+        context:
+          action: on_search
+          bap_id: dev-automation.ondc.org
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
+          bpp_id: dev-automation.ondc.org
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/seller'
+          city: '*'
+          core_version: 1.2.5
+          country: IND
+          domain: 'ONDC:RET16'
+          message_id: 09ae400d-61ba-4561-b273-c90fd0e1a7e2
+          timestamp: '2026-03-19T16:24:50.771Z'
+          transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
+          ttl: PT30S
+        message:
+          catalog:
+            bpp/providers:
+              - id: P1
+                items:
+                  - id: I1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T05:30:48.998Z'
+                    parent_item_id: ''
+                    descriptor:
+                      name: MINISO Two-Layer Drawer Organizer
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Hard, tough and durable cosmetic storage and organizer,
+                        Two-Layer Drawer Organizer Cosmetic Storage Box, White,
+                        Rectangular
+                      long_desc: >-
+                        Introducing the MINISO Two-Layer Drawer Organizer
+                        Cosmetic Storage Box in a sleek, modern White,
+                        Rectangular design. Crafted with toughness and
+                        durability in mind, this organizer is built to withstand
+                        daily use, ensuring your items stay secure and
+                        protected.Its compact design offers simplicity and
+                        perfection, allowing you to maximize space while
+                        maintaining an elegant aesthetic.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '5:ESS45300'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '8'
+                    price:
+                      currency: INR
+                      value: '2460'
+                      maximum_value: '2460'
+                    category_id: Kitchen Storage and Containers
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Kitchen Storage and Containers
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: >-
+                              MINISO Two-Layer Drawer Organizer - Cotton Cloth,
+                              With Rod, Multicolour, 1 pc
+                          - code: colour
+                            value: '#00FF00'
+                          - code: colour_name
+                            value: green
+                          - code: material
+                            value: polycarbonate
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+      inputs: {}
+transaction_history:
+  - action_id: search_inc
+    payload:
+      context:
+        domain: 'ONDC:RET16'
+        action: search
+        timestamp: '2026-06-03T08:20:15.699Z'
+        transaction_id: d07b069a-327a-4054-9b28-89c051072f75
+        message_id: 894c4103-50ff-4a4c-8281-125a7ddc3c90
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        intent:
+          payment:
+            '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3'
+          tags:
+            - code: catalog_inc
+              list:
+                - code: mode
+                  value: start
+    action: search
+    saved_info: {}
+  - action_id: on_search_inc
+    payload:
+      context:
+        domain: 'ONDC:RET16'
+        action: on_search
+        timestamp: '2026-06-03T08:20:15.713Z'
+        transaction_id: d07b069a-327a-4054-9b28-89c051072f75
+        message_id: 91e2c014-5a39-4c3d-9f46-b12cccae5461
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        bpp_id: bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        catalog:
+          bpp/providers:
+            - id: P1
+              items:
+                - id: I1
+                  time:
+                    label: enable
+                    timestamp: '2026-06-03T08:20:15.713Z'
+                  parent_item_id: ''
+                  descriptor:
+                    name: MINISO Two-Layer Drawer Organizer
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Hard, tough and durable cosmetic storage and organizer,
+                      Two-Layer Drawer Organizer Cosmetic Storage Box, White,
+                      Rectangular
+                    long_desc: >-
+                      Introducing the MINISO Two-Layer Drawer Organizer Cosmetic
+                      Storage Box in a sleek, modern White, Rectangular design.
+                      Crafted with toughness and durability in mind, this
+                      organizer is built to withstand daily use, ensuring your
+                      items stay secure and protected.Its compact design offers
+                      simplicity and perfection, allowing you to maximize space
+                      while maintaining an elegant aesthetic.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '5:ESS45300'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '8'
+                  price:
+                    currency: INR
+                    value: '2460'
+                    maximum_value: '2460'
+                  category_id: Kitchen Storage and Containers
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Kitchen Storage and Containers
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: >-
+                            MINISO Two-Layer Drawer Organizer - Cotton Cloth,
+                            With Rod, Multicolour, 1 pc
+                        - code: colour
+                          value: '#00FF00'
+                        - code: colour_name
+                          value: green
+                        - code: material
+                          value: polycarbonate
+    action: on_search
+    saved_info: {}
+  - action_id: search_inc_pull
+    payload:
+      context:
+        domain: 'ONDC:RET16'
+        action: search
+        timestamp: '2026-06-03T08:20:15.725Z'
+        transaction_id: d07b069a-327a-4054-9b28-89c051072f75
+        message_id: b09c871b-26ba-4db3-9fce-57ad707bf141
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        intent:
+          payment:
+            '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3.54'
+          tags:
+            - code: catalog_inc
+              list:
+                - code: start_time
+                  value: '2026-06-03T06:20:15.726Z'
+                - code: end_time
+                  value: '2026-06-03T08:20:15.725Z'
+            - code: bap_terms
+              list:
+                - code: static_terms
+                  value: ''
+                - code: static_terms_new
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: effective_date
+                  value: '2026-06-03T08:20:15.725Z'
+    action: search
+    saved_info: {}
+  - action_id: on_search_inc_pull
+    payload:
+      context:
+        domain: 'ONDC:RET16'
+        action: on_search
+        timestamp: '2026-06-03T08:20:15.732Z'
+        transaction_id: d07b069a-327a-4054-9b28-89c051072f75
+        message_id: 3f8d669a-ad96-4004-81b9-fc7099c00590
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        bpp_id: bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        catalog:
+          bpp/providers:
+            - id: P1
+              items:
+                - id: I1
+                  time:
+                    label: enable
+                    timestamp: '2026-06-03T07:30:09.212Z'
+                  parent_item_id: ''
+                  descriptor:
+                    name: MINISO Two-Layer Drawer Organizer
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Hard, tough and durable cosmetic storage and organizer,
+                      Two-Layer Drawer Organizer Cosmetic Storage Box, White,
+                      Rectangular
+                    long_desc: >-
+                      Introducing the MINISO Two-Layer Drawer Organizer Cosmetic
+                      Storage Box in a sleek, modern White, Rectangular design.
+                      Crafted with toughness and durability in mind, this
+                      organizer is built to withstand daily use, ensuring your
+                      items stay secure and protected.Its compact design offers
+                      simplicity and perfection, allowing you to maximize space
+                      while maintaining an elegant aesthetic.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '5:ESS45300'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '8'
+                  price:
+                    currency: INR
+                    value: '2460'
+                    maximum_value: '2460'
+                  category_id: Kitchen Storage and Containers
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Kitchen Storage and Containers
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: >-
+                            MINISO Two-Layer Drawer Organizer - Cotton Cloth,
+                            With Rod, Multicolour, 1 pc
+                        - code: colour
+                          value: '#00FF00'
+                        - code: colour_name
+                          value: green
+                        - code: material
+                          value: polycarbonate
+    action: on_search
+    saved_info: {}
+validationLib: ''
+helperLib: >-
+  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiB1cGRhdGVUaW1lc3RhbXBzKG9iaikgewogIGNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIGZ1bmN0aW9uIHJlY3Vyc2l2ZVVwZGF0ZShjdXJyZW50KSB7CiAgICBpZiAodHlwZW9mIGN1cnJlbnQgIT09ICJvYmplY3QiIHx8IGN1cnJlbnQgPT09IG51bGwpIHsKICAgICAgcmV0dXJuOwogICAgfQoKICAgIGZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKICAgICAgaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKICAgICAgICBjdXJyZW50W2tleV0gPSBjdXJyZW50VGltZXN0YW1wOwogICAgICB9IGVsc2UgaWYgKHR5cGVvZiBjdXJyZW50W2tleV0gPT09ICJvYmplY3QiKSB7CiAgICAgICAgcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSk7CiAgICAgIH0KICAgIH0KICB9CgogIHJlY3Vyc2l2ZVVwZGF0ZShvYmopOwogIHJldHVybiBvYmo7Cn0KCgpmdW5jdGlvbiBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKHN0YXJ0VGltZSwgZW5kVGltZSkgewoJY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZShzdGFydFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IGVuZCA9IG5ldyBEYXRlKGVuZFRpbWUpLmdldFRpbWUoKTsKCglpZiAoaXNOYU4oc3RhcnQpIHx8IGlzTmFOKGVuZCkgfHwgc3RhcnQgPj0gZW5kKSB7CgkJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKCX0KCgljb25zdCByYW5kb21UaW1lID0KCQlNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiAoZW5kIC0gc3RhcnQgKyAxKSkgKyBzdGFydDsKCglyZXR1cm4gbmV3IERhdGUocmFuZG9tVGltZSkudG9JU09TdHJpbmcoKTsKfQ==
