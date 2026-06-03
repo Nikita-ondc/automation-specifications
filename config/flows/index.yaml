@@ -83,4 +83,4 @@ flows:
       - WORKBENCH
     description: Discovery Flow Incremental Catalog Refresh Pull
     config:
-      $ref: ./GROCERY/Discovery_Flow_incremental_catalog_refresh_pull.yaml
+      $ref: ./FASHION/Discovery_Flow_incremental_catalog_refresh_pull.yaml
