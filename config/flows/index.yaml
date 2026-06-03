@@ -118,6 +118,14 @@ flows:
     config:
       $ref: ./FASHION/Discovery_Flow_incremental_catalog.yaml
   - type: playground
+    id:  Discovery_Flow_incremental_catalog_refresh_pull
+    usecase: FASHION
+    tags:
+      - WORKBENCH
+    description: Retail 1.2.5 (Discovery Flow Incremental Catalog Refresh pull)
+    config:
+      $ref: ./FASHION/Discovery_Flow_incremental_catalog_refresh_pull.yaml
+  - type: playground
     id: Force_Cancellation_Flow
     usecase: FASHION
     tags:
