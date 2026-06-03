@@ -96,6 +96,14 @@ flows:
     config:
       $ref: ./APPLIANCES/Discovery_Flow_incremental_catalog.yaml
   - type: playground
+    id: Discovery_Flow_incremental_catalog_pull
+    usecase: APPLIANCES
+    tags:
+      - WORKBENCH
+    description: Retail 1.2.5 (Discovery_Flow_incremental_catalog_pull)
+    config:
+      $ref: ./APPLIANCES/Discovery_Flow_incremental_catalog_pull.yaml
+  - type: playground
     id: Force_Cancellation_Flow
     usecase: APPLIANCES
     tags:
