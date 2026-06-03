@@ -9,7 +9,7 @@ flows:
       - REPORTABLE
     description: Master Search
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/master_search.yaml"
+      $ref:  "./BUSINESS_LOAN/master_search.yaml"
   - type: playground
     id: business_term_loan_with_offline_online_foreclosure
     meta:
@@ -21,7 +21,7 @@ flows:
       # - PERSONAL LOAN
     description: Business Loan - Term Loan with Offline & Online Journey (ForeClosure)
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/business_term_loan_with_offline_online_foreclosure.yaml"
+      $ref:  "./BUSINESS_LOAN/business_term_loan_with_offline_online_foreclosure.yaml"
   - type: playground
     id: business_term_loan_with_offline_online_missed_emi
     usecase: BUSINESS_LOAN
@@ -33,7 +33,7 @@ flows:
       # - PERSONAL LOAN
     description: Business Loan - Term Loan with Offline & Online Journey (Missed EMI)
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/business_term_loan_with_offline_online_missed_emi.yaml"
+      $ref:  "./BUSINESS_LOAN/business_term_loan_with_offline_online_missed_emi.yaml"
   - type: playground
     id: business_term_loan_with_offline_online_pre_part
     meta:
@@ -45,7 +45,7 @@ flows:
       # - PERSONAL LOAN
     description: Business Loan - Term Loan with Offline & Online Journey(Pre Part) 
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/BUSINESS_LOAN/business_term_loan_with_offline_online_pre_part.yaml"        
+      $ref:  "./BUSINESS_LOAN/business_term_loan_with_offline_online_pre_part.yaml"        
   #LAMF
   - type: playground
     id: master_search
@@ -57,7 +57,7 @@ flows:
       - REPORTABLE
     description: Master Search
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/master_search.yaml"
+      $ref:  "./LAMF/master_search.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc_offline_journey
     meta:
@@ -68,7 +68,7 @@ flows:
       - REPORTABLE
     description: LAMF Credit Line with Offline Journey
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey.yaml"
+      $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey.yaml"
    - type: playground
     id: lamf_credit_line_with_mfc_single_redirection
     meta:
@@ -79,7 +79,7 @@ flows:
       - REPORTABLE
     description: LAMF Credit Line with MFC
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/flows/lamf_credit_line_with_mfc_single_redirection.yaml"
+      $ref:  "./LAMF/flows/lamf_credit_line_with_mfc_single_redirection.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc
     meta:
@@ -90,7 +90,7 @@ flows:
       - REPORTABLE
     description: LAMF Credit Line with MFC
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/flows/lamf_credit_line_with_mfc.yaml"        
+      $ref:  "./LAMF/flows/lamf_credit_line_with_mfc.yaml"        
  
   - type: playground
     id: lamf_credit_line_with_mfc_offline_journey_drawdown
@@ -102,7 +102,7 @@ flows:
       - REPORTABLE
     description: Drawdown - LAMF Credit Line with Offline Journey
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown.yaml"
+      $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc_offline_journey_drawdown_foreclosure
     meta:
@@ -113,7 +113,7 @@ flows:
       - REPORTABLE
     description: Drawdown - LAMF Credit Line with Offline Journey(ForeClosure)
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_foreclosure.yaml"
+      $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_foreclosure.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc_offline_journey_drawdown_missed_emi
     meta:
@@ -124,7 +124,7 @@ flows:
       - REPORTABLE
     description: Drawdown - LAMF Credit Line with Offline Journey(Missed EMI)
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_missed_emi.yaml"
+      $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_missed_emi.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part
     meta:
@@ -135,5 +135,5 @@ flows:
       - REPORTABLE
     description: Drawdown - LAMF Credit Line with Offline Journey(Pre Part)
     config:
-      $ref:  "src/config/FIS12/V-2.3.0/LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part.yaml"                
+      $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part.yaml"                
  
