@@ -10,6 +10,16 @@ flows:
     config:
       $ref: ./HOME&KITCHEN/Buyer_Cancellation_Flow.yaml
   - type: playground
+    id: Catalog_Rejection_Flow
+    usecase: HOME&KITCHEN
+    tags:
+      - WORKBENCH
+      - MANDATORY
+      - REPORTABLE
+    description: Retail 1.2.5 (Catalog Rejection)
+    config:
+      $ref: ./HOME&KITCHEN/Catalog_Rejection_Flow.yaml
+  - type: playground
     id: Customization_Input_Text_Flow
     usecase: HOME&KITCHEN
     tags:
@@ -138,6 +148,13 @@ flows:
     description: Retail 1.2.5 (Return)
     config:
       $ref: ./HOME&KITCHEN/Return_Flow.yaml
+  - type: playground
+    id: Replacement_Flow
+    usecase: HOME&KITCHEN
+    tags: []
+    description: Retail 1.2.5 (Replacement)
+    config:
+      $ref: ./HOME&KITCHEN/Replacement_Flow.yaml
   - type: playground
     id: SNP_Collecting_Payment_Flow
     usecase: HOME&KITCHEN

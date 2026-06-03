@@ -5,16 +5,14 @@ meta:
   config_version: 0.0.0001
   description: Retail 1.2.5 (Replacement)
   use_case_id: HOME&KITCHEN
+  flowName: Replacement Flow
 transaction_data:
-  transaction_id: 6f986b56-d784-4927-bb27-b76897fdd0a5
-  latest_timestamp: 1970-01-01T00:00:00.000Z
+  transaction_id: 8f5ddc62-42ba-47aa-a0d1-c71ba1059581
+  latest_timestamp: '1970-01-01T00:00:00.000Z'
   bap_id: bap.example.com
-  bap_uri: https://bap.example.com
+  bap_uri: 'https://bap.example.com'
   bpp_id: bpp.example.com
-  bpp_uri: https://bpp.example.com
-  external_session_data:
-    finvuUrl: https://dev-automation.ondc.org/finvu
-    mockBaseUrl: https://dev-automation.ondc.org/mock
+  bpp_uri: 'https://bpp.example.com'
 steps:
   - api: select
     action_id: select

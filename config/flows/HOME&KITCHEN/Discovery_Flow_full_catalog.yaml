@@ -1,5 +1,5 @@
 meta:
-  domain: ONDC:RET16
+  domain: 'ONDC:RET16'
   version: 1.2.5
   flowId: Discovery_Flow_full_catalog
   config_version: 0.0.0001
@@ -8,11 +8,11 @@ meta:
   flowName: Discovery Flow full catalog
 transaction_data:
   transaction_id: 25174d41-afb1-4305-a94f-fdd0ff09faea
-  latest_timestamp: 1970-01-01T00:00:00.000Z
+  latest_timestamp: '1970-01-01T00:00:00.000Z'
   bap_id: bap.example.com
-  bap_uri: https://bap.example.com
+  bap_uri: 'https://bap.example.com'
   bpp_id: bpp.example.com
-  bpp_uri: https://bpp.example.com
+  bpp_uri: 'https://bpp.example.com'
 steps:
   - api: search
     action_id: search
@@ -21,20 +21,23 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAgZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaTsKICBkZWxldGUgZGVmYXVsdFBheWxvYWQuY29udGV4dC5icHBfaWQ7CiAgbGV0IGNvZGVzQXJyYXkgPSBzZXNzaW9uRGF0YT8udXNlcl9pbnB1dHM/LmZlYXR1cmVfZGlzY292ZXJ5IHx8IFtdOwogIGNvbnN0IHRhZ3MgPSBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzIDsKICBpZiAoY29kZXNBcnJheS5sZW5ndGggPiAwKQogICAgdGFncy5wdXNoKHsKICAgICAgY29kZTogImJhcF9mZWF0dXJlcyIsCiAgICAgIGxpc3Q6IFsKICAgICAgICAuLi5jb2Rlc0FycmF5Lm1hcCgoY29kZSkgPT4gewogICAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgY29kZTogY29kZSwKICAgICAgICAgICAgdmFsdWU6ICJ5ZXMiLAogICAgICAgICAgfTsKICAgICAgICB9KSwKICAgICAgXSwKICAgIH0pOwogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
           action: search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer
-          city: std:080
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
+          city: 'std:080'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET16
+          domain: 'ONDC:RET16'
           message_id: d67bf3f0-25c7-4ba4-9943-cccadbca4158
-          timestamp: 2026-03-20T12:13:30.567Z
+          timestamp: '2026-03-20T12:13:30.567Z'
           transaction_id: dcc50e5f-f544-42a3-a54e-b84699316b53
           ttl: PT30S
         message:
@@ -42,17 +45,18 @@ steps:
             fulfillment:
               type: Delivery
             payment:
-              "@ondc/org/buyer_app_finder_fee_amount": "3"
-              "@ondc/org/buyer_app_finder_fee_type": percent
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3'
             tags:
               - code: bap_terms
                 list:
                   - code: static_terms
-                    value: ""
+                    value: ''
                   - code: static_terms_new
-                    value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                   - code: effective_date
-                    value: 2025-02-01T00:00:00.000Z
+                    value: '2025-02-01T00:00:00.000Z'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -62,40 +66,49 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
+        message_id: $.context.message_id
+        city: $.context.city
+        inc_mode: >-
+          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
+        bap_features: >-
+          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
       inputs:
-        oldInputs:
-          - name: city_code
-            label: Enter the city code
-            type: text
-            payloadField: $.context.city
-          - name: feature_discovery
-            label: Features supported
-            type: checkbox
-            options:
-              - code: "007"
-                name: SNP collecting payment
-              - code: 00C
-                name: Exchange flow
-              - code: "0099"
-                name: Purchase finance
-              - code: "016"
-                name: Customization of input type text
-        id: old_inputs
+        id: feature_discovery_input
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            city_code:
+              type: string
+              default: 'std:011'
+            feature_discovery:
+              type: array
+              items:
+                type: string
+                enum:
+                  - '007'
+                  - 00C
+                  - 0099
+                  - '016'
+              default: []
+          additionalProperties: true
+          default: {}
     examples:
       - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
+        description: >-
+          Auto-generated example for action "search" in flow
           "Discovery_Flow_full_catalog"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer
-            city: std:080
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
+            city: 'std:080'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET16
+            domain: 'ONDC:RET16'
             message_id: d67bf3f0-25c7-4ba4-9943-cccadbca4158
-            timestamp: 2026-03-20T12:13:30.567Z
+            timestamp: '2026-03-20T12:13:30.567Z'
             transaction_id: dcc50e5f-f544-42a3-a54e-b84699316b53
             ttl: PT30S
           message:
@@ -103,17 +116,18 @@ steps:
               fulfillment:
                 type: Delivery
               payment:
-                "@ondc/org/buyer_app_finder_fee_amount": "3"
-                "@ondc/org/buyer_app_finder_fee_type": percent
+                '@ondc/org/buyer_app_finder_fee_amount': '3'
+                '@ondc/org/buyer_app_finder_fee_type': percent
               tags:
                 - code: bap_terms
                   list:
                     - code: static_terms
-                      value: ""
+                      value: ''
                     - code: static_terms_new
-                      value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                      value: >-
+                        https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: effective_date
-                      value: 2025-02-01T00:00:00.000Z
+                      value: '2025-02-01T00:00:00.000Z'
         type: request
   - api: on_search
     action_id: on_search
@@ -122,50 +136,75 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBkZXNjcmlwdG9yVGFncyA9IGRlZmF1bHRQYXlsb2FkPy5tZXNzYWdlLmNhdGFsb2c/LlsnYnBwL2Rlc2NyaXB0b3InXT8udGFnczsKCQoJc2Vzc2lvbkRhdGEuYmFwX2ZlYXR1cmVzPy5mb3JFYWNoKChmZWF0dXJlKSA9PiB7CgkJY29uc29sZS5sb2coYEZlYXR1cmU6ICR7ZmVhdHVyZX1gKTsKCX0pOwoJaWYgKHNlc3Npb25EYXRhLmJhcF9mZWF0dXJlcz8uaW5jbHVkZXMoIjAwOTkiKSkgewoJCWxldCBicHBUZXJtc1RhZyA9IGRlc2NyaXB0b3JUYWdzLmZpbmQoKHQpID0+IHQuY29kZSA9PT0gImJwcF90ZXJtcyIpOwoJCWNvbnN0IHBheW1lbnRDb2xsZWN0aW9uID0gewoJCQkiY29kZSI6ImNvbGxlY3RfcGF5bWVudCIsCgkJCSJ2YWx1ZSI6IlkiCgkJfQoJCWJwcFRlcm1zVGFnLmxpc3QucHVzaChwYXltZW50Q29sbGVjdGlvbik7CgkJY29uc3QgcHJvdmlkZXIgPSBkZWZhdWx0UGF5bG9hZD8ubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF07CgkJcHJvdmlkZXIub2ZmZXJzID0gcHJvdmlkZXI/Lm9mZmVycyB8fCBbXTsKCQlwcm92aWRlci5vZmZlcnMucHVzaCh7CgkJCWlkOiAiRklOMSIsCgkJCWRlc2NyaXB0b3I6IHsKCQkJY29kZTogImZpbmFuY2luZyIsCgkJCWltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvb2ZmZXIyLWJhbm5lci5wbmciXSwKCQkJfSwKCQkJbG9jYXRpb25faWRzOiBbIkwxIl0sCgkJCWl0ZW1faWRzOiBbIkkxIiwgIkkyIiwgIkkzIl0sCgkJCXRpbWU6IHsKCQkJbGFiZWw6ICJ2YWxpZCIsCgkJCXJhbmdlOiB7CgkJCQlzdGFydDogIjIwMjQtMTItMjNUMDY6NTU6NDUuMDM1WiIsCgkJCQllbmQ6ICIyMDMwLTEyLTIzVDA4OjEyOjE1LjAzM1oiLAoJCQl9LAoJCQl9LAoJCQl0YWdzOiBbCgkJCXsKCQkJCWNvZGU6ICJmaW5hbmNlX3Rlcm1zIiwKCQkJCWxpc3Q6IFsKCQkJCXsgY29kZTogInN1YnZlbnRpb25fdHlwZSIsIHZhbHVlOiAicGVyY2VudCIgfSwKCQkJCXsgY29kZTogInN1YnZlbnRpb25fYW1vdW50IiwgdmFsdWU6ICIxMC4wMCIgfSwKCQkJCV0sCgkJCX0sCgkJCXsKCQkJCWNvZGU6ICJtZXRhIiwKCQkJCWxpc3Q6IFsKCQkJCXsgY29kZTogImFkZGl0aXZlIiwgdmFsdWU6ICJubyIgfSwKCQkJCXsgY29kZTogImF1dG8iLCB2YWx1ZTogIm5vIiB9LAoJCQkJXSwKCQkJfSwKCQkJXSwKCQl9KTsKCX0KCWlmIChzZXNzaW9uRGF0YS5iYXBfZmVhdHVyZXM/LmluY2x1ZGVzKCIwMDciKSkgewoJCWxldCBicHBUZXJtc1RhZyA9IGRlc2NyaXB0b3JUYWdzLmZpbmQoKHQpID0+IHQuY29kZSA9PT0gImJwcF90ZXJtcyIpOwoJCWNvbnN0IGhhc0NvbGxlY3RQYXltZW50ID0gKGJwcFRlcm1zVGFnKSA9PiBicHBUZXJtc1RhZz8uc29tZSgodCkgPT4gdC5jb2RlID09PSAiY29sbGVjdF9wYXltZW50Iik7CgkJaWYgKCFoYXNDb2xsZWN0UGF5bWVudChicHBUZXJtc1RhZy5saXN0KSkgewoJCQlicHBUZXJtc1RhZy5saXN0LnB1c2goeyBjb2RlOiAiY29sbGVjdF9wYXltZW50IiwgdmFsdWU6ICJZIiB9KTsKCQl9Cgl9CiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
           action: on_search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/seller
-          city: std:080
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/seller'
+          city: 'std:080'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET16
+          domain: 'ONDC:RET16'
           message_id: d67bf3f0-25c7-4ba4-9943-cccadbca4158
-          timestamp: 2026-03-20T12:13:30.878Z
+          timestamp: '2026-03-20T12:13:30.878Z'
           transaction_id: dcc50e5f-f544-42a3-a54e-b84699316b53
           ttl: PT30S
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+              - id: F2
+                type: Self-Pickup
             bpp/descriptor:
-              images:
-                - https://sellerNP.com/images/np.png
-              long_desc: Seller Marketplace
               name: Mock Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
               short_desc: Seller Marketplace
-              symbol: https://sellerNP.com/images/np.png
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
               tags:
                 - code: bpp_terms
                   list:
                     - code: np_type
                       value: MSN
                     - code: accept_bap_terms
-                      value: Y
-            bpp/fulfillments:
-              - id: F1
-                type: Delivery
-              - id: F2
-                type: Self-Pickup
+                      value: 'Y'
             bpp/providers:
-              - categories:
-                  - descriptor:
+              - id: P1
+                time:
+                  label: enable
+                  timestamp: '2024-08-13T06:46:19.736Z'
+                rating: '4'
+                ttl: PT24H
+                locations:
+                  - id: L1
+                    gps: '12.925810,77.583624'
+                    address:
+                      city: Bengaluru
+                      state: Karnataka
+                      area_code: '560011'
+                      street: Jayanagar
+                      locality: Jayanagar
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                categories:
+                  - id: V1
+                    descriptor:
                       name: Variant Group 1
-                    id: V1
                     tags:
                       - code: type
                         list:
@@ -176,74 +215,62 @@ steps:
                           - code: name
                             value: item.tags.attribute.colour
                           - code: seq
-                            value: "1"
-                descriptor:
-                  images:
-                    - https://sellerNP.com/images/store1.png
-                  long_desc: Store 1
-                  name: Store 1
-                  short_desc: Store 1
-                  symbol: https://sellerNP.com/images/store1.png
-                fulfillments:
-                  - contact:
-                      email: test@gmail.com
-                      phone: "9876543210"
-                    id: F1
-                    type: Delivery
-                  - contact:
-                      email: home@example.com
-                      phone: "7980271122"
-                    id: F2
-                    type: Self-Pickup
-                id: P1
+                            value: '1'
                 items:
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                    "@ondc/org/return_window": P7D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": true
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Kitchen Storage and Containers
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P2D
-                    category_id: Kitchen Storage and Containers
+                  - id: I1
+                    rating: '4'
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T05:30:48.998Z'
                     descriptor:
-                      code: 3:9501101530007
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: Introducing the MINISO Two-Layer Drawer Organizer Cosmetic Storage
-                        Box in a sleek, modern White, Rectangular design.
-                        Crafted with toughness and durability in mind, this
-                        organizer is built to withstand daily use, ensuring your
-                        items stay secure and protected.Its compact design
-                        offers simplicity and perfection, allowing you to
-                        maximize space while maintaining an elegant aesthetic.
                       name: MINISO Two-Layer Drawer Organizer
-                      short_desc: Hard, tough and durable cosmetic storage and organizer, Two-Layer
-                        Drawer Organizer Cosmetic Storage Box, White,
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Hard, tough and durable cosmetic storage and organizer,
+                        Two-Layer Drawer Organizer Cosmetic Storage Box, White,
                         Rectangular
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I1
-                    location_id: L1
-                    price:
-                      currency: INR
-                      maximum_value: "2260"
-                      value: "2260"
+                      long_desc: >-
+                        Introducing the MINISO Two-Layer Drawer Organizer
+                        Cosmetic Storage Box in a sleek, modern White,
+                        Rectangular design. Crafted with toughness and
+                        durability in mind, this organizer is built to withstand
+                        daily use, ensuring your items stay secure and
+                        protected.Its compact design offers simplicity and
+                        perfection, allowing you to maximize space while
+                        maintaining an elegant aesthetic.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:9501101530007'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "8"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '8'
+                    price:
+                      currency: INR
+                      value: '2260'
+                      maximum_value: '2260'
+                    category_id: Kitchen Storage and Containers
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Kitchen Storage and Containers
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -254,65 +281,68 @@ steps:
                           - code: brand
                             value: MINISO Two-Layer Drawer Organizer
                           - code: colour
-                            value: "#FFFFFF"
+                            value: '#FFFFFF'
                           - code: colour_name
                             value: brown
                           - code: material
                             value: thermoplastic
+                  - id: I2
+                    rating: '3'
                     time:
                       label: enable
-                      timestamp: 2024-08-12T05:30:48.998Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                    "@ondc/org/return_window": P7D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": true
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Plastic Crayons
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P2D
-                    category_id: Stationery
+                      timestamp: '2024-08-12T10:27:48.913Z'
                     descriptor:
-                      code: 3:7845632198471
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: Introducing our comprehensive combination kit, designed to satisfy
-                        all your creative needs! Whether you're sketching,
-                        writing, shading, coloring, or highlighting, this kit
-                        has everything you need to unleash your
+                      name: Doms Art Apps Nxt Kit With Plastic Carry Case
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Coloring & Art Smart Kit Use For Sketching, Writing,
+                        Shading, Colouring, Highlighting.Non-Toxic, Easy To Use
+                        & Safe For Childrens.
+                      long_desc: >-
+                        Introducing our comprehensive combination kit, designed
+                        to satisfy all your creative needs! Whether you're
+                        sketching, writing, shading, coloring, or highlighting,
+                        this kit has everything you need to unleash your
                         imagination.You'll find 12 watercolor pens for vibrant
                         and fluid artwork, 12 bi-color crayons for versatile
                         coloring options, 12 jumbo oil pastels for smooth and
                         blendable textures, 8 bi-color pencils for precise
                         drawing and shading, and 12 plastic crayons for bold and
                         durable lines.
-                      name: Doms Art Apps Nxt Kit With Plastic Carry Case
-                      short_desc: Coloring & Art Smart Kit Use For Sketching, Writing, Shading,
-                        Colouring, Highlighting.Non-Toxic, Easy To Use & Safe
-                        For Childrens.
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I2
-                    location_id: L1
-                    parent_item_id: V1
-                    price:
-                      currency: INR
-                      maximum_value: "2460"
-                      value: "2460"
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:7845632198471'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "10"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "3"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '2460'
+                      maximum_value: '2460'
+                    category_id: Stationery
+                    location_id: L1
+                    parent_item_id: V1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Plastic Crayons
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -323,67 +353,73 @@ steps:
                           - code: brand
                             value: Doms Art Apps Nxt Kit With Plastic Carry Case
                           - code: colour
-                            value: "#00FF00"
+                            value: '#00FF00'
                           - code: colour_name
                             value: white
                           - code: material
                             value: thermoplastic
-                    time:
-                      label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                    "@ondc/org/return_window": P3D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": false
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Laundry Basket
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P1D
-                    category_id: Closet/Laundry/Shoe Organization
+                  - id: I3
+                    rating: '4'
                     descriptor:
-                      code: 3:6213574890238
+                      name: >-
+                        Polyset Elegance Plastic Laundry Basket - Assorted
+                        Colour, 53 L
+                      code: '3:6213574890238'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Polyset’s Laundry Basket made from virgin plastic is
+                        very tough, durable and long-lasting. It has a large
+                        space enough to keep all the dirty clothes in one place.
+                      long_desc: >-
+                        This Polyset Laundry Basket comes in large size, which
+                        gives you more space for storing multiple items like
+                        clothes, toys, groceries, kitchen and bathing
+                        accessories, Ideal for family use in the Laundry Room,
+                        Bedroom or Bathroom, its comes with Lid for protecting
+                        your articles from dust. To add to it, the design and
+                        colour are so attractive, that it immediately gels with
+                        the interior of the house, be it Bathroom, Bedroom etc.
+                        Easily portable cross ventilating body keeps your items
+                        free module formation. And it gives you extra-large
+                        space to store your products. And this is made from
+                        tough plastic which provides immense strength to the
+                        product.
                       images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: This Polyset Laundry Basket comes in large size, which gives you more
-                        space for storing multiple items like clothes, toys,
-                        groceries, kitchen and bathing accessories, Ideal for
-                        family use in the Laundry Room, Bedroom or Bathroom, its
-                        comes with Lid for protecting your articles from dust.
-                        To add to it, the design and colour are so attractive,
-                        that it immediately gels with the interior of the house,
-                        be it Bathroom, Bedroom etc. Easily portable cross
-                        ventilating body keeps your items free module formation.
-                        And it gives you extra-large space to store your
-                        products. And this is made from tough plastic which
-                        provides immense strength to the product.
-                      name: Polyset Elegance Plastic Laundry Basket - Assorted Colour, 53 L
-                      short_desc: Polyset’s Laundry Basket made from virgin plastic is very tough,
-                        durable and long-lasting. It has a large space enough to
-                        keep all the dirty clothes in one place.
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I3
-                    location_id: L1
-                    parent_item_id: V1
+                        - 'https://sellerNP.com/images/i1.png'
                     price:
                       currency: INR
-                      maximum_value: "1199.00"
-                      value: "499.00"
+                      value: '499.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Closet/Laundry/Shoe Organization
+                    fulfillment_id: F1
+                    location_id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
                     quantity:
                       available:
-                        count: "99"
+                        count: '99'
                       maximum:
-                        count: "99"
+                        count: '99'
                       unitized:
                         measure:
+                          value: '1'
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                    '@ondc/org/returnable': true
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Laundry Basket
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -392,70 +428,77 @@ steps:
                       - code: attribute
                         list:
                           - code: brand
-                            value: Polyset Elegance Plastic Laundry Basket - Assorted Colour, 53 L
+                            value: >-
+                              Polyset Elegance Plastic Laundry Basket - Assorted
+                              Colour, 53 L
                           - code: colour
-                            value: "#964B00"
+                            value: '#964B00'
                           - code: colour_name
                             value: brown
                           - code: material
                             value: polyethylene
-                    time:
-                      label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                    "@ondc/org/return_window": P3D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": false
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Vegetable Chopper
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P1D
-                    category_id: Kitchen Tools
+                  - id: I4
+                    rating: '4'
                     descriptor:
-                      code: 3:4012789543165
+                      name: >-
+                        Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With
+                        3 Blades
+                      code: '3:4012789543165'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        This compact kitchen appliance is designed to help cut
+                        down your kitchen chores. A simple pull of the rope in
+                        this Pigeon Handy vegetable and fruit chopper cuts food
+                        items down into small pieces.
+                      long_desc: >-
+                        The chopper’s tough body can withstand being put into
+                        the dishwasher. Durable design, a convenient usage made
+                        of ABS plastic, this chopper is sturdy and durable. It
+                        does not require electricity to be in use. Chop fruits
+                        and vegetables. This chopper uses its three stainless
+                        steel blades and relies on a unique string function to
+                        chop fruits and vegetables with ease. It is easy to use.
+                        Get things started by putting the blade in the Centre of
+                        the bowl. Cut vegetables or fruits to medium size before
+                        putting them into this bowl to avoid jamming the blades.
+                        Put the contents in, close the lid, and sting the rope
+                        quickly to cut food items into small pieces. Then, take
+                        the blade system out before you remove the chopped food.
                       images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: The chopper’s tough body can withstand being put into the dishwasher.
-                        Durable design, a convenient usage made of ABS plastic,
-                        this chopper is sturdy and durable. It does not require
-                        electricity to be in use. Chop fruits and vegetables.
-                        This chopper uses its three stainless steel blades and
-                        relies on a unique string function to chop fruits and
-                        vegetables with ease. It is easy to use. Get things
-                        started by putting the blade in the Centre of the bowl.
-                        Cut vegetables or fruits to medium size before putting
-                        them into this bowl to avoid jamming the blades. Put the
-                        contents in, close the lid, and sting the rope quickly
-                        to cut food items into small pieces. Then, take the
-                        blade system out before you remove the chopped food.
-                      name: Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With 3 Blades
-                      short_desc: This compact kitchen appliance is designed to help cut down your
-                        kitchen chores. A simple pull of the rope in this Pigeon
-                        Handy vegetable and fruit chopper cuts food items down
-                        into small pieces.
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I4
-                    location_id: L1
+                        - 'https://sellerNP.com/images/i1.png'
                     price:
                       currency: INR
-                      maximum_value: "1199.00"
-                      value: "599.00"
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    category_id: Kitchen Tools
+                    fulfillment_id: F1
+                    location_id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
                     quantity:
                       available:
-                        count: "99"
+                        count: '99'
                       maximum:
-                        count: "99"
+                        count: '99'
                       unitized:
                         measure:
+                          value: '1'
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                    '@ondc/org/returnable': true
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Vegetable Chopper
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -464,40 +507,26 @@ steps:
                       - code: attribute
                         list:
                           - code: brand
-                            value: Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With 3 Blades
+                            value: >-
+                              Pigeon by Stovekraft Mini Fruit & Vegetable
+                              Chopper With 3 Blades
                           - code: colour
-                            value: "#00FF00"
+                            value: '#00FF00'
                           - code: colour_name
                             value: green
                           - code: material
                             value: polypropylene
-                    time:
-                      label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                locations:
-                  - address:
-                      area_code: "560011"
-                      city: Bengaluru
-                      locality: Jayanagar
-                      state: Karnataka
-                      street: Jayanagar
-                    circle:
-                      gps: 12.925810,77.583624
-                      radius:
-                        unit: km
-                        value: "5"
-                    gps: 12.925810,77.583624
-                    id: L1
-                    time:
-                      days: 1,2,3,4,5
-                      label: enable
-                      range:
-                        end: "2359"
-                        start: "0000"
-                      schedule:
-                        holidays: []
-                      timestamp: 2024-08-13T06:46:19.736Z
-                rating: "4"
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9876543210'
+                      email: test@gmail.com
+                  - id: F2
+                    type: Self-Pickup
+                    contact:
+                      email: home@example.com
+                      phone: '7980271122'
                 tags:
                   - code: serviceability
                     list:
@@ -506,11 +535,11 @@ steps:
                       - code: category
                         value: Kitchen Storage and Containers
                       - code: type
-                        value: "11"
+                        value: '11'
                       - code: unit
                         value: pincode
                       - code: val
-                        value: 560001-560076,560083
+                        value: '560001-560076,560083'
                   - code: serviceability
                     list:
                       - code: location
@@ -518,7 +547,7 @@ steps:
                       - code: category
                         value: Stationery
                       - code: type
-                        value: "12"
+                        value: '12'
                       - code: val
                         value: IND
                       - code: unit
@@ -530,7 +559,7 @@ steps:
                       - code: category
                         value: Closet/Laundry/Shoe Organization
                       - code: type
-                        value: "12"
+                        value: '12'
                       - code: unit
                         value: country
                       - code: val
@@ -542,7 +571,7 @@ steps:
                       - code: category
                         value: Kitchen Tools
                       - code: type
-                        value: "12"
+                        value: '12'
                       - code: unit
                         value: country
                       - code: val
@@ -554,17 +583,13 @@ steps:
                       - code: location
                         value: L1
                       - code: day_from
-                        value: "1"
+                        value: '1'
                       - code: day_to
-                        value: "5"
+                        value: '5'
                       - code: time_from
-                        value: "0000"
+                        value: '0000'
                       - code: time_to
-                        value: "2359"
-                time:
-                  label: enable
-                  timestamp: 2024-08-13T06:46:19.736Z
-                ttl: PT24H
+                        value: '2359'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -574,42 +599,49 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
+        bpp_id: $.context.bpp_id
+        bpp_uri: $.context.bpp_uri
+        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
+        np_type: >-
+          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
       inputs: {}
     examples:
       - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
+        description: >-
+          Auto-generated example for action "on_search" in flow
           "Discovery_Flow_full_catalog"
         payload:
           context:
             action: on_search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/seller
-            city: std:080
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.5/seller
+            city: 'std:080'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET16
+            domain: 'ONDC:RET16'
             message_id: d67bf3f0-25c7-4ba4-9943-cccadbca4158
-            timestamp: 2026-03-20T12:13:30.878Z
+            timestamp: '2026-03-20T12:13:30.878Z'
             transaction_id: dcc50e5f-f544-42a3-a54e-b84699316b53
             ttl: PT30S
           message:
             catalog:
               bpp/descriptor:
                 images:
-                  - https://sellerNP.com/images/np.png
+                  - 'https://sellerNP.com/images/np.png'
                 long_desc: Seller Marketplace
                 name: Mock Seller NP
                 short_desc: Seller Marketplace
-                symbol: https://sellerNP.com/images/np.png
+                symbol: 'https://sellerNP.com/images/np.png'
                 tags:
                   - code: bpp_terms
                     list:
                       - code: np_type
                         value: MSN
                       - code: accept_bap_terms
-                        value: Y
+                        value: 'Y'
               bpp/fulfillments:
                 - id: F1
                   type: Delivery
@@ -630,75 +662,78 @@ steps:
                             - code: name
                               value: item.tags.attribute.colour
                             - code: seq
-                              value: "1"
+                              value: '1'
                   descriptor:
                     images:
-                      - https://sellerNP.com/images/store1.png
+                      - 'https://sellerNP.com/images/store1.png'
                     long_desc: Store 1
                     name: Store 1
                     short_desc: Store 1
-                    symbol: https://sellerNP.com/images/store1.png
+                    symbol: 'https://sellerNP.com/images/store1.png'
                   fulfillments:
                     - contact:
                         email: test@gmail.com
-                        phone: "9876543210"
+                        phone: '9876543210'
                       id: F1
                       type: Delivery
                     - contact:
                         email: home@example.com
-                        phone: "7980271122"
+                        phone: '7980271122'
                       id: F2
                       type: Self-Pickup
                   id: P1
                   items:
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Kitchen Storage and Containers
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
+                      '@ondc/org/time_to_ship': P2D
                       category_id: Kitchen Storage and Containers
                       descriptor:
-                        code: 3:9501101530007
+                        code: '3:9501101530007'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: Introducing the MINISO Two-Layer Drawer Organizer Cosmetic Storage
-                          Box in a sleek, modern White, Rectangular design.
-                          Crafted with toughness and durability in mind, this
-                          organizer is built to withstand daily use, ensuring
-                          your items stay secure and protected.Its compact
-                          design offers simplicity and perfection, allowing you
-                          to maximize space while maintaining an elegant
-                          aesthetic.
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Introducing the MINISO Two-Layer Drawer Organizer
+                          Cosmetic Storage Box in a sleek, modern White,
+                          Rectangular design. Crafted with toughness and
+                          durability in mind, this organizer is built to
+                          withstand daily use, ensuring your items stay secure
+                          and protected.Its compact design offers simplicity and
+                          perfection, allowing you to maximize space while
+                          maintaining an elegant aesthetic.
                         name: MINISO Two-Layer Drawer Organizer
-                        short_desc: Hard, tough and durable cosmetic storage and organizer, Two-Layer
-                          Drawer Organizer Cosmetic Storage Box, White,
-                          Rectangular
-                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: >-
+                          Hard, tough and durable cosmetic storage and
+                          organizer, Two-Layer Drawer Organizer Cosmetic Storage
+                          Box, White, Rectangular
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I1
                       location_id: L1
                       price:
                         currency: INR
-                        maximum_value: "2260"
-                        value: "2260"
+                        maximum_value: '2260'
+                        value: '2260'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "8"
+                          count: '8'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -709,65 +744,68 @@ steps:
                             - code: brand
                               value: MINISO Two-Layer Drawer Organizer
                             - code: colour
-                              value: "#FFFFFF"
+                              value: '#FFFFFF'
                             - code: colour_name
                               value: brown
                             - code: material
                               value: thermoplastic
                       time:
                         label: enable
-                        timestamp: 2024-08-12T05:30:48.998Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T05:30:48.998Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Plastic Crayons
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
+                      '@ondc/org/time_to_ship': P2D
                       category_id: Stationery
                       descriptor:
-                        code: 3:7845632198471
+                        code: '3:7845632198471'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: Introducing our comprehensive combination kit, designed to satisfy
-                          all your creative needs! Whether you're sketching,
-                          writing, shading, coloring, or highlighting, this kit
-                          has everything you need to unleash your
-                          imagination.You'll find 12 watercolor pens for vibrant
-                          and fluid artwork, 12 bi-color crayons for versatile
-                          coloring options, 12 jumbo oil pastels for smooth and
-                          blendable textures, 8 bi-color pencils for precise
-                          drawing and shading, and 12 plastic crayons for bold
-                          and durable lines.
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Introducing our comprehensive combination kit,
+                          designed to satisfy all your creative needs! Whether
+                          you're sketching, writing, shading, coloring, or
+                          highlighting, this kit has everything you need to
+                          unleash your imagination.You'll find 12 watercolor
+                          pens for vibrant and fluid artwork, 12 bi-color
+                          crayons for versatile coloring options, 12 jumbo oil
+                          pastels for smooth and blendable textures, 8 bi-color
+                          pencils for precise drawing and shading, and 12
+                          plastic crayons for bold and durable lines.
                         name: Doms Art Apps Nxt Kit With Plastic Carry Case
-                        short_desc: Coloring & Art Smart Kit Use For Sketching, Writing, Shading,
-                          Colouring, Highlighting.Non-Toxic, Easy To Use & Safe
-                          For Childrens.
-                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: >-
+                          Coloring & Art Smart Kit Use For Sketching, Writing,
+                          Shading, Colouring, Highlighting.Non-Toxic, Easy To
+                          Use & Safe For Childrens.
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I2
                       location_id: L1
                       parent_item_id: V1
                       price:
                         currency: INR
-                        maximum_value: "2460"
-                        value: "2460"
+                        maximum_value: '2460'
+                        value: '2460'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "10"
+                          count: '10'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "3"
+                            value: '1'
+                      rating: '3'
                       tags:
                         - code: origin
                           list:
@@ -778,68 +816,74 @@ steps:
                             - code: brand
                               value: Doms Art Apps Nxt Kit With Plastic Carry Case
                             - code: colour
-                              value: "#00FF00"
+                              value: '#00FF00'
                             - code: colour_name
                               value: white
                             - code: material
                               value: thermoplastic
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P3D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Laundry Basket
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P1D
+                      '@ondc/org/time_to_ship': P1D
                       category_id: Closet/Laundry/Shoe Organization
                       descriptor:
-                        code: 3:6213574890238
+                        code: '3:6213574890238'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: This Polyset Laundry Basket comes in large size, which gives you more
-                          space for storing multiple items like clothes, toys,
-                          groceries, kitchen and bathing accessories, Ideal for
-                          family use in the Laundry Room, Bedroom or Bathroom,
-                          its comes with Lid for protecting your articles from
-                          dust. To add to it, the design and colour are so
-                          attractive, that it immediately gels with the interior
-                          of the house, be it Bathroom, Bedroom etc. Easily
-                          portable cross ventilating body keeps your items free
-                          module formation. And it gives you extra-large space
-                          to store your products. And this is made from tough
-                          plastic which provides immense strength to the
-                          product.
-                        name: Polyset Elegance Plastic Laundry Basket - Assorted Colour, 53 L
-                        short_desc: Polyset’s Laundry Basket made from virgin plastic is very tough,
-                          durable and long-lasting. It has a large space enough
-                          to keep all the dirty clothes in one place.
-                        symbol: https://sellerNP.com/images/i1.png
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          This Polyset Laundry Basket comes in large size, which
+                          gives you more space for storing multiple items like
+                          clothes, toys, groceries, kitchen and bathing
+                          accessories, Ideal for family use in the Laundry Room,
+                          Bedroom or Bathroom, its comes with Lid for protecting
+                          your articles from dust. To add to it, the design and
+                          colour are so attractive, that it immediately gels
+                          with the interior of the house, be it Bathroom,
+                          Bedroom etc. Easily portable cross ventilating body
+                          keeps your items free module formation. And it gives
+                          you extra-large space to store your products. And this
+                          is made from tough plastic which provides immense
+                          strength to the product.
+                        name: >-
+                          Polyset Elegance Plastic Laundry Basket - Assorted
+                          Colour, 53 L
+                        short_desc: >-
+                          Polyset’s Laundry Basket made from virgin plastic is
+                          very tough, durable and long-lasting. It has a large
+                          space enough to keep all the dirty clothes in one
+                          place.
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I3
                       location_id: L1
                       parent_item_id: V1
                       price:
                         currency: INR
-                        maximum_value: "1199.00"
-                        value: "499.00"
+                        maximum_value: '1199.00'
+                        value: '499.00'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "99"
+                          count: '99'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -848,71 +892,78 @@ steps:
                         - code: attribute
                           list:
                             - code: brand
-                              value: Polyset Elegance Plastic Laundry Basket - Assorted Colour, 53 L
+                              value: >-
+                                Polyset Elegance Plastic Laundry Basket -
+                                Assorted Colour, 53 L
                             - code: colour
-                              value: "#964B00"
+                              value: '#964B00'
                             - code: colour_name
                               value: brown
                             - code: material
                               value: polyethylene
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P3D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Vegetable Chopper
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P1D
+                      '@ondc/org/time_to_ship': P1D
                       category_id: Kitchen Tools
                       descriptor:
-                        code: 3:4012789543165
+                        code: '3:4012789543165'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: The chopper’s tough body can withstand being put into the dishwasher.
-                          Durable design, a convenient usage made of ABS
-                          plastic, this chopper is sturdy and durable. It does
-                          not require electricity to be in use. Chop fruits and
-                          vegetables. This chopper uses its three stainless
-                          steel blades and relies on a unique string function to
-                          chop fruits and vegetables with ease. It is easy to
-                          use. Get things started by putting the blade in the
-                          Centre of the bowl. Cut vegetables or fruits to medium
-                          size before putting them into this bowl to avoid
-                          jamming the blades. Put the contents in, close the
-                          lid, and sting the rope quickly to cut food items into
-                          small pieces. Then, take the blade system out before
-                          you remove the chopped food.
-                        name: Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With 3 Blades
-                        short_desc: This compact kitchen appliance is designed to help cut down your
-                          kitchen chores. A simple pull of the rope in this
-                          Pigeon Handy vegetable and fruit chopper cuts food
-                          items down into small pieces.
-                        symbol: https://sellerNP.com/images/i1.png
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          The chopper’s tough body can withstand being put into
+                          the dishwasher. Durable design, a convenient usage
+                          made of ABS plastic, this chopper is sturdy and
+                          durable. It does not require electricity to be in use.
+                          Chop fruits and vegetables. This chopper uses its
+                          three stainless steel blades and relies on a unique
+                          string function to chop fruits and vegetables with
+                          ease. It is easy to use. Get things started by putting
+                          the blade in the Centre of the bowl. Cut vegetables or
+                          fruits to medium size before putting them into this
+                          bowl to avoid jamming the blades. Put the contents in,
+                          close the lid, and sting the rope quickly to cut food
+                          items into small pieces. Then, take the blade system
+                          out before you remove the chopped food.
+                        name: >-
+                          Pigeon by Stovekraft Mini Fruit & Vegetable Chopper
+                          With 3 Blades
+                        short_desc: >-
+                          This compact kitchen appliance is designed to help cut
+                          down your kitchen chores. A simple pull of the rope in
+                          this Pigeon Handy vegetable and fruit chopper cuts
+                          food items down into small pieces.
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I4
                       location_id: L1
                       price:
                         currency: INR
-                        maximum_value: "1199.00"
-                        value: "599.00"
+                        maximum_value: '1199.00'
+                        value: '599.00'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "99"
+                          count: '99'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -921,40 +972,42 @@ steps:
                         - code: attribute
                           list:
                             - code: brand
-                              value: Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With 3 Blades
+                              value: >-
+                                Pigeon by Stovekraft Mini Fruit & Vegetable
+                                Chopper With 3 Blades
                             - code: colour
-                              value: "#00FF00"
+                              value: '#00FF00'
                             - code: colour_name
                               value: green
                             - code: material
                               value: polypropylene
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
+                        timestamp: '2024-08-12T10:27:48.913Z'
                   locations:
                     - address:
-                        area_code: "560011"
+                        area_code: '560011'
                         city: Bengaluru
                         locality: Jayanagar
                         state: Karnataka
                         street: Jayanagar
                       circle:
-                        gps: 12.925810,77.583624
+                        gps: '12.925810,77.583624'
                         radius:
                           unit: km
-                          value: "5"
-                      gps: 12.925810,77.583624
+                          value: '5'
+                      gps: '12.925810,77.583624'
                       id: L1
                       time:
-                        days: 1,2,3,4,5
+                        days: '1,2,3,4,5'
                         label: enable
                         range:
-                          end: "2359"
-                          start: "0000"
+                          end: '2359'
+                          start: '0000'
                         schedule:
                           holidays: []
-                        timestamp: 2024-08-13T06:46:19.736Z
-                  rating: "4"
+                        timestamp: '2024-08-13T06:46:19.736Z'
+                  rating: '4'
                   tags:
                     - code: serviceability
                       list:
@@ -963,11 +1016,11 @@ steps:
                         - code: category
                           value: Kitchen Storage and Containers
                         - code: type
-                          value: "11"
+                          value: '11'
                         - code: unit
                           value: pincode
                         - code: val
-                          value: 560001-560076,560083
+                          value: '560001-560076,560083'
                     - code: serviceability
                       list:
                         - code: location
@@ -975,7 +1028,7 @@ steps:
                         - code: category
                           value: Stationery
                         - code: type
-                          value: "12"
+                          value: '12'
                         - code: val
                           value: IND
                         - code: unit
@@ -987,7 +1040,7 @@ steps:
                         - code: category
                           value: Closet/Laundry/Shoe Organization
                         - code: type
-                          value: "12"
+                          value: '12'
                         - code: unit
                           value: country
                         - code: val
@@ -999,7 +1052,7 @@ steps:
                         - code: category
                           value: Kitchen Tools
                         - code: type
-                          value: "12"
+                          value: '12'
                         - code: unit
                           value: country
                         - code: val
@@ -1011,18 +1064,520 @@ steps:
                         - code: location
                           value: L1
                         - code: day_from
-                          value: "1"
+                          value: '1'
                         - code: day_to
-                          value: "5"
+                          value: '5'
                         - code: time_from
-                          value: "0000"
+                          value: '0000'
                         - code: time_to
-                          value: "2359"
+                          value: '2359'
                   time:
                     label: enable
-                    timestamp: 2024-08-13T06:46:19.736Z
+                    timestamp: '2024-08-13T06:46:19.736Z'
                   ttl: PT24H
         type: request
-transaction_history: []
-validationLib: ""
-helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
+transaction_history:
+  - action_id: search
+    payload:
+      context:
+        domain: 'ONDC:RET16'
+        action: search
+        timestamp: '2026-05-28T08:15:08.109Z'
+        transaction_id: 25174d41-afb1-4305-a94f-fdd0ff09faea
+        message_id: 1b026f13-7648-4cf9-b8b5-7c401e72fd67
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        intent:
+          fulfillment:
+            type: Delivery
+          payment:
+            '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3'
+          tags:
+            - code: bap_terms
+              list:
+                - code: static_terms
+                  value: ''
+                - code: static_terms_new
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: effective_date
+                  value: '2025-02-01T00:00:00.000Z'
+            - code: bap_features
+              list:
+                - code: '007'
+                  value: 'yes'
+    action: search
+    saved_info: {}
+  - action_id: on_search
+    payload:
+      context:
+        domain: 'ONDC:RET16'
+        action: on_search
+        timestamp: '2026-05-28T08:15:08.142Z'
+        transaction_id: 25174d41-afb1-4305-a94f-fdd0ff09faea
+        message_id: 1b026f13-7648-4cf9-b8b5-7c401e72fd67
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        bpp_id: bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        catalog:
+          bpp/fulfillments:
+            - id: F1
+              type: Delivery
+            - id: F2
+              type: Self-Pickup
+          bpp/descriptor:
+            name: Mock Seller NP
+            symbol: 'https://sellerNP.com/images/np.png'
+            short_desc: Seller Marketplace
+            long_desc: Seller Marketplace
+            images:
+              - 'https://sellerNP.com/images/np.png'
+            tags:
+              - code: bpp_terms
+                list:
+                  - code: np_type
+                    value: MSN
+                  - code: accept_bap_terms
+                    value: 'Y'
+                  - code: collect_payment
+                    value: 'Y'
+          bpp/providers:
+            - id: P1
+              time:
+                label: enable
+                timestamp: '2024-08-13T06:46:19.736Z'
+              rating: '4'
+              ttl: PT24H
+              locations:
+                - id: L1
+                  gps: '12.925810,77.583624'
+                  address:
+                    city: Bengaluru
+                    state: Karnataka
+                    area_code: '560011'
+                    street: Jayanagar
+                    locality: Jayanagar
+                  time:
+                    label: enable
+                    timestamp: '2024-08-13T06:46:19.736Z'
+                    days: '1,2,3,4,5'
+                    schedule:
+                      holidays: []
+                    range:
+                      start: '0000'
+                      end: '2359'
+                  circle:
+                    gps: '12.925810,77.583624'
+                    radius:
+                      unit: km
+                      value: '5'
+              descriptor:
+                name: Store 1
+                symbol: 'https://sellerNP.com/images/store1.png'
+                short_desc: Store 1
+                long_desc: Store 1
+                images:
+                  - 'https://sellerNP.com/images/store1.png'
+              categories:
+                - id: V1
+                  descriptor:
+                    name: Variant Group 1
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: variant_group
+                    - code: attr
+                      list:
+                        - code: name
+                          value: item.tags.attribute.colour
+                        - code: seq
+                          value: '1'
+              items:
+                - id: I1
+                  rating: '4'
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T05:30:48.998Z'
+                  descriptor:
+                    name: MINISO Two-Layer Drawer Organizer
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Hard, tough and durable cosmetic storage and organizer,
+                      Two-Layer Drawer Organizer Cosmetic Storage Box, White,
+                      Rectangular
+                    long_desc: >-
+                      Introducing the MINISO Two-Layer Drawer Organizer Cosmetic
+                      Storage Box in a sleek, modern White, Rectangular design.
+                      Crafted with toughness and durability in mind, this
+                      organizer is built to withstand daily use, ensuring your
+                      items stay secure and protected.Its compact design offers
+                      simplicity and perfection, allowing you to maximize space
+                      while maintaining an elegant aesthetic.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:9501101530007'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '8'
+                  price:
+                    currency: INR
+                    value: '2260'
+                    maximum_value: '2260'
+                  category_id: Kitchen Storage and Containers
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Kitchen Storage and Containers
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: MINISO Two-Layer Drawer Organizer
+                        - code: colour
+                          value: '#FFFFFF'
+                        - code: colour_name
+                          value: brown
+                        - code: material
+                          value: thermoplastic
+                - id: I2
+                  rating: '3'
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  descriptor:
+                    name: Doms Art Apps Nxt Kit With Plastic Carry Case
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Coloring & Art Smart Kit Use For Sketching, Writing,
+                      Shading, Colouring, Highlighting.Non-Toxic, Easy To Use &
+                      Safe For Childrens.
+                    long_desc: >-
+                      Introducing our comprehensive combination kit, designed to
+                      satisfy all your creative needs! Whether you're sketching,
+                      writing, shading, coloring, or highlighting, this kit has
+                      everything you need to unleash your imagination.You'll
+                      find 12 watercolor pens for vibrant and fluid artwork, 12
+                      bi-color crayons for versatile coloring options, 12 jumbo
+                      oil pastels for smooth and blendable textures, 8 bi-color
+                      pencils for precise drawing and shading, and 12 plastic
+                      crayons for bold and durable lines.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:7845632198471'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '10'
+                  price:
+                    currency: INR
+                    value: '2460'
+                    maximum_value: '2460'
+                  category_id: Stationery
+                  location_id: L1
+                  parent_item_id: V1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Plastic Crayons
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Doms Art Apps Nxt Kit With Plastic Carry Case
+                        - code: colour
+                          value: '#00FF00'
+                        - code: colour_name
+                          value: white
+                        - code: material
+                          value: thermoplastic
+                - id: I3
+                  rating: '4'
+                  descriptor:
+                    name: >-
+                      Polyset Elegance Plastic Laundry Basket - Assorted Colour,
+                      53 L
+                    code: '3:6213574890238'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Polyset’s Laundry Basket made from virgin plastic is very
+                      tough, durable and long-lasting. It has a large space
+                      enough to keep all the dirty clothes in one place.
+                    long_desc: >-
+                      This Polyset Laundry Basket comes in large size, which
+                      gives you more space for storing multiple items like
+                      clothes, toys, groceries, kitchen and bathing accessories,
+                      Ideal for family use in the Laundry Room, Bedroom or
+                      Bathroom, its comes with Lid for protecting your articles
+                      from dust. To add to it, the design and colour are so
+                      attractive, that it immediately gels with the interior of
+                      the house, be it Bathroom, Bedroom etc. Easily portable
+                      cross ventilating body keeps your items free module
+                      formation. And it gives you extra-large space to store
+                      your products. And this is made from tough plastic which
+                      provides immense strength to the product.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  price:
+                    currency: INR
+                    value: '499.00'
+                    maximum_value: '1199.00'
+                  parent_item_id: V1
+                  category_id: Closet/Laundry/Shoe Organization
+                  fulfillment_id: F1
+                  location_id: L1
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  quantity:
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                    unitized:
+                      measure:
+                        value: '1'
+                        unit: unit
+                  '@ondc/org/returnable': true
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Laundry Basket
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: >-
+                            Polyset Elegance Plastic Laundry Basket - Assorted
+                            Colour, 53 L
+                        - code: colour
+                          value: '#964B00'
+                        - code: colour_name
+                          value: brown
+                        - code: material
+                          value: polyethylene
+                - id: I4
+                  rating: '4'
+                  descriptor:
+                    name: >-
+                      Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With 3
+                      Blades
+                    code: '3:4012789543165'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      This compact kitchen appliance is designed to help cut
+                      down your kitchen chores. A simple pull of the rope in
+                      this Pigeon Handy vegetable and fruit chopper cuts food
+                      items down into small pieces.
+                    long_desc: >-
+                      The chopper’s tough body can withstand being put into the
+                      dishwasher. Durable design, a convenient usage made of ABS
+                      plastic, this chopper is sturdy and durable. It does not
+                      require electricity to be in use. Chop fruits and
+                      vegetables. This chopper uses its three stainless steel
+                      blades and relies on a unique string function to chop
+                      fruits and vegetables with ease. It is easy to use. Get
+                      things started by putting the blade in the Centre of the
+                      bowl. Cut vegetables or fruits to medium size before
+                      putting them into this bowl to avoid jamming the blades.
+                      Put the contents in, close the lid, and sting the rope
+                      quickly to cut food items into small pieces. Then, take
+                      the blade system out before you remove the chopped food.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  category_id: Kitchen Tools
+                  fulfillment_id: F1
+                  location_id: L1
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  quantity:
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                    unitized:
+                      measure:
+                        value: '1'
+                        unit: unit
+                  '@ondc/org/returnable': true
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Vegetable Chopper
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: >-
+                            Pigeon by Stovekraft Mini Fruit & Vegetable Chopper
+                            With 3 Blades
+                        - code: colour
+                          value: '#00FF00'
+                        - code: colour_name
+                          value: green
+                        - code: material
+                          value: polypropylene
+              fulfillments:
+                - id: F1
+                  type: Delivery
+                  contact:
+                    phone: '9876543210'
+                    email: test@gmail.com
+                - id: F2
+                  type: Self-Pickup
+                  contact:
+                    email: home@example.com
+                    phone: '7980271122'
+              tags:
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Kitchen Storage and Containers
+                    - code: type
+                      value: '11'
+                    - code: unit
+                      value: pincode
+                    - code: val
+                      value: '560001-560076,560083'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Stationery
+                    - code: type
+                      value: '12'
+                    - code: val
+                      value: IND
+                    - code: unit
+                      value: country
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Closet/Laundry/Shoe Organization
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Kitchen Tools
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: timing
+                  list:
+                    - code: type
+                      value: All
+                    - code: location
+                      value: L1
+                    - code: day_from
+                      value: '1'
+                    - code: day_to
+                      value: '5'
+                    - code: time_from
+                      value: '0000'
+                    - code: time_to
+                      value: '2359'
+    action: on_search
+    saved_info: {}
+validationLib: ''
+helperLib: >-
+  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cgpjb25zdCBSRVQxNkhPTUVLSVRDSEVOMTI1Q2F0YWxvZyA9IHsKICBjYXRhbG9nOiB7CiAgICAiYnBwL2Z1bGZpbGxtZW50cyI6IFsKICAgICAgewogICAgICAgIGlkOiAiRjEiLAogICAgICAgIHR5cGU6ICJEZWxpdmVyeSIsCiAgICAgIH0sCiAgICAgIHsKICAgICAgICBpZDogIkYyIiwKICAgICAgICB0eXBlOiAiU2VsZi1QaWNrdXAiLAogICAgICB9LAogICAgXSwKICAgICJicHAvZGVzY3JpcHRvciI6IHsKICAgICAgbmFtZTogIk1vY2sgU2VsbGVyIE5QIiwKICAgICAgc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL25wLnBuZyIsCiAgICAgIHNob3J0X2Rlc2M6ICJTZWxsZXIgTWFya2V0cGxhY2UiLAogICAgICBsb25nX2Rlc2M6ICJTZWxsZXIgTWFya2V0cGxhY2UiLAogICAgICBpbWFnZXM6IFsiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL25wLnBuZyJdLAogICAgICB0YWdzOiBbCiAgICAgICAgewogICAgICAgICAgY29kZTogImJwcF90ZXJtcyIsCiAgICAgICAgICBsaXN0OiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICBjb2RlOiAibnBfdHlwZSIsCiAgICAgICAgICAgICAgdmFsdWU6ICJNU04iLAogICAgICAgICAgICB9LAogICAgICAgICAgICB7CiAgICAgICAgICAgICAgY29kZTogImFjY2VwdF9iYXBfdGVybXMiLAogICAgICAgICAgICAgIHZhbHVlOiAiWSIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICBdLAogICAgICAgIH0sCiAgICAgIF0sCiAgICB9LAogICAgImJwcC9wcm92aWRlcnMiOiBbCiAgICAgIHsKICAgICAgICBpZDogIlAxIiwKICAgICAgICB0aW1lOiB7CiAgICAgICAgICBsYWJlbDogImVuYWJsZSIsCiAgICAgICAgICB0aW1lc3RhbXA6ICIyMDI0LTA4LTEzVDA2OjQ2OjE5LjczNloiLAogICAgICAgIH0sCiAgICAgICAgcmF0aW5nOiAiNCIsCiAgICAgICAgdHRsOiAiUFQyNEgiLAogICAgICAgIGxvY2F0aW9uczogWwogICAgICAgICAgewogICAgICAgICAgICBpZDogIkwxIiwKICAgICAgICAgICAgZ3BzOiAiMTIuOTI1ODEwLDc3LjU4MzYyNCIsCiAgICAgICAgICAgIGFkZHJlc3M6IHsKICAgICAgICAgICAgICBjaXR5OiAiQmVuZ2FsdXJ1IiwKICAgICAgICAgICAgICBzdGF0ZTogIkthcm5hdGFrYSIsCiAgICAgICAgICAgICAgYXJlYV9jb2RlOiAiNTYwMDExIiwKICAgICAgICAgICAgICBzdHJlZXQ6ICJKYXlhbmFnYXIiLAogICAgICAgICAgICAgIGxvY2FsaXR5OiAiSmF5YW5hZ2FyIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgdGltZTogewogICAgICAgICAgICAgIGxhYmVsOiAiZW5hYmxlIiwKICAgICAgICAgICAgICB0aW1lc3RhbXA6ICIyMDI0LTA4LTEzVDA2OjQ2OjE5LjczNloiLAogICAgICAgICAgICAgIGRheXM6ICIxLDIsMyw0LDUiLAogICAgICAgICAgICAgIHNjaGVkdWxlOiB7CiAgICAgICAgICAgICAgICBob2xpZGF5czogW10sCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICByYW5nZTogewogICAgICAgICAgICAgICAgc3RhcnQ6ICIwMDAwIiwKICAgICAgICAgICAgICAgIGVuZDogIjIzNTkiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIGNpcmNsZTogewogICAgICAgICAgICAgIGdwczogIjEyLjkyNTgxMCw3Ny41ODM2MjQiLAogICAgICAgICAgICAgIHJhZGl1czogewogICAgICAgICAgICAgICAgdW5pdDogImttIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiNSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgfSwKICAgICAgICAgIH0sCiAgICAgICAgXSwKICAgICAgICBkZXNjcmlwdG9yOiB7CiAgICAgICAgICBuYW1lOiAiU3RvcmUgMSIsCiAgICAgICAgICBzeW1ib2w6ICJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvc3RvcmUxLnBuZyIsCiAgICAgICAgICBzaG9ydF9kZXNjOiAiU3RvcmUgMSIsCiAgICAgICAgICBsb25nX2Rlc2M6ICJTdG9yZSAxIiwKICAgICAgICAgIGltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvc3RvcmUxLnBuZyJdLAogICAgICAgIH0sCiAgICAgICAgY2F0ZWdvcmllczogWwogICAgICAgICAgewogICAgICAgICAgICBpZDogIlYxIiwKICAgICAgICAgICAgZGVzY3JpcHRvcjogewogICAgICAgICAgICAgIG5hbWU6ICJWYXJpYW50IEdyb3VwIDEiLAogICAgICAgICAgICB9LAogICAgICAgICAgICB0YWdzOiBbCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogInR5cGUiLAogICAgICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogInR5cGUiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAidmFyaWFudF9ncm91cCIsCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogImF0dHIiLAogICAgICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogIm5hbWUiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiaXRlbS50YWdzLmF0dHJpYnV0ZS5jb2xvdXIiLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogInNlcSIsCiAgICAgICAgICAgICAgICAgICAgdmFsdWU6ICIxIiwKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIF0sCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgXSwKICAgICAgICAgIH0sCiAgICAgICAgXSwKICAgICAgICBpdGVtczogWwogICAgICAgICAgewogICAgICAgICAgICBpZDogIkkxIiwKICAgICAgICAgICAgcmF0aW5nOiAiNCIsCiAgICAgICAgICAgIHRpbWU6IHsKICAgICAgICAgICAgICBsYWJlbDogImVuYWJsZSIsCiAgICAgICAgICAgICAgdGltZXN0YW1wOiAiMjAyNC0wOC0xMlQwNTozMDo0OC45OThaIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgZGVzY3JpcHRvcjogewogICAgICAgICAgICAgIG5hbWU6ICJNSU5JU08gVHdvLUxheWVyIERyYXdlciBPcmdhbml6ZXIiLAogICAgICAgICAgICAgIHN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciLAogICAgICAgICAgICAgIHNob3J0X2Rlc2M6CiAgICAgICAgICAgICAgICAiSGFyZCwgdG91Z2ggYW5kIGR1cmFibGUgY29zbWV0aWMgc3RvcmFnZSBhbmQgb3JnYW5pemVyLCBUd28tTGF5ZXIgRHJhd2VyIE9yZ2FuaXplciBDb3NtZXRpYyBTdG9yYWdlIEJveCwgV2hpdGUsIFJlY3Rhbmd1bGFyIiwKICAgICAgICAgICAgICBsb25nX2Rlc2M6CiAgICAgICAgICAgICAgICAiSW50cm9kdWNpbmcgdGhlIE1JTklTTyBUd28tTGF5ZXIgRHJhd2VyIE9yZ2FuaXplciBDb3NtZXRpYyBTdG9yYWdlIEJveCBpbiBhIHNsZWVrLCBtb2Rlcm4gV2hpdGUsIFJlY3Rhbmd1bGFyIGRlc2lnbi4gQ3JhZnRlZCB3aXRoIHRvdWdobmVzcyBhbmQgZHVyYWJpbGl0eSBpbiBtaW5kLCB0aGlzIG9yZ2FuaXplciBpcyBidWlsdCB0byB3aXRoc3RhbmQgZGFpbHkgdXNlLCBlbnN1cmluZyB5b3VyIGl0ZW1zIHN0YXkgc2VjdXJlIGFuZCBwcm90ZWN0ZWQuSXRzIGNvbXBhY3QgZGVzaWduIG9mZmVycyBzaW1wbGljaXR5IGFuZCBwZXJmZWN0aW9uLCBhbGxvd2luZyB5b3UgdG8gbWF4aW1pemUgc3BhY2Ugd2hpbGUgbWFpbnRhaW5pbmcgYW4gZWxlZ2FudCBhZXN0aGV0aWMuIiwKICAgICAgICAgICAgICBpbWFnZXM6IFsiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyJdLAogICAgICAgICAgICAgIGNvZGU6ICIzOjk1MDExMDE1MzAwMDciLAogICAgICAgICAgICB9LAogICAgICAgICAgICBxdWFudGl0eTogewogICAgICAgICAgICAgIHVuaXRpemVkOiB7CiAgICAgICAgICAgICAgICBtZWFzdXJlOiB7CiAgICAgICAgICAgICAgICAgIHVuaXQ6ICJ1bml0IiwKICAgICAgICAgICAgICAgICAgdmFsdWU6ICIxIiwKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICBhdmFpbGFibGU6IHsKICAgICAgICAgICAgICAgIGNvdW50OiAiOTkiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgbWF4aW11bTogewogICAgICAgICAgICAgICAgY291bnQ6ICI4IiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICB9LAogICAgICAgICAgICBwcmljZTogewogICAgICAgICAgICAgIGN1cnJlbmN5OiAiSU5SIiwKICAgICAgICAgICAgICB2YWx1ZTogIjIyNjAiLAogICAgICAgICAgICAgIG1heGltdW1fdmFsdWU6ICIyMjYwIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgY2F0ZWdvcnlfaWQ6ICJLaXRjaGVuIFN0b3JhZ2UgYW5kIENvbnRhaW5lcnMiLAogICAgICAgICAgICBsb2NhdGlvbl9pZDogIkwxIiwKICAgICAgICAgICAgZnVsZmlsbG1lbnRfaWQ6ICJGMSIsCiAgICAgICAgICAgICJAb25kYy9vcmcvcmV0dXJuYWJsZSI6IHRydWUsCiAgICAgICAgICAgICJAb25kYy9vcmcvY2FuY2VsbGFibGUiOiB0cnVlLAogICAgICAgICAgICAiQG9uZGMvb3JnL2F2YWlsYWJsZV9vbl9jb2QiOiBmYWxzZSwKICAgICAgICAgICAgIkBvbmRjL29yZy90aW1lX3RvX3NoaXAiOiAiUDJEIiwKICAgICAgICAgICAgIkBvbmRjL29yZy9zZWxsZXJfcGlja3VwX3JldHVybiI6IHRydWUsCiAgICAgICAgICAgICJAb25kYy9vcmcvcmV0dXJuX3dpbmRvdyI6ICJQN0QiLAogICAgICAgICAgICAiQG9uZGMvb3JnL2NvbnRhY3RfZGV0YWlsc19jb25zdW1lcl9jYXJlIjoKICAgICAgICAgICAgICAiU2VsbGVyIEJ1c2luZXNzLHRlc3RAZ21haWwuY29tLDk4NzY1NDMyMTAiLAogICAgICAgICAgICAiQG9uZGMvb3JnL3N0YXR1dG9yeV9yZXFzX3BhY2thZ2VkX2NvbW1vZGl0aWVzIjogewogICAgICAgICAgICAgIG1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfbmFtZTogIlNlbGxlciBCdXNpbmVzcyIsCiAgICAgICAgICAgICAgbWFudWZhY3R1cmVyX29yX3BhY2tlcl9hZGRyZXNzOgogICAgICAgICAgICAgICAgIlNlbGxlciBCdWlsZGluZyBBZGRyZXNzLCBKYXlhbmFnYXIsIEJlbmdhbHVydSwgS2FybmF0YWthLCBJbmRpYSAtIDU2MDAxMSIsCiAgICAgICAgICAgICAgY29tbW9uX29yX2dlbmVyaWNfbmFtZV9vZl9jb21tb2RpdHk6CiAgICAgICAgICAgICAgICAiS2l0Y2hlbiBTdG9yYWdlIGFuZCBDb250YWluZXJzIiwKICAgICAgICAgICAgICBtb250aF95ZWFyX29mX21hbnVmYWN0dXJlX3BhY2tpbmdfaW1wb3J0OiAiTkEiLAogICAgICAgICAgICB9LAogICAgICAgICAgICB0YWdzOiBbCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogIm9yaWdpbiIsCiAgICAgICAgICAgICAgICBsaXN0OiBbCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjb2RlOiAiY291bnRyeSIsCiAgICAgICAgICAgICAgICAgICAgdmFsdWU6ICJJTkQiLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJhdHRyaWJ1dGUiLAogICAgICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogImJyYW5kIiwKICAgICAgICAgICAgICAgICAgICB2YWx1ZTogIk1JTklTTyBUd28tTGF5ZXIgRHJhd2VyIE9yZ2FuaXplciAiLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogImNvbG91ciIsCiAgICAgICAgICAgICAgICAgICAgdmFsdWU6ICIjRkZGRkZGIiwKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIGNvZGU6ICJjb2xvdXJfbmFtZSIsCiAgICAgICAgICAgICAgICAgICAgdmFsdWU6ICJicm93biIsCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjb2RlOiAibWF0ZXJpYWwiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAidGhlcm1vcGxhc3RpYyIsCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgIF0sCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICBpZDogIkkyIiwKICAgICAgICAgICAgcmF0aW5nOiAiMyIsCiAgICAgICAgICAgIHRpbWU6IHsKICAgICAgICAgICAgICBsYWJlbDogImVuYWJsZSIsCiAgICAgICAgICAgICAgdGltZXN0YW1wOiAiMjAyNC0wOC0xMlQxMDoyNzo0OC45MTNaIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgZGVzY3JpcHRvcjogewogICAgICAgICAgICAgIG5hbWU6ICJEb21zIEFydCBBcHBzIE54dCBLaXQgV2l0aCBQbGFzdGljIENhcnJ5IENhc2UiLAogICAgICAgICAgICAgIHN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciLAogICAgICAgICAgICAgIHNob3J0X2Rlc2M6CiAgICAgICAgICAgICAgICAiQ29sb3JpbmcgJiBBcnQgU21hcnQgS2l0IFVzZSBGb3IgU2tldGNoaW5nLCBXcml0aW5nLCBTaGFkaW5nLCBDb2xvdXJpbmcsIEhpZ2hsaWdodGluZy5Ob24tVG94aWMsIEVhc3kgVG8gVXNlICYgU2FmZSBGb3IgQ2hpbGRyZW5zLiIsCiAgICAgICAgICAgICAgbG9uZ19kZXNjOgogICAgICAgICAgICAgICAgIkludHJvZHVjaW5nIG91ciBjb21wcmVoZW5zaXZlIGNvbWJpbmF0aW9uIGtpdCwgZGVzaWduZWQgdG8gc2F0aXNmeSBhbGwgeW91ciBjcmVhdGl2ZSBuZWVkcyEgV2hldGhlciB5b3UncmUgc2tldGNoaW5nLCB3cml0aW5nLCBzaGFkaW5nLCBjb2xvcmluZywgb3IgaGlnaGxpZ2h0aW5nLCB0aGlzIGtpdCBoYXMgZXZlcnl0aGluZyB5b3UgbmVlZCB0byB1bmxlYXNoIHlvdXIgaW1hZ2luYXRpb24uWW91J2xsIGZpbmQgMTIgd2F0ZXJjb2xvciBwZW5zIGZvciB2aWJyYW50IGFuZCBmbHVpZCBhcnR3b3JrLCAxMiBiaS1jb2xvciBjcmF5b25zIGZvciB2ZXJzYXRpbGUgY29sb3Jpbmcgb3B0aW9ucywgMTIganVtYm8gb2lsIHBhc3RlbHMgZm9yIHNtb290aCBhbmQgYmxlbmRhYmxlIHRleHR1cmVzLCA4IGJpLWNvbG9yIHBlbmNpbHMgZm9yIHByZWNpc2UgZHJhd2luZyBhbmQgc2hhZGluZywgYW5kIDEyIHBsYXN0aWMgY3JheW9ucyBmb3IgYm9sZCBhbmQgZHVyYWJsZSBsaW5lcy4iLAogICAgICAgICAgICAgIGltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvaTEucG5nIl0sCiAgICAgICAgICAgICAgY29kZTogIjM6Nzg0NTYzMjE5ODQ3MSIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHF1YW50aXR5OiB7CiAgICAgICAgICAgICAgdW5pdGl6ZWQ6IHsKICAgICAgICAgICAgICAgIG1lYXN1cmU6IHsKICAgICAgICAgICAgICAgICAgdW5pdDogInVuaXQiLAogICAgICAgICAgICAgICAgICB2YWx1ZTogIjEiLAogICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIGF2YWlsYWJsZTogewogICAgICAgICAgICAgICAgY291bnQ6ICI5OSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICBtYXhpbXVtOiB7CiAgICAgICAgICAgICAgICBjb3VudDogIjEwIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICB9LAogICAgICAgICAgICBwcmljZTogewogICAgICAgICAgICAgIGN1cnJlbmN5OiAiSU5SIiwKICAgICAgICAgICAgICB2YWx1ZTogIjI0NjAiLAogICAgICAgICAgICAgIG1heGltdW1fdmFsdWU6ICIyNDYwIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgY2F0ZWdvcnlfaWQ6ICJTdGF0aW9uZXJ5IiwKICAgICAgICAgICAgbG9jYXRpb25faWQ6ICJMMSIsCiAgICAgICAgICAgIHBhcmVudF9pdGVtX2lkOiAiVjEiLAogICAgICAgICAgICBmdWxmaWxsbWVudF9pZDogIkYxIiwKICAgICAgICAgICAgIkBvbmRjL29yZy9yZXR1cm5hYmxlIjogdHJ1ZSwKICAgICAgICAgICAgIkBvbmRjL29yZy9jYW5jZWxsYWJsZSI6IHRydWUsCiAgICAgICAgICAgICJAb25kYy9vcmcvYXZhaWxhYmxlX29uX2NvZCI6IGZhbHNlLAogICAgICAgICAgICAiQG9uZGMvb3JnL3RpbWVfdG9fc2hpcCI6ICJQMkQiLAogICAgICAgICAgICAiQG9uZGMvb3JnL3NlbGxlcl9waWNrdXBfcmV0dXJuIjogdHJ1ZSwKICAgICAgICAgICAgIkBvbmRjL29yZy9yZXR1cm5fd2luZG93IjogIlA3RCIsCiAgICAgICAgICAgICJAb25kYy9vcmcvY29udGFjdF9kZXRhaWxzX2NvbnN1bWVyX2NhcmUiOgogICAgICAgICAgICAgICJTZWxsZXIgQnVzaW5lc3MsdGVzdEBnbWFpbC5jb20sOTg3NjU0MzIxMCIsCiAgICAgICAgICAgICJAb25kYy9vcmcvc3RhdHV0b3J5X3JlcXNfcGFja2FnZWRfY29tbW9kaXRpZXMiOiB7CiAgICAgICAgICAgICAgbWFudWZhY3R1cmVyX29yX3BhY2tlcl9uYW1lOiAiU2VsbGVyIEJ1c2luZXNzIiwKICAgICAgICAgICAgICBtYW51ZmFjdHVyZXJfb3JfcGFja2VyX2FkZHJlc3M6CiAgICAgICAgICAgICAgICAiU2VsbGVyIEJ1aWxkaW5nIEFkZHJlc3MsIEpheWFuYWdhciwgQmVuZ2FsdXJ1LCBLYXJuYXRha2EsIEluZGlhIC0gNTYwMDExIiwKICAgICAgICAgICAgICBjb21tb25fb3JfZ2VuZXJpY19uYW1lX29mX2NvbW1vZGl0eTogIlBsYXN0aWMgQ3JheW9ucyIsCiAgICAgICAgICAgICAgbW9udGhfeWVhcl9vZl9tYW51ZmFjdHVyZV9wYWNraW5nX2ltcG9ydDogIk5BIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgdGFnczogWwogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJvcmlnaW4iLAogICAgICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogImNvdW50cnkiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiSU5EIiwKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIF0sCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAiYXR0cmlidXRlIiwKICAgICAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIGNvZGU6ICJicmFuZCIsCiAgICAgICAgICAgICAgICAgICAgdmFsdWU6ICJEb21zIEFydCBBcHBzIE54dCBLaXQgV2l0aCBQbGFzdGljIENhcnJ5IENhc2UgIiwKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIGNvZGU6ICJjb2xvdXIiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiIzAwRkYwMCIsCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjb2RlOiAiY29sb3VyX25hbWUiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAid2hpdGUiLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogIm1hdGVyaWFsIiwKICAgICAgICAgICAgICAgICAgICB2YWx1ZTogInRoZXJtb3BsYXN0aWMiLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICBdLAogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgaWQ6ICJJMyIsCiAgICAgICAgICAgIHJhdGluZzogIjQiLAogICAgICAgICAgICBkZXNjcmlwdG9yOiB7CiAgICAgICAgICAgICAgbmFtZTogIlBvbHlzZXQgRWxlZ2FuY2UgUGxhc3RpYyBMYXVuZHJ5IEJhc2tldCAtIEFzc29ydGVkIENvbG91ciwgNTMgTCIsCiAgICAgICAgICAgICAgY29kZTogIjM6NjIxMzU3NDg5MDIzOCIsCiAgICAgICAgICAgICAgc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyIsCiAgICAgICAgICAgICAgc2hvcnRfZGVzYzoKICAgICAgICAgICAgICAgICJQb2x5c2V04oCZcyBMYXVuZHJ5IEJhc2tldCBtYWRlIGZyb20gdmlyZ2luIHBsYXN0aWMgaXMgdmVyeSB0b3VnaCwgZHVyYWJsZSBhbmQgbG9uZy1sYXN0aW5nLiBJdCBoYXMgYSBsYXJnZSBzcGFjZSBlbm91Z2ggdG8ga2VlcCBhbGwgdGhlIGRpcnR5IGNsb3RoZXMgaW4gb25lIHBsYWNlLiIsCiAgICAgICAgICAgICAgbG9uZ19kZXNjOgogICAgICAgICAgICAgICAgIlRoaXMgUG9seXNldCBMYXVuZHJ5IEJhc2tldCBjb21lcyBpbiBsYXJnZSBzaXplLCB3aGljaCBnaXZlcyB5b3UgbW9yZSBzcGFjZSBmb3Igc3RvcmluZyBtdWx0aXBsZSBpdGVtcyBsaWtlIGNsb3RoZXMsIHRveXMsIGdyb2Nlcmllcywga2l0Y2hlbiBhbmQgYmF0aGluZyBhY2Nlc3NvcmllcywgSWRlYWwgZm9yIGZhbWlseSB1c2UgaW4gdGhlIExhdW5kcnkgUm9vbSwgQmVkcm9vbSBvciBCYXRocm9vbSwgaXRzIGNvbWVzIHdpdGggTGlkIGZvciBwcm90ZWN0aW5nIHlvdXIgYXJ0aWNsZXMgZnJvbSBkdXN0LiBUbyBhZGQgdG8gaXQsIHRoZSBkZXNpZ24gYW5kIGNvbG91ciBhcmUgc28gYXR0cmFjdGl2ZSwgdGhhdCBpdCBpbW1lZGlhdGVseSBnZWxzIHdpdGggdGhlIGludGVyaW9yIG9mIHRoZSBob3VzZSwgYmUgaXQgQmF0aHJvb20sIEJlZHJvb20gZXRjLiBFYXNpbHkgcG9ydGFibGUgY3Jvc3MgdmVudGlsYXRpbmcgYm9keSBrZWVwcyB5b3VyIGl0ZW1zIGZyZWUgbW9kdWxlIGZvcm1hdGlvbi4gQW5kIGl0IGdpdmVzIHlvdSBleHRyYS1sYXJnZSBzcGFjZSB0byBzdG9yZSB5b3VyIHByb2R1Y3RzLiBBbmQgdGhpcyBpcyBtYWRlIGZyb20gdG91Z2ggcGxhc3RpYyB3aGljaCBwcm92aWRlcyBpbW1lbnNlIHN0cmVuZ3RoIHRvIHRoZSBwcm9kdWN0LiIsCiAgICAgICAgICAgICAgaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciXSwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgcHJpY2U6IHsKICAgICAgICAgICAgICBjdXJyZW5jeTogIklOUiIsCiAgICAgICAgICAgICAgdmFsdWU6ICI0OTkuMDAiLAogICAgICAgICAgICAgIG1heGltdW1fdmFsdWU6ICIxMTk5LjAwIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgcGFyZW50X2l0ZW1faWQ6ICJWMSIsCiAgICAgICAgICAgIGNhdGVnb3J5X2lkOiAiQ2xvc2V0L0xhdW5kcnkvU2hvZSBPcmdhbml6YXRpb24iLAogICAgICAgICAgICBmdWxmaWxsbWVudF9pZDogIkYxIiwKICAgICAgICAgICAgbG9jYXRpb25faWQ6ICJMMSIsCiAgICAgICAgICAgIHRpbWU6IHsKICAgICAgICAgICAgICBsYWJlbDogImVuYWJsZSIsCiAgICAgICAgICAgICAgdGltZXN0YW1wOiAiMjAyNC0wOC0xMlQxMDoyNzo0OC45MTNaIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgcXVhbnRpdHk6IHsKICAgICAgICAgICAgICBhdmFpbGFibGU6IHsKICAgICAgICAgICAgICAgIGNvdW50OiAiOTkiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgbWF4aW11bTogewogICAgICAgICAgICAgICAgY291bnQ6ICI5OSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB1bml0aXplZDogewogICAgICAgICAgICAgICAgbWVhc3VyZTogewogICAgICAgICAgICAgICAgICB2YWx1ZTogIjEiLAogICAgICAgICAgICAgICAgICB1bml0OiAidW5pdCIsCiAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgICJAb25kYy9vcmcvcmV0dXJuYWJsZSI6IHRydWUsCiAgICAgICAgICAgICJAb25kYy9vcmcvc2VsbGVyX3BpY2t1cF9yZXR1cm4iOiBmYWxzZSwKICAgICAgICAgICAgIkBvbmRjL29yZy9yZXR1cm5fd2luZG93IjogIlAzRCIsCiAgICAgICAgICAgICJAb25kYy9vcmcvY2FuY2VsbGFibGUiOiB0cnVlLAogICAgICAgICAgICAiQG9uZGMvb3JnL3RpbWVfdG9fc2hpcCI6ICJQMUQiLAogICAgICAgICAgICAiQG9uZGMvb3JnL2F2YWlsYWJsZV9vbl9jb2QiOiBmYWxzZSwKICAgICAgICAgICAgIkBvbmRjL29yZy9jb250YWN0X2RldGFpbHNfY29uc3VtZXJfY2FyZSI6CiAgICAgICAgICAgICAgIkRhaWx5d2VhciBGYXNoaW9uLHN1cHBvcnRAZ21haWwuY29tLDIzNDM0NTM0MzQiLAogICAgICAgICAgICAiQG9uZGMvb3JnL3N0YXR1dG9yeV9yZXFzX3BhY2thZ2VkX2NvbW1vZGl0aWVzIjogewogICAgICAgICAgICAgIG1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfbmFtZTogIlNlbGxlciBCdXNpbmVzcyIsCiAgICAgICAgICAgICAgbWFudWZhY3R1cmVyX29yX3BhY2tlcl9hZGRyZXNzOgogICAgICAgICAgICAgICAgIlNlbGxlciBCdWlsZGluZyBBZGRyZXNzLCBKYXlhbmFnYXIsIEJlbmdhbHVydSwgS2FybmF0YWthLCBJbmRpYSAtIDU2MDAxMSIsCiAgICAgICAgICAgICAgY29tbW9uX29yX2dlbmVyaWNfbmFtZV9vZl9jb21tb2RpdHk6ICJMYXVuZHJ5IEJhc2tldCIsCiAgICAgICAgICAgICAgbW9udGhfeWVhcl9vZl9tYW51ZmFjdHVyZV9wYWNraW5nX2ltcG9ydDogIk5BIiwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgdGFnczogWwogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJvcmlnaW4iLAogICAgICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogImNvdW50cnkiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiSU5EIiwKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgIF0sCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAiYXR0cmlidXRlIiwKICAgICAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIGNvZGU6ICJicmFuZCIsCiAgICAgICAgICAgICAgICAgICAgdmFsdWU6CiAgICAgICAgICAgICAgICAgICAgICAiUG9seXNldCBFbGVnYW5jZSBQbGFzdGljIExhdW5kcnkgQmFza2V0IC0gQXNzb3J0ZWQgQ29sb3VyLCA1MyBMIiwKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIGNvZGU6ICJjb2xvdXIiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiIzk2NEIwMCIsCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjb2RlOiAiY29sb3VyX25hbWUiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiYnJvd24iLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogIm1hdGVyaWFsIiwKICAgICAgICAgICAgICAgICAgICB2YWx1ZTogInBvbHlldGh5bGVuZSIsCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICBdLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgIF0sCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICBpZDogIkk0IiwKICAgICAgICAgICAgcmF0aW5nOiAiNCIsCiAgICAgICAgICAgIGRlc2NyaXB0b3I6IHsKICAgICAgICAgICAgICBuYW1lOiAiUGlnZW9uIGJ5IFN0b3Zla3JhZnQgTWluaSBGcnVpdCAmIFZlZ2V0YWJsZSBDaG9wcGVyIFdpdGggMyBCbGFkZXMiLAogICAgICAgICAgICAgIGNvZGU6ICIzOjQwMTI3ODk1NDMxNjUiLAogICAgICAgICAgICAgIHN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciLAogICAgICAgICAgICAgIHNob3J0X2Rlc2M6CiAgICAgICAgICAgICAgICAiVGhpcyBjb21wYWN0IGtpdGNoZW4gYXBwbGlhbmNlIGlzIGRlc2lnbmVkIHRvIGhlbHAgY3V0IGRvd24geW91ciBraXRjaGVuIGNob3Jlcy4gQSBzaW1wbGUgcHVsbCBvZiB0aGUgcm9wZSBpbiB0aGlzIFBpZ2VvbiBIYW5keSB2ZWdldGFibGUgYW5kIGZydWl0IGNob3BwZXIgY3V0cyBmb29kIGl0ZW1zIGRvd24gaW50byBzbWFsbCBwaWVjZXMuICIsCiAgICAgICAgICAgICAgbG9uZ19kZXNjOgogICAgICAgICAgICAgICAgIlRoZSBjaG9wcGVy4oCZcyB0b3VnaCBib2R5IGNhbiB3aXRoc3RhbmQgYmVpbmcgcHV0IGludG8gdGhlIGRpc2h3YXNoZXIuIER1cmFibGUgZGVzaWduLCBhIGNvbnZlbmllbnQgdXNhZ2UgbWFkZSBvZiBBQlMgcGxhc3RpYywgdGhpcyBjaG9wcGVyIGlzIHN0dXJkeSBhbmQgZHVyYWJsZS4gSXQgZG9lcyBub3QgcmVxdWlyZSBlbGVjdHJpY2l0eSB0byBiZSBpbiB1c2UuIENob3AgZnJ1aXRzIGFuZCB2ZWdldGFibGVzLiBUaGlzIGNob3BwZXIgdXNlcyBpdHMgdGhyZWUgc3RhaW5sZXNzIHN0ZWVsIGJsYWRlcyBhbmQgcmVsaWVzIG9uIGEgdW5pcXVlIHN0cmluZyBmdW5jdGlvbiB0byBjaG9wIGZydWl0cyBhbmQgdmVnZXRhYmxlcyB3aXRoIGVhc2UuIEl0IGlzIGVhc3kgdG8gdXNlLiBHZXQgdGhpbmdzIHN0YXJ0ZWQgYnkgcHV0dGluZyB0aGUgYmxhZGUgaW4gdGhlIENlbnRyZSBvZiB0aGUgYm93bC4gQ3V0IHZlZ2V0YWJsZXMgb3IgZnJ1aXRzIHRvIG1lZGl1bSBzaXplIGJlZm9yZSBwdXR0aW5nIHRoZW0gaW50byB0aGlzIGJvd2wgdG8gYXZvaWQgamFtbWluZyB0aGUgYmxhZGVzLiBQdXQgdGhlIGNvbnRlbnRzIGluLCBjbG9zZSB0aGUgbGlkLCBhbmQgc3RpbmcgdGhlIHJvcGUgcXVpY2tseSB0byBjdXQgZm9vZCBpdGVtcyBpbnRvIHNtYWxsIHBpZWNlcy4gVGhlbiwgdGFrZSB0aGUgYmxhZGUgc3lzdGVtIG91dCBiZWZvcmUgeW91IHJlbW92ZSB0aGUgY2hvcHBlZCBmb29kLiAiLAogICAgICAgICAgICAgIGltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvaTEucG5nIl0sCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHByaWNlOiB7CiAgICAgICAgICAgICAgY3VycmVuY3k6ICJJTlIiLAogICAgICAgICAgICAgIHZhbHVlOiAiNTk5LjAwIiwKICAgICAgICAgICAgICBtYXhpbXVtX3ZhbHVlOiAiMTE5OS4wMCIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIGNhdGVnb3J5X2lkOiAiS2l0Y2hlbiBUb29scyIsCiAgICAgICAgICAgIGZ1bGZpbGxtZW50X2lkOiAiRjEiLAogICAgICAgICAgICBsb2NhdGlvbl9pZDogIkwxIiwKICAgICAgICAgICAgdGltZTogewogICAgICAgICAgICAgIGxhYmVsOiAiZW5hYmxlIiwKICAgICAgICAgICAgICB0aW1lc3RhbXA6ICIyMDI0LTA4LTEyVDEwOjI3OjQ4LjkxM1oiLAogICAgICAgICAgICB9LAogICAgICAgICAgICBxdWFudGl0eTogewogICAgICAgICAgICAgIGF2YWlsYWJsZTogewogICAgICAgICAgICAgICAgY291bnQ6ICI5OSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICBtYXhpbXVtOiB7CiAgICAgICAgICAgICAgICBjb3VudDogIjk5IiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHVuaXRpemVkOiB7CiAgICAgICAgICAgICAgICBtZWFzdXJlOiB7CiAgICAgICAgICAgICAgICAgIHZhbHVlOiAiMSIsCiAgICAgICAgICAgICAgICAgIHVuaXQ6ICJ1bml0IiwKICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgfSwKICAgICAgICAgICAgIkBvbmRjL29yZy9yZXR1cm5hYmxlIjogdHJ1ZSwKICAgICAgICAgICAgIkBvbmRjL29yZy9zZWxsZXJfcGlja3VwX3JldHVybiI6IGZhbHNlLAogICAgICAgICAgICAiQG9uZGMvb3JnL3JldHVybl93aW5kb3ciOiAiUDNEIiwKICAgICAgICAgICAgIkBvbmRjL29yZy9jYW5jZWxsYWJsZSI6IHRydWUsCiAgICAgICAgICAgICJAb25kYy9vcmcvdGltZV90b19zaGlwIjogIlAxRCIsCiAgICAgICAgICAgICJAb25kYy9vcmcvYXZhaWxhYmxlX29uX2NvZCI6IGZhbHNlLAogICAgICAgICAgICAiQG9uZGMvb3JnL2NvbnRhY3RfZGV0YWlsc19jb25zdW1lcl9jYXJlIjoKICAgICAgICAgICAgICAiRGFpbHl3ZWFyIEZhc2hpb24sc3VwcG9ydEBnbWFpbC5jb20sMjM0MzQ1MzQzNCIsCiAgICAgICAgICAgICJAb25kYy9vcmcvc3RhdHV0b3J5X3JlcXNfcGFja2FnZWRfY29tbW9kaXRpZXMiOiB7CiAgICAgICAgICAgICAgbWFudWZhY3R1cmVyX29yX3BhY2tlcl9uYW1lOiAiU2VsbGVyIEJ1c2luZXNzIiwKICAgICAgICAgICAgICBtYW51ZmFjdHVyZXJfb3JfcGFja2VyX2FkZHJlc3M6CiAgICAgICAgICAgICAgICAiU2VsbGVyIEJ1aWxkaW5nIEFkZHJlc3MsIEpheWFuYWdhciwgQmVuZ2FsdXJ1LCBLYXJuYXRha2EsIEluZGlhIC0gNTYwMDExIiwKICAgICAgICAgICAgICBjb21tb25fb3JfZ2VuZXJpY19uYW1lX29mX2NvbW1vZGl0eTogIlZlZ2V0YWJsZSBDaG9wcGVyIiwKICAgICAgICAgICAgICBtb250aF95ZWFyX29mX21hbnVmYWN0dXJlX3BhY2tpbmdfaW1wb3J0OiAiTkEiLAogICAgICAgICAgICB9LAogICAgICAgICAgICB0YWdzOiBbCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogIm9yaWdpbiIsCiAgICAgICAgICAgICAgICBsaXN0OiBbCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjb2RlOiAiY291bnRyeSIsCiAgICAgICAgICAgICAgICAgICAgdmFsdWU6ICJJTkQiLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJhdHRyaWJ1dGUiLAogICAgICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogImJyYW5kIiwKICAgICAgICAgICAgICAgICAgICB2YWx1ZToKICAgICAgICAgICAgICAgICAgICAgICJQaWdlb24gYnkgU3RvdmVrcmFmdCBNaW5pIEZydWl0ICYgVmVnZXRhYmxlIENob3BwZXIgV2l0aCAzIEJsYWRlc8KgIiwKICAgICAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgIGNvZGU6ICJjb2xvdXIiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiIzAwRkYwMCIsCiAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICAgICBjb2RlOiAiY29sb3VyX25hbWUiLAogICAgICAgICAgICAgICAgICAgIHZhbHVlOiAiZ3JlZW4iLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgY29kZTogIm1hdGVyaWFsIiwKICAgICAgICAgICAgICAgICAgICB2YWx1ZTogInBvbHlwcm9weWxlbmUiLAogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgXSwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICBdLAogICAgICAgICAgfSwKICAgICAgICBdLAogICAgICAgIGZ1bGZpbGxtZW50czogWwogICAgICAgICAgewogICAgICAgICAgICBpZDogIkYxIiwKICAgICAgICAgICAgdHlwZTogIkRlbGl2ZXJ5IiwKICAgICAgICAgICAgY29udGFjdDogewogICAgICAgICAgICAgIHBob25lOiAiOTg3NjU0MzIxMCIsCiAgICAgICAgICAgICAgZW1haWw6ICJ0ZXN0QGdtYWlsLmNvbSIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICBjb250YWN0OiB7CiAgICAgICAgICAgICAgZW1haWw6ICJob21lQGV4YW1wbGUuY29tIiwKICAgICAgICAgICAgICBwaG9uZTogIjc5ODAyNzExMjIiLAogICAgICAgICAgICB9LAogICAgICAgICAgICBpZDogIkYyIiwKICAgICAgICAgICAgdHlwZTogIlNlbGYtUGlja3VwIiwKICAgICAgICAgIH0sCiAgICAgICAgXSwKICAgICAgICB0YWdzOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgIGNvZGU6ICJzZXJ2aWNlYWJpbGl0eSIsCiAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAibG9jYXRpb24iLAogICAgICAgICAgICAgICAgdmFsdWU6ICJMMSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAiY2F0ZWdvcnkiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJLaXRjaGVuIFN0b3JhZ2UgYW5kIENvbnRhaW5lcnMiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ0eXBlIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiMTEiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogInVuaXQiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJwaW5jb2RlIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ2YWwiLAogICAgICAgICAgICAgICAgdmFsdWU6ICI1NjAwMDEtNTYwMDc2LDU2MDA4MyIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgXSwKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgIGNvZGU6ICJzZXJ2aWNlYWJpbGl0eSIsCiAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAibG9jYXRpb24iLAogICAgICAgICAgICAgICAgdmFsdWU6ICJMMSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAiY2F0ZWdvcnkiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJTdGF0aW9uZXJ5IiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ0eXBlIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiMTIiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogInZhbCIsCiAgICAgICAgICAgICAgICB2YWx1ZTogIklORCIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAidW5pdCIsCiAgICAgICAgICAgICAgICB2YWx1ZTogImNvdW50cnkuIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICBdLAogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgY29kZTogInNlcnZpY2VhYmlsaXR5IiwKICAgICAgICAgICAgbGlzdDogWwogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJsb2NhdGlvbiIsCiAgICAgICAgICAgICAgICB2YWx1ZTogIkwxIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJjYXRlZ29yeSIsCiAgICAgICAgICAgICAgICB2YWx1ZTogIkNsb3NldC9MYXVuZHJ5L1Nob2UgT3JnYW5pemF0aW9uIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ0eXBlIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiMTIiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogInVuaXQiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJjb3VudHJ5IiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ2YWwiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJJTkQiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgIF0sCiAgICAgICAgICB9LAogICAgICAgICAgewogICAgICAgICAgICBjb2RlOiAic2VydmljZWFiaWxpdHkiLAogICAgICAgICAgICBsaXN0OiBbCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogImxvY2F0aW9uIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiTDEiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogImNhdGVnb3J5IiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiS2l0Y2hlbiBUb29scyIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAidHlwZSIsCiAgICAgICAgICAgICAgICB2YWx1ZTogIjEyIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ1bml0IiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiY291bnRyeSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAidmFsIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiSU5EIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICBdLAogICAgICAgICAgfSwKICAgICAgICAgIHsKICAgICAgICAgICAgY29kZTogInRpbWluZyIsCiAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAidHlwZSIsCiAgICAgICAgICAgICAgICB2YWx1ZTogIkFsbCIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAibG9jYXRpb24iLAogICAgICAgICAgICAgICAgdmFsdWU6ICJMMSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAiZGF5X2Zyb20iLAogICAgICAgICAgICAgICAgdmFsdWU6ICIxIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJkYXlfdG8iLAogICAgICAgICAgICAgICAgdmFsdWU6ICI1IiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ0aW1lX2Zyb20iLAogICAgICAgICAgICAgICAgdmFsdWU6ICIwMDAwIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ0aW1lX3RvIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiMjM1OSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgXSwKICAgICAgICAgIH0sCiAgICAgICAgICB7CiAgICAgICAgICAgIGNvZGU6ICJvcmRlcl92YWx1ZSIsCiAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAibWluX3ZhbHVlIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiMSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgXSwKICAgICAgICAgIH0sCiAgICAgICAgXSwKICAgICAgfSwKICAgIF0sCiAgfSwKfTsK
