@@ -566,20 +566,7 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
-      inputs:
-        id: ExampleInputId
-        jsonSchema:
-          $schema: 'http://json-schema.org/draft-07/schema#'
-          type: object
-          properties:
-            area_code:
-              type: string
-              description: Enter the area code
-              default: '144203'
-          required:
-            - area_code
-          additionalProperties: true
-          default: {}
+      inputs: {}
     examples:
       - name: Example for action "on_search"
         description: >-
