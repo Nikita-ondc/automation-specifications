@@ -178,3 +178,11 @@ flows:
     description: Retail 1.2.5 (Replacement)
     config:
       $ref: ./APPLIANCES/Replacement_Flow.yaml
+  - type: playground
+    id:  Catalog_Rejection_Flow
+    usecase: APPLIANCES
+    tags:
+      - WORKBENCH
+    description: Retail 1.2.5 (Catalog Rejection)
+    config:
+      $ref: ./APPLIANCES/Catalog_Rejection_Flow.yaml

@@ -1,5 +1,5 @@
 meta:
-  domain: ONDC:RET15
+  domain: 'ONDC:RET15'
   version: 1.2.5
   flowId: Discovery_Flow_full_catalog
   config_version: 0.0.0001
@@ -8,11 +8,11 @@ meta:
   flowName: Discovery Flow full catalog
 transaction_data:
   transaction_id: d50cf3b3-b4f1-4f6d-b844-118fd2f3b57e
-  latest_timestamp: 1970-01-01T00:00:00.000Z
+  latest_timestamp: '1970-01-01T00:00:00.000Z'
   bap_id: bap.example.com
-  bap_uri: https://bap.example.com
+  bap_uri: 'https://bap.example.com'
   bpp_id: bpp.example.com
-  bpp_uri: https://bpp.example.com
+  bpp_uri: 'https://bpp.example.com'
 steps:
   - api: search
     action_id: search
@@ -21,20 +21,23 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAgIGRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF91cmk7CiAgZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX2lkOwogIGxldCBjb2Rlc0FycmF5ID0gc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5mZWF0dXJlX2Rpc2NvdmVyeSB8fCBbXTsKICBjb25zdCB0YWdzID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncyA7CiAgaWYgKGNvZGVzQXJyYXkubGVuZ3RoID4gMCkKICAgIHRhZ3MucHVzaCh7CiAgICAgIGNvZGU6ICJiYXBfZmVhdHVyZXMiLAogICAgICBsaXN0OiBbCiAgICAgICAgLi4uY29kZXNBcnJheS5tYXAoKGNvZGUpID0+IHsKICAgICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIGNvZGU6IGNvZGUsCiAgICAgICAgICAgIHZhbHVlOiAieWVzIiwKICAgICAgICAgIH07CiAgICAgICAgfSksCiAgICAgIF0sCiAgICB9KTsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJjb250ZXh0IGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgaWYgKHRhcmdldFBheWxvYWQuY29udGV4dC5icHBfaWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNvbnRleHQuYnBwX2lkIHNob3VsZCBub3QgYmUgcHJlc2VudCIKICAgIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmJwcF91cmkpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNvbnRleHQuYnBwX3VyaSBzaG91bGQgbm90IGJlIHByZXNlbnQiCiAgICB9OwogIH0KCiAgY29uc3QgYmFwRmVhdHVyZXNUYWcgPSB0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5pbnRlbnQ/LnRhZ3M/LmZpbmQoCiAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gImJhcF9mZWF0dXJlcyIKICApOwoKICBpZiAoYmFwRmVhdHVyZXNUYWcgJiYgIUFycmF5LmlzQXJyYXkoYmFwRmVhdHVyZXNUYWcubGlzdCkpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImJhcF9mZWF0dXJlcy5saXN0IG11c3QgYmUgYW4gYXJyYXkiCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgICBpZiAoCiAgICBzZXNzaW9uRGF0YS51c2VyX2lucHV0cyAmJgogICAgc2Vzc2lvbkRhdGEudXNlcl9pbnB1dHMuZmVhdHVyZV9kaXNjb3ZlcnkgJiYKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzLmZlYXR1cmVfZGlzY292ZXJ5KQogICkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAidXNlcl9pbnB1dHMuZmVhdHVyZV9kaXNjb3ZlcnkgbXVzdCBiZSBhbiBhcnJheSIKICAgIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer
-          city: std:080
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer'
+          city: 'std:080'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET15
+          domain: 'ONDC:RET15'
           message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
-          timestamp: 2026-03-20T12:09:37.525Z
+          timestamp: '2026-03-20T12:09:37.525Z'
           transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
           ttl: PT30S
         message:
@@ -42,17 +45,18 @@ steps:
             fulfillment:
               type: Delivery
             payment:
-              "@ondc/org/buyer_app_finder_fee_amount": "3"
-              "@ondc/org/buyer_app_finder_fee_type": percent
+              '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3'
             tags:
               - code: bap_terms
                 list:
                   - code: static_terms
-                    value: ""
+                    value: ''
                   - code: static_terms_new
-                    value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                   - code: effective_date
-                    value: 2025-02-01T00:00:00.000Z
+                    value: '2025-02-01T00:00:00.000Z'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -62,40 +66,52 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
+        message_id: $.context.message_id
+        city: $.context.city
+        inc_mode: >-
+          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
+        bap_features: >-
+          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
       inputs:
-        oldInputs:
-          - name: city_code
-            label: Enter the city code
-            type: text
-            payloadField: $.context.city
-          - name: feature_discovery
-            label: Features supported
-            type: checkbox
-            options:
-              - code: "007"
-                name: SNP collecting payment
-              - code: 00C
-                name: Exchange flow
-              - code: "0099"
-                name: Purchase finance
-              - code: "016"
-                name: Customization of input type text
-        id: old_inputs
+        id: feature_discovery_search
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            city_code:
+              type: string
+              title: Enter the city code
+              default: 'std:080'
+            feature_discovery:
+              type: array
+              title: Features supported
+              items:
+                type: string
+                enum:
+                  - '007'
+                  - 00C
+                  - 0099
+                  - '016'
+              uniqueItems: true
+              default: []
+          additionalProperties: true
+          default: {}
     examples:
       - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
+        description: >-
+          Auto-generated example for action "search" in flow
           "Discovery_Flow_full_catalog"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer
-            city: std:080
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer'
+            city: 'std:080'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET15
+            domain: 'ONDC:RET15'
             message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
-            timestamp: 2026-03-20T12:09:37.525Z
+            timestamp: '2026-03-20T12:09:37.525Z'
             transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
             ttl: PT30S
           message:
@@ -103,17 +119,18 @@ steps:
               fulfillment:
                 type: Delivery
               payment:
-                "@ondc/org/buyer_app_finder_fee_amount": "3"
-                "@ondc/org/buyer_app_finder_fee_type": percent
+                '@ondc/org/buyer_app_finder_fee_amount': '3'
+                '@ondc/org/buyer_app_finder_fee_type': percent
               tags:
                 - code: bap_terms
                   list:
                     - code: static_terms
-                      value: ""
+                      value: ''
                     - code: static_terms_new
-                      value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                      value: >-
+                        https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: effective_date
-                      value: 2025-02-01T00:00:00.000Z
+                      value: '2025-02-01T00:00:00.000Z'
         type: request
   - api: on_search
     action_id: on_search
@@ -122,56 +139,90 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: >-
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBkZXNjcmlwdG9yVGFncyA9IGRlZmF1bHRQYXlsb2FkPy5tZXNzYWdlLmNhdGFsb2c/LlsnYnBwL2Rlc2NyaXB0b3InXT8udGFnczsKCQoJc2Vzc2lvbkRhdGEuYmFwX2ZlYXR1cmVzPy5mb3JFYWNoKChmZWF0dXJlKSA9PiB7CgkJY29uc29sZS5sb2coYEZlYXR1cmU6ICR7ZmVhdHVyZX1gKTsKCX0pOwoJaWYgKHNlc3Npb25EYXRhLmJhcF9mZWF0dXJlcz8uaW5jbHVkZXMoIjAwOTkiKSkgewoJCWxldCBicHBUZXJtc1RhZyA9IGRlc2NyaXB0b3JUYWdzLmZpbmQoKHQpID0+IHQuY29kZSA9PT0gImJwcF90ZXJtcyIpOwoJCWNvbnN0IHBheW1lbnRDb2xsZWN0aW9uID0gewoJCQkiY29kZSI6ImNvbGxlY3RfcGF5bWVudCIsCgkJCSJ2YWx1ZSI6IlkiCgkJfQoJCWJwcFRlcm1zVGFnLmxpc3QucHVzaChwYXltZW50Q29sbGVjdGlvbik7CgkJY29uc3QgcHJvdmlkZXIgPSBkZWZhdWx0UGF5bG9hZD8ubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF07CgkJcHJvdmlkZXIub2ZmZXJzID0gcHJvdmlkZXI/Lm9mZmVycyB8fCBbXTsKCQlwcm92aWRlci5vZmZlcnMucHVzaCh7CgkJCWlkOiAiRklOMSIsCgkJCWRlc2NyaXB0b3I6IHsKCQkJY29kZTogImZpbmFuY2luZyIsCgkJCWltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvb2ZmZXIyLWJhbm5lci5wbmciXSwKCQkJfSwKCQkJbG9jYXRpb25faWRzOiBbIkwxIl0sCgkJCWl0ZW1faWRzOiBbIkkxIiwgIkkyIiwgIkkzIl0sCgkJCXRpbWU6IHsKCQkJbGFiZWw6ICJ2YWxpZCIsCgkJCXJhbmdlOiB7CgkJCQlzdGFydDogIjIwMjQtMTItMjNUMDY6NTU6NDUuMDM1WiIsCgkJCQllbmQ6ICIyMDMwLTEyLTIzVDA4OjEyOjE1LjAzM1oiLAoJCQl9LAoJCQl9LAoJCQl0YWdzOiBbCgkJCXsKCQkJCWNvZGU6ICJmaW5hbmNlX3Rlcm1zIiwKCQkJCWxpc3Q6IFsKCQkJCXsgY29kZTogInN1YnZlbnRpb25fdHlwZSIsIHZhbHVlOiAicGVyY2VudCIgfSwKCQkJCXsgY29kZTogInN1YnZlbnRpb25fYW1vdW50IiwgdmFsdWU6ICIxMC4wMCIgfSwKCQkJCV0sCgkJCX0sCgkJCXsKCQkJCWNvZGU6ICJtZXRhIiwKCQkJCWxpc3Q6IFsKCQkJCXsgY29kZTogImFkZGl0aXZlIiwgdmFsdWU6ICJubyIgfSwKCQkJCXsgY29kZTogImF1dG8iLCB2YWx1ZTogIm5vIiB9LAoJCQkJXSwKCQkJfSwKCQkJXSwKCQl9KTsKCX0KCWlmIChzZXNzaW9uRGF0YS5iYXBfZmVhdHVyZXM/LmluY2x1ZGVzKCIwMDciKSkgewoJCWxldCBicHBUZXJtc1RhZyA9IGRlc2NyaXB0b3JUYWdzLmZpbmQoKHQpID0+IHQuY29kZSA9PT0gImJwcF90ZXJtcyIpOwoJCWNvbnN0IHBheW1lbnRDb2xsZWN0aW9uID0gewoJCQkiY29kZSI6ImNvbGxlY3RfcGF5bWVudCIsCgkJCSJ2YWx1ZSI6IlkiCgkJfQoJCWJwcFRlcm1zVGFnLmxpc3QucHVzaChwYXltZW50Q29sbGVjdGlvbik7Cgl9CiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
+      validate: >-
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: >-
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
           action: on_search
           bap_id: dev-automation.ondc.org
-          bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer
+          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer'
           bpp_id: dev-automation.ondc.org
-          bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/seller
-          city: std:080
+          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/seller'
+          city: 'std:080'
           core_version: 1.2.5
           country: IND
-          domain: ONDC:RET15
+          domain: 'ONDC:RET15'
           message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
-          timestamp: 2026-03-20T12:09:37.823Z
+          timestamp: '2026-03-20T12:09:37.823Z'
           transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
           ttl: PT30S
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+                contact:
+                  phone: '9876543210'
+                  email: test@gmail.com
+              - id: F2
+                type: Self-Pickup
+                contact:
+                  phone: '7980274499'
+                  email: appliance@example.com
             bpp/descriptor:
-              images:
-                - https://sellerNP.com/images/np.png
-              long_desc: Seller Marketplace
               name: Mock Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
               short_desc: Seller Marketplace
-              symbol: https://sellerNP.com/images/np.png
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
               tags:
                 - code: bpp_terms
                   list:
                     - code: np_type
                       value: MSN
                     - code: accept_bap_terms
-                      value: Y
-            bpp/fulfillments:
-              - contact:
-                  email: test@gmail.com
-                  phone: "9876543210"
-                id: F1
-                type: Delivery
-              - contact:
-                  email: appliance@example.com
-                  phone: "7980274499"
-                id: F2
-                type: Self-Pickup
+                      value: 'Y'
             bpp/providers:
-              - categories:
-                  - descriptor:
+              - id: P1
+                time:
+                  label: enable
+                  timestamp: '2024-08-13T06:46:19.736Z'
+                ttl: PT24H
+                locations:
+                  - id: L1
+                    gps: '12.925810,77.583624'
+                    address:
+                      city: Bengaluru
+                      state: Karnataka
+                      area_code: '560011'
+                      street: Jayanagar
+                      locality: Jayanagar
+                    time:
+                      label: enable
+                      timestamp: '2024-08-13T06:46:19.736Z'
+                      schedule:
+                        holidays: []
+                    circle:
+                      gps: '12.925810,77.583624'
+                      radius:
+                        unit: km
+                        value: '5'
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                categories:
+                  - id: V1
+                    descriptor:
                       name: Variant Group 1
-                    id: V1
                     tags:
                       - code: type
                         list:
@@ -182,67 +233,55 @@ steps:
                           - code: name
                             value: item.tags.attribute.colour
                           - code: seq
-                            value: "1"
-                descriptor:
-                  images:
-                    - https://sellerNP.com/images/store1.png
-                  long_desc: Store 1
-                  name: Store 1
-                  short_desc: Store 1
-                  symbol: https://sellerNP.com/images/store1.png
-                fulfillments:
-                  - contact:
-                      email: test@gmail.com
-                      phone: "9876543210"
-                    id: F1
-                    type: Delivery
-                  - contact:
-                      email: appliance@example.com
-                      phone: "7980274499"
-                    id: F2
-                    type: Self-Pickup
-                id: P1
+                            value: '1'
                 items:
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                    "@ondc/org/return_window": P7D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": true
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Whirlpool Washing Machine
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P2D
-                    category_id: Washing Machine
+                  - id: I1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T05:30:48.998Z'
+                    rating: '4'
                     descriptor:
-                      code: 3:8904123051111
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: Whirlpool 7.5 kg Fully Automatic Washing Machine with 6th Sense
-                        Technology
                       name: Whirlpool 7.5 kg Fully Automatic Washing Machine
-                      short_desc: Fully Automatic Top Load Washing Machine with 7.5 kg capacity
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I1
-                    location_id: L1
-                    price:
-                      currency: INR
-                      maximum_value: "35000"
-                      value: "35000"
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Fully Automatic Top Load Washing Machine with 7.5 kg
+                        capacity
+                      long_desc: >-
+                        Whirlpool 7.5 kg Fully Automatic Washing Machine with
+                        6th Sense Technology
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8904123051111'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "8"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '8'
+                    price:
+                      currency: INR
+                      value: '35000'
+                      maximum_value: '35000'
+                    category_id: Washing Machine
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Whirlpool Washing Machine
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -253,39 +292,39 @@ steps:
                           - code: brand
                             value: Whirlpool 7.5 kg Fully Automatic Washing Machine
                           - code: weight
-                            value: "32"
+                            value: '32'
                           - code: model
                             value: Stainwash Ultra
                           - code: colour
-                            value: "#EEF6F7"
+                            value: '#EEF6F7'
                           - code: colour_name
                             value: catskill white
                           - code: special_feature
                             value: frequency
                           - code: breadth
-                            value: "12.3"
+                            value: '12.3'
                           - code: length
-                            value: "18.5"
+                            value: '18.5'
                           - code: height
-                            value: "101.5"
+                            value: '101.5'
                           - code: includes
-                            value: Power Cord, Inlet Pipe
+                            value: 'Power Cord, Inlet Pipe'
                           - code: type
                             value: full-auto
                           - code: refurbished
-                            value: no
+                            value: 'no'
                           - code: warranty
-                            value: "4"
+                            value: '4'
                           - code: energy_rating
-                            value: "3"
+                            value: '3'
                           - code: extended_warranty
-                            value: "3"
+                            value: '3'
                           - code: installation_detail
                             value: Available
                           - code: wattage
-                            value: "720"
+                            value: '720'
                           - code: voltage
-                            value: "230"
+                            value: '230'
                       - code: type
                         list:
                           - code: type
@@ -294,48 +333,51 @@ steps:
                         list:
                           - code: id
                             value: CG1
+                  - id: I2
                     time:
                       label: enable
-                      timestamp: 2024-08-12T05:30:48.998Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                    "@ondc/org/return_window": P7D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": true
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Singer Heavy Duty 4452
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P2D
-                    category_id: Electric Sewing Machine
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
                     descriptor:
-                      code: 3:00037431885883
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: Singer Heavy Duty 4452 Sewing Machine with 32 Built-in Stitches
                       name: Singer Simple Sewing Machine
+                      symbol: 'https://sellerNP.com/images/i1.png'
                       short_desc: Heavy-duty electric sewing machine.
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I2
-                    location_id: L1
-                    price:
-                      currency: INR
-                      maximum_value: "18000"
-                      value: "18000"
+                      long_desc: >-
+                        Singer Heavy Duty 4452 Sewing Machine with 32 Built-in
+                        Stitches
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:00037431885883'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "10"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '18000'
+                      maximum_value: '18000'
+                    category_id: Electric Sewing Machine
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Singer Heavy Duty 4452
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -346,31 +388,31 @@ steps:
                           - code: brand
                             value: Singer Simple Sewing Machine
                           - code: model
-                            value: "3232"
+                            value: '3232'
                           - code: special_feature
                             value: laser
                           - code: weight
-                            value: "6.9"
+                            value: '6.9'
                           - code: length
-                            value: "7.3"
+                            value: '7.3'
                           - code: breadth
-                            value: "15.5"
+                            value: '15.5'
                           - code: height
-                            value: "41"
+                            value: '41'
                           - code: includes
-                            value: Automatic Needle Threader, Adjustable Presser Foot
+                            value: 'Automatic Needle Threader, Adjustable Presser Foot'
                           - code: refurbished
-                            value: no
+                            value: 'no'
                           - code: warranty
-                            value: "2"
+                            value: '2'
                           - code: energy_rating
-                            value: "4"
+                            value: '4'
                           - code: extended_warranty
-                            value: "2"
+                            value: '2'
                           - code: wattage
-                            value: "320"
+                            value: '320'
                           - code: voltage
-                            value: "220"
+                            value: '220'
                       - code: type
                         list:
                           - code: type
@@ -379,48 +421,51 @@ steps:
                         list:
                           - code: id
                             value: CG1
+                  - id: I3
                     time:
                       label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                    "@ondc/org/return_window": P20D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": false
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Philips Air Fryer
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P3D
-                    category_id: Electric Air Fryer
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
                     descriptor:
-                      code: 3:8710103539209
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: Philips Viva Collection Air Fryer with Rapid Air Technology
                       name: Philips Viva AirFryer HD9225-50
+                      symbol: 'https://sellerNP.com/images/i1.png'
                       short_desc: Air fryer for healthy cooking
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I3
-                    location_id: L1
-                    price:
-                      currency: INR
-                      maximum_value: "15000"
-                      value: "15000"
+                      long_desc: >-
+                        Philips Viva Collection Air Fryer with Rapid Air
+                        Technology
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8710103539209'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "99"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '15000'
+                      maximum_value: '15000'
+                    category_id: Electric Air Fryer
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P3D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P20D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Philips Air Fryer
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -435,73 +480,75 @@ steps:
                           - code: special_feature
                             value: frequency
                           - code: weight
-                            value: "7"
+                            value: '7'
                           - code: length
-                            value: "3"
+                            value: '3'
                           - code: breadth
-                            value: "31.5"
+                            value: '31.5'
                           - code: height
-                            value: "28"
+                            value: '28'
                           - code: includes
-                            value: Recipe Booklet, Double Layer Rack
+                            value: 'Recipe Booklet, Double Layer Rack'
                           - code: refurbished
-                            value: no
+                            value: 'no'
                           - code: warranty
-                            value: "1"
+                            value: '1'
                           - code: energy_rating
-                            value: "3"
+                            value: '3'
                           - code: extended_warranty
-                            value: "1"
+                            value: '1'
                           - code: wattage
-                            value: "320"
+                            value: '320'
                           - code: voltage
-                            value: "220"
+                            value: '220'
+                  - id: I4
                     time:
                       label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                    "@ondc/org/return_window": P3D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": false
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Mixer Grinder
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P1D
-                    category_id: Mixer Grinder
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
                     descriptor:
-                      code: 3:887775600280
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: The Philips Mixer Grinder is a versatile kitchen appliance designed
-                        to simplify your cooking tasks. Equipped with powerful
-                        motors and durable stainless steel blades, it
-                        effortlessly grinds, blends, and mixes a variety of
-                        ingredients.
                       name: Philips Mixer Grinder
+                      symbol: 'https://sellerNP.com/images/i1.png'
                       short_desc: Fastest and Finest Mixing Grinder
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I4
-                    location_id: L1
-                    price:
-                      currency: INR
-                      maximum_value: "1199.00"
-                      value: "599.00"
+                      long_desc: >-
+                        The Philips Mixer Grinder is a versatile kitchen
+                        appliance designed to simplify your cooking tasks.
+                        Equipped with powerful motors and durable stainless
+                        steel blades, it effortlessly grinds, blends, and mixes
+                        a variety of ingredients.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:887775600280'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "99"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    category_id: Mixer Grinder
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Mixer Grinder
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -516,68 +563,71 @@ steps:
                           - code: special_feature
                             value: frequency
                           - code: weight
-                            value: "8"
+                            value: '8'
                           - code: length
-                            value: "1.5"
+                            value: '1.5'
                           - code: breadth
-                            value: "20.5"
+                            value: '20.5'
                           - code: height
-                            value: "15"
+                            value: '15'
                           - code: includes
                             value: Mixer Pots-3
                           - code: refurbished
-                            value: no
+                            value: 'no'
                           - code: warranty
-                            value: "1"
+                            value: '1'
                           - code: energy_rating
-                            value: "2"
+                            value: '2'
                           - code: wattage
-                            value: "750"
+                            value: '750'
                           - code: voltage
-                            value: "230"
+                            value: '230'
+                  - id: I5
                     time:
                       label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                    "@ondc/org/return_window": P3D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": false
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: LG Air Conditioner
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P1D
-                    category_id: Air Conditioner
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
                     descriptor:
-                      code: 3:8806091608222
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: 3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way swing
                       name: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                      symbol: 'https://sellerNP.com/images/i1.png'
                       short_desc: 3 Start Dual Inverter Split AC
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I5
-                    location_id: L1
-                    parent_item_id: V1
-                    price:
-                      currency: INR
-                      maximum_value: "1199.00"
-                      value: "599.00"
+                      long_desc: >-
+                        3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way
+                        swing
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8806091608222'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "99"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Air Conditioner
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: LG Air Conditioner
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -592,76 +642,79 @@ steps:
                           - code: special_feature
                             value: frequency
                           - code: weight
-                            value: "32.5"
+                            value: '32.5'
                           - code: length
-                            value: "18.9"
+                            value: '18.9'
                           - code: breadth
-                            value: "83.7"
+                            value: '83.7'
                           - code: height
-                            value: "30.8"
+                            value: '30.8'
                           - code: includes
-                            value: Indoor Unit, Outdoor Unit, Remote
+                            value: 'Indoor Unit, Outdoor Unit, Remote'
                           - code: type
                             value: split
                           - code: refurbished
-                            value: no
+                            value: 'no'
                           - code: warranty
-                            value: "5"
+                            value: '5'
                           - code: energy_rating
-                            value: "3"
+                            value: '3'
                           - code: installation_detail
                             value: Available
                           - code: wattage
-                            value: "1482"
+                            value: '1482'
                           - code: voltage
-                            value: "230"
+                            value: '230'
                           - code: colour
-                            value: "#FF0000"
+                            value: '#FF0000'
                           - code: colour_name
                             value: red
+                  - id: I6
                     time:
                       label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                  - "@ondc/org/available_on_cod": false
-                    "@ondc/org/cancellable": true
-                    "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                    "@ondc/org/return_window": P3D
-                    "@ondc/org/returnable": true
-                    "@ondc/org/seller_pickup_return": false
-                    "@ondc/org/statutory_reqs_packaged_commodities":
-                      common_or_generic_name_of_commodity: Air Conditioner
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      manufacturer_or_packer_name: Seller Business
-                      month_year_of_manufacture_packing_import: NA
-                    "@ondc/org/time_to_ship": P1D
-                    category_id: Air Conditioner
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
                     descriptor:
-                      code: 3:8806091608222
-                      images:
-                        - https://sellerNP.com/images/i1.png
-                      long_desc: 5 Star WindFree Inverter Split AC, 6 in 1 cooling 2 way swing
                       name: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                      symbol: 'https://sellerNP.com/images/i1.png'
                       short_desc: 5 Star WindFree Inverter Split AC
-                      symbol: https://sellerNP.com/images/i1.png
-                    fulfillment_id: F1
-                    id: I6
-                    location_id: L1
-                    parent_item_id: V1
-                    price:
-                      currency: INR
-                      maximum_value: "1199.00"
-                      value: "599.00"
+                      long_desc: >-
+                        5 Star WindFree Inverter Split AC, 6 in 1 cooling 2 way
+                        swing
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8806091608222'
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "99"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
-                    rating: "4"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Air Conditioner
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Air Conditioner
+                      month_year_of_manufacture_packing_import: NA
                     tags:
                       - code: origin
                         list:
@@ -676,53 +729,50 @@ steps:
                           - code: special_feature
                             value: frequency
                           - code: weight
-                            value: "32.5"
+                            value: '32.5'
                           - code: length
-                            value: "18.9"
+                            value: '18.9'
                           - code: breadth
-                            value: "83.7"
+                            value: '83.7'
                           - code: height
-                            value: "30.8"
+                            value: '30.8'
                           - code: includes
-                            value: Indoor Unit, Outdoor Unit, Remote
+                            value: 'Indoor Unit, Outdoor Unit, Remote'
                           - code: type
                             value: split
                           - code: refurbished
-                            value: no
+                            value: 'no'
                           - code: warranty
-                            value: "5"
+                            value: '5'
                           - code: energy_rating
-                            value: "3"
+                            value: '3'
                           - code: installation_detail
                             value: Available
                           - code: wattage
-                            value: "1482"
+                            value: '1482'
                           - code: voltage
-                            value: "230"
+                            value: '230'
                           - code: colour
-                            value: "#000000"
+                            value: '#000000'
                           - code: colour_name
                             value: black
-                    time:
-                      label: enable
-                      timestamp: 2024-08-12T10:27:48.913Z
-                  - category_id: Refrigerator
+                  - id: C1
                     descriptor:
                       name: Custom_Input
-                    id: C1
-                    price:
-                      currency: INR
-                      maximum_value: "0.0"
-                      value: "0.0"
                     quantity:
-                      available:
-                        count: "99"
-                      maximum:
-                        count: "99"
                       unitized:
                         measure:
                           unit: unit
-                          value: "1"
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '0.00'
+                      maximum_value: '0.00'
+                    category_id: Refrigerator
                     related: true
                     tags:
                       - code: type
@@ -733,29 +783,17 @@ steps:
                         list:
                           - code: id
                             value: CG1
-                locations:
-                  - address:
-                      area_code: "560011"
-                      city: Bengaluru
-                      locality: Jayanagar
-                      state: Karnataka
-                      street: Jayanagar
-                    circle:
-                      gps: 12.925810,77.583624
-                      radius:
-                        unit: km
-                        value: "5"
-                    gps: 12.925810,77.583624
-                    id: L1
-                    time:
-                      days: 1,2,3,4,5
-                      label: enable
-                      range:
-                        end: "2359"
-                        start: "0000"
-                      schedule:
-                        holidays: []
-                      timestamp: 2024-08-13T06:46:19.736Z
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9876543210'
+                      email: test@gmail.com
+                  - id: F2
+                    type: Self-Pickup
+                    contact:
+                      phone: '7980274499'
+                      email: appliance@example.com
                 tags:
                   - code: serviceability
                     list:
@@ -764,11 +802,11 @@ steps:
                       - code: category
                         value: Washing Machine
                       - code: type
-                        value: "11"
+                        value: '11'
                       - code: unit
                         value: pincode
                       - code: val
-                        value: 560001-560076,560083
+                        value: '560001-560076,560083'
                   - code: serviceability
                     list:
                       - code: location
@@ -776,11 +814,11 @@ steps:
                       - code: category
                         value: Electric Sewing Machine
                       - code: type
-                        value: "10"
+                        value: '10'
                       - code: unit
                         value: km
                       - code: val
-                        value: "15"
+                        value: '15'
                   - code: serviceability
                     list:
                       - code: location
@@ -788,7 +826,7 @@ steps:
                       - code: category
                         value: Electric Air Fryer
                       - code: type
-                        value: "12"
+                        value: '12'
                       - code: unit
                         value: country
                       - code: val
@@ -800,7 +838,7 @@ steps:
                       - code: category
                         value: Mixer Grinder
                       - code: type
-                        value: "12"
+                        value: '12'
                       - code: unit
                         value: country
                       - code: val
@@ -812,7 +850,7 @@ steps:
                       - code: category
                         value: Air Conditioner
                       - code: type
-                        value: "12"
+                        value: '12'
                       - code: unit
                         value: country
                       - code: val
@@ -824,11 +862,11 @@ steps:
                       - code: category
                         value: Refrigerator
                       - code: type
-                        value: "10"
+                        value: '10'
                       - code: unit
                         value: km
                       - code: val
-                        value: "15"
+                        value: '15'
                   - code: timing
                     list:
                       - code: type
@@ -836,17 +874,13 @@ steps:
                       - code: location
                         value: L1
                       - code: day_from
-                        value: "1"
+                        value: '1'
                       - code: day_to
-                        value: "5"
+                        value: '5'
                       - code: time_from
-                        value: "0900"
+                        value: 0900
                       - code: time_to
-                        value: "2100"
-                time:
-                  label: enable
-                  timestamp: 2024-08-13T06:46:19.736Z
-                ttl: PT24H
+                        value: '2100'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -856,51 +890,58 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
+        bpp_id: $.context.bpp_id
+        bpp_uri: $.context.bpp_uri
+        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
+        np_type: >-
+          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
       inputs: {}
     examples:
       - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
+        description: >-
+          Auto-generated example for action "on_search" in flow
           "Discovery_Flow_full_catalog"
         payload:
           context:
             action: on_search
             bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer
+            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer'
             bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/seller
-            city: std:080
+            bpp_uri: >-
+              https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/seller
+            city: 'std:080'
             core_version: 1.2.5
             country: IND
-            domain: ONDC:RET15
+            domain: 'ONDC:RET15'
             message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
-            timestamp: 2026-03-20T12:09:37.823Z
+            timestamp: '2026-03-20T12:09:37.823Z'
             transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
             ttl: PT30S
           message:
             catalog:
               bpp/descriptor:
                 images:
-                  - https://sellerNP.com/images/np.png
+                  - 'https://sellerNP.com/images/np.png'
                 long_desc: Seller Marketplace
                 name: Mock Seller NP
                 short_desc: Seller Marketplace
-                symbol: https://sellerNP.com/images/np.png
+                symbol: 'https://sellerNP.com/images/np.png'
                 tags:
                   - code: bpp_terms
                     list:
                       - code: np_type
                         value: MSN
                       - code: accept_bap_terms
-                        value: Y
+                        value: 'Y'
               bpp/fulfillments:
                 - contact:
                     email: test@gmail.com
-                    phone: "9876543210"
+                    phone: '9876543210'
                   id: F1
                   type: Delivery
                 - contact:
                     email: appliance@example.com
-                    phone: "7980274499"
+                    phone: '7980274499'
                   id: F2
                   type: Self-Pickup
               bpp/providers:
@@ -918,67 +959,71 @@ steps:
                             - code: name
                               value: item.tags.attribute.colour
                             - code: seq
-                              value: "1"
+                              value: '1'
                   descriptor:
                     images:
-                      - https://sellerNP.com/images/store1.png
+                      - 'https://sellerNP.com/images/store1.png'
                     long_desc: Store 1
                     name: Store 1
                     short_desc: Store 1
-                    symbol: https://sellerNP.com/images/store1.png
+                    symbol: 'https://sellerNP.com/images/store1.png'
                   fulfillments:
                     - contact:
                         email: test@gmail.com
-                        phone: "9876543210"
+                        phone: '9876543210'
                       id: F1
                       type: Delivery
                     - contact:
                         email: appliance@example.com
-                        phone: "7980274499"
+                        phone: '7980274499'
                       id: F2
                       type: Self-Pickup
                   id: P1
                   items:
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Whirlpool Washing Machine
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
+                      '@ondc/org/time_to_ship': P2D
                       category_id: Washing Machine
                       descriptor:
-                        code: 3:8904123051111
+                        code: '3:8904123051111'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: Whirlpool 7.5 kg Fully Automatic Washing Machine with 6th Sense
-                          Technology
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Whirlpool 7.5 kg Fully Automatic Washing Machine with
+                          6th Sense Technology
                         name: Whirlpool 7.5 kg Fully Automatic Washing Machine
-                        short_desc: Fully Automatic Top Load Washing Machine with 7.5 kg capacity
-                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: >-
+                          Fully Automatic Top Load Washing Machine with 7.5 kg
+                          capacity
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I1
                       location_id: L1
                       price:
                         currency: INR
-                        maximum_value: "35000"
-                        value: "35000"
+                        maximum_value: '35000'
+                        value: '35000'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "8"
+                          count: '8'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -989,39 +1034,39 @@ steps:
                             - code: brand
                               value: Whirlpool 7.5 kg Fully Automatic Washing Machine
                             - code: weight
-                              value: "32"
+                              value: '32'
                             - code: model
                               value: Stainwash Ultra
                             - code: colour
-                              value: "#EEF6F7"
+                              value: '#EEF6F7'
                             - code: colour_name
                               value: catskill white
                             - code: special_feature
                               value: frequency
                             - code: breadth
-                              value: "12.3"
+                              value: '12.3'
                             - code: length
-                              value: "18.5"
+                              value: '18.5'
                             - code: height
-                              value: "101.5"
+                              value: '101.5'
                             - code: includes
-                              value: Power Cord, Inlet Pipe
+                              value: 'Power Cord, Inlet Pipe'
                             - code: type
                               value: full-auto
                             - code: refurbished
-                              value: no
+                              value: 'no'
                             - code: warranty
-                              value: "4"
+                              value: '4'
                             - code: energy_rating
-                              value: "3"
+                              value: '3'
                             - code: extended_warranty
-                              value: "3"
+                              value: '3'
                             - code: installation_detail
                               value: Available
                             - code: wattage
-                              value: "720"
+                              value: '720'
                             - code: voltage
-                              value: "230"
+                              value: '230'
                         - code: type
                           list:
                             - code: type
@@ -1032,46 +1077,49 @@ steps:
                               value: CG1
                       time:
                         label: enable
-                        timestamp: 2024-08-12T05:30:48.998Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T05:30:48.998Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Singer Heavy Duty 4452
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
+                      '@ondc/org/time_to_ship': P2D
                       category_id: Electric Sewing Machine
                       descriptor:
-                        code: 3:00037431885883
+                        code: '3:00037431885883'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: Singer Heavy Duty 4452 Sewing Machine with 32 Built-in Stitches
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Singer Heavy Duty 4452 Sewing Machine with 32 Built-in
+                          Stitches
                         name: Singer Simple Sewing Machine
                         short_desc: Heavy-duty electric sewing machine.
-                        symbol: https://sellerNP.com/images/i1.png
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I2
                       location_id: L1
                       price:
                         currency: INR
-                        maximum_value: "18000"
-                        value: "18000"
+                        maximum_value: '18000'
+                        value: '18000'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "10"
+                          count: '10'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -1082,31 +1130,33 @@ steps:
                             - code: brand
                               value: Singer Simple Sewing Machine
                             - code: model
-                              value: "3232"
+                              value: '3232'
                             - code: special_feature
                               value: laser
                             - code: weight
-                              value: "6.9"
+                              value: '6.9'
                             - code: length
-                              value: "7.3"
+                              value: '7.3'
                             - code: breadth
-                              value: "15.5"
+                              value: '15.5'
                             - code: height
-                              value: "41"
+                              value: '41'
                             - code: includes
-                              value: Automatic Needle Threader, Adjustable Presser Foot
+                              value: >-
+                                Automatic Needle Threader, Adjustable Presser
+                                Foot
                             - code: refurbished
-                              value: no
+                              value: 'no'
                             - code: warranty
-                              value: "2"
+                              value: '2'
                             - code: energy_rating
-                              value: "4"
+                              value: '4'
                             - code: extended_warranty
-                              value: "2"
+                              value: '2'
                             - code: wattage
-                              value: "320"
+                              value: '320'
                             - code: voltage
-                              value: "220"
+                              value: '220'
                         - code: type
                           list:
                             - code: type
@@ -1117,46 +1167,49 @@ steps:
                               value: CG1
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P20D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P20D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Philips Air Fryer
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P3D
+                      '@ondc/org/time_to_ship': P3D
                       category_id: Electric Air Fryer
                       descriptor:
-                        code: 3:8710103539209
+                        code: '3:8710103539209'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: Philips Viva Collection Air Fryer with Rapid Air Technology
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Philips Viva Collection Air Fryer with Rapid Air
+                          Technology
                         name: Philips Viva AirFryer HD9225-50
                         short_desc: Air fryer for healthy cooking
-                        symbol: https://sellerNP.com/images/i1.png
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I3
                       location_id: L1
                       price:
                         currency: INR
-                        maximum_value: "15000"
-                        value: "15000"
+                        maximum_value: '15000'
+                        value: '15000'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "99"
+                          count: '99'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -1171,73 +1224,75 @@ steps:
                             - code: special_feature
                               value: frequency
                             - code: weight
-                              value: "7"
+                              value: '7'
                             - code: length
-                              value: "3"
+                              value: '3'
                             - code: breadth
-                              value: "31.5"
+                              value: '31.5'
                             - code: height
-                              value: "28"
+                              value: '28'
                             - code: includes
-                              value: Recipe Booklet, Double Layer Rack
+                              value: 'Recipe Booklet, Double Layer Rack'
                             - code: refurbished
-                              value: no
+                              value: 'no'
                             - code: warranty
-                              value: "1"
+                              value: '1'
                             - code: energy_rating
-                              value: "3"
+                              value: '3'
                             - code: extended_warranty
-                              value: "1"
+                              value: '1'
                             - code: wattage
-                              value: "320"
+                              value: '320'
                             - code: voltage
-                              value: "220"
+                              value: '220'
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P3D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Mixer Grinder
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P1D
+                      '@ondc/org/time_to_ship': P1D
                       category_id: Mixer Grinder
                       descriptor:
-                        code: 3:887775600280
+                        code: '3:887775600280'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: The Philips Mixer Grinder is a versatile kitchen appliance designed
-                          to simplify your cooking tasks. Equipped with powerful
-                          motors and durable stainless steel blades, it
-                          effortlessly grinds, blends, and mixes a variety of
-                          ingredients.
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          The Philips Mixer Grinder is a versatile kitchen
+                          appliance designed to simplify your cooking tasks.
+                          Equipped with powerful motors and durable stainless
+                          steel blades, it effortlessly grinds, blends, and
+                          mixes a variety of ingredients.
                         name: Philips Mixer Grinder
                         short_desc: Fastest and Finest Mixing Grinder
-                        symbol: https://sellerNP.com/images/i1.png
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I4
                       location_id: L1
                       price:
                         currency: INR
-                        maximum_value: "1199.00"
-                        value: "599.00"
+                        maximum_value: '1199.00'
+                        value: '599.00'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "99"
+                          count: '99'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -1252,68 +1307,71 @@ steps:
                             - code: special_feature
                               value: frequency
                             - code: weight
-                              value: "8"
+                              value: '8'
                             - code: length
-                              value: "1.5"
+                              value: '1.5'
                             - code: breadth
-                              value: "20.5"
+                              value: '20.5'
                             - code: height
-                              value: "15"
+                              value: '15'
                             - code: includes
                               value: Mixer Pots-3
                             - code: refurbished
-                              value: no
+                              value: 'no'
                             - code: warranty
-                              value: "1"
+                              value: '1'
                             - code: energy_rating
-                              value: "2"
+                              value: '2'
                             - code: wattage
-                              value: "750"
+                              value: '750'
                             - code: voltage
-                              value: "230"
+                              value: '230'
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P3D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: LG Air Conditioner
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P1D
+                      '@ondc/org/time_to_ship': P1D
                       category_id: Air Conditioner
                       descriptor:
-                        code: 3:8806091608222
+                        code: '3:8806091608222'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: 3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way swing
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way
+                          swing
                         name: LG 1.5 Ton 3 Start Dual Inverter Split AC
                         short_desc: 3 Start Dual Inverter Split AC
-                        symbol: https://sellerNP.com/images/i1.png
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I5
                       location_id: L1
                       parent_item_id: V1
                       price:
                         currency: INR
-                        maximum_value: "1199.00"
-                        value: "599.00"
+                        maximum_value: '1199.00'
+                        value: '599.00'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "99"
+                          count: '99'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -1328,76 +1386,79 @@ steps:
                             - code: special_feature
                               value: frequency
                             - code: weight
-                              value: "32.5"
+                              value: '32.5'
                             - code: length
-                              value: "18.9"
+                              value: '18.9'
                             - code: breadth
-                              value: "83.7"
+                              value: '83.7'
                             - code: height
-                              value: "30.8"
+                              value: '30.8'
                             - code: includes
-                              value: Indoor Unit, Outdoor Unit, Remote
+                              value: 'Indoor Unit, Outdoor Unit, Remote'
                             - code: type
                               value: split
                             - code: refurbished
-                              value: no
+                              value: 'no'
                             - code: warranty
-                              value: "5"
+                              value: '5'
                             - code: energy_rating
-                              value: "3"
+                              value: '3'
                             - code: installation_detail
                               value: Available
                             - code: wattage
-                              value: "1482"
+                              value: '1482'
                             - code: voltage
-                              value: "230"
+                              value: '230'
                             - code: colour
-                              value: "#FF0000"
+                              value: '#FF0000'
                             - code: colour_name
                               value: red
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Moaz,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P3D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
                         common_or_generic_name_of_commodity: Air Conditioner
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
                           Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P1D
+                      '@ondc/org/time_to_ship': P1D
                       category_id: Air Conditioner
                       descriptor:
-                        code: 3:8806091608222
+                        code: '3:8806091608222'
                         images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: 5 Star WindFree Inverter Split AC, 6 in 1 cooling 2 way swing
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          5 Star WindFree Inverter Split AC, 6 in 1 cooling 2
+                          way swing
                         name: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
                         short_desc: 5 Star WindFree Inverter Split AC
-                        symbol: https://sellerNP.com/images/i1.png
+                        symbol: 'https://sellerNP.com/images/i1.png'
                       fulfillment_id: F1
                       id: I6
                       location_id: L1
                       parent_item_id: V1
                       price:
                         currency: INR
-                        maximum_value: "1199.00"
-                        value: "599.00"
+                        maximum_value: '1199.00'
+                        value: '599.00'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "99"
+                          count: '99'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
-                      rating: "4"
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -1406,59 +1467,61 @@ steps:
                         - code: attribute
                           list:
                             - code: brand
-                              value: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                              value: >-
+                                Samsung 1.5 Ton 5 Star WindFree Inverter Split
+                                AC
                             - code: model
                               value: TS-A18JNXE3
                             - code: special_feature
                               value: frequency
                             - code: weight
-                              value: "32.5"
+                              value: '32.5'
                             - code: length
-                              value: "18.9"
+                              value: '18.9'
                             - code: breadth
-                              value: "83.7"
+                              value: '83.7'
                             - code: height
-                              value: "30.8"
+                              value: '30.8'
                             - code: includes
-                              value: Indoor Unit, Outdoor Unit, Remote
+                              value: 'Indoor Unit, Outdoor Unit, Remote'
                             - code: type
                               value: split
                             - code: refurbished
-                              value: no
+                              value: 'no'
                             - code: warranty
-                              value: "5"
+                              value: '5'
                             - code: energy_rating
-                              value: "3"
+                              value: '3'
                             - code: installation_detail
                               value: Available
                             - code: wattage
-                              value: "1482"
+                              value: '1482'
                             - code: voltage
-                              value: "230"
+                              value: '230'
                             - code: colour
-                              value: "#000000"
+                              value: '#000000'
                             - code: colour_name
                               value: black
                       time:
                         label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
+                        timestamp: '2024-08-12T10:27:48.913Z'
                     - category_id: Refrigerator
                       descriptor:
                         name: Custom_Input
                       id: C1
                       price:
                         currency: INR
-                        maximum_value: "0.0"
-                        value: "0.0"
+                        maximum_value: '0.0'
+                        value: '0.0'
                       quantity:
                         available:
-                          count: "99"
+                          count: '99'
                         maximum:
-                          count: "99"
+                          count: '99'
                         unitized:
                           measure:
                             unit: unit
-                            value: "1"
+                            value: '1'
                       related: true
                       tags:
                         - code: type
@@ -1471,27 +1534,27 @@ steps:
                               value: CG1
                   locations:
                     - address:
-                        area_code: "560011"
+                        area_code: '560011'
                         city: Bengaluru
                         locality: Jayanagar
                         state: Karnataka
                         street: Jayanagar
                       circle:
-                        gps: 12.925810,77.583624
+                        gps: '12.925810,77.583624'
                         radius:
                           unit: km
-                          value: "5"
-                      gps: 12.925810,77.583624
+                          value: '5'
+                      gps: '12.925810,77.583624'
                       id: L1
                       time:
-                        days: 1,2,3,4,5
+                        days: '1,2,3,4,5'
                         label: enable
                         range:
-                          end: "2359"
-                          start: "0000"
+                          end: '2359'
+                          start: '0000'
                         schedule:
                           holidays: []
-                        timestamp: 2024-08-13T06:46:19.736Z
+                        timestamp: '2024-08-13T06:46:19.736Z'
                   tags:
                     - code: serviceability
                       list:
@@ -1500,11 +1563,11 @@ steps:
                         - code: category
                           value: Washing Machine
                         - code: type
-                          value: "11"
+                          value: '11'
                         - code: unit
                           value: pincode
                         - code: val
-                          value: 560001-560076,560083
+                          value: '560001-560076,560083'
                     - code: serviceability
                       list:
                         - code: location
@@ -1512,11 +1575,11 @@ steps:
                         - code: category
                           value: Electric Sewing Machine
                         - code: type
-                          value: "10"
+                          value: '10'
                         - code: unit
                           value: km
                         - code: val
-                          value: "15"
+                          value: '15'
                     - code: serviceability
                       list:
                         - code: location
@@ -1524,7 +1587,7 @@ steps:
                         - code: category
                           value: Electric Air Fryer
                         - code: type
-                          value: "12"
+                          value: '12'
                         - code: unit
                           value: country
                         - code: val
@@ -1536,7 +1599,7 @@ steps:
                         - code: category
                           value: Mixer Grinder
                         - code: type
-                          value: "12"
+                          value: '12'
                         - code: unit
                           value: country
                         - code: val
@@ -1548,7 +1611,7 @@ steps:
                         - code: category
                           value: Air Conditioner
                         - code: type
-                          value: "12"
+                          value: '12'
                         - code: unit
                           value: country
                         - code: val
@@ -1560,11 +1623,11 @@ steps:
                         - code: category
                           value: Refrigerator
                         - code: type
-                          value: "10"
+                          value: '10'
                         - code: unit
                           value: km
                         - code: val
-                          value: "15"
+                          value: '15'
                     - code: timing
                       list:
                         - code: type
@@ -1572,18 +1635,793 @@ steps:
                         - code: location
                           value: L1
                         - code: day_from
-                          value: "1"
+                          value: '1'
                         - code: day_to
-                          value: "5"
+                          value: '5'
                         - code: time_from
-                          value: "0900"
+                          value: 0900
                         - code: time_to
-                          value: "2100"
+                          value: '2100'
                   time:
                     label: enable
-                    timestamp: 2024-08-13T06:46:19.736Z
+                    timestamp: '2024-08-13T06:46:19.736Z'
                   ttl: PT24H
         type: request
-transaction_history: []
-validationLib: ""
-helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
+transaction_history:
+  - action_id: search
+    payload:
+      context:
+        domain: 'ONDC:RET15'
+        action: search
+        timestamp: '2026-06-04T07:49:57.004Z'
+        transaction_id: d50cf3b3-b4f1-4f6d-b844-118fd2f3b57e
+        message_id: b3086b18-dc5a-4293-aa03-726f0666c3db
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        intent:
+          fulfillment:
+            type: Delivery
+          payment:
+            '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3'
+          tags:
+            - code: bap_terms
+              list:
+                - code: static_terms
+                  value: ''
+                - code: static_terms_new
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: effective_date
+                  value: '2025-02-01T00:00:00.000Z'
+            - code: bap_features
+              list:
+                - code: '016'
+                  value: 'yes'
+    action: search
+    saved_info: {}
+  - action_id: on_search
+    payload:
+      context:
+        domain: 'ONDC:RET15'
+        action: on_search
+        timestamp: '2026-06-04T07:49:57.015Z'
+        transaction_id: d50cf3b3-b4f1-4f6d-b844-118fd2f3b57e
+        message_id: b3086b18-dc5a-4293-aa03-726f0666c3db
+        bap_id: bap.example.com
+        bap_uri: 'https://bap.example.com'
+        ttl: PT30S
+        bpp_id: bpp.example.com
+        bpp_uri: 'https://bpp.example.com'
+        country: IND
+        city: '*'
+        core_version: 1.2.5
+      message:
+        catalog:
+          bpp/fulfillments:
+            - id: F1
+              type: Delivery
+              contact:
+                phone: '9876543210'
+                email: test@gmail.com
+            - id: F2
+              type: Self-Pickup
+              contact:
+                phone: '7980274499'
+                email: appliance@example.com
+          bpp/descriptor:
+            name: Mock Seller NP
+            symbol: 'https://sellerNP.com/images/np.png'
+            short_desc: Seller Marketplace
+            long_desc: Seller Marketplace
+            images:
+              - 'https://sellerNP.com/images/np.png'
+            tags:
+              - code: bpp_terms
+                list:
+                  - code: np_type
+                    value: MSN
+                  - code: accept_bap_terms
+                    value: 'Y'
+          bpp/providers:
+            - id: P1
+              time:
+                label: enable
+                timestamp: '2024-08-13T06:46:19.736Z'
+              ttl: PT24H
+              locations:
+                - id: L1
+                  gps: '12.925810,77.583624'
+                  address:
+                    city: Bengaluru
+                    state: Karnataka
+                    area_code: '560011'
+                    street: Jayanagar
+                    locality: Jayanagar
+                  time:
+                    label: enable
+                    timestamp: '2024-08-13T06:46:19.736Z'
+                    schedule:
+                      holidays: []
+                  circle:
+                    gps: '12.925810,77.583624'
+                    radius:
+                      unit: km
+                      value: '5'
+              descriptor:
+                name: Store 1
+                symbol: 'https://sellerNP.com/images/store1.png'
+                short_desc: Store 1
+                long_desc: Store 1
+                images:
+                  - 'https://sellerNP.com/images/store1.png'
+              categories:
+                - id: V1
+                  descriptor:
+                    name: Variant Group 1
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: variant_group
+                    - code: attr
+                      list:
+                        - code: name
+                          value: item.tags.attribute.colour
+                        - code: seq
+                          value: '1'
+              items:
+                - id: I1
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T05:30:48.998Z'
+                  rating: '4'
+                  descriptor:
+                    name: Whirlpool 7.5 kg Fully Automatic Washing Machine
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Fully Automatic Top Load Washing Machine with 7.5 kg
+                      capacity
+                    long_desc: >-
+                      Whirlpool 7.5 kg Fully Automatic Washing Machine with 6th
+                      Sense Technology
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:8904123051111'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '8'
+                  price:
+                    currency: INR
+                    value: '35000'
+                    maximum_value: '35000'
+                  category_id: Washing Machine
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Whirlpool Washing Machine
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Whirlpool 7.5 kg Fully Automatic Washing Machine
+                        - code: weight
+                          value: '32'
+                        - code: model
+                          value: Stainwash Ultra
+                        - code: colour
+                          value: '#EEF6F7'
+                        - code: colour_name
+                          value: catskill white
+                        - code: special_feature
+                          value: frequency
+                        - code: breadth
+                          value: '12.3'
+                        - code: length
+                          value: '18.5'
+                        - code: height
+                          value: '101.5'
+                        - code: includes
+                          value: 'Power Cord, Inlet Pipe'
+                        - code: type
+                          value: full-auto
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '4'
+                        - code: energy_rating
+                          value: '3'
+                        - code: extended_warranty
+                          value: '3'
+                        - code: installation_detail
+                          value: Available
+                        - code: wattage
+                          value: '720'
+                        - code: voltage
+                          value: '230'
+                    - code: type
+                      list:
+                        - code: type
+                          value: item
+                    - code: custom_group
+                      list:
+                        - code: id
+                          value: CG1
+                - id: I2
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Singer Simple Sewing Machine
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Heavy-duty electric sewing machine.
+                    long_desc: >-
+                      Singer Heavy Duty 4452 Sewing Machine with 32 Built-in
+                      Stitches
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:00037431885883'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '10'
+                  price:
+                    currency: INR
+                    value: '18000'
+                    maximum_value: '18000'
+                  category_id: Electric Sewing Machine
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Singer Heavy Duty 4452
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Singer Simple Sewing Machine
+                        - code: model
+                          value: '3232'
+                        - code: special_feature
+                          value: laser
+                        - code: weight
+                          value: '6.9'
+                        - code: length
+                          value: '7.3'
+                        - code: breadth
+                          value: '15.5'
+                        - code: height
+                          value: '41'
+                        - code: includes
+                          value: 'Automatic Needle Threader, Adjustable Presser Foot'
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '2'
+                        - code: energy_rating
+                          value: '4'
+                        - code: extended_warranty
+                          value: '2'
+                        - code: wattage
+                          value: '320'
+                        - code: voltage
+                          value: '220'
+                    - code: type
+                      list:
+                        - code: type
+                          value: item
+                    - code: custom_group
+                      list:
+                        - code: id
+                          value: CG1
+                - id: I3
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Philips Viva AirFryer HD9225-50
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Air fryer for healthy cooking
+                    long_desc: >-
+                      Philips Viva Collection Air Fryer with Rapid Air
+                      Technology
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:8710103539209'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '15000'
+                    maximum_value: '15000'
+                  category_id: Electric Air Fryer
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P3D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P20D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Philips Air Fryer
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Philips Viva AirFryer HD9225-50
+                        - code: model
+                          value: HD9220/50
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '7'
+                        - code: length
+                          value: '3'
+                        - code: breadth
+                          value: '31.5'
+                        - code: height
+                          value: '28'
+                        - code: includes
+                          value: 'Recipe Booklet, Double Layer Rack'
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '1'
+                        - code: energy_rating
+                          value: '3'
+                        - code: extended_warranty
+                          value: '1'
+                        - code: wattage
+                          value: '320'
+                        - code: voltage
+                          value: '220'
+                - id: I4
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Philips Mixer Grinder
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Fastest and Finest Mixing Grinder
+                    long_desc: >-
+                      The Philips Mixer Grinder is a versatile kitchen appliance
+                      designed to simplify your cooking tasks. Equipped with
+                      powerful motors and durable stainless steel blades, it
+                      effortlessly grinds, blends, and mixes a variety of
+                      ingredients.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:887775600280'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  category_id: Mixer Grinder
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Mixer Grinder
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Philips Mixer Grinder
+                        - code: model
+                          value: MXPH-1007
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '8'
+                        - code: length
+                          value: '1.5'
+                        - code: breadth
+                          value: '20.5'
+                        - code: height
+                          value: '15'
+                        - code: includes
+                          value: Mixer Pots-3
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '1'
+                        - code: energy_rating
+                          value: '2'
+                        - code: wattage
+                          value: '750'
+                        - code: voltage
+                          value: '230'
+                - id: I5
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: 3 Start Dual Inverter Split AC
+                    long_desc: '3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way swing'
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:8806091608222'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  parent_item_id: V1
+                  category_id: Air Conditioner
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: LG Air Conditioner
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                        - code: model
+                          value: TS-Q18JNXE3
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '32.5'
+                        - code: length
+                          value: '18.9'
+                        - code: breadth
+                          value: '83.7'
+                        - code: height
+                          value: '30.8'
+                        - code: includes
+                          value: 'Indoor Unit, Outdoor Unit, Remote'
+                        - code: type
+                          value: split
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '5'
+                        - code: energy_rating
+                          value: '3'
+                        - code: installation_detail
+                          value: Available
+                        - code: wattage
+                          value: '1482'
+                        - code: voltage
+                          value: '230'
+                        - code: colour
+                          value: '#FF0000'
+                        - code: colour_name
+                          value: red
+                - id: I6
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: 5 Star WindFree Inverter Split AC
+                    long_desc: >-
+                      5 Star WindFree Inverter Split AC, 6 in 1 cooling 2 way
+                      swing
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:8806091608222'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  parent_item_id: V1
+                  category_id: Air Conditioner
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Air Conditioner
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                        - code: model
+                          value: TS-A18JNXE3
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '32.5'
+                        - code: length
+                          value: '18.9'
+                        - code: breadth
+                          value: '83.7'
+                        - code: height
+                          value: '30.8'
+                        - code: includes
+                          value: 'Indoor Unit, Outdoor Unit, Remote'
+                        - code: type
+                          value: split
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '5'
+                        - code: energy_rating
+                          value: '3'
+                        - code: installation_detail
+                          value: Available
+                        - code: wattage
+                          value: '1482'
+                        - code: voltage
+                          value: '230'
+                        - code: colour
+                          value: '#000000'
+                        - code: colour_name
+                          value: black
+                - id: C1
+                  descriptor:
+                    name: Custom_Input
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '0.00'
+                    maximum_value: '0.00'
+                  category_id: Refrigerator
+                  related: true
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: customization
+                    - code: parent
+                      list:
+                        - code: id
+                          value: CG1
+              fulfillments:
+                - id: F1
+                  type: Delivery
+                  contact:
+                    phone: '9876543210'
+                    email: test@gmail.com
+                - id: F2
+                  type: Self-Pickup
+                  contact:
+                    phone: '7980274499'
+                    email: appliance@example.com
+              tags:
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Washing Machine
+                    - code: type
+                      value: '11'
+                    - code: unit
+                      value: pincode
+                    - code: val
+                      value: '560001-560076,560083'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Electric Sewing Machine
+                    - code: type
+                      value: '10'
+                    - code: unit
+                      value: km
+                    - code: val
+                      value: '15'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Electric Air Fryer
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Mixer Grinder
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Air Conditioner
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: d7682d57-4a6d-4b01-98e6-b911301fb176
+                    - code: category
+                      value: Refrigerator
+                    - code: type
+                      value: '10'
+                    - code: unit
+                      value: km
+                    - code: val
+                      value: '15'
+                - code: timing
+                  list:
+                    - code: type
+                      value: All
+                    - code: location
+                      value: L1
+                    - code: day_from
+                      value: '1'
+                    - code: day_to
+                      value: '5'
+                    - code: time_from
+                      value: 0900
+                    - code: time_to
+                      value: '2100'
+    action: on_search
+    saved_info: {}
+validationLib: ''
+helperLib: >-
+  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CmNvbnN0IFJFVDE1QVBQTElBTkNFUzEyNUNhdGFsb2cgPSB7CgljYXRhbG9nOiB7CgkJImJwcC9mdWxmaWxsbWVudHMiOiBbCgkJCXsKCQkJCWlkOiAiRjEiLAoJCQkJdHlwZTogIkRlbGl2ZXJ5IiwKCQkJfSwKCQkJewoJCQkJaWQ6ICJGMiIsCgkJCQl0eXBlOiAiU2VsZi1QaWNrdXAiCgkJCX0KCQldLAoJCSJicHAvZGVzY3JpcHRvciI6IHsKCQkJbmFtZTogIk1vY2sgU2VsbGVyIE5QIiwKCQkJc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL25wLnBuZyIsCgkJCXNob3J0X2Rlc2M6ICJTZWxsZXIgTWFya2V0cGxhY2UiLAoJCQlsb25nX2Rlc2M6ICJTZWxsZXIgTWFya2V0cGxhY2UiLAoJCQlpbWFnZXM6IFsiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL25wLnBuZyJdLAoJCQl0YWdzOiBbCgkJCQl7CgkJCQkJY29kZTogImJwcF90ZXJtcyIsCgkJCQkJbGlzdDogWwoJCQkJCQl7CgkJCQkJCQljb2RlOiAibnBfdHlwZSIsCgkJCQkJCQl2YWx1ZTogIk1TTiIsCgkJCQkJCX0sCgkJCQkJCXsKCQkJCQkJCWNvZGU6ICJhY2NlcHRfYmFwX3Rlcm1zIiwKCQkJCQkJCXZhbHVlOiAiWSIsCgkJCQkJCX0sCgkJCQkJXSwKCQkJCX0sCgkJCV0sCgkJfSwKCQkiYnBwL3Byb3ZpZGVycyI6IFsKCQkJewoJCQkJaWQ6ICJQMSIsCgkJCQl0aW1lOiB7CgkJCQkJbGFiZWw6ICJlbmFibGUiLAoJCQkJCXRpbWVzdGFtcDogIjIwMjQtMDgtMTNUMDY6NDY6MTkuNzM2WiIsCgkJCQl9LAoJCQkJdHRsOiAiUFQyNEgiLAoJCQkJbG9jYXRpb25zOiBbCgkJCQkJewoJCQkJCQlpZDogIkwxIiwKCQkJCQkJZ3BzOiAiMTIuOTI1ODEwLDc3LjU4MzYyNCIsCgkJCQkJCWFkZHJlc3M6IHsKCQkJCQkJCWNpdHk6ICJCZW5nYWx1cnUiLAoJCQkJCQkJc3RhdGU6ICJLYXJuYXRha2EiLAoJCQkJCQkJYXJlYV9jb2RlOiAiNTYwMDExIiwKCQkJCQkJCXN0cmVldDogIkpheWFuYWdhciIsCgkJCQkJCQlsb2NhbGl0eTogIkpheWFuYWdhciIsCgkJCQkJCX0sCgkJCQkJCXRpbWU6IHsKCQkJCQkJCWxhYmVsOiAiZW5hYmxlIiwKCQkJCQkJCXRpbWVzdGFtcDogIjIwMjQtMDgtMTNUMDY6NDY6MTkuNzM2WiIsCgkJCQkJCQlkYXlzOiAiMSwyLDMsNCw1IiwKCQkJCQkJCXNjaGVkdWxlOiB7CgkJCQkJCQkJaG9saWRheXM6IFtdLAoJCQkJCQkJfSwKCQkJCQkJCXJhbmdlOiB7CgkJCQkJCQkJc3RhcnQ6ICIwMDAwIiwKCQkJCQkJCQllbmQ6ICIyMzU5IiwKCQkJCQkJCX0sCgkJCQkJCX0sCgkJCQkJCWNpcmNsZTogewoJCQkJCQkJZ3BzOiAiMTIuOTI1ODEwLDc3LjU4MzYyNCIsCgkJCQkJCQlyYWRpdXM6IHsKCQkJCQkJCQl1bml0OiAia20iLAoJCQkJCQkJCXZhbHVlOiAiNSIsCgkJCQkJCQl9LAoJCQkJCQl9LAoJCQkJCX0sCgkJCQldLAoJCQkJZGVzY3JpcHRvcjogewoJCQkJCW5hbWU6ICJTdG9yZSAxIiwKCQkJCQlzeW1ib2w6ICJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvc3RvcmUxLnBuZyIsCgkJCQkJc2hvcnRfZGVzYzogIlN0b3JlIDEiLAoJCQkJCWxvbmdfZGVzYzogIlN0b3JlIDEiLAoJCQkJCWltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvc3RvcmUxLnBuZyJdLAoJCQkJfSwKCQkJCWNhdGVnb3JpZXM6IFsKCQkJCQl7CgkJCQkJCWlkOiAiVjEiLAoJCQkJCQlkZXNjcmlwdG9yOiB7CgkJCQkJCQluYW1lOiAiVmFyaWFudCBHcm91cCAxIiwKCQkJCQkJfSwKCQkJCQkJdGFnczogWwoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJ0eXBlIiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJ0eXBlIiwKCQkJCQkJCQkJCXZhbHVlOiAidmFyaWFudF9ncm91cCIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJXSwKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogImF0dHIiLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogIm5hbWUiLAoJCQkJCQkJCQkJdmFsdWU6ICJpdGVtLnRhZ3MuYXR0cmlidXRlLmNvbG91ciIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJzZXEiLAoJCQkJCQkJCQkJdmFsdWU6ICIxIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJXSwKCQkJCQl9LAoJCQkJXSwKCQkJCWl0ZW1zOiBbCgkJCQkJewoJCQkJCQlpZDogIkkxIiwKCQkJCQkJdGltZTogewoJCQkJCQkJbGFiZWw6ICJlbmFibGUiLAoJCQkJCQkJdGltZXN0YW1wOiAiMjAyNC0wOC0xMlQwNTozMDo0OC45OThaIiwKCQkJCQkJfSwKCQkJCQkJcmF0aW5nOiAiNCIsCgkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCW5hbWU6ICJXYXNoaW5nIE1hY2hpbmUiLAoJCQkJCQkJc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyIsCgkJCQkJCQlzaG9ydF9kZXNjOgoJCQkJCQkJCSJGdWxseSBBdXRvbWF0aWMgVG9wIExvYWQgV2FzaGluZyBNYWNoaW5lIHdpdGggNy41IGtnIGNhcGFjaXR5IiwKCQkJCQkJCWxvbmdfZGVzYzoKCQkJCQkJCQkiV2hpcmxwb29sIDcuNSBrZyBGdWxseSBBdXRvbWF0aWMgV2FzaGluZyBNYWNoaW5lIHdpdGggNnRoIFNlbnNlIFRlY2hub2xvZ3kiLAoJCQkJCQkJaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciXSwKCQkJCQkJCWNvZGU6ICIzOjg5MDQxMjMwNTExMTEiLAoJCQkJCQl9LAoJCQkJCQlxdWFudGl0eTogewoJCQkJCQkJdW5pdGl6ZWQ6IHsKCQkJCQkJCQltZWFzdXJlOiB7CgkJCQkJCQkJCXVuaXQ6ICJ1bml0IiwKCQkJCQkJCQkJdmFsdWU6ICIxIiwKCQkJCQkJCQl9LAoJCQkJCQkJfSwKCQkJCQkJCWF2YWlsYWJsZTogewoJCQkJCQkJCWNvdW50OiAiOTkiLAoJCQkJCQkJfSwKCQkJCQkJCW1heGltdW06IHsKCQkJCQkJCQljb3VudDogIjgiLAoJCQkJCQkJfSwKCQkJCQkJfSwKCQkJCQkJcHJpY2U6IHsKCQkJCQkJCWN1cnJlbmN5OiAiSU5SIiwKCQkJCQkJCXZhbHVlOiAiMjI2MCIsCgkJCQkJCQltYXhpbXVtX3ZhbHVlOiAiMjI2MCIsCgkJCQkJCX0sCgkJCQkJCWNhdGVnb3J5X2lkOiAiV2FzaGluZyBNYWNoaW5lIiwKCQkJCQkJbG9jYXRpb25faWQ6ICJMMSIsCgkJCQkJCWZ1bGZpbGxtZW50X2lkOiAiRjEiLAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybmFibGUiOiB0cnVlLAoJCQkJCQkiQG9uZGMvb3JnL2NhbmNlbGxhYmxlIjogdHJ1ZSwKCQkJCQkJIkBvbmRjL29yZy9hdmFpbGFibGVfb25fY29kIjogZmFsc2UsCgkJCQkJCSJAb25kYy9vcmcvdGltZV90b19zaGlwIjogIlAyRCIsCgkJCQkJCSJAb25kYy9vcmcvc2VsbGVyX3BpY2t1cF9yZXR1cm4iOiB0cnVlLAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybl93aW5kb3ciOiAiUDdEIiwKCQkJCQkJIkBvbmRjL29yZy9jb250YWN0X2RldGFpbHNfY29uc3VtZXJfY2FyZSI6CgkJCQkJCQkiU2VsbGVyIEJ1c2luZXNzLHRlc3RAZ21haWwuY29tLDk4NzY1NDMyMTAiLAoJCQkJCQkiQG9uZGMvb3JnL3N0YXR1dG9yeV9yZXFzX3BhY2thZ2VkX2NvbW1vZGl0aWVzIjogewoJCQkJCQkJbWFudWZhY3R1cmVyX29yX3BhY2tlcl9uYW1lOiAiU2VsbGVyIEJ1c2luZXNzIiwKCQkJCQkJCW1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfYWRkcmVzczoKCQkJCQkJCQkiU2VsbGVyIEJ1aWxkaW5nIEFkZHJlc3MsIEpheWFuYWdhciwgQmVuZ2FsdXJ1LCBLYXJuYXRha2EsIEluZGlhIC0gNTYwMDExIiwKCQkJCQkJCWNvbW1vbl9vcl9nZW5lcmljX25hbWVfb2ZfY29tbW9kaXR5OiAiV2FzaGluZyBNYWNoaW5lIiwKCQkJCQkJCW1vbnRoX3llYXJfb2ZfbWFudWZhY3R1cmVfcGFja2luZ19pbXBvcnQ6ICJOQSIsCgkJCQkJCX0sCgkJCQkJCXRhZ3M6IFsKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAib3JpZ2luIiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJjb3VudHJ5IiwKCQkJCQkJCQkJCXZhbHVlOiAiSU5EIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAiYXR0cmlidXRlIiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJicmFuZCIsCgkJCQkJCQkJCQl2YWx1ZTogIldoaXJscG9vbCA3LjUga2cgRnVsbHkgQXV0b21hdGljIFdhc2hpbmcgTWFjaGluZSIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJ3ZWlnaHQiLAoJCQkJCQkJCQkJdmFsdWU6ICIzMiIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJtb2RlbCIsCgkJCQkJCQkJCQl2YWx1ZTogIlN0YWlud2FzaCBVbHRyYSIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJjb2xvdXIiLAoJCQkJCQkJCQkJdmFsdWU6ICIjRUVGNkY3IgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiY29sb3VyX25hbWUiLAoJCQkJCQkJCQkJdmFsdWU6ICJjYXRza2lsbCB3aGl0ZSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogInNwZWNpYWxfZmVhdHVyZSIsCgkJCQkJCQkJCQl2YWx1ZTogImZyZXF1ZW5jeSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogImJyZWFkdGgiLAoJCQkJCQkJCQkJdmFsdWU6ICIxMi4zIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogImxlbmd0aCIsCgkJCQkJCQkJCQl2YWx1ZTogIjE4LjUiLAoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiaGVpZ2h0IiwKCQkJCQkJCQkJCXZhbHVlOiAiMTAxLjUiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJpbmNsdWRlcyIsCgkJCQkJCQkJCQl2YWx1ZTogIlBvd2VyIENvcmQsIElubGV0IFBpcGUiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJ0eXBlIiwKCQkJCQkJCQkJCXZhbHVlOiAiZnVsbC1hdXRvIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAicmVmdXJiaXNoZWQiLAoJCQkJCQkJCQkJdmFsdWU6ICJubyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogIndhcnJhbnR5IiwKCQkJCQkJCQkJCXZhbHVlOiAiNCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogImVuZXJneV9yYXRpbmciLAoJCQkJCQkJCQkJdmFsdWU6ICIzIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiZXh0ZW5kZWRfd2FycmFudHkiLAoJCQkJCQkJCQkJdmFsdWU6ICIzIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiaW5zdGFsbGF0aW9uX2RldGFpbCIsCgkJCQkJCQkJCQl2YWx1ZTogIkF2YWlsYWJsZSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogIndhdHRhZ2UiLAoJCQkJCQkJCQkJdmFsdWU6ICI3MjAiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJ2b2x0YWdlIiwKCQkJCQkJCQkJCXZhbHVlOiAiMjMwIgoJCQkJCQkJCQl9CgkJCQkJCQkJXSwKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogInR5cGUiLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogInR5cGUiLAoJCQkJCQkJCQkJdmFsdWU6ICJpdGVtIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAiY3VzdG9tX2dyb3VwIiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJpZCIsCgkJCQkJCQkJCQl2YWx1ZTogIkNHMSIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJXSwKCQkJCQkJCX0sCgkJCQkJCV0sCgkJCQkJfSwKCQkJCQl7CgkJCQkJCWlkOiAiSTIiLAoJCQkJCQl0aW1lOiB7CgkJCQkJCQlsYWJlbDogImVuYWJsZSIsCgkJCQkJCQl0aW1lc3RhbXA6ICIyMDI0LTA4LTEyVDEwOjI3OjQ4LjkxM1oiLAoJCQkJCQl9LAoJCQkJCQlyYXRpbmc6ICI0IiwKCQkJCQkJZGVzY3JpcHRvcjogewoJCQkJCQkJbmFtZTogIlNpbmdlciBTaW1wbGUgU2V3aW5nIE1hY2hpbmUiLAoJCQkJCQkJc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyIsCgkJCQkJCQlzaG9ydF9kZXNjOiAiSGVhdnktZHV0eSBlbGVjdHJpYyBzZXdpbmcgbWFjaGluZS4iLAoJCQkJCQkJbG9uZ19kZXNjOgoJCQkJCQkJCSJTaW5nZXIgSGVhdnkgRHV0eSA0NDUyIFNld2luZyBNYWNoaW5lIHdpdGggMzIgQnVpbHQtaW4gU3RpdGNoZXMiLAoJCQkJCQkJaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciXSwKCQkJCQkJCWNvZGU6ICIzOjAwMDM3NDMxODg1ODgzIiwKCQkJCQkJfSwKCQkJCQkJcXVhbnRpdHk6IHsKCQkJCQkJCXVuaXRpemVkOiB7CgkJCQkJCQkJbWVhc3VyZTogewoJCQkJCQkJCQl1bml0OiAidW5pdCIsCgkJCQkJCQkJCXZhbHVlOiAiMSIsCgkJCQkJCQkJfSwKCQkJCQkJCX0sCgkJCQkJCQlhdmFpbGFibGU6IHsKCQkJCQkJCQljb3VudDogIjk5IiwKCQkJCQkJCX0sCgkJCQkJCQltYXhpbXVtOiB7CgkJCQkJCQkJY291bnQ6ICIxMCIsCgkJCQkJCQl9LAoJCQkJCQl9LAoJCQkJCQlwcmljZTogewoJCQkJCQkJY3VycmVuY3k6ICJJTlIiLAoJCQkJCQkJdmFsdWU6ICIxODAwMCIsCgkJCQkJCQltYXhpbXVtX3ZhbHVlOiAiMTgwMDAiLAoJCQkJCQl9LAoJCQkJCQljYXRlZ29yeV9pZDogIkVsZWN0cmljIFNld2luZyBNYWNoaW5lIiwKCQkJCQkJbG9jYXRpb25faWQ6ICJMMSIsCgkJCQkJCWZ1bGZpbGxtZW50X2lkOiAiRjEiLAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybmFibGUiOiB0cnVlLAoJCQkJCQkiQG9uZGMvb3JnL2NhbmNlbGxhYmxlIjogdHJ1ZSwKCQkJCQkJIkBvbmRjL29yZy9hdmFpbGFibGVfb25fY29kIjogZmFsc2UsCgkJCQkJCSJAb25kYy9vcmcvdGltZV90b19zaGlwIjogIlAyRCIsCgkJCQkJCSJAb25kYy9vcmcvc2VsbGVyX3BpY2t1cF9yZXR1cm4iOiB0cnVlLAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybl93aW5kb3ciOiAiUDdEIiwKCQkJCQkJIkBvbmRjL29yZy9jb250YWN0X2RldGFpbHNfY29uc3VtZXJfY2FyZSI6CgkJCQkJCQkiU2VsbGVyIEJ1c2luZXNzLHRlc3RAZ21haWwuY29tLDk4NzY1NDMyMTAiLAoJCQkJCQkiQG9uZGMvb3JnL3N0YXR1dG9yeV9yZXFzX3BhY2thZ2VkX2NvbW1vZGl0aWVzIjogewoJCQkJCQkJbWFudWZhY3R1cmVyX29yX3BhY2tlcl9uYW1lOiAiU2VsbGVyIEJ1c2luZXNzIiwKCQkJCQkJCW1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfYWRkcmVzczoKCQkJCQkJCQkiU2VsbGVyIEJ1aWxkaW5nIEFkZHJlc3MsIEpheWFuYWdhciwgQmVuZ2FsdXJ1LCBLYXJuYXRha2EsIEluZGlhIC0gNTYwMDExIiwKCQkJCQkJCWNvbW1vbl9vcl9nZW5lcmljX25hbWVfb2ZfY29tbW9kaXR5OiAiU2luZ2VyIEhlYXZ5IER1dHkgNDQ1MiIsCgkJCQkJCQltb250aF95ZWFyX29mX21hbnVmYWN0dXJlX3BhY2tpbmdfaW1wb3J0OiAiTkEiLAoJCQkJCQl9LAoJCQkJCQl0YWdzOiBbCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogIm9yaWdpbiIsCgkJCQkJCQkJbGlzdDogWwoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiY291bnRyeSIsCgkJCQkJCQkJCQl2YWx1ZTogIklORCIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJXSwKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogImF0dHJpYnV0ZSIsCgkJCQkJCQkJbGlzdDogWwoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiYnJhbmQiLAoJCQkJCQkJCQkJdmFsdWU6ICJTaW5nZXIgU2ltcGxlIFNld2luZyBNYWNoaW5lIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAibW9kZWwiLAoJCQkJCQkJCQkJdmFsdWU6ICIzMjMyIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAic3BlY2lhbF9mZWF0dXJlIiwKCQkJCQkJCQkJCXZhbHVlOiAibGFzZXIiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJ3ZWlnaHQiLAoJCQkJCQkJCQkJdmFsdWU6ICI2LjkiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJsZW5ndGgiLAoJCQkJCQkJCQkJdmFsdWU6ICI3LjMiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJicmVhZHRoIiwKCQkJCQkJCQkJCXZhbHVlOiAiMTUuNSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogImhlaWdodCIsCgkJCQkJCQkJCQl2YWx1ZTogIjQxIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiaW5jbHVkZXMiLAoJCQkJCQkJCQkJdmFsdWU6ICJBdXRvbWF0aWMgTmVlZGxlIFRocmVhZGVyLCBBZGp1c3RhYmxlIFByZXNzZXIgRm9vdCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogInJlZnVyYmlzaGVkIiwKCQkJCQkJCQkJCXZhbHVlOiAibm8iCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJ3YXJyYW50eSIsCgkJCQkJCQkJCQl2YWx1ZTogIjIiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJlbmVyZ3lfcmF0aW5nIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICI0IgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAiZXh0ZW5kZWRfd2FycmFudHkiLAoJCQkJCQkJCQkJdmFsdWU6ICIyIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAid2F0dGFnZSIsCgkJCQkJCQkJCQl2YWx1ZTogIjMyMCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogInZvbHRhZ2UiLAoJCQkJCQkJCQkJdmFsdWU6ICIyMjAiCgkJCQkJCQkJCX0KCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAidHlwZSIsCgkJCQkJCQkJbGlzdDogWwoJCQkJCQkJCQl7CgkJCQkJCQkJCQljb2RlOiAidHlwZSIsCgkJCQkJCQkJCQl2YWx1ZTogIml0ZW0iLAoJCQkJCQkJCQl9LAoJCQkJCQkJCV0sCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJjdXN0b21fZ3JvdXAiLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogImlkIiwKCQkJCQkJCQkJCXZhbHVlOiAiQ0cxIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJXSwKCQkJCQl9LAoJCQkJCXsKCQkJCQkJaWQ6ICJJMyIsCgkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCW5hbWU6ICJQaGlsaXBzIFZpdmEgQWlyRnJ5ZXIgSEQ5MjI1LTUwIiwKCQkJCQkJCWNvZGU6ICIzOjg3MTAxMDM1MzkyMDkiLAoJCQkJCQkJc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyIsCgkJCQkJCQlzaG9ydF9kZXNjOgoJCQkJCQkJCSJBaXIgZnJ5ZXIgZm9yIGhlYWx0aHkgY29va2luZyIsCgkJCQkJCQlsb25nX2Rlc2M6CgkJCQkJCQkJIlBoaWxpcHMgVml2YSBDb2xsZWN0aW9uIEFpciBGcnllciB3aXRoIFJhcGlkIEFpciBUZWNobm9sb2d5IiwKCQkJCQkJCWltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvaTEucG5nIl0sCgkJCQkJCX0sCgkJCQkJCXJhdGluZzogIjQiLAoJCQkJCQlwcmljZTogewoJCQkJCQkJY3VycmVuY3k6ICJJTlIiLAoJCQkJCQkJdmFsdWU6ICIxNTAwMCIsCgkJCQkJCQltYXhpbXVtX3ZhbHVlOiAiMTUwMDAiLAoJCQkJCQl9LAoJCQkJCQljYXRlZ29yeV9pZDogIkVsZWN0cmljIEFpciBGcnllciIsCgkJCQkJCWZ1bGZpbGxtZW50X2lkOiAiRjEiLAoJCQkJCQlsb2NhdGlvbl9pZDogIkwxIiwKCQkJCQkJdGltZTogewoJCQkJCQkJbGFiZWw6ICJlbmFibGUiLAoJCQkJCQkJdGltZXN0YW1wOiAiMjAyNC0wOC0xMlQxMDoyNzo0OC45MTNaIiwKCQkJCQkJfSwKCQkJCQkJcXVhbnRpdHk6IHsKCQkJCQkJCWF2YWlsYWJsZTogewoJCQkJCQkJCWNvdW50OiAiOTkiLAoJCQkJCQkJfSwKCQkJCQkJCW1heGltdW06IHsKCQkJCQkJCQljb3VudDogIjk5IiwKCQkJCQkJCX0sCgkJCQkJCQl1bml0aXplZDogewoJCQkJCQkJCW1lYXN1cmU6IHsKCQkJCQkJCQkJdmFsdWU6ICIxIiwKCQkJCQkJCQkJdW5pdDogInVuaXQiLAoJCQkJCQkJCX0sCgkJCQkJCQl9LAoJCQkJCQl9LAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybmFibGUiOiB0cnVlLAoJCQkJCQkiQG9uZGMvb3JnL3NlbGxlcl9waWNrdXBfcmV0dXJuIjogZmFsc2UsCgkJCQkJCSJAb25kYy9vcmcvcmV0dXJuX3dpbmRvdyI6ICJQMjBEIiwKCQkJCQkJIkBvbmRjL29yZy9jYW5jZWxsYWJsZSI6IHRydWUsCgkJCQkJCSJAb25kYy9vcmcvdGltZV90b19zaGlwIjogIlAzRCIsCgkJCQkJCSJAb25kYy9vcmcvYXZhaWxhYmxlX29uX2NvZCI6IGZhbHNlLAoJCQkJCQkiQG9uZGMvb3JnL2NvbnRhY3RfZGV0YWlsc19jb25zdW1lcl9jYXJlIjoKCQkJCQkJCSJNb2F6LHN1cHBvcnRAZ21haWwuY29tLDIzNDM0NTM0MzQiLAoJCQkJCQkiQG9uZGMvb3JnL3N0YXR1dG9yeV9yZXFzX3BhY2thZ2VkX2NvbW1vZGl0aWVzIjogewoJCQkJCQkJbWFudWZhY3R1cmVyX29yX3BhY2tlcl9uYW1lOiAiU2VsbGVyIEJ1c2luZXNzIiwKCQkJCQkJCW1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfYWRkcmVzczoKCQkJCQkJCQkiU2VsbGVyIEJ1aWxkaW5nIEFkZHJlc3MsIEpheWFuYWdhciwgQmVuZ2FsdXJ1LCBLYXJuYXRha2EsIEluZGlhIC0gNTYwMDExIiwKCQkJCQkJCWNvbW1vbl9vcl9nZW5lcmljX25hbWVfb2ZfY29tbW9kaXR5OiAiUGhpbGlwcyBBaXIgRnJ5ZXIiLAoJCQkJCQkJbW9udGhfeWVhcl9vZl9tYW51ZmFjdHVyZV9wYWNraW5nX2ltcG9ydDogIk5BIiwKCQkJCQkJfSwKCQkJCQkJdGFnczogWwoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJvcmlnaW4iLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogImNvdW50cnkiLAoJCQkJCQkJCQkJdmFsdWU6ICJJTkQiLAoJCQkJCQkJCQl9LAoJCQkJCQkJCV0sCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJhdHRyaWJ1dGUiLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiYnJhbmQiLAoJCQkJCQkJCQkJInZhbHVlIjogIlBoaWxpcHMgVml2YSBBaXJGcnllciBIRDkyMjUtNTAiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogIm1vZGVsIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICJIRDkyMjAvNTAiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogInNwZWNpYWxfZmVhdHVyZSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiZnJlcXVlbmN5IgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3ZWlnaHQiLAoJCQkJCQkJCQkJInZhbHVlIjogIjciCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImxlbmd0aCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiYnJlYWR0aCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMzEuNSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiaGVpZ2h0IiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIyOCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiaW5jbHVkZXMiLAoJCQkJCQkJCQkJInZhbHVlIjogIlJlY2lwZSBCb29rbGV0LCBEb3VibGUgTGF5ZXIgUmFjayIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAicmVmdXJiaXNoZWQiLAoJCQkJCQkJCQkJInZhbHVlIjogIm5vIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3YXJyYW50eSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiZW5lcmd5X3JhdGluZyIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiZXh0ZW5kZWRfd2FycmFudHkiLAoJCQkJCQkJCQkJInZhbHVlIjogIjEiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogIndhdHRhZ2UiLAoJCQkJCQkJCQkJInZhbHVlIjogIjMyMCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAidm9sdGFnZSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMjIwIgoJCQkJCQkJCQl9CgkJCQkJCQkJXQoJCQkJCQkJfSwKCQkJCQkJXSwKCQkJCQl9LAoJCQkJCXsKCQkJCQkJaWQ6ICJJNCIsCgkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCW5hbWU6ICJQaGlsaXBzIE1peGVyIEdyaW5kZXIiLAoJCQkJCQkJY29kZTogIjM6ODg3Nzc1NjAwMjgwIiwKCQkJCQkJCXN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciLAoJCQkJCQkJc2hvcnRfZGVzYzoKCQkJCQkJCQkiRmFzdGVzdCBhbmQgRmluZXN0IE1peGluZyBHcmluZGVyIiwKCQkJCQkJCWxvbmdfZGVzYzoKCQkJCQkJCQkiVGhlIFBoaWxpcHMgTWl4ZXIgR3JpbmRlciBpcyBhIHZlcnNhdGlsZSBraXRjaGVuIGFwcGxpYW5jZSBkZXNpZ25lZCB0byBzaW1wbGlmeSB5b3VyIGNvb2tpbmcgdGFza3MuIEVxdWlwcGVkIHdpdGggcG93ZXJmdWwgbW90b3JzIGFuZCBkdXJhYmxlIHN0YWlubGVzcyBzdGVlbCBibGFkZXMsIGl0IGVmZm9ydGxlc3NseSBncmluZHMsIGJsZW5kcywgYW5kIG1peGVzIGEgdmFyaWV0eSBvZiBpbmdyZWRpZW50cy4iLAoJCQkJCQkJaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciXSwKCQkJCQkJfSwKCQkJCQkJcmF0aW5nOiAiNCIsCgkJCQkJCXByaWNlOiB7CgkJCQkJCQljdXJyZW5jeTogIklOUiIsCgkJCQkJCQl2YWx1ZTogIjU5OS4wMCIsCgkJCQkJCQltYXhpbXVtX3ZhbHVlOiAiMTE5OS4wMCIsCgkJCQkJCX0sCgkJCQkJCWNhdGVnb3J5X2lkOiAiTWl4ZXIgR3JpbmRlciIsCgkJCQkJCWZ1bGZpbGxtZW50X2lkOiAiRjEiLAoJCQkJCQlsb2NhdGlvbl9pZDogIkwxIiwKCQkJCQkJdGltZTogewoJCQkJCQkJbGFiZWw6ICJlbmFibGUiLAoJCQkJCQkJdGltZXN0YW1wOiAiMjAyNC0wOC0xMlQxMDoyNzo0OC45MTNaIiwKCQkJCQkJfSwKCQkJCQkJcXVhbnRpdHk6IHsKCQkJCQkJCWF2YWlsYWJsZTogewoJCQkJCQkJCWNvdW50OiAiOTkiLAoJCQkJCQkJfSwKCQkJCQkJCW1heGltdW06IHsKCQkJCQkJCQljb3VudDogIjk5IiwKCQkJCQkJCX0sCgkJCQkJCQl1bml0aXplZDogewoJCQkJCQkJCW1lYXN1cmU6IHsKCQkJCQkJCQkJdmFsdWU6ICIxIiwKCQkJCQkJCQkJdW5pdDogInVuaXQiLAoJCQkJCQkJCX0sCgkJCQkJCQl9LAoJCQkJCQl9LAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybmFibGUiOiB0cnVlLAoJCQkJCQkiQG9uZGMvb3JnL3NlbGxlcl9waWNrdXBfcmV0dXJuIjogZmFsc2UsCgkJCQkJCSJAb25kYy9vcmcvcmV0dXJuX3dpbmRvdyI6ICJQM0QiLAoJCQkJCQkiQG9uZGMvb3JnL2NhbmNlbGxhYmxlIjogdHJ1ZSwKCQkJCQkJIkBvbmRjL29yZy90aW1lX3RvX3NoaXAiOiAiUDFEIiwKCQkJCQkJIkBvbmRjL29yZy9hdmFpbGFibGVfb25fY29kIjogZmFsc2UsCgkJCQkJCSJAb25kYy9vcmcvY29udGFjdF9kZXRhaWxzX2NvbnN1bWVyX2NhcmUiOgoJCQkJCQkJIk1vYXosc3VwcG9ydEBnbWFpbC5jb20sMjM0MzQ1MzQzNCIsCgkJCQkJCSJAb25kYy9vcmcvc3RhdHV0b3J5X3JlcXNfcGFja2FnZWRfY29tbW9kaXRpZXMiOiB7CgkJCQkJCQltYW51ZmFjdHVyZXJfb3JfcGFja2VyX25hbWU6ICJTZWxsZXIgQnVzaW5lc3MiLAoJCQkJCQkJbWFudWZhY3R1cmVyX29yX3BhY2tlcl9hZGRyZXNzOgoJCQkJCQkJCSJTZWxsZXIgQnVpbGRpbmcgQWRkcmVzcywgSmF5YW5hZ2FyLCBCZW5nYWx1cnUsIEthcm5hdGFrYSwgSW5kaWEgLSA1NjAwMTEiLAoJCQkJCQkJY29tbW9uX29yX2dlbmVyaWNfbmFtZV9vZl9jb21tb2RpdHk6ICJNaXhlciBHcmluZGVyIiwKCQkJCQkJCW1vbnRoX3llYXJfb2ZfbWFudWZhY3R1cmVfcGFja2luZ19pbXBvcnQ6ICJOQSIsCgkJCQkJCX0sCgkJCQkJCXRhZ3M6IFsKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAib3JpZ2luIiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJjb3VudHJ5IiwKCQkJCQkJCQkJCXZhbHVlOiAiSU5EIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAiYXR0cmlidXRlIiwKCQkJCQkJCQkibGlzdCI6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiYnJhbmQiLAoJCQkJCQkJCQkJInZhbHVlIjogIlBoaWxpcHMgTWl4ZXIgR3JpbmRlciIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAibW9kZWwiLAoJCQkJCQkJCQkJInZhbHVlIjogIk1YUEgtMTAwNyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAic3BlY2lhbF9mZWF0dXJlIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICJmcmVxdWVuY3kiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogIndlaWdodCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiOCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAibGVuZ3RoIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIxLjUiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImJyZWFkdGgiLAoJCQkJCQkJCQkJInZhbHVlIjogIjIwLjUiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImhlaWdodCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMTUiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImluY2x1ZGVzIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICJNaXhlciBQb3RzLTMiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogInJlZnVyYmlzaGVkIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICJubyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAid2FycmFudHkiLAoJCQkJCQkJCQkJInZhbHVlIjogIjEiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImVuZXJneV9yYXRpbmciLAoJCQkJCQkJCQkJInZhbHVlIjogIjIiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogIndhdHRhZ2UiLAoJCQkJCQkJCQkJInZhbHVlIjogIjc1MCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAidm9sdGFnZSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMjMwIgoJCQkJCQkJCQl9CgkJCQkJCQkJXQoJCQkJCQkJfSwKCQkJCQkJXSwKCQkJCQl9LAoJCQkJCXsKCQkJCQkJaWQ6ICJJNSIsCgkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCW5hbWU6ICJMRyAxLjUgVG9uIDMgU3RhcnQgRHVhbCBJbnZlcnRlciBTcGxpdCBBQyIsCgkJCQkJCQljb2RlOiAiMzo4ODA2MDkxNjA4MjIyIiwKCQkJCQkJCXN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciLAoJCQkJCQkJc2hvcnRfZGVzYzoKCQkJCQkJCQkiMyBTdGFydCBEdWFsIEludmVydGVyIFNwbGl0IEFDIiwKCQkJCQkJCWxvbmdfZGVzYzoKCQkJCQkJCQkiMyBTdGFydCBEdWFsIEludmVydGVyIFNwbGl0IEFDLCA2IGluICAxIGNvb2xpbmcgMiB3YXkgc3dpbmciLAoJCQkJCQkJaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciXSwKCQkJCQkJfSwKCQkJCQkJcmF0aW5nOiAiNCIsCgkJCQkJCXByaWNlOiB7CgkJCQkJCQljdXJyZW5jeTogIklOUiIsCgkJCQkJCQl2YWx1ZTogIjU5OS4wMCIsCgkJCQkJCQltYXhpbXVtX3ZhbHVlOiAiMTE5OS4wMCIsCgkJCQkJCX0sCgkJCQkJCXBhcmVudF9pdGVtX2lkOiAiVjEiLAoJCQkJCQljYXRlZ29yeV9pZDogIkFpciBDb25kaXRpb25lciIsCgkJCQkJCWZ1bGZpbGxtZW50X2lkOiAiRjEiLAoJCQkJCQlsb2NhdGlvbl9pZDogIkwxIiwKCQkJCQkJdGltZTogewoJCQkJCQkJbGFiZWw6ICJlbmFibGUiLAoJCQkJCQkJdGltZXN0YW1wOiAiMjAyNC0wOC0xMlQxMDoyNzo0OC45MTNaIiwKCQkJCQkJfSwKCQkJCQkJcXVhbnRpdHk6IHsKCQkJCQkJCWF2YWlsYWJsZTogewoJCQkJCQkJCWNvdW50OiAiOTkiLAoJCQkJCQkJfSwKCQkJCQkJCW1heGltdW06IHsKCQkJCQkJCQljb3VudDogIjk5IiwKCQkJCQkJCX0sCgkJCQkJCQl1bml0aXplZDogewoJCQkJCQkJCW1lYXN1cmU6IHsKCQkJCQkJCQkJdmFsdWU6ICIxIiwKCQkJCQkJCQkJdW5pdDogInVuaXQiLAoJCQkJCQkJCX0sCgkJCQkJCQl9LAoJCQkJCQl9LAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybmFibGUiOiB0cnVlLAoJCQkJCQkiQG9uZGMvb3JnL3NlbGxlcl9waWNrdXBfcmV0dXJuIjogZmFsc2UsCgkJCQkJCSJAb25kYy9vcmcvcmV0dXJuX3dpbmRvdyI6ICJQM0QiLAoJCQkJCQkiQG9uZGMvb3JnL2NhbmNlbGxhYmxlIjogdHJ1ZSwKCQkJCQkJIkBvbmRjL29yZy90aW1lX3RvX3NoaXAiOiAiUDFEIiwKCQkJCQkJIkBvbmRjL29yZy9hdmFpbGFibGVfb25fY29kIjogZmFsc2UsCgkJCQkJCSJAb25kYy9vcmcvY29udGFjdF9kZXRhaWxzX2NvbnN1bWVyX2NhcmUiOgoJCQkJCQkJIk1vYXosc3VwcG9ydEBnbWFpbC5jb20sMjM0MzQ1MzQzNCIsCgkJCQkJCSJAb25kYy9vcmcvc3RhdHV0b3J5X3JlcXNfcGFja2FnZWRfY29tbW9kaXRpZXMiOiB7CgkJCQkJCQltYW51ZmFjdHVyZXJfb3JfcGFja2VyX25hbWU6ICJTZWxsZXIgQnVzaW5lc3MiLAoJCQkJCQkJbWFudWZhY3R1cmVyX29yX3BhY2tlcl9hZGRyZXNzOgoJCQkJCQkJCSJTZWxsZXIgQnVpbGRpbmcgQWRkcmVzcywgSmF5YW5hZ2FyLCBCZW5nYWx1cnUsIEthcm5hdGFrYSwgSW5kaWEgLSA1NjAwMTEiLAoJCQkJCQkJY29tbW9uX29yX2dlbmVyaWNfbmFtZV9vZl9jb21tb2RpdHk6ICJMRyBBaXIgQ29uZGl0aW9uZXIiLAoJCQkJCQkJbW9udGhfeWVhcl9vZl9tYW51ZmFjdHVyZV9wYWNraW5nX2ltcG9ydDogIk5BIiwKCQkJCQkJfSwKCQkJCQkJdGFnczogWwoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJvcmlnaW4iLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogImNvdW50cnkiLAoJCQkJCQkJCQkJdmFsdWU6ICJJTkQiLAoJCQkJCQkJCQl9LAoJCQkJCQkJCV0sCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJhdHRyaWJ1dGUiLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiYnJhbmQiLAoJCQkJCQkJCQkJInZhbHVlIjogIkxHIDEuNSBUb24gMyBTdGFydCBEdWFsIEludmVydGVyIFNwbGl0IEFDIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJtb2RlbCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiVFMtUTE4Sk5YRTMiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogInNwZWNpYWxfZmVhdHVyZSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiZnJlcXVlbmN5IgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3ZWlnaHQiLAoJCQkJCQkJCQkJInZhbHVlIjogIjMyLjUiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImxlbmd0aCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMTguOSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiYnJlYWR0aCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiODMuNyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiaGVpZ2h0IiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIzMC44IgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJpbmNsdWRlcyIsCgkJCQkJCQkJCQkidmFsdWUiOiAiSW5kb29yIFVuaXQsIE91dGRvb3IgVW5pdCwgUmVtb3RlIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ0eXBlIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICJzcGxpdCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAicmVmdXJiaXNoZWQiLAoJCQkJCQkJCQkJInZhbHVlIjogIm5vIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3YXJyYW50eSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiNSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiZW5lcmd5X3JhdGluZyIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiaW5zdGFsbGF0aW9uX2RldGFpbCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiQXZhaWxhYmxlIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3YXR0YWdlIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIxNDgyIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ2b2x0YWdlIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIyMzAiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImNvbG91ciIsCgkJCQkJCQkJCQkidmFsdWUiOiAiIzAwMDAwMCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiY29sb3VyX25hbWUiLAoJCQkJCQkJCQkJInZhbHVlIjogImJsYWNrIgoJCQkJCQkJCQl9CgkJCQkJCQkJXQoJCQkJCQkJfSwKCQkJCQkJXSwKCQkJCQl9LAoJCQkJCXsKCQkJCQkJaWQ6ICJJNiIsCgkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCW5hbWU6ICJTYW1zdW5nIDEuNSBUb24gNSBTdGFyIFdpbmRGcmVlIEludmVydGVyIFNwbGl0IEFDIiwKCQkJCQkJCWNvZGU6ICIzOjg4MDYwOTE2MDgyMjIiLAoJCQkJCQkJc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyIsCgkJCQkJCQlzaG9ydF9kZXNjOgoJCQkJCQkJCSI1IFN0YXIgV2luZEZyZWUgSW52ZXJ0ZXIgU3BsaXQgQUMiLAoJCQkJCQkJbG9uZ19kZXNjOgoJCQkJCQkJCSI1IFN0YXIgV2luZEZyZWUgSW52ZXJ0ZXIgU3BsaXQgQUMsIDYgaW4gMSBjb29saW5nIDIgd2F5IHN3aW5nIiwKCQkJCQkJCWltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvaTEucG5nIl0sCgkJCQkJCX0sCgkJCQkJCXJhdGluZzogIjQiLAoJCQkJCQlwcmljZTogewoJCQkJCQkJY3VycmVuY3k6ICJJTlIiLAoJCQkJCQkJdmFsdWU6ICI1OTkuMDAiLAoJCQkJCQkJbWF4aW11bV92YWx1ZTogIjExOTkuMDAiLAoJCQkJCQl9LAoJCQkJCQlwYXJlbnRfaXRlbV9pZDogIlYxIiwKCQkJCQkJY2F0ZWdvcnlfaWQ6ICJBaXIgQ29uZGl0aW9uZXIiLAoJCQkJCQlmdWxmaWxsbWVudF9pZDogIkYxIiwKCQkJCQkJbG9jYXRpb25faWQ6ICJMMSIsCgkJCQkJCXRpbWU6IHsKCQkJCQkJCWxhYmVsOiAiZW5hYmxlIiwKCQkJCQkJCXRpbWVzdGFtcDogIjIwMjQtMDgtMTJUMTA6Mjc6NDguOTEzWiIsCgkJCQkJCX0sCgkJCQkJCXF1YW50aXR5OiB7CgkJCQkJCQlhdmFpbGFibGU6IHsKCQkJCQkJCQljb3VudDogIjk5IiwKCQkJCQkJCX0sCgkJCQkJCQltYXhpbXVtOiB7CgkJCQkJCQkJY291bnQ6ICI5OSIsCgkJCQkJCQl9LAoJCQkJCQkJdW5pdGl6ZWQ6IHsKCQkJCQkJCQltZWFzdXJlOiB7CgkJCQkJCQkJCXZhbHVlOiAiMSIsCgkJCQkJCQkJCXVuaXQ6ICJ1bml0IiwKCQkJCQkJCQl9LAoJCQkJCQkJfSwKCQkJCQkJfSwKCQkJCQkJIkBvbmRjL29yZy9yZXR1cm5hYmxlIjogdHJ1ZSwKCQkJCQkJIkBvbmRjL29yZy9zZWxsZXJfcGlja3VwX3JldHVybiI6IGZhbHNlLAoJCQkJCQkiQG9uZGMvb3JnL3JldHVybl93aW5kb3ciOiAiUDNEIiwKCQkJCQkJIkBvbmRjL29yZy9jYW5jZWxsYWJsZSI6IHRydWUsCgkJCQkJCSJAb25kYy9vcmcvdGltZV90b19zaGlwIjogIlAxRCIsCgkJCQkJCSJAb25kYy9vcmcvYXZhaWxhYmxlX29uX2NvZCI6IGZhbHNlLAoJCQkJCQkiQG9uZGMvb3JnL2NvbnRhY3RfZGV0YWlsc19jb25zdW1lcl9jYXJlIjoKCQkJCQkJCSJNb2F6LHN1cHBvcnRAZ21haWwuY29tLDIzNDM0NTM0MzQiLAoJCQkJCQkiQG9uZGMvb3JnL3N0YXR1dG9yeV9yZXFzX3BhY2thZ2VkX2NvbW1vZGl0aWVzIjogewoJCQkJCQkJbWFudWZhY3R1cmVyX29yX3BhY2tlcl9uYW1lOiAiU2VsbGVyIEJ1c2luZXNzIiwKCQkJCQkJCW1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfYWRkcmVzczoKCQkJCQkJCQkiU2VsbGVyIEJ1aWxkaW5nIEFkZHJlc3MsIEpheWFuYWdhciwgQmVuZ2FsdXJ1LCBLYXJuYXRha2EsIEluZGlhIC0gNTYwMDExIiwKCQkJCQkJCWNvbW1vbl9vcl9nZW5lcmljX25hbWVfb2ZfY29tbW9kaXR5OiAiQWlyIENvbmRpdGlvbmVyIiwKCQkJCQkJCW1vbnRoX3llYXJfb2ZfbWFudWZhY3R1cmVfcGFja2luZ19pbXBvcnQ6ICJOQSIsCgkJCQkJCX0sCgkJCQkJCXRhZ3M6IFsKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAib3JpZ2luIiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJjb3VudHJ5IiwKCQkJCQkJCQkJCXZhbHVlOiAiSU5EIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAiYXR0cmlidXRlIiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImJyYW5kIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICJTYW1zdW5nIDEuNSBUb24gMyBTdGFydCBEdWFsIEludmVydGVyIFNwbGl0IEFDIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJtb2RlbCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiVFMtQTE4Sk5YRTMiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogInNwZWNpYWxfZmVhdHVyZSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiZnJlcXVlbmN5IgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3ZWlnaHQiLAoJCQkJCQkJCQkJInZhbHVlIjogIjMyLjUiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImxlbmd0aCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMTguOSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiYnJlYWR0aCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiODMuNyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiaGVpZ2h0IiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIzMC44IgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJpbmNsdWRlcyIsCgkJCQkJCQkJCQkidmFsdWUiOiAiSW5kb29yIFVuaXQsIE91dGRvb3IgVW5pdCwgUmVtb3RlIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ0eXBlIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICJzcGxpdCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAicmVmdXJiaXNoZWQiLAoJCQkJCQkJCQkJInZhbHVlIjogIm5vIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3YXJyYW50eSIsCgkJCQkJCQkJCQkidmFsdWUiOiAiNSIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiZW5lcmd5X3JhdGluZyIsCgkJCQkJCQkJCQkidmFsdWUiOiAiMyIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiaW5zdGFsbGF0aW9uX2RldGFpbCIsCgkJCQkJCQkJCQkidmFsdWUiOiAiQXZhaWxhYmxlIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ3YXR0YWdlIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIxNDgyIgoJCQkJCQkJCQl9LAoJCQkJCQkJCQl7CgkJCQkJCQkJCQkiY29kZSI6ICJ2b2x0YWdlIiwKCQkJCQkJCQkJCSJ2YWx1ZSI6ICIyMzAiCgkJCQkJCQkJCX0sCgkJCQkJCQkJCXsKCQkJCQkJCQkJCSJjb2RlIjogImNvbG91ciIsCgkJCQkJCQkJCQkidmFsdWUiOiAiIzAwMDAwMCIKCQkJCQkJCQkJfSwKCQkJCQkJCQkJewoJCQkJCQkJCQkJImNvZGUiOiAiY29sb3VyX25hbWUiLAoJCQkJCQkJCQkJInZhbHVlIjogImJsYWNrIgoJCQkJCQkJCQl9CgkJCQkJCQkJXQoJCQkJCQkJfSwKCQkJCQkJXSwKCQkJCQl9LAoJCQkJCXsKCQkJCQkJaWQ6ICJDMSIsCgkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCW5hbWU6ICJDdXN0b21fSW5wdXQiLAoJCQkJCQl9LAoJCQkJCQlxdWFudGl0eTogewoJCQkJCQkJdW5pdGl6ZWQ6IHsKCQkJCQkJCQltZWFzdXJlOiB7CgkJCQkJCQkJCXVuaXQ6ICJ1bml0IiwKCQkJCQkJCQkJdmFsdWU6ICIxIiwKCQkJCQkJCQl9LAoJCQkJCQkJfSwKCQkJCQkJCWF2YWlsYWJsZTogewoJCQkJCQkJCWNvdW50OiAiOTkiLAoJCQkJCQkJfSwKCQkJCQkJCW1heGltdW06IHsKCQkJCQkJCQljb3VudDogIjk5IiwKCQkJCQkJCX0sCgkJCQkJCX0sCgkJCQkJCXByaWNlOiB7CgkJCQkJCQljdXJyZW5jeTogIklOUiIsCgkJCQkJCQl2YWx1ZTogIjAuMCIsCgkJCQkJCQltYXhpbXVtX3ZhbHVlOiAiMC4wIiwKCQkJCQkJfSwKCQkJCQkJY2F0ZWdvcnlfaWQ6ICJSZWZyaWdlcmF0b3IiLAoJCQkJCQlyZWxhdGVkOiB0cnVlLAoJCQkJCQl0YWdzOiBbCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogInR5cGUiLAoJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJewoJCQkJCQkJCQkJY29kZTogInR5cGUiLAoJCQkJCQkJCQkJdmFsdWU6ICJjdXN0b21pemF0aW9uIiwKCQkJCQkJCQkJfSwKCQkJCQkJCQldLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAicGFyZW50IiwKCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCXsKCQkJCQkJCQkJCWNvZGU6ICJpZCIsCgkJCQkJCQkJCQl2YWx1ZTogIkNHMSIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJXSwKCQkJCQkJCX0sCgkJCQkJCV0sCgkJCQkJfSwKCQkJCV0sCgkJCQlmdWxmaWxsbWVudHM6IFsKCQkJCQl7CgkJCQkJCWlkOiAiRjEiLAoJCQkJCQl0eXBlOiAiRGVsaXZlcnkiLAoJCQkJCQljb250YWN0OiB7CgkJCQkJCQlwaG9uZTogIjk4NzY1NDMyMTAiLAoJCQkJCQkJZW1haWw6ICJ0ZXN0QGdtYWlsLmNvbSIsCgkJCQkJCX0sCgkJCQkJfSwKCQkJCQl7CgkJCQkJCSJjb250YWN0IjogewoJCQkJCQkJImVtYWlsIjogImFwcGxpYW5jZUBleGFtcGxlLmNvbSIsCgkJCQkJCQkicGhvbmUiOiAiNzk4MDI3NDQ5OSIKCQkJCQkJfSwKCQkJCQkJaWQ6ICJGMiIsCgkJCQkJCXR5cGU6ICJTZWxmLVBpY2t1cCIKCQkJCQl9CgkJCQldLAoJCQkJdGFnczogWwoJCQkJCXsKCQkJCQkJY29kZTogInNlcnZpY2VhYmlsaXR5IiwKCQkJCQkJImxpc3QiOiBbCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAibG9jYXRpb24iLAoJCQkJCQkJCSJ2YWx1ZSI6ICJMMSIKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAiY2F0ZWdvcnkiLAoJCQkJCQkJCSJ2YWx1ZSI6ICJXYXNoaW5nIE1hY2hpbmUiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJ0eXBlIiwKCQkJCQkJCQl2YWx1ZTogIjExIiwKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogInVuaXQiLAoJCQkJCQkJCXZhbHVlOiAicGluY29kZSIsCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCWNvZGU6ICJ2YWwiLAoJCQkJCQkJCXZhbHVlOiAiNTYwMDAxLTU2MDA3Niw1NjAwODMiLAoJCQkJCQkJfSwKCQkJCQkJXQoJCQkJCX0sCgkJCQkJewoJCQkJCQkiY29kZSI6ICJzZXJ2aWNlYWJpbGl0eSIsCgkJCQkJCSJsaXN0IjogWwoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogImxvY2F0aW9uIiwKCQkJCQkJCQkidmFsdWUiOiAiTDEiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogImNhdGVnb3J5IiwKCQkJCQkJCQkidmFsdWUiOiAiRWxlY3RyaWMgU2V3aW5nIE1hY2hpbmUiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogInR5cGUiLAoJCQkJCQkJCSJ2YWx1ZSI6ICIxMCIKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAidmFsIiwKCQkJCQkJCQkidmFsdWUiOiAiMTUiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogInVuaXQiLAoJCQkJCQkJCSJ2YWx1ZSI6ICJrbSIKCQkJCQkJCX0KCQkJCQkJXQoJCQkJCX0sCgkJCQkJewoJCQkJCQkiY29kZSI6ICJzZXJ2aWNlYWJpbGl0eSIsCgkJCQkJCSJsaXN0IjogWwoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogImxvY2F0aW9uIiwKCQkJCQkJCQkidmFsdWUiOiAiTDEiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogImNhdGVnb3J5IiwKCQkJCQkJCQkidmFsdWUiOiAiRWxlY3RyaWMgQWlyIEZyeWVyIgoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJ0eXBlIiwKCQkJCQkJCQkidmFsdWUiOiAiMTIiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogInZhbCIsCgkJCQkJCQkJInZhbHVlIjogIklORCIKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAidW5pdCIsCgkJCQkJCQkJInZhbHVlIjogImNvdW50cnkiCgkJCQkJCQl9CgkJCQkJCV0KCQkJCQl9LAoJCQkJCXsKCQkJCQkJImNvZGUiOiAic2VydmljZWFiaWxpdHkiLAoJCQkJCQkibGlzdCI6IFsKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJsb2NhdGlvbiIsCgkJCQkJCQkJInZhbHVlIjogIkwxIgoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJjYXRlZ29yeSIsCgkJCQkJCQkJInZhbHVlIjogIk1peGVyIEdyaW5kZXIiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogInR5cGUiLAoJCQkJCQkJCSJ2YWx1ZSI6ICIxMiIKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAidmFsIiwKCQkJCQkJCQkidmFsdWUiOiAiSU5EIgoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJ1bml0IiwKCQkJCQkJCQkidmFsdWUiOiAiY291bnRyeSIKCQkJCQkJCX0KCQkJCQkJXQoJCQkJCX0sCgkJCQkJewoJCQkJCQkiY29kZSI6ICJzZXJ2aWNlYWJpbGl0eSIsCgkJCQkJCSJsaXN0IjogWwoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogImxvY2F0aW9uIiwKCQkJCQkJCQkidmFsdWUiOiAiTDEiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogImNhdGVnb3J5IiwKCQkJCQkJCQkidmFsdWUiOiAiQWlyIENvbmRpdGlvbmVyIgoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJ0eXBlIiwKCQkJCQkJCQkidmFsdWUiOiAiMTIiCgkJCQkJCQl9LAoJCQkJCQkJewoJCQkJCQkJCSJjb2RlIjogInZhbCIsCgkJCQkJCQkJInZhbHVlIjogIklORCIKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAidW5pdCIsCgkJCQkJCQkJInZhbHVlIjogImNvdW50cnkiCgkJCQkJCQl9CgkJCQkJCV0KCQkJCQl9LAoJCQkJCXsKCQkJCQkJImNvZGUiOiAic2VydmljZWFiaWxpdHkiLAoJCQkJCQkibGlzdCI6IFsKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJsb2NhdGlvbiIsCgkJCQkJCQkJInZhbHVlIjogIkwxIgoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJjYXRlZ29yeSIsCgkJCQkJCQkJInZhbHVlIjogIlJlZnJpZ2VyYXRvciIKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAidHlwZSIsCgkJCQkJCQkJInZhbHVlIjogIjEwIgoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQkiY29kZSI6ICJ2YWwiLAoJCQkJCQkJCSJ2YWx1ZSI6ICIxNSIKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJImNvZGUiOiAidW5pdCIsCgkJCQkJCQkJInZhbHVlIjogImttIgoJCQkJCQkJfQoJCQkJCQldCgkJCQkJfSwKCQkJCQl7CgkJCQkJCWNvZGU6ICJ0aW1pbmciLAoJCQkJCQlsaXN0OiBbCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogInR5cGUiLAoJCQkJCQkJCXZhbHVlOiAiQWxsIiwKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogImxvY2F0aW9uIiwKCQkJCQkJCQl2YWx1ZTogIkwxIiwKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogImRheV9mcm9tIiwKCQkJCQkJCQl2YWx1ZTogIjEiLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAiZGF5X3RvIiwKCQkJCQkJCQl2YWx1ZTogIjUiLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAidGltZV9mcm9tIiwKCQkJCQkJCQl2YWx1ZTogIjA5MDAiLAoJCQkJCQkJfSwKCQkJCQkJCXsKCQkJCQkJCQljb2RlOiAidGltZV90byIsCgkJCQkJCQkJdmFsdWU6ICIyMzU5IiwKCQkJCQkJCX0sCgkJCQkJCV0sCgkJCQkJfSwKCQkJCV0sCgkJCX0sCgkJXSwKCX0sCn07
