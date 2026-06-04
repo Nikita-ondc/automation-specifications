@@ -15,41 +15,48 @@ transaction_data:
   bpp_uri: 'https://bpp.example.com'
 steps:
   - api: search
-    action_id: search_inc
+    action_id: search
     owner: BAP
     responseFor: null
     unsolicited: false
     description: please add relevant description
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAJZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaTsKCWRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAgIGRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF91cmk7CiAgZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX2lkOwogIGxldCBjb2Rlc0FycmF5ID0gc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5mZWF0dXJlX2Rpc2NvdmVyeSB8fCBbXTsKICBjb25zdCB0YWdzID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncyA7CiAgaWYgKGNvZGVzQXJyYXkubGVuZ3RoID4gMCkKICAgIHRhZ3MucHVzaCh7CiAgICAgIGNvZGU6ICJiYXBfZmVhdHVyZXMiLAogICAgICBsaXN0OiBbCiAgICAgICAgLi4uY29kZXNBcnJheS5tYXAoKGNvZGUpID0+IHsKICAgICAgICAgIHJldHVybiB7CiAgICAgICAgICAgIGNvZGU6IGNvZGUsCiAgICAgICAgICAgIHZhbHVlOiAieWVzIiwKICAgICAgICAgIH07CiAgICAgICAgfSksCiAgICAgIF0sCiAgICB9KTsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJjb250ZXh0IGlzIG1pc3NpbmciLAogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzPy5bMF0/Lmxpc3Q/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAibWVzc2FnZS5pbnRlbnQudGFnc1swXS5saXN0WzBdIGlzIG1pc3NpbmciLAogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJjb250ZXh0IGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgaWYgKHRhcmdldFBheWxvYWQuY29udGV4dC5icHBfaWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNvbnRleHQuYnBwX2lkIHNob3VsZCBub3QgYmUgcHJlc2VudCIKICAgIH07CiAgfQoKICBpZiAodGFyZ2V0UGF5bG9hZC5jb250ZXh0LmJwcF91cmkpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNvbnRleHQuYnBwX3VyaSBzaG91bGQgbm90IGJlIHByZXNlbnQiCiAgICB9OwogIH0KCiAgY29uc3QgYmFwRmVhdHVyZXNUYWcgPSB0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5pbnRlbnQ/LnRhZ3M/LmZpbmQoCiAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gImJhcF9mZWF0dXJlcyIKICApOwoKICBpZiAoYmFwRmVhdHVyZXNUYWcgJiYgIUFycmF5LmlzQXJyYXkoYmFwRmVhdHVyZXNUYWcubGlzdCkpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImJhcF9mZWF0dXJlcy5saXN0IG11c3QgYmUgYW4gYXJyYXkiCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
       requirements: >-
-        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgICBpZiAoCiAgICBzZXNzaW9uRGF0YS51c2VyX2lucHV0cyAmJgogICAgc2Vzc2lvbkRhdGEudXNlcl9pbnB1dHMuZmVhdHVyZV9kaXNjb3ZlcnkgJiYKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzLmZlYXR1cmVfZGlzY292ZXJ5KQogICkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAidXNlcl9pbnB1dHMuZmVhdHVyZV9kaXNjb3ZlcnkgbXVzdCBiZSBhbiBhcnJheSIKICAgIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
           action: search
           bap_id: dev-automation.ondc.org
           bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer'
-          city: '*'
+          city: 'std:080'
           core_version: 1.2.5
           country: IND
           domain: 'ONDC:RET15'
-          message_id: da09a1b4-bbcd-439e-99f7-d787eeb2b909
-          timestamp: '2026-03-19T16:22:19.831Z'
-          transaction_id: f96d3f7d-62f7-4d82-9763-f635a52c0936
+          message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
+          timestamp: '2026-03-20T12:09:37.525Z'
+          transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
           ttl: PT30S
         message:
           intent:
+            fulfillment:
+              type: Delivery
             payment:
               '@ondc/org/buyer_app_finder_fee_type': percent
               '@ondc/org/buyer_app_finder_fee_amount': '3'
             tags:
-              - code: catalog_inc
+              - code: bap_terms
                 list:
-                  - code: mode
-                    value: start
+                  - code: static_terms
+                    value: ''
+                  - code: static_terms_new
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  - code: effective_date
+                    value: '2025-02-01T00:00:00.000Z'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -59,51 +66,83 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
+        message_id: $.context.message_id
+        city: $.context.city
         inc_mode: >-
           $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
         bap_features: >-
           $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
-      inputs: {}
+      inputs:
+        id: feature_discovery_search
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            city_code:
+              type: string
+              title: Enter the city code
+              default: 'std:080'
+            feature_discovery:
+              type: array
+              title: Features supported
+              items:
+                type: string
+                enum:
+                  - '007'
+                  - 00C
+                  - 0099
+                  - '016'
+              uniqueItems: true
+              default: []
+          additionalProperties: true
+          default: {}
     examples:
       - name: Example for action "search"
         description: >-
           Auto-generated example for action "search" in flow
-          "Discovery_Flow_incremental_catalog"
+          "Discovery_Flow_full_catalog"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
             bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer'
-            city: '*'
+            city: 'std:080'
             core_version: 1.2.5
             country: IND
             domain: 'ONDC:RET15'
-            message_id: da09a1b4-bbcd-439e-99f7-d787eeb2b909
-            timestamp: '2026-03-19T16:22:19.831Z'
-            transaction_id: f96d3f7d-62f7-4d82-9763-f635a52c0936
+            message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
+            timestamp: '2026-03-20T12:09:37.525Z'
+            transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
             ttl: PT30S
           message:
             intent:
+              fulfillment:
+                type: Delivery
               payment:
                 '@ondc/org/buyer_app_finder_fee_amount': '3'
                 '@ondc/org/buyer_app_finder_fee_type': percent
               tags:
-                - code: catalog_inc
+                - code: bap_terms
                   list:
-                    - code: mode
-                      value: start
+                    - code: static_terms
+                      value: ''
+                    - code: static_terms_new
+                      value: >-
+                        https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    - code: effective_date
+                      value: '2025-02-01T00:00:00.000Z'
         type: request
   - api: on_search
-    action_id: on_search_inc
+    action_id: on_search
     owner: BPP
-    responseFor: null
-    unsolicited: true
+    responseFor: search
+    unsolicited: false
     description: please add relevant description
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAgIGRlZmF1bHRQYXlsb2FkID0gdXBkYXRlVGltZXN0YW1wcyhkZWZhdWx0UGF5bG9hZCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0gIioiOwogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBkZXNjcmlwdG9yVGFncyA9IGRlZmF1bHRQYXlsb2FkPy5tZXNzYWdlLmNhdGFsb2c/LlsnYnBwL2Rlc2NyaXB0b3InXT8udGFnczsKCQoJc2Vzc2lvbkRhdGEuYmFwX2ZlYXR1cmVzPy5mb3JFYWNoKChmZWF0dXJlKSA9PiB7CgkJY29uc29sZS5sb2coYEZlYXR1cmU6ICR7ZmVhdHVyZX1gKTsKCX0pOwoJaWYgKHNlc3Npb25EYXRhLmJhcF9mZWF0dXJlcz8uaW5jbHVkZXMoIjAwOTkiKSkgewoJCWxldCBicHBUZXJtc1RhZyA9IGRlc2NyaXB0b3JUYWdzLmZpbmQoKHQpID0+IHQuY29kZSA9PT0gImJwcF90ZXJtcyIpOwoJCWNvbnN0IHBheW1lbnRDb2xsZWN0aW9uID0gewoJCQkiY29kZSI6ImNvbGxlY3RfcGF5bWVudCIsCgkJCSJ2YWx1ZSI6IlkiCgkJfQoJCWJwcFRlcm1zVGFnLmxpc3QucHVzaChwYXltZW50Q29sbGVjdGlvbik7CgkJY29uc3QgcHJvdmlkZXIgPSBkZWZhdWx0UGF5bG9hZD8ubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF07CgkJcHJvdmlkZXIub2ZmZXJzID0gcHJvdmlkZXI/Lm9mZmVycyB8fCBbXTsKCQlwcm92aWRlci5vZmZlcnMucHVzaCh7CgkJCWlkOiAiRklOMSIsCgkJCWRlc2NyaXB0b3I6IHsKCQkJY29kZTogImZpbmFuY2luZyIsCgkJCWltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvb2ZmZXIyLWJhbm5lci5wbmciXSwKCQkJfSwKCQkJbG9jYXRpb25faWRzOiBbIkwxIl0sCgkJCWl0ZW1faWRzOiBbIkkxIiwgIkkyIiwgIkkzIl0sCgkJCXRpbWU6IHsKCQkJbGFiZWw6ICJ2YWxpZCIsCgkJCXJhbmdlOiB7CgkJCQlzdGFydDogIjIwMjQtMTItMjNUMDY6NTU6NDUuMDM1WiIsCgkJCQllbmQ6ICIyMDMwLTEyLTIzVDA4OjEyOjE1LjAzM1oiLAoJCQl9LAoJCQl9LAoJCQl0YWdzOiBbCgkJCXsKCQkJCWNvZGU6ICJmaW5hbmNlX3Rlcm1zIiwKCQkJCWxpc3Q6IFsKCQkJCXsgY29kZTogInN1YnZlbnRpb25fdHlwZSIsIHZhbHVlOiAicGVyY2VudCIgfSwKCQkJCXsgY29kZTogInN1YnZlbnRpb25fYW1vdW50IiwgdmFsdWU6ICIxMC4wMCIgfSwKCQkJCV0sCgkJCX0sCgkJCXsKCQkJCWNvZGU6ICJtZXRhIiwKCQkJCWxpc3Q6IFsKCQkJCXsgY29kZTogImFkZGl0aXZlIiwgdmFsdWU6ICJubyIgfSwKCQkJCXsgY29kZTogImF1dG8iLCB2YWx1ZTogIm5vIiB9LAoJCQkJXSwKCQkJfSwKCQkJXSwKCQl9KTsKCX0KCWlmIChzZXNzaW9uRGF0YS5iYXBfZmVhdHVyZXM/LmluY2x1ZGVzKCIwMDciKSkgewoJCWxldCBicHBUZXJtc1RhZyA9IGRlc2NyaXB0b3JUYWdzLmZpbmQoKHQpID0+IHQuY29kZSA9PT0gImJwcF90ZXJtcyIpOwoJCWNvbnN0IHBheW1lbnRDb2xsZWN0aW9uID0gewoJCQkiY29kZSI6ImNvbGxlY3RfcGF5bWVudCIsCgkJCSJ2YWx1ZSI6IlkiCgkJfQoJCWJwcFRlcm1zVGFnLmxpc3QucHVzaChwYXltZW50Q29sbGVjdGlvbik7Cgl9CiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
       validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNvbnRleHQgaXMgbWlzc2luZyIKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: >-
         LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -113,18 +152,88 @@ steps:
           bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/buyer'
           bpp_id: dev-automation.ondc.org
           bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/seller'
-          city: '*'
+          city: 'std:080'
           core_version: 1.2.5
           country: IND
           domain: 'ONDC:RET15'
-          message_id: 6743f6ea-a92e-443a-a147-9368f0db7ffd
-          timestamp: '2026-03-19T16:22:24.028Z'
-          transaction_id: f96d3f7d-62f7-4d82-9763-f635a52c0936
+          message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
+          timestamp: '2026-03-20T12:09:37.823Z'
+          transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
           ttl: PT30S
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+                contact:
+                  phone: '9876543210'
+                  email: test@gmail.com
+              - id: F2
+                type: Self-Pickup
+                contact:
+                  phone: '7980274499'
+                  email: appliance@example.com
+            bpp/descriptor:
+              name: Mock Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
+              short_desc: Seller Marketplace
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
+              tags:
+                - code: bpp_terms
+                  list:
+                    - code: np_type
+                      value: MSN
+                    - code: accept_bap_terms
+                      value: 'Y'
             bpp/providers:
               - id: P1
+                time:
+                  label: enable
+                  timestamp: '2024-08-13T06:46:19.736Z'
+                ttl: PT24H
+                locations:
+                  - id: L1
+                    gps: '12.925810,77.583624'
+                    address:
+                      city: Bengaluru
+                      state: Karnataka
+                      area_code: '560011'
+                      street: Jayanagar
+                      locality: Jayanagar
+                    time:
+                      label: enable
+                      timestamp: '2024-08-13T06:46:19.736Z'
+                      schedule:
+                        holidays: []
+                    circle:
+                      gps: '12.925810,77.583624'
+                      radius:
+                        unit: km
+                        value: '5'
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                categories:
+                  - id: V1
+                    descriptor:
+                      name: Variant Group 1
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: variant_group
+                      - code: attr
+                        list:
+                          - code: name
+                            value: item.tags.attribute.colour
+                          - code: seq
+                            value: '1'
                 items:
                   - id: I1
                     time:
@@ -216,6 +325,562 @@ steps:
                             value: '720'
                           - code: voltage
                             value: '230'
+                      - code: type
+                        list:
+                          - code: type
+                            value: item
+                      - code: custom_group
+                        list:
+                          - code: id
+                            value: CG1
+                  - id: I2
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Singer Simple Sewing Machine
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Heavy-duty electric sewing machine.
+                      long_desc: >-
+                        Singer Heavy Duty 4452 Sewing Machine with 32 Built-in
+                        Stitches
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:00037431885883'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '18000'
+                      maximum_value: '18000'
+                    category_id: Electric Sewing Machine
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Singer Heavy Duty 4452
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Singer Simple Sewing Machine
+                          - code: model
+                            value: '3232'
+                          - code: special_feature
+                            value: laser
+                          - code: weight
+                            value: '6.9'
+                          - code: length
+                            value: '7.3'
+                          - code: breadth
+                            value: '15.5'
+                          - code: height
+                            value: '41'
+                          - code: includes
+                            value: 'Automatic Needle Threader, Adjustable Presser Foot'
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '2'
+                          - code: energy_rating
+                            value: '4'
+                          - code: extended_warranty
+                            value: '2'
+                          - code: wattage
+                            value: '320'
+                          - code: voltage
+                            value: '220'
+                      - code: type
+                        list:
+                          - code: type
+                            value: item
+                      - code: custom_group
+                        list:
+                          - code: id
+                            value: CG1
+                  - id: I3
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Philips Viva AirFryer HD9225-50
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Air fryer for healthy cooking
+                      long_desc: >-
+                        Philips Viva Collection Air Fryer with Rapid Air
+                        Technology
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8710103539209'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '15000'
+                      maximum_value: '15000'
+                    category_id: Electric Air Fryer
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P3D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P20D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Philips Air Fryer
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Philips Viva AirFryer HD9225-50
+                          - code: model
+                            value: HD9220/50
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '7'
+                          - code: length
+                            value: '3'
+                          - code: breadth
+                            value: '31.5'
+                          - code: height
+                            value: '28'
+                          - code: includes
+                            value: 'Recipe Booklet, Double Layer Rack'
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '1'
+                          - code: energy_rating
+                            value: '3'
+                          - code: extended_warranty
+                            value: '1'
+                          - code: wattage
+                            value: '320'
+                          - code: voltage
+                            value: '220'
+                  - id: I4
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Philips Mixer Grinder
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Fastest and Finest Mixing Grinder
+                      long_desc: >-
+                        The Philips Mixer Grinder is a versatile kitchen
+                        appliance designed to simplify your cooking tasks.
+                        Equipped with powerful motors and durable stainless
+                        steel blades, it effortlessly grinds, blends, and mixes
+                        a variety of ingredients.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:887775600280'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    category_id: Mixer Grinder
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Mixer Grinder
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Philips Mixer Grinder
+                          - code: model
+                            value: MXPH-1007
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '8'
+                          - code: length
+                            value: '1.5'
+                          - code: breadth
+                            value: '20.5'
+                          - code: height
+                            value: '15'
+                          - code: includes
+                            value: Mixer Pots-3
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '1'
+                          - code: energy_rating
+                            value: '2'
+                          - code: wattage
+                            value: '750'
+                          - code: voltage
+                            value: '230'
+                  - id: I5
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: 3 Start Dual Inverter Split AC
+                      long_desc: >-
+                        3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way
+                        swing
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8806091608222'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Air Conditioner
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: LG Air Conditioner
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                          - code: model
+                            value: TS-Q18JNXE3
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '32.5'
+                          - code: length
+                            value: '18.9'
+                          - code: breadth
+                            value: '83.7'
+                          - code: height
+                            value: '30.8'
+                          - code: includes
+                            value: 'Indoor Unit, Outdoor Unit, Remote'
+                          - code: type
+                            value: split
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '5'
+                          - code: energy_rating
+                            value: '3'
+                          - code: installation_detail
+                            value: Available
+                          - code: wattage
+                            value: '1482'
+                          - code: voltage
+                            value: '230'
+                          - code: colour
+                            value: '#FF0000'
+                          - code: colour_name
+                            value: red
+                  - id: I6
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: 5 Star WindFree Inverter Split AC
+                      long_desc: >-
+                        5 Star WindFree Inverter Split AC, 6 in 1 cooling 2 way
+                        swing
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8806091608222'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Air Conditioner
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Air Conditioner
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                          - code: model
+                            value: TS-A18JNXE3
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '32.5'
+                          - code: length
+                            value: '18.9'
+                          - code: breadth
+                            value: '83.7'
+                          - code: height
+                            value: '30.8'
+                          - code: includes
+                            value: 'Indoor Unit, Outdoor Unit, Remote'
+                          - code: type
+                            value: split
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '5'
+                          - code: energy_rating
+                            value: '3'
+                          - code: installation_detail
+                            value: Available
+                          - code: wattage
+                            value: '1482'
+                          - code: voltage
+                            value: '230'
+                          - code: colour
+                            value: '#000000'
+                          - code: colour_name
+                            value: black
+                  - id: C1
+                    descriptor:
+                      name: Custom_Input
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '0.00'
+                      maximum_value: '0.00'
+                    category_id: Refrigerator
+                    related: true
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: customization
+                      - code: parent
+                        list:
+                          - code: id
+                            value: CG1
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9876543210'
+                      email: test@gmail.com
+                  - id: F2
+                    type: Self-Pickup
+                    contact:
+                      phone: '7980274499'
+                      email: appliance@example.com
+                tags:
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Washing Machine
+                      - code: type
+                        value: '11'
+                      - code: unit
+                        value: pincode
+                      - code: val
+                        value: '560001-560076,560083'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Electric Sewing Machine
+                      - code: type
+                        value: '10'
+                      - code: unit
+                        value: km
+                      - code: val
+                        value: '15'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Electric Air Fryer
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Mixer Grinder
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Air Conditioner
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: d7682d57-4a6d-4b01-98e6-b911301fb176
+                      - code: category
+                        value: Refrigerator
+                      - code: type
+                        value: '10'
+                      - code: unit
+                        value: km
+                      - code: val
+                        value: '15'
+                  - code: timing
+                    list:
+                      - code: type
+                        value: All
+                      - code: location
+                        value: L1
+                      - code: day_from
+                        value: '1'
+                      - code: day_to
+                        value: '5'
+                      - code: time_from
+                        value: 0900
+                      - code: time_to
+                        value: '2100'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -225,6 +890,8 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
+        bpp_id: $.context.bpp_id
+        bpp_uri: $.context.bpp_uri
         on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
         np_type: >-
           $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
@@ -233,7 +900,7 @@ steps:
       - name: Example for action "on_search"
         description: >-
           Auto-generated example for action "on_search" in flow
-          "Discovery_Flow_incremental_catalog"
+          "Discovery_Flow_full_catalog"
         payload:
           context:
             action: on_search
@@ -242,18 +909,76 @@ steps:
             bpp_id: dev-automation.ondc.org
             bpp_uri: >-
               https://dev-automation.ondc.org/api-service/ONDC:RET15/1.2.5/seller
-            city: '*'
+            city: 'std:080'
             core_version: 1.2.5
             country: IND
             domain: 'ONDC:RET15'
-            message_id: 6743f6ea-a92e-443a-a147-9368f0db7ffd
-            timestamp: '2026-03-19T16:22:24.028Z'
-            transaction_id: f96d3f7d-62f7-4d82-9763-f635a52c0936
+            message_id: dfcaa684-6bc5-42d5-a2f0-12256e882d68
+            timestamp: '2026-03-20T12:09:37.823Z'
+            transaction_id: d5f23f18-0453-4b12-85b2-5a8fe6320339
             ttl: PT30S
           message:
             catalog:
+              bpp/descriptor:
+                images:
+                  - 'https://sellerNP.com/images/np.png'
+                long_desc: Seller Marketplace
+                name: Mock Seller NP
+                short_desc: Seller Marketplace
+                symbol: 'https://sellerNP.com/images/np.png'
+                tags:
+                  - code: bpp_terms
+                    list:
+                      - code: np_type
+                        value: MSN
+                      - code: accept_bap_terms
+                        value: 'Y'
+              bpp/fulfillments:
+                - contact:
+                    email: test@gmail.com
+                    phone: '9876543210'
+                  id: F1
+                  type: Delivery
+                - contact:
+                    email: appliance@example.com
+                    phone: '7980274499'
+                  id: F2
+                  type: Self-Pickup
               bpp/providers:
-                - id: P1
+                - categories:
+                    - descriptor:
+                        name: Variant Group 1
+                      id: V1
+                      tags:
+                        - code: type
+                          list:
+                            - code: type
+                              value: variant_group
+                        - code: attr
+                          list:
+                            - code: name
+                              value: item.tags.attribute.colour
+                            - code: seq
+                              value: '1'
+                  descriptor:
+                    images:
+                      - 'https://sellerNP.com/images/store1.png'
+                    long_desc: Store 1
+                    name: Store 1
+                    short_desc: Store 1
+                    symbol: 'https://sellerNP.com/images/store1.png'
+                  fulfillments:
+                    - contact:
+                        email: test@gmail.com
+                        phone: '9876543210'
+                      id: F1
+                      type: Delivery
+                    - contact:
+                        email: appliance@example.com
+                        phone: '7980274499'
+                      id: F2
+                      type: Self-Pickup
+                  id: P1
                   items:
                     - '@ondc/org/available_on_cod': false
                       '@ondc/org/cancellable': true
@@ -342,11 +1067,586 @@ steps:
                               value: '720'
                             - code: voltage
                               value: '230'
+                        - code: type
+                          list:
+                            - code: type
+                              value: item
+                        - code: custom_group
+                          list:
+                            - code: id
+                              value: CG1
                       time:
                         label: enable
-                        timestamp: '2026-03-19T16:22:24.028Z'
+                        timestamp: '2024-08-12T05:30:48.998Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Singer Heavy Duty 4452
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P2D
+                      category_id: Electric Sewing Machine
+                      descriptor:
+                        code: '3:00037431885883'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Singer Heavy Duty 4452 Sewing Machine with 32 Built-in
+                          Stitches
+                        name: Singer Simple Sewing Machine
+                        short_desc: Heavy-duty electric sewing machine.
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I2
+                      location_id: L1
+                      price:
+                        currency: INR
+                        maximum_value: '18000'
+                        value: '18000'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '10'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '4'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: Singer Simple Sewing Machine
+                            - code: model
+                              value: '3232'
+                            - code: special_feature
+                              value: laser
+                            - code: weight
+                              value: '6.9'
+                            - code: length
+                              value: '7.3'
+                            - code: breadth
+                              value: '15.5'
+                            - code: height
+                              value: '41'
+                            - code: includes
+                              value: >-
+                                Automatic Needle Threader, Adjustable Presser
+                                Foot
+                            - code: refurbished
+                              value: 'no'
+                            - code: warranty
+                              value: '2'
+                            - code: energy_rating
+                              value: '4'
+                            - code: extended_warranty
+                              value: '2'
+                            - code: wattage
+                              value: '320'
+                            - code: voltage
+                              value: '220'
+                        - code: type
+                          list:
+                            - code: type
+                              value: item
+                        - code: custom_group
+                          list:
+                            - code: id
+                              value: CG1
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P20D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Philips Air Fryer
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P3D
+                      category_id: Electric Air Fryer
+                      descriptor:
+                        code: '3:8710103539209'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Philips Viva Collection Air Fryer with Rapid Air
+                          Technology
+                        name: Philips Viva AirFryer HD9225-50
+                        short_desc: Air fryer for healthy cooking
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I3
+                      location_id: L1
+                      price:
+                        currency: INR
+                        maximum_value: '15000'
+                        value: '15000'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '4'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: Philips Viva AirFryer HD9225-50
+                            - code: model
+                              value: HD9220/50
+                            - code: special_feature
+                              value: frequency
+                            - code: weight
+                              value: '7'
+                            - code: length
+                              value: '3'
+                            - code: breadth
+                              value: '31.5'
+                            - code: height
+                              value: '28'
+                            - code: includes
+                              value: 'Recipe Booklet, Double Layer Rack'
+                            - code: refurbished
+                              value: 'no'
+                            - code: warranty
+                              value: '1'
+                            - code: energy_rating
+                              value: '3'
+                            - code: extended_warranty
+                              value: '1'
+                            - code: wattage
+                              value: '320'
+                            - code: voltage
+                              value: '220'
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Mixer Grinder
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P1D
+                      category_id: Mixer Grinder
+                      descriptor:
+                        code: '3:887775600280'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          The Philips Mixer Grinder is a versatile kitchen
+                          appliance designed to simplify your cooking tasks.
+                          Equipped with powerful motors and durable stainless
+                          steel blades, it effortlessly grinds, blends, and
+                          mixes a variety of ingredients.
+                        name: Philips Mixer Grinder
+                        short_desc: Fastest and Finest Mixing Grinder
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I4
+                      location_id: L1
+                      price:
+                        currency: INR
+                        maximum_value: '1199.00'
+                        value: '599.00'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '4'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: Philips Mixer Grinder
+                            - code: model
+                              value: MXPH-1007
+                            - code: special_feature
+                              value: frequency
+                            - code: weight
+                              value: '8'
+                            - code: length
+                              value: '1.5'
+                            - code: breadth
+                              value: '20.5'
+                            - code: height
+                              value: '15'
+                            - code: includes
+                              value: Mixer Pots-3
+                            - code: refurbished
+                              value: 'no'
+                            - code: warranty
+                              value: '1'
+                            - code: energy_rating
+                              value: '2'
+                            - code: wattage
+                              value: '750'
+                            - code: voltage
+                              value: '230'
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: LG Air Conditioner
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P1D
+                      category_id: Air Conditioner
+                      descriptor:
+                        code: '3:8806091608222'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way
+                          swing
+                        name: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                        short_desc: 3 Start Dual Inverter Split AC
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I5
+                      location_id: L1
+                      parent_item_id: V1
+                      price:
+                        currency: INR
+                        maximum_value: '1199.00'
+                        value: '599.00'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '4'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                            - code: model
+                              value: TS-Q18JNXE3
+                            - code: special_feature
+                              value: frequency
+                            - code: weight
+                              value: '32.5'
+                            - code: length
+                              value: '18.9'
+                            - code: breadth
+                              value: '83.7'
+                            - code: height
+                              value: '30.8'
+                            - code: includes
+                              value: 'Indoor Unit, Outdoor Unit, Remote'
+                            - code: type
+                              value: split
+                            - code: refurbished
+                              value: 'no'
+                            - code: warranty
+                              value: '5'
+                            - code: energy_rating
+                              value: '3'
+                            - code: installation_detail
+                              value: Available
+                            - code: wattage
+                              value: '1482'
+                            - code: voltage
+                              value: '230'
+                            - code: colour
+                              value: '#FF0000'
+                            - code: colour_name
+                              value: red
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Air Conditioner
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P1D
+                      category_id: Air Conditioner
+                      descriptor:
+                        code: '3:8806091608222'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          5 Star WindFree Inverter Split AC, 6 in 1 cooling 2
+                          way swing
+                        name: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                        short_desc: 5 Star WindFree Inverter Split AC
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I6
+                      location_id: L1
+                      parent_item_id: V1
+                      price:
+                        currency: INR
+                        maximum_value: '1199.00'
+                        value: '599.00'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '4'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: >-
+                                Samsung 1.5 Ton 5 Star WindFree Inverter Split
+                                AC
+                            - code: model
+                              value: TS-A18JNXE3
+                            - code: special_feature
+                              value: frequency
+                            - code: weight
+                              value: '32.5'
+                            - code: length
+                              value: '18.9'
+                            - code: breadth
+                              value: '83.7'
+                            - code: height
+                              value: '30.8'
+                            - code: includes
+                              value: 'Indoor Unit, Outdoor Unit, Remote'
+                            - code: type
+                              value: split
+                            - code: refurbished
+                              value: 'no'
+                            - code: warranty
+                              value: '5'
+                            - code: energy_rating
+                              value: '3'
+                            - code: installation_detail
+                              value: Available
+                            - code: wattage
+                              value: '1482'
+                            - code: voltage
+                              value: '230'
+                            - code: colour
+                              value: '#000000'
+                            - code: colour_name
+                              value: black
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - category_id: Refrigerator
+                      descriptor:
+                        name: Custom_Input
+                      id: C1
+                      price:
+                        currency: INR
+                        maximum_value: '0.0'
+                        value: '0.0'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      related: true
+                      tags:
+                        - code: type
+                          list:
+                            - code: type
+                              value: customization
+                        - code: parent
+                          list:
+                            - code: id
+                              value: CG1
+                  locations:
+                    - address:
+                        area_code: '560011'
+                        city: Bengaluru
+                        locality: Jayanagar
+                        state: Karnataka
+                        street: Jayanagar
+                      circle:
+                        gps: '12.925810,77.583624'
+                        radius:
+                          unit: km
+                          value: '5'
+                      gps: '12.925810,77.583624'
+                      id: L1
+                      time:
+                        days: '1,2,3,4,5'
+                        label: enable
+                        range:
+                          end: '2359'
+                          start: '0000'
+                        schedule:
+                          holidays: []
+                        timestamp: '2024-08-13T06:46:19.736Z'
+                  tags:
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Washing Machine
+                        - code: type
+                          value: '11'
+                        - code: unit
+                          value: pincode
+                        - code: val
+                          value: '560001-560076,560083'
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Electric Sewing Machine
+                        - code: type
+                          value: '10'
+                        - code: unit
+                          value: km
+                        - code: val
+                          value: '15'
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Electric Air Fryer
+                        - code: type
+                          value: '12'
+                        - code: unit
+                          value: country
+                        - code: val
+                          value: IND
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Mixer Grinder
+                        - code: type
+                          value: '12'
+                        - code: unit
+                          value: country
+                        - code: val
+                          value: IND
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Air Conditioner
+                        - code: type
+                          value: '12'
+                        - code: unit
+                          value: country
+                        - code: val
+                          value: IND
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: d7682d57-4a6d-4b01-98e6-b911301fb176
+                        - code: category
+                          value: Refrigerator
+                        - code: type
+                          value: '10'
+                        - code: unit
+                          value: km
+                        - code: val
+                          value: '15'
+                    - code: timing
+                      list:
+                        - code: type
+                          value: All
+                        - code: location
+                          value: L1
+                        - code: day_from
+                          value: '1'
+                        - code: day_to
+                          value: '5'
+                        - code: time_from
+                          value: 0900
+                        - code: time_to
+                          value: '2100'
+                  time:
+                    label: enable
+                    timestamp: '2024-08-13T06:46:19.736Z'
+                  ttl: PT24H
         type: request
-  
   - api: search
     action_id: search_inc_pull
     owner: BAP
@@ -412,7 +1712,7 @@ steps:
   - api: on_search
     action_id: on_search_inc_pull
     owner: BPP
-    responseFor: null
+    responseFor: search_inc_pull
     unsolicited: false
     description: please add relevant description
     mock:
@@ -439,8 +1739,78 @@ steps:
           core_version: 1.2.5
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+                contact:
+                  phone: '9876543210'
+                  email: test@gmail.com
+              - id: F2
+                type: Self-Pickup
+                contact:
+                  phone: '7980274499'
+                  email: appliance@example.com
+            bpp/descriptor:
+              name: Mock Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
+              short_desc: Seller Marketplace
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
+              tags:
+                - code: bpp_terms
+                  list:
+                    - code: np_type
+                      value: MSN
+                    - code: accept_bap_terms
+                      value: 'Y'
             bpp/providers:
               - id: P1
+                time:
+                  label: enable
+                  timestamp: '2024-08-13T06:46:19.736Z'
+                ttl: PT24H
+                locations:
+                  - id: L1
+                    gps: '12.925810,77.583624'
+                    address:
+                      city: Bengaluru
+                      state: Karnataka
+                      area_code: '560011'
+                      street: Jayanagar
+                      locality: Jayanagar
+                    time:
+                      label: enable
+                      timestamp: '2024-08-13T06:46:19.736Z'
+                      schedule:
+                        holidays: []
+                    circle:
+                      gps: '12.925810,77.583624'
+                      radius:
+                        unit: km
+                        value: '5'
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                categories:
+                  - id: V1
+                    descriptor:
+                      name: Variant Group 1
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: variant_group
+                      - code: attr
+                        list:
+                          - code: name
+                            value: item.tags.attribute.colour
+                          - code: seq
+                            value: '1'
                 items:
                   - id: I1
                     time:
@@ -532,6 +1902,562 @@ steps:
                             value: '720'
                           - code: voltage
                             value: '230'
+                      - code: type
+                        list:
+                          - code: type
+                            value: item
+                      - code: custom_group
+                        list:
+                          - code: id
+                            value: CG1
+                  - id: I2
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Singer Simple Sewing Machine
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Heavy-duty electric sewing machine.
+                      long_desc: >-
+                        Singer Heavy Duty 4452 Sewing Machine with 32 Built-in
+                        Stitches
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:00037431885883'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '18000'
+                      maximum_value: '18000'
+                    category_id: Electric Sewing Machine
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Singer Heavy Duty 4452
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Singer Simple Sewing Machine
+                          - code: model
+                            value: '3232'
+                          - code: special_feature
+                            value: laser
+                          - code: weight
+                            value: '6.9'
+                          - code: length
+                            value: '7.3'
+                          - code: breadth
+                            value: '15.5'
+                          - code: height
+                            value: '41'
+                          - code: includes
+                            value: 'Automatic Needle Threader, Adjustable Presser Foot'
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '2'
+                          - code: energy_rating
+                            value: '4'
+                          - code: extended_warranty
+                            value: '2'
+                          - code: wattage
+                            value: '320'
+                          - code: voltage
+                            value: '220'
+                      - code: type
+                        list:
+                          - code: type
+                            value: item
+                      - code: custom_group
+                        list:
+                          - code: id
+                            value: CG1
+                  - id: I3
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Philips Viva AirFryer HD9225-50
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Air fryer for healthy cooking
+                      long_desc: >-
+                        Philips Viva Collection Air Fryer with Rapid Air
+                        Technology
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8710103539209'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '15000'
+                      maximum_value: '15000'
+                    category_id: Electric Air Fryer
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P3D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P20D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Philips Air Fryer
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Philips Viva AirFryer HD9225-50
+                          - code: model
+                            value: HD9220/50
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '7'
+                          - code: length
+                            value: '3'
+                          - code: breadth
+                            value: '31.5'
+                          - code: height
+                            value: '28'
+                          - code: includes
+                            value: 'Recipe Booklet, Double Layer Rack'
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '1'
+                          - code: energy_rating
+                            value: '3'
+                          - code: extended_warranty
+                            value: '1'
+                          - code: wattage
+                            value: '320'
+                          - code: voltage
+                            value: '220'
+                  - id: I4
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Philips Mixer Grinder
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Fastest and Finest Mixing Grinder
+                      long_desc: >-
+                        The Philips Mixer Grinder is a versatile kitchen
+                        appliance designed to simplify your cooking tasks.
+                        Equipped with powerful motors and durable stainless
+                        steel blades, it effortlessly grinds, blends, and mixes
+                        a variety of ingredients.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:887775600280'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    category_id: Mixer Grinder
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Mixer Grinder
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Philips Mixer Grinder
+                          - code: model
+                            value: MXPH-1007
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '8'
+                          - code: length
+                            value: '1.5'
+                          - code: breadth
+                            value: '20.5'
+                          - code: height
+                            value: '15'
+                          - code: includes
+                            value: Mixer Pots-3
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '1'
+                          - code: energy_rating
+                            value: '2'
+                          - code: wattage
+                            value: '750'
+                          - code: voltage
+                            value: '230'
+                  - id: I5
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: 3 Start Dual Inverter Split AC
+                      long_desc: >-
+                        3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way
+                        swing
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8806091608222'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Air Conditioner
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: LG Air Conditioner
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                          - code: model
+                            value: TS-Q18JNXE3
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '32.5'
+                          - code: length
+                            value: '18.9'
+                          - code: breadth
+                            value: '83.7'
+                          - code: height
+                            value: '30.8'
+                          - code: includes
+                            value: 'Indoor Unit, Outdoor Unit, Remote'
+                          - code: type
+                            value: split
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '5'
+                          - code: energy_rating
+                            value: '3'
+                          - code: installation_detail
+                            value: Available
+                          - code: wattage
+                            value: '1482'
+                          - code: voltage
+                            value: '230'
+                          - code: colour
+                            value: '#FF0000'
+                          - code: colour_name
+                            value: red
+                  - id: I6
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    rating: '4'
+                    descriptor:
+                      name: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: 5 Star WindFree Inverter Split AC
+                      long_desc: >-
+                        5 Star WindFree Inverter Split AC, 6 in 1 cooling 2 way
+                        swing
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:8806091608222'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Air Conditioner
+                    location_id: L1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Air Conditioner
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                          - code: model
+                            value: TS-A18JNXE3
+                          - code: special_feature
+                            value: frequency
+                          - code: weight
+                            value: '32.5'
+                          - code: length
+                            value: '18.9'
+                          - code: breadth
+                            value: '83.7'
+                          - code: height
+                            value: '30.8'
+                          - code: includes
+                            value: 'Indoor Unit, Outdoor Unit, Remote'
+                          - code: type
+                            value: split
+                          - code: refurbished
+                            value: 'no'
+                          - code: warranty
+                            value: '5'
+                          - code: energy_rating
+                            value: '3'
+                          - code: installation_detail
+                            value: Available
+                          - code: wattage
+                            value: '1482'
+                          - code: voltage
+                            value: '230'
+                          - code: colour
+                            value: '#000000'
+                          - code: colour_name
+                            value: black
+                  - id: C1
+                    descriptor:
+                      name: Custom_Input
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                    price:
+                      currency: INR
+                      value: '0.00'
+                      maximum_value: '0.00'
+                    category_id: Refrigerator
+                    related: true
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: customization
+                      - code: parent
+                        list:
+                          - code: id
+                            value: CG1
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9876543210'
+                      email: test@gmail.com
+                  - id: F2
+                    type: Self-Pickup
+                    contact:
+                      phone: '7980274499'
+                      email: appliance@example.com
+                tags:
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Washing Machine
+                      - code: type
+                        value: '11'
+                      - code: unit
+                        value: pincode
+                      - code: val
+                        value: '560001-560076,560083'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Electric Sewing Machine
+                      - code: type
+                        value: '10'
+                      - code: unit
+                        value: km
+                      - code: val
+                        value: '15'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Electric Air Fryer
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Mixer Grinder
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Air Conditioner
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: d7682d57-4a6d-4b01-98e6-b911301fb176
+                      - code: category
+                        value: Refrigerator
+                      - code: type
+                        value: '10'
+                      - code: unit
+                        value: km
+                      - code: val
+                        value: '15'
+                  - code: timing
+                    list:
+                      - code: type
+                        value: All
+                      - code: location
+                        value: L1
+                      - code: day_from
+                        value: '1'
+                      - code: day_to
+                        value: '5'
+                      - code: time_from
+                        value: 0900
+                      - code: time_to
+                        value: '2100'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -543,14 +2469,14 @@ steps:
         city_code: $.context.city
       inputs: {}
 transaction_history:
-  - action_id: search_inc
+  - action_id: search
     payload:
       context:
         domain: 'ONDC:RET15'
         action: search
-        timestamp: '2026-06-03T11:00:31.365Z'
+        timestamp: '2026-06-04T12:34:23.752Z'
         transaction_id: d1b1bd44-2610-403e-9598-385bcc0e1fb4
-        message_id: 369f32d6-31dd-4e4a-9323-6655b9971376
+        message_id: 7054c8f1-3e6a-4b68-9fd9-29dca61bb22f
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -559,24 +2485,31 @@ transaction_history:
         core_version: 1.2.5
       message:
         intent:
+          fulfillment:
+            type: Delivery
           payment:
             '@ondc/org/buyer_app_finder_fee_type': percent
             '@ondc/org/buyer_app_finder_fee_amount': '3'
           tags:
-            - code: catalog_inc
+            - code: bap_terms
               list:
-                - code: mode
-                  value: start
+                - code: static_terms
+                  value: ''
+                - code: static_terms_new
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: effective_date
+                  value: '2025-02-01T00:00:00.000Z'
     action: search
     saved_info: {}
-  - action_id: on_search_inc
+  - action_id: on_search
     payload:
       context:
         domain: 'ONDC:RET15'
         action: on_search
-        timestamp: '2026-06-03T11:00:31.376Z'
+        timestamp: '2026-06-04T12:34:23.763Z'
         transaction_id: d1b1bd44-2610-403e-9598-385bcc0e1fb4
-        message_id: e0d12753-6170-4caf-a38a-52ecddb2440d
+        message_id: 7054c8f1-3e6a-4b68-9fd9-29dca61bb22f
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -587,13 +2520,83 @@ transaction_history:
         core_version: 1.2.5
       message:
         catalog:
+          bpp/fulfillments:
+            - id: F1
+              type: Delivery
+              contact:
+                phone: '9876543210'
+                email: test@gmail.com
+            - id: F2
+              type: Self-Pickup
+              contact:
+                phone: '7980274499'
+                email: appliance@example.com
+          bpp/descriptor:
+            name: Mock Seller NP
+            symbol: 'https://sellerNP.com/images/np.png'
+            short_desc: Seller Marketplace
+            long_desc: Seller Marketplace
+            images:
+              - 'https://sellerNP.com/images/np.png'
+            tags:
+              - code: bpp_terms
+                list:
+                  - code: np_type
+                    value: MSN
+                  - code: accept_bap_terms
+                    value: 'Y'
           bpp/providers:
             - id: P1
+              time:
+                label: enable
+                timestamp: '2024-08-13T06:46:19.736Z'
+              ttl: PT24H
+              locations:
+                - id: L1
+                  gps: '12.925810,77.583624'
+                  address:
+                    city: Bengaluru
+                    state: Karnataka
+                    area_code: '560011'
+                    street: Jayanagar
+                    locality: Jayanagar
+                  time:
+                    label: enable
+                    timestamp: '2024-08-13T06:46:19.736Z'
+                    schedule:
+                      holidays: []
+                  circle:
+                    gps: '12.925810,77.583624'
+                    radius:
+                      unit: km
+                      value: '5'
+              descriptor:
+                name: Store 1
+                symbol: 'https://sellerNP.com/images/store1.png'
+                short_desc: Store 1
+                long_desc: Store 1
+                images:
+                  - 'https://sellerNP.com/images/store1.png'
+              categories:
+                - id: V1
+                  descriptor:
+                    name: Variant Group 1
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: variant_group
+                    - code: attr
+                      list:
+                        - code: name
+                          value: item.tags.attribute.colour
+                        - code: seq
+                          value: '1'
               items:
                 - id: I1
                   time:
                     label: enable
-                    timestamp: '2026-06-03T11:00:31.376Z'
+                    timestamp: '2024-08-12T05:30:48.998Z'
                   rating: '4'
                   descriptor:
                     name: Whirlpool 7.5 kg Fully Automatic Washing Machine
@@ -680,6 +2683,560 @@ transaction_history:
                           value: '720'
                         - code: voltage
                           value: '230'
+                    - code: type
+                      list:
+                        - code: type
+                          value: item
+                    - code: custom_group
+                      list:
+                        - code: id
+                          value: CG1
+                - id: I2
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Singer Simple Sewing Machine
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Heavy-duty electric sewing machine.
+                    long_desc: >-
+                      Singer Heavy Duty 4452 Sewing Machine with 32 Built-in
+                      Stitches
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:00037431885883'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '10'
+                  price:
+                    currency: INR
+                    value: '18000'
+                    maximum_value: '18000'
+                  category_id: Electric Sewing Machine
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Singer Heavy Duty 4452
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Singer Simple Sewing Machine
+                        - code: model
+                          value: '3232'
+                        - code: special_feature
+                          value: laser
+                        - code: weight
+                          value: '6.9'
+                        - code: length
+                          value: '7.3'
+                        - code: breadth
+                          value: '15.5'
+                        - code: height
+                          value: '41'
+                        - code: includes
+                          value: 'Automatic Needle Threader, Adjustable Presser Foot'
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '2'
+                        - code: energy_rating
+                          value: '4'
+                        - code: extended_warranty
+                          value: '2'
+                        - code: wattage
+                          value: '320'
+                        - code: voltage
+                          value: '220'
+                    - code: type
+                      list:
+                        - code: type
+                          value: item
+                    - code: custom_group
+                      list:
+                        - code: id
+                          value: CG1
+                - id: I3
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Philips Viva AirFryer HD9225-50
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Air fryer for healthy cooking
+                    long_desc: >-
+                      Philips Viva Collection Air Fryer with Rapid Air
+                      Technology
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:8710103539209'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '15000'
+                    maximum_value: '15000'
+                  category_id: Electric Air Fryer
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P3D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P20D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Philips Air Fryer
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Philips Viva AirFryer HD9225-50
+                        - code: model
+                          value: HD9220/50
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '7'
+                        - code: length
+                          value: '3'
+                        - code: breadth
+                          value: '31.5'
+                        - code: height
+                          value: '28'
+                        - code: includes
+                          value: 'Recipe Booklet, Double Layer Rack'
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '1'
+                        - code: energy_rating
+                          value: '3'
+                        - code: extended_warranty
+                          value: '1'
+                        - code: wattage
+                          value: '320'
+                        - code: voltage
+                          value: '220'
+                - id: I4
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Philips Mixer Grinder
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Fastest and Finest Mixing Grinder
+                    long_desc: >-
+                      The Philips Mixer Grinder is a versatile kitchen appliance
+                      designed to simplify your cooking tasks. Equipped with
+                      powerful motors and durable stainless steel blades, it
+                      effortlessly grinds, blends, and mixes a variety of
+                      ingredients.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:887775600280'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  category_id: Mixer Grinder
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Mixer Grinder
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Philips Mixer Grinder
+                        - code: model
+                          value: MXPH-1007
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '8'
+                        - code: length
+                          value: '1.5'
+                        - code: breadth
+                          value: '20.5'
+                        - code: height
+                          value: '15'
+                        - code: includes
+                          value: Mixer Pots-3
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '1'
+                        - code: energy_rating
+                          value: '2'
+                        - code: wattage
+                          value: '750'
+                        - code: voltage
+                          value: '230'
+                - id: I5
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: 3 Start Dual Inverter Split AC
+                    long_desc: '3 Start Dual Inverter Split AC, 6 in 1 cooling 2 way swing'
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:8806091608222'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  parent_item_id: V1
+                  category_id: Air Conditioner
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: LG Air Conditioner
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: LG 1.5 Ton 3 Start Dual Inverter Split AC
+                        - code: model
+                          value: TS-Q18JNXE3
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '32.5'
+                        - code: length
+                          value: '18.9'
+                        - code: breadth
+                          value: '83.7'
+                        - code: height
+                          value: '30.8'
+                        - code: includes
+                          value: 'Indoor Unit, Outdoor Unit, Remote'
+                        - code: type
+                          value: split
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '5'
+                        - code: energy_rating
+                          value: '3'
+                        - code: installation_detail
+                          value: Available
+                        - code: wattage
+                          value: '1482'
+                        - code: voltage
+                          value: '230'
+                        - code: colour
+                          value: '#FF0000'
+                        - code: colour_name
+                          value: red
+                - id: I6
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  rating: '4'
+                  descriptor:
+                    name: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: 5 Star WindFree Inverter Split AC
+                    long_desc: >-
+                      5 Star WindFree Inverter Split AC, 6 in 1 cooling 2 way
+                      swing
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:8806091608222'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  parent_item_id: V1
+                  category_id: Air Conditioner
+                  location_id: L1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/contact_details_consumer_care': 'Moaz,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Air Conditioner
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Samsung 1.5 Ton 5 Star WindFree Inverter Split AC
+                        - code: model
+                          value: TS-A18JNXE3
+                        - code: special_feature
+                          value: frequency
+                        - code: weight
+                          value: '32.5'
+                        - code: length
+                          value: '18.9'
+                        - code: breadth
+                          value: '83.7'
+                        - code: height
+                          value: '30.8'
+                        - code: includes
+                          value: 'Indoor Unit, Outdoor Unit, Remote'
+                        - code: type
+                          value: split
+                        - code: refurbished
+                          value: 'no'
+                        - code: warranty
+                          value: '5'
+                        - code: energy_rating
+                          value: '3'
+                        - code: installation_detail
+                          value: Available
+                        - code: wattage
+                          value: '1482'
+                        - code: voltage
+                          value: '230'
+                        - code: colour
+                          value: '#000000'
+                        - code: colour_name
+                          value: black
+                - id: C1
+                  descriptor:
+                    name: Custom_Input
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  price:
+                    currency: INR
+                    value: '0.00'
+                    maximum_value: '0.00'
+                  category_id: Refrigerator
+                  related: true
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: customization
+                    - code: parent
+                      list:
+                        - code: id
+                          value: CG1
+              fulfillments:
+                - id: F1
+                  type: Delivery
+                  contact:
+                    phone: '9876543210'
+                    email: test@gmail.com
+                - id: F2
+                  type: Self-Pickup
+                  contact:
+                    phone: '7980274499'
+                    email: appliance@example.com
+              tags:
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Washing Machine
+                    - code: type
+                      value: '11'
+                    - code: unit
+                      value: pincode
+                    - code: val
+                      value: '560001-560076,560083'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Electric Sewing Machine
+                    - code: type
+                      value: '10'
+                    - code: unit
+                      value: km
+                    - code: val
+                      value: '15'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Electric Air Fryer
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Mixer Grinder
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Air Conditioner
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: d7682d57-4a6d-4b01-98e6-b911301fb176
+                    - code: category
+                      value: Refrigerator
+                    - code: type
+                      value: '10'
+                    - code: unit
+                      value: km
+                    - code: val
+                      value: '15'
+                - code: timing
+                  list:
+                    - code: type
+                      value: All
+                    - code: location
+                      value: L1
+                    - code: day_from
+                      value: '1'
+                    - code: day_to
+                      value: '5'
+                    - code: time_from
+                      value: 0900
+                    - code: time_to
+                      value: '2100'
     action: on_search
     saved_info: {}
   - action_id: search_inc_pull
@@ -687,9 +3244,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET15'
         action: search
-        timestamp: '2026-06-03T11:00:31.398Z'
+        timestamp: '2026-06-04T12:34:23.774Z'
         transaction_id: d1b1bd44-2610-403e-9598-385bcc0e1fb4
-        message_id: e3900439-4e0f-486c-b321-c2058d9569d3
+        message_id: c7ef9b5a-bb07-4289-95b7-05cca6b419ad
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -705,9 +3262,9 @@ transaction_history:
             - code: catalog_inc
               list:
                 - code: start_time
-                  value: '2026-06-03T09:00:31.398Z'
+                  value: '2026-06-04T10:34:23.775Z'
                 - code: end_time
-                  value: '2026-06-03T11:00:31.398Z'
+                  value: '2026-06-04T12:34:23.774Z'
             - code: bap_terms
               list:
                 - code: static_terms
@@ -716,7 +3273,7 @@ transaction_history:
                   value: >-
                     https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: effective_date
-                  value: '2026-06-03T11:00:31.398Z'
+                  value: '2026-06-04T12:34:23.774Z'
     action: search
     saved_info: {}
   - action_id: on_search_inc_pull
@@ -724,9 +3281,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET15'
         action: on_search
-        timestamp: '2026-06-03T11:00:31.406Z'
+        timestamp: '2026-06-04T12:34:23.789Z'
         transaction_id: d1b1bd44-2610-403e-9598-385bcc0e1fb4
-        message_id: b8042403-eaaa-46b1-a62c-6c9ffd6c42e0
+        message_id: c7ef9b5a-bb07-4289-95b7-05cca6b419ad
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -743,7 +3300,7 @@ transaction_history:
                 - id: I1
                   time:
                     label: enable
-                    timestamp: '2026-06-03T09:41:09.329Z'
+                    timestamp: '2026-06-04T10:35:17.197Z'
                   rating: '4'
                   descriptor:
                     name: Whirlpool 7.5 kg Fully Automatic Washing Machine
