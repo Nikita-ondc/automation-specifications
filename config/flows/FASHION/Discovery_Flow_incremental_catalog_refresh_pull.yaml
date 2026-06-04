@@ -539,7 +539,7 @@ steps:
                         - code: day_to
                           value: '7'
                         - code: time_from
-                          value: 0900
+                          value: '0900'
                         - code: time_to
                           value: '2100'
                   time:
@@ -769,7 +769,7 @@ steps:
                       - code: day_to
                         value: '7'
                       - code: time_from
-                        value: 0900
+                        value: '0900'
                       - code: time_to
                         value: '2100'
                 time:
@@ -971,7 +971,7 @@ transaction_history:
                     - code: day_to
                       value: '7'
                     - code: time_from
-                      value: 0900
+                      value: '0900'
                     - code: time_to
                       value: '2100'
               time:
@@ -1168,7 +1168,7 @@ transaction_history:
                     - code: day_to
                       value: '7'
                     - code: time_from
-                      value: 0900
+                      value: '0900'
                     - code: time_to
                       value: '2100'
               time:
