@@ -1,7 +1,7 @@
 meta:
   domain: ONDC:FIS12
   version: 2.0.3
-  flowId: Personal_Loan_missed_emi_payment_Offline
+  flowId: Personal_Loan_Missed_EMI_Offline
   config_version: 0.0.0001
   description: The "Personal_Loan_missed_emi_payment_Offline" flow represents a
     manual repayment process for overdue EMIs when automatic collections fail,
