@@ -11,41 +11,46 @@ transaction_data:
   bpp_uri: 'https://bpp.example.com'
 steps:
   - api: search
-    action_id: search_inc
+    action_id: search_1
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: please add relevant description
+    description: BAP sends the search request
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBkZWxldGUgZGVmYXVsdFBheWxvYWQuY29udGV4dC5icHBfdXJpOwoJZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX2lkOwoJaWYgKHNlc3Npb25EYXRhLmluY19tb2RlKSB7CgkJZGVmYXVsdFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFnc1swXS5saXN0WzBdLnZhbHVlID0gInN0b3AiOwoJfQoJZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0gIioiOwogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBpbnB1dHMgPSBzZXNzaW9uRGF0YS51c2VyX2lucHV0czsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlCiAgY29uc29sZS5sb2coImZlYXR1cmVzIixKU09OLnN0cmluZ2lmeShpbnB1dHMuZmVhdHVyZV9kaXNjb3ZlcnkpKQogIGxldCBjb2Rlc0FycmF5ID0gaW5wdXRzLmZlYXR1cmVfZGlzY292ZXJ5IHx8IFtdOwogIGNvbnN0IHRhZ3MgPSBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzOwoKCXRhZ3MucHVzaCh7CgkJY29kZTogImJhcF9mZWF0dXJlcyIsCgkJbGlzdDogWwoJCQl7CgkJCQljb2RlOiAiMDAxIiwKCQkJCXZhbHVlOiAieWVzIiwKCQkJfSwKCQkJLi4uY29kZXNBcnJheS5tYXAoKGNvZGUpID0+IHsKCQkJCXJldHVybiB7CgkJCQkJY29kZTogY29kZSwKCQkJCQl2YWx1ZTogInllcyIsCgkJCQl9OwoJCQl9KSwKCQldLAoJfSk7CgoJdGFnc1swXS5saXN0WzJdLnZhbHVlID0gbmV3IERhdGUoCgkJbmV3IERhdGUoKS5nZXRUaW1lKCkgKyAxMDAwICogNjAgKiA2MCAqIDI0ICogMTAKCSkudG9JU09TdHJpbmcoKTsKICAKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJjb250ZXh0IGlzIG1pc3NpbmciLAogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzPy5bMF0/Lmxpc3Q/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAibWVzc2FnZS5pbnRlbnQudGFnc1swXS5saXN0WzBdIGlzIG1pc3NpbmciLAogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: >-
         LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
+          domain: 'ONDC:RET10'
           action: search
-          bap_id: dev-automation.ondc.org
-          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET10/1.2.0/buyer'
+          timestamp: '2026-01-20T09:05:17.039Z'
+          transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
+          message_id: b00ce1b2-b91d-4634-931e-7822bb0cd34c
+          bap_id: sample-bap-id
+          bap_uri: 'https://bap.example.com'
+          ttl: PT30S
+          country: IND
           city: '*'
           core_version: 1.2.0
-          country: IND
-          domain: 'ONDC:RET10'
-          message_id: 38427038-f789-4d8b-b4d7-9d5d2dd1b4c3
-          timestamp: '2026-03-19T05:04:23.041Z'
-          transaction_id: a7dc71aa-e6b7-4c3b-9e0b-fdb8a8f625c5
-          ttl: PT30S
         message:
           intent:
             payment:
-              '@ondc/org/buyer_app_finder_fee_amount': '3'
               '@ondc/org/buyer_app_finder_fee_type': percent
+              '@ondc/org/buyer_app_finder_fee_amount': '3'
             tags:
-              - code: catalog_inc
+              - code: bap_terms
                 list:
-                  - code: mode
-                    value: start
+                  - code: static_terms
+                    value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                  - code: static_terms_new
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  - code: effective_date
+                    value: '2025-02-01T00:00:00.000Z'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -54,73 +59,237 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.city
-        inc_mode: >-
-          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
-        bap_features: >-
-          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
-      inputs: {}
+        city: $.context.city
+        search_bap_terms: '$.message.intent.tags[?(@.code=="bap_features")]'
+      inputs:
+        id: ExampleInputId
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            city_code:
+              type: string
+              description: Enter the city code
+              minLength: 1
+            feature_discovery:
+              type: array
+              title: Features supported
+              uniqueItems: true
+              items:
+                type: string
+                oneOf:
+                  - const: '001'
+                    title: Item availability (001)
+                  - const: '002'
+                    title: Self-Pickup (002)
+                  - const: '003'
+                    title: Slotted delivery (003)
+                  - const: '004'
+                    title: Fulfillment by BNP (004)
+                  - const: '005'
+                    title: Force cancellation (005)
+                  - const: '006'
+                    title: Return with pickup (006)
+                  - const: '007'
+                    title: SNP collecting payment (007)
+                  - const: '008'
+                    title: Minimum order value (008)
+                  - const: '0091'
+                    title: Offer (discount) (0091)
+                  - const: '0092'
+                    title: Offer (buyXgetY) (0092)
+                  - const: '0093'
+                    title: Offer (freebie) (0093)
+                  - const: '0094'
+                    title: Offer (slab) (0094)
+                  - const: '0095'
+                    title: Offer (combo) (0095)
+                  - const: '0096'
+                    title: Offer (delivery) (0096)
+                  - const: '0097'
+                    title: Offer (exchange) (0097)
+                  - const: '0098'
+                    title: Offer (financing) (0098)
+                  - const: '0099'
+                    title: Purchase Finance by BNP (0099)
+                  - const: '00A'
+                    title: Commercial model for BNP/SNP (00A)
+                  - const: '00B'
+                    title: Replacement flow (00B)
+                  - const: '00C'
+                    title: Exchange flow (00C)
+                  - const: '00D'
+                    title: Cancel Return Request (00D)
+                  - const: '00E'
+                    title: Update sale invoice (00E)
+                  - const: '00F'
+                    title: Update delivery address (00F)
+                  - const: '010'
+                    title: Update delivery authorization (010)
+                  - const: '011'
+                    title: Buyer instructions (011)
+                  - const: '012'
+                    title: Cash on delivery (COD) order (012)
+                  - const: '013'
+                    title: 'Order price adjustment, not tied to return or cancel (013)'
+                  - const: '014'
+                    title: Cross-category order flow (014)
+                  - const: '015'
+                    title: Breakup of fulfillment level taxes in quote (015)
+                  - const: '016'
+                    title: Customization of input type text (016)
+                  - const: '017'
+                    title: Seller Creds (017)
+                  - const: '018'
+                    title: Cross-linking make-to-order item in quote_trail (018)
+                  - const: '019'
+                    title: Streamline fulfillment attributes for hyperlocal (019)
+                  - const: '01A'
+                    title: Item unitized count (01A)
+                  - const: '01B'
+                    title: Minimum item quantity (01B)
+                  - const: '01C'
+                    title: Identification of on-network LSP (01C)
+                  - const: '01D'
+                    title: Option for multi-fulfillment order (01D)
+                  - const: '01E'
+                    title: Cancellation terms (01E)
+                  - const: '01F'
+                    title: Codified static terms (01F)
+                  - const: '020'
+                    title: Fulfillment delay (020)
+                  - const: '021'
+                    title: Catalog as download link (021)
+                  - const: '022'
+                    title: BNP promotions planned (022)
+                  - const: '023'
+                    title: Full catalog refresh (search by item) (023)
+                  - const: '024'
+                    title: >-
+                      Full catalog refresh (search by fulfillment end location)
+                      (024)
+                  - const: '025'
+                    title: BNP demand signals (025)
+          required:
+            - city_code
+          additionalProperties: false
     examples:
-      - name: Example for action "search"
-        description: >-
-          Auto-generated example for action "search" in flow
-          "Discovery_Flow_incremental_catalog"
+      - name: example for search
         payload:
           context:
-            action: search
-            bap_id: dev-automation.ondc.org
-            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET10/1.2.0/buyer'
-            city: '*'
-            core_version: 1.2.0
-            country: IND
             domain: 'ONDC:RET10'
-            message_id: 38427038-f789-4d8b-b4d7-9d5d2dd1b4c3
-            timestamp: '2026-03-19T05:04:23.041Z'
-            transaction_id: a7dc71aa-e6b7-4c3b-9e0b-fdb8a8f625c5
+            action: search
+            timestamp: '2026-05-25T12:55:50.548Z'
+            transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
+            message_id: a5069d4e-abf8-4a89-8c2e-80addbb6748d
+            bap_id: sample-bap-id
+            bap_uri: 'https://bap.example.com'
             ttl: PT30S
+            country: IND
+            city: 'std:011'
+            core_version: 1.2.0
           message:
             intent:
               payment:
-                '@ondc/org/buyer_app_finder_fee_amount': '3'
                 '@ondc/org/buyer_app_finder_fee_type': percent
+                '@ondc/org/buyer_app_finder_fee_amount': '3'
               tags:
-                - code: catalog_inc
+                - code: bap_terms
                   list:
-                    - code: mode
-                      value: start
+                    - code: static_terms
+                      value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                    - code: static_terms_new
+                      value: >-
+                        https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    - code: effective_date
+                      value: '2026-06-04T12:55:50.549Z'
+                - code: bap_features
+                  list:
+                    - code: '001'
+                      value: 'yes'
+                    - code: '023'
+                      value: 'yes'
         type: request
+        description: BAP sends the search request
   - api: on_search
-    action_id: on_search_inc
+    action_id: on_search1
     owner: BPP
-    responseFor: null
-    unsolicited: true
-    description: please add relevant description
+    responseFor: search_1
+    unsolicited: false
+    description: BPP returns the full catalog refresh
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UgPSBSRVQxMEdST0NFUlkxMjVDYXRhbG9nOwogIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eT1zZXNzaW9uRGF0YS5jaXR5WzBdCgogIGNvbnN0IHNlYXJjaF9iYXBfdGVybXMgPSBzZXNzaW9uRGF0YS5zZWFyY2hfYmFwX3Rlcm1zWzBdOwogIGNvbnN0IGNvZGVzVG9GaW5kID0gWyIwMDEiLCAiMDA4IiwiMDBBIl07CiAgY29uc3QgYmFwQ29kZXMgPSBuZXcgU2V0KCk7CgogIGZvciAoY29uc3QgaXRlbSBvZiBzZWFyY2hfYmFwX3Rlcm1zLmxpc3QpIHsKICAgIGlmIChjb2Rlc1RvRmluZC5pbmNsdWRlcyhpdGVtLmNvZGUpKSB7CiAgICAgIGJhcENvZGVzLmFkZChpdGVtLmNvZGUpOwogICAgfQogIH0KCiAgY29uc3QgdW5pcXVlQmFwQ29kZXMgPSBBcnJheS5mcm9tKGJhcENvZGVzKTsKCiAgICBmb3IgKGNvbnN0IGNvZGUgb2YgdW5pcXVlQmFwQ29kZXMpIHsKICAgIGlmIChjb2RlID09PSAiMDAxIikgewogICAgICBjb25zdCBpdGVtcyA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdWzBdLml0ZW1zOwogICAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXVswXS5yYXRpbmcgPSAiNCIKICAgICAgaXRlbXMuZm9yRWFjaCgoaXRlbSkgPT4gewogICAgICAgIGNvbnN0IGV4aXN0aW5nVGltaW5nVGFnID0gaXRlbS50YWdzLmZpbmQoCiAgICAgICAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gInRpbWluZyIKICAgICAgICApOwogICAgICAgIGlmICghZXhpc3RpbmdUaW1pbmdUYWcpIHsKICAgICAgICAgIGl0ZW0udGFncy5wdXNoKHsKICAgICAgICAgICAgY29kZTogInRpbWluZyIsCiAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAiZGF5X2Zyb20iLAogICAgICAgICAgICAgICAgdmFsdWU6ICIxIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJkYXlfdG8iLAogICAgICAgICAgICAgICAgdmFsdWU6ICI3IiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ0aW1lX2Zyb20iLAogICAgICAgICAgICAgICAgdmFsdWU6ICIwMDAwIiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJ0aW1lX3RvIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiMjM1OSIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgXSwKICAgICAgICAgIH0pOwogICAgICAgIH0KICAgICAgICBpdGVtLnJhdGluZyA9ICI0IgogICAgICB9KTsKICAgIH0KICAgIGlmIChjb2RlID09PSAiMDA4IikgewogICAgICB7CiAgICAgICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF0udGFncy5wdXNoKHsKICAgICAgICAgIGNvZGU6ICJvcmRlcl92YWx1ZSIsCiAgICAgICAgICBsaXN0OiBbCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICBjb2RlOiAibWluX3ZhbHVlIiwKICAgICAgICAgICAgICB2YWx1ZTogIjMwMC4wMCIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICBdLAogICAgICAgIH0pOwogICAgICB9CiAgICB9CiAgICBpZiAoY29kZSA9PT0gIjAwQSIpIHsKICAgICAgY29uc3QgcHJvdmlkZXJUYWdzID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF0udGFnczsKICAgICAgY29uc3QgZXhpc3RpbmdQcm92aWRlck5wRmVlcyA9IHByb3ZpZGVyVGFncy5maW5kKAogICAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAibnBfZmVlcyIKICAgICAgKTsKICAgICAgaWYgKCFleGlzdGluZ1Byb3ZpZGVyTnBGZWVzKSB7CiAgICAgICAgcHJvdmlkZXJUYWdzLnB1c2goewogICAgICAgICAgY29kZTogIm5wX2ZlZXMiLAogICAgICAgICAgbGlzdDogWwogICAgICAgICAgICB7CiAgICAgICAgICAgICAgY29kZTogImNoYW5uZWxfbWFyZ2luX3R5cGUiLAogICAgICAgICAgICAgIHZhbHVlOiAicGVyY2VudCIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIHsKICAgICAgICAgICAgICBjb2RlOiAiY2hhbm5lbF9tYXJnaW5fdmFsdWUiLAogICAgICAgICAgICAgIHZhbHVlOiAiMC41MCIsCiAgICAgICAgICAgIH0sCiAgICAgICAgICBdLAogICAgICAgIH0pOwogICAgICB9CiAgICAgIGNvbnN0IGNhdGVnb3JpZXMgPSBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXVswXS5jYXRlZ29yaWVzOwogICAgICBjYXRlZ29yaWVzLmZvckVhY2goKGNhdGVnb3J5KSA9PiB7CiAgICAgICAgY29uc3QgZXhpc3RpbmdDYXRlZ29yeU5wRmVlcyA9IGNhdGVnb3J5LnRhZ3MuZmluZCgKICAgICAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAibnBfZmVlcyIKICAgICAgICApOwogICAgICAgIGlmICghZXhpc3RpbmdDYXRlZ29yeU5wRmVlcykgewogICAgICAgICAgY2F0ZWdvcnkudGFncy5wdXNoKHsKICAgICAgICAgICAgY29kZTogIm5wX2ZlZXMiLAogICAgICAgICAgICBsaXN0OiBbCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogImNoYW5uZWxfbWFyZ2luX3R5cGUiLAogICAgICAgICAgICAgICAgdmFsdWU6ICJwZXJjZW50IiwKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgIGNvZGU6ICJjaGFubmVsX21hcmdpbl92YWx1ZSIsCiAgICAgICAgICAgICAgICB2YWx1ZTogIjAuNTAiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgIF0sCiAgICAgICAgICB9KTsKICAgICAgICB9CiAgICAgIH0pOwogICAgICBjb25zdCBpdGVtcyA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdWzBdLml0ZW1zOwogICAgICBpdGVtcy5mb3JFYWNoKChpdGVtKSA9PiB7CiAgICAgICAgY29uc3QgZXhpc3RpbmdJdGVtTnBGZWVzID0gaXRlbS50YWdzLmZpbmQoCiAgICAgICAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gIm5wX2ZlZXMiCiAgICAgICAgKTsKICAgICAgICBpZiAoIWV4aXN0aW5nSXRlbU5wRmVlcykgewogICAgICAgICAgaXRlbS50YWdzLnB1c2goewogICAgICAgICAgICBjb2RlOiAibnBfZmVlcyIsCiAgICAgICAgICAgIGxpc3Q6IFsKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICBjb2RlOiAiY2hhbm5lbF9tYXJnaW5fdHlwZSIsCiAgICAgICAgICAgICAgICB2YWx1ZTogInBlcmNlbnQiLAogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgY29kZTogImNoYW5uZWxfbWFyZ2luX3ZhbHVlIiwKICAgICAgICAgICAgICAgIHZhbHVlOiAiMC41MCIsCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgXSwKICAgICAgICAgIH0pOwogICAgICAgIH0KICAgICAgfSk7CiAgICB9CiAgfQoKCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF0ubG9jYXRpb25zWzBdLmFkZHJlc3MuYXJlYV9jb2RlID0gc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5hcmVhX2NvZGUKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0Lm1lc3NhZ2VfaWQgPSBzZXNzaW9uRGF0YS5sYXRlc3RNZXNzYWdlX2lkWzBdCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
       validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICdtZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSBpcyBtaXNzaW5nJwogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
       requirements: >-
         LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
+          domain: 'ONDC:RET10'
           action: on_search
-          bap_id: dev-automation.ondc.org
-          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET10/1.2.0/buyer'
-          bpp_id: dev-automation.ondc.org
-          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET10/1.2.0/seller'
+          timestamp: '2026-01-20T10:27:04.570Z'
+          transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
+          message_id: 6a02cb20-722c-433e-ab13-da8621f5aaa6
+          bap_id: sample-bap-id
+          bap_uri: 'https://bap.example.com'
+          ttl: PT30S
+          bpp_id: sample-bpp-id
+          bpp_uri: 'https://bpp.example.com'
+          country: IND
           city: '*'
           core_version: 1.2.0
-          country: IND
-          domain: 'ONDC:RET10'
-          message_id: 6a297dbe-bdc2-409d-87ef-c55ca97602fc
-          timestamp: '2026-03-19T05:04:29.978Z'
-          transaction_id: a7dc71aa-e6b7-4c3b-9e0b-fdb8a8f625c5
-          ttl: PT30S
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+            bpp/descriptor:
+              name: Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
+              short_desc: Seller Marketplace
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
+              tags:
+                - code: bpp_terms
+                  list:
+                    - code: np_type
+                      value: MSN
+                    - code: accept_bap_terms
+                      value: 'Y'
             bpp/providers:
-              - id: P1
+              - time:
+                  label: enable
+                  timestamp: '2024-12-23T06:45:02.015Z'
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                ttl: P1D
+                locations:
+                  - id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-12-23T06:45:02.015Z'
+                      schedule:
+                        holidays: []
+                    gps: '19.129076,72.825803'
+                    address:
+                      street: '1 & 2,AMAR JYOTI CHS.BLDG.,OPP.NAND KRIPA HALL'
+                      locality: ANDHERI FOUR BUNGLOW AMAR JYOTI CHS
+                      city: Mumbai
+                      state: Maharashtra
+                      area_code: '400053'
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9594663710'
+                      email: nobody@nomail.com
                 items:
                   - descriptor:
                       name: Plain Atta
@@ -130,10 +299,11 @@ steps:
                       long_desc: Plain Atta
                       images:
                         - 'https://sellerNP.com/images/i1.png'
+                    rating: '4'
                     price:
                       currency: INR
-                      value: '200.00'
-                      maximum_value: '200.00'
+                      value: '100.00'
+                      maximum_value: '100.00'
                     quantity:
                       unitized:
                         measure:
@@ -160,13 +330,57 @@ steps:
                       month_year_of_manufacture_packing_import: 01/2023
                     time:
                       label: enable
-                      timestamp: '2024-12-23T06:46:02.015Z'
+                      timestamp: '2024-12-23T06:45:02.015Z'
                     tags:
                       - code: origin
                         list:
                           - code: country
-                            value: IND
+                            value: THA
                     id: I1
+                    parent_item_id: V1
+                tags:
+                  - code: timing
+                    list:
+                      - code: type
+                        value: All
+                      - code: location
+                        value: L1
+                      - code: day_from
+                        value: '1'
+                      - code: day_to
+                        value: '7'
+                      - code: time_from
+                        value: '0000'
+                      - code: time_to
+                        value: '2359'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: 'Atta, Flours and Sooji'
+                      - code: type
+                        value: '11'
+                      - code: unit
+                        value: pincode
+                      - code: val
+                        value": '560001-560076,560083'
+                categories:
+                  - id: V1
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: variant_group
+                      - code: attr
+                        list:
+                          - code: name
+                            value: item.quantity.unitized.measure
+                          - code: seq
+                            value: '1'
+                    descriptor:
+                      name: Plain Atta
+                id: P1
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -175,107 +389,321 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.city
-        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
-        np_type: >-
-          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
-      inputs: {}
+      inputs:
+        id: ExampleInputId
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            area_code:
+              type: string
+              description: Enter the area code
+              default: '144203'
+          required:
+            - area_code
+          additionalProperties: true
+          default: {}
     examples:
-      - name: Example for action "on_search"
-        description: >-
-          Auto-generated example for action "on_search" in flow
-          "Discovery_Flow_incremental_catalog"
+      - name: example for on_search
         payload:
           context:
-            action: on_search
-            bap_id: dev-automation.ondc.org
-            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET10/1.2.0/buyer'
-            bpp_id: dev-automation.ondc.org
-            bpp_uri: >-
-              https://dev-automation.ondc.org/api-service/ONDC:RET10/1.2.0/seller
-            city: '*'
-            core_version: 1.2.0
-            country: IND
             domain: 'ONDC:RET10'
-            message_id: 6a297dbe-bdc2-409d-87ef-c55ca97602fc
-            timestamp: '2026-03-19T05:04:29.978Z'
-            transaction_id: a7dc71aa-e6b7-4c3b-9e0b-fdb8a8f625c5
+            action: on_search
+            timestamp: '2026-05-25T12:55:51.520Z'
+            transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
+            message_id: a5069d4e-abf8-4a89-8c2e-80addbb6748d
+            bap_id: sample-bap-id
+            bap_uri: 'https://bap.example.com'
             ttl: PT30S
+            bpp_id: sample-bpp-id
+            bpp_uri: 'https://bpp.example.com'
+            country: IND
+            city: 'std:011'
+            core_version: 1.2.0
           message:
             catalog:
+              bpp/fulfillments:
+                - id: F1
+                  type: Delivery
+                - id: F2
+                  type: Self-Pickup
+                - id: F32822
+                  type: Buyer-Delivery
+              bpp/descriptor:
+                name: Mock Seller NP
+                symbol: 'https://sellerNP.com/images/np.png'
+                short_desc: Seller Marketplace
+                long_desc: Seller Marketplace
+                images:
+                  - 'https://sellerNP.com/images/np.png'
+                tags:
+                  - code: bpp_terms
+                    list:
+                      - code: np_type
+                        value: MSN
               bpp/providers:
-                - id: P1
+                - time:
+                    label: enable
+                    timestamp: '2024-12-23T06:55:45.035Z'
+                  descriptor:
+                    name: Store 1
+                    symbol: 'https://sellerNP.com/images/store1.png'
+                    short_desc: Store 1
+                    long_desc: Store 1
+                    images:
+                      - 'https://sellerNP.com/images/store1.png'
+                  ttl: P1D
+                  locations:
+                    - id: L1
+                      time:
+                        label: enable
+                        timestamp: '2024-12-23T06:55:45.035Z'
+                        days: '1,2,3,4,5,6,7'
+                        schedule:
+                          holidays: []
+                        range:
+                          start: '0000'
+                          end: '2359'
+                      gps: '19.129076,72.825803'
+                      address:
+                        street: '1 & 2,AMAR JYOTI CHS.BLDG.,OPP.NAND KRIPA HALL'
+                        locality: ANDHERI FOUR BUNGLOW AMAR JYOTI CHS
+                        city: mock-seller-city
+                        state: mock-state
+                        area_code: '144203'
+                      circle:
+                        gps: '19.129076,72.825803'
+                        radius:
+                          unit: km
+                          value: '3'
+                  fulfillments:
+                    - id: F1
+                      type: Delivery
+                      contact:
+                        phone: '9594663710'
+                        email: nobody@nomail.com
+                    - id: F2
+                      type: Self-Pickup
+                      contact:
+                        phone: '9594663999'
+                        email: mock@nomail.com
+                    - id: F32822
+                      type: Buyer-Delivery
+                      contact:
+                        phone: '9594663888'
+                        email: mock2@nomail.com
                   items:
-                    - '@ondc/org/available_on_cod': false
-                      '@ondc/org/cancellable': true
-                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
-                      '@ondc/org/return_window': P7D
-                      '@ondc/org/returnable': true
-                      '@ondc/org/seller_pickup_return': true
-                      '@ondc/org/statutory_reqs_packaged_commodities':
-                        common_or_generic_name_of_commodity: Butterfly Beautiful 12 Gold Necklace
-                        manufacturer_or_packer_address: >-
-                          Seller Building Address, Jayanagar, Bengaluru,
-                          Karnataka, India - 560011
-                        manufacturer_or_packer_name: Seller Business
-                        month_year_of_manufacture_packing_import: NA
-                      '@ondc/org/time_to_ship': P2D
-                      category_id: Necklaces
-                      descriptor:
-                        code: '4:7113'
+                    - descriptor:
+                        name: Plain Atta
+                        code: '1:978020137962'
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                        short_desc: Plain Atta
+                        long_desc: Plain Atta
                         images:
                           - 'https://sellerNP.com/images/i1.png'
-                        long_desc: >-
-                          This is 18KT Butterfly Beautiful 12 Gold Necklace
-                          Pendant with gold finishing
-                        name: Butterfly Beautiful 12 Gold Necklace
-                        short_desc: >-
-                          18KT Butterfly Beautiful 12 Gold Necklace Pendant with
-                          gold finishing
-                        symbol: 'https://sellerNP.com/images/i1.png'
-                      fulfillment_id: F1
-                      id: I1
-                      location_id: L1
-                      parent_item_id: V1
                       price:
                         currency: INR
-                        maximum_value: '2200'
-                        value: '2200'
+                        value: '200.00'
+                        maximum_value: '200.00'
                       quantity:
+                        unitized:
+                          measure:
+                            unit: kilogram
+                            value: '3'
                         available:
                           count: '99'
                         maximum:
-                          count: '8'
-                        unitized:
-                          measure:
-                            unit: unit
-                            value: '1'
-                      rating: '4'
+                          count: '99'
+                      category_id: 'Atta, Flours and Sooji'
+                      fulfillment_id: F1
+                      location_id: L1
+                      '@ondc/org/returnable': true
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/time_to_ship': PT5M
+                      '@ondc/org/available_on_cod': true
+                      '@ondc/org/contact_details_consumer_care': 'Ramesh,ramesh@abc.com,18004254444'
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        manufacturer_or_packer_name: ITC
+                        manufacturer_or_packer_address: 'ITC Quality Care Cell,P.O Box No.592,Bangalore-560005'
+                        common_or_generic_name_of_commodity: Ashirwad Atta
+                        month_year_of_manufacture_packing_import: 01/2023
+                      time:
+                        label: enable
+                        timestamp: '2024-12-23T06:55:45.035Z'
                       tags:
                         - code: origin
                           list:
                             - code: country
                               value: IND
-                        - code: attribute
+                        - code: timing
                           list:
-                            - code: colour_name
-                              value: gold
-                            - code: gender
-                              value: female
-                            - code: colour
-                              value: '#C0C0C0'
-                            - code: base_metal
-                              value: silver
-                            - code: plating
-                              value: gold
-                            - code: size
-                              value: '5'
-                            - code: brand
-                              value: jewellery brand
+                            - code: day_from
+                              value: '1'
+                            - code: day_to
+                              value: '7'
+                            - code: time_from
+                              value: '0000'
+                            - code: time_to
+                              value: '2359'
+                      id: I1
+                      parent_item_id: V1
+                      rating: '4'
+                    - descriptor:
+                        name: Plain Atta
+                        code: '1:4741318191894'
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                        short_desc: Plain Atta
+                        long_desc: Plain Atta
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                      price:
+                        currency: INR
+                        value: '300.00'
+                        maximum_value: '300.00'
+                      quantity:
+                        unitized:
+                          measure:
+                            unit: kilogram
+                            value: '5'
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                      category_id: 'Atta, Flours and Sooji'
+                      fulfillment_id: F1
+                      location_id: L1
+                      '@ondc/org/returnable': true
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/time_to_ship': PT5M
+                      '@ondc/org/available_on_cod': true
+                      '@ondc/org/contact_details_consumer_care': 'Ramesh,ramesh@abc.com,18004254444'
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        manufacturer_or_packer_name: ITC
+                        manufacturer_or_packer_address: 'ITC Quality Care Cell,P.O Box No.592,Bangalore-560005'
+                        common_or_generic_name_of_commodity: Ashirwad Atta
+                        month_year_of_manufacture_packing_import: 01/2023
                       time:
                         label: enable
-                        timestamp: '2026-03-19T05:04:29.978Z'
+                        timestamp: '2024-12-23T06:55:45.035Z'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: timing
+                          list:
+                            - code: day_from
+                              value: '1'
+                            - code: day_to
+                              value: '7'
+                            - code: time_from
+                              value: '0000'
+                            - code: time_to
+                              value: '2359'
+                      id: I2
+                      parent_item_id: V1
+                      rating: '4'
+                    - descriptor:
+                        name: Alphanso Mango
+                        code: '1:7396373975957'
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                        short_desc: Alphanso
+                        long_desc: Alphanso Mango freshly hand picked
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                      price:
+                        currency: INR
+                        value: '250.00'
+                        maximum_value: '250.00'
+                      quantity:
+                        unitized:
+                          measure:
+                            unit: kilogram
+                            value: '1'
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                      category_id: Fruits and Vegetables
+                      fulfillment_id: F1
+                      location_id: L1
+                      '@ondc/org/returnable': false
+                      '@ondc/org/cancellable': false
+                      '@ondc/org/return_window': P1D
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/time_to_ship': PT5M
+                      '@ondc/org/available_on_cod': true
+                      '@ondc/org/contact_details_consumer_care': 'Ramesh,ramesh@abc.com,18004254444'
+                      time:
+                        label: enable
+                        timestamp: '2024-12-23T06:55:45.035Z'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: timing
+                          list:
+                            - code: day_from
+                              value: '1'
+                            - code: day_to
+                              value: '7'
+                            - code: time_from
+                              value: '0000'
+                            - code: time_to
+                              value: '2359'
+                      id: I3
+                      rating: '4'
+                  tags:
+                    - code: timing
+                      list:
+                        - code: type
+                          value: All
+                        - code: location
+                          value: L1
+                        - code: day_from
+                          value: '1'
+                        - code: day_to
+                          value: '7'
+                        - code: time_from
+                          value: '0000'
+                        - code: time_to
+                          value: '2359'
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: 'Atta, Flours and Sooji'
+                        - code: type
+                          value: '11'
+                        - code: unit
+                          value: pincode
+                        - code: val
+                          value: '560001-560076,560083'
+                  categories:
+                    - id: V1
+                      tags:
+                        - code: type
+                          list:
+                            - code: type
+                              value: variant_group
+                        - code: attr
+                          list:
+                            - code: name
+                              value: item.quantity.unitized.measure
+                            - code: seq
+                              value: '1'
+                      descriptor:
+                        name: Plain Atta
+                  id: P1
+                  rating: '4'
         type: request
+        description: BPP returns the full catalog refresh
   - api: search
     action_id: search_inc_pull
     owner: BAP
@@ -341,7 +769,7 @@ steps:
   - api: on_search
     action_id: on_search_inc_pull
     owner: BPP
-    responseFor: null
+    responseFor: search_inc_pull
     unsolicited: false
     description: please add relevant description
     mock:
@@ -368,8 +796,55 @@ steps:
           core_version: 1.2.0
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+            bpp/descriptor:
+              name: Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
+              short_desc: Seller Marketplace
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
+              tags:
+                - code: bpp_terms
+                  list:
+                    - code: np_type
+                      value: MSN
+                    - code: accept_bap_terms
+                      value: 'Y'
             bpp/providers:
-              - id: P1
+              - time:
+                  label: enable
+                  timestamp: '2024-12-23T06:45:02.015Z'
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                ttl: P1D
+                locations:
+                  - id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-12-23T06:45:02.015Z'
+                      schedule:
+                        holidays: []
+                    gps: '19.129076,72.825803'
+                    address:
+                      street: '1 & 2,AMAR JYOTI CHS.BLDG.,OPP.NAND KRIPA HALL'
+                      locality: ANDHERI FOUR BUNGLOW AMAR JYOTI CHS
+                      city: Mumbai
+                      state: Maharashtra
+                      area_code: '400053'
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9594663710'
+                      email: nobody@nomail.com
                 items:
                   - descriptor:
                       name: Plain Atta
@@ -379,10 +854,11 @@ steps:
                       long_desc: Plain Atta
                       images:
                         - 'https://sellerNP.com/images/i1.png'
+                    rating: '4'
                     price:
                       currency: INR
-                      value: '200.00'
-                      maximum_value: '200.00'
+                      value: '100.00'
+                      maximum_value: '100.00'
                     quantity:
                       unitized:
                         measure:
@@ -409,13 +885,57 @@ steps:
                       month_year_of_manufacture_packing_import: 01/2023
                     time:
                       label: enable
-                      timestamp: '2024-12-23T06:46:02.015Z'
+                      timestamp: '2024-12-23T06:45:02.015Z'
                     tags:
                       - code: origin
                         list:
                           - code: country
-                            value: IND
+                            value: THA
                     id: I1
+                    parent_item_id: V1
+                tags:
+                  - code: timing
+                    list:
+                      - code: type
+                        value: All
+                      - code: location
+                        value: L1
+                      - code: day_from
+                        value: '1'
+                      - code: day_to
+                        value: '7'
+                      - code: time_from
+                        value: '0000'
+                      - code: time_to
+                        value: '2359'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: 'Atta, Flours and Sooji'
+                      - code: type
+                        value: '11'
+                      - code: unit
+                        value: pincode
+                      - code: val
+                        value": '560001-560076,560083'
+                categories:
+                  - id: V1
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: variant_group
+                      - code: attr
+                        list:
+                          - code: name
+                            value: item.quantity.unitized.measure
+                          - code: seq
+                            value: '1'
+                    descriptor:
+                      name: Plain Atta
+                id: P1
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -427,61 +947,144 @@ steps:
         city_code: $.context.city
       inputs: {}
 transaction_history:
-  - action_id: search_inc
+  - action_id: search_1
     payload:
       context:
         domain: 'ONDC:RET10'
         action: search
-        timestamp: '2026-06-03T18:43:11.026Z'
+        timestamp: '2026-06-04T17:19:17.024Z'
         transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-        message_id: ba9e08cd-5d26-4edc-9bea-ecda1eb63958
+        message_id: 362cc108-c914-4f1b-a8ac-de4a1e2361e1
         bap_id: sample-bap-id
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
         country: IND
-        city: '*'
+        city: 'std:011'
         core_version: 1.2.0
       message:
         intent:
           payment:
-            '@ondc/org/buyer_app_finder_fee_amount': '3'
             '@ondc/org/buyer_app_finder_fee_type': percent
+            '@ondc/org/buyer_app_finder_fee_amount': '3'
           tags:
-            - code: catalog_inc
+            - code: bap_terms
               list:
-                - code: mode
-                  value: start
+                - code: static_terms
+                  value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                - code: static_terms_new
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: effective_date
+                  value: '2026-06-14T17:19:17.035Z'
+            - code: bap_features
+              list:
+                - code: '001'
+                  value: 'yes'
+                - code: '004'
+                  value: 'yes'
     action: search
     saved_info: {}
-  - action_id: on_search_inc
+  - action_id: on_search1
     payload:
       context:
         domain: 'ONDC:RET10'
         action: on_search
-        timestamp: '2026-06-03T18:43:11.039Z'
+        timestamp: '2026-06-04T17:19:18.492Z'
         transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-        message_id: 69a154d0-a0b9-4b00-946a-723e3002b9d2
+        message_id: 362cc108-c914-4f1b-a8ac-de4a1e2361e1
         bap_id: sample-bap-id
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
         bpp_id: sample-bpp-id
         bpp_uri: 'https://bpp.example.com'
         country: IND
-        city: '*'
+        city: 'std:011'
         core_version: 1.2.0
       message:
         catalog:
+          bpp/fulfillments:
+            - id: F1
+              type: Delivery
+            - id: F2
+              type: Self-Pickup
+            - id: F32822
+              type: Buyer-Delivery
+          bpp/descriptor:
+            name: Mock Seller NP
+            symbol: 'https://sellerNP.com/images/np.png'
+            short_desc: Seller Marketplace
+            long_desc: Seller Marketplace
+            images:
+              - 'https://sellerNP.com/images/np.png'
+            tags:
+              - code: bpp_terms
+                list:
+                  - code: np_type
+                    value: MSN
+                  - code: accept_bap_terms
+                    value: 'Y'
           bpp/providers:
-            - id: P1
+            - time:
+                label: enable
+                timestamp: '2024-12-23T06:55:45.035Z'
+              rating: '4'
+              descriptor:
+                name: Store 1
+                symbol: 'https://sellerNP.com/images/store1.png'
+                short_desc: Store 1
+                long_desc: Store 1
+                images:
+                  - 'https://sellerNP.com/images/store1.png'
+              ttl: P1D
+              locations:
+                - id: L1
+                  time:
+                    label: enable
+                    timestamp: '2024-12-23T06:55:45.035Z'
+                    days: '1,2,3,4,5,6,7'
+                    schedule:
+                      holidays: []
+                    range:
+                      start: '0000'
+                      end: '2359'
+                  gps: '19.129076,72.825803'
+                  address:
+                    street: '1 & 2,AMAR JYOTI CHS.BLDG.,OPP.NAND KRIPA HALL'
+                    locality: ANDHERI FOUR BUNGLOW AMAR JYOTI CHS
+                    city: mock-seller-city
+                    state: mock-state
+                    area_code: '144203'
+                  circle:
+                    gps: '19.129076,72.825803'
+                    radius:
+                      unit: km
+                      value: '3'
+              fulfillments:
+                - id: F1
+                  type: Delivery
+                  contact:
+                    phone: '9594663710'
+                    email: nobody@nomail.com
+                - id: F2
+                  type: Self-Pickup
+                  contact:
+                    phone: '9594663999'
+                    email: mock@nomail.com
+                - id: F32822
+                  type: Buyer-Delivery
+                  contact:
+                    phone: '9594663888'
+                    email: mock2@nomail.com
               items:
                 - descriptor:
                     name: Plain Atta
-                    code: '1:XXXXXXXXXXXXX'
+                    code: '1:978020137962'
                     symbol: 'https://sellerNP.com/images/i1.png'
                     short_desc: Plain Atta
                     long_desc: Plain Atta
                     images:
                       - 'https://sellerNP.com/images/i1.png'
+                  rating: '4'
                   price:
                     currency: INR
                     value: '200.00'
@@ -503,7 +1106,7 @@ transaction_history:
                   '@ondc/org/return_window': P7D
                   '@ondc/org/seller_pickup_return': false
                   '@ondc/org/time_to_ship': PT5M
-                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/available_on_cod': true
                   '@ondc/org/contact_details_consumer_care': 'Ramesh,ramesh@abc.com,18004254444'
                   '@ondc/org/statutory_reqs_packaged_commodities':
                     manufacturer_or_packer_name: ITC
@@ -512,13 +1115,257 @@ transaction_history:
                     month_year_of_manufacture_packing_import: 01/2023
                   time:
                     label: enable
-                    timestamp: '2024-12-23T06:46:02.015Z'
+                    timestamp: '2024-12-23T06:55:45.035Z'
                   tags:
                     - code: origin
                       list:
                         - code: country
                           value: IND
+                    - code: timing
+                      list:
+                        - code: day_from
+                          value: '1'
+                        - code: day_to
+                          value: '7'
+                        - code: time_from
+                          value: '0000'
+                        - code: time_to
+                          value: '2359'
                   id: I1
+                  parent_item_id: V1
+                - descriptor:
+                    name: Plain Atta
+                    code: '1:4741318191894'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Plain Atta
+                    long_desc: Plain Atta
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  rating: '4'
+                  price:
+                    currency: INR
+                    value: '300.00'
+                    maximum_value: '300.00'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: kilogram
+                        value: '5'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  category_id: 'Atta, Flours and Sooji'
+                  fulfillment_id: F1
+                  location_id: L1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/time_to_ship': PT5M
+                  '@ondc/org/available_on_cod': true
+                  '@ondc/org/contact_details_consumer_care': 'Ramesh,ramesh@abc.com,18004254444'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: ITC
+                    manufacturer_or_packer_address: 'ITC Quality Care Cell,P.O Box No.592,Bangalore-560005'
+                    common_or_generic_name_of_commodity: Ashirwad Atta
+                    month_year_of_manufacture_packing_import: 01/2023
+                  time:
+                    label: enable
+                    timestamp: '2024-12-23T06:55:45.035Z'
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: timing
+                      list:
+                        - code: day_from
+                          value: '1'
+                        - code: day_to
+                          value: '7'
+                        - code: time_from
+                          value: '0000'
+                        - code: time_to
+                          value: '2359'
+                  id: I2
+                  parent_item_id: V1
+                - descriptor:
+                    name: Alphanso Mango
+                    code: '1:7396373975957'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Alphanso
+                    long_desc: Alphanso Mango freshly hand picked
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  rating: '4'
+                  price:
+                    currency: INR
+                    value: '250.00'
+                    maximum_value: '250.00'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: kilogram
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                  category_id: Fruits and Vegetables
+                  fulfillment_id: F1
+                  location_id: L1
+                  '@ondc/org/returnable': false
+                  '@ondc/org/cancellable': false
+                  '@ondc/org/return_window': P1D
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/time_to_ship': PT5M
+                  '@ondc/org/available_on_cod': true
+                  '@ondc/org/contact_details_consumer_care': 'Ramesh,ramesh@abc.com,18004254444'
+                  time:
+                    label: enable
+                    timestamp: '2024-12-23T06:55:45.035Z'
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: timing
+                      list:
+                        - code: day_from
+                          value: '1'
+                        - code: day_to
+                          value: '7'
+                        - code: time_from
+                          value: '0000'
+                        - code: time_to
+                          value: '2359'
+                  id: I3
+              tags:
+                - code: timing
+                  list:
+                    - code: type
+                      value: All
+                    - code: location
+                      value: L1
+                    - code: day_from
+                      value: '1'
+                    - code: day_to
+                      value: '7'
+                    - code: time_from
+                      value: '0000'
+                    - code: time_to
+                      value: '2359'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: 'Atta, Flours and Sooji'
+                    - code: type
+                      value: '11'
+                    - code: unit
+                      value: pincode
+                    - code: val
+                      value: '560001-560076,560083'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Fruits and Vegetables
+                    - code: type
+                      value: '10'
+                    - code: val
+                      value: '3'
+                    - code: unit
+                      value: km
+              categories:
+                - id: V1
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: variant_group
+                    - code: attr
+                      list:
+                        - code: name
+                          value: item.quantity.unitized.measure
+                        - code: seq
+                          value: '1'
+                  descriptor:
+                    name: Plain Atta
+              id: P1
+              offers:
+                - id: FLAT50
+                  descriptor:
+                    code: discount
+                    images:
+                      - 'https://sellerNP.com/images/offer2-banner.png'
+                  location_ids:
+                    - L1
+                  item_ids:
+                    - I1
+                    - I2
+                    - I3
+                  time:
+                    label: valid
+                    range:
+                      start: '2024-12-23T06:55:45.035Z'
+                      end: '2030-12-23T08:12:15.033Z'
+                  tags:
+                    - code: qualifier
+                      list:
+                        - code: min_value
+                          value: '100.00'
+                    - code: benefit
+                      list:
+                        - code: value_type
+                          value: amount
+                        - code: value
+                          value: '-50.00'
+                    - code: meta
+                      list:
+                        - code: additive
+                          value: 'no'
+                        - code: auto
+                          value: 'no'
+                - id: buy2get3
+                  descriptor:
+                    code: buyXgetY
+                    images:
+                      - 'https://snp.com/images/offer1-banner.webp'
+                  location_ids:
+                    - L1
+                  category_ids: []
+                  item_ids:
+                    - I1
+                    - I2
+                    - I3
+                  time:
+                    label: valid
+                    range:
+                      start: '2025-01-01T16:00:00.000Z'
+                      end: '2030-01-01T23:00:00.000Z'
+                  tags:
+                    - code: qualifier
+                      list:
+                        - code: item_count
+                          value: '2'
+                    - code: benefit
+                      list:
+                        - code: item_count
+                          value: '1'
+                        - code: item_id
+                          value: I2
+                        - code: item_value
+                          value: '0.00'
+                    - code: meta
+                      list:
+                        - code: additive
+                          value: 'no'
+                        - code: auto
+                          value: 'no'
     action: on_search
     saved_info: {}
   - action_id: search_inc_pull
@@ -526,9 +1373,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET10'
         action: search
-        timestamp: '2026-06-03T18:43:11.060Z'
+        timestamp: '2026-06-04T17:19:18.518Z'
         transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-        message_id: 41db7a8b-0726-4a2a-a9e3-b12088c07e79
+        message_id: 5444260c-8775-4b47-95ff-931384fa1c90
         bap_id: sample-bap-id
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -544,9 +1391,9 @@ transaction_history:
             - code: catalog_inc
               list:
                 - code: start_time
-                  value: '2026-06-03T16:43:11.060Z'
+                  value: '2026-06-04T15:19:18.518Z'
                 - code: end_time
-                  value: '2026-06-03T18:43:11.060Z'
+                  value: '2026-06-04T17:19:18.518Z'
             - code: bap_terms
               list:
                 - code: static_terms
@@ -556,7 +1403,7 @@ transaction_history:
                   value: >-
                     https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: effective_date
-                  value: '2026-06-03T18:43:11.060Z'
+                  value: '2026-06-04T17:19:18.518Z'
     action: search
     saved_info: {}
   - action_id: on_search_inc_pull
@@ -564,9 +1411,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET10'
         action: on_search
-        timestamp: '2026-06-03T18:43:11.070Z'
+        timestamp: '2026-06-04T17:19:18.528Z'
         transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
-        message_id: b2623961-3f75-4b2f-89cb-198dfae50a7c
+        message_id: 5444260c-8775-4b47-95ff-931384fa1c90
         bap_id: sample-bap-id
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -577,8 +1424,55 @@ transaction_history:
         core_version: 1.2.0
       message:
         catalog:
+          bpp/fulfillments:
+            - id: F1
+              type: Delivery
+          bpp/descriptor:
+            name: Seller NP
+            symbol: 'https://sellerNP.com/images/np.png'
+            short_desc: Seller Marketplace
+            long_desc: Seller Marketplace
+            images:
+              - 'https://sellerNP.com/images/np.png'
+            tags:
+              - code: bpp_terms
+                list:
+                  - code: np_type
+                    value: MSN
+                  - code: accept_bap_terms
+                    value: 'Y'
           bpp/providers:
-            - id: P1
+            - time:
+                label: enable
+                timestamp: '2024-12-23T06:45:02.015Z'
+              descriptor:
+                name: Store 1
+                symbol: 'https://sellerNP.com/images/store1.png'
+                short_desc: Store 1
+                long_desc: Store 1
+                images:
+                  - 'https://sellerNP.com/images/store1.png'
+              ttl: P1D
+              locations:
+                - id: L1
+                  time:
+                    label: enable
+                    timestamp: '2024-12-23T06:45:02.015Z'
+                    schedule:
+                      holidays: []
+                  gps: '19.129076,72.825803'
+                  address:
+                    street: '1 & 2,AMAR JYOTI CHS.BLDG.,OPP.NAND KRIPA HALL'
+                    locality: ANDHERI FOUR BUNGLOW AMAR JYOTI CHS
+                    city: Mumbai
+                    state: Maharashtra
+                    area_code: '400053'
+              fulfillments:
+                - id: F1
+                  type: Delivery
+                  contact:
+                    phone: '9594663710'
+                    email: nobody@nomail.com
               items:
                 - descriptor:
                     name: Plain Atta
@@ -588,10 +1482,11 @@ transaction_history:
                     long_desc: Plain Atta
                     images:
                       - 'https://sellerNP.com/images/i1.png'
+                  rating: '4'
                   price:
                     currency: INR
-                    value: '200.00'
-                    maximum_value: '200.00'
+                    value: '100.00'
+                    maximum_value: '100.00'
                   quantity:
                     unitized:
                       measure:
@@ -618,15 +1513,59 @@ transaction_history:
                     month_year_of_manufacture_packing_import: 01/2023
                   time:
                     label: enable
-                    timestamp: '2026-06-03T17:08:22.253Z'
+                    timestamp: '2026-06-04T15:22:05.697Z'
                   tags:
                     - code: origin
                       list:
                         - code: country
-                          value: IND
+                          value: THA
                   id: I1
+                  parent_item_id: V1
+              tags:
+                - code: timing
+                  list:
+                    - code: type
+                      value: All
+                    - code: location
+                      value: L1
+                    - code: day_from
+                      value: '1'
+                    - code: day_to
+                      value: '7'
+                    - code: time_from
+                      value: '0000'
+                    - code: time_to
+                      value: '2359'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: 'Atta, Flours and Sooji'
+                    - code: type
+                      value: '11'
+                    - code: unit
+                      value: pincode
+                    - code: val
+                      value": '560001-560076,560083'
+              categories:
+                - id: V1
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: variant_group
+                    - code: attr
+                      list:
+                        - code: name
+                          value: item.quantity.unitized.measure
+                        - code: seq
+                          value: '1'
+                  descriptor:
+                    name: Plain Atta
+              id: P1
     action: on_search
     saved_info: {}
 validationLib: ''
 helperLib: >-
-  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiB1cGRhdGVUaW1lc3RhbXBzKG9iaikgewogIGNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIGZ1bmN0aW9uIHJlY3Vyc2l2ZVVwZGF0ZShjdXJyZW50KSB7CiAgICBpZiAodHlwZW9mIGN1cnJlbnQgIT09ICJvYmplY3QiIHx8IGN1cnJlbnQgPT09IG51bGwpIHsKICAgICAgcmV0dXJuOwogICAgfQoKICAgIGZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKICAgICAgaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKICAgICAgICBjdXJyZW50W2tleV0gPSBjdXJyZW50VGltZXN0YW1wOwogICAgICB9IGVsc2UgaWYgKHR5cGVvZiBjdXJyZW50W2tleV0gPT09ICJvYmplY3QiKSB7CiAgICAgICAgcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSk7CiAgICAgIH0KICAgIH0KICB9CgogIHJlY3Vyc2l2ZVVwZGF0ZShvYmopOwogIHJldHVybiBvYmo7Cn0KCgpmdW5jdGlvbiBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKHN0YXJ0VGltZSwgZW5kVGltZSkgewoJY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZShzdGFydFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IGVuZCA9IG5ldyBEYXRlKGVuZFRpbWUpLmdldFRpbWUoKTsKCgkKCgljb25zdCByYW5kb21UaW1lID0KCQlNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiAoZW5kIC0gc3RhcnQgKyAxKSkgKyBzdGFydDsKCglyZXR1cm4gbmV3IERhdGUocmFuZG9tVGltZSkudG9JU09TdHJpbmcoKTsKfQ==
+  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiB1cGRhdGVUaW1lc3RhbXBzKG9iaikgewogIGNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIGZ1bmN0aW9uIHJlY3Vyc2l2ZVVwZGF0ZShjdXJyZW50KSB7CiAgICBpZiAodHlwZW9mIGN1cnJlbnQgIT09ICJvYmplY3QiIHx8IGN1cnJlbnQgPT09IG51bGwpIHsKICAgICAgcmV0dXJuOwogICAgfQoKICAgIGZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKICAgICAgaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKICAgICAgICBjdXJyZW50W2tleV0gPSBjdXJyZW50VGltZXN0YW1wOwogICAgICB9IGVsc2UgaWYgKHR5cGVvZiBjdXJyZW50W2tleV0gPT09ICJvYmplY3QiKSB7CiAgICAgICAgcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSk7CiAgICAgIH0KICAgIH0KICB9CgogIHJlY3Vyc2l2ZVVwZGF0ZShvYmopOwogIHJldHVybiBvYmo7Cn0KCgpmdW5jdGlvbiBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKHN0YXJ0VGltZSwgZW5kVGltZSkgewoJY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZShzdGFydFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IGVuZCA9IG5ldyBEYXRlKGVuZFRpbWUpLmdldFRpbWUoKTsKCgkKCgljb25zdCByYW5kb21UaW1lID0KCQlNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiAoZW5kIC0gc3RhcnQgKyAxKSkgKyBzdGFydDsKCglyZXR1cm4gbmV3IERhdGUocmFuZG9tVGltZSkudG9JU09TdHJpbmcoKTsKfQoKCiBjb25zdCBSRVQxMEdST0NFUlkxMjVDYXRhbG9nID0gSlNPTi5wYXJzZSgKCUpTT04uc3RyaW5naWZ5KHsKCQljYXRhbG9nOiB7CgkJCSJicHAvZnVsZmlsbG1lbnRzIjogWwoJCQkJewoJCQkJCWlkOiAiRjEiLAoJCQkJCXR5cGU6ICJEZWxpdmVyeSIsCgkJCQl9LAoJCQkJewoJCQkJCWlkOiAiRjIiLAoJCQkJCXR5cGU6ICJTZWxmLVBpY2t1cCIsCgkJCQl9LAoJCQkJewoJCQkJCWlkOiAiRjMyODIyIiwKCQkJCQl0eXBlOiAiQnV5ZXItRGVsaXZlcnkiLAoJCQkJfSwKCQkJXSwKCQkJImJwcC9kZXNjcmlwdG9yIjogewoJCQkJbmFtZTogIk1vY2sgU2VsbGVyIE5QIiwKCQkJCXN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9ucC5wbmciLAoJCQkJc2hvcnRfZGVzYzogIlNlbGxlciBNYXJrZXRwbGFjZSIsCgkJCQlsb25nX2Rlc2M6ICJTZWxsZXIgTWFya2V0cGxhY2UiLAoJCQkJaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9ucC5wbmciXSwKCQkJCXRhZ3M6IFsKCQkJCQl7CgkJCQkJCWNvZGU6ICJicHBfdGVybXMiLAoJCQkJCQlsaXN0OiBbCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogIm5wX3R5cGUiLAoJCQkJCQkJCXZhbHVlOiAiTVNOIiwKCQkJCQkJCX0sCgkJCQkJCQl7CgkJCQkJCQkJY29kZTogImFjY2VwdF9iYXBfdGVybXMiLAoJCQkJCQkJCXZhbHVlOiAiWSIsCgkJCQkJCQl9CgkJCQkJCV0sCgkJCQkJfSwKCQkJCV0sCgkJCX0sCgkJCSJicHAvcHJvdmlkZXJzIjogWwoJCQkJewoJCQkJCXRpbWU6IHsKCQkJCQkJbGFiZWw6ICJlbmFibGUiLAoJCQkJCQl0aW1lc3RhbXA6ICIyMDI0LTEyLTIzVDA2OjU1OjQ1LjAzNVoiLAoJCQkJCX0sCgkJCQkJcmF0aW5nOiAiNCIsCgkJCQkJZGVzY3JpcHRvcjogewoJCQkJCQluYW1lOiAiU3RvcmUgMSIsCgkJCQkJCXN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9zdG9yZTEucG5nIiwKCQkJCQkJc2hvcnRfZGVzYzogIlN0b3JlIDEiLAoJCQkJCQlsb25nX2Rlc2M6ICJTdG9yZSAxIiwKCQkJCQkJaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9zdG9yZTEucG5nIl0sCgkJCQkJfSwKCQkJCQl0dGw6ICJQMUQiLAoJCQkJCWxvY2F0aW9uczogWwoJCQkJCQl7CgkJCQkJCQlpZDogIkwxIiwKCQkJCQkJCXRpbWU6IHsKCQkJCQkJCQlsYWJlbDogImVuYWJsZSIsCgkJCQkJCQkJdGltZXN0YW1wOiAiMjAyNC0xMi0yM1QwNjo1NTo0NS4wMzVaIiwKCQkJCQkJCQlkYXlzOiAiMSwyLDMsNCw1LDYsNyIsCgkJCQkJCQkJc2NoZWR1bGU6IHsKCQkJCQkJCQkJaG9saWRheXM6IFtdLAoJCQkJCQkJCX0sCgkJCQkJCQkJcmFuZ2U6IHsKCQkJCQkJCQkJc3RhcnQ6ICIwMDAwIiwKCQkJCQkJCQkJZW5kOiAiMjM1OSIsCgkJCQkJCQkJfSwKCQkJCQkJCX0sCgkJCQkJCQlncHM6ICIxOS4xMjkwNzYsNzIuODI1ODAzIiwKCQkJCQkJCWFkZHJlc3M6IHsKCQkJCQkJCQlzdHJlZXQ6ICIxICYgMixBTUFSIEpZT1RJIENIUy5CTERHLixPUFAuTkFORCBLUklQQSBIQUxMIiwKCQkJCQkJCQlsb2NhbGl0eTogIkFOREhFUkkgRk9VUiBCVU5HTE9XIEFNQVIgSllPVEkgQ0hTIiwKCQkJCQkJCQljaXR5OiAibW9jay1zZWxsZXItY2l0eSIsCgkJCQkJCQkJc3RhdGU6ICJtb2NrLXN0YXRlIiwKCQkJCQkJCQlhcmVhX2NvZGU6ICI0MDAwNTMiLAoJCQkJCQkJfSwKCQkJCQkJCWNpcmNsZTogewoJCQkJCQkJCWdwczogIjE5LjEyOTA3Niw3Mi44MjU4MDMiLAoJCQkJCQkJCXJhZGl1czogewoJCQkJCQkJCQl1bml0OiAia20iLAoJCQkJCQkJCQl2YWx1ZTogIjMiLAoJCQkJCQkJCX0sCgkJCQkJCQl9LAoJCQkJCQl9LAoJCQkJCV0sCgkJCQkJZnVsZmlsbG1lbnRzOiBbCgkJCQkJCXsKCQkJCQkJCWlkOiAiRjEiLAoJCQkJCQkJdHlwZTogIkRlbGl2ZXJ5IiwKCQkJCQkJCWNvbnRhY3Q6IHsKCQkJCQkJCQlwaG9uZTogIjk1OTQ2NjM3MTAiLAoJCQkJCQkJCWVtYWlsOiAibm9ib2R5QG5vbWFpbC5jb20iLAoJCQkJCQkJfSwKCQkJCQkJfSwKCQkJCQkJewoJCQkJCQkJaWQ6ICJGMiIsCgkJCQkJCQl0eXBlOiAiU2VsZi1QaWNrdXAiLAoJCQkJCQkJY29udGFjdDogewoJCQkJCQkJCXBob25lOiAiOTU5NDY2Mzk5OSIsCgkJCQkJCQkJZW1haWw6ICJtb2NrQG5vbWFpbC5jb20iLAoJCQkJCQkJfSwKCQkJCQkJfSwKCQkJCQkJewoJCQkJCQkJaWQ6ICJGMzI4MjIiLAoJCQkJCQkJdHlwZTogIkJ1eWVyLURlbGl2ZXJ5IiwKCQkJCQkJCWNvbnRhY3Q6IHsKCQkJCQkJCQlwaG9uZTogIjk1OTQ2NjM4ODgiLAoJCQkJCQkJCWVtYWlsOiAibW9jazJAbm9tYWlsLmNvbSIsCgkJCQkJCQl9LAoJCQkJCQl9LAoJCQkJCV0sCgkJCQkJaXRlbXM6IFsKCQkJCQkJewoJCQkJCQkJZGVzY3JpcHRvcjogewoJCQkJCQkJCW5hbWU6ICJQbGFpbiBBdHRhIiwKCQkJCQkJCQljb2RlOiAiMTo5NzgwMjAxMzc5NjIiLAoJCQkJCQkJCXN5bWJvbDogImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9pMS5wbmciLAoJCQkJCQkJCXNob3J0X2Rlc2M6ICJQbGFpbiBBdHRhIiwKCQkJCQkJCQlsb25nX2Rlc2M6ICJQbGFpbiBBdHRhIiwKCQkJCQkJCQlpbWFnZXM6IFsiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyJdLAoJCQkJCQkJfSwKCQkJCQkJCXJhdGluZzogIjQiLAoJCQkJCQkJcHJpY2U6IHsKCQkJCQkJCQljdXJyZW5jeTogIklOUiIsCgkJCQkJCQkJdmFsdWU6ICIyMDAuMDAiLAoJCQkJCQkJCW1heGltdW1fdmFsdWU6ICIyMDAuMDAiLAoJCQkJCQkJfSwKCQkJCQkJCXF1YW50aXR5OiB7CgkJCQkJCQkJdW5pdGl6ZWQ6IHsKCQkJCQkJCQkJbWVhc3VyZTogewoJCQkJCQkJCQkJdW5pdDogImtpbG9ncmFtIiwKCQkJCQkJCQkJCXZhbHVlOiAiMyIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJfSwKCQkJCQkJCQlhdmFpbGFibGU6IHsKCQkJCQkJCQkJY291bnQ6ICI5OSIsCgkJCQkJCQkJfSwKCQkJCQkJCQltYXhpbXVtOiB7CgkJCQkJCQkJCWNvdW50OiAiOTkiLAoJCQkJCQkJCX0sCgkJCQkJCQl9LAoJCQkJCQkJY2F0ZWdvcnlfaWQ6ICJBdHRhLCBGbG91cnMgYW5kIFNvb2ppIiwKCQkJCQkJCWZ1bGZpbGxtZW50X2lkOiAiRjEiLAoJCQkJCQkJbG9jYXRpb25faWQ6ICJMMSIsCgkJCQkJCQkiQG9uZGMvb3JnL3JldHVybmFibGUiOiB0cnVlLAoJCQkJCQkJIkBvbmRjL29yZy9jYW5jZWxsYWJsZSI6IHRydWUsCgkJCQkJCQkiQG9uZGMvb3JnL3JldHVybl93aW5kb3ciOiAiUDdEIiwKCQkJCQkJCSJAb25kYy9vcmcvc2VsbGVyX3BpY2t1cF9yZXR1cm4iOiBmYWxzZSwKCQkJCQkJCSJAb25kYy9vcmcvdGltZV90b19zaGlwIjogIlBUNU0iLAoJCQkJCQkJIkBvbmRjL29yZy9hdmFpbGFibGVfb25fY29kIjogdHJ1ZSwKCQkJCQkJCSJAb25kYy9vcmcvY29udGFjdF9kZXRhaWxzX2NvbnN1bWVyX2NhcmUiOgoJCQkJCQkJCSJSYW1lc2gscmFtZXNoQGFiYy5jb20sMTgwMDQyNTQ0NDQiLAoJCQkJCQkJIkBvbmRjL29yZy9zdGF0dXRvcnlfcmVxc19wYWNrYWdlZF9jb21tb2RpdGllcyI6IHsKCQkJCQkJCQltYW51ZmFjdHVyZXJfb3JfcGFja2VyX25hbWU6ICJJVEMiLAoJCQkJCQkJCW1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfYWRkcmVzczoKCQkJCQkJCQkJIklUQyBRdWFsaXR5IENhcmUgQ2VsbCxQLk8gQm94IE5vLjU5MixCYW5nYWxvcmUtNTYwMDA1IiwKCQkJCQkJCQljb21tb25fb3JfZ2VuZXJpY19uYW1lX29mX2NvbW1vZGl0eTogIkFzaGlyd2FkIEF0dGEiLAoJCQkJCQkJCW1vbnRoX3llYXJfb2ZfbWFudWZhY3R1cmVfcGFja2luZ19pbXBvcnQ6ICIwMS8yMDIzIiwKCQkJCQkJCX0sCgkJCQkJCQl0aW1lOiB7CgkJCQkJCQkJbGFiZWw6ICJlbmFibGUiLAoJCQkJCQkJCXRpbWVzdGFtcDogIjIwMjQtMTItMjNUMDY6NTU6NDUuMDM1WiIsCgkJCQkJCQl9LAoJCQkJCQkJdGFnczogWwoJCQkJCQkJCXsKCQkJCQkJCQkJY29kZTogIm9yaWdpbiIsCgkJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJCXsKCQkJCQkJCQkJCQljb2RlOiAiY291bnRyeSIsCgkJCQkJCQkJCQkJdmFsdWU6ICJJTkQiLAoJCQkJCQkJCQkJfSwKCQkJCQkJCQkJXSwKCQkJCQkJCQl9LAoJCQkJCQkJXSwKCQkJCQkJCWlkOiAiSTEiLAoJCQkJCQkJcGFyZW50X2l0ZW1faWQ6ICJWMSIsCgkJCQkJCX0sCgkJCQkJCXsKCQkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCQluYW1lOiAiUGxhaW4gQXR0YSIsCgkJCQkJCQkJY29kZTogIjE6NDc0MTMxODE5MTg5NCIsCgkJCQkJCQkJc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyIsCgkJCQkJCQkJc2hvcnRfZGVzYzogIlBsYWluIEF0dGEiLAoJCQkJCQkJCWxvbmdfZGVzYzogIlBsYWluIEF0dGEiLAoJCQkJCQkJCWltYWdlczogWyJodHRwczovL3NlbGxlck5QLmNvbS9pbWFnZXMvaTEucG5nIl0sCgkJCQkJCQl9LAoJCQkJCQkJcmF0aW5nOiAiMyIsCgkJCQkJCQlwcmljZTogewoJCQkJCQkJCWN1cnJlbmN5OiAiSU5SIiwKCQkJCQkJCQl2YWx1ZTogIjMwMC4wMCIsCgkJCQkJCQkJbWF4aW11bV92YWx1ZTogIjMwMC4wMCIsCgkJCQkJCQl9LAoJCQkJCQkJcXVhbnRpdHk6IHsKCQkJCQkJCQl1bml0aXplZDogewoJCQkJCQkJCQltZWFzdXJlOiB7CgkJCQkJCQkJCQl1bml0OiAia2lsb2dyYW0iLAoJCQkJCQkJCQkJdmFsdWU6ICI1IiwKCQkJCQkJCQkJfSwKCQkJCQkJCQl9LAoJCQkJCQkJCWF2YWlsYWJsZTogewoJCQkJCQkJCQljb3VudDogIjk5IiwKCQkJCQkJCQl9LAoJCQkJCQkJCW1heGltdW06IHsKCQkJCQkJCQkJY291bnQ6ICI5OSIsCgkJCQkJCQkJfSwKCQkJCQkJCX0sCgkJCQkJCQljYXRlZ29yeV9pZDogIkF0dGEsIEZsb3VycyBhbmQgU29vamkiLAoJCQkJCQkJZnVsZmlsbG1lbnRfaWQ6ICJGMSIsCgkJCQkJCQlsb2NhdGlvbl9pZDogIkwxIiwKCQkJCQkJCSJAb25kYy9vcmcvcmV0dXJuYWJsZSI6IHRydWUsCgkJCQkJCQkiQG9uZGMvb3JnL2NhbmNlbGxhYmxlIjogdHJ1ZSwKCQkJCQkJCSJAb25kYy9vcmcvcmV0dXJuX3dpbmRvdyI6ICJQN0QiLAoJCQkJCQkJIkBvbmRjL29yZy9zZWxsZXJfcGlja3VwX3JldHVybiI6IGZhbHNlLAoJCQkJCQkJIkBvbmRjL29yZy90aW1lX3RvX3NoaXAiOiAiUFQ1TSIsCgkJCQkJCQkiQG9uZGMvb3JnL2F2YWlsYWJsZV9vbl9jb2QiOiB0cnVlLAoJCQkJCQkJIkBvbmRjL29yZy9jb250YWN0X2RldGFpbHNfY29uc3VtZXJfY2FyZSI6CgkJCQkJCQkJIlJhbWVzaCxyYW1lc2hAYWJjLmNvbSwxODAwNDI1NDQ0NCIsCgkJCQkJCQkiQG9uZGMvb3JnL3N0YXR1dG9yeV9yZXFzX3BhY2thZ2VkX2NvbW1vZGl0aWVzIjogewoJCQkJCQkJCW1hbnVmYWN0dXJlcl9vcl9wYWNrZXJfbmFtZTogIklUQyIsCgkJCQkJCQkJbWFudWZhY3R1cmVyX29yX3BhY2tlcl9hZGRyZXNzOgoJCQkJCQkJCQkiSVRDIFF1YWxpdHkgQ2FyZSBDZWxsLFAuTyBCb3ggTm8uNTkyLEJhbmdhbG9yZS01NjAwMDUiLAoJCQkJCQkJCWNvbW1vbl9vcl9nZW5lcmljX25hbWVfb2ZfY29tbW9kaXR5OiAiQXNoaXJ3YWQgQXR0YSIsCgkJCQkJCQkJbW9udGhfeWVhcl9vZl9tYW51ZmFjdHVyZV9wYWNraW5nX2ltcG9ydDogIjAxLzIwMjMiLAoJCQkJCQkJfSwKCQkJCQkJCXRpbWU6IHsKCQkJCQkJCQlsYWJlbDogImVuYWJsZSIsCgkJCQkJCQkJdGltZXN0YW1wOiAiMjAyNC0xMi0yM1QwNjo1NTo0NS4wMzVaIiwKCQkJCQkJCX0sCgkJCQkJCQl0YWdzOiBbCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAib3JpZ2luIiwKCQkJCQkJCQkJbGlzdDogWwoJCQkJCQkJCQkJewoJCQkJCQkJCQkJCWNvZGU6ICJjb3VudHJ5IiwKCQkJCQkJCQkJCQl2YWx1ZTogIklORCIsCgkJCQkJCQkJCQl9LAoJCQkJCQkJCQldLAoJCQkJCQkJCX0sCgkJCQkJCQldLAoJCQkJCQkJaWQ6ICJJMiIsCgkJCQkJCQlwYXJlbnRfaXRlbV9pZDogIlYxIiwKCQkJCQkJfSwKCQkJCQkJewoJCQkJCQkJZGVzY3JpcHRvcjogewoJCQkJCQkJCW5hbWU6ICJBbHBoYW5zbyBNYW5nbyIsCgkJCQkJCQkJY29kZTogIjE6NzM5NjM3Mzk3NTk1NyIsCgkJCQkJCQkJc3ltYm9sOiAiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyIsCgkJCQkJCQkJc2hvcnRfZGVzYzogIkFscGhhbnNvIiwKCQkJCQkJCQlsb25nX2Rlc2M6ICJBbHBoYW5zbyBNYW5nbyBmcmVzaGx5IGhhbmQgcGlja2VkIiwKCQkJCQkJCQlpbWFnZXM6IFsiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL2kxLnBuZyJdLAoJCQkJCQkJfSwKCQkJCQkJCXJhdGluZzogIjMiLAoJCQkJCQkJcHJpY2U6IHsKCQkJCQkJCQljdXJyZW5jeTogIklOUiIsCgkJCQkJCQkJdmFsdWU6ICIyNTAuMDAiLAoJCQkJCQkJCW1heGltdW1fdmFsdWU6ICIyNTAuMDAiLAoJCQkJCQkJfSwKCQkJCQkJCXF1YW50aXR5OiB7CgkJCQkJCQkJdW5pdGl6ZWQ6IHsKCQkJCQkJCQkJbWVhc3VyZTogewoJCQkJCQkJCQkJdW5pdDogImtpbG9ncmFtIiwKCQkJCQkJCQkJCXZhbHVlOiAiMSIsCgkJCQkJCQkJCX0sCgkJCQkJCQkJfSwKCQkJCQkJCQlhdmFpbGFibGU6IHsKCQkJCQkJCQkJY291bnQ6ICI5OSIsCgkJCQkJCQkJfSwKCQkJCQkJCQltYXhpbXVtOiB7CgkJCQkJCQkJCWNvdW50OiAiOTkiLAoJCQkJCQkJCX0sCgkJCQkJCQl9LAoJCQkJCQkJY2F0ZWdvcnlfaWQ6ICJGcnVpdHMgYW5kIFZlZ2V0YWJsZXMiLAoJCQkJCQkJZnVsZmlsbG1lbnRfaWQ6ICJGMSIsCgkJCQkJCQlsb2NhdGlvbl9pZDogIkwxIiwKCQkJCQkJCSJAb25kYy9vcmcvcmV0dXJuYWJsZSI6IGZhbHNlLAoJCQkJCQkJIkBvbmRjL29yZy9jYW5jZWxsYWJsZSI6IGZhbHNlLAoJCQkJCQkJIkBvbmRjL29yZy9yZXR1cm5fd2luZG93IjogIlAxRCIsCgkJCQkJCQkiQG9uZGMvb3JnL3NlbGxlcl9waWNrdXBfcmV0dXJuIjogZmFsc2UsCgkJCQkJCQkiQG9uZGMvb3JnL3RpbWVfdG9fc2hpcCI6ICJQVDVNIiwKCQkJCQkJCSJAb25kYy9vcmcvYXZhaWxhYmxlX29uX2NvZCI6IHRydWUsCgkJCQkJCQkiQG9uZGMvb3JnL2NvbnRhY3RfZGV0YWlsc19jb25zdW1lcl9jYXJlIjoKCQkJCQkJCQkiUmFtZXNoLHJhbWVzaEBhYmMuY29tLDE4MDA0MjU0NDQ0IiwKCQkJCQkJCXRpbWU6IHsKCQkJCQkJCQlsYWJlbDogImVuYWJsZSIsCgkJCQkJCQkJdGltZXN0YW1wOiAiMjAyNC0xMi0yM1QwNjo1NTo0NS4wMzVaIiwKCQkJCQkJCX0sCgkJCQkJCQl0YWdzOiBbCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAib3JpZ2luIiwKCQkJCQkJCQkJbGlzdDogWwoJCQkJCQkJCQkJewoJCQkJCQkJCQkJCWNvZGU6ICJjb3VudHJ5IiwKCQkJCQkJCQkJCQl2YWx1ZTogIklORCIsCgkJCQkJCQkJCQl9LAoJCQkJCQkJCQldLAoJCQkJCQkJCX0sCgkJCQkJCQldLAoJCQkJCQkJaWQ6ICJJMyIsCgkJCQkJCX0sCgkJCQkJXSwKCQkJCQl0YWdzOiBbCgkJCQkJCXsKCQkJCQkJCWNvZGU6ICJ0aW1pbmciLAoJCQkJCQkJbGlzdDogWwoJCQkJCQkJCXsKCQkJCQkJCQkJY29kZTogInR5cGUiLAoJCQkJCQkJCQl2YWx1ZTogIkFsbCIsCgkJCQkJCQkJfSwKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJsb2NhdGlvbiIsCgkJCQkJCQkJCXZhbHVlOiAiTDEiLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAiZGF5X2Zyb20iLAoJCQkJCQkJCQl2YWx1ZTogIjEiLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAiZGF5X3RvIiwKCQkJCQkJCQkJdmFsdWU6ICI3IiwKCQkJCQkJCQl9LAoJCQkJCQkJCXsKCQkJCQkJCQkJY29kZTogInRpbWVfZnJvbSIsCgkJCQkJCQkJCXZhbHVlOiAiMDAwMCIsCgkJCQkJCQkJfSwKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJ0aW1lX3RvIiwKCQkJCQkJCQkJdmFsdWU6ICIyMzU5IiwKCQkJCQkJCQl9LAoJCQkJCQkJXSwKCQkJCQkJfSwKCQkJCQkJewoJCQkJCQkJY29kZTogInNlcnZpY2VhYmlsaXR5IiwKCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJsb2NhdGlvbiIsCgkJCQkJCQkJCXZhbHVlOiAiTDEiLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAiY2F0ZWdvcnkiLAoJCQkJCQkJCQl2YWx1ZTogIkF0dGEsIEZsb3VycyBhbmQgU29vamkiLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAidHlwZSIsCgkJCQkJCQkJCXZhbHVlOiAiMTEiLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAidW5pdCIsCgkJCQkJCQkJCXZhbHVlOiAicGluY29kZSIsCgkJCQkJCQkJfSwKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJ2YWwiLAoJCQkJCQkJCQl2YWx1ZTogIjU2MDAwMS01NjAwNzYsNTYwMDgzIiwKCQkJCQkJCQl9LAoJCQkJCQkJXSwKCQkJCQkJfSwKCQkJCQkJewoJCQkJCQkJY29kZTogInNlcnZpY2VhYmlsaXR5IiwKCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJsb2NhdGlvbiIsCgkJCQkJCQkJCXZhbHVlOiAiTDEiLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAiY2F0ZWdvcnkiLAoJCQkJCQkJCQl2YWx1ZTogIkZydWl0cyBhbmQgVmVnZXRhYmxlcyIsCgkJCQkJCQkJfSwKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJ0eXBlIiwKCQkJCQkJCQkJdmFsdWU6ICIxMCIsCgkJCQkJCQkJfSwKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJ2YWwiLAoJCQkJCQkJCQl2YWx1ZTogIjMiLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAidW5pdCIsCgkJCQkJCQkJCXZhbHVlOiAia20iLAoJCQkJCQkJCX0sCgkJCQkJCQldLAoJCQkJCQl9LAoJCQkJCV0sCgkJCQkJY2F0ZWdvcmllczogWwoJCQkJCQl7CgkJCQkJCQlpZDogIlYxIiwKCQkJCQkJCXRhZ3M6IFsKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJ0eXBlIiwKCQkJCQkJCQkJbGlzdDogWwoJCQkJCQkJCQkJewoJCQkJCQkJCQkJCWNvZGU6ICJ0eXBlIiwKCQkJCQkJCQkJCQl2YWx1ZTogInZhcmlhbnRfZ3JvdXAiLAoJCQkJCQkJCQkJfSwKCQkJCQkJCQkJXSwKCQkJCQkJCQl9LAoJCQkJCQkJCXsKCQkJCQkJCQkJY29kZTogImF0dHIiLAoJCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCQl7CgkJCQkJCQkJCQkJY29kZTogIm5hbWUiLAoJCQkJCQkJCQkJCXZhbHVlOiAiaXRlbS5xdWFudGl0eS51bml0aXplZC5tZWFzdXJlIiwKCQkJCQkJCQkJCX0sCgkJCQkJCQkJCQl7CgkJCQkJCQkJCQkJY29kZTogInNlcSIsCgkJCQkJCQkJCQkJdmFsdWU6ICIxIiwKCQkJCQkJCQkJCX0sCgkJCQkJCQkJCV0sCgkJCQkJCQkJfSwKCQkJCQkJCV0sCgkJCQkJCQlkZXNjcmlwdG9yOiB7CgkJCQkJCQkJbmFtZTogIlBsYWluIEF0dGEiLAoJCQkJCQkJfSwKCQkJCQkJfSwKCQkJCQldLAoJCQkJCWlkOiAiUDEiLAoJCQkJCW9mZmVyczogWwoJCQkJCQl7CgkJCQkJCQlpZDogIkZMQVQ1MCIsCgkJCQkJCQlkZXNjcmlwdG9yOiB7CgkJCQkJCQkJY29kZTogImRpc2NvdW50IiwKCQkJCQkJCQlpbWFnZXM6IFsiaHR0cHM6Ly9zZWxsZXJOUC5jb20vaW1hZ2VzL29mZmVyMi1iYW5uZXIucG5nIl0sCgkJCQkJCQl9LAoJCQkJCQkJbG9jYXRpb25faWRzOiBbIkwxIl0sCgkJCQkJCQlpdGVtX2lkczogWyJJMSIsICJJMiIsICJJMyJdLAoJCQkJCQkJdGltZTogewoJCQkJCQkJCWxhYmVsOiAidmFsaWQiLAoJCQkJCQkJCXJhbmdlOiB7CgkJCQkJCQkJCXN0YXJ0OiAiMjAyNC0xMi0yM1QwNjo1NTo0NS4wMzVaIiwKCQkJCQkJCQkJZW5kOiAiMjAzMC0xMi0yM1QwODoxMjoxNS4wMzNaIiwKCQkJCQkJCQl9LAoJCQkJCQkJfSwKCQkJCQkJCXRhZ3M6IFsKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJxdWFsaWZpZXIiLAoJCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCQl7CgkJCQkJCQkJCQkJY29kZTogIm1pbl92YWx1ZSIsCgkJCQkJCQkJCQkJdmFsdWU6ICIxMDAuMDAiLAoJCQkJCQkJCQkJfSwKCQkJCQkJCQkJXSwKCQkJCQkJCQl9LAoJCQkJCQkJCXsKCQkJCQkJCQkJY29kZTogImJlbmVmaXQiLAoJCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCQl7CgkJCQkJCQkJCQkJY29kZTogInZhbHVlX3R5cGUiLAoJCQkJCQkJCQkJCXZhbHVlOiAiYW1vdW50IiwKCQkJCQkJCQkJCX0sCgkJCQkJCQkJCQl7CgkJCQkJCQkJCQkJY29kZTogInZhbHVlIiwKCQkJCQkJCQkJCQl2YWx1ZTogIi01MC4wMCIsCgkJCQkJCQkJCQl9LAoJCQkJCQkJCQldLAoJCQkJCQkJCX0sCgkJCQkJCQkJewoJCQkJCQkJCQljb2RlOiAibWV0YSIsCgkJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJCXsKCQkJCQkJCQkJCQljb2RlOiAiYWRkaXRpdmUiLAoJCQkJCQkJCQkJCXZhbHVlOiAibm8iLAoJCQkJCQkJCQkJfSwKCQkJCQkJCQkJCXsKCQkJCQkJCQkJCQljb2RlOiAiYXV0byIsCgkJCQkJCQkJCQkJdmFsdWU6ICJubyIsCgkJCQkJCQkJCQl9LAoJCQkJCQkJCQldLAoJCQkJCQkJCX0sCgkJCQkJCQldLAoJCQkJCQl9LAoJCQkJCQl7CgkJCQkJCQlpZDogImJ1eTJnZXQzIiwKCQkJCQkJCWRlc2NyaXB0b3I6IHsKCQkJCQkJCQljb2RlOiAiYnV5WGdldFkiLAoJCQkJCQkJCWltYWdlczogWyJodHRwczovL3NucC5jb20vaW1hZ2VzL29mZmVyMS1iYW5uZXIud2VicCJdLAoJCQkJCQkJfSwKCQkJCQkJCWxvY2F0aW9uX2lkczogWyJMMSJdLAoJCQkJCQkJY2F0ZWdvcnlfaWRzOiBbXSwKCQkJCQkJCWl0ZW1faWRzOiBbIkkxIiwgIkkyIiwgIkkzIl0sCgkJCQkJCQl0aW1lOiB7CgkJCQkJCQkJbGFiZWw6ICJ2YWxpZCIsCgkJCQkJCQkJcmFuZ2U6IHsKCQkJCQkJCQkJc3RhcnQ6ICIyMDI1LTAxLTAxVDE2OjAwOjAwLjAwMFoiLAoJCQkJCQkJCQllbmQ6ICIyMDMwLTAxLTAxVDIzOjAwOjAwLjAwMFoiLAoJCQkJCQkJCX0sCgkJCQkJCQl9LAoJCQkJCQkJdGFnczogWwoJCQkJCQkJCXsKCQkJCQkJCQkJY29kZTogInF1YWxpZmllciIsCgkJCQkJCQkJCWxpc3Q6IFsKCQkJCQkJCQkJCXsKCQkJCQkJCQkJCQljb2RlOiAiaXRlbV9jb3VudCIsCgkJCQkJCQkJCQkJdmFsdWU6ICIyIiwKCQkJCQkJCQkJCX0sCgkJCQkJCQkJCV0sCgkJCQkJCQkJfSwKCQkJCQkJCQl7CgkJCQkJCQkJCWNvZGU6ICJiZW5lZml0IiwKCQkJCQkJCQkJbGlzdDogWwoJCQkJCQkJCQkJewoJCQkJCQkJCQkJCWNvZGU6ICJpdGVtX2NvdW50IiwKCQkJCQkJCQkJCQl2YWx1ZTogIjEiLAoJCQkJCQkJCQkJfSwKCQkJCQkJCQkJCXsKCQkJCQkJCQkJCQljb2RlOiAiaXRlbV9pZCIsCgkJCQkJCQkJCQkJdmFsdWU6ICJJMiIsCgkJCQkJCQkJCQl9LAoJCQkJCQkJCQkJewoJCQkJCQkJCQkJCWNvZGU6ICJpdGVtX3ZhbHVlIiwKCQkJCQkJCQkJCQl2YWx1ZTogIjAuMDAiLAoJCQkJCQkJCQkJfSwKCQkJCQkJCQkJXSwKCQkJCQkJCQl9LAoJCQkJCQkJCXsKCQkJCQkJCQkJY29kZTogIm1ldGEiLAoJCQkJCQkJCQlsaXN0OiBbCgkJCQkJCQkJCQl7CgkJCQkJCQkJCQkJY29kZTogImFkZGl0aXZlIiwKCQkJCQkJCQkJCQl2YWx1ZTogIm5vIiwKCQkJCQkJCQkJCX0sCgkJCQkJCQkJCQl7CgkJCQkJCQkJCQkJY29kZTogImF1dG8iLAoJCQkJCQkJCQkJCXZhbHVlOiAibm8iLAoJCQkJCQkJCQkJfSwKCQkJCQkJCQkJXSwKCQkJCQkJCQl9LAoJCQkJCQkJXSwKCQkJCQkJfSwKCQkJCQkJLy8gewoJCQkJCQkvLyAJaWQ6ICJjb21ibzEiLAoJCQkJCQkvLyAJZGVzY3JpcHRvcjogewoJCQkJCQkvLyAJCWNvZGU6ICJjb21ibyIsCgkJCQkJCS8vIAkJaW1hZ2VzOiBbImh0dHBzOi8vc25wLmNvbS9pbWFnZXMvb2ZmZXIxLWJhbm5lci53ZWJwIl0sCgkJCQkJCS8vIAl9LAoJCQkJCQkvLyAJbG9jYXRpb25faWRzOiBbIkwxIl0sCgkJCQkJCS8vIAljYXRlZ29yeV9pZHM6IFsiQzEiXSwKCQkJCQkJLy8gCWl0ZW1faWRzOiBbIkkxIiwgIkkyIiwgIkkzIl0sCgkJCQkJCS8vIAl0aW1lOiB7CgkJCQkJCS8vIAkJbGFiZWw6ICJ2YWxpZCIsCgkJCQkJCS8vIAkJcmFuZ2U6IHsKCQkJCQkJLy8gCQkJc3RhcnQ6ICIyMDI1LTAxLTAxVDE2OjAwOjAwLjAwMFoiLAoJCQkJCQkvLyAJCQllbmQ6ICIyMDMwLTAxLTAxVDIzOjAwOjAwLjAwMFoiLAoJCQkJCQkvLyAJCX0sCgkJCQkJCS8vIAl9LAoJCQkJCQkvLyAJdGFnczogWwoJCQkJCQkvLyAJCXsKCQkJCQkJLy8gCQkJY29kZTogInF1YWxpZmllciIsCgkJCQkJCS8vIAkJCWxpc3Q6IFsKCQkJCQkJLy8gCQkJCXsKCQkJCQkJLy8gCQkJCQljb2RlOiAiaXRlbV9pZCIsCgkJCQkJCS8vIAkJCQkJdmFsdWU6ICJJMSxJMixJMyIsCgkJCQkJCS8vIAkJCQl9LAoJCQkJCQkvLyAJCQldLAoJCQkJCQkvLyAJCX0sCgkJCQkJCS8vIAkJewoJCQkJCQkvLyAJCQljb2RlOiAiYmVuZWZpdCIsCgkJCQkJCS8vIAkJCWxpc3Q6IFsKCQkJCQkJLy8gCQkJCXsKCQkJCQkJLy8gCQkJCQljb2RlOiAidmFsdWVfdHlwZSIsCgkJCQkJCS8vIAkJCQkJdmFsdWU6ICJhbW91bnQiLAoJCQkJCQkvLyAJCQkJfSwKCQkJCQkJLy8gCQkJCXsKCQkJCQkJLy8gCQkJCQljb2RlOiAidmFsdWUiLAoJCQkJCQkvLyAJCQkJCXZhbHVlOiAiLTc1LjAwIiwKCQkJCQkJLy8gCQkJCX0sCgkJCQkJCS8vIAkJCV0sCgkJCQkJCS8vIAkJfSwKCQkJCQkJLy8gCQl7CgkJCQkJCS8vIAkJCWNvZGU6ICJtZXRhIiwKCQkJCQkJLy8gCQkJbGlzdDogWwoJCQkJCQkvLyAJCQkJewoJCQkJCQkvLyAJCQkJCWNvZGU6ICJhZGRpdGl2ZSIsCgkJCQkJCS8vIAkJCQkJdmFsdWU6ICJubyIsCgkJCQkJCS8vIAkJCQl9LAoJCQkJCQkvLyAJCQkJewoJCQkJCQkvLyAJCQkJCWNvZGU6ICJhdXRvIiwKCQkJCQkJLy8gCQkJCQl2YWx1ZTogIm5vIiwKCQkJCQkJLy8gCQkJCX0sCgkJCQkJCS8vIAkJCV0sCgkJCQkJCS8vIAkJfSwKCQkJCQkJLy8gCV0sCgkJCQkJCS8vIH0sCgkJCQkJXSwKCQkJCX0sCgkJCV0sCgkJfSwKCX0pCikgOwoK
