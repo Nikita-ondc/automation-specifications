@@ -87,8 +87,8 @@ steps:
                 type: string
                 enum:
                   - '007'
-                  - 00C
-                  - 0099
+                  - '00C'
+                  - '0099'
                   - '016'
               default: []
           additionalProperties: true
