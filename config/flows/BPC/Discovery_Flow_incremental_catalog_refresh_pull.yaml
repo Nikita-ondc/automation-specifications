@@ -92,8 +92,8 @@ steps:
                 enum:
                   - '012'
                   - '017'
-                  - 01A
-                  - 01B
+                  - '01A'
+                  - '01B'
                   - '005'
               uniqueItems: true
               default: []
