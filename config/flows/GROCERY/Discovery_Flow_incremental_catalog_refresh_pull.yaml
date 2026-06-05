@@ -92,37 +92,37 @@ steps:
                     title: Return with pickup (006)
                   - const: '007'
                     title: SNP collecting payment (007)
-                  - const: 008
+                  - const: '008'
                     title: Minimum order value (008)
-                  - const: 0091
+                  - const: '0091'
                     title: Offer (discount) (0091)
-                  - const: 0092
+                  - const: '0092'
                     title: Offer (buyXgetY) (0092)
-                  - const: 0093
+                  - const: '0093'
                     title: Offer (freebie) (0093)
-                  - const: 0094
+                  - const: '0094'
                     title: Offer (slab) (0094)
-                  - const: 0095
+                  - const: '0095'
                     title: Offer (combo) (0095)
-                  - const: 0096
+                  - const: '0096'
                     title: Offer (delivery) (0096)
-                  - const: 0097
+                  - const: '0097'
                     title: Offer (exchange) (0097)
-                  - const: 0098
+                  - const: '0098'
                     title: Offer (financing) (0098)
-                  - const: 0099
+                  - const: '0099'
                     title: Purchase Finance by BNP (0099)
-                  - const: 00A
+                  - const: '00A'
                     title: Commercial model for BNP/SNP (00A)
-                  - const: 00B
+                  - const: '00B'
                     title: Replacement flow (00B)
-                  - const: 00C
+                  - const: '00C'
                     title: Exchange flow (00C)
-                  - const: 00D
+                  - const: '00D'
                     title: Cancel Return Request (00D)
-                  - const: 00E
+                  - const: '00E'
                     title: Update sale invoice (00E)
-                  - const: 00F
+                  - const: '00F'
                     title: Update delivery address (00F)
                   - const: '010'
                     title: Update delivery authorization (010)
@@ -140,21 +140,21 @@ steps:
                     title: Customization of input type text (016)
                   - const: '017'
                     title: Seller Creds (017)
-                  - const: 018
+                  - const: '018'
                     title: Cross-linking make-to-order item in quote_trail (018)
-                  - const: 019
+                  - const: '019'
                     title: Streamline fulfillment attributes for hyperlocal (019)
-                  - const: 01A
+                  - const: '01A'
                     title: Item unitized count (01A)
-                  - const: 01B
+                  - const: '01B'
                     title: Minimum item quantity (01B)
-                  - const: 01C
+                  - const: '01C'
                     title: Identification of on-network LSP (01C)
-                  - const: 01D
+                  - const: '01D'
                     title: Option for multi-fulfillment order (01D)
-                  - const: 01E
+                  - const: '01E'
                     title: Cancellation terms (01E)
-                  - const: 01F
+                  - const: '01F'
                     title: Codified static terms (01F)
                   - const: '020'
                     title: Fulfillment delay (020)
