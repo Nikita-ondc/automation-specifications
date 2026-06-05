@@ -15,41 +15,46 @@ transaction_data:
   bpp_uri: 'https://bpp.example.com'
 steps:
   - api: search
-    action_id: search_inc
+    action_id: search_1
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: please add relevant description
+    description: BAP sends the search request
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAJZGVsZXRlIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaTsKCWRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKCWlmIChzZXNzaW9uRGF0YS5pbmNfbW9kZSkgewoJCWRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKCX0KCWRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBpbnB1dHMgPSBzZXNzaW9uRGF0YS51c2VyX2lucHV0czsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlCiAgY29uc3QgdGFncyA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3M7CgoJdGFnc1swXS5saXN0WzJdLnZhbHVlID0gbmV3IERhdGUoCgkJbmV3IERhdGUoKS5nZXRUaW1lKCkgKyAxMDAwICogNjAgKiA2MCAqIDI0ICogMTAKCSkudG9JU09TdHJpbmcoKTsKICAKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJjb250ZXh0IGlzIG1pc3NpbmciLAogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzPy5bMF0/Lmxpc3Q/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAibWVzc2FnZS5pbnRlbnQudGFnc1swXS5saXN0WzBdIGlzIG1pc3NpbmciLAogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: >-
-        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
+          domain: 'ONDC:RET16'
           action: search
-          bap_id: dev-automation.ondc.org
-          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.0/buyer'
+          timestamp: '2026-01-20T09:05:17.039Z'
+          transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
+          message_id: b00ce1b2-b91d-4634-931e-7822bb0cd34c
+          bap_id: sample-bap-id
+          bap_uri: 'https://bap.example.com'
+          ttl: PT30S
+          country: IND
           city: '*'
           core_version: 1.2.0
-          country: IND
-          domain: 'ONDC:RET16'
-          message_id: 54bdb15a-dd01-4584-a3f3-6504cb71d744
-          timestamp: '2026-03-19T16:24:41.322Z'
-          transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
-          ttl: PT30S
         message:
           intent:
             payment:
               '@ondc/org/buyer_app_finder_fee_type': percent
               '@ondc/org/buyer_app_finder_fee_amount': '3'
             tags:
-              - code: catalog_inc
+              - code: bap_terms
                 list:
-                  - code: mode
-                    value: start
+                  - code: static_terms
+                    value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                  - code: static_terms_new
+                    value: >-
+                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  - code: effective_date
+                    value: '2025-02-01T00:00:00.000Z'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -58,31 +63,37 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.city
-        message_id: $.context.message_id
         city: $.context.city
-        inc_mode: >-
-          $.message.intent.tags[?(@.code=="catalog_inc")].list[?(@.code=="mode")].value
-        bap_features: >-
-          $.message.intent.tags[?(@.code=="bap_features")].list[?(@.value=="yes")].code
-      inputs: {}
+      inputs:
+        id: ExampleInputId
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            city_code:
+              type: string
+              description: Enter the city code
+              minLength: 1
+          required:
+            - city_code
+          additionalProperties: false
     examples:
       - name: Example for action "search"
         description: >-
           Auto-generated example for action "search" in flow
-          "Discovery_Flow_incremental_catalog"
+          "Search_and_Custom_Menu_(Full_Catalog_City)"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
             bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.0/buyer'
-            city: '*'
+            city: 'std:011'
             core_version: 1.2.0
             country: IND
             domain: 'ONDC:RET16'
-            message_id: 54bdb15a-dd01-4584-a3f3-6504cb71d744
-            timestamp: '2026-03-19T16:24:41.322Z'
-            transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
+            message_id: 51adc0bb-e14b-4b11-8132-413ea38c4995
+            timestamp: '2026-03-23T10:53:31.452Z'
+            transaction_id: d95a5bc6-9af1-4cd5-8115-2487f18a91a2
             ttl: PT30S
           message:
             intent:
@@ -90,49 +101,123 @@ steps:
                 '@ondc/org/buyer_app_finder_fee_amount': '3'
                 '@ondc/org/buyer_app_finder_fee_type': percent
               tags:
-                - code: catalog_inc
+                - code: bap_terms
                   list:
-                    - code: mode
-                      value: start
+                    - code: static_terms
+                      value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                    - code: static_terms_new
+                      value: >-
+                        https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    - code: effective_date
+                      value: '2026-04-02T10:53:31.459Z'
         type: request
   - api: on_search
-    action_id: on_search_inc
+    action_id: on_search1
     owner: BPP
-    responseFor: null
-    unsolicited: true
-    description: please add relevant description
+    responseFor: search_1
+    unsolicited: false
+    description: BPP returns the full catalog refresh
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICAgIGRlZmF1bHRQYXlsb2FkID0gdXBkYXRlVGltZXN0YW1wcyhkZWZhdWx0UGF5bG9hZCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0gIioiOwogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKYXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5PXNlc3Npb25EYXRhLmNpdHlbMF0KCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF0ubG9jYXRpb25zWzBdLmFkZHJlc3MuYXJlYV9jb2RlID0gc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5hcmVhX2NvZGUKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0Lm1lc3NhZ2VfaWQgPSBzZXNzaW9uRGF0YS5sYXRlc3RNZXNzYWdlX2lkWzBdCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
       validate: >-
         LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: >-
         LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
+          domain: 'ONDC:RET16'
           action: on_search
-          bap_id: dev-automation.ondc.org
-          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.0/buyer'
-          bpp_id: dev-automation.ondc.org
-          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.0/seller'
+          timestamp: '2026-01-20T10:27:04.570Z'
+          transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
+          message_id: 6a02cb20-722c-433e-ab13-da8621f5aaa6
+          bap_id: sample-bap-id
+          bap_uri: 'https://bap.example.com'
+          ttl: PT30S
+          bpp_id: sample-bpp-id
+          bpp_uri: 'https://bpp.example.com'
+          country: IND
           city: '*'
           core_version: 1.2.0
-          country: IND
-          domain: 'ONDC:RET16'
-          message_id: 09ae400d-61ba-4561-b273-c90fd0e1a7e2
-          timestamp: '2026-03-19T16:24:50.771Z'
-          transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
-          ttl: PT30S
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+              - id: F2
+                type: Self-Pickup
+            bpp/descriptor:
+              name: Mock Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
+              short_desc: Seller Marketplace
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
+              tags:
+                - code: bpp_terms
+                  list:
+                    - code: np_type
+                      value: MSN
+                    - code: accept_bap_terms
+                      value: 'Y'
             bpp/providers:
               - id: P1
+                time:
+                  label: enable
+                  timestamp: '2024-08-13T06:46:19.736Z'
+                rating: '4'
+                ttl: PT24H
+                locations:
+                  - id: L1
+                    gps: '12.925810,77.583624'
+                    address:
+                      city: Bengaluru
+                      state: Karnataka
+                      area_code: '560011'
+                      street: Jayanagar
+                      locality: Jayanagar
+                    time:
+                      label: enable
+                      timestamp: '2024-08-13T06:46:19.736Z'
+                      days: '1,2,3,4,5'
+                      schedule:
+                        holidays: []
+                      range:
+                        start: '0000'
+                        end: '2359'
+                    circle:
+                      gps: '12.925810,77.583624'
+                      radius:
+                        unit: km
+                        value: '5'
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                categories:
+                  - id: V1
+                    descriptor:
+                      name: Variant Group 1
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: variant_group
+                      - code: attr
+                        list:
+                          - code: name
+                            value: item.tags.attribute.colour
+                          - code: seq
+                            value: '1'
                 items:
                   - id: I1
+                    rating: '4'
                     time:
                       label: enable
                       timestamp: '2024-08-12T05:30:48.998Z'
-                    parent_item_id: ''
                     descriptor:
                       name: MINISO Two-Layer Drawer Organizer
                       symbol: 'https://sellerNP.com/images/i1.png'
@@ -151,7 +236,7 @@ steps:
                         maintaining an elegant aesthetic.
                       images:
                         - 'https://sellerNP.com/images/i1.png'
-                      code: '5:ESS45300'
+                      code: '3:9501101530007'
                     quantity:
                       unitized:
                         measure:
@@ -163,8 +248,8 @@ steps:
                         count: '8'
                     price:
                       currency: INR
-                      value: '2460'
-                      maximum_value: '2460'
+                      value: '2260'
+                      maximum_value: '2260'
                     category_id: Kitchen Storage and Containers
                     location_id: L1
                     fulfillment_id: F1
@@ -190,15 +275,317 @@ steps:
                       - code: attribute
                         list:
                           - code: brand
+                            value: MINISO Two-Layer Drawer Organizer
+                          - code: colour
+                            value: '#FFFFFF'
+                          - code: colour_name
+                            value: brown
+                          - code: material
+                            value: thermoplastic
+                  - id: I2
+                    rating: '3'
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    descriptor:
+                      name: Doms Art Apps Nxt Kit With Plastic Carry Case
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Coloring & Art Smart Kit Use For Sketching, Writing,
+                        Shading, Colouring, Highlighting.Non-Toxic, Easy To Use
+                        & Safe For Childrens.
+                      long_desc: >-
+                        Introducing our comprehensive combination kit, designed
+                        to satisfy all your creative needs! Whether you're
+                        sketching, writing, shading, coloring, or highlighting,
+                        this kit has everything you need to unleash your
+                        imagination.You'll find 12 watercolor pens for vibrant
+                        and fluid artwork, 12 bi-color crayons for versatile
+                        coloring options, 12 jumbo oil pastels for smooth and
+                        blendable textures, 8 bi-color pencils for precise
+                        drawing and shading, and 12 plastic crayons for bold and
+                        durable lines.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:7845632198471'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '2460'
+                      maximum_value: '2460'
+                    category_id: Stationery
+                    location_id: L1
+                    parent_item_id: V1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Plastic Crayons
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Doms Art Apps Nxt Kit With Plastic Carry Case
+                          - code: colour
+                            value: '#00FF00'
+                          - code: colour_name
+                            value: white
+                          - code: material
+                            value: thermoplastic
+                  - id: I3
+                    rating: '4'
+                    descriptor:
+                      name: >-
+                        Polyset Elegance Plastic Laundry Basket - Assorted
+                        Colour, 53 L
+                      code: '3:6213574890238'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Polyset’s Laundry Basket made from virgin plastic is
+                        very tough, durable and long-lasting. It has a large
+                        space enough to keep all the dirty clothes in one place.
+                      long_desc: >-
+                        This Polyset Laundry Basket comes in large size, which
+                        gives you more space for storing multiple items like
+                        clothes, toys, groceries, kitchen and bathing
+                        accessories, Ideal for family use in the Laundry Room,
+                        Bedroom or Bathroom, its comes with Lid for protecting
+                        your articles from dust. To add to it, the design and
+                        colour are so attractive, that it immediately gels with
+                        the interior of the house, be it Bathroom, Bedroom etc.
+                        Easily portable cross ventilating body keeps your items
+                        free module formation. And it gives you extra-large
+                        space to store your products. And this is made from
+                        tough plastic which provides immense strength to the
+                        product.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                    price:
+                      currency: INR
+                      value: '499.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Closet/Laundry/Shoe Organization
+                    fulfillment_id: F1
+                    location_id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    quantity:
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                      unitized:
+                        measure:
+                          value: '1'
+                          unit: unit
+                    '@ondc/org/returnable': true
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Laundry Basket
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
                             value: >-
-                              MINISO Two-Layer Drawer Organizer - Cotton Cloth,
-                              With Rod, Multicolour, 1 pc
+                              Polyset Elegance Plastic Laundry Basket - Assorted
+                              Colour, 53 L
+                          - code: colour
+                            value: '#964B00'
+                          - code: colour_name
+                            value: brown
+                          - code: material
+                            value: polyethylene
+                  - id: I4
+                    rating: '4'
+                    descriptor:
+                      name: >-
+                        Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With
+                        3 Blades
+                      code: '3:4012789543165'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        This compact kitchen appliance is designed to help cut
+                        down your kitchen chores. A simple pull of the rope in
+                        this Pigeon Handy vegetable and fruit chopper cuts food
+                        items down into small pieces.
+                      long_desc: >-
+                        The chopper’s tough body can withstand being put into
+                        the dishwasher. Durable design, a convenient usage made
+                        of ABS plastic, this chopper is sturdy and durable. It
+                        does not require electricity to be in use. Chop fruits
+                        and vegetables. This chopper uses its three stainless
+                        steel blades and relies on a unique string function to
+                        chop fruits and vegetables with ease. It is easy to use.
+                        Get things started by putting the blade in the Centre of
+                        the bowl. Cut vegetables or fruits to medium size before
+                        putting them into this bowl to avoid jamming the blades.
+                        Put the contents in, close the lid, and sting the rope
+                        quickly to cut food items into small pieces. Then, take
+                        the blade system out before you remove the chopped food.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    category_id: Kitchen Tools
+                    fulfillment_id: F1
+                    location_id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    quantity:
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                      unitized:
+                        measure:
+                          value: '1'
+                          unit: unit
+                    '@ondc/org/returnable': true
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Vegetable Chopper
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: >-
+                              Pigeon by Stovekraft Mini Fruit & Vegetable
+                              Chopper With 3 Blades
                           - code: colour
                             value: '#00FF00'
                           - code: colour_name
                             value: green
                           - code: material
-                            value: polycarbonate
+                            value: polypropylene
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9876543210'
+                      email: test@gmail.com
+                  - id: F2
+                    type: Self-Pickup
+                    contact:
+                      email: home@example.com
+                      phone: '7980271122'
+                tags:
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Kitchen Storage and Containers
+                      - code: type
+                        value: '11'
+                      - code: unit
+                        value: pincode
+                      - code: val
+                        value: '560001-560076,560083'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Stationery
+                      - code: type
+                        value: '12'
+                      - code: val
+                        value: IND
+                      - code: unit
+                        value: country
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Closet/Laundry/Shoe Organization
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Kitchen Tools
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: timing
+                    list:
+                      - code: type
+                        value: All
+                      - code: location
+                        value: L1
+                      - code: day_from
+                        value: '1'
+                      - code: day_to
+                        value: '5'
+                      - code: time_from
+                        value: '0000'
+                      - code: time_to
+                        value: '2359'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -207,16 +594,25 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.city
-        on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
-        np_type: >-
-          $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
-      inputs: {}
+      inputs:
+        id: ExampleInputId
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            area_code:
+              type: string
+              description: Enter the area code
+              default: '144203'
+          required:
+            - area_code
+          additionalProperties: true
+          default: {}
     examples:
       - name: Example for action "on_search"
         description: >-
           Auto-generated example for action "on_search" in flow
-          "Discovery_Flow_incremental_catalog"
+          "Search_and_Custom_Menu_(Full_Catalog_City)"
         payload:
           context:
             action: on_search
@@ -225,18 +621,70 @@ steps:
             bpp_id: dev-automation.ondc.org
             bpp_uri: >-
               https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.0/seller
-            city: '*'
+            city: 'std:011'
             core_version: 1.2.0
             country: IND
             domain: 'ONDC:RET16'
-            message_id: 09ae400d-61ba-4561-b273-c90fd0e1a7e2
-            timestamp: '2026-03-19T16:24:50.771Z'
-            transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
+            message_id: 51adc0bb-e14b-4b11-8132-413ea38c4995
+            timestamp: '2026-03-23T10:53:34.276Z'
+            transaction_id: d95a5bc6-9af1-4cd5-8115-2487f18a91a2
             ttl: PT30S
           message:
             catalog:
+              bpp/descriptor:
+                images:
+                  - 'https://sellerNP.com/images/np.png'
+                long_desc: Seller Marketplace
+                name: Mock Seller NP
+                short_desc: Seller Marketplace
+                symbol: 'https://sellerNP.com/images/np.png'
+                tags:
+                  - code: bpp_terms
+                    list:
+                      - code: np_type
+                        value: MSN
+                      - code: accept_bap_terms
+                        value: 'Y'
+              bpp/fulfillments:
+                - id: F1
+                  type: Delivery
+                - id: F2
+                  type: Self-Pickup
               bpp/providers:
-                - id: P1
+                - categories:
+                    - descriptor:
+                        name: Variant Group 1
+                      id: V1
+                      tags:
+                        - code: type
+                          list:
+                            - code: type
+                              value: variant_group
+                        - code: attr
+                          list:
+                            - code: name
+                              value: item.tags.attribute.colour
+                            - code: seq
+                              value: '1'
+                  descriptor:
+                    images:
+                      - 'https://sellerNP.com/images/store1.png'
+                    long_desc: Store 1
+                    name: Store 1
+                    short_desc: Store 1
+                    symbol: 'https://sellerNP.com/images/store1.png'
+                  fulfillments:
+                    - contact:
+                        email: test@gmail.com
+                        phone: '9876543210'
+                      id: F1
+                      type: Delivery
+                    - contact:
+                        email: home@example.com
+                        phone: '7980271122'
+                      id: F2
+                      type: Self-Pickup
+                  id: P1
                   items:
                     - '@ondc/org/available_on_cod': false
                       '@ondc/org/cancellable': true
@@ -254,7 +702,7 @@ steps:
                       '@ondc/org/time_to_ship': P2D
                       category_id: Kitchen Storage and Containers
                       descriptor:
-                        code: '5:ESS45300'
+                        code: '3:9501101530007'
                         images:
                           - 'https://sellerNP.com/images/i1.png'
                         long_desc: >-
@@ -275,11 +723,10 @@ steps:
                       fulfillment_id: F1
                       id: I1
                       location_id: L1
-                      parent_item_id: ''
                       price:
                         currency: INR
-                        maximum_value: '2460'
-                        value: '2460'
+                        maximum_value: '2260'
+                        value: '2260'
                       quantity:
                         available:
                           count: '99'
@@ -289,6 +736,157 @@ steps:
                           measure:
                             unit: unit
                             value: '1'
+                      rating: '4'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: MINISO Two-Layer Drawer Organizer
+                            - code: colour
+                              value: '#FFFFFF'
+                            - code: colour_name
+                              value: brown
+                            - code: material
+                              value: thermoplastic
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T05:30:48.998Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                      '@ondc/org/return_window': P7D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': true
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Plastic Crayons
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P2D
+                      category_id: Stationery
+                      descriptor:
+                        code: '3:7845632198471'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          Introducing our comprehensive combination kit,
+                          designed to satisfy all your creative needs! Whether
+                          you're sketching, writing, shading, coloring, or
+                          highlighting, this kit has everything you need to
+                          unleash your imagination.You'll find 12 watercolor
+                          pens for vibrant and fluid artwork, 12 bi-color
+                          crayons for versatile coloring options, 12 jumbo oil
+                          pastels for smooth and blendable textures, 8 bi-color
+                          pencils for precise drawing and shading, and 12
+                          plastic crayons for bold and durable lines.
+                        name: Doms Art Apps Nxt Kit With Plastic Carry Case
+                        short_desc: >-
+                          Coloring & Art Smart Kit Use For Sketching, Writing,
+                          Shading, Colouring, Highlighting.Non-Toxic, Easy To
+                          Use & Safe For Childrens.
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I2
+                      location_id: L1
+                      parent_item_id: V1
+                      price:
+                        currency: INR
+                        maximum_value: '2460'
+                        value: '2460'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '10'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '3'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: Doms Art Apps Nxt Kit With Plastic Carry Case
+                            - code: colour
+                              value: '#00FF00'
+                            - code: colour_name
+                              value: white
+                            - code: material
+                              value: thermoplastic
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Laundry Basket
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P1D
+                      category_id: Closet/Laundry/Shoe Organization
+                      descriptor:
+                        code: '3:6213574890238'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          This Polyset Laundry Basket comes in large size, which
+                          gives you more space for storing multiple items like
+                          clothes, toys, groceries, kitchen and bathing
+                          accessories, Ideal for family use in the Laundry Room,
+                          Bedroom or Bathroom, its comes with Lid for protecting
+                          your articles from dust. To add to it, the design and
+                          colour are so attractive, that it immediately gels
+                          with the interior of the house, be it Bathroom,
+                          Bedroom etc. Easily portable cross ventilating body
+                          keeps your items free module formation. And it gives
+                          you extra-large space to store your products. And this
+                          is made from tough plastic which provides immense
+                          strength to the product.
+                        name: >-
+                          Polyset Elegance Plastic Laundry Basket - Assorted
+                          Colour, 53 L
+                        short_desc: >-
+                          Polyset’s Laundry Basket made from virgin plastic is
+                          very tough, durable and long-lasting. It has a large
+                          space enough to keep all the dirty clothes in one
+                          place.
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I3
+                      location_id: L1
+                      parent_item_id: V1
+                      price:
+                        currency: INR
+                        maximum_value: '1199.00'
+                        value: '499.00'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '4'
                       tags:
                         - code: origin
                           list:
@@ -298,17 +896,188 @@ steps:
                           list:
                             - code: brand
                               value: >-
-                                MINISO Two-Layer Drawer Organizer - Cotton
-                                Cloth, With Rod, Multicolour, 1 pc
+                                Polyset Elegance Plastic Laundry Basket -
+                                Assorted Colour, 53 L
+                            - code: colour
+                              value: '#964B00'
+                            - code: colour_name
+                              value: brown
+                            - code: material
+                              value: polyethylene
+                      time:
+                        label: enable
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                    - '@ondc/org/available_on_cod': false
+                      '@ondc/org/cancellable': true
+                      '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                      '@ondc/org/return_window': P3D
+                      '@ondc/org/returnable': true
+                      '@ondc/org/seller_pickup_return': false
+                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        common_or_generic_name_of_commodity: Vegetable Chopper
+                        manufacturer_or_packer_address: >-
+                          Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        manufacturer_or_packer_name: Seller Business
+                        month_year_of_manufacture_packing_import: NA
+                      '@ondc/org/time_to_ship': P1D
+                      category_id: Kitchen Tools
+                      descriptor:
+                        code: '3:4012789543165'
+                        images:
+                          - 'https://sellerNP.com/images/i1.png'
+                        long_desc: >-
+                          The chopper’s tough body can withstand being put into
+                          the dishwasher. Durable design, a convenient usage
+                          made of ABS plastic, this chopper is sturdy and
+                          durable. It does not require electricity to be in use.
+                          Chop fruits and vegetables. This chopper uses its
+                          three stainless steel blades and relies on a unique
+                          string function to chop fruits and vegetables with
+                          ease. It is easy to use. Get things started by putting
+                          the blade in the Centre of the bowl. Cut vegetables or
+                          fruits to medium size before putting them into this
+                          bowl to avoid jamming the blades. Put the contents in,
+                          close the lid, and sting the rope quickly to cut food
+                          items into small pieces. Then, take the blade system
+                          out before you remove the chopped food.
+                        name: >-
+                          Pigeon by Stovekraft Mini Fruit & Vegetable Chopper
+                          With 3 Blades
+                        short_desc: >-
+                          This compact kitchen appliance is designed to help cut
+                          down your kitchen chores. A simple pull of the rope in
+                          this Pigeon Handy vegetable and fruit chopper cuts
+                          food items down into small pieces.
+                        symbol: 'https://sellerNP.com/images/i1.png'
+                      fulfillment_id: F1
+                      id: I4
+                      location_id: L1
+                      price:
+                        currency: INR
+                        maximum_value: '1199.00'
+                        value: '599.00'
+                      quantity:
+                        available:
+                          count: '99'
+                        maximum:
+                          count: '99'
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: '1'
+                      rating: '4'
+                      tags:
+                        - code: origin
+                          list:
+                            - code: country
+                              value: IND
+                        - code: attribute
+                          list:
+                            - code: brand
+                              value: >-
+                                Pigeon by Stovekraft Mini Fruit & Vegetable
+                                Chopper With 3 Blades
                             - code: colour
                               value: '#00FF00'
                             - code: colour_name
                               value: green
                             - code: material
-                              value: polycarbonate
+                              value: polypropylene
                       time:
                         label: enable
-                        timestamp: '2026-03-19T16:24:50.771Z'
+                        timestamp: '2024-08-12T10:27:48.913Z'
+                  locations:
+                    - address:
+                        area_code: '144203'
+                        city: Bengaluru
+                        locality: Jayanagar
+                        state: Karnataka
+                        street: Jayanagar
+                      circle:
+                        gps: '12.925810,77.583624'
+                        radius:
+                          unit: km
+                          value: '5'
+                      gps: '12.925810,77.583624'
+                      id: L1
+                      time:
+                        days: '1,2,3,4,5'
+                        label: enable
+                        range:
+                          end: '2359'
+                          start: '0000'
+                        schedule:
+                          holidays: []
+                        timestamp: '2024-08-13T06:46:19.736Z'
+                  rating: '4'
+                  tags:
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Kitchen Storage and Containers
+                        - code: type
+                          value: '11'
+                        - code: unit
+                          value: pincode
+                        - code: val
+                          value: '560001-560076,560083'
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Stationery
+                        - code: type
+                          value: '12'
+                        - code: val
+                          value: IND
+                        - code: unit
+                          value: country
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Closet/Laundry/Shoe Organization
+                        - code: type
+                          value: '12'
+                        - code: unit
+                          value: country
+                        - code: val
+                          value: IND
+                    - code: serviceability
+                      list:
+                        - code: location
+                          value: L1
+                        - code: category
+                          value: Kitchen Tools
+                        - code: type
+                          value: '12'
+                        - code: unit
+                          value: country
+                        - code: val
+                          value: IND
+                    - code: timing
+                      list:
+                        - code: type
+                          value: All
+                        - code: location
+                          value: L1
+                        - code: day_from
+                          value: '1'
+                        - code: day_to
+                          value: '5'
+                        - code: time_from
+                          value: '0000'
+                        - code: time_to
+                          value: '2359'
+                  time:
+                    label: enable
+                    timestamp: '2024-08-13T06:46:19.736Z'
+                  ttl: PT24H
         type: request
   - api: search
     action_id: search_inc_pull
@@ -375,7 +1144,7 @@ steps:
   - api: on_search
     action_id: on_search_inc_pull
     owner: BPP
-    responseFor: null
+    responseFor: search_inc_pull
     unsolicited: false
     description: please add relevant description
     mock:
@@ -387,29 +1156,89 @@ steps:
         LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfc3RhcnRfdGltZT8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJzZXNzaW9uRGF0YS5jYXRhbG9nX2luY19zdGFydF90aW1lIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAic2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWUgaXMgbWlzc2luZyIKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
       defaultPayload:
         context:
+          domain: 'ONDC:RET16'
           action: on_search
-          bap_id: dev-automation.ondc.org
-          bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.0/buyer'
-          bpp_id: dev-automation.ondc.org
-          bpp_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET16/1.2.0/seller'
+          timestamp: '2026-01-20T10:27:04.570Z'
+          transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
+          message_id: 6a02cb20-722c-433e-ab13-da8621f5aaa6
+          bap_id: sample-bap-id
+          bap_uri: 'https://bap.example.com'
+          ttl: PT30S
+          bpp_id: sample-bpp-id
+          bpp_uri: 'https://bpp.example.com'
+          country: IND
           city: '*'
           core_version: 1.2.0
-          country: IND
-          domain: 'ONDC:RET16'
-          message_id: 09ae400d-61ba-4561-b273-c90fd0e1a7e2
-          timestamp: '2026-03-19T16:24:50.771Z'
-          transaction_id: eeb877bd-f029-4f30-96a6-15b2e7994c2b
-          ttl: PT30S
         message:
           catalog:
+            bpp/fulfillments:
+              - id: F1
+                type: Delivery
+              - id: F2
+                type: Self-Pickup
+            bpp/descriptor:
+              name: Mock Seller NP
+              symbol: 'https://sellerNP.com/images/np.png'
+              short_desc: Seller Marketplace
+              long_desc: Seller Marketplace
+              images:
+                - 'https://sellerNP.com/images/np.png'
+              tags:
+                - code: bpp_terms
+                  list:
+                    - code: np_type
+                      value: MSN
+                    - code: accept_bap_terms
+                      value: 'Y'
             bpp/providers:
               - id: P1
+                time:
+                  label: enable
+                  timestamp: '2024-08-13T06:46:19.736Z'
+                rating: '4'
+                ttl: PT24H
+                locations:
+                  - id: L1
+                    gps: '12.925810,77.583624'
+                    address:
+                      city: Bengaluru
+                      state: Karnataka
+                      area_code: '560011'
+                      street: Jayanagar
+                      locality: Jayanagar
+                    time:
+                      label: enable
+                      timestamp: '2024-08-13T06:46:19.736Z'
+                      schedule:
+                        holidays: []
+                descriptor:
+                  name: Store 1
+                  symbol: 'https://sellerNP.com/images/store1.png'
+                  short_desc: Store 1
+                  long_desc: Store 1
+                  images:
+                    - 'https://sellerNP.com/images/store1.png'
+                categories:
+                  - id: V1
+                    descriptor:
+                      name: Variant Group 1
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: variant_group
+                      - code: attr
+                        list:
+                          - code: name
+                            value: item.tags.attribute.colour
+                          - code: seq
+                            value: '1'
                 items:
                   - id: I1
+                    rating: '4'
                     time:
                       label: enable
                       timestamp: '2024-08-12T05:30:48.998Z'
-                    parent_item_id: ''
                     descriptor:
                       name: MINISO Two-Layer Drawer Organizer
                       symbol: 'https://sellerNP.com/images/i1.png'
@@ -428,7 +1257,7 @@ steps:
                         maintaining an elegant aesthetic.
                       images:
                         - 'https://sellerNP.com/images/i1.png'
-                      code: '5:ESS45300'
+                      code: '3:9501101530007'
                     quantity:
                       unitized:
                         measure:
@@ -440,8 +1269,8 @@ steps:
                         count: '8'
                     price:
                       currency: INR
-                      value: '2460'
-                      maximum_value: '2460'
+                      value: '2260'
+                      maximum_value: '2260'
                     category_id: Kitchen Storage and Containers
                     location_id: L1
                     fulfillment_id: F1
@@ -467,15 +1296,317 @@ steps:
                       - code: attribute
                         list:
                           - code: brand
+                            value: MINISO Two-Layer Drawer Organizer
+                          - code: colour
+                            value: '#FFFFFF'
+                          - code: colour_name
+                            value: brown
+                          - code: material
+                            value: thermoplastic
+                  - id: I2
+                    rating: '3'
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    descriptor:
+                      name: Doms Art Apps Nxt Kit With Plastic Carry Case
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Coloring & Art Smart Kit Use For Sketching, Writing,
+                        Shading, Colouring, Highlighting.Non-Toxic, Easy To Use
+                        & Safe For Childrens.
+                      long_desc: >-
+                        Introducing our comprehensive combination kit, designed
+                        to satisfy all your creative needs! Whether you're
+                        sketching, writing, shading, coloring, or highlighting,
+                        this kit has everything you need to unleash your
+                        imagination.You'll find 12 watercolor pens for vibrant
+                        and fluid artwork, 12 bi-color crayons for versatile
+                        coloring options, 12 jumbo oil pastels for smooth and
+                        blendable textures, 8 bi-color pencils for precise
+                        drawing and shading, and 12 plastic crayons for bold and
+                        durable lines.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                      code: '3:7845632198471'
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: '1'
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '10'
+                    price:
+                      currency: INR
+                      value: '2460'
+                      maximum_value: '2460'
+                    category_id: Stationery
+                    location_id: L1
+                    parent_item_id: V1
+                    fulfillment_id: F1
+                    '@ondc/org/returnable': true
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/time_to_ship': P2D
+                    '@ondc/org/seller_pickup_return': true
+                    '@ondc/org/return_window': P7D
+                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Plastic Crayons
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: Doms Art Apps Nxt Kit With Plastic Carry Case
+                          - code: colour
+                            value: '#00FF00'
+                          - code: colour_name
+                            value: white
+                          - code: material
+                            value: thermoplastic
+                  - id: I3
+                    rating: '4'
+                    descriptor:
+                      name: >-
+                        Polyset Elegance Plastic Laundry Basket - Assorted
+                        Colour, 53 L
+                      code: '3:6213574890238'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        Polyset’s Laundry Basket made from virgin plastic is
+                        very tough, durable and long-lasting. It has a large
+                        space enough to keep all the dirty clothes in one place.
+                      long_desc: >-
+                        This Polyset Laundry Basket comes in large size, which
+                        gives you more space for storing multiple items like
+                        clothes, toys, groceries, kitchen and bathing
+                        accessories, Ideal for family use in the Laundry Room,
+                        Bedroom or Bathroom, its comes with Lid for protecting
+                        your articles from dust. To add to it, the design and
+                        colour are so attractive, that it immediately gels with
+                        the interior of the house, be it Bathroom, Bedroom etc.
+                        Easily portable cross ventilating body keeps your items
+                        free module formation. And it gives you extra-large
+                        space to store your products. And this is made from
+                        tough plastic which provides immense strength to the
+                        product.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                    price:
+                      currency: INR
+                      value: '499.00'
+                      maximum_value: '1199.00'
+                    parent_item_id: V1
+                    category_id: Closet/Laundry/Shoe Organization
+                    fulfillment_id: F1
+                    location_id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    quantity:
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                      unitized:
+                        measure:
+                          value: '1'
+                          unit: unit
+                    '@ondc/org/returnable': true
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Laundry Basket
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
                             value: >-
-                              MINISO Two-Layer Drawer Organizer - Cotton Cloth,
-                              With Rod, Multicolour, 1 pc
+                              Polyset Elegance Plastic Laundry Basket - Assorted
+                              Colour, 53 L
+                          - code: colour
+                            value: '#964B00'
+                          - code: colour_name
+                            value: brown
+                          - code: material
+                            value: polyethylene
+                  - id: I4
+                    rating: '4'
+                    descriptor:
+                      name: >-
+                        Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With
+                        3 Blades
+                      code: '3:4012789543165'
+                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: >-
+                        This compact kitchen appliance is designed to help cut
+                        down your kitchen chores. A simple pull of the rope in
+                        this Pigeon Handy vegetable and fruit chopper cuts food
+                        items down into small pieces.
+                      long_desc: >-
+                        The chopper’s tough body can withstand being put into
+                        the dishwasher. Durable design, a convenient usage made
+                        of ABS plastic, this chopper is sturdy and durable. It
+                        does not require electricity to be in use. Chop fruits
+                        and vegetables. This chopper uses its three stainless
+                        steel blades and relies on a unique string function to
+                        chop fruits and vegetables with ease. It is easy to use.
+                        Get things started by putting the blade in the Centre of
+                        the bowl. Cut vegetables or fruits to medium size before
+                        putting them into this bowl to avoid jamming the blades.
+                        Put the contents in, close the lid, and sting the rope
+                        quickly to cut food items into small pieces. Then, take
+                        the blade system out before you remove the chopped food.
+                      images:
+                        - 'https://sellerNP.com/images/i1.png'
+                    price:
+                      currency: INR
+                      value: '599.00'
+                      maximum_value: '1199.00'
+                    category_id: Kitchen Tools
+                    fulfillment_id: F1
+                    location_id: L1
+                    time:
+                      label: enable
+                      timestamp: '2024-08-12T10:27:48.913Z'
+                    quantity:
+                      available:
+                        count: '99'
+                      maximum:
+                        count: '99'
+                      unitized:
+                        measure:
+                          value: '1'
+                          unit: unit
+                    '@ondc/org/returnable': true
+                    '@ondc/org/seller_pickup_return': false
+                    '@ondc/org/return_window': P3D
+                    '@ondc/org/cancellable': true
+                    '@ondc/org/time_to_ship': P1D
+                    '@ondc/org/available_on_cod': false
+                    '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      manufacturer_or_packer_name: Seller Business
+                      manufacturer_or_packer_address: >-
+                        Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: Vegetable Chopper
+                      month_year_of_manufacture_packing_import: NA
+                    tags:
+                      - code: origin
+                        list:
+                          - code: country
+                            value: IND
+                      - code: attribute
+                        list:
+                          - code: brand
+                            value: >-
+                              Pigeon by Stovekraft Mini Fruit & Vegetable
+                              Chopper With 3 Blades
                           - code: colour
                             value: '#00FF00'
                           - code: colour_name
                             value: green
                           - code: material
-                            value: polycarbonate
+                            value: polypropylene
+                fulfillments:
+                  - id: F1
+                    type: Delivery
+                    contact:
+                      phone: '9876543210'
+                      email: test@gmail.com
+                  - id: F2
+                    type: Self-Pickup
+                    contact:
+                      email: home@example.com
+                      phone: '7980271122'
+                tags:
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Kitchen Storage and Containers
+                      - code: type
+                        value: '11'
+                      - code: unit
+                        value: pincode
+                      - code: val
+                        value: '560001-560076,560083'
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Stationery
+                      - code: type
+                        value: '12'
+                      - code: val
+                        value: IND
+                      - code: unit
+                        value: country
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Closet/Laundry/Shoe Organization
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: serviceability
+                    list:
+                      - code: location
+                        value: L1
+                      - code: category
+                        value: Kitchen Tools
+                      - code: type
+                        value: '12'
+                      - code: unit
+                        value: country
+                      - code: val
+                        value: IND
+                  - code: timing
+                    list:
+                      - code: type
+                        value: All
+                      - code: location
+                        value: L1
+                      - code: day_from
+                        value: '1'
+                      - code: day_to
+                        value: '5'
+                      - code: time_from
+                        value: '0000'
+                      - code: time_to
+                        value: '2359'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -487,19 +1618,19 @@ steps:
         city_code: $.context.city
       inputs: {}
 transaction_history:
-  - action_id: search_inc
+  - action_id: search_1
     payload:
       context:
         domain: 'ONDC:RET16'
         action: search
-        timestamp: '2026-06-03T08:20:15.699Z'
+        timestamp: '2026-06-05T10:37:08.679Z'
         transaction_id: d07b069a-327a-4054-9b28-89c051072f75
-        message_id: 894c4103-50ff-4a4c-8281-125a7ddc3c90
+        message_id: dba84ab1-dc9b-42f3-8569-8427cd64cd36
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
         country: IND
-        city: '*'
+        city: 'std:011'
         core_version: 1.2.0
       message:
         intent:
@@ -507,38 +1638,112 @@ transaction_history:
             '@ondc/org/buyer_app_finder_fee_type': percent
             '@ondc/org/buyer_app_finder_fee_amount': '3'
           tags:
-            - code: catalog_inc
+            - code: bap_terms
               list:
-                - code: mode
-                  value: start
+                - code: static_terms
+                  value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                - code: static_terms_new
+                  value: >-
+                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                - code: effective_date
+                  value: '2026-06-15T10:37:08.683Z'
     action: search
     saved_info: {}
-  - action_id: on_search_inc
+  - action_id: on_search1
     payload:
       context:
         domain: 'ONDC:RET16'
         action: on_search
-        timestamp: '2026-06-03T08:20:15.713Z'
+        timestamp: '2026-06-05T10:37:09.552Z'
         transaction_id: d07b069a-327a-4054-9b28-89c051072f75
-        message_id: 91e2c014-5a39-4c3d-9f46-b12cccae5461
+        message_id: dba84ab1-dc9b-42f3-8569-8427cd64cd36
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: 'https://bpp.example.com'
         country: IND
-        city: '*'
+        city: 'std:011'
         core_version: 1.2.0
       message:
         catalog:
+          bpp/fulfillments:
+            - id: F1
+              type: Delivery
+            - id: F2
+              type: Self-Pickup
+          bpp/descriptor:
+            name: Mock Seller NP
+            symbol: 'https://sellerNP.com/images/np.png'
+            short_desc: Seller Marketplace
+            long_desc: Seller Marketplace
+            images:
+              - 'https://sellerNP.com/images/np.png'
+            tags:
+              - code: bpp_terms
+                list:
+                  - code: np_type
+                    value: MSN
+                  - code: accept_bap_terms
+                    value: 'Y'
           bpp/providers:
             - id: P1
-              items:
-                - id: I1
+              time:
+                label: enable
+                timestamp: '2024-08-13T06:46:19.736Z'
+              rating: '4'
+              ttl: PT24H
+              locations:
+                - id: L1
+                  gps: '12.925810,77.583624'
+                  address:
+                    city: Bengaluru
+                    state: Karnataka
+                    area_code: '144203'
+                    street: Jayanagar
+                    locality: Jayanagar
                   time:
                     label: enable
-                    timestamp: '2026-06-03T08:20:15.713Z'
-                  parent_item_id: ''
+                    timestamp: '2024-08-13T06:46:19.736Z'
+                    days: '1,2,3,4,5'
+                    schedule:
+                      holidays: []
+                    range:
+                      start: '0000'
+                      end: '2359'
+                  circle:
+                    gps: '12.925810,77.583624'
+                    radius:
+                      unit: km
+                      value: '5'
+              descriptor:
+                name: Store 1
+                symbol: 'https://sellerNP.com/images/store1.png'
+                short_desc: Store 1
+                long_desc: Store 1
+                images:
+                  - 'https://sellerNP.com/images/store1.png'
+              categories:
+                - id: V1
+                  descriptor:
+                    name: Variant Group 1
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: variant_group
+                    - code: attr
+                      list:
+                        - code: name
+                          value: item.tags.attribute.colour
+                        - code: seq
+                          value: '1'
+              items:
+                - id: I1
+                  rating: '4'
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T05:30:48.998Z'
                   descriptor:
                     name: MINISO Two-Layer Drawer Organizer
                     symbol: 'https://sellerNP.com/images/i1.png'
@@ -556,7 +1761,7 @@ transaction_history:
                       while maintaining an elegant aesthetic.
                     images:
                       - 'https://sellerNP.com/images/i1.png'
-                    code: '5:ESS45300'
+                    code: '3:9501101530007'
                   quantity:
                     unitized:
                       measure:
@@ -568,8 +1773,8 @@ transaction_history:
                       count: '8'
                   price:
                     currency: INR
-                    value: '2460'
-                    maximum_value: '2460'
+                    value: '2260'
+                    maximum_value: '2260'
                   category_id: Kitchen Storage and Containers
                   location_id: L1
                   fulfillment_id: F1
@@ -595,15 +1800,315 @@ transaction_history:
                     - code: attribute
                       list:
                         - code: brand
+                          value: MINISO Two-Layer Drawer Organizer
+                        - code: colour
+                          value: '#FFFFFF'
+                        - code: colour_name
+                          value: brown
+                        - code: material
+                          value: thermoplastic
+                - id: I2
+                  rating: '3'
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  descriptor:
+                    name: Doms Art Apps Nxt Kit With Plastic Carry Case
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Coloring & Art Smart Kit Use For Sketching, Writing,
+                      Shading, Colouring, Highlighting.Non-Toxic, Easy To Use &
+                      Safe For Childrens.
+                    long_desc: >-
+                      Introducing our comprehensive combination kit, designed to
+                      satisfy all your creative needs! Whether you're sketching,
+                      writing, shading, coloring, or highlighting, this kit has
+                      everything you need to unleash your imagination.You'll
+                      find 12 watercolor pens for vibrant and fluid artwork, 12
+                      bi-color crayons for versatile coloring options, 12 jumbo
+                      oil pastels for smooth and blendable textures, 8 bi-color
+                      pencils for precise drawing and shading, and 12 plastic
+                      crayons for bold and durable lines.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:7845632198471'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '10'
+                  price:
+                    currency: INR
+                    value: '2460'
+                    maximum_value: '2460'
+                  category_id: Stationery
+                  location_id: L1
+                  parent_item_id: V1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Plastic Crayons
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Doms Art Apps Nxt Kit With Plastic Carry Case
+                        - code: colour
+                          value: '#00FF00'
+                        - code: colour_name
+                          value: white
+                        - code: material
+                          value: thermoplastic
+                - id: I3
+                  rating: '4'
+                  descriptor:
+                    name: >-
+                      Polyset Elegance Plastic Laundry Basket - Assorted Colour,
+                      53 L
+                    code: '3:6213574890238'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Polyset’s Laundry Basket made from virgin plastic is very
+                      tough, durable and long-lasting. It has a large space
+                      enough to keep all the dirty clothes in one place.
+                    long_desc: >-
+                      This Polyset Laundry Basket comes in large size, which
+                      gives you more space for storing multiple items like
+                      clothes, toys, groceries, kitchen and bathing accessories,
+                      Ideal for family use in the Laundry Room, Bedroom or
+                      Bathroom, its comes with Lid for protecting your articles
+                      from dust. To add to it, the design and colour are so
+                      attractive, that it immediately gels with the interior of
+                      the house, be it Bathroom, Bedroom etc. Easily portable
+                      cross ventilating body keeps your items free module
+                      formation. And it gives you extra-large space to store
+                      your products. And this is made from tough plastic which
+                      provides immense strength to the product.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  price:
+                    currency: INR
+                    value: '499.00'
+                    maximum_value: '1199.00'
+                  parent_item_id: V1
+                  category_id: Closet/Laundry/Shoe Organization
+                  fulfillment_id: F1
+                  location_id: L1
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  quantity:
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                    unitized:
+                      measure:
+                        value: '1'
+                        unit: unit
+                  '@ondc/org/returnable': true
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Laundry Basket
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
                           value: >-
-                            MINISO Two-Layer Drawer Organizer - Cotton Cloth,
-                            With Rod, Multicolour, 1 pc
+                            Polyset Elegance Plastic Laundry Basket - Assorted
+                            Colour, 53 L
+                        - code: colour
+                          value: '#964B00'
+                        - code: colour_name
+                          value: brown
+                        - code: material
+                          value: polyethylene
+                - id: I4
+                  rating: '4'
+                  descriptor:
+                    name: >-
+                      Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With 3
+                      Blades
+                    code: '3:4012789543165'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      This compact kitchen appliance is designed to help cut
+                      down your kitchen chores. A simple pull of the rope in
+                      this Pigeon Handy vegetable and fruit chopper cuts food
+                      items down into small pieces.
+                    long_desc: >-
+                      The chopper’s tough body can withstand being put into the
+                      dishwasher. Durable design, a convenient usage made of ABS
+                      plastic, this chopper is sturdy and durable. It does not
+                      require electricity to be in use. Chop fruits and
+                      vegetables. This chopper uses its three stainless steel
+                      blades and relies on a unique string function to chop
+                      fruits and vegetables with ease. It is easy to use. Get
+                      things started by putting the blade in the Centre of the
+                      bowl. Cut vegetables or fruits to medium size before
+                      putting them into this bowl to avoid jamming the blades.
+                      Put the contents in, close the lid, and sting the rope
+                      quickly to cut food items into small pieces. Then, take
+                      the blade system out before you remove the chopped food.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  category_id: Kitchen Tools
+                  fulfillment_id: F1
+                  location_id: L1
+                  time:
+                    label: enable
+                    timestamp: '2024-08-12T10:27:48.913Z'
+                  quantity:
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                    unitized:
+                      measure:
+                        value: '1'
+                        unit: unit
+                  '@ondc/org/returnable': true
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Vegetable Chopper
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: >-
+                            Pigeon by Stovekraft Mini Fruit & Vegetable Chopper
+                            With 3 Blades
                         - code: colour
                           value: '#00FF00'
                         - code: colour_name
                           value: green
                         - code: material
-                          value: polycarbonate
+                          value: polypropylene
+              fulfillments:
+                - id: F1
+                  type: Delivery
+                  contact:
+                    phone: '9876543210'
+                    email: test@gmail.com
+                - id: F2
+                  type: Self-Pickup
+                  contact:
+                    email: home@example.com
+                    phone: '7980271122'
+              tags:
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Kitchen Storage and Containers
+                    - code: type
+                      value: '11'
+                    - code: unit
+                      value: pincode
+                    - code: val
+                      value: '560001-560076,560083'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Stationery
+                    - code: type
+                      value: '12'
+                    - code: val
+                      value: IND
+                    - code: unit
+                      value: country
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Closet/Laundry/Shoe Organization
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Kitchen Tools
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: timing
+                  list:
+                    - code: type
+                      value: All
+                    - code: location
+                      value: L1
+                    - code: day_from
+                      value: '1'
+                    - code: day_to
+                      value: '5'
+                    - code: time_from
+                      value: '0000'
+                    - code: time_to
+                      value: '2359'
     action: on_search
     saved_info: {}
   - action_id: search_inc_pull
@@ -611,9 +2116,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET16'
         action: search
-        timestamp: '2026-06-03T08:20:15.725Z'
+        timestamp: '2026-06-05T10:37:09.564Z'
         transaction_id: d07b069a-327a-4054-9b28-89c051072f75
-        message_id: b09c871b-26ba-4db3-9fce-57ad707bf141
+        message_id: e1f445de-643f-47c6-8459-1e2fdc52aeb1
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -629,9 +2134,9 @@ transaction_history:
             - code: catalog_inc
               list:
                 - code: start_time
-                  value: '2026-06-03T06:20:15.726Z'
+                  value: '2026-06-05T08:37:09.564Z'
                 - code: end_time
-                  value: '2026-06-03T08:20:15.725Z'
+                  value: '2026-06-05T10:37:09.564Z'
             - code: bap_terms
               list:
                 - code: static_terms
@@ -640,7 +2145,7 @@ transaction_history:
                   value: >-
                     https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: effective_date
-                  value: '2026-06-03T08:20:15.725Z'
+                  value: '2026-06-05T10:37:09.564Z'
     action: search
     saved_info: {}
   - action_id: on_search_inc_pull
@@ -648,9 +2153,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET16'
         action: on_search
-        timestamp: '2026-06-03T08:20:15.732Z'
+        timestamp: '2026-06-05T10:37:09.570Z'
         transaction_id: d07b069a-327a-4054-9b28-89c051072f75
-        message_id: 3f8d669a-ad96-4004-81b9-fc7099c00590
+        message_id: e1f445de-643f-47c6-8459-1e2fdc52aeb1
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -661,14 +2166,74 @@ transaction_history:
         core_version: 1.2.0
       message:
         catalog:
+          bpp/fulfillments:
+            - id: F1
+              type: Delivery
+            - id: F2
+              type: Self-Pickup
+          bpp/descriptor:
+            name: Mock Seller NP
+            symbol: 'https://sellerNP.com/images/np.png'
+            short_desc: Seller Marketplace
+            long_desc: Seller Marketplace
+            images:
+              - 'https://sellerNP.com/images/np.png'
+            tags:
+              - code: bpp_terms
+                list:
+                  - code: np_type
+                    value: MSN
+                  - code: accept_bap_terms
+                    value: 'Y'
           bpp/providers:
             - id: P1
-              items:
-                - id: I1
+              time:
+                label: enable
+                timestamp: '2024-08-13T06:46:19.736Z'
+              rating: '4'
+              ttl: PT24H
+              locations:
+                - id: L1
+                  gps: '12.925810,77.583624'
+                  address:
+                    city: Bengaluru
+                    state: Karnataka
+                    area_code: '560011'
+                    street: Jayanagar
+                    locality: Jayanagar
                   time:
                     label: enable
-                    timestamp: '2026-06-03T07:30:09.212Z'
-                  parent_item_id: ''
+                    timestamp: '2024-08-13T06:46:19.736Z'
+                    schedule:
+                      holidays: []
+              descriptor:
+                name: Store 1
+                symbol: 'https://sellerNP.com/images/store1.png'
+                short_desc: Store 1
+                long_desc: Store 1
+                images:
+                  - 'https://sellerNP.com/images/store1.png'
+              categories:
+                - id: V1
+                  descriptor:
+                    name: Variant Group 1
+                  tags:
+                    - code: type
+                      list:
+                        - code: type
+                          value: variant_group
+                    - code: attr
+                      list:
+                        - code: name
+                          value: item.tags.attribute.colour
+                        - code: seq
+                          value: '1'
+              items:
+                - id: I1
+                  rating: '4'
+                  time:
+                    label: enable
+                    timestamp: '2026-06-05T09:55:13.171Z'
                   descriptor:
                     name: MINISO Two-Layer Drawer Organizer
                     symbol: 'https://sellerNP.com/images/i1.png'
@@ -686,7 +2251,7 @@ transaction_history:
                       while maintaining an elegant aesthetic.
                     images:
                       - 'https://sellerNP.com/images/i1.png'
-                    code: '5:ESS45300'
+                    code: '3:9501101530007'
                   quantity:
                     unitized:
                       measure:
@@ -698,8 +2263,8 @@ transaction_history:
                       count: '8'
                   price:
                     currency: INR
-                    value: '2460'
-                    maximum_value: '2460'
+                    value: '2260'
+                    maximum_value: '2260'
                   category_id: Kitchen Storage and Containers
                   location_id: L1
                   fulfillment_id: F1
@@ -725,15 +2290,315 @@ transaction_history:
                     - code: attribute
                       list:
                         - code: brand
+                          value: MINISO Two-Layer Drawer Organizer
+                        - code: colour
+                          value: '#FFFFFF'
+                        - code: colour_name
+                          value: brown
+                        - code: material
+                          value: thermoplastic
+                - id: I2
+                  rating: '3'
+                  time:
+                    label: enable
+                    timestamp: '2026-06-05T09:55:13.171Z'
+                  descriptor:
+                    name: Doms Art Apps Nxt Kit With Plastic Carry Case
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Coloring & Art Smart Kit Use For Sketching, Writing,
+                      Shading, Colouring, Highlighting.Non-Toxic, Easy To Use &
+                      Safe For Childrens.
+                    long_desc: >-
+                      Introducing our comprehensive combination kit, designed to
+                      satisfy all your creative needs! Whether you're sketching,
+                      writing, shading, coloring, or highlighting, this kit has
+                      everything you need to unleash your imagination.You'll
+                      find 12 watercolor pens for vibrant and fluid artwork, 12
+                      bi-color crayons for versatile coloring options, 12 jumbo
+                      oil pastels for smooth and blendable textures, 8 bi-color
+                      pencils for precise drawing and shading, and 12 plastic
+                      crayons for bold and durable lines.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                    code: '3:7845632198471'
+                  quantity:
+                    unitized:
+                      measure:
+                        unit: unit
+                        value: '1'
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '10'
+                  price:
+                    currency: INR
+                    value: '2460'
+                    maximum_value: '2460'
+                  category_id: Stationery
+                  location_id: L1
+                  parent_item_id: V1
+                  fulfillment_id: F1
+                  '@ondc/org/returnable': true
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/time_to_ship': P2D
+                  '@ondc/org/seller_pickup_return': true
+                  '@ondc/org/return_window': P7D
+                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Plastic Crayons
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: Doms Art Apps Nxt Kit With Plastic Carry Case
+                        - code: colour
+                          value: '#00FF00'
+                        - code: colour_name
+                          value: white
+                        - code: material
+                          value: thermoplastic
+                - id: I3
+                  rating: '4'
+                  descriptor:
+                    name: >-
+                      Polyset Elegance Plastic Laundry Basket - Assorted Colour,
+                      53 L
+                    code: '3:6213574890238'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      Polyset’s Laundry Basket made from virgin plastic is very
+                      tough, durable and long-lasting. It has a large space
+                      enough to keep all the dirty clothes in one place.
+                    long_desc: >-
+                      This Polyset Laundry Basket comes in large size, which
+                      gives you more space for storing multiple items like
+                      clothes, toys, groceries, kitchen and bathing accessories,
+                      Ideal for family use in the Laundry Room, Bedroom or
+                      Bathroom, its comes with Lid for protecting your articles
+                      from dust. To add to it, the design and colour are so
+                      attractive, that it immediately gels with the interior of
+                      the house, be it Bathroom, Bedroom etc. Easily portable
+                      cross ventilating body keeps your items free module
+                      formation. And it gives you extra-large space to store
+                      your products. And this is made from tough plastic which
+                      provides immense strength to the product.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  price:
+                    currency: INR
+                    value: '499.00'
+                    maximum_value: '1199.00'
+                  parent_item_id: V1
+                  category_id: Closet/Laundry/Shoe Organization
+                  fulfillment_id: F1
+                  location_id: L1
+                  time:
+                    label: enable
+                    timestamp: '2026-06-05T09:55:13.171Z'
+                  quantity:
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                    unitized:
+                      measure:
+                        value: '1'
+                        unit: unit
+                  '@ondc/org/returnable': true
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Laundry Basket
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
                           value: >-
-                            MINISO Two-Layer Drawer Organizer - Cotton Cloth,
-                            With Rod, Multicolour, 1 pc
+                            Polyset Elegance Plastic Laundry Basket - Assorted
+                            Colour, 53 L
+                        - code: colour
+                          value: '#964B00'
+                        - code: colour_name
+                          value: brown
+                        - code: material
+                          value: polyethylene
+                - id: I4
+                  rating: '4'
+                  descriptor:
+                    name: >-
+                      Pigeon by Stovekraft Mini Fruit & Vegetable Chopper With 3
+                      Blades
+                    code: '3:4012789543165'
+                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: >-
+                      This compact kitchen appliance is designed to help cut
+                      down your kitchen chores. A simple pull of the rope in
+                      this Pigeon Handy vegetable and fruit chopper cuts food
+                      items down into small pieces.
+                    long_desc: >-
+                      The chopper’s tough body can withstand being put into the
+                      dishwasher. Durable design, a convenient usage made of ABS
+                      plastic, this chopper is sturdy and durable. It does not
+                      require electricity to be in use. Chop fruits and
+                      vegetables. This chopper uses its three stainless steel
+                      blades and relies on a unique string function to chop
+                      fruits and vegetables with ease. It is easy to use. Get
+                      things started by putting the blade in the Centre of the
+                      bowl. Cut vegetables or fruits to medium size before
+                      putting them into this bowl to avoid jamming the blades.
+                      Put the contents in, close the lid, and sting the rope
+                      quickly to cut food items into small pieces. Then, take
+                      the blade system out before you remove the chopped food.
+                    images:
+                      - 'https://sellerNP.com/images/i1.png'
+                  price:
+                    currency: INR
+                    value: '599.00'
+                    maximum_value: '1199.00'
+                  category_id: Kitchen Tools
+                  fulfillment_id: F1
+                  location_id: L1
+                  time:
+                    label: enable
+                    timestamp: '2026-06-05T09:55:13.171Z'
+                  quantity:
+                    available:
+                      count: '99'
+                    maximum:
+                      count: '99'
+                    unitized:
+                      measure:
+                        value: '1'
+                        unit: unit
+                  '@ondc/org/returnable': true
+                  '@ondc/org/seller_pickup_return': false
+                  '@ondc/org/return_window': P3D
+                  '@ondc/org/cancellable': true
+                  '@ondc/org/time_to_ship': P1D
+                  '@ondc/org/available_on_cod': false
+                  '@ondc/org/contact_details_consumer_care': 'Dailywear Fashion,support@gmail.com,2343453434'
+                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    manufacturer_or_packer_name: Seller Business
+                    manufacturer_or_packer_address: >-
+                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
+                      India - 560011
+                    common_or_generic_name_of_commodity: Vegetable Chopper
+                    month_year_of_manufacture_packing_import: NA
+                  tags:
+                    - code: origin
+                      list:
+                        - code: country
+                          value: IND
+                    - code: attribute
+                      list:
+                        - code: brand
+                          value: >-
+                            Pigeon by Stovekraft Mini Fruit & Vegetable Chopper
+                            With 3 Blades
                         - code: colour
                           value: '#00FF00'
                         - code: colour_name
                           value: green
                         - code: material
-                          value: polycarbonate
+                          value: polypropylene
+              fulfillments:
+                - id: F1
+                  type: Delivery
+                  contact:
+                    phone: '9876543210'
+                    email: test@gmail.com
+                - id: F2
+                  type: Self-Pickup
+                  contact:
+                    email: home@example.com
+                    phone: '7980271122'
+              tags:
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Kitchen Storage and Containers
+                    - code: type
+                      value: '11'
+                    - code: unit
+                      value: pincode
+                    - code: val
+                      value: '560001-560076,560083'
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Stationery
+                    - code: type
+                      value: '12'
+                    - code: val
+                      value: IND
+                    - code: unit
+                      value: country
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Closet/Laundry/Shoe Organization
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: serviceability
+                  list:
+                    - code: location
+                      value: L1
+                    - code: category
+                      value: Kitchen Tools
+                    - code: type
+                      value: '12'
+                    - code: unit
+                      value: country
+                    - code: val
+                      value: IND
+                - code: timing
+                  list:
+                    - code: type
+                      value: All
+                    - code: location
+                      value: L1
+                    - code: day_from
+                      value: '1'
+                    - code: day_to
+                      value: '5'
+                    - code: time_from
+                      value: '0000'
+                    - code: time_to
+                      value: '2359'
     action: on_search
     saved_info: {}
 validationLib: ''
