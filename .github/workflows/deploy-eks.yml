@@ -1,3 +1,5 @@
+#This is a automatic dispatcher which should be copied into eks branches it is not intended to be triggered from main
+
 name: Build and Deploy ONIX Service
 
 on:
