@@ -45,6 +45,8 @@ supportedActions:
     - on_status
     - update
     - on_select
+    - on_confirm
+    - confirm
   on_update:
     - status
     - update

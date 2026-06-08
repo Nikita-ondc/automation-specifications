@@ -3226,7 +3226,7 @@ steps:
   - api: on_select
     action_id: on_select_2
     owner: BPP
-    responseFor: null
+    responseFor: select_2
     unsolicited: false
     description: please add relevant description
     mock:
