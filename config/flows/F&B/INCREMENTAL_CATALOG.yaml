@@ -21,7 +21,7 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZSAoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IGlucHV0cyA9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzCiAgaWYgKGlucHV0cz8uc2VhcmNoX21vZGUpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzWzBdLmxpc3RbMF0udmFsdWUgPSBpbnB1dHMuc2VhcmNoX21vZGUKICB9CgogIGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LmNpdHkgPSAiKiIKCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZAp9Cg==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -40,8 +40,8 @@ steps:
         message:
           intent:
             payment:
-              "@ondc/org/buyer_app_finder_fee_amount": "3"
               "@ondc/org/buyer_app_finder_fee_type": percent
+              "@ondc/org/buyer_app_finder_fee_amount": "3"
             tags:
               - code: catalog_inc
                 list:
@@ -57,39 +57,46 @@ steps:
         bppUri: $.context.bpp_uri
         city_code: $.context.city
       inputs:
-        oldInputs:
-          - name: search_mode
-            display: false
-            default: start
-        id: old_inputs
+        id: ExampleInputId
+        jsonSchema:
+          $schema: http://json-schema.org/draft-07/schema#
+          type: object
+          properties:
+            search_mode:
+              type: string
+              default: start
+              description: Search mode
+              x-display: false
+          additionalProperties: false
+        sampleData:
+          search_mode: start
     examples:
-      - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
-          "INCREMENTAL_CATALOG"
+      - name: example for search
         payload:
           context:
+            domain: ONDC:RET11
             action: search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/buyer
+            timestamp: 2026-06-06T16:11:49.746Z
+            transaction_id: bd996e42-94b0-477f-ad0b-ad7155ba51ad
+            message_id: d82ad6d8-0254-4f67-83a0-42c3c236e96e
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            country: IND
             city: "*"
             core_version: 1.2.5
-            country: IND
-            domain: ONDC:RET11
-            message_id: 110d93bb-8272-4876-bd21-782e77315f19
-            timestamp: 2026-03-13T11:07:44.235Z
-            transaction_id: cdb9b6e8-a5a1-4953-88ab-03e98cec9748
-            ttl: PT30S
           message:
             intent:
               payment:
-                "@ondc/org/buyer_app_finder_fee_amount": "3"
                 "@ondc/org/buyer_app_finder_fee_type": percent
+                "@ondc/org/buyer_app_finder_fee_amount": "3"
               tags:
                 - code: catalog_inc
                   list:
                     - code: mode
                       value: start
         type: request
+        description: please add relevant description
   - api: on_search
     action_id: on_search_1
     owner: BPP
@@ -97,7 +104,7 @@ steps:
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUgKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIgoKICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbCiAgICAiYnBwL3Byb3ZpZGVycyIKICBdWzBdLmxvY2F0aW9uc1swXS50aW1lLnRpbWVzdGFtcCA9IGRlZmF1bHRQYXlsb2FkLmNvbnRleHQudGltZXN0YW1wCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWwogICAgImJwcC9wcm92aWRlcnMiCiAgXVswXS5sb2NhdGlvbnNbMF0udGltZS5yYW5nZS5zdGFydCA9IGRlZmF1bHRQYXlsb2FkLmNvbnRleHQudGltZXN0YW1wCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWwogICAgImJwcC9wcm92aWRlcnMiCiAgXVswXS5sb2NhdGlvbnNbMF0udGltZS5yYW5nZS5lbmQgPSBnZXRUaW1lc3RhbXBGcm9tRHVyYXRpb24oCiAgICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LnRpbWVzdGFtcCwKICAgICJQVDQ1TSIKICApCgogIHJldHVybiBkZWZhdWx0UGF5bG9hZAp9Cg==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -123,10 +130,10 @@ steps:
                   - id: L1
                     time:
                       label: close
+                      timestamp: 2025-01-08T10:20:00.000Z
                       range:
-                        end: 2026-03-13T11:52:44.393Z
-                        start: 2026-03-13T11:07:44.393Z
-                      timestamp: 2026-03-13T11:07:44.393Z
+                        start: 2025-01-08T16:00:00.000Z
+                        end: 2025-01-08T23:59:00.000Z
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -138,24 +145,22 @@ steps:
         city_code: $.context.city
       inputs: {}
     examples:
-      - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
-          "INCREMENTAL_CATALOG"
+      - name: example for on_search
         payload:
           context:
+            domain: ONDC:RET11
             action: on_search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/buyer
-            bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/seller
+            timestamp: 2026-06-06T16:11:49.757Z
+            transaction_id: bd996e42-94b0-477f-ad0b-ad7155ba51ad
+            message_id: d82ad6d8-0254-4f67-83a0-42c3c236e96e
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: bpp.example.com
+            bpp_uri: https://bpp.example.com
+            country: IND
             city: "*"
             core_version: 1.2.5
-            country: IND
-            domain: ONDC:RET11
-            message_id: 110d93bb-8272-4876-bd21-782e77315f19
-            timestamp: 2026-03-13T11:07:44.393Z
-            transaction_id: cdb9b6e8-a5a1-4953-88ab-03e98cec9748
-            ttl: PT30S
           message:
             catalog:
               bpp/providers:
@@ -164,11 +169,12 @@ steps:
                     - id: L1
                       time:
                         label: close
+                        timestamp: 2026-06-06T16:11:49.757Z
                         range:
-                          end: 2026-03-13T11:52:44.393Z
-                          start: 2026-03-13T11:07:44.393Z
-                        timestamp: 2026-03-13T11:07:44.393Z
+                          start: 2026-06-06T16:11:49.757Z
+                          end: 2026-06-06T16:56:49.757Z
         type: request
+        description: please add relevant description
   - api: on_search
     action_id: on_search_3
     owner: BPP
@@ -176,7 +182,7 @@ steps:
     unsolicited: true
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZSAoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0gIioiCgogIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuY2F0YWxvZ1sKICAgICJicHAvcHJvdmlkZXJzIgogIF1bMF0ubG9jYXRpb25zWzBdLnRpbWUudGltZXN0YW1wID0gZGVmYXVsdFBheWxvYWQuY29udGV4dC50aW1lc3RhbXAKCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkCn0K
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -201,11 +207,8 @@ steps:
                 locations:
                   - id: L1
                     time:
-                      label: close
-                      range:
-                        end: 2026-03-13T11:52:44.393Z
-                        start: 2026-03-13T11:07:44.393Z
-                      timestamp: 2026-03-13T11:07:44.393Z
+                      label: open
+                      timestamp: 2025-01-08T08:30:00.000Z
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -217,24 +220,22 @@ steps:
         city_code: $.context.city
       inputs: {}
     examples:
-      - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
-          "INCREMENTAL_CATALOG"
+      - name: example for on_search
         payload:
           context:
+            domain: ONDC:RET11
             action: on_search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/buyer
-            bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/seller
+            timestamp: 2026-06-06T16:11:49.764Z
+            transaction_id: bd996e42-94b0-477f-ad0b-ad7155ba51ad
+            message_id: 74b68022-1b67-4601-a95f-45fd03594dd7
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: bpp.example.com
+            bpp_uri: https://bpp.example.com
+            country: IND
             city: "*"
             core_version: 1.2.5
-            country: IND
-            domain: ONDC:RET11
-            message_id: 110d93bb-8272-4876-bd21-782e77315f19
-            timestamp: 2026-03-13T11:07:44.393Z
-            transaction_id: cdb9b6e8-a5a1-4953-88ab-03e98cec9748
-            ttl: PT30S
           message:
             catalog:
               bpp/providers:
@@ -242,12 +243,10 @@ steps:
                   locations:
                     - id: L1
                       time:
-                        label: close
-                        range:
-                          end: 2026-03-13T11:52:44.393Z
-                          start: 2026-03-13T11:07:44.393Z
-                        timestamp: 2026-03-13T11:07:44.393Z
+                        label: open
+                        timestamp: 2026-06-06T16:11:49.764Z
         type: request
+        description: please add relevant description
   - api: on_search
     action_id: on_search_2
     owner: BPP
@@ -255,7 +254,7 @@ steps:
     unsolicited: true
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZSAoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0gIioiCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkCn0K
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -277,14 +276,76 @@ steps:
           catalog:
             bpp/providers:
               - id: P1
-                locations:
-                  - id: L1
+                items:
+                  - id: I1
                     time:
-                      label: close
-                      range:
-                        end: 2026-03-13T11:52:44.393Z
-                        start: 2026-03-13T11:07:44.393Z
-                      timestamp: 2026-03-13T11:07:44.393Z
+                      label: enable
+                      timestamp: 2025-01-08T07:30:00.000Z
+                    rating: "4"
+                    descriptor:
+                      name: Farm House Pizza
+                      symbol: https://snp.com/images/i1.png
+                      short_desc: Farm House Pizza
+                      long_desc: Farm House Pizza
+                      images:
+                        - https://snp.com/images/i1.png
+                    quantity:
+                      unitized:
+                        measure:
+                          unit: unit
+                          value: "1"
+                      available:
+                        count: "99"
+                      maximum:
+                        count: "99"
+                    price:
+                      currency: INR
+                      value: "259.00"
+                      maximum_value: "259.00"
+                      tags:
+                        - code: range
+                          list:
+                            - code: lower
+                              value: "259.00"
+                            - code: upper
+                              value: "894.00"
+                    category_id: F&B
+                    category_ids:
+                      - 5:1
+                    fulfillment_id: F1
+                    location_id: L1
+                    related: false
+                    recommended: true
+                    "@ondc/org/returnable": false
+                    "@ondc/org/cancellable": false
+                    "@ondc/org/return_window": PT1H
+                    "@ondc/org/seller_pickup_return": false
+                    "@ondc/org/time_to_ship": PT45M
+                    "@ondc/org/available_on_cod": false
+                    "@ondc/org/contact_details_consumer_care": Ramesh,ramesh@abc.com,18004254444
+                    tags:
+                      - code: type
+                        list:
+                          - code: type
+                            value: item
+                      - code: custom_group
+                        list:
+                          - code: id
+                            value: CG1
+                      - code: timing
+                        list:
+                          - code: day_from
+                            value: "1"
+                          - code: day_to
+                            value: "5"
+                          - code: time_from
+                            value: "1800"
+                          - code: time_to
+                            value: "2200"
+                      - code: veg_nonveg
+                        list:
+                          - code: veg
+                            value: yes
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -296,45 +357,106 @@ steps:
         city_code: $.context.city
       inputs: {}
     examples:
-      - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
-          "INCREMENTAL_CATALOG"
+      - name: example for on_search
         payload:
           context:
+            domain: ONDC:RET11
             action: on_search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/buyer
-            bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/seller
+            timestamp: 2026-06-06T16:11:49.775Z
+            transaction_id: bd996e42-94b0-477f-ad0b-ad7155ba51ad
+            message_id: 081fb7fc-e477-44d2-bec9-9ca192849a2b
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: bpp.example.com
+            bpp_uri: https://bpp.example.com
+            country: IND
             city: "*"
             core_version: 1.2.5
-            country: IND
-            domain: ONDC:RET11
-            message_id: 110d93bb-8272-4876-bd21-782e77315f19
-            timestamp: 2026-03-13T11:07:44.393Z
-            transaction_id: cdb9b6e8-a5a1-4953-88ab-03e98cec9748
-            ttl: PT30S
           message:
             catalog:
               bpp/providers:
                 - id: P1
-                  locations:
-                    - id: L1
+                  items:
+                    - id: I1
                       time:
-                        label: close
-                        range:
-                          end: 2026-03-13T11:52:44.393Z
-                          start: 2026-03-13T11:07:44.393Z
-                        timestamp: 2026-03-13T11:07:44.393Z
+                        label: enable
+                        timestamp: 2025-01-08T07:30:00.000Z
+                      rating: "4"
+                      descriptor:
+                        name: Farm House Pizza
+                        symbol: https://snp.com/images/i1.png
+                        short_desc: Farm House Pizza
+                        long_desc: Farm House Pizza
+                        images:
+                          - https://snp.com/images/i1.png
+                      quantity:
+                        unitized:
+                          measure:
+                            unit: unit
+                            value: "1"
+                        available:
+                          count: "99"
+                        maximum:
+                          count: "99"
+                      price:
+                        currency: INR
+                        value: "259.00"
+                        maximum_value: "259.00"
+                        tags:
+                          - code: range
+                            list:
+                              - code: lower
+                                value: "259.00"
+                              - code: upper
+                                value: "894.00"
+                      category_id: F&B
+                      category_ids:
+                        - 5:1
+                      fulfillment_id: F1
+                      location_id: L1
+                      related: false
+                      recommended: true
+                      "@ondc/org/returnable": false
+                      "@ondc/org/cancellable": false
+                      "@ondc/org/return_window": PT1H
+                      "@ondc/org/seller_pickup_return": false
+                      "@ondc/org/time_to_ship": PT45M
+                      "@ondc/org/available_on_cod": false
+                      "@ondc/org/contact_details_consumer_care": Ramesh,ramesh@abc.com,18004254444
+                      tags:
+                        - code: type
+                          list:
+                            - code: type
+                              value: item
+                        - code: custom_group
+                          list:
+                            - code: id
+                              value: CG1
+                        - code: timing
+                          list:
+                            - code: day_from
+                              value: "1"
+                            - code: day_to
+                              value: "5"
+                            - code: time_from
+                              value: "1800"
+                            - code: time_to
+                              value: "2200"
+                        - code: veg_nonveg
+                          list:
+                            - code: veg
+                              value: yes
         type: request
+        description: please add relevant description
   - api: search
-    action_id: search_1
+    action_id: search_2
     owner: BAP
     responseFor: null
     unsolicited: false
     description: please add relevant description
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZSAoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IGlucHV0cyA9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzCiAgaWYgKGlucHV0cz8uc2VhcmNoX21vZGUpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzWzBdLmxpc3RbMF0udmFsdWUgPSBpbnB1dHMuc2VhcmNoX21vZGUKICB9CgogIGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LmNpdHkgPSAiKiIKCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZAp9Cg==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -353,8 +475,8 @@ steps:
         message:
           intent:
             payment:
-              "@ondc/org/buyer_app_finder_fee_amount": "3"
               "@ondc/org/buyer_app_finder_fee_type": percent
+              "@ondc/org/buyer_app_finder_fee_amount": "3"
             tags:
               - code: catalog_inc
                 list:
@@ -370,40 +492,46 @@ steps:
         bppUri: $.context.bpp_uri
         city_code: $.context.city
       inputs:
-        oldInputs:
-          - name: search_mode
-            type: text
-            display: false
-            default: stop
-        id: old_inputs
+        id: ExampleInputId
+        jsonSchema:
+          $schema: http://json-schema.org/draft-07/schema#
+          type: object
+          properties:
+            search_mode:
+              type: string
+              default: stop
+              description: Search mode
+              x-display: false
+          additionalProperties: false
+        sampleData:
+          search_mode: stop
     examples:
-      - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
-          "INCREMENTAL_CATALOG"
+      - name: example for search
         payload:
           context:
+            domain: ONDC:RET11
             action: search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET11/1.2.5/buyer
+            timestamp: 2026-06-06T16:11:50.863Z
+            transaction_id: bd996e42-94b0-477f-ad0b-ad7155ba51ad
+            message_id: 8dd7886b-29be-46da-b30d-07c130b9d393
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            country: IND
             city: "*"
             core_version: 1.2.5
-            country: IND
-            domain: ONDC:RET11
-            message_id: 110d93bb-8272-4876-bd21-782e77315f19
-            timestamp: 2026-03-13T11:07:44.235Z
-            transaction_id: cdb9b6e8-a5a1-4953-88ab-03e98cec9748
-            ttl: PT30S
           message:
             intent:
               payment:
-                "@ondc/org/buyer_app_finder_fee_amount": "3"
                 "@ondc/org/buyer_app_finder_fee_type": percent
+                "@ondc/org/buyer_app_finder_fee_amount": "3"
               tags:
                 - code: catalog_inc
                   list:
                     - code: mode
-                      value: start
+                      value: stop
         type: request
+        description: please add relevant description
 transaction_history: []
 validationLib: ""
-helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
+helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiBnZXRUaW1lc3RhbXBGcm9tRHVyYXRpb24oZGF0ZSwgZHVyYXRpb24pIHsKICBjb25zb2xlLmxvZygiZHVyYXRpb04iLCBkdXJhdGlvbikKICBjb25zdCBkdXJhdGlvblJlZ2V4ID0gL1AoPzooXGQrKUQpPyg/OlQoPzooXGQrKUgpPyg/OihcZCspTSk/KD86KFxkKylTKT8pPy8KICBjb25zdCBtYXRjaCA9IGR1cmF0aW9uLm1hdGNoKGR1cmF0aW9uUmVnZXgpCgogIGlmICghbWF0Y2gpIHsKICAgIHRocm93IG5ldyBFcnJvcigiSW52YWxpZCBJU08gODYwMSBkdXJhdGlvbiBmb3JtYXQiKQogIH0KCiAgY29uc3QgZGF5cyA9IG1hdGNoWzFdID8gcGFyc2VJbnQobWF0Y2hbMV0sIDEwKSB8fCAwIDogMAogIGNvbnN0IGhvdXJzID0gbWF0Y2hbMl0gPyBwYXJzZUludChtYXRjaFsyXSwgMTApIHx8IDAgOiAwCiAgY29uc3QgbWludXRlcyA9IG1hdGNoWzNdID8gcGFyc2VJbnQobWF0Y2hbM10sIDEwKSB8fCAwIDogMAogIGNvbnN0IHNlY29uZHMgPSBtYXRjaFs0XSA/IHBhcnNlSW50KG1hdGNoWzRdLCAxMCkgfHwgMCA6IDAKCiAgY29uc3QgZnV0dXJlRGF0ZSA9IG5ldyBEYXRlKGRhdGUpCiAgZnV0dXJlRGF0ZS5zZXREYXRlKGZ1dHVyZURhdGUuZ2V0RGF0ZSgpICsgZGF5cykKICBmdXR1cmVEYXRlLnNldEhvdXJzKGZ1dHVyZURhdGUuZ2V0SG91cnMoKSArIGhvdXJzKQogIGZ1dHVyZURhdGUuc2V0TWludXRlcyhmdXR1cmVEYXRlLmdldE1pbnV0ZXMoKSArIG1pbnV0ZXMpCiAgZnV0dXJlRGF0ZS5zZXRTZWNvbmRzKGZ1dHVyZURhdGUuZ2V0U2Vjb25kcygpICsgc2Vjb25kcykKCiAgcmV0dXJuIGZ1dHVyZURhdGUudG9JU09TdHJpbmcoKQp9Cg==

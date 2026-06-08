@@ -159,7 +159,13 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.city
+        city_code: "$.context.city"
+        domain: "$.context.domain"
+        transaction_id: "$.context.transaction_id"
+        message_id: "$.context.message_id"
+        bap_id: "$.context.bap_id"
+        bap_uri: "$.context.bap_uri"
+        search_bap_terms: $.message.intent.tags[?(@.code=="bap_features")]
       inputs:
         oldInputs:
           - label: Options
@@ -2052,10 +2058,7 @@ steps:
                       - code: unit
                         value: geojson
                       - code: val
-                        value: '{"type": "FeatureCollection", "features": [{"type": "Feature",
-                          "properties": {}, "geometry": {"coordinates":
-                          [[[77.1755, 28.6759], [77.1287, 28.6009], [77.4469,
-                          28.5453], [77.1755, 28.6759]]], "type": "Polygon"}}]}'
+                        value: '{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {}, "geometry": {"coordinates": [[[77.1755, 28.6759], [77.1287, 28.6009], [77.4469, 28.5453], [77.1755, 28.6759]]], "type": "Polygon"}}]}'
                       - code: day_from
                         value: "1"
                       - code: day_to
@@ -2087,6 +2090,12 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
+        bpp_id: "$.context.bpp_id"
+        bpp_uri: "$.context.bpp_uri"
+        # on_search_items: "$.message.catalog['bpp/providers'][*].items[*]"
+        # np_type: $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
+        # on_search_offers: "$.message.catalog['bpp/providers'][*].offers[*]"
+        offers: $.message.order.offers[*]
       inputs:
         oldInputs:
           - name: cityCode
@@ -3838,11 +3847,7 @@ steps:
                         - code: unit
                           value: geojson
                         - code: val
-                          value: '{"type": "FeatureCollection", "features": [{"type": "Feature",
-                            "properties": {}, "geometry": {"coordinates":
-                            [[[77.1755, 28.6759], [77.1287, 28.6009], [77.4469,
-                            28.5453], [77.1755, 28.6759]]], "type":
-                            "Polygon"}}]}'
+                          value: '{"type": "FeatureCollection", "features": [{"type": "Feature", "properties": {}, "geometry": {"coordinates": [[[77.1755, 28.6759], [77.1287, 28.6009], [77.4469, 28.5453], [77.1755, 28.6759]]], "type": "Polygon"}}]}'
                         - code: day_from
                           value: "1"
                         - code: day_to
