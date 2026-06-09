@@ -58,17 +58,17 @@ flows:
     description: Master Search
     config:
       $ref:  "./LAMF/master_search.yaml"
-  - type: playground
-    id: lamf_credit_line_with_mfc_offline_journey
-    meta:
-      order: 1
-    usecase: LAMF LOAN
-    tags:
-      - WORKBENCH
-      - REPORTABLE
-    description: LAMF Credit Line with Offline Journey
-    config:
-      $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey.yaml"
+  # - type: playground
+  #   id: lamf_credit_line_with_mfc_offline_journey
+  #   meta:
+  #     order: 1
+  #   usecase: LAMF LOAN
+  #   tags:
+  #     - WORKBENCH
+  #     - REPORTABLE
+  #   description: LAMF Credit Line with Offline Journey
+  #   config:
+  #     $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey.yaml"
   - type: playground
     id: lamf_credit_line_with_mfc_single_redirection
     meta:
