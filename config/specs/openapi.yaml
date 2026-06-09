@@ -1,4057 +1,1332 @@
-openapi: 3.0.0
+openapi: 3.1.0
 info:
-  title: ONDC Protocol API for retail (grocery, f&b)
-  description: ONDC Protocol API specification, which includes statutory
-    requirements for packaged commodities and pre-packaged food This is an
-    adaptation of Beckn Core version 0.9.3
-  version: 1.2.0
+  title: ONDC Generated API
+  # version: 1.0.0
   domain: ONDC:RET10
-security:
-  - SubscriberAuth: []
-  - GatewaySubscriberAuth: []
-  - GatewaySubscriberAuthNew: []
+  version: 1.2.0
 paths:
-  /search:
+  /cancel:
     post:
-      tags:
-        - ONDC Seller App
-        - ONDC Gateway
-      description: Search for services by intent
+      operationId: cancel
       requestBody:
-        description: Buyer searches for products and services
+        required: true
         content:
           application/json:
             schema:
-              additionalProperties: false
               type: object
               properties:
-                context:
-                  $ref: "#/components/schemas/Context"
+                context: &context
+                  type: object
+                  properties:
+                    action:
+                      type: string
+                    bap_id:
+                      type: string
+                    bap_uri:
+                      type: string
+                    bpp_id:
+                      type: string
+                    bpp_uri:
+                      type: string
+                    city:
+                      type: string
+                    core_version:
+                      type: string
+                    country:
+                      type: string
+                    domain:
+                      type: string
+                    message_id:
+                      type: string
+                    timestamp:
+                      type: string
+                    transaction_id:
+                      type: string
+                    ttl:
+                      type: string
                 message:
                   type: object
                   properties:
-                    intent:
-                      $ref: "#/components/schemas/Intent"
-              required:
-                - context
-                - message
-      responses:
+                    cancellation_reason_id:
+                      type: string
+                    order_id:
+                      type: string
+      responses: &responses
         "200":
-          description: Acknowledgement of message received
+          description: Synchronous ACK/NACK response
           content:
             application/json:
-              schema:
+              schema: &a1
                 type: object
                 properties:
+                  context: *context
                   message:
                     type: object
                     properties:
                       ack:
-                        $ref: "#/components/schemas/Ack"
+                        properties:
+                          status:
+                            enum:
+                              - ACK
+                              - NACK
+                          tags:
+                            description: A list of tags containing any additional information sent along
+                              with the Acknowledgement.
+                            type: array
+                            items:
+                              description: A collection of tag objects with group level attributes. For
+                                detailed documentation on the Tags and Tag
+                                Groups schema go to
+                                https://github.com/beckn/protocol-specifications/discussions/316
+                              type: object
+                              additionalProperties: false
+                              properties:
+                                display:
+                                  description: Indicates the display properties of the tag group. If display is
+                                    set to false, then the group will not be
+                                    displayed. If it is set to true, it should
+                                    be displayed. However, group-level display
+                                    properties can be overriden by individual
+                                    tag-level display property. As this schema
+                                    is purely for catalog display purposes, it
+                                    is not recommended to send this value during
+                                    search.
+                                  type: boolean
+                                  default: true
+                                descriptor:
+                                  description: Description of the TagGroup, can be used to store detailed
+                                    information.
+                                  properties: &properties
+                                    name:
+                                      type: string
+                                    code:
+                                      type: string
+                                    short_desc:
+                                      type: string
+                                    long_desc:
+                                      type: string
+                                    additional_desc:
+                                      type: object
+                                      additionalProperties: false
+                                      properties:
+                                        url:
+                                          type: string
+                                        content_type:
+                                          type: string
+                                          enum:
+                                            - text/plain
+                                            - text/html
+                                            - application/json
+                                    media:
+                                      type: array
+                                      items:
+                                        description: This object contains a url to a media file.
+                                        type: object
+                                        additionalProperties: false
+                                        properties:
+                                          mimetype:
+                                            description: indicates the nature and format of the document, file, or
+                                              assortment of bytes. MIME types
+                                              are defined and standardized in
+                                              IETF's RFC 6838
+                                            type: string
+                                          url:
+                                            description: The URL of the file
+                                            type: string
+                                            format: uri
+                                          signature:
+                                            description: The digital signature of the file signed by the sender
+                                            type: string
+                                          dsa:
+                                            description: The signing algorithm used by the sender
+                                            type: string
+                                    images:
+                                      type: array
+                                      items:
+                                        description: Describes an image
+                                        type: object
+                                        additionalProperties: false
+                                        properties:
+                                          url:
+                                            description: URL to the image. This can be a data url or an remote url
+                                            type: string
+                                            format: uri
+                                          size_type:
+                                            description: The size of the image. The network policy can define the default
+                                              dimensions of each type
+                                            type: string
+                                            enum:
+                                              - xs
+                                              - sm
+                                              - md
+                                              - lg
+                                              - xl
+                                              - custom
+                                          width:
+                                            description: Width of the image in pixels
+                                            type: string
+                                          height:
+                                            description: Height of the image in pixels
+                                            type: string
+                                  type: object
+                                list:
+                                  description: An array of Tag objects listed under this group. This property can
+                                    be set by BAPs during search to narrow the
+                                    `search` and achieve more relevant results.
+                                    When received during `on_search`, BAPs must
+                                    render this list under the heading described
+                                    by the `name` property of this schema.
+                                  type: array
+                                  items:
+                                    description: Describes a tag. This is used to contain extended metadata. This
+                                      object can be added as a property to any
+                                      schema to describe extended attributes.
+                                      For BAPs, tags can be sent during search
+                                      to optimize and filter search results.
+                                      BPPs can use tags to index their catalog
+                                      to allow better search functionality. Tags
+                                      are sent by the BPP as part of the catalog
+                                      response in the `on_search` callback. Tags
+                                      are also meant for display purposes. Upon
+                                      receiving a tag, BAPs are meant to render
+                                      them as name-value pairs. This is
+                                      particularly useful when rendering tabular
+                                      information about a product or service.
+                                    type: object
+                                    additionalProperties: false
+                                    properties:
+                                      descriptor:
+                                        description: Description of the Tag, can be used to store detailed information.
+                                        properties: *properties
+                                        type: object
+                                      value:
+                                        description: The value of the tag. This set by the BPP and rendered as-is by the
+                                          BAP.
+                                        type: string
+                                      display:
+                                        description: This value indicates if the tag is intended for display purposes.
+                                          If set to `true`, then this tag must
+                                          be displayed. If it is set to `false`,
+                                          it should not be displayed. This value
+                                          can override the group display value.
+                                        type: boolean
+                        description: Describes the acknowledgement sent in response to an API call. If
+                          the implementation uses HTTP/S, then Ack must be
+                          returned in the same session. Every API call to a BPP
+                          must be responded to with an Ack whether the BPP
+                          intends to respond with a callback or not. This has
+                          one property called `status` that indicates the status
+                          of the Acknowledgement.
+                        type: object
                     required:
                       - ack
                   error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /select:
+                    description: Describes an error object that is returned by a BAP, BPP or BG as a
+                      response or callback to an action by another network
+                      participant. This object is sent when any request received
+                      by a network participant is unacceptable. This object can
+                      be sent either during Ack or with the callback.
+                    type: object
+                    additionalProperties: false
+                    properties:
+                      code:
+                        type: string
+                        description: Standard error code. For full list of error codes, refer to
+                          docs/protocol-drafts/BECKN-005-ERROR-CODES-DRAFT-01.md
+                          of this repo"
+                      paths:
+                        type: string
+                        description: Path to json schema generating the error. Used only during json
+                          schema validation errors
+                      message:
+                        type: string
+                        description: Human readable message describing the error. Used mainly for
+                          logging. Not recommended to be shown to the user.
+  /confirm:
     post:
-      tags:
-        - ONDC Seller App
-      description: Select items from the catalog and build your order
+      operationId: confirm
       requestBody:
-        description: Buyer selects one or more catalog items
+        required: true
         content:
           application/json:
             schema:
-              additionalProperties: false
               type: object
               properties:
-                context:
-                  $ref: "#/components/schemas/Context"
+                context: *context
                 message:
                   type: object
                   properties:
                     order:
-                      description: Describes the details of an order
                       type: object
                       properties:
-                        provider:
+                        billing: &billing
                           type: object
                           properties:
-                            id:
-                              $ref: "#/components/schemas/Provider/properties/id"
-                            locations:
-                              type: array
-                              maxItems: 1
-                              items:
-                                type: object
-                                properties:
-                                  id:
-                                    $ref: "#/components/schemas/Location/properties/id"
-                        items:
+                            address: &address
+                              type: object
+                              properties:
+                                area_code:
+                                  type: string
+                                building:
+                                  type: string
+                                city:
+                                  type: string
+                                country:
+                                  type: string
+                                locality:
+                                  type: string
+                                name:
+                                  type: string
+                                state:
+                                  type: string
+                            created_at:
+                              type: string
+                            email:
+                              type: string
+                            name:
+                              type: string
+                            phone:
+                              type: string
+                            updated_at:
+                              type: string
+                        created_at:
+                          type: string
+                        fulfillments:
                           type: array
                           items:
-                            description: Describes a product or a service offered to the end consumer by the
-                              provider
                             type: object
                             properties:
-                              id:
-                                description: This is the most unique identifier of a service item. An example of
-                                  an Item ID could be the SKU of a product.
+                              "@ondc/org/TAT":
                                 type: string
-                              parent_item_id:
-                                description: This is the most unique identifier of a service item. An example of
-                                  an Item ID could be the SKU of a product.
+                              "@ondc/org/category":
                                 type: string
-                              descriptor:
-                                description: Describes the description of a real-world object.
+                              end: &end
                                 type: object
                                 properties:
-                                  tags:
-                                    type: array
-                                    items:
-                                      $ref: "#/components/schemas/TagGroup"
-                              location_id:
-                                description: This is the most unique identifier of a location item.
+                                  contact: &contact
+                                    type: object
+                                    properties:
+                                      email:
+                                        type: string
+                                      phone:
+                                        type: string
+                                  location: &location
+                                    type: object
+                                    properties:
+                                      address: *address
+                                      gps:
+                                        type: string
+                                  person: &person
+                                    type: object
+                                    properties:
+                                      name:
+                                        type: string
+                              id:
                                 type: string
-                              quantity:
-                                description: quantity
+                              tracking:
+                                type: boolean
+                              type:
+                                type: string
+                        id:
+                          type: string
+                        items: &items
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              fulfillment_id:
+                                type: string
+                              id:
+                                type: string
+                              quantity: &quantity
                                 type: object
                                 properties:
                                   count:
                                     type: integer
-                                    minimum: 0
-                              tags:
-                                type: array
-                                items:
-                                  $ref: "#/components/schemas/TagGroup"
-                        offers:
-                          type: array
-                          items:
-                            type: object
-                            properties:
-                              id:
-                                $ref: "#/components/schemas/Offer/properties/id"
-                              tags:
-                                type: array
-                                items:
-                                  $ref: "#/components/schemas/TagGroup"
-                        fulfillments:
-                          type: array
-                          items:
-                            type: object
-                            properties:
-                              end:
-                                $ref: "#/components/schemas/FulfillmentLocation"
-                        payment:
+                        payment: &payment
                           type: object
                           properties:
-                            type:
-                              $ref: "#/components/schemas/Payment/properties/type"
-                        tags:
-                          type: array
-                          items:
-                            $ref: "#/components/schemas/TagGroup"
-                  required:
-                    - order
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /init:
-    post:
-      tags:
-        - ONDC Seller App
-      description: Initialize an order by providing billing and/or shipping details
-      requestBody:
-        description: Buyer initializes order checkout
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      $ref: "#/components/schemas/Order"
-                  required:
-                    - order
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /confirm:
-    post:
-      tags:
-        - ONDC Seller App
-      description: Initialize an order by providing billing and/or shipping details
-      requestBody:
-        description: Buyer confirms an order
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      description: Describes the details of an order
-                      type: object
-                      properties:
-                        id:
-                          type: string
-                          description: Unique identifier for Order across the network
-                        state:
-                          type: string
-                        provider:
-                          type: object
-                          properties:
-                            id:
-                              $ref: "#/components/schemas/Provider/properties/id"
-                            locations:
+                            "@ondc/org/buyer_app_finder_fee_amount":
+                              type: string
+                            "@ondc/org/buyer_app_finder_fee_type":
+                              type: string
+                            "@ondc/org/settlement_basis":
+                              type: string
+                            "@ondc/org/settlement_details": &ondc_org_settlement_details
                               type: array
-                              maxItems: 1
                               items:
                                 type: object
                                 properties:
+                                  bank_name:
+                                    type: string
+                                  beneficiary_name:
+                                    type: string
+                                  branch_name:
+                                    type: string
+                                  settlement_bank_account_no:
+                                    type: string
+                                  settlement_counterparty:
+                                    type: string
+                                  settlement_ifsc_code:
+                                    type: string
+                                  settlement_phase:
+                                    type: string
+                                  settlement_type:
+                                    type: string
+                            "@ondc/org/settlement_window":
+                              type: string
+                            "@ondc/org/withholding_amount":
+                              type: string
+                            collected_by:
+                              type: string
+                            params:
+                              type: object
+                              properties:
+                                amount:
+                                  type: string
+                                currency:
+                                  type: string
+                                transaction_id:
+                                  type: string
+                            status:
+                              type: string
+                            type:
+                              type: string
+                        provider: &provider
+                          type: object
+                          properties:
+                            id:
+                              type: string
+                            locations:
+                              type: array
+                              items: &items_2
+                                type: object
+                                properties:
                                   id:
-                                    $ref: "#/components/schemas/Location/properties/id"
-                        items:
+                                    type: string
+                        quote: &quote
+                          type: object
+                          properties:
+                            breakup:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  "@ondc/org/item_id":
+                                    type: string
+                                  "@ondc/org/item_quantity": *quantity
+                                  "@ondc/org/title_type":
+                                    type: string
+                                  item:
+                                    type: object
+                                    properties:
+                                      price: &price
+                                        type: object
+                                        properties:
+                                          currency:
+                                            type: string
+                                          value:
+                                            type: string
+                                  price: *price
+                                  title:
+                                    type: string
+                            price: *price
+                            ttl:
+                              type: string
+                        state:
+                          type: string
+                        tags: &tags
                           type: array
                           items:
-                            $ref: "#/components/schemas/Item"
+                            type: object
+                            properties:
+                              code:
+                                type: string
+                              list:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    code:
+                                      type: string
+                                    value:
+                                      type: string
+                        updated_at:
+                          type: string
+      responses: *responses
+  /init:
+    post:
+      operationId: init
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
+                        billing: *billing
+                        fulfillments:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              end: &end_2
+                                type: object
+                                properties:
+                                  contact: *contact
+                                  location: *location
+                              id:
+                                type: string
+                              type:
+                                type: string
+                        items: *items
                         offers:
+                          type: array
+                        provider: *provider
+      responses: *responses
+  /on_cancel:
+    post:
+      operationId: on_cancel
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
+                        billing: *billing
+                        cancellation:
+                          type: object
+                          properties:
+                            cancelled_by:
+                              type: string
+                            reason: *items_2
+                        created_at:
+                          type: string
+                        fulfillments:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              "@ondc/org/TAT":
+                                type: string
+                              "@ondc/org/provider_name":
+                                type: string
+                              end:
+                                type: object
+                                properties:
+                                  contact: *contact
+                                  location: &location_2
+                                    type: object
+                                    properties:
+                                      address:
+                                        type: object
+                                        properties:
+                                          area_code:
+                                            type: string
+                                          building:
+                                            type: string
+                                          city:
+                                            type: string
+                                          country:
+                                            type: string
+                                          locality:
+                                            type: string
+                                          name:
+                                            type: string
+                                          state:
+                                            type: string
+                                          street:
+                                            type: string
+                                      gps:
+                                        type: string
+                                      descriptor: *person
+                                      id:
+                                        type: string
+                                  person: *person
+                              id:
+                                type: string
+                              start:
+                                type: object
+                                properties:
+                                  contact: *contact
+                                  location: *location_2
+                                  person: *person
+                                  time:
+                                    type: object
+                                    properties:
+                                      timestamp:
+                                        type: string
+                              state: &state
+                                type: object
+                                properties:
+                                  descriptor:
+                                    type: object
+                                    properties:
+                                      code:
+                                        type: string
+                              tags: *tags
+                              tracking:
+                                type: boolean
+                              type:
+                                type: string
+                        id:
+                          type: string
+                        items: *items
+                        payment: *payment
+                        provider: *provider
+                        quote: &quote_2
+                          type: object
+                          properties:
+                            breakup:
+                              type: array
+                              items:
+                                type: object
+                                properties:
+                                  "@ondc/org/item_id":
+                                    type: string
+                                  "@ondc/org/item_quantity": *quantity
+                                  "@ondc/org/title_type":
+                                    type: string
+                                  item:
+                                    type: object
+                                    properties:
+                                      price: *price
+                                      quantity:
+                                        type: object
+                                        properties:
+                                          available: &available
+                                            type: object
+                                            properties:
+                                              count:
+                                                type: string
+                                          maximum: *available
+                                  price: *price
+                                  title:
+                                    type: string
+                            price: *price
+                            ttl:
+                              type: string
+                        state:
+                          type: string
+                        updated_at:
+                          type: string
+      responses: *responses
+  /on_confirm:
+    post:
+      operationId: on_confirm
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
+                        billing: *billing
+                        created_at:
+                          type: string
+                        fulfillments:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              "@ondc/org/TAT":
+                                type: string
+                              "@ondc/org/provider_name":
+                                type: string
+                              end: *end
+                              id:
+                                type: string
+                              start:
+                                type: object
+                                properties:
+                                  contact: *contact
+                                  location: &location_3
+                                    type: object
+                                    properties:
+                                      address: &address_2
+                                        type: object
+                                        properties:
+                                          area_code:
+                                            type: string
+                                          city:
+                                            type: string
+                                          locality:
+                                            type: string
+                                          state:
+                                            type: string
+                                          street:
+                                            type: string
+                                      descriptor: *person
+                                      gps:
+                                        type: string
+                                      id:
+                                        type: string
+                              state: *state
+                              tracking:
+                                type: boolean
+                              type:
+                                type: string
+                        id:
+                          type: string
+                        items: *items
+                        payment: *payment
+                        provider: *provider
+                        quote: *quote
+                        state:
+                          type: string
+                        tags: *tags
+                        updated_at:
+                          type: string
+      responses: *responses
+  /on_init:
+    post:
+      operationId: on_init
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
+                        billing: *billing
+                        fulfillments:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              end: *end_2
+                              id:
+                                type: string
+                              tracking:
+                                type: boolean
+                              type:
+                                type: string
+                        items: *items
+                        payment:
+                          type: object
+                          properties:
+                            "@ondc/org/buyer_app_finder_fee_amount":
+                              type: string
+                            "@ondc/org/buyer_app_finder_fee_type":
+                              type: string
+                            "@ondc/org/settlement_details": *ondc_org_settlement_details
+                        provider: *provider
+                        quote: *quote
+                        tags: *tags
+      responses: *responses
+  /on_search:
+    post:
+      operationId: on_search
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    catalog:
+                      type: object
+                      properties:
+                        bpp/fulfillments:
                           type: array
                           items:
                             type: object
                             properties:
                               id:
-                                $ref: "#/components/schemas/Offer/properties/id"
-                        documents:
+                                type: string
+                              type:
+                                type: string
+                        bpp/descriptor:
+                          type: object
+                          properties:
+                            name:
+                              type: string
+                            symbol:
+                              type: string
+                            short_desc:
+                              type: string
+                            long_desc:
+                              type: string
+                            images: &images
+                              type: array
+                              items:
+                                type: string
+                            tags: *tags
+                        bpp/providers:
                           type: array
                           items:
-                            $ref: "#/components/schemas/Document"
-                        billing:
-                          $ref: "#/components/schemas/Billing"
+                            type: object
+                            properties:
+                              time: &time
+                                type: object
+                                properties:
+                                  label:
+                                    type: string
+                                  timestamp:
+                                    type: string
+                              descriptor:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                  symbol:
+                                    type: string
+                                  short_desc:
+                                    type: string
+                                  long_desc:
+                                    type: string
+                                  images: *images
+                              ttl:
+                                type: string
+                              locations:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: string
+                                    time:
+                                      type: object
+                                      properties:
+                                        label:
+                                          type: string
+                                        timestamp:
+                                          type: string
+                                        days:
+                                          type: string
+                                        schedule:
+                                          type: object
+                                          properties:
+                                            holidays:
+                                              type: array
+                                        range: &range
+                                          type: object
+                                          properties:
+                                            start:
+                                              type: string
+                                            end:
+                                              type: string
+                                    gps:
+                                      type: string
+                                    address: *address_2
+                                    circle:
+                                      type: object
+                                      properties:
+                                        gps:
+                                          type: string
+                                        radius: &radius
+                                          type: object
+                                          properties:
+                                            unit:
+                                              type: string
+                                            value:
+                                              type: string
+                              fulfillments:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: string
+                                    type:
+                                      type: string
+                                    contact: *contact
+                              items:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    descriptor:
+                                      type: object
+                                      properties:
+                                        name:
+                                          type: string
+                                        code:
+                                          type: string
+                                        symbol:
+                                          type: string
+                                        short_desc:
+                                          type: string
+                                        long_desc:
+                                          type: string
+                                        images: *images
+                                    price:
+                                      type: object
+                                      properties:
+                                        currency:
+                                          type: string
+                                        value:
+                                          type: string
+                                        maximum_value:
+                                          type: string
+                                    quantity:
+                                      type: object
+                                      properties:
+                                        unitized:
+                                          type: object
+                                          properties:
+                                            measure: *radius
+                                        available: *available
+                                        maximum: *available
+                                    category_id:
+                                      type: string
+                                    fulfillment_id:
+                                      type: string
+                                    location_id:
+                                      type: string
+                                    "@ondc/org/returnable":
+                                      type: boolean
+                                    "@ondc/org/cancellable":
+                                      type: boolean
+                                    "@ondc/org/return_window":
+                                      type: string
+                                    "@ondc/org/seller_pickup_return":
+                                      type: boolean
+                                    "@ondc/org/time_to_ship":
+                                      type: string
+                                    "@ondc/org/available_on_cod":
+                                      type: boolean
+                                    "@ondc/org/contact_details_consumer_care":
+                                      type: string
+                                    "@ondc/org/statutory_reqs_packaged_commodities":
+                                      type: object
+                                      properties:
+                                        manufacturer_or_packer_name:
+                                          type: string
+                                        manufacturer_or_packer_address:
+                                          type: string
+                                        common_or_generic_name_of_commodity:
+                                          type: string
+                                        month_year_of_manufacture_packing_import:
+                                          type: string
+                                    time: *time
+                                    tags: *tags
+                                    id:
+                                      type: string
+                                    parent_item_id:
+                                      type: string
+                                    rating:
+                                      type: string
+                              tags: *tags
+                              categories:
+                                type: array
+                                items:
+                                  type: object
+                                  properties:
+                                    id:
+                                      type: string
+                                    tags: *tags
+                                    descriptor: *person
+                              id:
+                                type: string
+                              rating:
+                                type: string
+      responses: *responses
+  /on_select:
+    post:
+      operationId: on_select
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
                         fulfillments:
                           type: array
                           items:
-                            $ref: "#/components/schemas/OrderFulfillment"
-                        cancellation_terms:
-                          description: The cancellation terms of this order. This can be overriden at the
-                            item level cancellation terms.
+                            type: object
+                            properties:
+                              "@ondc/org/TAT":
+                                type: string
+                              "@ondc/org/category":
+                                type: string
+                              "@ondc/org/provider_name":
+                                type: string
+                              id:
+                                type: string
+                              state: *state
+                              tracking:
+                                type: boolean
+                              type:
+                                type: string
+                        items:
                           type: array
                           items:
-                            $ref: "#/components/schemas/CancellationTerm"
-                        quote:
-                          $ref: "#/components/schemas/Quotation"
-                        payment:
-                          $ref: "#/components/schemas/Payment"
-                        created_at:
-                          type: string
-                          format: date-time
-                        updated_at:
-                          type: string
-                          format: date-time
-                        tags:
-                          type: array
-                          items:
-                            $ref: "#/components/schemas/TagGroup"
-                  required:
-                    - order
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /status:
+                            type: object
+                            properties:
+                              fulfillment_id:
+                                type: string
+                              id:
+                                type: string
+                        provider: *provider
+                        quote: *quote_2
+                error:
+                  type: object
+                  properties:
+                    code:
+                      type: string
+                    message:
+                      type: string
+                    type:
+                      type: string
+      responses: *responses
+  /on_status:
     post:
-      tags:
-        - ONDC Seller App
-      description: Fetch the latest order object
+      operationId: on_status
       requestBody:
-        description: Buyer checks for status of order
+        required: true
         content:
           application/json:
             schema:
-              additionalProperties: false
               type: object
               properties:
-                context:
-                  $ref: "#/components/schemas/Context"
+                context: *context
                 message:
                   type: object
                   properties:
-                    order_id:
-                      $ref: "#/components/schemas/Order/properties/id"
-                  required:
-                    - order_id
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /track:
-    post:
-      tags:
-        - ONDC Seller App
-      description: Track an active order
-      requestBody:
-        description: Buyer tracks fulfillment of an order
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order_id:
-                      $ref: "#/components/schemas/Order/properties/id"
-                  required:
-                    - order_id
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /cancel:
-    post:
-      tags:
-        - ONDC Seller App
-      description: Cancel an order
-      requestBody:
-        description: Buyer cancels an order
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order_id:
-                      $ref: "#/components/schemas/Order/properties/id"
-                    cancellation_reason_id:
-                      $ref: "#/components/schemas/Option/properties/id"
-                    descriptor:
-                      description: Describes the description of a real-world object.
+                    order:
                       type: object
                       properties:
-                        name:
+                        billing: *billing
+                        created_at:
                           type: string
-                        short_desc:
-                          type: string
-                        tags:
+                        fulfillments:
                           type: array
                           items:
-                            $ref: "#/components/schemas/TagGroup"
-                  required:
-                    - order_id
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /update:
+                            type: object
+                            properties:
+                              "@ondc/org/TAT":
+                                type: string
+                              "@ondc/org/provider_name":
+                                type: string
+                              end: &end_3
+                                type: object
+                                properties:
+                                  contact: *contact
+                                  location: *location
+                                  person: *person
+                                  time: &time_2
+                                    type: object
+                                    properties:
+                                      range: *range
+                              id:
+                                type: string
+                              start:
+                                type: object
+                                properties:
+                                  contact: *contact
+                                  location: *location_3
+                                  time: *time_2
+                              state: *state
+                              tags: *tags
+                              tracking:
+                                type: boolean
+                              type:
+                                type: string
+                        id:
+                          type: string
+                        items: *items
+                        payment: *payment
+                        provider: *provider
+                        quote: *quote_2
+                        state:
+                          type: string
+                        updated_at:
+                          type: string
+      responses: *responses
+  /on_track:
     post:
-      tags:
-        - ONDC Seller App
-      description: Update an order
+      operationId: on_track
       requestBody:
-        description: Buyer updates an order
+        required: true
         content:
           application/json:
             schema:
-              additionalProperties: false
               type: object
               properties:
-                context:
-                  $ref: "#/components/schemas/Context"
+                context: *context
                 message:
                   type: object
                   properties:
-                    update_target:
-                      description: 'Comma separated values of order objects being updated. For
-                        example:
-                        ```"update_target":"item,billing,fulfillment,payment"```'
-                      type: string
-                    order:
-                      description: Describes the details of an order
+                    tracking:
                       type: object
                       properties:
                         id:
                           type: string
-                          description: Unique identifier for Order across the network
-                        items:
-                          type: array
-                          items:
-                            $ref: "#/components/schemas/OrderItem"
+                        status:
+                          type: string
+                        url:
+                          type: string
+      responses: *responses
+  /on_update:
+    post:
+      operationId: on_update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
+                        billing: *billing
+                        created_at:
+                          type: string
                         fulfillments:
                           type: array
                           items:
-                            description: Describes how a single product/service will be rendered/fulfilled
-                              to the end customer
+                            type: object
+                            properties:
+                              "@ondc/org/TAT":
+                                type: string
+                              "@ondc/org/provider_name":
+                                type: string
+                              agent:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                  phone:
+                                    type: string
+                              end: *end_3
+                              id:
+                                type: string
+                              start:
+                                type: object
+                                properties:
+                                  contact: *contact
+                                  location: *location_3
+                                  time:
+                                    type: object
+                                    properties:
+                                      range: *range
+                                      timestamp:
+                                        type: string
+                              state: *state
+                              tags: *tags
+                              tracking:
+                                type: boolean
+                              type:
+                                type: string
+                        id:
+                          type: string
+                        items: *items
+                        payment: *payment
+                        provider: *provider
+                        quote: *quote_2
+                        state:
+                          type: string
+                        updated_at:
+                          type: string
+      responses: *responses
+  /search:
+    post:
+      operationId: search
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  type: object
+                  properties:
+                    domain:
+                      type: string
+                    action:
+                      type: string
+                    timestamp:
+                      type: string
+                    transaction_id:
+                      type: string
+                    message_id:
+                      type: string
+                    bap_id:
+                      type: string
+                    bap_uri:
+                      type: string
+                    ttl:
+                      type: string
+                    country:
+                      type: string
+                    city:
+                      type: string
+                    core_version:
+                      type: string
+                message:
+                  type: object
+                  properties:
+                    intent:
+                      type: object
+                      properties:
+                        payment:
+                          type: object
+                          properties:
+                            "@ondc/org/buyer_app_finder_fee_type":
+                              type: string
+                            "@ondc/org/buyer_app_finder_fee_amount":
+                              type: string
+                        tags: *tags
+      responses: *responses
+  /select:
+    post:
+      operationId: select
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
+                        fulfillments:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              end:
+                                type: object
+                                properties:
+                                  location:
+                                    type: object
+                                    properties:
+                                      address:
+                                        type: object
+                                        properties:
+                                          area_code:
+                                            type: string
+                                      gps:
+                                        type: string
+                        items:
+                          type: array
+                          items:
                             type: object
                             properties:
                               id:
                                 type: string
-                                description: Unique reference ID to the fulfillment of an order
+                              location:
+                                type: string
+                              quantity: *quantity
+                        provider: *provider
+      responses: *responses
+  /track:
+    post:
+      operationId: track
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order_id:
+                      type: string
+      responses: *responses
+  /update:
+    post:
+      operationId: update
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context: *context
+                message:
+                  type: object
+                  properties:
+                    order:
+                      type: object
+                      properties:
+                        fulfillments:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              tags: *tags
                               type:
                                 type: string
-                                description: This describes the type of fulfillment ("Pickup" - Buyer picks up
-                                  from store by themselves or through their
-                                  logistics provider; "Delivery" - seller
-                                  delivers to buyer)
-                                enum:
-                                  - Delivery
-                                  - Return
-                              end:
-                                type: object
-                                properties:
-                                  instructions:
-                                    type: object
-                                    properties:
-                                      additional_desc:
-                                        type: object
-                                        properties:
-                                          content_type:
-                                            type: string
-                                            enum:
-                                              - text/plain
-                                              - text/html
-                              tags:
-                                type: array
-                                items:
-                                  $ref: "#/components/schemas/TagGroup"
+                        id:
+                          type: string
                         payment:
-                          description: Describes a payment
                           type: object
                           properties:
-                            collected_by:
-                              type: string
-                              enum:
-                                - BAP
-                                - BPP
-                            status:
-                              type: string
-                              enum:
-                                - PAID
-                                - NOT-PAID
-                            time:
-                              type: object
-                              properties:
-                                timestamp:
-                                  type: string
-                                  format: date-time
                             "@ondc/org/settlement_details":
                               type: array
                               items:
                                 type: object
                                 properties:
+                                  settlement_amount:
+                                    type: string
                                   settlement_counterparty:
                                     type: string
-                                    enum:
-                                      - buyer
-                                      - buyer-app
-                                      - seller-app
-                                      - logistics-provider
                                   settlement_phase:
                                     type: string
-                                    enum:
-                                      - sale-amount
-                                      - withholding-amount
-                                      - refund
-                                  settlement_amount:
+                                  settlement_timestamp:
                                     type: string
                                   settlement_type:
                                     type: string
-                                    enum:
-                                      - neft
-                                      - rtgs
-                                      - upi
-                                  settlement_timestamp:
-                                    description: Settlement transaction timestamp
-                                    type: string
-                                    format: date-time
-                  required:
-                    - update_target
-                    - order
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_search:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Send catalog
-      requestBody:
-        description: Sellers provide their catalog in response to buyer search
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    catalog:
-                      $ref: "#/components/schemas/Catalog"
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - context
-  /on_select:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Send draft order object with quoted price for selected items
-      requestBody:
-        description: Seller provides quote for selected items
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      description: Describes the details of an order
-                      type: object
-                      properties:
-                        provider:
-                          type: object
-                          properties:
-                            id:
-                              $ref: "#/components/schemas/Provider/properties/id"
-                            locations:
-                              type: array
-                              maxItems: 1
-                              items:
-                                type: object
-                                properties:
-                                  id:
-                                    $ref: "#/components/schemas/Location/properties/id"
-                        items:
-                          type: array
-                          items:
-                            description: Describes a product or a service offered to the end consumer by the
-                              provider
-                            type: object
-                            properties:
-                              id:
-                                description: This is the most unique identifier of a service item. An example of
-                                  an Item ID could be the SKU of a product.
-                                type: string
-                              parent_item_id:
-                                description: This is the most unique identifier of a service item. An example of
-                                  an Item ID could be the SKU of a product.
-                                type: string
-                              quantity:
-                                description: quantity
-                                type: object
-                                properties:
-                                  count:
-                                    type: integer
-                                    minimum: 0
-                              fulfillment_id:
-                                type: string
-                                description: Unique reference ID to the fulfillment of an order
-                              fulfillment_ids:
-                                type: array
-                                items:
-                                  type: string
-                                  description: Unique reference ID to the fulfillment of an order
-                              tags:
-                                type: array
-                                items:
-                                  $ref: "#/components/schemas/TagGroup"
-                        offers:
-                          type: array
-                          items:
-                            type: object
-                            properties:
-                              id:
-                                $ref: "#/components/schemas/Offer/properties/id"
-                              tags:
-                                $ref: "#/components/schemas/TagGroup"
-                        fulfillments:
-                          type: array
-                          items:
-                            description: Describes how a single product/service will be rendered/fulfilled
-                              to the end customer
-                            type: object
-                            properties:
-                              id:
-                                type: string
-                                description: Unique reference ID to the fulfillment of an order
-                              type:
-                                type: string
-                                description: This describes the type of fulfillment ("Pickup" - Buyer picks up
-                                  from store by themselves or through their
-                                  logistics provider; "Delivery" - seller
-                                  delivers to buyer)
-                                enum:
-                                  - Delivery
-                                  - Pickup
-                                  - Delivery and Pickup
-                                  - Reverse QC
-                              "@ondc/org/category":
-                                type: string
-                                description: Fulfillment Category
-                              "@ondc/org/provider_name":
-                                type: string
-                                description: Fulfillment Provider Name
-                              "@ondc/org/TAT":
-                                description: fulfillment turnaround time in ISO8601 durations format e.g.
-                                  'PT24H' indicates 24 hour TAT
-                                type: string
-                              state:
-                                $ref: "#/components/schemas/State"
-                              tracking:
-                                type: boolean
-                                description: Indicates whether the fulfillment allows tracking
-                                default: false
-                              start:
-                                description: Details on the end of fulfillment
-                                type: object
-                                properties:
-                                  time:
-                                    description: Describes time in its various forms. It can be a single point in
-                                      time; duration; or a structured timetable
-                                      of operations
-                                    type: object
-                                    properties:
-                                      range:
-                                        type: object
-                                        properties:
-                                          start:
-                                            type: string
-                                            format: date-time
-                                          end:
-                                            type: string
-                                            format: date-time
-                              end:
-                                description: Details on the start of fulfillment
-                                type: object
-                                properties:
-                                  location:
-                                    $ref: "#/components/schemas/Location"
-                                  time:
-                                    description: Describes time in its various forms. It can be a single point in
-                                      time; duration; or a structured timetable
-                                      of operations
-                                    type: object
-                                    properties:
-                                      range:
-                                        type: object
-                                        properties:
-                                          start:
-                                            type: string
-                                            format: date-time
-                                          end:
-                                            type: string
-                                            format: date-time
-                              tags:
-                                type: array
-                                items:
-                                  $ref: "#/components/schemas/TagGroup"
-                            required:
-                              - id
-                              - type
-                        quote:
-                          $ref: "#/components/schemas/Quotation"
-                        payment:
-                          $ref: "#/components/schemas/Payment/properties/type"
-                  required:
-                    - order
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_init:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Send order object with payment details updated
-      requestBody:
-        description: Seller provides terms and conditions for an order
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      $ref: "#/components/schemas/Order"
-                  required:
-                    - order
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_confirm:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Send active order object
-      requestBody:
-        description: Seller confirms order
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      $ref: "#/components/schemas/Order"
-                  required:
-                    - order
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_track:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Send tracking details of an active order
-      requestBody:
-        description: Seller provides tracking details for an order
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    tracking:
-                      $ref: "#/components/schemas/Tracking"
-                  required:
-                    - tracking
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_cancel:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Send cancellation request_id with reasons list in case of
-        cancellation request. Else send cancelled order object
-      requestBody:
-        description: Seller provides response to cancellation request
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      $ref: "#/components/schemas/Order"
-                  required:
-                    - order
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_update:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Returns updated service with updated runtime object
-      requestBody:
-        description: Seller provides response to order update
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      $ref: "#/components/schemas/Order"
-                  required:
-                    - order
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_status:
-    post:
-      tags:
-        - ONDC Buyer App
-      description: Fetch the status of a Service
-      requestBody:
-        description: Seller provides status information for order
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    order:
-                      $ref: "#/components/schemas/Order"
-                  required:
-                    - order
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /issue:
-    post:
-      tags:
-        - Complaint lifecycle management
-      description: |
-        ###  Operation Description
-      requestBody:
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    issue:
-                      $ref: "#/components/schemas/Issue"
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_issue:
-    post:
-      tags:
-        - Complaint lifecycle management
-      description: Send the issue resolution details object
-      requestBody:
-        description: Seller confirms order
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    issue:
-                      $ref: "#/components/schemas/Issue"
-                  required:
-                    - issue
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /issue_status:
-    post:
-      tags:
-        - Complaint lifecycle management
-      description: Request for latest status of the complaint
-      requestBody:
-        description: Seller confirms order
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    issue_id:
-                      description: Network issue identifier is a unique number assigned to a complaint
-                        by the interfacing application
+                    update_target:
                       type: string
-                  required:
-                    - issue_id
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /on_issue_status:
-    post:
-      tags:
-        - Complaint lifecycle management
-      description: Send the issue resolution details object
-      requestBody:
-        description: Seller confirms order
-        content:
-          application/json:
-            schema:
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                message:
-                  type: object
-                  properties:
-                    issue:
-                      $ref: "#/components/schemas/Issue"
-                  required:
-                    - issue
-                error:
-                  $ref: "#/components/schemas/Error"
-              required:
-                - context
-                - message
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-  /catalog_rejection:
-    post:
-      tags:
-        - ONDC Buyer App
-        - ONDC Seller App
-      description: >
-        Seller sends catalog rejection response indicating issues found in
-        catalog upload. This is a custom callback used by platforms to notify
-        BAP/BPP about catalog validation failures.
-      requestBody:
-        description: Catalog rejection payload containing context and error details
-        content:
-          application/json:
-            schema:
-              additionalProperties: false
-              type: object
-              properties:
-                context:
-                  $ref: "#/components/schemas/Context"
-                errors:
-                  type: array
-                  items:
-                    type: object
-                    properties:
-                      type:
-                        type: string
-                        description: Error category type
-                      code:
-                        type: string
-                        description: Error code identifying the failure reason
-                      path:
-                        type: string
-                        description: JSONPath pointing to the catalog element that failed validation
-                      message:
-                        type: string
-                        description: Human readable error explanation
-                    required:
-                      - type
-                      - code
-                      - message
-              required:
-                - context
-                - errors
-      responses:
-        "200":
-          description: Acknowledgement of message received
-          content:
-            application/json:
-              schema:
-                type: object
-                properties:
-                  message:
-                    type: object
-                    properties:
-                      ack:
-                        $ref: "#/components/schemas/Ack"
-                    required:
-                      - ack
-                  error:
-                    $ref: "#/components/schemas/Error"
-                required:
-                  - message
-components:
-  securitySchemes:
-    SubscriberAuth:
-      type: apiKey
-      in: header
-      name: Authorization
-      description: "Signature of message body using Buyer App or Seller App
-        subscriber's signing public key.
-        <br/><br/>Format:<br/><br/><code>Authorization : Signature
-        keyId=\"{subscriber_id}|{unique_key_id}|{algorithm}\",algorithm=\"ed255\
-        19\",created=\"1606970629\",expires=\"1607030629\",headers=\"(created)
-        (expires) digest\",signature=\"Base64(signing string)\"</code>"
-    GatewaySubscriberAuth:
-      type: apiKey
-      in: header
-      name: Proxy-Authorization
-      description: "Signature of message body + BuyerApp/SellerApp's Authorization
-        header using Gateway's signing public key.
-        Format:<br/><br/><code>Proxy-Authorization : Signature
-        keyId=\"{subscriber_id}|{unique_key_id}|{algorithm}\",algorithm=\"ed255\
-        19\",created=\"1606970629\",expires=\"1607030629\",headers=\"(created)
-        (expires) digest\",signature=\"Base64(signing
-        string)\"</code><p><b>Note:</b>This header will be deprecated soon and
-        will no longer be supported in future releases. New implementors are
-        requested to use the X-Gateway-Authorization header. Existing
-        implementations are requested to migrate their header to the new header.
-        The deprecation date will be set after discussion as per the standard
-        specification governance process.</p>"
-    GatewaySubscriberAuthNew:
-      type: apiKey
-      in: header
-      name: X-Gateway-Authorization
-      description: "Signature of message body + BuyerApp/SellerApp's Authorization
-        header using Gateway's signing public key.
-        Format:<br/><br/><code>X-Gateway-Authorization : Signature
-        keyId=\"{subscriber_id}|{unique_key_id}|{algorithm}\",algorithm=\"ed255\
-        19\",created=\"1606970629\",expires=\"1607030629\",headers=\"(created)
-        (expires) digest\",signature=\"Base64(signing string)\"</code>"
-  schemas:
-    Ack:
-      description: Describes the ACK response
-      type: object
-      additionalProperties: false
-      properties:
-        status:
-          type: string
-          description: Describe the status of the ACK response. If schema validation
-            passes, status is ACK else it is NACK
-          enum:
-            - ACK
-            - NACK
-        tags:
-          description: A list of tags containing any additional information sent along
-            with the Acknowledgement.
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-      required:
-        - status
-    Address:
-      description: Describes an address
-      type: object
-      additionalProperties: false
-      properties:
-        name:
-          type: string
-          description: Name of address if applicable. Example, shop name
-        building:
-          type: string
-          description: Name of the building or block
-        street:
-          type: string
-          description: Street name or number
-        locality:
-          type: string
-          description: Name of the locality, apartments
-        city:
-          type: string
-          description: City name
-        state:
-          type: string
-          description: State name
-        country:
-          type: string
-          description: Country name
-        area_code:
-          type: string
-          description: Area code. This can be Pincode, ZIP code or any equivalent
-    Agent:
-      description: Describes an order executor
-      $ref: "#/components/schemas/Contact"
-    Authorization:
-      description: Describes an authorization mechanism
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          type: string
-          description: Type of authorization mechanism used
-        token:
-          type: string
-          description: Token used for authorization
-        valid_from:
-          type: string
-          format: date-time
-          description: Timestamp in RFC3339 format from which token is valid
-        valid_to:
-          type: string
-          format: date-time
-          description: Timestamp in RFC3339 format until which token is valid
-    Billing:
-      description: Describes a billing event
-      type: object
-      additionalProperties: false
-      properties:
-        tax_number:
-          description: Tax identification number for billing
-          type: string
-        name:
-          description: Personal details of the customer needed for billing.
-          type: string
-        address:
-          $ref: "#/components/schemas/Address"
-        email:
-          type: string
-          format: email
-        phone:
-          type: string
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-    Cancellation:
-      description: Describes a cancellation event
-      type: object
-      additionalProperties: false
-      properties:
-        type:
-          type: string
-          enum:
-            - full
-            - partial
-        ref_id:
-          type: string
-        time:
-          type: string
-          format: date-time
-        cancelled_by:
-          type: string
-        reasons:
-          $ref: "#/components/schemas/Option"
-        selected_reason:
-          type: object
-          properties:
-            id:
-              $ref: "#/components/schemas/Option/properties/id"
-        additional_description:
-          $ref: "#/components/schemas/Descriptor"
-    CancellationTerm:
-      description: Describes the cancellation terms of an item or an order. This can
-        be referenced at an item or order level. Item-level cancellation terms
-        can override the terms at the order level.
-      type: object
-      additionalProperties: false
-      properties:
-        fulfillment_state:
-          description: The state of fulfillment during which these terms are applicable.
-          $ref: "#/components/schemas/FulfillmentState"
-        cancellation_fee:
-          $ref: "#/components/schemas/Fee"
-        external_ref:
-          $ref: "#/components/schemas/MediaFile"
-    Catalog:
-      description: Describes a Seller App catalog
-      additionalProperties: false
-      type: object
-      properties:
-        bpp/descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        bpp/providers:
-          type: array
-          items:
-            $ref: "#/components/schemas/Provider"
-        bpp/fulfillments:
-          type: array
-          items:
-            $ref: "#/components/schemas/Fulfillment"
-      required:
-        - bpp/providers
-    Category:
-      description: Describes a category
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique id of the category
-        parent_category_id:
-          type: string
-          description: Unique id of the parent category
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        time:
-          $ref: "#/components/schemas/Time"
-        image:
-          description: "Image of an object. <br/><br/> A url based image will look like
-            <br/><br/>```uri:http://path/to/image``` <br/><br/> An image can
-            also be sent as a data string. For example : <br/><br/>
-            ```data:js87y34ilhriuho84r3i4```"
-          type: string
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    IntentCategory:
-      description: Describes a category
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique id of the category
-    Circle:
-      description: Describes a circular area on the map
-      additionalProperties: false
-      type: object
-      properties:
-        gps:
-          $ref: "#/components/schemas/Gps"
-        radius:
-          $ref: "#/components/schemas/Scalar"
-      required:
-        - gps
-        - radius
-    City:
-      description: Describes a city
-      additionalProperties: false
-      type: object
-      properties:
-        name:
-          type: string
-          description: Name of the city
-        code:
-          type: string
-          description: Codification of city code will be using the std code of the city
-            e.g. for Bengaluru, city code is 'std:080'
-    Contact:
-      additionalProperties: false
-      type: object
-      properties:
-        name:
-          type: string
-        phone:
-          type: string
-        email:
-          type: string
-    Context:
-      description: Describes a ONDC message context
-      additionalProperties: false
-      type: object
-      properties:
-        domain:
-          $ref: "#/components/schemas/Domain"
-        country:
-          $ref: "#/components/schemas/Country/properties/code"
-        city:
-          $ref: "#/components/schemas/City/properties/code"
-        action:
-          type: string
-          description: Defines the ONDC API call. Any actions other than the enumerated
-            actions are not supported by ONDC Protocol
-          enum:
-            - search
-            - select
-            - init
-            - confirm
-            - update
-            - status
-            - track
-            - cancel
-            - on_search
-            - on_select
-            - on_init
-            - on_confirm
-            - on_update
-            - on_status
-            - on_track
-            - on_cancel
-        core_version:
-          type: string
-          description: Version of ONDC core API specification being used
-        bap_id:
-          type: string
-          description: Unique id of the Buyer App. By default it is the fully qualified
-            domain name of the Buyer App
-        bap_uri:
-          type: string
-          format: uri
-          description: URI of the Buyer App for accepting callbacks. Must have the same
-            domain name as the bap_id
-        bpp_id:
-          type: string
-          description: Unique id of the Seller App. By default it is the fully qualified
-            domain name of the Seller App, mandatory for all peer-to-peer API
-            requests, i.e. except search and on_search
-        bpp_uri:
-          type: string
-          format: uri
-          description: URI of the Seller App. Must have the same domain name as the
-            bap_id, mandatory for all peer-to-peer API requests, i.e. except
-            search and on_search
-        transaction_id:
-          type: string
-          description: This is a unique value which persists across all API calls from
-            search through confirm
-        message_id:
-          type: string
-          description: This is a unique value which persists during a request / callback
-            cycle
-        timestamp:
-          type: string
-          format: date-time
-          description: Time of request generation in RFC3339 format
-        key:
-          type: string
-          description: The encryption public key of the sender
-        ttl:
-          type: string
-          description: Timestamp for which this message holds valid in ISO8601 durations
-            format - Outer limit for ttl for search, select, init, confirm,
-            status, track, cancel, update, rating, support is 'PT30S' which is
-            30 seconds, different buyer apps can change this to meet their UX
-            requirements, but it shouldn't exceed this outer limit
-      required:
-        - domain
-        - action
-        - core_version
-        - bap_id
-        - bap_uri
-        - transaction_id
-        - message_id
-        - city
-        - country
-        - timestamp
-    Country:
-      description: Describes a country.
-      additionalProperties: false
-      type: object
-      properties:
-        name:
-          type: string
-          description: Name of the country
-        code:
-          type: string
-          description: Country code as per ISO 3166 Alpha-3 code format
-    CountryState:
-      description: Describes a state.
-      additionalProperties: false
-      type: object
-      properties:
-        name:
-          type: string
-          description: Name of the state
-        code:
-          type: string
-          description: State code as per ISO 3166 Alpha-2 code format
-    Credential:
-      description: Describes a credential of an entity - Person or Organization
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        url:
-          description: URL of the credential
-          type: string
-          format: uri
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    DecimalValue:
-      description: Describes a decimal value
-      type: string
-      pattern: "[+-]?([0-9]*[.])?[0-9]+"
-    Descriptor:
-      description: Describes the description of a real-world object.
-      additionalProperties: false
-      type: object
-      properties:
-        name:
-          type: string
-        code:
-          type: string
-        symbol:
-          type: string
-        short_desc:
-          type: string
-        long_desc:
-          type: string
-        images:
-          type: array
-          items:
-            $ref: "#/components/schemas/Image"
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-        additional_desc:
-          additionalProperties: false
-          type: object
-          description: Additional description of the object. This can be used to send
-            additional information about the object which is not covered in the
-            other fields
-          properties:
-            content_type:
-              type: string
-              description: Content type of the Instruction.
-              enum:
-                - text/plain
-                - text/html
-            url:
-              type: string
-              description: URL for additional instructions or details
-    FulfillmentDescriptor:
-      description: Describes the description of a real-world object.
-      additionalProperties: false
-      type: object
-      properties:
-        code:
-          type: string
-        name:
-          type: string
-        short_desc:
-          type: string
-    Dimensions:
-      description: Describes the dimensions of a real-world object
-      additionalProperties: false
-      type: object
-      properties:
-        length:
-          $ref: "#/components/schemas/Scalar"
-        breadth:
-          $ref: "#/components/schemas/Scalar"
-        height:
-          $ref: "#/components/schemas/Scalar"
-    Document:
-      description: Describes a document which can be sent as a url
-      additionalProperties: false
-      type: object
-      properties:
-        url:
-          type: string
-          format: uri
-        label:
-          type: string
-    Domain:
-      description: Codification of domain for ONDC
-      type: string
-      enum:
-        - ONDC:RET10
-        - ONDC:RET11
-        - ONDC:RET12
-        - ONDC:RET13
-        - ONDC:RET14
-        - ONDC:RET15
-        - ONDC:RET16
-        - ONDC:RET18
-        - ONDC:RET19
-    Duration:
-      description: Describes duration as per ISO8601 format
-      type: string
-    Error:
-      description: Describes an error object
-      additionalProperties: false
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-            - CONTEXT-ERROR
-            - CORE-ERROR
-            - DOMAIN-ERROR
-            - JSON-SCHEMA-ERROR
-        code:
-          type: string
-          description: ONDC specific error code. For full list of error codes, refer to
-            docs/drafts/Error Codes.md of this repo
-        path:
-          type: string
-          description: Path to json schema generating the error. Used only during json
-            schema validation errors
-        message:
-          type: string
-          description: Human readable message describing the error
-      required:
-        - type
-        - code
-    Fee:
-      description: A fee applied on a particular entity
-      additionalProperties: false
-      type: object
-      properties:
-        percentage:
-          description: Percentage of a value
-          $ref: "#/components/schemas/DecimalValue"
-        amount:
-          description: A fixed value
-          $ref: "#/components/schemas/Price"
-    Fulfillment:
-      description: Describes how a single product/service will be rendered/fulfilled
-        to the end customer
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique reference ID to the fulfillment of an order
-        type:
-          type: string
-          description: This describes the type of fulfillment ("Pickup" - Buyer picks up
-            from store by themselves or through their logistics provider;
-            "Delivery" - seller delivers to buyer)
-          enum:
-            - Delivery
-            - Pickup
-            - Delivery and Pickup
-        contact:
-          $ref: "#/components/schemas/Contact"
-        state:
-          type: string
-          description: Fulfillment state of an order
-      required:
-        - id
-        - type
-    IntentFulfillment:
-      description: Describes how a single product/service will be rendered/fulfilled
-        to the end customer
-      additionalProperties: false
-      type: object
-      properties:
-        type:
-          type: string
-          description: This describes the type of fulfillment ("Pickup" - Buyer picks up
-            from store by themselves or through their logistics provider;
-            "Delivery" - seller delivers to buyer)
-          enum:
-            - Delivery
-            - Pickup
-            - Delivery and Pickup
-        end:
-          description: Details on the end of fulfillment
-          additionalProperties: false
-          type: object
-          properties:
-            location:
-              description: Describes an address
-              additionalProperties: false
-              type: object
-              properties:
-                address:
-                  additionalProperties: false
-                  type: object
-                  description: Address object
-                  properties:
-                    area_code:
-                      type: string
-                      description: Area code. This can be Pincode, ZIP code or any equivalent
-                gps:
-                  description: Describes a gps coordinate
-                  type: string
-                  pattern: ^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$
-    OrderFulfillment:
-      description: Describes how a single product/service will be rendered/fulfilled
-        to the end customer
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique reference ID to the fulfillment of an order
-        type:
-          type: string
-          description: This describes the type of fulfillment ("Pickup" - Buyer picks up
-            from store by themselves or through their logistics provider;
-            "Delivery" - seller delivers to buyer)
-          enum:
-            - Delivery
-            - Pickup
-            - Delivery and Pickup
-            - Reverse QC
-        "@ondc/org/category":
-          type: string
-        "@ondc/org/TAT":
-          description: fulfillment turnaround time in ISO8601 durations format e.g.
-            'PT24H' indicates 24 hour TAT
-          type: string
-        "@ondc/org/provider_name":
-          type: string
-        provider_id:
-          type: string
-        vehicle:
-          $ref: "#/components/schemas/Vehicle"
-        agent:
-          $ref: "#/components/schemas/Agent"
-        rating:
-          $ref: "#/components/schemas/Rating/properties/value"
-        state:
-          $ref: "#/components/schemas/FulfillmentState"
-        tracking:
-          type: boolean
-          description: Indicates whether the fulfillment allows tracking
-          default: false
-        start:
-          description: Details on the start of fulfillment
-          additionalProperties: false
-          type: object
-          properties:
-            location:
-              $ref: "#/components/schemas/FulfillmentLocation"
-            time:
-              $ref: "#/components/schemas/Time"
-            instructions:
-              $ref: "#/components/schemas/Descriptor"
-            contact:
-              $ref: "#/components/schemas/Contact"
-            person:
-              $ref: "#/components/schemas/Person"
-            authorization:
-              $ref: "#/components/schemas/Authorization"
-        end:
-          description: Details on the end of fulfillment
-          additionalProperties: false
-          type: object
-          properties:
-            location:
-              $ref: "#/components/schemas/FulfillmentLocation"
-            time:
-              $ref: "#/components/schemas/Time"
-            instructions:
-              $ref: "#/components/schemas/Descriptor"
-            contact:
-              $ref: "#/components/schemas/Contact"
-            person:
-              $ref: "#/components/schemas/Person"
-            authorization:
-              $ref: "#/components/schemas/Authorization"
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-      required:
-        - id
-        - type
-    Gps:
-      description: Describes a gps coordinate
-      type: string
-      pattern: ^[-+]?([1-8]?\d(\.\d+)?|90(\.0+)?),\s*[-+]?(180(\.0+)?|((1[0-7]\d)|([1-9]?\d))(\.\d+)?)$
-    Image:
-      description: "Image of an object. <br/><br/> A url based image will look like
-        <br/><br/>```uri:http://path/to/image``` <br/><br/> An image can also be
-        sent as a data string. For example : <br/><br/>
-        ```data:js87y34ilhriuho84r3i4```"
-      type: string
-    Intent:
-      description: Intent of a user. Used for searching for services. Buyer App can
-        set finder fee type in payment."@ondc/org/buyer_app_finder_fee_type" and
-        amount in "@ondc/org/buyer_app_finder_fee_amount"
-      additionalProperties: false
-      type: object
-      properties:
-        fulfillment:
-          $ref: "#/components/schemas/IntentFulfillment"
-        payment:
-          $ref: "#/components/schemas/IntentPayment"
-        category:
-          $ref: "#/components/schemas/IntentCategory"
-        provider:
-          $ref: "#/components/schemas/IntentProvider"
-        item:
-          description: Describes a item
-          additionalProperties: false
-          type: object
-          properties:
-            descriptor:
-              additionalProperties: false
-              type: object
-              properties:
-                name:
-                  type: string
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    ItemQuantity:
-      description: Describes count or amount of an item
-      additionalProperties: false
-      type: object
-      properties:
-        available:
-          additionalProperties: false
-          type: object
-          properties:
-            count:
-              type: string
-        maximum:
-          additionalProperties: false
-          type: object
-          properties:
-            count:
-              type: string
-        minimum:
-          additionalProperties: false
-          type: object
-          properties:
-            count:
-              type: string
-        unitized:
-          description: This represents the quantity available in a single unit of the item
-          additionalProperties: false
-          type: object
-          properties:
-            count:
-              type: string
-            measure:
-              additionalProperties: false
-              type: object
-              properties:
-                unit:
-                  type: string
-                value:
-                  type: string
-        count:
-          type: integer
-    Item:
-      description: Describes a product or a service offered to the end consumer by the
-        provider
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          description: This is the most unique identifier of a service item. An example of
-            an Item ID could be the SKU of a product.
-          type: string
-        parent_item_id:
-          description: This is the most unique identifier of a service item. An example of
-            an Item ID could be the SKU of a product.
-          type: string
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        price:
-          description: Describes the price of an item. Allows for domain extension.
-          additionalProperties: false
-          type: object
-          properties:
-            currency:
-              type: string
-              description: ISO 4217 alphabetic currency code e.g. 'INR'
-            value:
-              $ref: "#/components/schemas/DecimalValue"
-            maximum_value:
-              $ref: "#/components/schemas/DecimalValue"
-            tags:
-              type: array
-              items:
-                $ref: "#/components/schemas/TagGroup"
-        quantity:
-          anyOf:
-            - type: integer
-            - $ref: "#/components/schemas/ItemQuantity"
-        category_id:
-          $ref: "#/components/schemas/Category/properties/id"
-        category_ids:
-          description: Categories this item can be listed under
-          type: array
-          items:
-            $ref: "#/components/schemas/Category/properties/id"
-        fulfillment_id:
-          $ref: "#/components/schemas/Fulfillment/properties/id"
-        fulfillment_ids:
-          type: array
-          items:
-            type: string
-            description: Unique reference ID to the fulfillment of an order
-        replacement_terms:
-          type: array
-          items:
-            additionalProperties: false
-            type: object
-            properties:
-              replace_within:
-                additionalProperties: false
-                type: object
-                properties:
-                  duration:
-                    type: string
-                    description: The duration within which the item can be replaced
-        location_id:
-          $ref: "#/components/schemas/Location/properties/id"
-        time:
-          $ref: "#/components/schemas/Time"
-        related:
-          type: boolean
-        recommended:
-          type: boolean
-        "@ondc/org/returnable":
-          description: whether the item is returnable
-          type: boolean
-        "@ondc/org/seller_pickup_return":
-          description: in case of return, whether the item should be picked up by seller
-          type: boolean
-        "@ondc/org/return_window":
-          description: return window for the item in ISO8601 durations format e.g. 'PT24H'
-            indicates 24 hour return window. Mandatory if "@ondc/org/returnable"
-            is "true"
-          type: string
-        "@ondc/org/cancellable":
-          description: whether the item is cancellable
-          type: boolean
-        "@ondc/org/time_to_ship":
-          description: time from order confirmation by which item ready to ship in ISO8601
-            durations format (e.g. 'PT30M' indicates item ready to ship in 30
-            mins). Mandatory for category_id "F&B"
-          type: string
-        "@ondc/org/available_on_cod":
-          description: whether the catalog item is available on COD
-          type: boolean
-        "@ondc/org/contact_details_consumer_care":
-          description: contact details for consumer care
-          type: string
-        "@ondc/org/statutory_reqs_packaged_commodities":
-          additionalProperties: false
-          type: object
-          description: mandatory for category_id "Packaged Commodities"
-          properties:
-            common_or_generic_name_of_commodity:
-              description: common or generic name of commodity
-              type: string
-            month_year_of_manufacture_packing_import:
-              description: month and year of manufacture or packing or import
-              type: string
-            manufacturer_or_packer_name:
-              description: name of manufacturer or packer (in case manufacturer is not the
-                packer) or name of importer for imported goods
-              type: string
-            manufacturer_or_packer_address:
-              description: address of manufacturer or packer (in case manufacturer is not the
-                packer) or address of importer for imported goods
-              type: string
-            mfg_license_no:
-              description: manufacturing license no
-              type: string
-            multiple_products_name_number_or_qty:
-              description: for packages with multiple products, the name and number of
-                quantity of each (can be shown as "name1-number_or_quantity;
-                name2-number_or_quantity..")
-              type: string
-            net_quantity_or_measure_of_commodity_in_pkg:
-              description: net quantity of commodity in terms of standard unit of weight or
-                measure of commodity contained in package
-              type: string
-            expiry_date:
-              description: month and year of expiry
-              type: string
-        "@ondc/org/statutory_reqs_prepackaged_food":
-          additionalProperties: false
-          type: object
-          description: mandatory for category_id "Packaged food"
-          properties:
-            nutritional_info:
-              description: nutritional info (can be shown as nutritional info (with unit, per
-                standard unit, per serving);..) e.g. "Energy(KCal) - (per 100kg)
-                420, (per serving 50g) 250; Protein(g) - (per 100kg) 12, (per
-                serving 50g)6;.."
-              type: string
-            additives_info:
-              description: food additives together with specific name or recognized
-                International Numbering System (can be shown as additive1-name
-                or number;additive2-name or number;..)
-              type: string
-            brand_owner_FSSAI_license_no:
-              description: FSSAI license no of brand owner
-              type: string
-            other_FSSAI_license_no:
-              description: FSSAI license no of manufacturer or marketer or packer or bottler
-                if different from brand owner
-              type: string
-            importer_FSSAI_license_no:
-              description: FSSAI license no of importer
-              type: string
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    OrderItem:
-      description: Describes a product or a service offered to the end consumer by the
-        provider
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          description: This is the most unique identifier of a service item. An example of
-            an Item ID could be the SKU of a product.
-          type: string
-        descriptor:
-          description: Describes the description of a real-world object.
-          additionalProperties: false
-          type: object
-          properties:
-            tags:
-              type: array
-              items:
-                $ref: "#/components/schemas/TagGroup"
-        parent_item_id:
-          description: This is the most unique identifier of a service item. An example of
-            an Item ID could be the SKU of a product.
-          type: string
-        location_id:
-          description: This is the most unique identifier of a location item.
-          type: string
-        fulfillment_id:
-          type: string
-          description: Unique reference ID to the fulfillment of an order
-        fulfillment_ids:
-          type: array
-          items:
-            type: string
-            description: Unique reference ID to the fulfillment of an order
-        quantity:
-          additionalProperties: false
-          type: object
-          properties:
-            count:
-              type: integer
-              minimum: 0
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    Language:
-      description: indicates language code. ONDC supports language codes as per ISO
-        639.2 standard
-      additionalProperties: false
-      type: object
-      properties:
-        code:
-          type: string
-    Location:
-      description: Describes the location of a runtime object.
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        gps:
-          $ref: "#/components/schemas/Gps"
-        address:
-          $ref: "#/components/schemas/Address"
-        city:
-          $ref: "#/components/schemas/City"
-        state:
-          $ref: "#/components/schemas/CountryState"
-        time:
-          $ref: "#/components/schemas/Time"
-        circle:
-          $ref: "#/components/schemas/Circle"
-    IntentLocation:
-      description: Describes the location of a runtime object.
-      additionalProperties: false
-      type: object
-      properties:
-        gps:
-          $ref: "#/components/schemas/Gps"
-        address:
-          $ref: "#/components/schemas/Address"
-    FulfillmentLocation:
-      description: Describes the location of a runtime object.
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-        descriptor:
-          $ref: "#/components/schemas/FulfillmentDescriptor"
-        gps:
-          $ref: "#/components/schemas/Gps"
-        address:
-          $ref: "#/components/schemas/Address"
-        location:
-          $ref: "#/components/schemas/Location"
-    TrackLocation:
-      description: Describes the location of a runtime object.
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-        gps:
-          $ref: "#/components/schemas/Gps"
-        time:
-          additionalProperties: false
-          type: object
-          properties:
-            timestamp:
-              type: string
-              format: date-time
-        updated_at:
-          type: string
-          format: date-time
-    Name:
-      type: string
-      description: Describes the name of a person.
-    MediaFile:
-      description: This object contains a url to a media file.
-      additionalProperties: false
-      type: object
-      properties:
-        mimetype:
-          description: indicates the nature and format of the document, file, or
-            assortment of bytes. MIME types are defined and standardized in
-            IETF's RFC 6838
-          type: string
-        url:
-          description: The URL of the file
-          type: string
-          format: uri
-        signature:
-          description: The digital signature of the file signed by the sender
-          type: string
-        dsa:
-          description: The signing algorithm used by the sender
-          type: string
-    Offer:
-      description: Describes an offer
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        location_ids:
-          type: array
-          items:
-            $ref: "#/components/schemas/Location/properties/id"
-        category_ids:
-          description: Categories this item can be listed under
-          type: array
-          items:
-            $ref: "#/components/schemas/Category/properties/id"
-        item_ids:
-          type: array
-          items:
-            $ref: "#/components/schemas/Item/properties/id"
-        time:
-          $ref: "#/components/schemas/Time"
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    Operator:
-      description: Describes the agent of a service
-      allOf:
-        - $ref: "#/components/schemas/Person"
-        - properties:
-            experience:
-              additionalProperties: false
-              type: object
-              properties:
-                label:
-                  type: string
-                value:
-                  type: string
-                unit:
-                  type: string
-    Option:
-      description: Describes a selectable option
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-    Order:
-      description: Describes the details of an order
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique identifier for Order across the network
-        state:
-          type: string
-        provider:
-          additionalProperties: false
-          type: object
-          properties:
-            id:
-              $ref: "#/components/schemas/Provider/properties/id"
-            locations:
-              type: array
-              maxItems: 1
-              items:
-                additionalProperties: false
-                type: object
-                properties:
-                  id:
-                    $ref: "#/components/schemas/Location/properties/id"
-            creds:
-              type: array
-              items:
-                additionalProperties: false
-                type: object
-                properties:
-                  descriptor:
-                    additionalProperties: false
-                    type: object
-                    properties:
-                      code:
-                        type: string
-                      short_desc:
-                        type: string
-        items:
-          type: array
-          items:
-            $ref: "#/components/schemas/OrderItem"
-        offers:
-          type: array
-          items:
-            $ref: "#/components/schemas/Offer"
-        documents:
-          type: array
-          items:
-            $ref: "#/components/schemas/Document"
-        billing:
-          $ref: "#/components/schemas/Billing"
-        fulfillments:
-          type: array
-          items:
-            $ref: "#/components/schemas/OrderFulfillment"
-        cancellation_terms:
-          description: The cancellation terms of this order. This can be overriden at the
-            item level cancellation terms.
-          type: array
-          items:
-            $ref: "#/components/schemas/CancellationTerm"
-        cancellation:
-          additionalProperties: false
-          type: object
-          properties:
-            cancelled_by:
-              type: string
-              minLength: 1
-            reason:
-              additionalProperties: false
-              type: object
-              properties:
-                id:
-                  type: string
-                  minLength: 1
-                state:
-                  type: string
-              required:
-                - id
-                - state
-          required:
-            - cancelled_by
-            - reason
-        quote:
-          $ref: "#/components/schemas/Quotation"
-        payment:
-          $ref: "#/components/schemas/Payment"
-        created_at:
-          type: string
-          format: date-time
-        updated_at:
-          type: string
-          format: date-time
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    Organization:
-      description: Describes an organization
-      additionalProperties: false
-      type: object
-      properties:
-        name:
-          type: string
-        cred:
-          type: string
-        org:
-          type: object
-          additionalProperties: false
-          properties:
-            name:
-              type: string
-        contact:
-          type: object
-          additionalProperties: false
-          properties:
-            phone:
-              type: string
-            email:
-              type: string
-              format: email
-        person:
-          type: object
-          additionalProperties: false
-          properties:
-            name:
-              type: string
-    Payment:
-      description: Describes a payment
-      additionalProperties: false
-      type: object
-      properties:
-        uri:
-          type: string
-          description: "A payment uri to be called by the Buyer App. If empty, then the
-            payment is to be done offline. The details of payment should be
-            present in the params object. If ```tl_method``` = http/get, then
-            the payment details will be sent as url params. Two url param
-            values, ```$transaction_id``` and ```$amount``` are mandatory. And
-            example url would be :
-            https://www.example.com/pay?txid=$transaction_id&amount=$amount&vpa\
-            =upiid&payee=shopez&billno=1234"
-          format: uri
-        tl_method:
-          type: string
-          enum:
-            - http/get
-            - http/post
-            - payto
-            - upi
-        params:
-          additionalProperties: false
-          type: object
-          properties:
-            transaction_id:
-              type: string
-              description: This value will be placed in the the $transaction_id url param in
-                case of http/get and in the requestBody http/post requests
-            transaction_status:
-              type: string
-            amount:
-              $ref: "#/components/schemas/DecimalValue"
-            currency:
-              $ref: "#/components/schemas/Price/properties/currency"
-          required:
-            - currency
-        type:
-          type: string
-          enum:
-            - ON-ORDER
-            - ON-FULFILLMENT
-            - POST-FULFILLMENT
-        status:
-          type: string
-          enum:
-            - PAID
-            - NOT-PAID
-        time:
-          $ref: "#/components/schemas/Time"
-        collected_by:
-          type: string
-          enum:
-            - BAP
-            - BPP
-        "@ondc/org/buyer_app_finder_fee_type":
-          type: string
-          enum:
-            - Amount
-            - Percent
-        "@ondc/org/buyer_app_finder_fee_amount":
-          $ref: "#/components/schemas/DecimalValue"
-        "@ondc/org/withholding_amount":
-          $ref: "#/components/schemas/DecimalValue"
-        "@ondc/org/return_window":
-          description: return window for withholding amount in ISO8601 durations format
-            e.g. 'PT24H' indicates 24 hour return window
-          type: string
-        "@ondc/org/settlement_basis":
-          description: In case of prepaid payment, whether settlement between
-            counterparties should be on the basis of collection, shipment or
-            delivery
-          type: string
-          enum:
-            - shipment
-            - delivery
-            - return_window_expiry
-        "@ondc/org/settlement_window":
-          description: settlement window for the counterparty in ISO8601 durations format
-            e.g. 'PT48H' indicates 48 hour return window
-          type: string
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-        "@ondc/org/settlement_details":
-          type: array
-          items:
-            additionalProperties: false
-            type: object
-            properties:
-              settlement_counterparty:
-                type: string
-                enum:
-                  - buyer
-                  - buyer-app
-                  - seller-app
-                  - logistics-provider
-              settlement_phase:
-                type: string
-                enum:
-                  - sale-amount
-                  - withholding-amount
-                  - refund
-              settlement_amount:
-                type: string
-              settlement_type:
-                type: string
-                enum:
-                  - neft
-                  - rtgs
-                  - upi
-              settlement_bank_account_no:
-                type: string
-              settlement_ifsc_code:
-                type: string
-              settlement_reference:
-                type: string
-              upi_address:
-                description: UPI payment address e.g. VPA
-                type: string
-              bank_name:
-                description: Bank name
-                type: string
-              branch_name:
-                description: Branch name
-                type: string
-              beneficiary_name:
-                description: Beneficiary Name
-                type: string
-              settlement_status:
-                type: string
-                enum:
-                  - PAID
-                  - NOT-PAID
-              settlement_timestamp:
-                description: Settlement transaction timestamp
-                type: string
-                format: date-time
-    IntentPayment:
-      description: Describes a payment in search intent.
-      additionalProperties: false
-      type: object
-      properties:
-        "@ondc/org/buyer_app_finder_fee_type":
-          type: string
-          enum:
-            - Amount
-            - Percent
-        "@ondc/org/buyer_app_finder_fee_amount":
-          $ref: "#/components/schemas/DecimalValue"
-      required:
-        - "@ondc/org/buyer_app_finder_fee_type"
-        - "@ondc/org/buyer_app_finder_fee_amount"
-    Person:
-      description: Describes a person.
-      additionalProperties: false
-      type: object
-      properties:
-        name:
-          $ref: "#/components/schemas/Name"
-    Price:
-      description: Describes the price of an item. Allows for domain extension.
-      additionalProperties: false
-      type: object
-      properties:
-        currency:
-          type: string
-          description: ISO 4217 alphabetic currency code e.g. 'INR'
-        value:
-          $ref: "#/components/schemas/DecimalValue"
-        tags:
-          $ref: "#/components/schemas/TagGroup"
-    Provider:
-      description: Describes a service provider. This can be a restaurant, a hospital,
-        a Store etc
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-          description: Id of the provider
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        category_id:
-          type: string
-          description: Category Id of the provider
-        "@ondc/org/fssai_license_no":
-          type: string
-          description: FSSAI license no. Mandatory for category_id "F&B"
-        time:
-          $ref: "#/components/schemas/Time"
-        categories:
-          type: array
-          items:
-            $ref: "#/components/schemas/Category"
-        creds:
-          type: array
-          items:
-            $ref: "#/components/schemas/Credential"
-        fulfillments:
-          type: array
-          items:
-            $ref: "#/components/schemas/Fulfillment"
-        locations:
-          type: array
-          items:
-            $ref: "#/components/schemas/Location"
-        offers:
-          type: array
-          items:
-            $ref: "#/components/schemas/Offer"
-        items:
-          type: array
-          items:
-            $ref: "#/components/schemas/Item"
-        ttl:
-          type: string
-          description: Validity of catalog in ISO8601 durations format after which it has
-            to be refreshed e.g. 'P7D' indicates validity of 7 days; value of 0
-            indicates catalog is not cacheable
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    IntentProvider:
-      description: Describes a provider in the intent
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          type: string
-          description: Unique id of the provider
-      required:
-        - id
-    Quotation:
-      description: Describes a quote
-      additionalProperties: false
-      type: object
-      properties:
-        price:
-          $ref: "#/components/schemas/Price"
-        breakup:
-          type: array
-          items:
-            additionalProperties: false
-            type: object
-            properties:
-              "@ondc/org/item_id":
-                $ref: "#/components/schemas/Item/properties/id"
-              "@ondc/org/item_quantity":
-                additionalProperties: false
-                type: object
-                properties:
-                  count:
-                    type: integer
-                    minimum: 0
-              "@ondc/org/title_type":
-                type: string
-                enum:
-                  - item
-                  - delivery
-                  - packing
-                  - tax
-                  - misc
-                  - discount
-              item:
-                additionalProperties: false
-                type: object
-                properties:
-                  quantity:
-                    additionalProperties: false
-                    type: object
-                    properties:
-                      available:
-                        $ref: "#/components/schemas/ItemQuantity/properties/available"
-                      maximum:
-                        $ref: "#/components/schemas/ItemQuantity/properties/maximum"
-                  parent_item_id:
-                    $ref: "#/components/schemas/Item/properties/parent_item_id"
-                  price:
-                    $ref: "#/components/schemas/Price"
-                  tags:
-                    type: array
-                    items:
-                      $ref: "#/components/schemas/TagGroup"
-              title:
-                type: string
-              price:
-                $ref: "#/components/schemas/Price"
-              ttl:
-                $ref: "#/components/schemas/Duration"
-        ttl:
-          type: string
-          description: Validity of quote in ISO8601 durations format after which it has to
-            be refreshed e.g. 'P7D' indicates validity of 7 days; value of 0
-            indicates quote is not cacheable
-    Rateable:
-      description: If the entity can be rated or not
-      type: boolean
-    Rating:
-      description: Describes the rating of a person or an object.
-      additionalProperties: false
-      type: object
-      properties:
-        value:
-          description: Rating value given to the object (1 - Poor; 2 - Needs improvement;
-            3 - Satisfactory; 4 - Good; 5 - Excellent)
-          type: string
-          enum:
-            - "1"
-            - "2"
-            - "3"
-            - "4"
-            - "5"
-    Scalar:
-      description: An object representing a scalar quantity.
-      additionalProperties: false
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-            - CONSTANT
-            - VARIABLE
-        value:
-          type: string
-        estimated_value:
-          type: number
-        computed_value:
-          type: number
-        range:
-          additionalProperties: false
-          type: object
-          properties:
-            min:
-              type: number
-            max:
-              type: number
-        unit:
-          type: string
-      required:
-        - value
-        - unit
-    Schedule:
-      description: Describes a schedule
-      type: object
-      properties:
-        frequency:
-          $ref: "#/components/schemas/Duration"
-        holidays:
-          type: array
-          items:
-            type: string
-            format: date
-        times:
-          type: array
-          items:
-            type: string
-    State:
-      description: Describes a state
-      additionalProperties: false
-      type: object
-      properties:
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        updated_at:
-          type: string
-          format: date-time
-        updated_by:
-          type: string
-          description: ID of entity which changed the state
-    FulfillmentState:
-      description: Describes a state
-      additionalProperties: false
-      type: object
-      properties:
-        descriptor:
-          $ref: "#/components/schemas/FulfillmentDescriptor"
-        updated_at:
-          type: string
-          format: date-time
-    Subscriber:
-      additionalProperties: false
-      type: object
-      description: Any entity which wants to authenticate itself on a network. This
-        can be a Buyer App, Seller App or Gateway.
-      properties:
-        subscriber_id:
-          type: string
-          description: Registered domain name of the subscriber. Must have a valid SSL
-            certificate issued by a Certificate Authority of the operating
-            region
-        type:
-          type: string
-          enum:
-            - bap
-            - bpp
-            - bg
-        cb_url:
-          type: string
-          description: Callback URL of the subscriber. The Registry will call this URL's
-            on_subscribe API to validate the subscriber\'s credentials
-        domain:
-          $ref: "#/components/schemas/Domain"
-        city:
-          $ref: "#/components/schemas/City/properties/code"
-        country:
-          $ref: "#/components/schemas/Country/properties/code"
-        signing_public_key:
-          type: string
-          description: Signing Public key of the subscriber. <br/><br/>Any subscriber
-            platform (Buyer App, Seller App, Gateway) who wants to transact on
-            the network must digitally sign the ```requestBody``` using the
-            corresponding private key of this public key and send it in the
-            transport layer header. In case of ```HTTP``` it is the
-            ```Authorization``` header. <br><br/>The ```Authorization``` will be
-            used to validate the signature of a Buyer App or Seller
-            App.<br/><br/>Furthermore, if an API call is being proxied or
-            multicast by a ONDC Gateway, the Gateway must use it\'s signing key
-            to digitally sign the ```requestBody``` using the corresponding
-            private key of this public key and send it in the
-            ```X-Gateway-Authorization``` header.
-        encryption_public_key:
-          type: string
-          description: Encryption public key of the Buyer App. Any Seller App must encrypt
-            the ```requestBody.message``` value of the ```on_search``` API using
-            this public key.
-        status:
-          type: string
-          enum:
-            - INITIATED
-            - UNDER_SUBSCRIPTION
-            - SUBSCRIBED
-            - INVALID_SSL
-            - UNSUBSCRIBED
-        created:
-          type: string
-          description: Timestamp when a subscriber was added to the registry with status =
-            INITIATED
-          format: date-time
-        updated:
-          type: string
-          format: date-time
-        expires:
-          type: string
-          description: Expiry timestamp in UTC derived from the ```lease_time``` of the
-            subscriber
-          format: date-time
-    Support:
-      description: Customer support
-      additionalProperties: false
-      type: object
-      properties:
-        type:
-          type: string
-          enum:
-            - order
-            - billing
-            - fulfillment
-        ref_id:
-          type: string
-        channels:
-          $ref: "#/components/schemas/TagGroup"
-    Tag:
-      description: Describes a tag. This is a simple key-value store which is used to
-        contain extended metadata. This object can be added as a property to any
-        schema to describe extended attributes. For BAPs, tags can be sent
-        during search to optimize and filter search results. BPPs can use tags
-        to index their catalog to allow better search functionality. Tags are
-        sent by the BPP as part of the catalog response in the `on_search`
-        callback. Tags are also meant for display purposes. Upon receiving a
-        tag, BAPs are meant to render them as name-value pairs. This is
-        particularly useful when rendering tabular information about a product
-        or service.
-      type: object
-      properties:
-        code:
-          description: The machine-readable name of the tag. The allowed values of this
-            property can be published at three levels namely, a) Core
-            specification, b) industry sector-specific adaptations, and c)
-            Network-specific adaptations. Except core, each adaptation (sector
-            or network) should prefix a unique namespace with the allowed value.
-          type: string
-        name:
-          description: The human-readable name of the tag. This set by the BPP and
-            rendered as-is by the BAP. Sometimes, the network policy may reserve
-            some names for this property. Values outside the reserved values can
-            be set by the BPP. However,the BAP may choose to rename or even
-            ignore this value and render the output purely using the `code`
-            property, but it is recommended for BAPs to keep the name same to
-            avoid confusion and provide consistency.
-          type: string
-        value:
-          description: The value of the tag. This set by the BPP and rendered as-is by the
-            BAP.
-          type: string
-    TagGroup:
-      description: A collection of tag objects with group level attributes. For
-        detailed documentation on the Tags and Tag Groups schema go to
-        https://github.com/beckn/protocol-specifications/discussions/316
-      type: object
-      properties:
-        code:
-          description: The machine-readable name of the tag group. The allowed values of
-            this property can be published at three levels namely, a) Core
-            specification, b) industry sector-specific adaptations, and c)
-            Network-specific adaptations. Except core, each adaptation (sector
-            or network) should prefix a unique namespace with the allowed value.
-            Values outside the allowed values may or may not be ignored by the
-            rendering platform. As this schema is purely for catalog display
-            purposes, it is not recommended to send this value during search.
-          type: string
-        list:
-          description: An array of Tag objects listed under this group. This property can
-            be set by BAPs during search to narrow the `search` and achieve more
-            relevant results. When received during `on_search`, BAPs must render
-            this list under the heading described by the `name` property of this
-            schema.
-          type: array
-          items:
-            $ref: "#/components/schemas/Tag"
-    Time:
-      description: Describes time in its various forms. It can be a single point in
-        time; duration; or a structured timetable of operations
-      type: object
-      properties:
-        label:
-          type: string
-        timestamp:
-          type: string
-          format: date-time
-        frequency:
-          type: string
-        range:
-          type: object
-          properties:
-            start:
-              type: string
-            end:
-              type: string
-        days:
-          type: string
-          description: comma separated values representing days of the week
-        schedule:
-          $ref: "#/components/schemas/Schedule"
-    Tracking:
-      description: Contains tracking information that can be used by the BAP to track
-        the fulfillment of an order in real-time. which is useful for knowing
-        the location of time sensitive deliveries.
-      additionalProperties: false
-      type: object
-      properties:
-        id:
-          description: A unique tracking reference number
-          type: string
-        url:
-          description: A URL to the tracking endpoint. This can be a link to a tracking
-            webpage, a webhook URL created by the BAP where BPP can push the
-            tracking data, or a GET url creaed by the BPP which the BAP can poll
-            to get the tracking data. It can also be a websocket URL where the
-            BPP can push real-time tracking data.
-          type: string
-          format: uri
-        location:
-          description: In case there is no real-time tracking endpoint available, this
-            field will contain the latest location of the entity being tracked.
-            The BPP will update this value everytime the BAP calls the track
-            API.
-          $ref: "#/components/schemas/TrackLocation"
-        status:
-          description: This value indicates if the tracking is currently active or not. If
-            this value is `active`, then the BAP can begin tracking the order.
-            If this value is `inactive`, the tracking URL is considered to be
-            expired and the BAP should stop tracking the order.
-          type: string
-          enum:
-            - active
-            - inactive
-        tags:
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-    Vehicle:
-      description: Describes the properties of a vehicle used in a mobility service
-      additionalProperties: false
-      type: object
-      properties:
-        registration:
-          type: string
-        category:
-          type: string
-        size:
-          type: string
-    Action:
-      type: object
-      properties:
-        id:
-          description: Describes id of the action
-          type: string
-        ref_id:
-          description: Describes the reference id
-          type: string
-        ref_type:
-          description: Describes the refence type
-          type: string
-        descriptor:
-          allOf:
-            - $ref: "#/components/schemas/DescriptorIgm"
-            - type: object
-              properties:
-                code:
-                  type: string
-                  enum:
-                    - OPEN
-                    - PROCESSING
-                    - CLOSED
-                    - CASCADED
-                    - INFO_REQUESTED
-                    - INFO_PROCESSING
-                    - INFO_PROVIDED
-                    - INFO_NOT_AVAILABLE
-                    - RESOLUTION_PROPOSED
-                    - RESOLUTION_FORWARDED
-                    - RESOLUTION_PROCESSING
-                    - RESOLUTION_ACCEPTED
-                    - RESOLUTION_REJECTED
-                    - RESOLVED
-        updated_at:
-          type: string
-          format: date-time
-          description: Timestamp in RFC3339 format when the action was updated
-        action_by:
-          type: string
-          description: Describes the actor who performed the action
-        actor_details:
-          type: object
-          properties:
-            name:
-              description: Describes id of the actor
-              type: string
-        tags:
-          type: array
-          description: List of tag objects
-          items:
-            type: object
-            properties:
-              descriptor:
-                type: object
-                properties:
-                  code:
-                    type: string
-                    description: Descriptor code of the tag group
-                required:
-                  - code
-              list:
-                type: array
-                description: List of key_value tag entries
-                items:
-                  type: object
-                  properties:
-                    descriptor:
-                      type: object
-                      properties:
-                        code:
-                          type: string
-                          description: Descriptor code of the individual tag
-                      required:
-                        - code
-                    value:
-                      type: string
-                      description: Value of the tag
-                      enum:
-                        - THUMBS_UP
-                        - THUMBS_DOWN
-                  required:
-                    - descriptor
-                    - value
-            required:
-              - descriptor
-              - list
-      additionalProperties: false
-    AdditionalInfoRequired:
-      type: object
-      properties:
-        info_required:
-          type: object
-          $ref: "#/components/schemas/SupplementaryInformation"
-        info_provided:
-          type: object
-          $ref: "#/components/schemas/SupplementaryInformation"
-    DescriptorIgm:
-      description: Describes the description of a real-world object.
-      type: object
-      properties:
-        name:
-          type: string
-        code:
-          type: string
-        symbol:
-          type: string
-        short_desc:
-          type: string
-        long_desc:
-          type: string
-        additional_desc:
-          type: object
-          properties:
-            url:
-              type: string
-            content_type:
-              type: string
-              enum:
-                - text/plain
-                - text/html
-                - application/json
-          additionalProperties: false
-        images:
-          type: array
-          items:
-            $ref: "#/components/schemas/ImageIgm"
-        media:
-          type: array
-          items:
-            $ref: "#/components/schemas/MediaFile"
-        audio:
-          type: string
-          format: uri
-        3d_render:
-          type: string
-          format: uri
-        tags:
-          description: A list of tags containing any additional information sent along
-            with the Acknowledgement.
-          type: array
-          items:
-            $ref: "#/components/schemas/TagGroup"
-      additionalProperties: false
-    Faq:
-      type: object
-      description: |
-        faqs
-      properties:
-        question:
-          type: string
-        answer:
-          type: string
-      additionalProperties: false
-    ResolutionSource:
-      description: >
-        the resolution source provide details of any addtional resolution
-        resources thier types and a link eg : AI enabled chatbot,
-        support/contact webpage link , lnik to IVR detials etc
-      type: object
-      properties:
-        type:
-          type: string
-        link:
-          type: string
-      additionalProperties: false
-    ImageIgm:
-      description: "Image of an object. <br/><br/> A url based image will look like
-        <br/><br/>```uri:http://path/to/image``` <br/><br/> An image can also be
-        sent as a data string. For example : <br/><br/>
-        ```data:js87y34ilhriuho84r3i4```"
-      type: object
-      properties:
-        url:
-          type: string
-          format: uri
-        size_type:
-          type: string
-      additionalProperties: false
-    ResolutionSupport:
-      description: >
-        Any one of these resolution support deatils are mandatory to be speficed
-        whenever an issue resolution is proposed.
-
-        In case of Issue, Either a respondent ChatLink, email or faq deatils
-        should be provided or any of the additional sources of support should be
-        provided
-
-        In case of Grievance : the GRO details are manadatory to be provided 
-
-        In case of Dispute : the selected ODR details are mandatory to be
-        provided 
-
-        Porvides details of the resolution support for the respondent /
-        complainant to interact with the respondent
-      type: object
-      properties:
-        chat_link:
-          description: chatbot link for the respondent for complainant to interact with
-            the respondent
-          type: string
-        contact:
-          $ref: "#/components/schemas/Contact"
-        faqs:
-          description: frequently asked questions for the respondent for complainant to
-            get information as required
-          type: array
-          items:
-            $ref: "#/components/schemas/Faq"
-        additional_sources:
-          type: array
-          items:
-            $ref: "#/components/schemas/ResolutionSource"
-        gros:
-          description: >
-            Details of the GRO appointed by the resolution provider to support
-            in issue resolution .
-
-            This is a required object if and when the issue type is "Grievance"
-          type: array
-          items:
-            $ref: "#/components/schemas/GRO"
-    ResolutionProvider:
-      description: Describes the details of the entity that provides the resolution
-        for the issue
-      type: object
-      properties:
-        respondent_info:
-          description: the respondent represents the details of the entity identfied by
-            the resolution provider or the complainant himself (when he has to
-            select the ODRs)
-          type: object
-          properties:
-            type:
-              description: >
-                Indicates the type of the resolution provider NP type.
-
-                ### TYPES
-
-                1. Interfacing NP : indicating the NP where or through which the
-                issue is raised
-
-                2. Transaction Counterparty NP : indicating the first level of
-                transaction counterparty network provider with which the
-                interfacing NP is interacting with to get an issue resolution.
-
-                3. Cascaded Counterparty NP : indicating the second or any
-                further downstream levels of counterparty network provider with
-                which the NP is interacting with to get an issue resolution.
-              type: string
-              enum:
-                - INTERFACING-NP
-                - TRANSACTION-COUNTERPARTY-NP
-                - CASCADED-COUNTERPARTY-NP
-            organization:
-              $ref: "#/components/schemas/Organization"
-            resolution_support:
-              $ref: "#/components/schemas/ResolutionSupport"
-      required:
-        - respondent_info
-    Tag1:
-      type: array
-      items:
-        type: object
-        properties:
-          descriptor:
-            type: object
-          list:
-            type: array
-            items:
-              type: object
-              properties:
-                descriptor:
-                  type: object
-                  properties:
-                    code:
-                      type: string
-                  additionalProperties: false
-                value:
-                  type: string
-              additionalProperties: false
-        additionalProperties: false
-    Issue:
-      description: >
-        *  Describes the Issue/complaint raised for a particular order,
-        transaction or fulfillment or item for which an issue is faced by the
-        buyer.
-
-        * It also describes the Issue/complaint raised by the network
-        participants to its conuter party or casacaded counterparty apps as and
-        when applicable
-
-        * Describes the issue when it is escalated as a Grievance or a Dispute
-
-        *  supplementary Information  Describes and details evidence of the
-        information about the issue . When the complainant or respondent seeks
-        an issue update the addtional information about the update are populated
-        as part of the supplementary information. 
-          the supplementary information section , details information including but not limited to any of the following or more: 
-            * comments from the complaintant/ respondent for seeking more information about the issue
-            * comments from the complaintant/ respondent providing the update on the issue with more information on the issue 
-            * Picutres providing further information about the issue
-            * documents attachment/links providing further information about the issue etc
-      type: object
-      properties:
-        id:
-          description: >
-            * Network issue identifier is an unique number assigned to any
-            complaint by the interfacing application at the source.
-
-
-            * **During the life cycle of a complaint, this number will not
-            change and will be communicated to counterparty application.**
-
-
-            * Any subsequent issues created with the interfacing,counterpary or
-            casacaded counter party apps are responsible for providing the
-            correalted and relevant network-issue-id which helps all this
-            inteacting systems to traverse back to the main issue.
-          type: string
-        complainant_info:
-          $ref: "#/components/schemas/Complainant"
-        order_details:
-          $ref: "#/components/schemas/OrderDetails"
-        category:
-          $ref: "#/components/schemas/IssueCategory"
-        sub_category:
-          $ref: "#/components/schemas/IssueSubCategory"
-        level:
-          $ref: "#/components/schemas/Level"
-        issue_type:
-          description: |
-            identifies the type of the issue raised
-            * the complainant being raised can be a regular ```Issue```, 
-            * which then subsequently can be escalated to be a ```Grievance``` 
-            * which may be further escalated to be a ```Dispute```
-          type: string
-          enum:
-            - ISSUE
-            - GRIEVANCE
-            - DISPUTE
-        source:
-          $ref: "#/components/schemas/IssueSource"
-        expected_response_time:
-          $ref: "#/components/schemas/Time"
-        expected_resolution_time:
-          $ref: "#/components/schemas/Time"
-        status:
-          description: >
-            ### Statues
-              1. Open : indicating that the issue is opened and further action is yet to be taken on the issue
-              2. CLOSED : indicating that the issue is closed and no further action/update/info/resolution action/status change are expected/accepted on this issue.
-          type: string
-          enum:
-            - OPEN
-            - CLOSED
-            - INFO_PROVIDED
-        issue_actions:
-          $ref: "#/components/schemas/IssueActions"
-        selected_odrs_info:
-          description: >
-            details of the ODRs selected by the resolution provider .
-
-            one of this would be subsequently finalized to be the ODR resposbile
-            to resolve the issue . 
-
-            This is a required object if and when the issue type is "Dispute"
-          type: array
-          items:
-            $ref: "#/components/schemas/SelectedODRs"
-        finalized_odr:
-          $ref: "#/components/schemas/ODR"
-        refs:
-          description: will give bref about refs
-          type: array
-          items:
-            type: object
-            properties:
-              ref_id:
-                type: string
-              ref_type:
-                type: string
-        actors:
-          description: Describes the actors involved in the transaction
-          type: array
-          items:
-            type: object
-            properties:
-              id:
-                description: Describes id of the actors that are their
-                type: string
-              type:
-                description: Describes the type of actor
-                type: string
-              info:
-                description: Describes the information about actor
-                type: object
-                properties:
-                  person:
-                    $ref: "#/components/schemas/Person"
-                  contact:
-                    $ref: "#/components/schemas/Contact"
-                  org:
-                    type: object
-        source_id:
-          description: Describes the source of the issue
-          type: string
-        complainant_id:
-          description: Describes the complainant id
-          type: string
-        respondent_ids:
-          description: Describes the respondent id
-          type: array
-          items:
-            type: string
-        resolver_ids:
-          description: Describes the resolver id
-          type: array
-          items:
-            type: string
-        descriptor:
-          $ref: "#/components/schemas/DescriptorIgm"
-        last_action_id:
-          description: Describes the last action id
-          type: string
-        actions:
-          description: Describes the actions taken on the issue
-          type: array
-          items:
-            $ref: "#/components/schemas/Action"
-        rating:
-          description: rating by the complainant for issue resolution
-          type: string
-          enum:
-            - THUMBS-UP
-            - THUMBS-DOWN
-        resolution_provider:
-          $ref: "#/components/schemas/ResolutionProvider"
-        resolutions:
-          description: Describes the actions taken on the issue
-          type: array
-          items:
-            $ref: "#/components/schemas/IssueResolution"
-        additional_info_required:
-          type: array
-          items:
-            $ref: "#/components/schemas/AdditionalInfoRequired"
-        created_at:
-          description: timestamp for the creation of the issue
-          type: string
-          format: date-time
-        updated_at:
-          description: timestamp for the capturing the time an issue was last updated
-          type: string
-          format: date-time
-          required:
-            - id
-            - created_at
-            - updated_at
-        resolution:
-          type: object
-          description: Resolution for the issue
-          properties:
-            short_desc:
-              description: short description of the issue action
-              type: string
-            long_desc:
-              description: detailed description of the issue action
-              type: string
-            action_triggered:
-              description: action triggered for the complaint
-              type: string
-              enum:
-                - REFUND
-                - REPLACEMENT
-                - CANCEL
-                - NO-ACTION
-                - RECONCILED
-                - NOT-RECONCILED
-            refund_amount:
-              description: refund amount to be initiated
-              type: string
-          required:
-            - short_desc
-            - action_triggered
-        description:
-          type: object
-          description: Issue description payload
-          properties:
-            short_desc:
-              type: string
-              description: short description of the issue
-            long_desc:
-              type: string
-              description: detailed description of the issue
-            additional_desc:
-              type: object
-              description: Additional description file
-              properties:
-                url:
-                  type: string
-                  format: uri
-                  description: URL to additional description
-                content_type:
-                  type: string
-                  description: MIME type of the file
-              required:
-                - url
-                - content_type
-            images:
-              type: array
-              description: array of image URLs
-              items:
-                type: string
-                format: uri
-              required:
-                - short_desc
-                - long_desc
-                - additional_desc
-                - images
-      additionalProperties: false
-    IssueSubCategory:
-      description: Identifies what is the sub-category of this issue
-      type: string
-      enum:
-        - ORD01
-        - ORD02
-        - ORD03
-        - ITM01
-        - ITM02
-        - ITM03
-        - ITM04
-        - FLM01
-        - FLM02
-        - FLM03
-        - FLM04
-        - FLM05
-        - FLM06
-        - FLM07
-        - AGT01
-        - AGT02
-        - PMT01
-        - PMT02
-        - PMT03
-        - PMT04
-        - FLM201
-    IssueCategory:
-      description: >
-        Identifies what is the category of this issue
-
-        ### CATEGORIES:
-
-        1. Order : Indicactes that the issue is related to  Order.
-
-        2. Transaction : Indicactes that the issue is related to  Transaction.
-
-        3. Fulfillment : Indicactes that the issue is related to  Fulfillment.
-
-        4. Product : Indicactes that the issue is related to  Product.
-
-        5. Product Service : Indicactes that the issue is related to  Product
-        Service.
-
-        6. Service : Indicactes that the issue is related to  Service.
-
-        7. Payment : Indicactes that the issue is related to  Payments.
-      type: string
-    IssueSource:
-      description: source of the issue
-      type: object
-      properties:
-        network_participant_id:
-          type: string
-          description: unique identifier of the network participant of the source of this
-            issue. It can be one of buyer-id in the buyer- interfacing app , or
-            any of the relevant network provider id based on what causes the
-            issue
-        type:
-          description: >
-            Indicates the source from where the issue is raised. 
-
-            ### TYPES
-                1. Consumer : indicating that the Consumer(Buyer) of a product or a service has raised the issue
-                2. Seller : indicating that the Seller of a product or a service has raised the issue
-                3. Intefacing NP : indicating that the Interfacing NP has identified and raised the issue
-          type: string
-          enum:
-            - CONSUMER
-            - SELLER
-            - INTERFACING-NP
-      additionalProperties: false
-    IssueActions:
-      description: >
-        Status of the issue updated by respondent or the complainant
-
-        The issue may attain different status based on its lifecycle. TODO add
-        info of enums in here and in issue-source
-      type: object
-      properties:
-        complainant_actions:
-          type: array
-          items:
-            $ref: "#/components/schemas/ComplainantAction"
-        respondent_actions:
-          type: array
-          items:
-            $ref: "#/components/schemas/RespondentAction"
-      additionalProperties: false
-    OrderDetails:
-      type: object
-      properties:
-        id:
-          description: the value of this field will be the combination of
-            context.transaction_id and order.id.
-          type: string
-        state:
-          type: string
-        items:
-          type: array
-          items:
-            $ref: "#/components/schemas/Item"
-        fulfillments:
-          type: array
-          items:
-            $ref: "#/components/schemas/Fulfillment"
-        provider_id:
-          type: string
-        merchant_order_id:
-          type: string
-      additionalProperties: false
-    Complainant:
-      description: >
-        - Describes an entity that raises a complaint with an interfacing app. 
-
-        - The complainant may be an end user (buyer or seller) or a network
-        participant (buyer app/ seller app/ logistic services  provider app)
-      type: object
-      properties:
-        person:
-          $ref: "#/components/schemas/Person"
-        contact:
-          allOf:
-            - $ref: "#/components/schemas/Contact"
-            - type: object
-              required:
-                - phone
-      required:
-        - contact
-      additionalProperties: false
-    ComplainantAction:
-      type: object
-      properties:
-        complainant_action:
-          description: >
-            Describes the action taken by the complainant who has raised the
-            issue. 
-
-            the value should be populated when the complainant has taken any of
-            the below actions to anotate the action taken. the actions can be, 
-
-            ### Actions
-
-            1. Complainant can ```open``` the issue if he isn't satisfied with
-            the products or services he has purchased or used 
-
-            2. Complainant can ```escalate``` the issue if he isn't satisfied
-            with the issue resolution
-
-            3. Complainant can ```close``` the issue if he doesn't expect any
-            more additonal action on the issue and he is satisfied with the
-            resolution/actions taken on the issue till the time of closure of
-            the issue.
-          type: string
-          enum:
-            - OPEN
-            - ESCALATE
-            - CLOSE
-        updated_at:
-          description: timestamp for the capturing the time an issue status was last updated
-          type: string
-          format: date-time
-        updated_by:
-          $ref: "#/components/schemas/Organization"
-        short_desc:
-          description: details of the remarks when the issue status is changed, can be
-            captured when the complainant triggers an action
-          type: string
-    Level:
-      description: Describes the level of a issue
-      type: string
-    ODR:
-      description: >
-        * Describes the details of the Online Dispute Resolution Provider.
-
-        ODR Service Providers (ODR SP) via dispute resolution methods such as
-        mediation/ conciliation and/or arbitration, will attempt to resolve
-        disputes
-
-        NOTE : ```ODR``` stands for Online Dispute Resolution.
-
-        * May also describe the details of the ODR finalized or identified by
-        the intefacing app, to whom the issue will be assigned for resolution.
-      type: object
-      properties:
-        name:
-          description: Name of the ODR provider
-          type: string
-        short_desc:
-          description: Information about the ODR provider
-          type: string
-        long_desc:
-          description: Detailed information about the ODR provider
-          type: string
-        url:
-          description: URL link to the ODR provider
-          type: string
-        organization:
-          $ref: "#/components/schemas/Organization"
-        pricing_model:
-          description: Details of the pricing modle of the ODR
-          type: object
-          properties:
-            price:
-              $ref: "#/components/schemas/Price"
-            pricing_info:
-              description: addtional information about the pricing model
-              type: string
-        resolution_ratings:
-          $ref: "#/components/schemas/Rating"
-      required:
-        - name
-        - short_desc
-        - url
-        - pricing_model
-        - resolution_ratings
-      additionalProperties: false
-    SelectedODRs:
-      type: object
-      properties:
-        respondent_info:
-          type: object
-          $ref: "#/components/schemas/Organization"
-        odrs:
-          type: array
-          items:
-            $ref: "#/components/schemas/ODR"
-      additionalProperties: false
-    RespondentAction:
-      type: object
-      properties:
-        respondent_action:
-          type: string
-          enum:
-            - PROCESSING
-            - CASCADED
-            - RESOLVED
-            - NEED-MORE-INFO
-        updated_at:
-          description: timestamp for the capturing the time an issue status was last updated
-          type: string
-          format: date-time
-        updated_by:
-          $ref: "#/components/schemas/Organization"
-        short_desc:
-          description: details of the remarks when the issue status is changed, can be
-            captured when the respondent triggers an action
-          type: string
-        cascaded_level:
-          description: the default value will be 1, whenever the issue will be cascaded to
-            the next level the value of this field should be incremented by 1 it
-            will upgrade it indicates to the next sub-level.
-          type: integer
-      additionalProperties: false
-    GRO:
-      description: >
-        Grievance Redressal Officer is appointed by each network participant
-        (buyer app, seller app, logistic provider app) for consumer grievance
-        redressal
-
-        Details of the GRO appointed by the resolution provider to support in
-        issue resolution .
-
-        This is a required object if and when the issue type is "Grievance"
-      type: object
-      properties:
-        person:
-          $ref: "#/components/schemas/Person"
-        contact:
-          $ref: "#/components/schemas/Contact"
-          required:
-            - phone
-            - email
-        gro_type:
-          type: string
-          description: >
-            Indicates the system through which the GRO is assigned to this
-            issue. 
-
-            ### TYPES
-                1. Intefacing NP GRO : indicating the GRO is assigned by the NP where or through which the issue is raised
-                2. Transaction Counterparty NP GRO : indicating the GRO is assigned by the first level of counterparty network provider with which the interfacing NP is interacting with to get an issue resolution.
-                3. Cascaded Counterparty NP GRO : indicating the GRO is assigned by the second or any further downstream levels of counterparty network provider, with which the NP is interacting with, to get an issue resolution.
-          enum:
-            - INTEFACING-NP-GRO
-            - TRANSACTION-COUNTERPARTY-NP-GRO
-            - CASCADED-COUNTERPARTY-NP-GRO
-      required:
-        - contact
-        - gro_type
-      additionalProperties: false
-    IssueResolution:
-      description: Describes the issue resolution for the issue raised by a Complainant
-      type: object
-      properties:
-        short_desc:
-          description: resolution
-          type: string
-        long_desc:
-          description: remarks of the resolution of the issue by the respondent
-          type: string
-        gro_remarks:
-          description: resolution remarks provided by the gro
-          type: string
-        odr_remarks:
-          description: remarks of the result of the dispute, if applicable
-          type: string
-        action_triggered:
-          type: string
-          enum:
-            - REFUND
-            - REPLACEMENT
-            - RETURN
-            - CANCEL
-            - NO-ACTION
-        action:
-          description: >
-            Indicactes the action taken while addressing the issue.
-             ### Actions
-              1. resolve : indicating the issue being resolved. 
-              2. reject : indicating that the issue is rejected by the respondent or the resolution provider.
-          type: string
-          enum:
-            - RESOLVE
-            - REJECT
-        refund_amount:
-          type: string
-        id:
-          description: unique identifier of the issue resolution
-          type: string
-        proposed_by:
-          type: string
-        updated_at:
-          description: timestamp for the capturing the time an issue resolution was last
-            updated
-          type: string
-          format: date-time
-        descriptor:
-          $ref: "#/components/schemas/Descriptor"
-        tags:
-          $ref: "#/components/schemas/Tag1"
-        ref_id:
-          description: Describes the reference id
-          type: string
-        ref_type:
-          description: Describes the type of reference
-          type: string
-      required:
-        - short_desc
-        - action_triggered
-      additionalProperties: false
-    SupplementaryInformation:
-      type: object
-      properties:
-        updated_at:
-          description: timestamp for the capturing the time an issue was last updated
-          type: string
-          format: date-time
-        message_id:
-          type: string
-      additionalProperties: false
+      responses: *responses

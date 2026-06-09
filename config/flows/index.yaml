@@ -7,7 +7,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Return Flow for Grocery
+    description: A comprehensive return process for grocery orders where a buyer initiates a request for either the entire order or specific items, managing the request through confirmation, status tracking, and final resolution updates.
     config:
       $ref: ./GROCERY/Buyer_Initiated_Return__Full_Order_and_Partial_Order_.yaml
   - type: playground
@@ -18,7 +18,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Cancellation Flow for Grocery
+    description: This flow exercises the end-to-end business process of a buyer initiating and completing an order cancellation for grocery items, covering the sequence from product selection through to the final cancellation confirmation.
     config:
       $ref: ./GROCERY/Buyer_Side_Order_Cancellation.yaml
   - type: playground
@@ -29,7 +29,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: RTO and Part Cancellation Flow for Grocery
+    description: This flow manages the end-to-end process for grocery order modifications, specifically handling Return to Origin (RTO) and partial order cancellations through the merchant-side lifecycle.
     config:
       $ref: ./GROCERY/Merchant_Side_RTO_and_Part_Order_Cancellation_Flow.yaml
   - type: playground
@@ -40,7 +40,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Delivery Flow for Grocery
+    description: A prepaid grocery purchase journey encompassing item selection, order confirmation, and end-to-end fulfillment tracking.
     config:
       $ref: ./GROCERY/Order_to_confirm_to_fulfillment__Prepaid_.yaml
   - type: playground
@@ -51,7 +51,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Out of Stock Flow for Grocery
+    description: This flow validates the end-to-end handling of inventory shortages in grocery orders, where an item becomes unavailable after order confirmation, triggering a series of status updates to notify the consumer and manage the exception.
     config:
       $ref: ./GROCERY/Out_of_Stock_Error_code_.yaml
   - type: playground
@@ -62,7 +62,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Discovery Flow (Full Catalog) for Grocery
+    description: Grocery discovery flow that enables a buyer to search the full catalog across a city and receive a comprehensive list of available products via the search and on_search sequence.
     config:
       $ref: ./GROCERY/Search_and_Custom_Menu__Full_Catalog_City_.yaml
   - type: playground
@@ -73,7 +73,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Discovery Flow (Incremental Catalog) for Grocery
+    description: Validates the incremental catalog push mechanism by executing a sequence of search requests and responses to ensure custom menu items are correctly indexed and discovered within the grocery domain.
     config:
       $ref: ./GROCERY/Search_and_Custom_Menu__Incremental_Push_.yaml
   - type: playground
@@ -81,6 +81,6 @@ flows:
     usecase: GROCERY
     tags:
       - WORKBENCH
-    description: Discovery Flow Incremental Catalog Refresh Pull
+    description: Validates the incremental catalog updates by iteratively performing search requests and verifying response consistency to ensure updated grocery item data is correctly reflected in the discovery results.
     config:
       $ref: ./GROCERY/Discovery_Flow_incremental_catalog_refresh_pull.yaml
