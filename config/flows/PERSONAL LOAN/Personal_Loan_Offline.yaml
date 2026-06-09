@@ -90,9 +90,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: search
-            timestamp: 2026-06-04T08:59:10.171Z
+            timestamp: 2026-06-09T10:10:14.855Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: a366f2e0-81f4-4668-ad7d-a627cb5f9e6f
+            message_id: 9bfd5512-fc83-4333-bbb6-ab001ebe4d29
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -356,18 +356,18 @@ steps:
                           short_desc: Short desc about KYC checklist
                       - id: "5"
                         parent_stop_id: "4"
-                        type: REPAYMENT
-                        instructions:
-                          name: E-MANDATE
-                          code: PENDING
-                          short_desc: Short desc about repayment checklist
-                      - id: "6"
-                        parent_stop_id: "5"
                         type: BANK_ACCOUNT_VERIFICATION
                         instructions:
                           name: PENNY DROP
                           code: PENDING
                           short_desc: Short desc about Bank Account Verification checklist
+                      - id: "6"
+                        parent_stop_id: "5"
+                        type: REPAYMENT
+                        instructions:
+                          name: E-MANDATE
+                          code: PENDING
+                          short_desc: Short desc about repayment checklist
                       - id: "7"
                         parent_stop_id: "6"
                         type: LOAN_AGREEMENT
@@ -407,18 +407,18 @@ steps:
                           short_desc: Short desc about KYC checklist
                       - id: "5"
                         parent_stop_id: "4"
-                        type: REPAYMENT
-                        instructions:
-                          name: E-MANDATE
-                          code: PENDING
-                          short_desc: Short desc about repayment checklist
-                      - id: "6"
-                        parent_stop_id: "5"
                         type: BANK_ACCOUNT_VERIFICATION
                         instructions:
                           name: PENNY DROP
                           code: PENDING
                           short_desc: Short desc about Bank Account Verification checklist
+                      - id: "6"
+                        parent_stop_id: "5"
+                        type: REPAYMENT
+                        instructions:
+                          name: E-MANDATE
+                          code: PENDING
+                          short_desc: Short desc about repayment checklist
                       - id: "7"
                         parent_stop_id: "6"
                         type: LOAN_AGREEMENT
@@ -521,9 +521,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_search
-            timestamp: 2026-06-04T08:59:10.197Z
+            timestamp: 2026-06-09T10:10:14.893Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: a366f2e0-81f4-4668-ad7d-a627cb5f9e6f
+            message_id: 9bfd5512-fc83-4333-bbb6-ab001ebe4d29
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -540,7 +540,7 @@ steps:
               descriptor:
                 name: ICICI Bank
               providers:
-                - id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                - id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                   descriptor:
                     images:
                       - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -549,33 +549,33 @@ steps:
                     short_desc: ICICI Bank Ltd
                     long_desc: ICICI Bank Ltd, India.
                   categories:
-                    - id: cat_loan_0ea0ff72-c40d-4cec-8996-cfef1e1aeb09
+                    - id: cat_loan_359514ba-4598-413f-8f40-bf0a825549a7
                       descriptor:
                         code: LOAN
                         name: Loan
-                    - id: cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                      parent_category_id: cat_loan_0ea0ff72-c40d-4cec-8996-cfef1e1aeb09
+                    - id: cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                      parent_category_id: cat_loan_359514ba-4598-413f-8f40-bf0a825549a7
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan
-                    - id: cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
-                      parent_category_id: cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
+                    - id: cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
+                      parent_category_id: cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
                       descriptor:
                         code: BUREAU_LOAN
                         name: Bureau Loan
-                    - id: cat_pre_qualifier_c03c83ac-086d-4123-a656-e391290d8f41
-                      parent_category_id: cat_loan_0ea0ff72-c40d-4cec-8996-cfef1e1aeb09
+                    - id: cat_pre_qualifier_47ce539f-7f71-493d-8830-0c18a3628b59
+                      parent_category_id: cat_loan_359514ba-4598-413f-8f40-bf0a825549a7
                       descriptor:
                         code: PRE_QUALIFIER
                         name: Pre Qualifier
                   items:
-                    - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                    - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan without AA - Offline Journey
                       category_ids:
-                        - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                        - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                        - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                        - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                       fulfillment_ids:
                         - F1
                       tags:
@@ -625,19 +625,19 @@ steps:
                           headings:
                             - PERSONAL_INFORMATION
                         form:
-                          id: form_a5664bf0-2051-424f-8123-da7d0830a36c
+                          id: form_50c50acd-0557-4e59-8f79-6eb205926c5b
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: bureau_personal_loan_c0ee41bd-115c-430b-84ae-3c777b7a27de
+                    - id: bureau_personal_loan_9c3159e2-5cb2-43b6-b298-df543cfa05ef
                       descriptor:
                         code: PERSONAL_LOAN
                         name: Personal Loan without AA - Single Redirection
                       category_ids:
-                        - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                        - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                        - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                        - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                       fulfillment_ids:
                         - F2
                       tags:
@@ -687,18 +687,18 @@ steps:
                           headings:
                             - PERSONAL_INFORMATION
                         form:
-                          id: form_a5664bf0-2051-424f-8123-da7d0830a36c
+                          id: form_50c50acd-0557-4e59-8f79-6eb205926c5b
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS12/personal_loan_information_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                           resubmit: false
                           multiple_sumbissions: false
                         required: true
-                    - id: personal_loan_0776f8c0-df42-46c4-923f-2e3de585409c
+                    - id: personal_loan_85083c1a-f693-4b99-947d-930f49aafa66
                       descriptor:
                         code: PRE_QUALIFIER
                         name: Pre Qualifier
                       category_ids:
-                        - cat_pre_qualifier_c03c83ac-086d-4123-a656-e391290d8f41
+                        - cat_pre_qualifier_47ce539f-7f71-493d-8830-0c18a3628b59
                       fulfillment_ids:
                         - F3
                   fulfillments:
@@ -734,18 +734,18 @@ steps:
                             short_desc: Short desc about KYC checklist
                         - id: "5"
                           parent_stop_id: "4"
-                          type: REPAYMENT
-                          instructions:
-                            name: E-MANDATE
-                            code: PENDING
-                            short_desc: Short desc about repayment checklist
-                        - id: "6"
-                          parent_stop_id: "5"
                           type: BANK_ACCOUNT_VERIFICATION
                           instructions:
                             name: PENNY DROP
                             code: PENDING
                             short_desc: Short desc about Bank Account Verification checklist
+                        - id: "6"
+                          parent_stop_id: "5"
+                          type: REPAYMENT
+                          instructions:
+                            name: E-MANDATE
+                            code: PENDING
+                            short_desc: Short desc about repayment checklist
                         - id: "7"
                           parent_stop_id: "6"
                           type: LOAN_AGREEMENT
@@ -785,18 +785,18 @@ steps:
                             short_desc: Short desc about KYC checklist
                         - id: "5"
                           parent_stop_id: "4"
-                          type: REPAYMENT
-                          instructions:
-                            name: E-MANDATE
-                            code: PENDING
-                            short_desc: Short desc about repayment checklist
-                        - id: "6"
-                          parent_stop_id: "5"
                           type: BANK_ACCOUNT_VERIFICATION
                           instructions:
                             name: PENNY DROP
                             code: PENDING
                             short_desc: Short desc about Bank Account Verification checklist
+                        - id: "6"
+                          parent_stop_id: "5"
+                          type: REPAYMENT
+                          instructions:
+                            name: E-MANDATE
+                            code: PENDING
+                            short_desc: Short desc about repayment checklist
                         - id: "7"
                           parent_stop_id: "6"
                           type: LOAN_AGREEMENT
@@ -906,9 +906,9 @@ steps:
       - name: example for html_form
         payload:
           panName: Jyoti Sharma
-          personalemail: jyoti.sharma@ab.com
-          officialemail: jyoti.sharma@ab.com
-          dob: 2026-06-17
+          personalemail: jyoti.sharma@lab.com
+          officialemail: jyoti.sharma@lab.com
+          dob: 2026-06-01
           gender: female
           pan: BAJPC4350M
           contactNumber: "6284870148"
@@ -922,7 +922,7 @@ steps:
           state: Delhi
           pincode: "160103"
           aa_id: ""
-          endUse: health
+          endUse: other
           derivedData: {}
           formId: FO1
         type: request
@@ -996,9 +996,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: select
-            timestamp: 2026-06-04T08:59:38.346Z
+            timestamp: 2026-06-09T10:10:54.470Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: c19b0da0-056a-4a4a-a730-af80904c1e8e
+            message_id: 58eafffa-ccdf-4e0b-a2cf-81bd58acc517
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1013,18 +1013,18 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   xinput:
                     form:
-                      id: form_a5664bf0-2051-424f-8123-da7d0830a36c
+                      id: form_50c50acd-0557-4e59-8f79-6eb205926c5b
                     form_response:
                       status: SUCCESS
-                      submission_id: b38f1644-de34-42c9-a1d3-faf1611eaf17
+                      submission_id: e15d84db-742f-4f62-969f-6a2d46334a15
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
         type: request
@@ -1294,18 +1294,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: PENDING
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: PENDING
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: PENDING
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -1380,9 +1380,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_select
-            timestamp: 2026-06-04T08:59:38.372Z
+            timestamp: 2026-06-09T10:10:54.500Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: c19b0da0-056a-4a4a-a730-af80904c1e8e
+            message_id: 58eafffa-ccdf-4e0b-a2cf-81bd58acc517
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1397,7 +1397,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -1465,13 +1465,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -1579,7 +1579,7 @@ steps:
                       headings:
                         - JOURNEY_OFFLINE
                     form:
-                      id: ekyc_details_4497ffd5-c612-42dd-905b-31bfe621a798
+                      id: ekyc_details_6db202f2-305d-4c18-b04b-d37915b3873e
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/Ekyc_details_form/?transaction_id=37495a18-da5d-42d2-ad74-db69a22618fe&session_id=undefined
                       resubmit: false
@@ -1624,18 +1624,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: PENDING
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: PENDING
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: PENDING
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -1968,18 +1968,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: PENDING
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: PENDING
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: PENDING
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -2051,9 +2051,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:40.922Z
+            timestamp: 2026-06-09T10:10:57.972Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: ae6e59e7-1843-4858-9eb1-e896e553dd0e
+            message_id: d5bd63aa-6f07-4657-b54f-30fba52be328
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2068,7 +2068,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -2136,13 +2136,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -2241,7 +2241,7 @@ steps:
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_4497ffd5-c612-42dd-905b-31bfe621a798
+                      id: ekyc_details_6db202f2-305d-4c18-b04b-d37915b3873e
                     form_response:
                       status: OFFLINE_PENDING
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -2287,18 +2287,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: PENDING
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: PENDING
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: PENDING
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -2402,9 +2402,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: status
-            timestamp: 2026-06-04T08:59:40.949Z
+            timestamp: 2026-06-09T10:10:57.998Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 70fa1480-584e-4c46-a488-f5cc1c8de70b
+            message_id: 093e4997-5a20-445e-90e6-726a5bfe1e61
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2680,18 +2680,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: IN_PROGRESS
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: IN_PROGRESS
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: IN_PROGRESS
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -2762,9 +2762,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:40.975Z
+            timestamp: 2026-06-09T10:10:58.035Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 70fa1480-584e-4c46-a488-f5cc1c8de70b
+            message_id: 093e4997-5a20-445e-90e6-726a5bfe1e61
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2779,7 +2779,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -2847,13 +2847,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -2952,7 +2952,7 @@ steps:
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_4497ffd5-c612-42dd-905b-31bfe621a798
+                      id: ekyc_details_6db202f2-305d-4c18-b04b-d37915b3873e
                     form_response:
                       status: OFFLINE_PENDING
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -2998,18 +2998,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: IN_PROGRESS
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: IN_PROGRESS
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: IN_PROGRESS
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -3315,18 +3315,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: SUCCESSFUL
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: SUCCESSFUL
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: SUCCESSFUL
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -3395,9 +3395,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:41.002Z
+            timestamp: 2026-06-09T10:10:58.070Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: c162debd-1b38-43af-8ff1-4054efe6867f
+            message_id: b4334d54-15fd-4516-a5f3-6009e7370a13
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3412,7 +3412,7 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -3480,13 +3480,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -3585,7 +3585,7 @@ steps:
                       display: true
                   xinput:
                     form:
-                      id: ekyc_details_4497ffd5-c612-42dd-905b-31bfe621a798
+                      id: ekyc_details_6db202f2-305d-4c18-b04b-d37915b3873e
                     form_response:
                       status: COMPLETED
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -3631,18 +3631,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: SUCCESSFUL
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: SUCCESSFUL
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: SUCCESSFUL
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -3781,9 +3781,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: confirm
-            timestamp: 2026-06-04T08:59:41.034Z
+            timestamp: 2026-06-09T10:10:58.108Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 4ec65bbc-2138-409c-8276-826231fa067f
+            message_id: ef17ccc0-e41a-4214-8a2d-4e66c608b1ba
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3798,12 +3798,12 @@ steps:
           message:
             order:
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   xinput:
                     form:
-                      id: ekyc_details_4497ffd5-c612-42dd-905b-31bfe621a798
+                      id: ekyc_details_6db202f2-305d-4c18-b04b-d37915b3873e
                     form_response:
                       status: SUCCESS
                       submission_id: 79850933-4e41-4c76-bbe6-c5a392481226
@@ -4117,18 +4117,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: SUCCESSFUL
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: SUCCESSFUL
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: SUCCESSFUL
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -4288,9 +4288,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_confirm
-            timestamp: 2026-06-04T08:59:41.064Z
+            timestamp: 2026-06-09T10:10:58.144Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 4ec65bbc-2138-409c-8276-826231fa067f
+            message_id: ef17ccc0-e41a-4214-8a2d-4e66c608b1ba
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4304,10 +4304,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780563581069_DEFAULT
+              id: LOAN_ORDER_1780999858151_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -4375,13 +4375,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -4555,18 +4555,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: SUCCESSFUL
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: SUCCESSFUL
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: SUCCESSFUL
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -4581,7 +4581,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-04T08:59:41.069Z
+                    timestamp: 2026-06-09T10:10:58.151Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -4700,8 +4700,8 @@ steps:
                     - descriptor:
                         code: OFFLINE_CONTRACT
                       value: "true"
-              created_at: 2026-06-04T08:59:41.069Z
-              updated_at: 2026-06-04T08:59:41.069Z
+              created_at: 2026-06-09T10:10:58.151Z
+              updated_at: 2026-06-09T10:10:58.151Z
         type: request
         description: The BPP confirms the loan booking in its core banking system and
           provides the official Loan Account ID, remittance values, and
@@ -4991,18 +4991,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: SUCCESSFUL
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: SUCCESSFUL
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: SUCCESSFUL
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -5155,9 +5155,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:41.097Z
+            timestamp: 2026-06-09T10:10:58.180Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 3a9d431e-e8bd-4d66-a5c2-5cfd10c97048
+            message_id: 2089b420-ee48-48cf-adf1-c56faead1b5c
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5171,10 +5171,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780563581069_DEFAULT
+              id: LOAN_ORDER_1780999858151_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -5242,13 +5242,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -5422,18 +5422,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: SUCCESSFUL
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: SUCCESSFUL
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: SUCCESSFUL
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -5448,7 +5448,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-04T08:59:41.103Z
+                    timestamp: 2026-06-09T10:10:58.186Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -5567,8 +5567,8 @@ steps:
                     - descriptor:
                         code: OFFLINE_CONTRACT
                       value: "true"
-              created_at: 2026-06-04T08:59:41.069Z
-              updated_at: 2026-06-04T08:59:41.103Z
+              created_at: 2026-06-09T10:10:58.151Z
+              updated_at: 2026-06-09T10:10:58.187Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, conveying either a
@@ -5859,18 +5859,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: SUCCESSFUL
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: SUCCESSFUL
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: SUCCESSFUL
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -6023,9 +6023,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:41.128Z
+            timestamp: 2026-06-09T10:10:58.220Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 30da027d-b5e2-4cc6-9c95-f4846f11a32c
+            message_id: a451e1fa-48f3-4929-a7e4-1e906673cd9f
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -6039,10 +6039,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780563581069_DEFAULT
+              id: LOAN_ORDER_1780999858151_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -6110,13 +6110,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -6290,18 +6290,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: SUCCESSFUL
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: SUCCESSFUL
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: SUCCESSFUL
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -6316,7 +6316,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-04T08:59:41.134Z
+                    timestamp: 2026-06-09T10:10:58.225Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -6435,8 +6435,8 @@ steps:
                     - descriptor:
                         code: OFFLINE_CONTRACT
                       value: "true"
-              created_at: 2026-06-04T08:59:41.069Z
-              updated_at: 2026-06-04T08:59:41.134Z
+              created_at: 2026-06-09T10:10:58.151Z
+              updated_at: 2026-06-09T10:10:58.225Z
         type: request
         description: The BPP sends an unsolicited on_status callback to inform the BAP
           about the current state of the personal loan application, including
@@ -6727,18 +6727,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: SUCCESSFUL
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: SUCCESSFUL
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: SUCCESSFUL
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -6891,9 +6891,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:41.160Z
+            timestamp: 2026-06-09T10:10:58.256Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: bccf7a12-7114-4356-add3-7e7c5ca1fecc
+            message_id: d349b137-0004-47f4-8945-c5ff41ab3435
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -6907,10 +6907,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780563581069_DEFAULT
+              id: LOAN_ORDER_1780999858151_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -6978,13 +6978,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -7158,18 +7158,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: SUCCESSFUL
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: SUCCESSFUL
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: SUCCESSFUL
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -7184,7 +7184,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-04T08:59:41.166Z
+                    timestamp: 2026-06-09T10:10:58.262Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -7303,8 +7303,8 @@ steps:
                     - descriptor:
                         code: OFFLINE_CONTRACT
                       value: "true"
-              created_at: 2026-06-04T08:59:41.069Z
-              updated_at: 2026-06-04T08:59:41.166Z
+              created_at: 2026-06-09T10:10:58.151Z
+              updated_at: 2026-06-09T10:10:58.262Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, reflecting either
@@ -7596,18 +7596,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: SUCCESSFUL
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: SUCCESSFUL
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: SUCCESSFUL
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -7761,9 +7761,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:41.193Z
+            timestamp: 2026-06-09T10:10:58.296Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: b7f031b8-d241-4dc7-9e55-058a161ee004
+            message_id: 1cb8c1c9-4478-43b4-a6f9-381532651b18
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -7777,10 +7777,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780563581069_DEFAULT
+              id: LOAN_ORDER_1780999858151_DEFAULT
               status: ACTIVE
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -7848,13 +7848,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -8028,18 +8028,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: SUCCESSFUL
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: SUCCESSFUL
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: SUCCESSFUL
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -8054,7 +8054,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-04T08:59:41.201Z
+                    timestamp: 2026-06-09T10:10:58.301Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -8173,8 +8173,8 @@ steps:
                     - descriptor:
                         code: OFFLINE_CONTRACT
                       value: "true"
-              created_at: 2026-06-04T08:59:41.069Z
-              updated_at: 2026-06-04T08:59:41.210Z
+              created_at: 2026-06-09T10:10:58.151Z
+              updated_at: 2026-06-09T10:10:58.301Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, reflecting either
@@ -8466,18 +8466,18 @@ steps:
                       short_desc: Short desc about KYC checklist
                   - id: "5"
                     parent_stop_id: "4"
-                    type: REPAYMENT
-                    instructions:
-                      name: E-MANDATE
-                      code: SUCCESSFUL
-                      short_desc: Short desc about repayment checklist
-                  - id: "6"
-                    parent_stop_id: "5"
                     type: BANK_ACCOUNT_VERIFICATION
                     instructions:
                       name: PENNY DROP
                       code: SUCCESSFUL
                       short_desc: Short desc about Bank Account Verification checklist
+                  - id: "6"
+                    parent_stop_id: "5"
+                    type: REPAYMENT
+                    instructions:
+                      name: E-MANDATE
+                      code: SUCCESSFUL
+                      short_desc: Short desc about repayment checklist
                   - id: "7"
                     parent_stop_id: "6"
                     type: LOAN_AGREEMENT
@@ -8629,9 +8629,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-04T08:59:41.252Z
+            timestamp: 2026-06-09T10:10:58.341Z
             transaction_id: 37495a18-da5d-42d2-ad74-db69a22618fe
-            message_id: 41faae6b-c6b1-4561-8715-996fe6f4f5ad
+            message_id: 337fa192-f585-4cfe-9fa9-2332b4287895
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -8645,10 +8645,10 @@ steps:
                 code: "*"
           message:
             order:
-              id: LOAN_ORDER_1780563581069_DEFAULT
+              id: LOAN_ORDER_1780999858151_DEFAULT
               status: COMPLETED
               provider:
-                id: personal_loan_provider_ddfb0dfb-ddec-49e9-9fa9-fccbd0d2621b
+                id: personal_loan_provider_89c4fab6-9ed0-4992-94c7-17372c26546d
                 descriptor:
                   images:
                     - url: https://www.icicibank.com/content/dam/icicibank/india/assets/images/header/logo.png
@@ -8716,13 +8716,13 @@ steps:
                         value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
                           Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               items:
-                - id: bureau_personal_loan_de382ca2-3714-47ab-b3b5-876bb70f02d7
+                - id: bureau_personal_loan_60455cf0-955f-4be4-bc53-d87ad6bd92ae
                   descriptor:
                     code: PERSONAL_LOAN
                     name: Personal Loan without AA - Offline Journey
                   category_ids:
-                    - cat_personal_loan_92d295b9-b9df-41ad-98a6-f9125e8166ea
-                    - cat_bureau_loan_d3af5e33-67b2-481c-a3b2-412e470124f7
+                    - cat_personal_loan_d920491c-df46-457d-9679-26ff6f03214b
+                    - cat_bureau_loan_36e3b956-57e7-40d5-8094-33d4baa7cc2e
                   fulfillment_ids:
                     - F1
                   price:
@@ -8896,18 +8896,18 @@ steps:
                         short_desc: Short desc about KYC checklist
                     - id: "5"
                       parent_stop_id: "4"
-                      type: REPAYMENT
-                      instructions:
-                        name: E-MANDATE
-                        code: SUCCESSFUL
-                        short_desc: Short desc about repayment checklist
-                    - id: "6"
-                      parent_stop_id: "5"
                       type: BANK_ACCOUNT_VERIFICATION
                       instructions:
                         name: PENNY DROP
                         code: SUCCESSFUL
                         short_desc: Short desc about Bank Account Verification checklist
+                    - id: "6"
+                      parent_stop_id: "5"
+                      type: REPAYMENT
+                      instructions:
+                        name: E-MANDATE
+                        code: SUCCESSFUL
+                        short_desc: Short desc about repayment checklist
                     - id: "7"
                       parent_stop_id: "6"
                       type: LOAN_AGREEMENT
@@ -8922,7 +8922,7 @@ steps:
                   collected_by: CONSUMER
                   time:
                     label: LOAN_DISBURSMENT
-                    timestamp: 2026-06-04T08:59:41.256Z
+                    timestamp: 2026-06-09T10:10:58.349Z
                   params:
                     bank_code: XXXXXXXX
                     bank_account_number: xxxxxxxxxxxxxx
@@ -9041,8 +9041,8 @@ steps:
                     - descriptor:
                         code: OFFLINE_CONTRACT
                       value: "true"
-              created_at: 2026-06-04T08:59:41.069Z
-              updated_at: 2026-06-04T08:59:41.256Z
+              created_at: 2026-06-09T10:10:58.151Z
+              updated_at: 2026-06-09T10:10:58.349Z
         type: request
         description: The BPP sends an unsolicited on_status callback to the BAP to
           asynchronously update the loan application status, reflecting either
