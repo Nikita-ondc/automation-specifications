@@ -6,7 +6,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: A buyer places a food and beverage order with specific delivery instructions and address details, then the flow exercises mid-order updates by the buyer (such as modifying delivery instructions or address) followed by the seller system acknowledging those changes and progressing the order through confirmation, preparation, and fulfillment status updates.
+    description: A buyer selects and confirms a food and beverage order with specific delivery instructions and address details, then initiates mid-order updates (such as modifying delivery instructions or the drop-off address), after which the seller acknowledges the changes and progresses the order through preparation and fulfillment, with status updates reflecting each stage through to delivery completion.
     config:
       $ref: ./F&B/BUYER_INSTRUCTIONS_AND_ADDRESS_UPDATE_FLOW.yaml
   - type: playground
@@ -26,7 +26,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: A buyer places a food and beverage order with delivery, progressing through item selection, order initialization, confirmation, and fulfillment status updates, followed by order modifications and their acknowledgements to complete the end-to-end delivery lifecycle.
+    description: A buyer selects food and beverage items for home delivery, progresses through order initialisation and confirmation with the seller, receives real-time fulfillment status updates, and then applies post-confirmation order modifications (such as quantity changes or add-ons) that are acknowledged by the seller, completing the full delivery lifecycle.
     config:
       $ref: ./F&B/BUYER_DELIVERY.yaml
   - type: playground
@@ -48,7 +48,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: A complete Food & Beverage retail order lifecycle covering buyer-initiated item selection, order initialization, confirmation, and real-time delivery status tracking, followed by post-order grievance redressal through the Issue & Grievance Management (IGM) protocol to raise, respond to, and resolve a delivery-related complaint.
+    description: A complete Food & Beverage order lifecycle on ONDC covering buyer-initiated item selection, order initialization, and confirmation, followed by real-time delivery tracking via repeated status updates, and culminating in post-delivery grievance redressal through the IGM protocol where a delivery-related complaint is raised, acknowledged, and resolved between the buyer app and seller app.
     config:
       $ref: ./F&B/DELIVERY_FLOW_WITH_IGM_v-1_0_0_.yaml
   - type: playground
@@ -59,7 +59,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Covers an end-to-end Food & Beverage delivery order lifecycle — from item selection and order confirmation through real-time delivery tracking and multi-stage fulfillment status updates — followed by multiple Issue and Grievance Management (IGM) cycles in which the buyer raises successive post-order complaints, the seller app responds to each grievance, and the final issue triggers an order update to reflect the resolution.
+    description: Covers a complete Food & Beverage delivery order lifecycle — from item selection and order confirmation through real-time delivery tracking and multi-stage fulfillment status updates — followed by multiple Issue and Grievance Management (IGM) cycles in which the buyer raises successive post-order complaints, the seller app acknowledges and responds to each grievance, and the final issue triggers an order update to reflect the resolution.
     config:
       $ref: ./F&B/DELIVERY_FLOW_WITH_IGM_v-2_0_0_.yaml
   - type: playground
@@ -68,7 +68,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: A complete Food & Beverage delivery order lifecycle covering discovery, initialization, confirmation, and multi-stage fulfillment status tracking, followed by grievance redressal via three IGM issue cycles (without seller action) where the issue remains unresolved, culminating in a final order status update.
+    description: A complete Food & Beverage delivery order lifecycle covering selection, initialization, and confirmation through multi-stage fulfillment status tracking, followed by three IGM grievance issue cycles raised by the buyer without any seller response or resolution action, concluding with a final order status update reflecting the unresolved complaint.
     config:
       $ref: ./F&B/DELIVERY_FLOW_WITH_IGM_No_Action_v-2_0_0_.yaml
   - type: playground
@@ -79,7 +79,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: A complete F&B delivery order lifecycle — from item selection, order confirmation, and real-time delivery tracking through multiple status transitions — culminating in a multi-round Issue and Grievance Management (IGM) scenario where the buyer raises a post-order grievance that is ultimately rejected by the counterparty, with the final resolution acknowledged via an order update.
+    description: A complete F&B delivery order lifecycle — from item selection through order confirmation and real-time delivery tracking across multiple status transitions — culminating in a multi-round Issue and Grievance Management (IGM) scenario where the buyer raises a post-order grievance that is rejected by the counterparty, with the final rejection resolution acknowledged via an order update.
     config:
       $ref: ./F&B/DELIVERY_FLOW_WITH_IGM_Rejection_v-2_0_0_.yaml
   - type: playground
@@ -89,7 +89,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: A buyer-initiated force cancellation flow in an F&B order lifecycle, covering order placement (select through on_confirm), status progression across multiple state updates, explicit cancel requests from the buyer side, and a final update acknowledging the cancellation outcome.
+    description: A buyer initiates a force cancellation of a confirmed F&B order after progressing through the full placement lifecycle (select through on_confirm) and multiple intermediate status updates, culminating in an explicit cancel request and a final update acknowledging the forced cancellation outcome.
     config:
       $ref: ./F&B/FORCE_CANCEL.yaml
   - type: playground
@@ -100,7 +100,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: A buyer app broadcasts a full catalog discovery request to seller apps on the ONDC network, enabling F&B sellers to respond with their complete menu and item listings for browsing and selection.
+    description: A buyer application broadcasts a full catalog discovery request across the ONDC network, and participating F&B seller applications respond with their complete menu offerings, including all available items, categories, and fulfillment options, enabling end-to-end catalog visibility for browsing and selection.
     config:
       $ref: ./F&B/FULL_CATALOG.yaml
   - type: playground
@@ -111,7 +111,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Validates the F&B incremental catalog discovery mechanism where a buyer network participant issues a search and the seller network participant responds with an initial catalog followed by successive incremental delta pushes, allowing the buyer app to maintain a current view of available items without requiring a full catalog re-synchronization.
+    description: Validates the F&B incremental catalog discovery mechanism where a buyer network participant initiates a search request and the seller network participant responds with an initial full catalog followed by successive incremental delta updates, enabling the buyer app to progressively synchronize only changed or newly available items without requiring a complete catalog refresh.
     config:
       $ref: ./F&B/INCREMENTAL_CATALOG.yaml
   - type: playground
@@ -120,7 +120,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: A food and beverage buyer selects an item offering multiple fulfillment options (e.g., dine-in, takeaway, or delivery), negotiates and confirms the order through the full ONDC transaction lifecycle, and tracks the order as it progresses through multiple seller-side status updates until fulfillment is complete.
+    description: A food and beverage buyer selects an item that supports multiple fulfillment modes (such as dine-in, takeaway, or home delivery), completes the full order negotiation and confirmation lifecycle, and tracks the order through a series of seller-initiated status updates reflecting its progression from acceptance to fulfillment completion.
     config:
       $ref: ./F&B/MULTI_OPTION_FULFILLMENT_FLOW.yaml
   - type: playground
@@ -141,7 +141,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: End-to-end Food & Beverage ordering flow covering buyer-side item selection, order initialisation, and confirmation by the seller, followed by real-time order lifecycle status progression (order accepted, being prepared, picked up, and delivered) with package tracking by the logistics provider.
+    description: End-to-end Food & Beverage ordering flow covering buyer-initiated item selection, order initialisation, and seller confirmation, followed by real-time order lifecycle status progression through acceptance, preparation, pickup, and delivery, with in-flight package tracking provided by the logistics provider.
     config:
       $ref: ./F&B/ORDER_FLOW.yaml
   - type: playground
@@ -150,7 +150,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: A buyer in an F&B ordering journey selects items from a seller, receives an out-of-stock signal in the catalog quote response, revises the cart with available items, and proceeds through order initialisation, confirmation, and fulfillment — with the seller publishing multiple incremental status updates and the buyer tracking the active delivery until completion.
+    description: A buyer placing an F&B order encounters an out-of-stock response during item selection, revises the cart to available items, and completes the order through initialisation and confirmation, with the seller progressively updating fulfillment status and the buyer actively tracking delivery until the order is fulfilled.
     config:
       $ref: ./F&B/OUT_OF_STOCK.yaml
   - type: playground
@@ -160,7 +160,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: The buyer selects an item from a Food & Beverage catalog that is currently out of stock, and the seller platform responds via on_select with an appropriate error code indicating the item's unavailability, allowing the buyer app to surface the out-of-stock condition to the end customer.
+    description: The buyer selects an out-of-stock item from a Food & Beverage catalog, and the seller platform rejects the selection via on_select with an error code indicating item unavailability, enabling the buyer app to communicate the out-of-stock condition to the end customer.
     config:
       $ref: ./F&B/OUT_OF_STOCK_ERROR-CODE_.yaml
   - type: playground
@@ -182,7 +182,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Covers an F&B order where the seller initiates a partial item cancellation after confirmation, followed by a delivery attempt that fails and triggers a Return to Origin (RTO), resulting in full seller-side cancellation of the remaining order with status transitions tracking the lifecycle from packing through return.
+    description: An F&B order undergoes seller-initiated partial item cancellation post-confirmation, after which the remaining items are packed and dispatched for delivery but the delivery attempt fails, triggering a Return to Origin (RTO) and culminating in full cancellation of the residual order by the seller. The flow exercises the complete lifecycle from catalogue selection through order confirmation, partial cancellation, failed last-mile delivery, RTO initiation, and terminal cancellation, with intermediate status transitions covering packing, out-for-delivery, and return-in-transit states.
     config:
       $ref: ./F&B/RTO_PLUS_PART_CANCELLATION.yaml
   - type: playground
@@ -192,7 +192,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: A buyer selects food and beverage items from an outlet, places and confirms an order for self-pickup, and collects it in person from the seller's premises without involving a delivery agent. The flow exercises the full order lifecycle — from item selection through order confirmation to progressive status updates reflecting order acceptance, preparation, and fulfillment at the point of pickup.
+    description: A buyer selects food and beverage items from an outlet and places an order for self-pickup, confirming it without a delivery agent; the seller accepts, prepares, and marks the order ready for collection, with progressive status updates tracking the order through acceptance, preparation, and fulfillment at the pickup point.
     config:
       $ref: ./F&B/SELF_PICKUP.yaml
   - type: playground
@@ -202,6 +202,6 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: A buyer selects F&B items from a seller, chooses a preferred delivery time slot, and confirms the order; the flow then tracks the full fulfillment lifecycle through multiple order-status transitions covering acceptance, preparation, out-for-delivery, and final doorstep delivery within the scheduled slot.
+    description: A buyer browses an F&B catalog, selects items, and schedules delivery within a preferred time slot before confirming the order; the platform then tracks the complete fulfillment lifecycle through successive status transitions covering order acceptance, preparation, dispatch, out-for-delivery, and final doorstep delivery within the committed slot.
     config:
       $ref: ./F&B/SLOTTED_DELIVERY.yaml
