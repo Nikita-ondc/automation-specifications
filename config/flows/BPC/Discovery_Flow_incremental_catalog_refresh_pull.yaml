@@ -22,7 +22,7 @@ steps:
     description: please add relevant description
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBkZWxldGUgZGVmYXVsdFBheWxvYWQuY29udGV4dC5icHBfdXJpOwogIGRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSBzZXNzaW9uRGF0YT8udXNlcl9pbnB1dHM/LmNpdHlfY29kZTsKICBsZXQgY29kZXNBcnJheSA9IHNlc3Npb25EYXRhPy51c2VyX2lucHV0cz8uZmVhdHVyZV9kaXNjb3ZlcnkgfHwgW107CiAgY29uc3QgdGFncyA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3MgOwogIGlmIChjb2Rlc0FycmF5Lmxlbmd0aCA+IDApCiAgICB0YWdzLnB1c2goewogICAgICBjb2RlOiAiYmFwX2ZlYXR1cmVzIiwKICAgICAgbGlzdDogWwogICAgICAgIC4uLmNvZGVzQXJyYXkubWFwKChjb2RlKSA9PiB7CiAgICAgICAgICByZXR1cm4gewogICAgICAgICAgICBjb2RlOiBjb2RlLAogICAgICAgICAgICB2YWx1ZTogInllcyIsCiAgICAgICAgICB9OwogICAgICAgIH0pLAogICAgICBdLAogICAgfSk7CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: >-
         LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZD8uY29udGV4dCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dCBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLmludGVudC50YWdzIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCgoKICBjb25zdCBiYXBUZXJtc1RhZyA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncy5maW5kKAogICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJiYXBfdGVybXMiCiAgKTsKCiAgaWYgKCFiYXBUZXJtc1RhZykgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiYmFwX3Rlcm1zIHRhZyBpcyBtaXNzaW5nIgogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
       requirements: >-
@@ -83,7 +83,7 @@ steps:
             city_code:
               type: string
               title: Enter the city code
-              default: 'std:080'
+              default: ''
             feature_discovery:
               type: array
               title: Features supported
@@ -147,7 +147,7 @@ steps:
     description: please add relevant description
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBwcm92aWRlcnMgPSBkZWZhdWx0UGF5bG9hZD8ubWVzc2FnZS5jYXRhbG9nPy5bJ2JwcC9wcm92aWRlcnMnXTsKICAvLyAgICIwMTIiCiAgLy8gIkNhc2ggb24gZGVsaXZlcnkgKENPRCkgb3JkZXIiCiAgLy8gIjAxNyIKICAvLyAiU2VsbGVyIENyZWRzIgogIC8vICIwMUEiCiAgLy8gIkl0ZW0gVW5pdGl6ZWQgQ291bnQiCiAgLy8gIjAxQiIKICAvLyAiTWluaW11bSBJdGVtIFF1YW50aXR5IgogIC8vICIwMUIiCiAgLy8gIk1pbmltdW0gb3JkZXIgdmFsdWUiCgogIGlmIChzZXNzaW9uRGF0YS5iYXBfZmVhdHVyZXM/LmluY2x1ZGVzKCIwMTciKSkgewogICAgY29uc3QgY3JlZHMgPSBbCiAgICAgIHsKICAgICAgICAiaWQiOiB1dWlkdjQoKSwKICAgICAgICAiZGVzY3JpcHRvciI6IHsKICAgICAgICAgICJjb2RlIjogIlNvY2lhbCBTZWN0b3IiLAogICAgICAgICAgInNob3J0X2Rlc2MiOiAiR0kiCiAgICAgICAgfSwKICAgICAgICAidXJsIjogImh0dHBzOi8vbW9jay5jZG4uY29tL2ltYWdlcy9iYWRnZS1pbWciLAogICAgICAgICJ0YWdzIjogWwogICAgICAgICAgewogICAgICAgICAgICAiY29kZSI6ICJ2ZXJpZmljYXRpb24iLAogICAgICAgICAgICAibGlzdCI6IFsKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAiY29kZSI6ICJ2ZXJpZnlfdXJsIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6ICJodHRwczovL21vY2suZ2kuY29tL3ZlcmlmeT9pZD1naS0xMjM0NTY3OCciCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAiY29kZSI6ICJ2ZXJpZmllciIsCiAgICAgICAgICAgICAgICAidmFsdWUiOiAiQ1NQLUFCQyIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIHsKICAgICAgICAgICAgICAgICJjb2RlIjogImlzc3VlciIsCiAgICAgICAgICAgICAgICAidmFsdWUiOiAiRXhhbXBsZSBBdXRob3JpdHkiCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAiY29kZSI6ICJ2YWxpZF9mcm9tIiwKICAgICAgICAgICAgICAgICJ2YWx1ZSI6ICIyMDIzLTA2LTAzVDAwOjAwOjAwLjAwMFoiCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAiY29kZSI6ICJ2YWxpZF90byIsCiAgICAgICAgICAgICAgICAidmFsdWUiOiAiMjAyNC0wNi0wM1QyMzo1OTo1OS45OTlaIgogICAgICAgICAgICAgIH0KICAgICAgICAgICAgXQogICAgICAgICAgfQogICAgICAgIF0KICAgICAgfQogICAgXQogICAgcHJvdmlkZXJzLmZvckVhY2goKHByb3ZpZGVyKSA9PiB7CiAgICAgIHByb3ZpZGVyLmNyZWRzID0gY3JlZHM7CiAgICB9KTsKICB9OwogIGlmIChzZXNzaW9uRGF0YS5iYXBfZmVhdHVyZXM/LmluY2x1ZGVzKCIwMUEiKSkgewogICAgcHJvdmlkZXJzLmZvckVhY2goKHByb3ZpZGVyKSA9PiB7CiAgICAgIGNvbnN0IGl0ZW1zID0gcHJvdmlkZXIuaXRlbXM7CiAgICAgIGl0ZW1zLmZvckVhY2goKGl0ZW0pID0+IHsKICAgICAgICBpdGVtLnF1YW50aXR5LnVuaXRpemVkLmNvdW50ID0gIjMiOwogICAgICB9KTsKICAgIH0pOwogIH07CiAgaWYgKHNlc3Npb25EYXRhLmJhcF9mZWF0dXJlcz8uaW5jbHVkZXMoIjAxQSIpKSB7CiAgICBwcm92aWRlcnMuZm9yRWFjaCgocHJvdmlkZXIpID0+IHsKICAgICAgY29uc3QgaXRlbXMgPSBwcm92aWRlci5pdGVtczsKICAgICAgaXRlbXMuZm9yRWFjaCgoaXRlbSkgPT4gewogICAgICAgIGl0ZW0ucXVhbnRpdHkubWluaW11bSA9IHtjb3VudCA6ICIxIn07CiAgICAgIH0pOwogICAgfSk7CiAgfTsKICBpZiAoc2Vzc2lvbkRhdGEuYmFwX2ZlYXR1cmVzPy5pbmNsdWRlcygiMDFCIikpIHsKICAgIHByb3ZpZGVycy5mb3JFYWNoKChwcm92aWRlcikgPT4gewogICAgICBjb25zdCB0YWdzID0gcHJvdmlkZXIudGFncyB8fCBbXTsKICAgICAgdGFncy5wdXNoKHsKICAgICAgICAiY29kZSI6ICJvcmRlcl92YWx1ZSIsCiAgICAgICAgImxpc3QiOiBbCiAgICAgICAgICB7CiAgICAgICAgICAgICJjb2RlIjogIm1pbl92YWx1ZSIsCiAgICAgICAgICAgICJ2YWx1ZSI6ICI2MDAuMDAiCiAgICAgICAgICB9CiAgICAgICAgXQogICAgICB9KTsKICAgIH0pOwogIH07CiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
       validate: >-
         LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICdtZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSBpcyBtaXNzaW5nJwogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
       requirements: >-
@@ -482,7 +482,6 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.city
         on_search_items: '$.message.catalog[''bpp/providers''][*].items[*]'
         np_type: >-
           $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
@@ -829,7 +828,7 @@ steps:
     description: please add relevant description
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBzZWFyY2hfaW5jX3B1bGwuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEKICogQHJldHVybnMge09iamVjdH0KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKIGNvbnN0IGN1cnJlbnRUaW1lID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAvLyBEZWZhdWx0OiBsYXN0IDIgaG91cnMgd2luZG93CmNvbnN0IHN0YXJ0VGltZSA9IG5ldyBEYXRlKAogIERhdGUubm93KCkgLSAoMiAqIDYwICogNjAgKiAxMDAwKQopLnRvSVNPU3RyaW5nKCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC50aW1lc3RhbXAgPSBjdXJyZW50VGltZTsKCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiY2F0YWxvZ19pbmMiCiAgICApOwoKICBpZiAoY2F0YWxvZ0luY1RhZykgewogICAgY29uc3Qgc3RhcnRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJzdGFydF90aW1lIgogICAgKTsKCiAgICBjb25zdCBlbmRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJlbmRfdGltZSIKICAgICk7CgogICAgaWYgKHN0YXJ0VGltZU9iaikgewogICAgICBzdGFydFRpbWVPYmoudmFsdWUgPSBzdGFydFRpbWU7CiAgICB9CgogICAgaWYgKGVuZFRpbWVPYmopIHsKICAgICAgLy8gZW5kX3RpbWUgbXVzdCBtYXRjaCBjb250ZXh0LnRpbWVzdGFtcAogICAgICBlbmRUaW1lT2JqLnZhbHVlID0gY3VycmVudFRpbWU7CiAgICB9CiAgfQoKICBjb25zdCBiYXBUZXJtc1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiYmFwX3Rlcm1zIgogICAgKTsKCiAgaWYgKGJhcFRlcm1zVGFnKSB7CiAgICBjb25zdCBlZmZlY3RpdmVEYXRlID0gYmFwVGVybXNUYWcubGlzdC5maW5kKAogICAgICAoaXRlbSkgPT4gaXRlbS5jb2RlID09PSAiZWZmZWN0aXZlX2RhdGUiCiAgICApOwoKICAgIGlmIChlZmZlY3RpdmVEYXRlKSB7CiAgICAgIGVmZmVjdGl2ZURhdGUudmFsdWUgPSBjdXJyZW50VGltZTsKICAgIH0KICB9CgoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBzZWFyY2hfaW5jX3B1bGwuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEKICogQHJldHVybnMge09iamVjdH0KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKIGNvbnN0IGN1cnJlbnRUaW1lID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAvLyBEZWZhdWx0OiBsYXN0IDIgaG91cnMgd2luZG93CmNvbnN0IHN0YXJ0VGltZSA9IG5ldyBEYXRlKAogIERhdGUubm93KCkgLSAoMiAqIDYwICogNjAgKiAxMDAwKQopLnRvSVNPU3RyaW5nKCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC50aW1lc3RhbXAgPSBjdXJyZW50VGltZTsKCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiY2F0YWxvZ19pbmMiCiAgICApOwoKICBpZiAoY2F0YWxvZ0luY1RhZykgewogICAgY29uc3Qgc3RhcnRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJzdGFydF90aW1lIgogICAgKTsKCiAgICBjb25zdCBlbmRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJlbmRfdGltZSIKICAgICk7CgogICAgaWYgKHN0YXJ0VGltZU9iaikgewogICAgICBzdGFydFRpbWVPYmoudmFsdWUgPSBzdGFydFRpbWU7CiAgICB9CgogICAgaWYgKGVuZFRpbWVPYmopIHsKICAgICAgLy8gZW5kX3RpbWUgbXVzdCBtYXRjaCBjb250ZXh0LnRpbWVzdGFtcAogICAgICBlbmRUaW1lT2JqLnZhbHVlID0gY3VycmVudFRpbWU7CiAgICB9CiAgfQoKICBjb25zdCBiYXBUZXJtc1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiYmFwX3Rlcm1zIgogICAgKTsKCiAgaWYgKGJhcFRlcm1zVGFnKSB7CiAgICBjb25zdCBlZmZlY3RpdmVEYXRlID0gYmFwVGVybXNUYWcubGlzdC5maW5kKAogICAgICAoaXRlbSkgPT4gaXRlbS5jb2RlID09PSAiZWZmZWN0aXZlX2RhdGUiCiAgICApOwoKICAgIGlmIChlZmZlY3RpdmVEYXRlKSB7CiAgICAgIGVmZmVjdGl2ZURhdGUudmFsdWUgPSBjdXJyZW50VGltZTsKICAgIH0KICB9CgoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: >-
         LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZD8uY29udGV4dCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dCBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLmludGVudC50YWdzIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncy5maW5kKAogICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJjYXRhbG9nX2luYyIKICApOwoKICBpZiAoIWNhdGFsb2dJbmNUYWcpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNhdGFsb2dfaW5jIHRhZyBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGNvbnN0IGJhcFRlcm1zVGFnID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gImJhcF90ZXJtcyIKICApOwoKICBpZiAoIWJhcFRlcm1zVGFnKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJiYXBfdGVybXMgdGFnIGlzIG1pc3NpbmciCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
       requirements: >-
@@ -891,7 +890,7 @@ steps:
     description: please add relevant description
     mock:
       generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IHN0YXJ0VGltZSA9IHNlc3Npb25EYXRhLmNhdGFsb2dfaW5jX3N0YXJ0X3RpbWU/LlswXTsKICBjb25zdCBlbmRUaW1lID0gc2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXTsKCiAgaWYgKCFzdGFydFRpbWUgfHwgIWVuZFRpbWUpIHsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKICB9CiAgIGNvbnN0IGl0ZW1UaW1lc3RhbXAgPSBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKAogICAgc3RhcnRUaW1lLAogICAgZW5kVGltZQogICk7CgogIGNvbnN0IHByb3ZpZGVycyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSB8fCBbXTsKCiAgcHJvdmlkZXJzLmZvckVhY2goKHByb3ZpZGVyKSA9PiB7CiAgICBwcm92aWRlci5pdGVtcyA9IChwcm92aWRlci5pdGVtcyB8fCBbXSkubWFwKChpdGVtKSA9PiAoewogICAgICAuLi5pdGVtLAogICAgICB0aW1lOiB7CiAgICAgICAgbGFiZWw6ICJlbmFibGUiLAogICAgICAgIHRpbWVzdGFtcDogaXRlbVRpbWVzdGFtcAogICAgICB9CiAgICB9KSk7CiAgfSk7CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9ICIqIjsKICBjb25zdCBzdGFydFRpbWUgPSBzZXNzaW9uRGF0YS5jYXRhbG9nX2luY19zdGFydF90aW1lPy5bMF07CiAgY29uc3QgZW5kVGltZSA9IHNlc3Npb25EYXRhLmNhdGFsb2dfaW5jX2VuZF90aW1lPy5bMF07CgogIGlmICghc3RhcnRUaW1lIHx8ICFlbmRUaW1lKSB7CiAgICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7CiAgfQogICBjb25zdCBpdGVtVGltZXN0YW1wID0gZ2V0UmFuZG9tVGltZXN0YW1wQmV0d2VlbigKICAgIHN0YXJ0VGltZSwKICAgIGVuZFRpbWUKICApOwoKICBjb25zdCBwcm92aWRlcnMgPQogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl0gfHwgW107CgogIHByb3ZpZGVycy5mb3JFYWNoKChwcm92aWRlcikgPT4gewogICAgcHJvdmlkZXIuaXRlbXMgPSAocHJvdmlkZXIuaXRlbXMgfHwgW10pLm1hcCgoaXRlbSkgPT4gKHsKICAgICAgLi4uaXRlbSwKICAgICAgdGltZTogewogICAgICAgIGxhYmVsOiAiZW5hYmxlIiwKICAgICAgICB0aW1lc3RhbXA6IGl0ZW1UaW1lc3RhbXAKICAgICAgfQogICAgfSkpOwogIH0pOwoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: >-
         LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICdtZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSBpcyBtaXNzaW5nJwogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
       requirements: >-
@@ -1227,7 +1226,6 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.city
       inputs: {}
 transaction_history:
   - action_id: search
@@ -1235,14 +1233,14 @@ transaction_history:
       context:
         domain: 'ONDC:RET13'
         action: search
-        timestamp: '2026-06-08T08:47:10.120Z'
+        timestamp: '2026-06-10T07:12:22.158Z'
         transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
-        message_id: 7293a030-814f-43f5-a2ba-9fa92a06226e
+        message_id: 6dbddb43-4a03-4c32-a550-c7577c859ff6
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
         country: IND
-        city: '*'
+        city: 'std:080'
         core_version: 1.2.5
       message:
         intent:
@@ -1272,9 +1270,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET13'
         action: on_search
-        timestamp: '2026-06-08T08:47:10.134Z'
+        timestamp: '2026-06-10T07:12:22.168Z'
         transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
-        message_id: 7293a030-814f-43f5-a2ba-9fa92a06226e
+        message_id: 6dbddb43-4a03-4c32-a550-c7577c859ff6
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -1585,6 +1583,10 @@ transaction_history:
                       value: '0000'
                     - code: time_to
                       value: '2359'
+                - code: order_value
+                  list:
+                    - code: min_value
+                      value: '600.00'
               time:
                 label: enable
                 timestamp: '2024-08-13T06:46:19.736Z'
@@ -1596,9 +1598,9 @@ transaction_history:
       context:
         domain: 'ONDC:RET13'
         action: search
-        timestamp: '2026-06-08T08:47:10.143Z'
+        timestamp: '2026-06-10T07:12:22.180Z'
         transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
-        message_id: 2e997580-5c33-43eb-8bf5-c6ab49729710
+        message_id: aba635c2-72f2-4939-95c1-b28c559fc743
         bap_id: bap.example.com
         bap_uri: 'https://bap.example.com'
         ttl: PT30S
@@ -1614,9 +1616,9 @@ transaction_history:
             - code: catalog_inc
               list:
                 - code: start_time
-                  value: '2026-06-08T06:47:10.143Z'
+                  value: '2026-06-10T05:12:22.180Z'
                 - code: end_time
-                  value: '2026-06-08T08:47:10.143Z'
+                  value: '2026-06-10T07:12:22.180Z'
             - code: bap_terms
               list:
                 - code: static_terms
@@ -1626,333 +1628,8 @@ transaction_history:
                   value: >-
                     https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: effective_date
-                  value: '2026-06-08T08:47:10.143Z'
+                  value: '2026-06-10T07:12:22.180Z'
     action: search
-    saved_info: {}
-  - action_id: on_search_inc_pull
-    payload:
-      context:
-        domain: 'ONDC:RET13'
-        action: on_search
-        timestamp: '2026-06-08T08:47:10.147Z'
-        transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
-        message_id: 2e997580-5c33-43eb-8bf5-c6ab49729710
-        bap_id: bap.example.com
-        bap_uri: 'https://bap.example.com'
-        ttl: PT30S
-        bpp_id: bpp.example.com
-        bpp_uri: 'https://bpp.example.com'
-        country: IND
-        city: '*'
-        core_version: 1.2.5
-      message:
-        catalog:
-          bpp/descriptor:
-            images:
-              - 'https://sellerNP.com/images/np.png'
-            long_desc: Seller Marketplace
-            name: Mock Seller NP
-            short_desc: Seller Marketplace
-            symbol: 'https://sellerNP.com/images/np.png'
-            tags:
-              - code: bpp_terms
-                list:
-                  - code: np_type
-                    value: MSN
-          bpp/fulfillments:
-            - contact:
-                email: test@gmail.com
-                phone: '9876543210'
-              id: F1
-              type: Delivery
-          bpp/providers:
-            - categories:
-                - descriptor:
-                    name: Variant Group 1
-                  id: V1
-                  tags:
-                    - code: type
-                      list:
-                        - code: type
-                          value: variant_group
-                    - code: attr
-                      list:
-                        - code: name
-                          value: item.tags.attribute.plating
-                        - code: seq
-                          value: '1'
-              creds:
-                - descriptor:
-                    code: Social Sector
-                    short_desc: GI
-                  id: gi-12345678
-                  tags:
-                    - code: verification
-                      list:
-                        - code: verify_url
-                          value: 'https://abcd.gi.com/verify?id=gi-12345678'
-                        - code: verifier
-                          value: CSP-ABC
-                        - code: issuer
-                          value: Example Authority
-                        - code: valid_from
-                          value: '2023-06-03T00:00:00:000Z'
-                        - code: valid_to
-                          value: '2024-06-03T23:59:59:999Z'
-                  url: 'https://abcd.cdn.com/images/badge-img'
-              descriptor:
-                images:
-                  - 'https://sellerNP.com/images/store1.png'
-                long_desc: Store 1
-                name: Store 1
-                short_desc: Store 1
-                symbol: 'https://sellerNP.com/images/store1.png'
-              fulfillments:
-                - contact:
-                    email: test@gmail.com
-                    phone: '9876543210'
-                  id: F1
-                  type: Delivery
-              id: P1
-              items:
-                - '@ondc/org/available_on_cod': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,help@beminimalist.co,9772346555'
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/returnable': true
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/statutory_reqs_packaged_commodities':
-                    common_or_generic_name_of_commodity: >-
-                      AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids)
-                      and PHA (Polyhydroxy Acid)
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
-                    manufacturer_or_packer_name: Seller Business
-                    month_year_of_manufacture_packing_import: 03/2024
-                  '@ondc/org/time_to_ship': PT5M
-                  category_id: Skin Care - Face Cleansers
-                  descriptor:
-                    code: '1:8809326333661'
-                    images:
-                      - 'https://sellerNP.com/images/i1.png'
-                      - 'https://sellerNP.com/images/i1.png'
-                      - 'https://sellerNP.com/images/i1.png'
-                    long_desc: >-
-                      A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that
-                      provides multi-level exfoliation, both on the surface &
-                      inside the pores, giving you a healthy, plump, and glowing
-                      skin.Fragrance free. Non-comedogenic 30ml
-                    name: AHA PHA BHA 32%
-                    short_desc: Weekend Exfoliating Facial
-                    symbol: 'https://sellerNP.com/images/i1.png'
-                  fulfillment_id: F1
-                  id: I1
-                  location_id: L1
-                  parent_item_id: V1
-                  price:
-                    currency: INR
-                    maximum_value: '2260'
-                    value: '2260'
-                  quantity:
-                    available:
-                      count: '99'
-                    maximum:
-                      count: '8'
-                    unitized:
-                      measure:
-                        unit: millilitre
-                        value: '30'
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: brand
-                          value: Minimalist
-                  time:
-                    label: enable
-                    timestamp: '2026-06-08T07:34:09.472Z'
-                - '@ondc/org/available_on_cod': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/returnable': true
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/statutory_reqs_packaged_commodities':
-                    common_or_generic_name_of_commodity: Marula Oil
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
-                    manufacturer_or_packer_name: Seller Business
-                    month_year_of_manufacture_packing_import: 03/2024
-                  '@ondc/org/time_to_ship': PT5M
-                  category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
-                  descriptor:
-                    code: '1:8906128100436'
-                    images:
-                      - 'https://sellerNP.com/images/i1.png'
-                    long_desc: >-
-                      An everyday moisturizing cream with 5% Marula Oil, paired
-                      with Vitamin F and Vitamin E to nourish, moisturize and
-                      improve skin softness. It's a heavy cream, suitable for
-                      dry/damaged to normal skin types.Fragrance free   
-                      Non-comedogenic     50g
-                    name: Marula Oil 05% Moisturizer
-                    short_desc: >-
-                      Deep & Intense Moisturization. Treats Dryness, Roughness
-                      and Flakiness
-                    symbol: 'https://sellerNP.com/images/i1.png'
-                  fulfillment_id: F1
-                  id: I2
-                  location_id: L1
-                  parent_item_id: V1
-                  price:
-                    currency: INR
-                    maximum_value: '2360'
-                    value: '2360'
-                  quantity:
-                    available:
-                      count: '99'
-                    maximum:
-                      count: '10'
-                    unitized:
-                      measure:
-                        unit: gram
-                        value: '50'
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: brand
-                          value: Minamilist
-                  time:
-                    label: enable
-                    timestamp: '2026-06-08T07:34:09.472Z'
-                - '@ondc/org/available_on_cod': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,support@gmail.com,2343453434'
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/returnable': true
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/statutory_reqs_packaged_commodities':
-                    common_or_generic_name_of_commodity: Niacinamide
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
-                    manufacturer_or_packer_name: Minimalist
-                    month_year_of_manufacture_packing_import: 03/2024
-                  '@ondc/org/time_to_ship': PT5M
-                  category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
-                  descriptor:
-                    code: '1:8906128100108'
-                    images:
-                      - 'https://sellerNP.com/images/i1.png'
-                    long_desc: >-
-                      A nourishing & hydrating daily serum that repairs damaged
-                      barrier & soothes sensitive skin. Ideal for people with
-                      dry, sensitive skin & those who find Niacinamide 10% a
-                      little strong.Fragrance free    Non-comedogenic 30ml
-                    name: Niacinamide 05%
-                    short_desc: 'Hydrates, Repairs & Soothes Skin'
-                    symbol: 'https://sellerNP.com/images/i1.png'
-                  fulfillment_id: F1
-                  id: I3
-                  location_id: L1
-                  price:
-                    currency: INR
-                    maximum_value: '1199.00'
-                    value: '499.00'
-                  quantity:
-                    available:
-                      count: '99'
-                    maximum:
-                      count: '99'
-                    unitized:
-                      measure:
-                        unit: unit
-                        value: '1'
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: brand
-                          value: Minimalist
-                  time:
-                    label: enable
-                    timestamp: '2026-06-08T07:34:09.472Z'
-              locations:
-                - address:
-                    area_code: '560011'
-                    city: Bengaluru
-                    locality: Jayanagar
-                    state: Karnataka
-                    street: Jayanagar
-                  circle:
-                    gps: '12.925810,77.583624'
-                    radius:
-                      unit: km
-                      value: '5'
-                  gps: '12.925810,77.583624'
-                  id: L1
-                  time:
-                    days: '1,2,3,4,5'
-                    label: enable
-                    schedule:
-                      holidays: []
-                    timestamp: '2024-08-13T06:46:19.736Z'
-              tags:
-                - code: serviceability
-                  list:
-                    - code: location
-                      value: L1
-                    - code: category
-                      value: 'Skin Care - Lotions, Moisturisers, and Creams'
-                    - code: type
-                      value: '12'
-                    - code: unit
-                      value: pincode
-                    - code: val
-                      value: '560001-560076,560083'
-                - code: serviceability
-                  list:
-                    - code: location
-                      value: L1
-                    - code: category
-                      value: Skin Care - Face Cleansers
-                    - code: type
-                      value: '12'
-                    - code: unit
-                      value: country
-                    - code: val
-                      value: IND
-                - code: timing
-                  list:
-                    - code: type
-                      value: All
-                    - code: location
-                      value: L1
-                    - code: day_from
-                      value: '1'
-                    - code: day_to
-                      value: '6'
-                    - code: time_from
-                      value: '0000'
-                    - code: time_to
-                      value: '2359'
-              time:
-                label: enable
-                timestamp: '2024-08-13T06:46:19.736Z'
-              ttl: PT24H
-    action: on_search
     saved_info: {}
 validationLib: ''
 helperLib: >-
