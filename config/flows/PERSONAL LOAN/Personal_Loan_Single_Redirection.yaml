@@ -1219,7 +1219,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -1549,7 +1549,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -1902,7 +1902,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -2219,7 +2219,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -2606,7 +2606,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -2923,7 +2923,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -3240,7 +3240,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -3550,7 +3550,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -3866,7 +3866,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -4176,7 +4176,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -4492,7 +4492,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -4802,7 +4802,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -5263,7 +5263,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -5700,7 +5700,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -6137,7 +6137,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -6568,7 +6568,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -7005,7 +7005,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -7436,7 +7436,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -7874,7 +7874,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -8305,7 +8305,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -8742,7 +8742,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -9173,7 +9173,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
@@ -9609,7 +9609,7 @@ steps:
                       - descriptor:
                           code: COOL_OFF_PERIOD
                           name: cool off period
-                          short_desc: Cooling off/look-up period during which borrower shall not be
+                          short_desc: Cooling off look-up period during which borrower shall not be
                             charged any penalty
                         value: P30D
                       - descriptor:
@@ -10039,7 +10039,7 @@ steps:
                         - descriptor:
                             code: COOL_OFF_PERIOD
                             name: cool off period
-                            short_desc: Cooling off/look-up period during which borrower shall not be
+                            short_desc: Cooling off look-up period during which borrower shall not be
                               charged any penalty
                           value: P30D
                         - descriptor:
