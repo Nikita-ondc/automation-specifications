@@ -260,6 +260,8 @@ steps:
                   list:
                     - code: np_type
                       value: MSN
+                    - code: accept_bap_terms
+                      value: Y
             bpp/providers:
               - id: P1
                 time:
