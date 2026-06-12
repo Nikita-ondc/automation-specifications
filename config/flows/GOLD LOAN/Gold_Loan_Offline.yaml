@@ -3,11 +3,7 @@ meta:
   version: 2.0.3
   flowId: Gold_Loan_Offline
   config_version: 0.0.0001
-  description: The Gold Loan Offline flow represents a loan application process
-    where initial digital steps are followed by offline verification or manual
-    underwriting, with the lender asynchronously updating the application status
-    through multiple on_status callbacks until the loan is finalized, rejected,
-    or completed.
+  description: A gold loan application flow where customers digitally search for loan products, configure their terms, and submit applications online, while lenders conduct offline verification and underwriting with periodic status updates to borrowers until final approval or rejection.
   use_case_id: GOLD LOAN
   flowName: Gold Loan Offline
 transaction_data:
@@ -23,10 +19,7 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP initiates the personal loan foreclosure offline journey by
-      broadcasting a search request to the network, specifying the loan
-      category, repayment tenure, and borrower requirements, enabling lenders to
-      respond with tailored foreclosure offerings.
+    description: The BAP initiates the gold loan discovery process by searching for available lenders and loan products in the specified location, providing transaction context and the applicant's loan requirements to enable BPP responses.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQubWVzc2FnZSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTUlTU0lOR19QQVlMT0FEIiB9OwogIH0KCiByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -123,19 +116,13 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: The BAP initiates the personal loan foreclosure offline journey by
-          broadcasting a search request to the network, specifying the loan
-          category, repayment tenure, and borrower requirements, enabling
-          lenders to respond with tailored foreclosure offerings.
+        description: The BAP initiates the personal loan foreclosure offline journey by broadcasting a search request to the network, specifying the loan category, repayment tenure, and borrower requirements, enabling lenders to respond with tailored foreclosure offerings.
   - api: on_search
     action_id: on_search_gold_loan_3
     owner: BPP
     responseFor: search_gold_loan
     unsolicited: false
-    description: The BPP responds to the BAP's search request by providing a catalog
-      of personal loan offerings, including provider details, terms, and an
-      offline processing form, enabling the borrower to proceed with manual
-      verification and asynchronous status updates.
+    description: The BPP responds with a catalog of available gold loan products from participating lenders, including product details, digital application forms, and fulfillment options for the loan application process.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2U/LmNhdGFsb2c/LnByb3ZpZGVycz8uWzBdKSB7CiAgICBjb25zdCBwcm92aWRlciA9IGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLmNhdGFsb2cucHJvdmlkZXJzWzBdOwoKICAgIC8qKgogICAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICAgKiBGT1JNIElECiAgICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAqLwoKICAgIGNvbnN0IGdvbGRMb2FuSW5mb3JtYXRpb25Gb3JtSWQgPQogICAgICB0eXBlb2Ygc2Vzc2lvbkRhdGE/LmZvcm1faWQgPT09ICJzdHJpbmciICYmIHNlc3Npb25EYXRhLmZvcm1faWQudHJpbSgpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5mb3JtX2lkCiAgICAgICAgOiBgZm9ybV8ke3V1aWR2NCgpfWA7CgogICAgLyoqCiAgICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAqIFBST1ZJREVSIElECiAgICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAqLwoKICAgIGlmICghcHJvdmlkZXIuaWQgfHwgcHJvdmlkZXIuaWQgPT09ICJQUk9WSURFUl9JRCIgfHwgcHJvdmlkZXIuaWQuc3RhcnRzV2l0aCgiUFJPVklERVJfSUQiKSkgewogICAgICBwcm92aWRlci5pZCA9IGBnb2xkX2xvYW5fcHJvdmlkZXJfJHt1dWlkdjQoKX1gOwogICAgICBjb25zb2xlLmxvZygi4pyFIFByb3ZpZGVyIGlkIGdlbmVyYXRlZDoiLCBwcm92aWRlci5pZCk7CiAgICB9CgogICAgLyoqCiAgICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAqIENBVEVHT1JZIElEIE1BUFBJTkcKICAgICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICovCgogICAgaWYgKHByb3ZpZGVyLmNhdGVnb3JpZXMgJiYgQXJyYXkuaXNBcnJheShwcm92aWRlci5jYXRlZ29yaWVzKSkgewogICAgICBjb25zdCBjYXRlZ29yeUlkTWFwID0ge307CgogICAgICBwcm92aWRlci5jYXRlZ29yaWVzID0gcHJvdmlkZXIuY2F0ZWdvcmllcy5tYXAoKGNhdGVnb3J5KSA9PiB7CiAgICAgICAgY29uc3Qgb2xkSWQgPSBjYXRlZ29yeS5pZDsKICAgICAgICBjb25zdCBjb2RlID0gY2F0ZWdvcnkuZGVzY3JpcHRvcj8uY29kZSB8fCAiVU5LTk9XTiI7CiAgICAgICAgY29uc3QgbmV3SWQgPSBgY2F0XyR7Y29kZS50b0xvd2VyQ2FzZSgpfV8ke3V1aWR2NCgpfWA7CiAgICAgICAgY2F0ZWdvcnlJZE1hcFtvbGRJZF0gPSBuZXdJZDsKICAgICAgICBjYXRlZ29yeS5pZCA9IG5ld0lkOwogICAgICAgIGNvbnNvbGUubG9nKGDinIUgY2F0ZWdvcnkuaWQ6ICR7b2xkSWR9IC0+ICR7bmV3SWR9ICgke2NvZGV9KWApOwogICAgICAgIHJldHVybiBjYXRlZ29yeTsKICAgICAgfSk7CgogICAgICAvLyBVcGRhdGUgcGFyZW50X2NhdGVnb3J5X2lkIHJlZmVyZW5jZXMKICAgICAgcHJvdmlkZXIuY2F0ZWdvcmllcy5mb3JFYWNoKChjYXRlZ29yeSkgPT4gewogICAgICAgIGlmIChjYXRlZ29yeS5wYXJlbnRfY2F0ZWdvcnlfaWQgJiYgY2F0ZWdvcnlJZE1hcFtjYXRlZ29yeS5wYXJlbnRfY2F0ZWdvcnlfaWRdKSB7CiAgICAgICAgICBjb25zdCBvbGRQYXJlbnQgPSBjYXRlZ29yeS5wYXJlbnRfY2F0ZWdvcnlfaWQ7CiAgICAgICAgICBjYXRlZ29yeS5wYXJlbnRfY2F0ZWdvcnlfaWQgPSBjYXRlZ29yeUlkTWFwW29sZFBhcmVudF07CiAgICAgICAgICBjb25zb2xlLmxvZyhg4pyFIHBhcmVudF9jYXRlZ29yeV9pZDogJHtvbGRQYXJlbnR9IC0+ICR7Y2F0ZWdvcnkucGFyZW50X2NhdGVnb3J5X2lkfWApOwogICAgICAgIH0KICAgICAgfSk7CgogICAgICAvLyBVcGRhdGUgaXRlbSBjYXRlZ29yeV9pZHMKICAgICAgaWYgKHByb3ZpZGVyLml0ZW1zICYmIEFycmF5LmlzQXJyYXkocHJvdmlkZXIuaXRlbXMpKSB7CiAgICAgICAgcHJvdmlkZXIuaXRlbXMuZm9yRWFjaCgoaXRlbSkgPT4gewogICAgICAgICAgaWYgKGl0ZW0uY2F0ZWdvcnlfaWRzICYmIEFycmF5LmlzQXJyYXkoaXRlbS5jYXRlZ29yeV9pZHMpKSB7CiAgICAgICAgICAgIGl0ZW0uY2F0ZWdvcnlfaWRzID0gaXRlbS5jYXRlZ29yeV9pZHMubWFwKChjYXRJZCkgPT4gewogICAgICAgICAgICAgIGlmIChjYXRlZ29yeUlkTWFwW2NhdElkXSkgewogICAgICAgICAgICAgICAgY29uc29sZS5sb2coYOKchSBpdGVtIGNhdGVnb3J5X2lkOiAke2NhdElkfSAtPiAke2NhdGVnb3J5SWRNYXBbY2F0SWRdfWApOwogICAgICAgICAgICAgICAgcmV0dXJuIGNhdGVnb3J5SWRNYXBbY2F0SWRdOwogICAgICAgICAgICAgIH0KICAgICAgICAgICAgICByZXR1cm4gY2F0SWQ7CiAgICAgICAgICAgIH0pOwogICAgICAgICAgfQogICAgICAgIH0pOwogICAgICB9CiAgICB9CgogICAgLyoqCiAgICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgICAqIElURU0gSUQgKyBGT1JNIE1BUFBJTkcKICAgICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAgICovCgogICAgaWYgKHByb3ZpZGVyLml0ZW1zICYmIEFycmF5LmlzQXJyYXkocHJvdmlkZXIuaXRlbXMpKSB7CiAgICAgIHByb3ZpZGVyLml0ZW1zID0gcHJvdmlkZXIuaXRlbXMubWFwKChpdGVtKSA9PiB7CgogICAgICAgIC8vIEdlbmVyYXRlIGl0ZW0gaWQKICAgICAgICBpZiAoIWl0ZW0uaWQgfHwgaXRlbS5pZC5zdGFydHNXaXRoKCJJVEVNX0lEXyIpKSB7CiAgICAgICAgICBjb25zdCBjYXRlZ29yeUlkcyA9IGl0ZW0uY2F0ZWdvcnlfaWRzIHx8IFtdOwogICAgICAgICAgY29uc3QgY2F0ZWdvcmllcyA9IHByb3ZpZGVyLmNhdGVnb3JpZXMgfHwgW107CgogICAgICAgICAgY29uc3QgaXRlbUNhdGVnb3J5Q29kZXMgPSBjYXRlZ29yeUlkcwogICAgICAgICAgICAubWFwKChjYXRJZCkgPT4gY2F0ZWdvcmllcy5maW5kKChjKSA9PiBjLmlkID09PSBjYXRJZCkpCiAgICAgICAgICAgIC5maWx0ZXIoQm9vbGVhbikKICAgICAgICAgICAgLm1hcCgoYykgPT4gYy5kZXNjcmlwdG9yPy5jb2RlKTsKCiAgICAgICAgICBsZXQgcHJlZml4ID0gImdvbGRfbG9hbl8iOwoKICAgICAgICAgIGlmIChpdGVtQ2F0ZWdvcnlDb2Rlcy5pbmNsdWRlcygiQlVSRUFVX0xPQU4iKSkgewogICAgICAgICAgICBwcmVmaXggPSAiYnVyZWF1X2dvbGRfbG9hbl8iOwogICAgICAgICAgICBjb25zb2xlLmxvZygi4pyFIEl0ZW0gaGFzIEJVUkVBVV9MT0FOIGNhdGVnb3J5IC0gdXNpbmcgYnVyZWF1X2dvbGRfbG9hbl8gcHJlZml4Iik7CiAgICAgICAgICB9IGVsc2UgaWYgKGl0ZW1DYXRlZ29yeUNvZGVzLmluY2x1ZGVzKCJBQV9HT0xEX0xPQU4iKSkgewogICAgICAgICAgICBwcmVmaXggPSAiYWFfZ29sZF9sb2FuXyI7CiAgICAgICAgICAgIGNvbnNvbGUubG9nKCLinIUgSXRlbSBoYXMgQUFfR09MRF9MT0FOIGNhdGVnb3J5IC0gdXNpbmcgYWFfZ29sZF9sb2FuXyBwcmVmaXgiKTsKICAgICAgICAgIH0KCiAgICAgICAgICBpdGVtLmlkID0gYCR7cHJlZml4fSR7dXVpZHY0KCl9YDsKICAgICAgICAgIGNvbnNvbGUubG9nKCLinIUgR2VuZXJhdGVkIGl0ZW0uaWQ6IiwgaXRlbS5pZCk7CiAgICAgICAgfQoKICAgICAgICAvLyBNYXAgZm9ybSBpZCBhbmQgdXJsCiAgICAgICAgaWYgKGl0ZW0ueGlucHV0Py5mb3JtKSB7CiAgICAgICAgICBpdGVtLnhpbnB1dC5mb3JtLmlkID0gZ29sZExvYW5JbmZvcm1hdGlvbkZvcm1JZDsKICAgICAgICAgIGNvbnNvbGUubG9nKCLinIUgZm9ybS5pZCBtYXBwZWQ6IiwgaXRlbS54aW5wdXQuZm9ybS5pZCk7CgogICAgICAgICAgY29uc3QgdXJsID0gY3JlYXRlRm9ybVVSTCgiT05EQzpGSVMxMiIsICJnb2xkX2xvYW5faW5mb3JtYXRpb25fZm9ybSIsIHNlc3Npb25EYXRhKTsKICAgICAgICAgIGl0ZW0ueGlucHV0LmZvcm0udXJsID0gdXJsOwogICAgICAgICAgY29uc29sZS5sb2coIuKchSBGb3JtIFVSTCBnZW5lcmF0ZWQ6IiwgdXJsKTsKICAgICAgICB9CgogICAgICAgIHJldHVybiBpdGVtOwogICAgICB9KTsKICAgIH0KICB9CgogIHJldHVybiBleGlzdGluZ1BheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmKCF0YXJnZXRQYXlsb2FkKXsKICAgIHJldHVybiB7dmFsaWQ6ZmFsc2UsY29kZTo0MDAsZGVzY3JpcHRpb246InBheWxvYWQgbWlzc2luZyJ9CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -358,8 +345,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
             tags:
               - descriptor:
                   code: BPP_TERMS
@@ -609,8 +595,7 @@ steps:
                         - descriptor:
                             code: LSP_ADDRESS
                             name: Lsp Address
-                          value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                            Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                          value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               tags:
                 - descriptor:
                     code: BPP_TERMS
@@ -624,16 +609,13 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: The BPP responds to the BAP's search request by providing a catalog
-          of personal loan offerings, including provider details, terms, and an
-          offline processing form, enabling the borrower to proceed with manual
-          verification and asynchronous status updates.
+        description: The BPP responds to the BAP's search request by providing a catalog of personal loan offerings, including provider details, terms, and an offline processing form, enabling the borrower to proceed with manual verification and asynchronous status updates.
   - api: html_form
     action_id: gold_loan_information_form
     owner: BPP
     responseFor: null
     unsolicited: false
-    description: please add relevant description
+    description: The BPP renders an HTML form to collect applicant personal and employment information, contact details, address, and gold collateral specifications necessary for gold loan underwriting and assessment.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -671,7 +653,7 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: please add relevant description
+    description: The BAP selects a specific gold loan product and lender from the search results, submitting the applicant's form data to proceed with the application. This selection initiates the BPP's processing and evaluation of the submitted loan request.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CiAgY29uc3Qgc2VsZWN0ZWRQcm92aWRlciA9IHNlc3Npb25EYXRhPy5zZWxlY3RlZF9wcm92aWRlcj8uWzBdOwogIGNvbnN0IHN1Ym1pc3Npb25faWQgPSBzZXNzaW9uRGF0YT8uZ29sZF9sb2FuX2luZm9ybWF0aW9uX2Zvcm07CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIElURU0g4oCUIHVzZSBhbHJlYWR5IHNlbGVjdGVkIGl0ZW0gZnJvbSBzZWxlY3QgMQogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZWxlY3RlZEl0ZW0gPSBzZXNzaW9uRGF0YT8uaXRlbT8uWzBdOwoKICBjb25zb2xlLmxvZygi4pyFIHNlbGVjdGVkSXRlbSBpZDoiLCBzZWxlY3RlZEl0ZW0/LmlkKTsKICBjb25zb2xlLmxvZygi4pyFIHN1Ym1pc3Npb25faWQgZnJvbSBzZXNzaW9uOiIsIHN1Ym1pc3Npb25faWQpOwoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBQUk9WSURFUiBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChzZWxlY3RlZFByb3ZpZGVyPy5pZCAmJiBvcmRlcj8ucHJvdmlkZXIpIHsKICAgIG9yZGVyLnByb3ZpZGVyLmlkID0gc2VsZWN0ZWRQcm92aWRlci5pZDsKICAgIGNvbnNvbGUubG9nKCLinIUgUHJvdmlkZXIgbWFwcGVkOiIsIHNlbGVjdGVkUHJvdmlkZXIuaWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogSVRFTSBNQVBQSU5HCiAgICogR29sZCBsb2FuIHNlbGVjdCBvbmx5IG5lZWRzIGlkICsgeGlucHV0IOKAlCBubyBjYXRlZ29yeV9pZHMvZnVsZmlsbG1lbnRfaWRzCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChzZWxlY3RlZEl0ZW0gJiYgb3JkZXI/Lml0ZW1zPy5bMF0pIHsKICAgIGNvbnN0IGl0ZW0wID0gb3JkZXIuaXRlbXNbMF07CgogICAgaXRlbTAuaWQgPSBzZWxlY3RlZEl0ZW0uaWQ7CgogICAgZGVsZXRlIGl0ZW0wLmNhdGVnb3J5X2lkczsKICAgIGRlbGV0ZSBpdGVtMC5mdWxmaWxsbWVudF9pZHM7CiAgICBkZWxldGUgaXRlbTAuZGVzY3JpcHRvcjsKICAgIGRlbGV0ZSBpdGVtMC50YWdzOwogICAgZGVsZXRlIGl0ZW0wLnByaWNlOwoKICAgIGNvbnNvbGUubG9nKCLinIUgSXRlbSBpZCBtYXBwZWQ6Iiwgc2VsZWN0ZWRJdGVtLmlkKTsKICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFhJTlBVVCBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChvcmRlcj8uaXRlbXM/LlswXSkgewoKICAgIGNvbnN0IGl0ZW0wID0gb3JkZXIuaXRlbXNbMF07CiAgICBjb25zdCByYXdGb3JtSWQgPSBzZWxlY3RlZEl0ZW0/LnhpbnB1dD8uZm9ybT8uaWQgfHwgc2Vzc2lvbkRhdGE/LmZvcm1faWQ7CiAgICBjb25zdCBmb3JtSWQgPSBBcnJheS5pc0FycmF5KHJhd0Zvcm1JZCkgPyByYXdGb3JtSWRbMF0gOiByYXdGb3JtSWQ7CgogICAgaXRlbTAueGlucHV0ID0gewogICAgICBmb3JtOiB7IGlkOiBmb3JtSWQgfHwgIkYwMSIgfSwKICAgICAgZm9ybV9yZXNwb25zZTogeyBzdGF0dXM6ICJTVUNDRVNTIiB9CiAgICB9OwoKICAgIGlmIChzdWJtaXNzaW9uX2lkKSB7CiAgICAgIGl0ZW0wLnhpbnB1dC5mb3JtX3Jlc3BvbnNlLnN1Ym1pc3Npb25faWQgPSBzdWJtaXNzaW9uX2lkOwogICAgICBjb25zb2xlLmxvZygi4pyFIHN1Ym1pc3Npb25faWQgbWFwcGVkOiIsIHN1Ym1pc3Npb25faWQpOwogICAgfSBlbHNlIHsKICAgICAgY29uc29sZS53YXJuKCLimqDvuI8gc3VibWlzc2lvbl9pZCBtaXNzaW5nIGluIHNlc3Npb24iKTsKICAgIH0KCiAgICBjb25zb2xlLmxvZygi4pyFIHhpbnB1dCBtYXBwZWQiKTsKICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFVQREFURSBTRVNTSU9OIElURU0KICAgKiBTYXZlIGZ1bGwgaXRlbSB3aXRoIGNhdGVnb3J5X2lkcyBmb3IgZG93bnN0cmVhbSBzdGVwcwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBzZXNzaW9uRGF0YS5pdGVtID0gW0pTT04ucGFyc2UoSlNPTi5zdHJpbmdpZnkoewogICAgLi4ub3JkZXIuaXRlbXNbMF0sCiAgICBjYXRlZ29yeV9pZHM6IHNlbGVjdGVkSXRlbT8uY2F0ZWdvcnlfaWRzIHx8IFtdLAogICAgZnVsZmlsbG1lbnRfaWRzOiBzZWxlY3RlZEl0ZW0/LmZ1bGZpbGxtZW50X2lkcyB8fCBbXSwKICB9KSldOwoKICBjb25zb2xlLmxvZygi4pyFIHNlc3Npb25EYXRhLml0ZW0gdXBkYXRlZCB3aXRoIGZ1bGwgZGF0YSIpOwoKICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQubWVzc2FnZSB8fCAhdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2UgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyLnByb3ZpZGVyIHx8ICFvcmRlci5wcm92aWRlci5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwcm92aWRlci5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgaWYgKCFBcnJheS5pc0FycmF5KG9yZGVyLml0ZW1zKSB8fCBvcmRlci5pdGVtcy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbXMgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IGl0ZW0gPSBvcmRlci5pdGVtc1swXTsKIAogIGNvbnN0IHNlc3Npb25JdGVtcyA9IHNlc3Npb25EYXRhPy5pdGVtczsKICBpZiAoQXJyYXkuaXNBcnJheShzZXNzaW9uSXRlbXMpICYmIHNlc3Npb25JdGVtcy5sZW5ndGggPiAwKSB7CiAgICBjb25zdCBleGlzdHMgPSBzZXNzaW9uSXRlbXMuc29tZSgoaSkgPT4gaT8uaWQgPT09IGl0ZW0uaWQpOwogICAgaWYgKCFleGlzdHMpIHsKICAgICAgcmV0dXJuIHsKICAgICAgICB2YWxpZDogZmFsc2UsCiAgICAgICAgY29kZTogNDAwLAogICAgICAgIGRlc2NyaXB0aW9uOiAiaXRlbXMuaWQgbm90IGZvdW5kIGluIHNlc3Npb25EYXRhLml0ZW1zIgogICAgICB9OwogICAgfQogIH0KCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
@@ -762,7 +744,7 @@ steps:
     owner: BPP
     responseFor: select_1
     unsolicited: false
-    description: please add relevant description
+    description: The BPP responds to the BAP's loan product selection with the confirmed offer details, including the quote, principal amount, loan term, and required consent information.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CiAgY29uc3Qgc2VsZWN0ZWRQcm92aWRlciA9IHNlc3Npb25EYXRhPy5zZWxlY3RlZF9wcm92aWRlcj8uWzBdOwoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNIFNFTEVDVElPTgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZWxlY3RJdGVtSWQgPSBvcmRlcj8uaXRlbXM/LlswXT8uaWQ7CiAgbGV0IHNlbGVjdGVkSXRlbSA9IG51bGw7CgogIGlmIChBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhPy5pdGVtcykgJiYgc2Vzc2lvbkRhdGEuaXRlbXMubGVuZ3RoID4gMCkgewoKICAgIGlmIChzZWxlY3RJdGVtSWQpIHsKICAgICAgc2VsZWN0ZWRJdGVtID0gc2Vzc2lvbkRhdGEuaXRlbXMuZmluZCgoaXRlbSkgPT4gaXRlbT8uaWQgPT09IHNlbGVjdEl0ZW1JZCk7CiAgICAgIGNvbnNvbGUubG9nKCLinIUgTWF0Y2hlZCBvbl9zZWFyY2ggaXRlbSBieSBzZWxlY3QgaWQ6Iiwgc2VsZWN0ZWRJdGVtPy5pZCk7CiAgICB9CgogICAgaWYgKCFzZWxlY3RlZEl0ZW0pIHsKICAgICAgc2VsZWN0ZWRJdGVtID0gc2Vzc2lvbkRhdGEuaXRlbXMuZmluZCgoaXRlbSkgPT4KICAgICAgICBpdGVtPy5pZD8uc3RhcnRzV2l0aCgiYnVyZWF1X2dvbGRfbG9hbl8iKQogICAgICApOwogICAgICBjb25zb2xlLmxvZygi4pyFIEZhbGxiYWNrIGJ1cmVhdSBnb2xkIGxvYW4gaXRlbToiLCBzZWxlY3RlZEl0ZW0/LmlkKTsKICAgIH0KCiAgICBpZiAoIXNlbGVjdGVkSXRlbSkgewogICAgICBzZWxlY3RlZEl0ZW0gPSBzZXNzaW9uRGF0YS5pdGVtcy5maW5kKChpdGVtKSA9PgogICAgICAgIGl0ZW0/LmlkPy5zdGFydHNXaXRoKCJnb2xkX2xvYW5fIikKICAgICAgKTsKICAgICAgY29uc29sZS5sb2coIuKchSBGYWxsYmFjayBnb2xkIGxvYW4gaXRlbToiLCBzZWxlY3RlZEl0ZW0/LmlkKTsKICAgIH0KCiAgICBpZiAoIXNlbGVjdGVkSXRlbSkgewogICAgICBzZWxlY3RlZEl0ZW0gPSBzZXNzaW9uRGF0YS5pdGVtc1swXTsKICAgICAgY29uc29sZS5sb2coIuKchSBGaW5hbCBmYWxsYmFjayB0byBmaXJzdCBpdGVtOiIsIHNlbGVjdGVkSXRlbT8uaWQpOwogICAgfQoKICB9IGVsc2UgewogICAgY29uc29sZS53YXJuKCLimqDvuI8gc2Vzc2lvbkRhdGEuaXRlbXMgbm90IGF2YWlsYWJsZSIpOwogICAgc2VsZWN0ZWRJdGVtID0gc2Vzc2lvbkRhdGE/Lml0ZW0/LlswXTsKICB9CgogIGNvbnNvbGUubG9nKCLinIUgc2VsZWN0ZWRJdGVtIGlkOiIsIHNlbGVjdGVkSXRlbT8uaWQpOwogIGNvbnNvbGUubG9nKCLinIUgc2VsZWN0ZWRJdGVtIGNhdGVnb3J5X2lkczoiLCBzZWxlY3RlZEl0ZW0/LmNhdGVnb3J5X2lkcyk7CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFBST1ZJREVSIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgaWYgKHNlbGVjdGVkUHJvdmlkZXI/LmlkICYmIG9yZGVyPy5wcm92aWRlcikgewogICAgb3JkZXIucHJvdmlkZXIuaWQgPSBzZWxlY3RlZFByb3ZpZGVyLmlkOwogICAgY29uc29sZS5sb2coIuKchSBQcm92aWRlciBtYXBwZWQ6Iiwgc2VsZWN0ZWRQcm92aWRlci5pZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgaWYgKHNlbGVjdGVkSXRlbSAmJiBvcmRlcj8uaXRlbXM/LlswXSkgewogICAgY29uc3QgaXRlbTAgPSBvcmRlci5pdGVtc1swXTsKCiAgICBpdGVtMC5pZCA9IHNlbGVjdGVkSXRlbS5pZDsKCiAgICBpZiAoc2VsZWN0ZWRJdGVtLmNhdGVnb3J5X2lkcz8ubGVuZ3RoKSB7CiAgICAgIGl0ZW0wLmNhdGVnb3J5X2lkcyA9IFsuLi5zZWxlY3RlZEl0ZW0uY2F0ZWdvcnlfaWRzXTsKICAgICAgY29uc29sZS5sb2coIuKchSBjYXRlZ29yeV9pZHMgbWFwcGVkOiIsIGl0ZW0wLmNhdGVnb3J5X2lkcyk7CiAgICB9IGVsc2UgewogICAgICBjb25zb2xlLndhcm4oIuKaoO+4jyBzZWxlY3RlZEl0ZW0gaGFzIG5vIGNhdGVnb3J5X2lkcyIpOwogICAgfQoKICAgIGlmIChzZWxlY3RlZEl0ZW0uZnVsZmlsbG1lbnRfaWRzPy5sZW5ndGgpIHsKICAgICAgaXRlbTAuZnVsZmlsbG1lbnRfaWRzID0gWy4uLnNlbGVjdGVkSXRlbS5mdWxmaWxsbWVudF9pZHNdOwogICAgICBjb25zb2xlLmxvZygi4pyFIGZ1bGZpbGxtZW50X2lkcyBtYXBwZWQ6IiwgaXRlbTAuZnVsZmlsbG1lbnRfaWRzKTsKICAgIH0KCiAgICBjb25zb2xlLmxvZygi4pyFIEl0ZW0gZnVsbHkgbWFwcGVkOiIsIHNlbGVjdGVkSXRlbS5pZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBMT0NBVElPTiBJRFMgTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZWxlY3RlZExvY2F0aW9uSWQgPQogICAgQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfbG9jYXRpb25faWQpCiAgICAgID8gc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfbG9jYXRpb25faWRbMF0KICAgICAgOiBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfbG9jYXRpb25faWQ7CgogIGlmIChzZWxlY3RlZExvY2F0aW9uSWQgJiYgb3JkZXI/Lml0ZW1zPy5bMF0pIHsKICAgIG9yZGVyLml0ZW1zWzBdLmxvY2F0aW9uX2lkcyA9IFtzZWxlY3RlZExvY2F0aW9uSWRdOwogICAgY29uc29sZS5sb2coIuKchSBsb2NhdGlvbl9pZHMgbWFwcGVkOiIsIHNlbGVjdGVkTG9jYXRpb25JZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBRVU9URSBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChvcmRlcj8ucXVvdGUpIHsKICAgIG9yZGVyLnF1b3RlLmlkID0gYHF1b3RlXyR7dXVpZHY0KCl9YDsKICAgIGNvbnNvbGUubG9nKCLinIUgUXVvdGUgaWQgZ2VuZXJhdGVkOiIsIG9yZGVyLnF1b3RlLmlkKTsKICAgIHNlc3Npb25EYXRhLnF1b3RlX2lkID0gb3JkZXIucXVvdGUuaWQ7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBVUERBVEUgU0VTU0lPTiBJVEVNCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIHNlc3Npb25EYXRhLml0ZW0gPSBbSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShvcmRlci5pdGVtc1swXSkpXTsKICBjb25zb2xlLmxvZygi4pyFIHNlc3Npb25EYXRhLml0ZW0gdXBkYXRlZCIpOwoKICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyLnByb3ZpZGVyPy5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwcm92aWRlci5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCgogIGlmICghQXJyYXkuaXNBcnJheShvcmRlci5pdGVtcykgfHwgb3JkZXIuaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zIGluIHBheWxvYWQiIH07CiAgfQogIGNvbnN0IGl0ZW0gPSBvcmRlci5pdGVtc1swXTsKIAogICAgICBjb25zdCBleHBlY3RlZFN1Ym1pc3Npb25JZCA9CiAgICAgIHNlc3Npb25EYXRhPy5mb3JtRGF0YT8uY29uc3VtZXJfaW5mb3JtYXRpb25fZm9ybT8uZm9ybV9zdWJtaXNzaW9uX2lkOwoKICAgIGlmIChleHBlY3RlZFN1Ym1pc3Npb25JZCkgewogICAgICBpZiAoIWl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3VibWlzc2lvbl9pZCkgewogICAgICAgIHJldHVybiB7CiAgICAgICAgICB2YWxpZDogZmFsc2UsCiAgICAgICAgICBjb2RlOiA0MDAsCiAgICAgICAgICBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbXMueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3VibWlzc2lvbl9pZCBpbiBwYXlsb2FkIgogICAgICAgIH07CiAgICAgIH0KCiAgICAgIGlmIChpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlLnN1Ym1pc3Npb25faWQgIT09IGV4cGVjdGVkU3VibWlzc2lvbklkKSB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgICAgIGNvZGU6IDQwMCwKICAgICAgICAgIGRlc2NyaXB0aW9uOiAiTWlzbWF0Y2ggc3VibWlzc2lvbl9pZCB3aXRoIHNlc3Npb25EYXRhIgogICAgICAgIH07CiAgICAgIH0KICAgIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0KCg==
@@ -820,8 +802,7 @@ steps:
                     - descriptor:
                         code: GRO_ADDRESS
                         name: Gro Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                     - descriptor:
                         code: CUSTOMER_SUPPORT_LINK
                         name: Customer support link
@@ -853,8 +834,7 @@ steps:
                     - descriptor:
                         code: LSP_ADDRESS
                         name: Lsp Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               locations:
                 - id: L1
                   gps: 28.574909, 77.194029
@@ -941,9 +921,7 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage computed on net
-                            disbursed amount using IRR approach and reducing
-                            balance method
+                          short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -973,14 +951,7 @@ steps:
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                            document related to a loan. When accessed, the
-                            document is returned in text/html format, with the
-                            loan details organized in a standard HTML table.
-                            This format makes it easy for the buyer's app to
-                            read and reformat the information as needed. For
-                            more details, refer to the "KFS_LINK format"
-                            document in the "feature-ui" section.
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
             fulfillments:
               - id: F1
@@ -1144,8 +1115,7 @@ steps:
                       - descriptor:
                           code: GRO_ADDRESS
                           name: Gro Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                       - descriptor:
                           code: CUSTOMER_SUPPORT_LINK
                           name: Customer support link
@@ -1177,8 +1147,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                 locations:
                   - id: L1
                     gps: 28.574909, 77.194029
@@ -1265,9 +1234,7 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage computed on net
-                              disbursed amount using IRR approach and reducing
-                              balance method
+                            short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -1297,14 +1264,7 @@ steps:
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                              document related to a loan. When accessed, the
-                              document is returned in text/html format, with the
-                              loan details organized in a standard HTML table.
-                              This format makes it easy for the buyer's app to
-                              read and reformat the information as needed. For
-                              more details, refer to the "KFS_LINK format"
-                              document in the "feature-ui" section.
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                   category_ids:
                     - cat_gold_loan_04d3f0c1-2f40-4a12-8763-ee7be0993ec5
@@ -1403,10 +1363,7 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP sends a select request to the BPP to confirm the chosen
-      loan provider and item details, including form identifiers and user
-      inputs, thereby initiating the formal loan application process within the
-      offline foreclosure journey.
+    description: The BAP selects the gold loan product and lender from available offerings, confirming the chosen option for the subsequent offline verification and underwriting process.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CiAgY29uc3Qgc2VsZWN0ZWRQcm92aWRlciA9IHNlc3Npb25EYXRhPy5zZWxlY3RlZF9wcm92aWRlcj8uWzBdOwogIGNvbnN0IHN1Ym1pc3Npb25faWQgPSBzZXNzaW9uRGF0YT8uZ29sZF9sb2FuX2luZm9ybWF0aW9uX2Zvcm07CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIElURU0g4oCUIHVzZSBhbHJlYWR5IHNlbGVjdGVkIGl0ZW0gZnJvbSBzZWxlY3QgMQogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZWxlY3RlZEl0ZW0gPSBzZXNzaW9uRGF0YT8uaXRlbT8uWzBdOwoKICBjb25zb2xlLmxvZygi4pyFIHNlbGVjdGVkSXRlbSBpZDoiLCBzZWxlY3RlZEl0ZW0/LmlkKTsKICBjb25zb2xlLmxvZygi4pyFIHN1Ym1pc3Npb25faWQgZnJvbSBzZXNzaW9uOiIsIHN1Ym1pc3Npb25faWQpOwoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBQUk9WSURFUiBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChzZWxlY3RlZFByb3ZpZGVyPy5pZCAmJiBvcmRlcj8ucHJvdmlkZXIpIHsKICAgIG9yZGVyLnByb3ZpZGVyLmlkID0gc2VsZWN0ZWRQcm92aWRlci5pZDsKICAgIGNvbnNvbGUubG9nKCLinIUgUHJvdmlkZXIgbWFwcGVkOiIsIHNlbGVjdGVkUHJvdmlkZXIuaWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogSVRFTSBNQVBQSU5HCiAgICogR29sZCBsb2FuIHNlbGVjdCBvbmx5IG5lZWRzIGlkIOKAlCBubyBjYXRlZ29yeV9pZHMvZnVsZmlsbG1lbnRfaWRzL3hpbnB1dAogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAoc2VsZWN0ZWRJdGVtICYmIG9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICBjb25zdCBpdGVtMCA9IG9yZGVyLml0ZW1zWzBdOwoKICAgIGl0ZW0wLmlkID0gc2VsZWN0ZWRJdGVtLmlkOwoKICAgIGRlbGV0ZSBpdGVtMC5jYXRlZ29yeV9pZHM7CiAgICBkZWxldGUgaXRlbTAuZnVsZmlsbG1lbnRfaWRzOwogICAgZGVsZXRlIGl0ZW0wLmRlc2NyaXB0b3I7CiAgICBkZWxldGUgaXRlbTAudGFnczsKICAgIGRlbGV0ZSBpdGVtMC5wcmljZTsKICAgIGRlbGV0ZSBpdGVtMC54aW5wdXQ7CgogICAgY29uc29sZS5sb2coIuKchSBJdGVtIGlkIG1hcHBlZDoiLCBzZWxlY3RlZEl0ZW0uaWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogVVBEQVRFIFNFU1NJT04gSVRFTQogICAqIFNhdmUgZnVsbCBpdGVtIHdpdGggY2F0ZWdvcnlfaWRzIGZvciBkb3duc3RyZWFtIHN0ZXBzCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIHNlc3Npb25EYXRhLml0ZW0gPSBbSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeSh7CiAgICAuLi5vcmRlci5pdGVtc1swXSwKICAgIGNhdGVnb3J5X2lkczogc2VsZWN0ZWRJdGVtPy5jYXRlZ29yeV9pZHMgfHwgW10sCiAgICBmdWxmaWxsbWVudF9pZHM6IHNlbGVjdGVkSXRlbT8uZnVsZmlsbG1lbnRfaWRzIHx8IFtdLAogIH0pKV07CgogIGNvbnNvbGUubG9nKCLinIUgc2Vzc2lvbkRhdGEuaXRlbSB1cGRhdGVkIHdpdGggZnVsbCBkYXRhIik7CgogIHJldHVybiBleGlzdGluZ1BheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQgfHwgIXRhcmdldFBheWxvYWQubWVzc2FnZSB8fCAhdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2UgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyLnByb3ZpZGVyIHx8ICFvcmRlci5wcm92aWRlci5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwcm92aWRlci5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgaWYgKCFBcnJheS5pc0FycmF5KG9yZGVyLml0ZW1zKSB8fCBvcmRlci5pdGVtcy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbXMgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IGl0ZW0gPSBvcmRlci5pdGVtc1swXTsKICBjb25zdCBleHBlY3RlZFByb3ZpZGVySWQgPSBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LlswXT8uaWQ7CiAgaWYgKGV4cGVjdGVkUHJvdmlkZXJJZCAmJiBvcmRlci5wcm92aWRlci5pZCAhPT0gZXhwZWN0ZWRQcm92aWRlcklkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNtYXRjaCBpbiBwcm92aWRlci5pZCB3aXRoIHNlc3Npb25EYXRhIgogICAgfTsKICB9CgogICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -1483,20 +1440,13 @@ steps:
                   location_ids:
                     - L2
         type: request
-        description: The BAP sends a select request to the BPP to confirm the chosen
-          loan provider and item details, including form identifiers and user
-          inputs, thereby initiating the formal loan application process within
-          the offline foreclosure journey.
+        description: The BAP sends a select request to the BPP to confirm the chosen loan provider and item details, including form identifiers and user inputs, thereby initiating the formal loan application process within the offline foreclosure journey.
   - api: on_select
     action_id: on_select_2
     owner: BPP
     responseFor: select_2
     unsolicited: false
-    description: The BPP responds to the BAP's select request by providing the loan
-      offer details, including provider information, terms, and pricing, to
-      enable the BAP to present the finalized options to the borrower for
-      confirmation. This step confirms the selected loan product and sets the
-      stage for the subsequent booking and offline processing phases.
+    description: The BPP responds with the confirmed order containing the loan quote with principal amount, net disbursement, and loan term details, along with any required digital verification forms.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CiAgY29uc3Qgc2VsZWN0ZWRQcm92aWRlciA9IHNlc3Npb25EYXRhPy5zZWxlY3RlZF9wcm92aWRlcj8uWzBdOwoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNIOKAlCB1c2UgYWxyZWFkeSBzZWxlY3RlZCBpdGVtIGZyb20gc2VsZWN0IDIKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgY29uc3Qgc2VsZWN0ZWRJdGVtID0gc2Vzc2lvbkRhdGE/Lml0ZW0/LlswXTsKCiAgY29uc29sZS5sb2coIuKchSBzZWxlY3RlZEl0ZW0gaWQ6Iiwgc2VsZWN0ZWRJdGVtPy5pZCk7CiAgY29uc29sZS5sb2coIuKchSBzZWxlY3RlZEl0ZW0gY2F0ZWdvcnlfaWRzOiIsIHNlbGVjdGVkSXRlbT8uY2F0ZWdvcnlfaWRzKTsKCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogUFJPVklERVIgTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAoc2VsZWN0ZWRQcm92aWRlcj8uaWQgJiYgb3JkZXI/LnByb3ZpZGVyKSB7CiAgICBvcmRlci5wcm92aWRlci5pZCA9IHNlbGVjdGVkUHJvdmlkZXIuaWQ7CiAgICBjb25zb2xlLmxvZygi4pyFIFByb3ZpZGVyIG1hcHBlZDoiLCBzZWxlY3RlZFByb3ZpZGVyLmlkKTsKICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIElURU0gTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAoc2VsZWN0ZWRJdGVtICYmIG9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICBjb25zdCBpdGVtMCA9IG9yZGVyLml0ZW1zWzBdOwoKICAgIGl0ZW0wLmlkID0gc2VsZWN0ZWRJdGVtLmlkOwoKICAgIGlmIChzZWxlY3RlZEl0ZW0uY2F0ZWdvcnlfaWRzPy5sZW5ndGgpIHsKICAgICAgaXRlbTAuY2F0ZWdvcnlfaWRzID0gWy4uLnNlbGVjdGVkSXRlbS5jYXRlZ29yeV9pZHNdOwogICAgICBjb25zb2xlLmxvZygi4pyFIGNhdGVnb3J5X2lkcyBtYXBwZWQ6IiwgaXRlbTAuY2F0ZWdvcnlfaWRzKTsKICAgIH0KCiAgICBpZiAoc2VsZWN0ZWRJdGVtLmZ1bGZpbGxtZW50X2lkcz8ubGVuZ3RoKSB7CiAgICAgIGl0ZW0wLmZ1bGZpbGxtZW50X2lkcyA9IFsuLi5zZWxlY3RlZEl0ZW0uZnVsZmlsbG1lbnRfaWRzXTsKICAgICAgY29uc29sZS5sb2coIuKchSBmdWxmaWxsbWVudF9pZHMgbWFwcGVkOiIsIGl0ZW0wLmZ1bGZpbGxtZW50X2lkcyk7CiAgICB9CgogICAgY29uc29sZS5sb2coIuKchSBJdGVtIGZ1bGx5IG1hcHBlZDoiLCBzZWxlY3RlZEl0ZW0uaWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogTE9DQVRJT04gSURTIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgY29uc3Qgc2VsZWN0ZWRMb2NhdGlvbklkID0KICAgIEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LnNlbGVjdGVkX2xvY2F0aW9uX2lkKQogICAgICA/IHNlc3Npb25EYXRhLnNlbGVjdGVkX2xvY2F0aW9uX2lkWzBdCiAgICAgIDogc2Vzc2lvbkRhdGE/LnNlbGVjdGVkX2xvY2F0aW9uX2lkOwoKICBpZiAoc2VsZWN0ZWRMb2NhdGlvbklkICYmIG9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICBvcmRlci5pdGVtc1swXS5sb2NhdGlvbl9pZHMgPSBbc2VsZWN0ZWRMb2NhdGlvbklkXTsKICAgIGNvbnNvbGUubG9nKCLinIUgbG9jYXRpb25faWRzIG1hcHBlZDoiLCBzZWxlY3RlZExvY2F0aW9uSWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogWElOUFVUIEZPUk0gTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAob3JkZXI/Lml0ZW1zPy5bMF0/LnhpbnB1dD8uZm9ybSkgewogICAgY29uc3QgdW5pcXVlRm9ybUlkID0gYGVreWNfZGV0YWlsc18ke3V1aWR2NCgpfWA7CiAgICBvcmRlci5pdGVtc1swXS54aW5wdXQuZm9ybS5pZCA9IHVuaXF1ZUZvcm1JZDsKCiAgICBjb25zdCB1cmwgPSBjcmVhdGVGb3JtVVJMKCJPTkRDOkZJUzEyIiwgIkVreWNfZGV0YWlsc19mb3JtIiwgc2Vzc2lvbkRhdGEpOwogICAgb3JkZXIuaXRlbXNbMF0ueGlucHV0LmZvcm0udXJsID0gdXJsOwoKICAgIGNvbnNvbGUubG9nKCLinIUgeGlucHV0IGZvcm0gZ2VuZXJhdGVkOiIsIHVuaXF1ZUZvcm1JZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBRVU9URSBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChvcmRlcj8ucXVvdGUpIHsKICAgIG9yZGVyLnF1b3RlLmlkID0gYHF1b3RlXyR7dXVpZHY0KCl9YDsKICAgIHNlc3Npb25EYXRhLnF1b3RlX2lkID0gb3JkZXIucXVvdGUuaWQ7CiAgICBjb25zb2xlLmxvZygi4pyFIFF1b3RlIGlkIGdlbmVyYXRlZDoiLCBvcmRlci5xdW90ZS5pZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBVUERBVEUgU0VTU0lPTiBJVEVNCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIHNlc3Npb25EYXRhLml0ZW0gPSBbSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShvcmRlci5pdGVtc1swXSkpXTsKICBjb25zb2xlLmxvZygi4pyFIHNlc3Npb25EYXRhLml0ZW0gdXBkYXRlZCIpOwoKICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwoKZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogT1JERVIgVkFMSURBVElPTgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIKICAgIH07CiAgfQoKICBjb25zdCBvcmRlciA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5vcmRlcjsKCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogUFJPVklERVIgVkFMSURBVElPTgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAoIW9yZGVyLnByb3ZpZGVyPy5pZCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwcm92aWRlci5pZCBpbiBwYXlsb2FkIgogICAgfTsKICB9CgogIGNvbnN0IGV4cGVjdGVkUHJvdmlkZXJJZCA9CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LlswXT8uaWQ7CgogIGlmICgKICAgIGV4cGVjdGVkUHJvdmlkZXJJZCAmJgogICAgb3JkZXIucHJvdmlkZXIuaWQgIT09IGV4cGVjdGVkUHJvdmlkZXJJZAogICkgewoKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjoKICAgICAgICAiTWlzbWF0Y2ggcHJvdmlkZXIuaWQgd2l0aCBzZXNzaW9uRGF0YSIKICAgIH07CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNUyBWQUxJREFUSU9OCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmICgKICAgICFBcnJheS5pc0FycmF5KG9yZGVyLml0ZW1zKSB8fAogICAgb3JkZXIuaXRlbXMubGVuZ3RoID09PSAwCiAgKSB7CgogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBpdGVtcyBpbiBwYXlsb2FkIgogICAgfTsKICB9CgogIGNvbnN0IGl0ZW0wID0gb3JkZXIuaXRlbXNbMF07CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIElURU0gSUQgVkFMSURBVElPTgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAoIWl0ZW0wPy5pZCkgewoKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbS5pZCBpbiBwYXlsb2FkIgogICAgfTsKICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIEVYUEVDVEVEIElURU0gVkFMSURBVElPTgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBsZXQgZXhwZWN0ZWRJdGVtOwoKICBpZiAoCiAgICBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhPy5pdGVtcykgJiYKICAgIHNlc3Npb25EYXRhLml0ZW1zLmxlbmd0aCA+IDAKICApIHsKCiAgICAvKioKICAgICAqIFZhbGlkYXRlIGFnYWluc3Q6CiAgICAgKiAtIEJ1cmVhdSBMb2FuIGl0ZW0KICAgICAqIC0gTm9uLUFBIFBlcnNvbmFsIExvYW4gaXRlbQogICAgICovCgogICAgZXhwZWN0ZWRJdGVtID0KICAgICAgc2Vzc2lvbkRhdGEuaXRlbXMuZmluZCgKICAgICAgICAoaXRlbSkgPT4KICAgICAgICAgIGl0ZW0/LmRlc2NyaXB0b3I/LmNvZGUgPT09CiAgICAgICAgICAgICJQRVJTT05BTF9MT0FOIiAmJgogICAgICAgICAgaXRlbT8uY2F0ZWdvcnlfaWRzPy5zb21lKChjYXRJZCkgPT4KICAgICAgICAgICAgU3RyaW5nKGNhdElkKQogICAgICAgICAgICAgIC50b0xvd2VyQ2FzZSgpCiAgICAgICAgICAgICAgLmluY2x1ZGVzKCJidXJlYXUiKQogICAgICAgICAgKSAmJgogICAgICAgICAgaXRlbT8uZGVzY3JpcHRvcj8ubmFtZQogICAgICAgICAgICA/LnRvTG93ZXJDYXNlKCkKICAgICAgICAgICAgLmluY2x1ZGVzKCJ3aXRob3V0IGFhIikKICAgICAgKTsKCiAgICAvKioKICAgICAqIEZhbGxiYWNrCiAgICAgKi8KCiAgICBpZiAoIWV4cGVjdGVkSXRlbSkgewoKICAgICAgZXhwZWN0ZWRJdGVtID0KICAgICAgICBzZXNzaW9uRGF0YS5pdGVtcy5maW5kKAogICAgICAgICAgKGl0ZW0pID0+CiAgICAgICAgICAgIGl0ZW0/LmRlc2NyaXB0b3I/LmNvZGUgIT09CiAgICAgICAgICAgICJQUkVfUVVBTElGSUVSIgogICAgICAgICk7CiAgICB9CiAgfQoKICBpZiAoCiAgICBleHBlY3RlZEl0ZW0/LmlkICYmCiAgICBpdGVtMC5pZCAhPT0gZXhwZWN0ZWRJdGVtLmlkCiAgKSB7CgogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOgogICAgICAgIGBNaXNtYXRjaCBpdGVtLmlkIHdpdGggZXhwZWN0ZWQgc2VsZWN0ZWQgaXRlbS4gRXhwZWN0ZWQ6ICR7ZXhwZWN0ZWRJdGVtLmlkfSwgUmVjZWl2ZWQ6ICR7aXRlbTAuaWR9YAogICAgfTsKICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIENBVEVHT1JZIElEUyBWQUxJREFUSU9OCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmICgKICAgIGV4cGVjdGVkSXRlbT8uY2F0ZWdvcnlfaWRzICYmCiAgICBBcnJheS5pc0FycmF5KGl0ZW0wPy5jYXRlZ29yeV9pZHMpCiAgKSB7CgogICAgY29uc3QgZXhwZWN0ZWRDYXRlZ29yeUlkcyA9CiAgICAgIFsuLi5leHBlY3RlZEl0ZW0uY2F0ZWdvcnlfaWRzXS5zb3J0KCk7CgogICAgY29uc3QgcmVjZWl2ZWRDYXRlZ29yeUlkcyA9CiAgICAgIFsuLi5pdGVtMC5jYXRlZ29yeV9pZHNdLnNvcnQoKTsKCiAgICBjb25zdCBpc0NhdGVnb3J5TWF0Y2hlZCA9CiAgICAgIEpTT04uc3RyaW5naWZ5KGV4cGVjdGVkQ2F0ZWdvcnlJZHMpID09PQogICAgICBKU09OLnN0cmluZ2lmeShyZWNlaXZlZENhdGVnb3J5SWRzKTsKCiAgICBpZiAoIWlzQ2F0ZWdvcnlNYXRjaGVkKSB7CgogICAgICByZXR1cm4gewogICAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgICBjb2RlOiA0MDAsCiAgICAgICAgZGVzY3JpcHRpb246CiAgICAgICAgICAiTWlzbWF0Y2ggY2F0ZWdvcnlfaWRzIHdpdGggc2VsZWN0ZWQgaXRlbSIKICAgICAgfTsKICAgIH0KICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIEZPUk0gVkFMSURBVElPTgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAoCiAgICBpdGVtMD8ueGlucHV0Py5mb3JtPy5pZCAmJgogICAgdHlwZW9mIGl0ZW0wLnhpbnB1dC5mb3JtLmlkICE9PSAic3RyaW5nIgogICkgewoKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjoKICAgICAgICAieGlucHV0LmZvcm0uaWQgbXVzdCBiZSBhIHN0cmluZyIKICAgIH07CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBTVUNDRVNTCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIHJldHVybiB7CiAgICB2YWxpZDogdHJ1ZSwKICAgIGNvZGU6IDIwMCwKICAgIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIKICB9Owp9
@@ -1554,8 +1504,7 @@ steps:
                     - descriptor:
                         code: GRO_ADDRESS
                         name: Gro Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                     - descriptor:
                         code: CUSTOMER_SUPPORT_LINK
                         name: Customer support link
@@ -1587,8 +1536,7 @@ steps:
                     - descriptor:
                         code: LSP_ADDRESS
                         name: Lsp Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               locations:
                 - id: L2
                   gps: 28.584909, 77.134029
@@ -1661,9 +1609,7 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage computed on net
-                            disbursed amount using IRR approach and reducing
-                            balance method
+                          short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -1693,14 +1639,7 @@ steps:
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                            document related to a loan. When accessed, the
-                            document is returned in text/html format, with the
-                            loan details organized in a standard HTML table.
-                            This format makes it easy for the buyer's app to
-                            read and reformat the information as needed. For
-                            more details, refer to the "KFS_LINK format"
-                            document in the "feature-ui" section.
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
                 xinput:
                   head:
@@ -1888,8 +1827,7 @@ steps:
                       - descriptor:
                           code: GRO_ADDRESS
                           name: Gro Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                       - descriptor:
                           code: CUSTOMER_SUPPORT_LINK
                           name: Customer support link
@@ -1921,8 +1859,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                 locations:
                   - id: L2
                     gps: 28.584909, 77.134029
@@ -1995,9 +1932,7 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage computed on net
-                              disbursed amount using IRR approach and reducing
-                              balance method
+                            short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -2027,14 +1962,7 @@ steps:
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                              document related to a loan. When accessed, the
-                              document is returned in text/html format, with the
-                              loan details organized in a standard HTML table.
-                              This format makes it easy for the buyer's app to
-                              read and reformat the information as needed. For
-                              more details, refer to the "KFS_LINK format"
-                              document in the "feature-ui" section.
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                   xinput:
                     head:
@@ -2146,20 +2074,13 @@ steps:
                     contact:
                       phone: +91-99xx99xx99xx
         type: request
-        description: The BPP responds to the BAP's select request by providing the loan
-          offer details, including provider information, terms, and pricing, to
-          enable the BAP to present the finalized options to the borrower for
-          confirmation. This step confirms the selected loan product and sets
-          the stage for the subsequent booking and offline processing phases.
+        description: The BPP responds to the BAP's select request by providing the loan offer details, including provider information, terms, and pricing, to enable the BAP to present the finalized options to the borrower for confirmation. This step confirms the selected loan product and sets the stage for the subsequent booking and offline processing phases.
   - api: dynamic_form
     action_id: Ekyc_details_form
     owner: BPP
     responseFor: null
     unsolicited: false
-    description: The BPP sends a dynamic form request to the BAP to collect
-      additional borrower information required for offline foreclosure
-      processing, ensuring all necessary details are captured before proceeding
-      with the manual verification and loan account activation.
+    description: The BPP requests a dynamic form submission from the BAP for collecting additional identity and verification details required to support the offline manual underwriting process for the gold loan application.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -2173,20 +2094,13 @@ steps:
         payload:
           idType: COMPLETED
         type: request
-        description: The BPP sends a dynamic form request to the BAP to collect
-          additional borrower information required for offline foreclosure
-          processing, ensuring all necessary details are captured before
-          proceeding with the manual verification and loan account activation.
+        description: The BPP sends a dynamic form request to the BAP to collect additional borrower information required for offline foreclosure processing, ensuring all necessary details are captured before proceeding with the manual verification and loan account activation.
   - api: on_status
     action_id: on_status_kyc_verification
     owner: BPP
     responseFor: null
     unsolicited: true
-    description: The BPP sends an unsolicited on_status callback to the BAP to
-      update the loan application status, reflecting either successful offline
-      verification and credit approval or failure with explicit rejection codes,
-      thereby enabling the BAP to inform the borrower about the next steps in
-      the personal loan offline journey.
+    description: The BPP sends an unsolicited on_status callback to asynchronously update the BAP on the loan application's progress, including the current loan state, payment details, and order information as the lender proceeds through offline verification and underwriting.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CiAgY29uc3Qgc3VibWlzc2lvbl9pZCA9IHNlc3Npb25EYXRhPy5Fa3ljX2RldGFpbHNfZm9ybT8uZm9ybV9zdWJtaXNzaW9uX2lkOwoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNIEVOUklDSE1FTlQKICAgKiBQdWxsIGNhdGVnb3J5X2lkcyBhbmQgZnVsZmlsbG1lbnRfaWRzIGZyb20gc2VsZWN0IHN0ZXAgc2Vzc2lvbgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZXNzaW9uSXRlbSA9CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfaXRlbXM/LlswXSB8fAogICAgc2Vzc2lvbkRhdGE/Lml0ZW0/LlswXTsKCiAgaWYgKHNlc3Npb25JdGVtICYmIG9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICBjb25zdCBpdGVtMCA9IG9yZGVyLml0ZW1zWzBdOwoKICAgIGlmIChzZXNzaW9uSXRlbS5pZCkgewogICAgICBpdGVtMC5pZCA9IHNlc3Npb25JdGVtLmlkOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIGl0ZW0uaWQgbWFwcGVkOiIsIGl0ZW0wLmlkKTsKICAgIH0KCiAgICBpZiAoc2Vzc2lvbkl0ZW0uY2F0ZWdvcnlfaWRzPy5sZW5ndGgpIHsKICAgICAgaXRlbTAuY2F0ZWdvcnlfaWRzID0gWy4uLnNlc3Npb25JdGVtLmNhdGVnb3J5X2lkc107CiAgICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gY2F0ZWdvcnlfaWRzIG1hcHBlZDoiLCBpdGVtMC5jYXRlZ29yeV9pZHMpOwogICAgfSBlbHNlIHsKICAgICAgY29uc29sZS53YXJuKCLimqDvuI8gW29uX3N0YXR1c10gTm8gY2F0ZWdvcnlfaWRzIGZvdW5kIGluIHNlc3Npb24gaXRlbSIpOwogICAgfQoKICAgIGlmIChzZXNzaW9uSXRlbS5mdWxmaWxsbWVudF9pZHM/Lmxlbmd0aCkgewogICAgICBpdGVtMC5mdWxmaWxsbWVudF9pZHMgPSBbLi4uc2Vzc2lvbkl0ZW0uZnVsZmlsbG1lbnRfaWRzXTsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBmdWxmaWxsbWVudF9pZHMgbWFwcGVkOiIsIGl0ZW0wLmZ1bGZpbGxtZW50X2lkcyk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBQUk9WSURFUiBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnN0IHNlbGVjdGVkUHJvdmlkZXIgPSBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LlswXSB8fCBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI7CgogIGlmIChzZWxlY3RlZFByb3ZpZGVyPy5pZCAmJiBvcmRlcj8ucHJvdmlkZXIpIHsKICAgIG9yZGVyLnByb3ZpZGVyLmlkID0gc2VsZWN0ZWRQcm92aWRlci5pZDsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gUHJvdmlkZXIgbWFwcGVkOiIsIHNlbGVjdGVkUHJvdmlkZXIuaWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogWElOUFVUIEZPUk0gTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAob3JkZXI/Lml0ZW1zPy5bMF0/LnhpbnB1dD8uZm9ybSkgewogICAgY29uc3QgZXNpZ25Gb3JtSWQgPSBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLmZvcm1faWQpCiAgICAgID8gc2Vzc2lvbkRhdGEuZm9ybV9pZFswXQogICAgICA6IHNlc3Npb25EYXRhLmZvcm1faWQgfHwgIkYwNiI7CgogICAgb3JkZXIuaXRlbXNbMF0ueGlucHV0LmZvcm0uaWQgPSBlc2lnbkZvcm1JZDsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gVXBkYXRlZCBmb3JtLmlkOiIsIGVzaWduRm9ybUlkKTsKICB9CgogIGlmIChzdWJtaXNzaW9uX2lkICYmIG9yZGVyPy5pdGVtcz8uWzBdPy54aW5wdXQ/LmZvcm1fcmVzcG9uc2UpIHsKICAgIG9yZGVyLml0ZW1zWzBdLnhpbnB1dC5mb3JtX3Jlc3BvbnNlLnN1Ym1pc3Npb25faWQgPSBzdWJtaXNzaW9uX2lkOwogICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBVcGRhdGVkIHN1Ym1pc3Npb25faWQ6Iiwgc3VibWlzc2lvbl9pZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBQQVlNRU5UUyBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnN0IHNhdmVkUGF5bWVudHMgPSBzZXNzaW9uRGF0YT8ub3JkZXI/LnBheW1lbnRzIHx8IHNlc3Npb25EYXRhPy5wYXltZW50czsKCiAgaWYgKEFycmF5LmlzQXJyYXkoc2F2ZWRQYXltZW50cykgJiYgc2F2ZWRQYXltZW50cy5sZW5ndGggPiAwICYmIG9yZGVyKSB7CiAgICBvcmRlci5wYXltZW50cyA9IHNhdmVkUGF5bWVudHM7CiAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIFBheW1lbnRzIGNhcnJpZWQgZm9yd2FyZCIpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogUVVPVEUgTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAob3JkZXI/LnF1b3RlKSB7CiAgICBpZiAoc2Vzc2lvbkRhdGE/LnF1b3RlX2lkKSB7CiAgICAgIG9yZGVyLnF1b3RlLmlkID0gQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5xdW90ZV9pZCkKICAgICAgICA/IHNlc3Npb25EYXRhLnF1b3RlX2lkWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YS5xdW90ZV9pZDsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBRdW90ZSBpZCBtYXBwZWQ6Iiwgb3JkZXIucXVvdGUuaWQpOwogICAgfSBlbHNlIHsKICAgICAgY29uc29sZS53YXJuKCLimqDvuI8gW29uX3N0YXR1c10gcXVvdGVfaWQgbm90IGZvdW5kIGluIHNlc3Npb24iKTsKICAgIH0KCiAgICBpZiAoc2Vzc2lvbkRhdGE/LnF1b3RlX3ByaWNlKSB7CiAgICAgIG9yZGVyLnF1b3RlLnByaWNlLnZhbHVlID0gQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5xdW90ZV9wcmljZSkKICAgICAgICA/IHNlc3Npb25EYXRhLnF1b3RlX3ByaWNlWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YS5xdW90ZV9wcmljZTsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBRdW90ZSBwcmljZSBtYXBwZWQ6Iiwgb3JkZXIucXVvdGUucHJpY2UudmFsdWUpOwogICAgfQogIH0KCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgY29udGV4dCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgaWYgKHRhcmdldFBheWxvYWQuY29udGV4dC5hY3Rpb24gIT09ICJvbl9zdGF0dXMiKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJJbnZhbGlkIGFjdGlvbiBpbiBjb250ZXh0IiB9OwogIH0KCiAgaWYgKCF0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5vcmRlcikgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBtZXNzYWdlLm9yZGVyIGluIHBheWxvYWQiIH07CiAgfQogY29uc3Qgb3JkZXI9dGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CiAgaWYgKCFvcmRlci5wcm92aWRlcj8uaWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgcHJvdmlkZXIuaWQgaW4gcGF5bG9hZCIgfTsKICB9CgogCiAgaWYgKCFBcnJheS5pc0FycmF5KG9yZGVyLml0ZW1zKSB8fCBvcmRlci5pdGVtcy5sZW5ndGggPT09IDApIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgaXRlbXMgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IGl0ZW0gPSBvcmRlci5pdGVtc1swXTsKCiAgaWYgKCFpdGVtLmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zWzBdLmlkIGluIHBheWxvYWQiIH07CiAgfQoKICBpZiAoIW9yZGVyPy5xdW90ZT8uaWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgcXVvdGUuaWQgaW4gcGF5bG9hZCIgfTsKICB9CgogCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
@@ -2244,8 +2158,7 @@ steps:
                     - descriptor:
                         code: GRO_ADDRESS
                         name: Gro Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                     - descriptor:
                         code: CUSTOMER_SUPPORT_LINK
                         name: Customer support link
@@ -2277,8 +2190,7 @@ steps:
                     - descriptor:
                         code: LSP_ADDRESS
                         name: Lsp Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               locations:
                 - id: L2
                   gps: 28.584909, 77.134029
@@ -2351,9 +2263,7 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage computed on net
-                            disbursed amount using IRR approach and reducing
-                            balance method
+                          short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -2383,14 +2293,7 @@ steps:
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                            document related to a loan. When accessed, the
-                            document is returned in text/html format, with the
-                            loan details organized in a standard HTML table.
-                            This format makes it easy for the buyer's app to
-                            read and reformat the information as needed. For
-                            more details, refer to the "KFS_LINK format"
-                            document in the "feature-ui" section.
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
                 xinput:
                   form:
@@ -2567,8 +2470,7 @@ steps:
                       - descriptor:
                           code: GRO_ADDRESS
                           name: Gro Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                       - descriptor:
                           code: CUSTOMER_SUPPORT_LINK
                           name: Customer support link
@@ -2600,8 +2502,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                 locations:
                   - id: L2
                     gps: 28.584909, 77.134029
@@ -2674,9 +2575,7 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage computed on net
-                              disbursed amount using IRR approach and reducing
-                              balance method
+                            short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -2706,14 +2605,7 @@ steps:
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                              document related to a loan. When accessed, the
-                              document is returned in text/html format, with the
-                              loan details organized in a standard HTML table.
-                              This format makes it easy for the buyer's app to
-                              read and reformat the information as needed. For
-                              more details, refer to the "KFS_LINK format"
-                              document in the "feature-ui" section.
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                   xinput:
                     form:
@@ -2817,22 +2709,13 @@ steps:
                         code: PENDING
                         short_desc: Short desc about LOAN_AGREEMENT checklist
         type: request
-        description: The BPP sends an unsolicited on_status callback to the BAP to
-          update the loan application status, reflecting either successful
-          offline verification and credit approval or failure with explicit
-          rejection codes, thereby enabling the BAP to inform the borrower about
-          the next steps in the personal loan offline journey.
+        description: The BPP sends an unsolicited on_status callback to the BAP to update the loan application status, reflecting either successful offline verification and credit approval or failure with explicit rejection codes, thereby enabling the BAP to inform the borrower about the next steps in the personal loan offline journey.
   - api: status
     action_id: status_gold_loan_3
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP sends a status request to the BPP to inquire about the
-      current state of the personal loan application, particularly after offline
-      processing steps such as field verification or manual underwriting have
-      been completed. This step enables the BAP to receive updated loan status
-      information, including whether the application has been successfully
-      processed or rejected, and to resume the digital journey accordingly.
+    description: The BAP requests the current status of the loan application from the BPP, enabling tracking of the application's progress through offline verification and manual underwriting.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CgogIGlmIChleGlzdGluZ1BheWxvYWQuY29udGV4dD8udHJhbnNhY3Rpb25faWQpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLnJlZl9pZCA9IGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LnRyYW5zYWN0aW9uX2lkOwogIH0KCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyAgcGF5bG9hZCIgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
@@ -2890,23 +2773,13 @@ steps:
           message:
             ref_id: 37495a18-da5d-42d2-ad74-db69a22618fe
         type: request
-        description: The BAP sends a status request to the BPP to inquire about the
-          current state of the personal loan application, particularly after
-          offline processing steps such as field verification or manual
-          underwriting have been completed. This step enables the BAP to receive
-          updated loan status information, including whether the application has
-          been successfully processed or rejected, and to resume the digital
-          journey accordingly.
+        description: The BAP sends a status request to the BPP to inquire about the current state of the personal loan application, particularly after offline processing steps such as field verification or manual underwriting have been completed. This step enables the BAP to receive updated loan status information, including whether the application has been successfully processed or rejected, and to resume the digital journey accordingly.
   - api: on_status
     action_id: on_status_gold_loan_3
     owner: BPP
     responseFor: status_gold_loan_3
     unsolicited: false
-    description: The BPP sends an on_status callback to the BAP to asynchronously
-      update the loan application progress, conveying either a successful
-      fulfillment with finalized credit details or a failure with explicit
-      rejection codes, enabling the BAP to restore the digital session and
-      inform the borrower accordingly.
+    description: The BPP provides the requested status update on the loan application, conveying the current loan state, quote details, and payment information accumulated during offline verification.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFBST1ZJREVSIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgY29uc3QgcHJvdmlkZXJJZCA9CiAgICBzZXNzaW9uRGF0YT8ucHJvdmlkZXJfaWQ/LlswXSB8fAogICAgc2Vzc2lvbkRhdGE/LnByb3ZpZGVyX2lkIHx8CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LmlkIHx8CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LlswXT8uaWQ7CgogIGlmIChwcm92aWRlcklkICYmIG9yZGVyPy5wcm92aWRlcikgewogICAgb3JkZXIucHJvdmlkZXIuaWQgPSBwcm92aWRlcklkOwogICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBQcm92aWRlciBtYXBwZWQ6IiwgcHJvdmlkZXJJZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNIE1BUFBJTkcKICAgKiBQdWxsIGR5bmFtaWMgaWRzIGZyb20gc2Vzc2lvbiwga2VlcCBzdGF0aWMgY29udGVudCBmcm9tIGRlZmF1bHQgcGF5bG9hZAogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZXNzaW9uSXRlbSA9CiAgICBzZXNzaW9uRGF0YT8uaXRlbT8uWzBdIHx8CiAgICBzZXNzaW9uRGF0YT8uaXRlbXM/LlswXTsKCiAgaWYgKHNlc3Npb25JdGVtICYmIG9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICBjb25zdCBpdGVtMCA9IG9yZGVyLml0ZW1zWzBdOwoKICAgIGlmIChzZXNzaW9uSXRlbS5pZCkgewogICAgICBpdGVtMC5pZCA9IHNlc3Npb25JdGVtLmlkOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIGl0ZW0uaWQgbWFwcGVkOiIsIGl0ZW0wLmlkKTsKICAgIH0KCiAgICBpZiAoc2Vzc2lvbkl0ZW0uY2F0ZWdvcnlfaWRzPy5sZW5ndGgpIHsKICAgICAgaXRlbTAuY2F0ZWdvcnlfaWRzID0gWy4uLnNlc3Npb25JdGVtLmNhdGVnb3J5X2lkc107CiAgICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gY2F0ZWdvcnlfaWRzIG1hcHBlZDoiLCBpdGVtMC5jYXRlZ29yeV9pZHMpOwogICAgfQoKICAgIGlmIChzZXNzaW9uSXRlbS5mdWxmaWxsbWVudF9pZHM/Lmxlbmd0aCkgewogICAgICBpdGVtMC5mdWxmaWxsbWVudF9pZHMgPSBbLi4uc2Vzc2lvbkl0ZW0uZnVsZmlsbG1lbnRfaWRzXTsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBmdWxmaWxsbWVudF9pZHMgbWFwcGVkOiIsIGl0ZW0wLmZ1bGZpbGxtZW50X2lkcyk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBYSU5QVVQgTUFQUElORwogICAqIGZvcm0uaWQgZnJvbSBzZXNzaW9uLCBldmVyeXRoaW5nIGVsc2UgZnJvbSBkZWZhdWx0IHBheWxvYWQKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgaWYgKG9yZGVyPy5pdGVtcz8uWzBdPy54aW5wdXQ/LmZvcm0pIHsKICAgIGNvbnN0IGZvcm1JZCA9CiAgICAgIEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LmZvcm1faWQpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5mb3JtX2lkWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YT8uZm9ybV9pZDsKCiAgICBpZiAoZm9ybUlkKSB7CiAgICAgIG9yZGVyLml0ZW1zWzBdLnhpbnB1dC5mb3JtLmlkID0gZm9ybUlkOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIGZvcm0uaWQgbWFwcGVkOiIsIGZvcm1JZCk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBRVU9URSBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChvcmRlcj8ucXVvdGUpIHsKICAgIGNvbnN0IHF1b3RlSWQgPQogICAgICBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhPy5xdW90ZV9pZCkKICAgICAgICA/IHNlc3Npb25EYXRhLnF1b3RlX2lkWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YT8ucXVvdGVfaWQ7CgogICAgaWYgKHF1b3RlSWQgJiYgcXVvdGVJZCAhPT0gIkxPQU5fTEVBRF9JRF9PUl9TSU1JTEFSIikgewogICAgICBvcmRlci5xdW90ZS5pZCA9IHF1b3RlSWQ7CiAgICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gcXVvdGUuaWQgbWFwcGVkOiIsIG9yZGVyLnF1b3RlLmlkKTsKICAgIH0KCiAgICBjb25zdCBxdW90ZVByaWNlID0KICAgICAgQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YT8ucXVvdGVfcHJpY2UpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5xdW90ZV9wcmljZVswXQogICAgICAgIDogc2Vzc2lvbkRhdGE/LnF1b3RlX3ByaWNlOwoKICAgIGlmIChxdW90ZVByaWNlICYmIG9yZGVyLnF1b3RlLnByaWNlKSB7CiAgICAgIG9yZGVyLnF1b3RlLnByaWNlLnZhbHVlID0gcXVvdGVQcmljZTsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBxdW90ZS5wcmljZSBtYXBwZWQ6IiwgcXVvdGVQcmljZSk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBQQVlNRU5UUyBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnN0IHNhdmVkUGF5bWVudHMgPQogICAgc2Vzc2lvbkRhdGE/LnBheW1lbnRzIHx8CiAgICBzZXNzaW9uRGF0YT8ub3JkZXI/LnBheW1lbnRzOwoKICBpZiAoQXJyYXkuaXNBcnJheShzYXZlZFBheW1lbnRzKSAmJiBzYXZlZFBheW1lbnRzLmxlbmd0aCA+IDAgJiYgb3JkZXIpIHsKICAgIG9yZGVyLnBheW1lbnRzID0gc2F2ZWRQYXltZW50czsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gUGF5bWVudHMgY2FycmllZCBmb3J3YXJkIik7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBPUkRFUiBJRCBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChzZXNzaW9uRGF0YT8ub3JkZXJfaWQgJiYgb3JkZXIpIHsKICAgIGNvbnN0IG9yZGVySWQgPQogICAgICBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLm9yZGVyX2lkKQogICAgICAgID8gc2Vzc2lvbkRhdGEub3JkZXJfaWRbMF0KICAgICAgICA6IHNlc3Npb25EYXRhLm9yZGVyX2lkOwoKICAgIG9yZGVyLmlkID0gb3JkZXJJZDsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gb3JkZXIuaWQgbWFwcGVkOiIsIG9yZGVySWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogREVCVUcgLSBFWElUIFNUQVRFCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnNvbGUubG9nKCLwn5SNIFtvbl9zdGF0dXNdIEZJTkFMIG9yZGVyLml0ZW1zWzBdOiIsIEpTT04uc3RyaW5naWZ5KG9yZGVyPy5pdGVtcz8uWzBdLCBudWxsLCAyKSk7CiAgY29uc29sZS5sb2coIvCflI0gW29uX3N0YXR1c10gRklOQUwgb3JkZXIucXVvdGU6IiwgSlNPTi5zdHJpbmdpZnkob3JkZXI/LnF1b3RlLCBudWxsLCAyKSk7CiAgY29uc29sZS5sb2coIvCflI0gW29uX3N0YXR1c10gRklOQUwgb3JkZXIuZnVsZmlsbG1lbnRzWzBdLnN0YXRlOiIsIEpTT04uc3RyaW5naWZ5KG9yZGVyPy5mdWxmaWxsbWVudHM/LlswXT8uc3RhdGUsIG51bGwsIDIpKTsKCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgY29udGV4dCBpbiBwYXlsb2FkIiB9OwogIH0KCiAKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIgfTsKICB9CiAgY29uc3Qgb3JkZXI9dGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CgogIGlmICghb3JkZXIucHJvdmlkZXI/LmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHByb3ZpZGVyLmlkIGluIHBheWxvYWQiIH07CiAgfQoKIAogIGlmICghQXJyYXkuaXNBcnJheShvcmRlci5pdGVtcykgfHwgb3JkZXIuaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zIGluIHBheWxvYWQiIH07CiAgfQoKICBjb25zdCBpdGVtID0gb3JkZXIuaXRlbXNbMF07CgogIGlmICghaXRlbS5pZCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBpdGVtc1swXS5pZCBpbiBwYXlsb2FkIiB9OwogIH0KCiAgaWYgKCFvcmRlcj8ucXVvdGU/LmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHF1b3RlLmlkIGluIHBheWxvYWQiIH07CiAgfQoKCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
@@ -2964,8 +2837,7 @@ steps:
                     - descriptor:
                         code: GRO_ADDRESS
                         name: Gro Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                     - descriptor:
                         code: CUSTOMER_SUPPORT_LINK
                         name: Customer support link
@@ -2997,8 +2869,7 @@ steps:
                     - descriptor:
                         code: LSP_ADDRESS
                         name: Lsp Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               locations:
                 - id: L2
                   gps: 28.584909, 77.134029
@@ -3071,9 +2942,7 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage computed on net
-                            disbursed amount using IRR approach and reducing
-                            balance method
+                          short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -3103,14 +2972,7 @@ steps:
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                            document related to a loan. When accessed, the
-                            document is returned in text/html format, with the
-                            loan details organized in a standard HTML table.
-                            This format makes it easy for the buyer's app to
-                            read and reformat the information as needed. For
-                            more details, refer to the "KFS_LINK format"
-                            document in the "feature-ui" section.
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
                 xinput:
                   form:
@@ -3286,8 +3148,7 @@ steps:
                       - descriptor:
                           code: GRO_ADDRESS
                           name: Gro Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                       - descriptor:
                           code: CUSTOMER_SUPPORT_LINK
                           name: Customer support link
@@ -3319,8 +3180,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                 locations:
                   - id: L2
                     gps: 28.584909, 77.134029
@@ -3393,9 +3253,7 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage computed on net
-                              disbursed amount using IRR approach and reducing
-                              balance method
+                            short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -3425,14 +3283,7 @@ steps:
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                              document related to a loan. When accessed, the
-                              document is returned in text/html format, with the
-                              loan details organized in a standard HTML table.
-                              This format makes it easy for the buyer's app to
-                              read and reformat the information as needed. For
-                              more details, refer to the "KFS_LINK format"
-                              document in the "feature-ui" section.
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                   xinput:
                     form:
@@ -3536,20 +3387,13 @@ steps:
                         code: IN_PROGRESS
                         short_desc: Short desc about LOAN_AGREEMENT checklist
         type: request
-        description: The BPP sends an on_status callback to the BAP to asynchronously
-          update the loan application progress, conveying either a successful
-          fulfillment with finalized credit details or a failure with explicit
-          rejection codes, enabling the BAP to restore the digital session and
-          inform the borrower accordingly.
+        description: The BPP sends an on_status callback to the BAP to asynchronously update the loan application progress, conveying either a successful fulfillment with finalized credit details or a failure with explicit rejection codes, enabling the BAP to restore the digital session and inform the borrower accordingly.
   - api: on_status
     action_id: on_status_gold_loan_3_order_update
     owner: BPP
     responseFor: null
     unsolicited: true
-    description: The BPP sends an unsolicited on_status callback to the BAP to
-      asynchronously update the loan application status during offline
-      processing, conveying either a successful confirmation with finalized
-      credit details or a failure with explicit rejection codes.
+    description: The BPP asynchronously sends an unsolicited status update to the BAP conveying the current state of the loan application, including loan status, payment details, and order information as the lending process progresses through offline verification and underwriting.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFBST1ZJREVSIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgY29uc3QgcHJvdmlkZXJJZCA9CiAgICBzZXNzaW9uRGF0YT8ucHJvdmlkZXJfaWQ/LlswXSB8fAogICAgc2Vzc2lvbkRhdGE/LnByb3ZpZGVyX2lkIHx8CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LmlkIHx8CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LlswXT8uaWQ7CgogIGlmIChwcm92aWRlcklkICYmIG9yZGVyPy5wcm92aWRlcikgewogICAgb3JkZXIucHJvdmlkZXIuaWQgPSBwcm92aWRlcklkOwogICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBQcm92aWRlciBtYXBwZWQ6IiwgcHJvdmlkZXJJZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNIE1BUFBJTkcKICAgKiBQdWxsIGR5bmFtaWMgaWRzIGZyb20gc2Vzc2lvbiwga2VlcCBzdGF0aWMgY29udGVudCBmcm9tIGRlZmF1bHQgcGF5bG9hZAogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZXNzaW9uSXRlbSA9CiAgICBzZXNzaW9uRGF0YT8uaXRlbT8uWzBdIHx8CiAgICBzZXNzaW9uRGF0YT8uaXRlbXM/LlswXTsKCiAgaWYgKHNlc3Npb25JdGVtICYmIG9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICBjb25zdCBpdGVtMCA9IG9yZGVyLml0ZW1zWzBdOwoKICAgIGlmIChzZXNzaW9uSXRlbS5pZCkgewogICAgICBpdGVtMC5pZCA9IHNlc3Npb25JdGVtLmlkOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIGl0ZW0uaWQgbWFwcGVkOiIsIGl0ZW0wLmlkKTsKICAgIH0KCiAgICBpZiAoc2Vzc2lvbkl0ZW0uY2F0ZWdvcnlfaWRzPy5sZW5ndGgpIHsKICAgICAgaXRlbTAuY2F0ZWdvcnlfaWRzID0gWy4uLnNlc3Npb25JdGVtLmNhdGVnb3J5X2lkc107CiAgICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gY2F0ZWdvcnlfaWRzIG1hcHBlZDoiLCBpdGVtMC5jYXRlZ29yeV9pZHMpOwogICAgfQoKICAgIGlmIChzZXNzaW9uSXRlbS5mdWxmaWxsbWVudF9pZHM/Lmxlbmd0aCkgewogICAgICBpdGVtMC5mdWxmaWxsbWVudF9pZHMgPSBbLi4uc2Vzc2lvbkl0ZW0uZnVsZmlsbG1lbnRfaWRzXTsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBmdWxmaWxsbWVudF9pZHMgbWFwcGVkOiIsIGl0ZW0wLmZ1bGZpbGxtZW50X2lkcyk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBYSU5QVVQgTUFQUElORwogICAqIGZvcm0uaWQgZnJvbSBzZXNzaW9uLCBldmVyeXRoaW5nIGVsc2UgZnJvbSBkZWZhdWx0IHBheWxvYWQKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgaWYgKG9yZGVyPy5pdGVtcz8uWzBdPy54aW5wdXQ/LmZvcm0pIHsKICAgIGNvbnN0IGZvcm1JZCA9CiAgICAgIEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LmZvcm1faWQpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5mb3JtX2lkWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YT8uZm9ybV9pZDsKCiAgICBpZiAoZm9ybUlkKSB7CiAgICAgIG9yZGVyLml0ZW1zWzBdLnhpbnB1dC5mb3JtLmlkID0gZm9ybUlkOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIGZvcm0uaWQgbWFwcGVkOiIsIGZvcm1JZCk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBRVU9URSBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChvcmRlcj8ucXVvdGUpIHsKICAgIGNvbnN0IHF1b3RlSWQgPQogICAgICBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhPy5xdW90ZV9pZCkKICAgICAgICA/IHNlc3Npb25EYXRhLnF1b3RlX2lkWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YT8ucXVvdGVfaWQ7CgogICAgaWYgKHF1b3RlSWQgJiYgcXVvdGVJZCAhPT0gIkxPQU5fTEVBRF9JRF9PUl9TSU1JTEFSIikgewogICAgICBvcmRlci5xdW90ZS5pZCA9IHF1b3RlSWQ7CiAgICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gcXVvdGUuaWQgbWFwcGVkOiIsIG9yZGVyLnF1b3RlLmlkKTsKICAgIH0KCiAgICBjb25zdCBxdW90ZVByaWNlID0KICAgICAgQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YT8ucXVvdGVfcHJpY2UpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5xdW90ZV9wcmljZVswXQogICAgICAgIDogc2Vzc2lvbkRhdGE/LnF1b3RlX3ByaWNlOwoKICAgIGlmIChxdW90ZVByaWNlICYmIG9yZGVyLnF1b3RlLnByaWNlKSB7CiAgICAgIG9yZGVyLnF1b3RlLnByaWNlLnZhbHVlID0gcXVvdGVQcmljZTsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBxdW90ZS5wcmljZSBtYXBwZWQ6IiwgcXVvdGVQcmljZSk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBQQVlNRU5UUyBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnN0IHNhdmVkUGF5bWVudHMgPQogICAgc2Vzc2lvbkRhdGE/LnBheW1lbnRzIHx8CiAgICBzZXNzaW9uRGF0YT8ub3JkZXI/LnBheW1lbnRzOwoKICBpZiAoQXJyYXkuaXNBcnJheShzYXZlZFBheW1lbnRzKSAmJiBzYXZlZFBheW1lbnRzLmxlbmd0aCA+IDAgJiYgb3JkZXIpIHsKICAgIG9yZGVyLnBheW1lbnRzID0gc2F2ZWRQYXltZW50czsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gUGF5bWVudHMgY2FycmllZCBmb3J3YXJkIik7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBPUkRFUiBJRCBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChzZXNzaW9uRGF0YT8ub3JkZXJfaWQgJiYgb3JkZXIpIHsKICAgIGNvbnN0IG9yZGVySWQgPQogICAgICBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLm9yZGVyX2lkKQogICAgICAgID8gc2Vzc2lvbkRhdGEub3JkZXJfaWRbMF0KICAgICAgICA6IHNlc3Npb25EYXRhLm9yZGVyX2lkOwoKICAgIG9yZGVyLmlkID0gb3JkZXJJZDsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gb3JkZXIuaWQgbWFwcGVkOiIsIG9yZGVySWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogREVCVUcgLSBFWElUIFNUQVRFCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnNvbGUubG9nKCLwn5SNIFtvbl9zdGF0dXNdIEZJTkFMIG9yZGVyLml0ZW1zWzBdOiIsIEpTT04uc3RyaW5naWZ5KG9yZGVyPy5pdGVtcz8uWzBdLCBudWxsLCAyKSk7CiAgY29uc29sZS5sb2coIvCflI0gW29uX3N0YXR1c10gRklOQUwgb3JkZXIucXVvdGU6IiwgSlNPTi5zdHJpbmdpZnkob3JkZXI/LnF1b3RlLCBudWxsLCAyKSk7CiAgY29uc29sZS5sb2coIvCflI0gW29uX3N0YXR1c10gRklOQUwgb3JkZXIuZnVsZmlsbG1lbnRzWzBdLnN0YXRlOiIsIEpTT04uc3RyaW5naWZ5KG9yZGVyPy5mdWxmaWxsbWVudHM/LlswXT8uc3RhdGUsIG51bGwsIDIpKTsKCiAgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -3607,8 +3451,7 @@ steps:
                     - descriptor:
                         code: GRO_ADDRESS
                         name: Gro Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                     - descriptor:
                         code: CUSTOMER_SUPPORT_LINK
                         name: Customer support link
@@ -3640,8 +3483,7 @@ steps:
                     - descriptor:
                         code: LSP_ADDRESS
                         name: Lsp Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               locations:
                 - id: L2
                   gps: 28.584909, 77.134029
@@ -3714,9 +3556,7 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage computed on net
-                            disbursed amount using IRR approach and reducing
-                            balance method
+                          short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -3746,14 +3586,7 @@ steps:
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                            document related to a loan. When accessed, the
-                            document is returned in text/html format, with the
-                            loan details organized in a standard HTML table.
-                            This format makes it easy for the buyer's app to
-                            read and reformat the information as needed. For
-                            more details, refer to the "KFS_LINK format"
-                            document in the "feature-ui" section.
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
                 xinput:
                   form:
@@ -3927,8 +3760,7 @@ steps:
                       - descriptor:
                           code: GRO_ADDRESS
                           name: Gro Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                       - descriptor:
                           code: CUSTOMER_SUPPORT_LINK
                           name: Customer support link
@@ -3960,8 +3792,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                 locations:
                   - id: L2
                     gps: 28.584909, 77.134029
@@ -4034,9 +3865,7 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage computed on net
-                              disbursed amount using IRR approach and reducing
-                              balance method
+                            short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -4066,14 +3895,7 @@ steps:
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                              document related to a loan. When accessed, the
-                              document is returned in text/html format, with the
-                              loan details organized in a standard HTML table.
-                              This format makes it easy for the buyer's app to
-                              read and reformat the information as needed. For
-                              more details, refer to the "KFS_LINK format"
-                              document in the "feature-ui" section.
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                   xinput:
                     form:
@@ -4177,18 +3999,13 @@ steps:
                         code: SUCCESSFUL
                         short_desc: Short desc about LOAN_AGREEMENT checklist
         type: request
-        description: The BPP sends an unsolicited on_status callback to the BAP to
-          asynchronously update the loan application status during offline
-          processing, conveying either a successful confirmation with finalized
-          credit details or a failure with explicit rejection codes.
+        description: The BPP sends an unsolicited on_status callback to the BAP to asynchronously update the loan application status during offline processing, conveying either a successful confirmation with finalized credit details or a failure with explicit rejection codes.
   - api: confirm
     action_id: confirm_gold_loan_3
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP sends a confirm request to the BPP to formally finalize the
-      personal loan application and trigger fund disbursement, marking the
-      official booking of the loan in the lender's core banking system.
+    description: The BAP sends a confirm message to the BPP to formally commit to the selected gold loan offer with all agreed terms and borrower information. This action transitions the loan application into the fulfillment and verification phase where the BPP proceeds with compliance checks and disbursement processing.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgaWYgKHNlc3Npb25EYXRhLnNlbGVjdGVkX3Byb3ZpZGVyICYmIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8ucHJvdmlkZXIpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmlkID0gc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfcHJvdmlkZXJbMF0uaWQ7CiAgfQogIGlmIChleGlzdGluZ1BheWxvYWQubWVzc2FnZT8ub3JkZXI/Lml0ZW1zPy5bMF0/LnhpbnB1dD8uZm9ybSkgewogICAgY29uc3QgZXNpZ25Gb3JtSWQgPSBzZXNzaW9uRGF0YS5mb3JtX2lkWzBdOwogICAgaWYgKGVzaWduRm9ybUlkKSB7CiAgICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLnhpbnB1dC5mb3JtLmlkID0gZXNpZ25Gb3JtSWQ7CiAgICAgIGNvbnNvbGUubG9nKCJbY29uZmlybV0gQ2FycmllZCBmb3J3YXJkIGZvcm0uaWQgZnJvbSBvbl9pbml0XzM6IiwgZXNpZ25Gb3JtSWQpOwogICAgfQogIH0KCiAgY29uc3Qgc3VibWlzc2lvbl9pZCA9IHNlc3Npb25EYXRhPy5mb3JtRGF0YT8ubG9hbl9hZ3JlZW1lbnRfZXNpZ25fZm9ybT8uZm9ybV9zdWJtaXNzaW9uX2lkOwogIGlmIChzdWJtaXNzaW9uX2lkICYmIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXT8ueGlucHV0Py5mb3JtX3Jlc3BvbnNlKSB7CiAgICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXS54aW5wdXQuZm9ybV9yZXNwb25zZS5zdWJtaXNzaW9uX2lkID0gc3VibWlzc2lvbl9pZDsKICAgIGNvbnNvbGUubG9nKCJbY29uZmlybV0gQ2FycmllZCBmb3J3YXJkIHN1Ym1pc3Npb25faWQgZnJvbSBlc2lnbiBmb3JtOiIsIHN1Ym1pc3Npb25faWQpOwogIH0KCiAgY29uc3Qgc2VsZWN0ZWRJdGVtID0gQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtcykgPyBzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtc1swXSA6IHVuZGVmaW5lZDsKICBpZiAoc2VsZWN0ZWRJdGVtPy5pZCAmJiBleGlzdGluZ1BheWxvYWQubWVzc2FnZT8ub3JkZXI/Lml0ZW1zPy5bMF0pIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLmlkID0gc2VsZWN0ZWRJdGVtLmlkOwogICAgY29uc29sZS5sb2coIlVwZGF0ZWQgaXRlbS5pZDoiLCBzZWxlY3RlZEl0ZW0uaWQpOwogIH0KCgogIC8vIGNvbnN0IHNlc3Npb25QYXltZW50cyA9IHNlc3Npb25EYXRhLnBheW1lbnRzIHx8IHNlc3Npb25EYXRhLm9yZGVyPy5wYXltZW50cyB8fCBbXTsKICAvLyBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5wYXltZW50c1swXS5pZCA9IHNlc3Npb25QYXltZW50c1swXS5pZAoKICBpbmplY3RTZXR0bGVtZW50QW1vdW50KGV4aXN0aW5nUGF5bG9hZCwgc2Vzc2lvbkRhdGEpOwoKICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyPy5wcm92aWRlcj8uaWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgcHJvdmlkZXIuaWQgaW4gcGF5bG9hZCIgfTsKICB9CgogIGlmICghQXJyYXkuaXNBcnJheShvcmRlci5pdGVtcykgfHwgb3JkZXIuaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zIGluIHBheWxvYWQiIH07CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -4318,17 +4135,13 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: The BAP sends a confirm request to the BPP to formally finalize the
-          personal loan application and trigger fund disbursement, marking the
-          official booking of the loan in the lender's core banking system.
+        description: The BAP sends a confirm request to the BPP to formally finalize the personal loan application and trigger fund disbursement, marking the official booking of the loan in the lender's core banking system.
   - api: on_confirm
     action_id: on_confirm_gold_loan_3
     owner: BPP
     responseFor: confirm_gold_loan_3
     unsolicited: false
-    description: The BPP confirms the loan booking in its core banking system and
-      provides the official Loan Account ID, remittance values, and amortization
-      schedule to the BAP.
+    description: The BPP (lender) sends an on_confirm callback confirming that the gold loan application has been accepted and the loan order established with the finalized principal amount, term, and repayment schedule.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIE9SREVSIElECiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChvcmRlcikgewogICAgb3JkZXIuaWQgPSBgTE9BTl9PUkRFUl8ke0RhdGUubm93KCl9XyR7c2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ/LnNsaWNlKC04KSB8fCAnREVGQVVMVCd9YDsKICAgIGNvbnNvbGUubG9nKCLinIUgb3JkZXIuaWQgZ2VuZXJhdGVkOiIsIG9yZGVyLmlkKTsKICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFRJTUVTVEFNUFMKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgaWYgKG9yZGVyKSB7CiAgICBjb25zdCBub3cgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CiAgICBvcmRlci5jcmVhdGVkX2F0ID0gbm93OwogICAgb3JkZXIudXBkYXRlZF9hdCA9IG5vdzsKICAgIGNvbnNvbGUubG9nKCLinIUgdGltZXN0YW1wcyBzZXQ6Iiwgbm93KTsKICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFBST1ZJREVSIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgY29uc3QgcHJvdmlkZXJJZCA9CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LlswXT8uaWQgfHwKICAgIHNlc3Npb25EYXRhPy5zZWxlY3RlZF9wcm92aWRlcj8uaWQgfHwKICAgIHNlc3Npb25EYXRhPy5wcm92aWRlcl9pZD8uWzBdIHx8CiAgICBzZXNzaW9uRGF0YT8ucHJvdmlkZXJfaWQ7CgogIGlmIChwcm92aWRlcklkICYmIG9yZGVyPy5wcm92aWRlcikgewogICAgb3JkZXIucHJvdmlkZXIuaWQgPSBwcm92aWRlcklkOwogICAgY29uc29sZS5sb2coIuKchSBQcm92aWRlciBtYXBwZWQ6IiwgcHJvdmlkZXJJZCk7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBJVEVNIE1BUFBJTkcKICAgKiBFbnJpY2ggZGVmYXVsdCBwYXlsb2FkIGl0ZW0gd2l0aCBkeW5hbWljIGlkcyBmcm9tIHNlc3Npb24KICAgKiBETyBOT1QgcmVwbGFjZSBlbnRpcmUgaXRlbSDigJQgeGlucHV0IG11c3Qgbm90IGJlIGNhcnJpZWQgZm9yd2FyZAogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzZXNzaW9uSXRlbSA9CiAgICBzZXNzaW9uRGF0YT8uaXRlbT8uWzBdIHx8CiAgICBzZXNzaW9uRGF0YT8uaXRlbXM/LlswXTsKCiAgaWYgKHNlc3Npb25JdGVtICYmIG9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICBjb25zdCBpdGVtMCA9IG9yZGVyLml0ZW1zWzBdOwoKICAgIGlmIChzZXNzaW9uSXRlbS5pZCkgewogICAgICBpdGVtMC5pZCA9IHNlc3Npb25JdGVtLmlkOwogICAgICBjb25zb2xlLmxvZygi4pyFIGl0ZW0uaWQgbWFwcGVkOiIsIGl0ZW0wLmlkKTsKICAgIH0KCiAgICBpZiAoc2Vzc2lvbkl0ZW0uY2F0ZWdvcnlfaWRzPy5sZW5ndGgpIHsKICAgICAgaXRlbTAuY2F0ZWdvcnlfaWRzID0gWy4uLnNlc3Npb25JdGVtLmNhdGVnb3J5X2lkc107CiAgICAgIGNvbnNvbGUubG9nKCLinIUgY2F0ZWdvcnlfaWRzIG1hcHBlZDoiLCBpdGVtMC5jYXRlZ29yeV9pZHMpOwogICAgfQoKICAgIGlmIChzZXNzaW9uSXRlbS5mdWxmaWxsbWVudF9pZHM/Lmxlbmd0aCkgewogICAgICBpdGVtMC5mdWxmaWxsbWVudF9pZHMgPSBbLi4uc2Vzc2lvbkl0ZW0uZnVsZmlsbG1lbnRfaWRzXTsKICAgICAgY29uc29sZS5sb2coIuKchSBmdWxmaWxsbWVudF9pZHMgbWFwcGVkOiIsIGl0ZW0wLmZ1bGZpbGxtZW50X2lkcyk7CiAgICB9CgogICAgLy8gRXhwbGljaXRseSByZW1vdmUgeGlucHV0IGlmIGl0IGV4aXN0cwogICAgaWYgKGl0ZW0wLnhpbnB1dCkgewogICAgICBkZWxldGUgaXRlbTAueGlucHV0OwogICAgICBjb25zb2xlLmxvZygi4pyFIHhpbnB1dCByZW1vdmVkIGZyb20gaXRlbSIpOwogICAgfQogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogQ1VTVE9NRVIgTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBmdWxmaWxsbWVudDAgPSBvcmRlcj8uZnVsZmlsbG1lbnRzPy5bMF07CgogIGlmIChmdWxmaWxsbWVudDA/LmN1c3RvbWVyPy5wZXJzb24gJiYgc2Vzc2lvbkRhdGE/LmN1c3RvbWVyX25hbWUpIHsKICAgIGZ1bGZpbGxtZW50MC5jdXN0b21lci5wZXJzb24ubmFtZSA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuY3VzdG9tZXJfbmFtZSkKICAgICAgPyBzZXNzaW9uRGF0YS5jdXN0b21lcl9uYW1lWzBdCiAgICAgIDogc2Vzc2lvbkRhdGEuY3VzdG9tZXJfbmFtZTsKICAgIGNvbnNvbGUubG9nKCLinIUgY3VzdG9tZXIgbmFtZSBtYXBwZWQ6IiwgZnVsZmlsbG1lbnQwLmN1c3RvbWVyLnBlcnNvbi5uYW1lKTsKICB9CgogIGlmIChmdWxmaWxsbWVudDA/LmN1c3RvbWVyPy5jb250YWN0KSB7CgogICAgaWYgKHNlc3Npb25EYXRhPy5jdXN0b21lcl9waG9uZSkgewogICAgICBmdWxmaWxsbWVudDAuY3VzdG9tZXIuY29udGFjdC5waG9uZSA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuY3VzdG9tZXJfcGhvbmUpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5jdXN0b21lcl9waG9uZVswXQogICAgICAgIDogc2Vzc2lvbkRhdGEuY3VzdG9tZXJfcGhvbmU7CiAgICAgIGNvbnNvbGUubG9nKCLinIUgY3VzdG9tZXIgcGhvbmUgbWFwcGVkOiIsIGZ1bGZpbGxtZW50MC5jdXN0b21lci5jb250YWN0LnBob25lKTsKICAgIH0KCiAgICBpZiAoc2Vzc2lvbkRhdGE/LmN1c3RvbWVyX2VtYWlsKSB7CiAgICAgIGZ1bGZpbGxtZW50MC5jdXN0b21lci5jb250YWN0LmVtYWlsID0gQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5jdXN0b21lcl9lbWFpbCkKICAgICAgICA/IHNlc3Npb25EYXRhLmN1c3RvbWVyX2VtYWlsWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YS5jdXN0b21lcl9lbWFpbDsKICAgICAgY29uc29sZS5sb2coIuKchSBjdXN0b21lciBlbWFpbCBtYXBwZWQ6IiwgZnVsZmlsbG1lbnQwLmN1c3RvbWVyLmNvbnRhY3QuZW1haWwpOwogICAgfQogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogUVVPVEUgTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAob3JkZXI/LnF1b3RlKSB7CiAgICBjb25zdCBxdW90ZUlkID0KICAgICAgQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YT8ucXVvdGVfaWQpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5xdW90ZV9pZFswXQogICAgICAgIDogc2Vzc2lvbkRhdGE/LnF1b3RlX2lkOwoKICAgIGlmIChxdW90ZUlkICYmIHF1b3RlSWQgIT09ICJMT0FOX0xFQURfSURfT1JfU0lNSUxBUiIpIHsKICAgICAgb3JkZXIucXVvdGUuaWQgPSBxdW90ZUlkOwogICAgICBjb25zb2xlLmxvZygi4pyFIHF1b3RlLmlkIG1hcHBlZDoiLCBvcmRlci5xdW90ZS5pZCk7CiAgICB9CgogICAgY29uc3QgcXVvdGVQcmljZSA9CiAgICAgIEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LnF1b3RlX3ByaWNlKQogICAgICAgID8gc2Vzc2lvbkRhdGEucXVvdGVfcHJpY2VbMF0KICAgICAgICA6IHNlc3Npb25EYXRhPy5xdW90ZV9wcmljZTsKCiAgICBpZiAocXVvdGVQcmljZSAmJiBvcmRlci5xdW90ZS5wcmljZSkgewogICAgICBvcmRlci5xdW90ZS5wcmljZS52YWx1ZSA9IHF1b3RlUHJpY2U7CiAgICAgIGNvbnNvbGUubG9nKCLinIUgcXVvdGUucHJpY2UgbWFwcGVkOiIsIHF1b3RlUHJpY2UpOwogICAgfQogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogUEFZTUVOVFMgTUFQUElORwogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBjb25zdCBzYXZlZFBheW1lbnRzID0KICAgIHNlc3Npb25EYXRhPy5wYXltZW50cyB8fAogICAgc2Vzc2lvbkRhdGE/Lm9yZGVyPy5wYXltZW50czsKCiAgaWYgKEFycmF5LmlzQXJyYXkoc2F2ZWRQYXltZW50cykgJiYgc2F2ZWRQYXltZW50cy5sZW5ndGggPiAwICYmIG9yZGVyKSB7CiAgICBvcmRlci5wYXltZW50cyA9IHNhdmVkUGF5bWVudHM7CiAgICBjb25zb2xlLmxvZygi4pyFIFBheW1lbnRzIGNhcnJpZWQgZm9yd2FyZCIpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogU0VUVExFTUVOVAogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpbmplY3RTZXR0bGVtZW50QW1vdW50KGV4aXN0aW5nUGF5bG9hZCwgc2Vzc2lvbkRhdGEpOwoKICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Uub3JkZXIgaW4gcGF5bG9hZCIgfTsKICB9CgogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLm9yZGVyOwoKICBpZiAoIW9yZGVyLmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG9yZGVyLmlkIGluIHBheWxvYWQiIH07CiAgfQoKICAKICBpZiAoIW9yZGVyPy5wcm92aWRlcj8uaWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgcHJvdmlkZXIuaWQgaW4gcGF5bG9hZCIgfTsKICB9CgogIGlmICghQXJyYXkuaXNBcnJheShvcmRlci5pdGVtcykgfHwgb3JkZXIuaXRlbXMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGl0ZW1zIGluIHBheWxvYWQiIH07CiAgfQoKCiAgaWYgKCFvcmRlcj8ucXVvdGU/LmlkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHF1b3RlLmlkIGluIHBheWxvYWQiIH07CiAgfQoKICBpZiAoIW9yZGVyPy5xdW90ZT8ucHJpY2U/LnZhbHVlKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHF1b3RlLnByaWNlLnZhbHVlIGluIHBheWxvYWQiIH07CiAgfQoKICBpZiAoIUFycmF5LmlzQXJyYXkob3JkZXIuZnVsZmlsbG1lbnRzKSB8fCBvcmRlci5mdWxmaWxsbWVudHMubGVuZ3RoID09PSAwKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIGZ1bGZpbGxtZW50cyBpbiBwYXlsb2FkIiB9OwogIH0KCiAKICBpZiAoIUFycmF5LmlzQXJyYXkob3JkZXIucGF5bWVudHMpIHx8IG9yZGVyLnBheW1lbnRzLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBwYXltZW50cyBpbiBwYXlsb2FkIiB9OwogIH0KCiAgCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
@@ -4388,8 +4201,7 @@ steps:
                     - descriptor:
                         code: GRO_ADDRESS
                         name: Gro Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                     - descriptor:
                         code: CUSTOMER_SUPPORT_LINK
                         name: Customer support link
@@ -4421,8 +4233,7 @@ steps:
                     - descriptor:
                         code: LSP_ADDRESS
                         name: Lsp Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               locations:
                 - id: L2
                   gps: 28.584909, 77.134029
@@ -4495,9 +4306,7 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage computed on net
-                            disbursed amount using IRR approach and reducing
-                            balance method
+                          short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -4527,14 +4336,7 @@ steps:
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                            document related to a loan. When accessed, the
-                            document is returned in text/html format, with the
-                            loan details organized in a standard HTML table.
-                            This format makes it easy for the buyer's app to
-                            read and reformat the information as needed. For
-                            more details, refer to the "KFS_LINK format"
-                            document in the "feature-ui" section.
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
                     display: true
             quote:
@@ -4674,19 +4476,14 @@ steps:
                   code: LOAN_AGREEMENT
                   name: Loan Agreement Document
                   short_desc: Download your Loan Agreement document here
-                  long_desc: A Loan Agreement Document is a legal contract outlining terms such as
-                    loan amount, interest rate, repayment schedule, and
-                    collateral, binding a lender and borrower in a formal
-                    financial arrangement.
+                  long_desc: A Loan Agreement Document is a legal contract outlining terms such as loan amount, interest rate, repayment schedule, and collateral, binding a lender and borrower in a formal financial arrangement.
                 mime_type: application/pdf
                 url: https://lender.com/loan/loan-agreement/O1.pdf
               - descriptor:
                   code: LOAN_CANCELLATION
                   name: Loan Cancellation Document
                   short_desc: Download your Loan Cancellation document here
-                  long_desc: A Loan Cancellation Document is a formal agreement used to terminate
-                    an existing loan, releasing the borrower from repayment
-                    obligations and confirming the loan's cancellation.
+                  long_desc: A Loan Cancellation Document is a formal agreement used to terminate an existing loan, releasing the borrower from repayment obligations and confirming the loan's cancellation.
                 mime_type: application/pdf
                 url: https://lender.com/loan/loan-cancellation/O1.pdf
             tags:
@@ -4788,8 +4585,7 @@ steps:
                       - descriptor:
                           code: GRO_ADDRESS
                           name: Gro Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                       - descriptor:
                           code: CUSTOMER_SUPPORT_LINK
                           name: Customer support link
@@ -4821,8 +4617,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                 locations:
                   - id: L2
                     gps: 28.584909, 77.134029
@@ -4895,9 +4690,7 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage computed on net
-                              disbursed amount using IRR approach and reducing
-                              balance method
+                            short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -4927,14 +4720,7 @@ steps:
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                              document related to a loan. When accessed, the
-                              document is returned in text/html format, with the
-                              loan details organized in a standard HTML table.
-                              This format makes it easy for the buyer's app to
-                              read and reformat the information as needed. For
-                              more details, refer to the "KFS_LINK format"
-                              document in the "feature-ui" section.
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
               quote:
@@ -5074,19 +4860,14 @@ steps:
                     code: LOAN_AGREEMENT
                     name: Loan Agreement Document
                     short_desc: Download your Loan Agreement document here
-                    long_desc: A Loan Agreement Document is a legal contract outlining terms such as
-                      loan amount, interest rate, repayment schedule, and
-                      collateral, binding a lender and borrower in a formal
-                      financial arrangement.
+                    long_desc: A Loan Agreement Document is a legal contract outlining terms such as loan amount, interest rate, repayment schedule, and collateral, binding a lender and borrower in a formal financial arrangement.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-agreement/O1.pdf
                 - descriptor:
                     code: LOAN_CANCELLATION
                     name: Loan Cancellation Document
                     short_desc: Download your Loan Cancellation document here
-                    long_desc: A Loan Cancellation Document is a formal agreement used to terminate
-                      an existing loan, releasing the borrower from repayment
-                      obligations and confirming the loan's cancellation.
+                    long_desc: A Loan Cancellation Document is a formal agreement used to terminate an existing loan, releasing the borrower from repayment obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
               tags:
@@ -5115,19 +4896,13 @@ steps:
               created_at: 2026-06-11T07:11:42.416Z
               updated_at: 2026-06-11T07:11:42.416Z
         type: request
-        description: The BPP confirms the loan booking in its core banking system and
-          provides the official Loan Account ID, remittance values, and
-          amortization schedule to the BAP.
+        description: The BPP confirms the loan booking in its core banking system and provides the official Loan Account ID, remittance values, and amortization schedule to the BAP.
   - api: on_status
     action_id: on_status_installment_1
     owner: BPP
     responseFor: null
     unsolicited: true
-    description: The BPP sends an unsolicited on_status callback to the BAP to
-      asynchronously update the loan application status, conveying either a
-      successful completion with finalized credit details or a failure with
-      explicit rejection codes after offline verifications or field visits are
-      completed.
+    description: The BPP asynchronously notifies the BAP of loan application status updates following offline verification and manual underwriting. This unsolicited callback allows the lender to communicate the application's progression toward approval, rejection, or completion.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZXhpc3RpbmdQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKICBjb25zdCBvcmRlciA9IGV4aXN0aW5nUGF5bG9hZD8ubWVzc2FnZT8ub3JkZXI7CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIE9SREVSIElEIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgaWYgKG9yZGVyKSB7CiAgICBjb25zdCBvcmRlcklkID0KICAgICAgQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YT8ub3JkZXJfaWQpCiAgICAgICAgPyBzZXNzaW9uRGF0YS5vcmRlcl9pZFswXQogICAgICAgIDogc2Vzc2lvbkRhdGE/Lm9yZGVyX2lkOwoKICAgIGlmIChvcmRlcklkICYmIG9yZGVySWQgIT09ICJMT0FOX0xFQURfSURfT1JfU0lNSUxBUl9PUkRFUl9JRCIpIHsKICAgICAgb3JkZXIuaWQgPSBvcmRlcklkOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIG9yZGVyLmlkIG1hcHBlZDoiLCBvcmRlci5pZCk7CiAgICB9CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBQUk9WSURFUiBNQVBQSU5HCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnN0IHByb3ZpZGVySWQgPQogICAgc2Vzc2lvbkRhdGE/LnByb3ZpZGVyX2lkPy5bMF0gfHwKICAgIHNlc3Npb25EYXRhPy5wcm92aWRlcl9pZCB8fAogICAgc2Vzc2lvbkRhdGE/LnNlbGVjdGVkX3Byb3ZpZGVyPy5bMF0/LmlkIHx8CiAgICBzZXNzaW9uRGF0YT8uc2VsZWN0ZWRfcHJvdmlkZXI/LmlkOwoKICBpZiAocHJvdmlkZXJJZCAmJiBvcmRlcj8ucHJvdmlkZXIpIHsKICAgIG9yZGVyLnByb3ZpZGVyLmlkID0gcHJvdmlkZXJJZDsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gUHJvdmlkZXIgbWFwcGVkOiIsIHByb3ZpZGVySWQpOwogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogSVRFTSBNQVBQSU5HCiAgICogT25seSBtYXAgZHluYW1pYyBpZHMsIGtlZXAgdGFncy9kZXNjcmlwdG9yIGZyb20gZGVmYXVsdCBwYXlsb2FkCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGNvbnN0IHNlc3Npb25JdGVtID0KICAgIHNlc3Npb25EYXRhPy5pdGVtPy5bMF0gfHwKICAgIHNlc3Npb25EYXRhPy5pdGVtcz8uWzBdOwoKICBpZiAoc2Vzc2lvbkl0ZW0gJiYgb3JkZXI/Lml0ZW1zPy5bMF0pIHsKICAgIGNvbnN0IGl0ZW0wID0gb3JkZXIuaXRlbXNbMF07CgogICAgaWYgKHNlc3Npb25JdGVtLmlkKSB7CiAgICAgIGl0ZW0wLmlkID0gc2Vzc2lvbkl0ZW0uaWQ7CiAgICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gaXRlbS5pZCBtYXBwZWQ6IiwgaXRlbTAuaWQpOwogICAgfQoKICAgIGlmIChzZXNzaW9uSXRlbS5jYXRlZ29yeV9pZHM/Lmxlbmd0aCkgewogICAgICBpdGVtMC5jYXRlZ29yeV9pZHMgPSBbLi4uc2Vzc2lvbkl0ZW0uY2F0ZWdvcnlfaWRzXTsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBjYXRlZ29yeV9pZHMgbWFwcGVkOiIsIGl0ZW0wLmNhdGVnb3J5X2lkcyk7CiAgICB9CgogICAgaWYgKHNlc3Npb25JdGVtLmZ1bGZpbGxtZW50X2lkcz8ubGVuZ3RoKSB7CiAgICAgIGl0ZW0wLmZ1bGZpbGxtZW50X2lkcyA9IFsuLi5zZXNzaW9uSXRlbS5mdWxmaWxsbWVudF9pZHNdOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIGZ1bGZpbGxtZW50X2lkcyBtYXBwZWQ6IiwgaXRlbTAuZnVsZmlsbG1lbnRfaWRzKTsKICAgIH0KICB9CgogIC8qKgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqIFFVT1RFIE1BUFBJTkcKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKi8KCiAgaWYgKG9yZGVyPy5xdW90ZSkgewogICAgY29uc3QgcXVvdGVJZCA9CiAgICAgIEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGE/LnF1b3RlX2lkKQogICAgICAgID8gc2Vzc2lvbkRhdGEucXVvdGVfaWRbMF0KICAgICAgICA6IHNlc3Npb25EYXRhPy5xdW90ZV9pZDsKCiAgICBpZiAocXVvdGVJZCAmJiBxdW90ZUlkICE9PSAiTE9BTl9MRUFEX0lEX09SX1NJTUlMQVIiKSB7CiAgICAgIG9yZGVyLnF1b3RlLmlkID0gcXVvdGVJZDsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBxdW90ZS5pZCBtYXBwZWQ6Iiwgb3JkZXIucXVvdGUuaWQpOwogICAgfQoKICAgIC8vIENhcnJ5IGZ1bGwgcXVvdGUgYnJlYWt1cCBmcm9tIHNlc3Npb24gaWYgYXZhaWxhYmxlCiAgICBjb25zdCBzZXNzaW9uUXVvdGUgPQogICAgICBBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhPy5xdW90ZSkKICAgICAgICA/IHNlc3Npb25EYXRhLnF1b3RlWzBdCiAgICAgICAgOiBzZXNzaW9uRGF0YT8ucXVvdGU7CgogICAgaWYgKHNlc3Npb25RdW90ZT8ucHJpY2U/LnZhbHVlICYmIG9yZGVyLnF1b3RlLnByaWNlKSB7CiAgICAgIG9yZGVyLnF1b3RlLnByaWNlLnZhbHVlID0gc2Vzc2lvblF1b3RlLnByaWNlLnZhbHVlOwogICAgICBjb25zb2xlLmxvZygi4pyFIFtvbl9zdGF0dXNdIHF1b3RlLnByaWNlIG1hcHBlZDoiLCBvcmRlci5xdW90ZS5wcmljZS52YWx1ZSk7CiAgICB9CgogICAgaWYgKHNlc3Npb25RdW90ZT8uYnJlYWt1cD8ubGVuZ3RoKSB7CiAgICAgIG9yZGVyLnF1b3RlLmJyZWFrdXAgPSBzZXNzaW9uUXVvdGUuYnJlYWt1cDsKICAgICAgY29uc29sZS5sb2coIuKchSBbb25fc3RhdHVzXSBxdW90ZS5icmVha3VwIGNhcnJpZWQgZm9yd2FyZCIpOwogICAgfQogIH0KCiAgLyoqCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICogUEFZTUVOVFMgTUFQUElORwogICAqIFVzZSBkZWZhdWx0IHBheWxvYWQgcGF5bWVudCBzdGF0dXNlcyAoUEFJRCBmb3IgQ09NUExFVEVEIHN0YXRlKQogICAqIE9ubHkgZW5yaWNoIGR5bmFtaWMgaWRzIGZyb20gc2Vzc2lvbgogICAqIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQogICAqLwoKICBpZiAob3JkZXI/LnBheW1lbnRzPy5sZW5ndGgpIHsKCiAgICBjb25zdCBzZXNzaW9uUGF5bWVudElkID0KICAgICAgQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YT8ucGF5bWVudF9pZCkKICAgICAgICA/IHNlc3Npb25EYXRhLnBheW1lbnRfaWRbMF0KICAgICAgICA6IHNlc3Npb25EYXRhPy5wYXltZW50X2lkOwoKICAgIG9yZGVyLnBheW1lbnRzID0gb3JkZXIucGF5bWVudHMubWFwKChwYXltZW50KSA9PiB7CgogICAgICAvLyBVcGRhdGUgZGlzYnVyc2VtZW50IHBheW1lbnQgaWQgZnJvbSBzZXNzaW9uCiAgICAgIGlmICgKICAgICAgICBwYXltZW50LnR5cGUgPT09ICJPTl9GVUxGSUxMTUVOVCIgJiYKICAgICAgICBzZXNzaW9uUGF5bWVudElkICYmCiAgICAgICAgc2Vzc2lvblBheW1lbnRJZCAhPT0gIkxPQU5fRElTQlVSU01FTlRfSUQiCiAgICAgICkgewogICAgICAgIHBheW1lbnQuaWQgPSBzZXNzaW9uUGF5bWVudElkOwogICAgICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gRGlzYnVyc2VtZW50IHBheW1lbnQuaWQgbWFwcGVkOiIsIHBheW1lbnQuaWQpOwogICAgICB9CgogICAgICAvLyBVcGRhdGUgZGlzYnVyc2VtZW50IHRpbWVzdGFtcCB0byBub3cKICAgICAgaWYgKHBheW1lbnQudHlwZSA9PT0gIk9OX0ZVTEZJTExNRU5UIiAmJiBwYXltZW50LnRpbWUpIHsKICAgICAgICBwYXltZW50LnRpbWUudGltZXN0YW1wID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAgICB9CgogICAgICByZXR1cm4gcGF5bWVudDsKICAgIH0pOwoKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gUGF5bWVudHMgbWFwcGVkIGZyb20gZGVmYXVsdCBwYXlsb2FkIHdpdGggY29ycmVjdCBQQUlEIHN0YXR1c2VzIik7CiAgfQoKICAvKioKICAgKiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KICAgKiBUSU1FU1RBTVBTCiAgICogLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCiAgICovCgogIGlmIChvcmRlcikgewogICAgY29uc3Qgbm93ID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAgb3JkZXIudXBkYXRlZF9hdCA9IG5vdzsKICAgIGNvbnNvbGUubG9nKCLinIUgW29uX3N0YXR1c10gdXBkYXRlZF9hdCBzZXQ6Iiwgbm93KTsKICB9CgogIHJldHVybiBleGlzdGluZ1BheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -5187,8 +4962,7 @@ steps:
                     - descriptor:
                         code: GRO_ADDRESS
                         name: Gro Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                     - descriptor:
                         code: CUSTOMER_SUPPORT_LINK
                         name: Customer support link
@@ -5220,8 +4994,7 @@ steps:
                     - descriptor:
                         code: LSP_ADDRESS
                         name: Lsp Address
-                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                        Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                      value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
               locations:
                 - id: L2
                   gps: 28.584909, 77.134029
@@ -5294,9 +5067,7 @@ steps:
                       - descriptor:
                           code: ANNUAL_PERCENTAGE_RATE
                           name: Annual Percentage Rate
-                          short_desc: Effective annualized interest rate in percentage computed on net
-                            disbursed amount using IRR approach and reducing
-                            balance method
+                          short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                         value: 5%
                       - descriptor:
                           code: REPAYMENT_FREQUENCY
@@ -5326,14 +5097,7 @@ steps:
                       - descriptor:
                           code: KFS_LINK
                           name: Key Facts Statement Link
-                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                            document related to a loan. When accessed, the
-                            document is returned in text/html format, with the
-                            loan details organized in a standard HTML table.
-                            This format makes it easy for the buyer's app to
-                            read and reformat the information as needed. For
-                            more details, refer to the "KFS_LINK format"
-                            document in the "feature-ui" section.
+                          short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                         value: https://icicibank.com/loan/kfs-terms
                     display: true
             quote:
@@ -5475,19 +5239,14 @@ steps:
                   code: LOAN_AGREEMENT
                   name: Loan Agreement Document
                   short_desc: Download your Loan Agreement document here
-                  long_desc: A Loan Agreement Document is a legal contract outlining terms such as
-                    loan amount, interest rate, repayment schedule, and
-                    collateral, binding a lender and borrower in a formal
-                    financial arrangement.
+                  long_desc: A Loan Agreement Document is a legal contract outlining terms such as loan amount, interest rate, repayment schedule, and collateral, binding a lender and borrower in a formal financial arrangement.
                 mime_type: application/pdf
                 url: https://lender.com/loan/loan-agreement/O1.pdf
               - descriptor:
                   code: LOAN_CANCELLATION
                   name: Loan Cancellation Document
                   short_desc: Download your Loan Cancellation document here
-                  long_desc: A Loan Cancellation Document is a formal agreement used to terminate
-                    an existing loan, releasing the borrower from repayment
-                    obligations and confirming the loan's cancellation.
+                  long_desc: A Loan Cancellation Document is a formal agreement used to terminate an existing loan, releasing the borrower from repayment obligations and confirming the loan's cancellation.
                 mime_type: application/pdf
                 url: https://lender.com/loan/loan-cancellation/O1.pdf
             tags:
@@ -5582,8 +5341,7 @@ steps:
                       - descriptor:
                           code: GRO_ADDRESS
                           name: Gro Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                       - descriptor:
                           code: CUSTOMER_SUPPORT_LINK
                           name: Customer support link
@@ -5615,8 +5373,7 @@ steps:
                       - descriptor:
                           code: LSP_ADDRESS
                           name: Lsp Address
-                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841,
-                          Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
+                        value: One Indiabulls centre, Tower 1, 18th Floor Jupiter mill compound 841, Senapati Bapat Marg, Elphinstone Road, Mumbai 400013
                 locations:
                   - id: L2
                     gps: 28.584909, 77.134029
@@ -5689,9 +5446,7 @@ steps:
                         - descriptor:
                             code: ANNUAL_PERCENTAGE_RATE
                             name: Annual Percentage Rate
-                            short_desc: Effective annualized interest rate in percentage computed on net
-                              disbursed amount using IRR approach and reducing
-                              balance method
+                            short_desc: Effective annualized interest rate in percentage computed on net disbursed amount using IRR approach and reducing balance method
                           value: 5%
                         - descriptor:
                             code: REPAYMENT_FREQUENCY
@@ -5721,14 +5476,7 @@ steps:
                         - descriptor:
                             code: KFS_LINK
                             name: Key Facts Statement Link
-                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS)
-                              document related to a loan. When accessed, the
-                              document is returned in text/html format, with the
-                              loan details organized in a standard HTML table.
-                              This format makes it easy for the buyer's app to
-                              read and reformat the information as needed. For
-                              more details, refer to the "KFS_LINK format"
-                              document in the "feature-ui" section.
+                            short_desc: A link provided by the BPP points to a Key Fact Statement (KFS) document related to a loan. When accessed, the document is returned in text/html format, with the loan details organized in a standard HTML table. This format makes it easy for the buyer's app to read and reformat the information as needed. For more details, refer to the "KFS_LINK format" document in the "feature-ui" section.
                           value: https://icicibank.com/loan/kfs-terms
                       display: true
               quote:
@@ -5870,19 +5618,14 @@ steps:
                     code: LOAN_AGREEMENT
                     name: Loan Agreement Document
                     short_desc: Download your Loan Agreement document here
-                    long_desc: A Loan Agreement Document is a legal contract outlining terms such as
-                      loan amount, interest rate, repayment schedule, and
-                      collateral, binding a lender and borrower in a formal
-                      financial arrangement.
+                    long_desc: A Loan Agreement Document is a legal contract outlining terms such as loan amount, interest rate, repayment schedule, and collateral, binding a lender and borrower in a formal financial arrangement.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-agreement/O1.pdf
                 - descriptor:
                     code: LOAN_CANCELLATION
                     name: Loan Cancellation Document
                     short_desc: Download your Loan Cancellation document here
-                    long_desc: A Loan Cancellation Document is a formal agreement used to terminate
-                      an existing loan, releasing the borrower from repayment
-                      obligations and confirming the loan's cancellation.
+                    long_desc: A Loan Cancellation Document is a formal agreement used to terminate an existing loan, releasing the borrower from repayment obligations and confirming the loan's cancellation.
                   mime_type: application/pdf
                   url: https://lender.com/loan/loan-cancellation/O1.pdf
               tags:
@@ -5911,11 +5654,7 @@ steps:
               created_at: 2023-05-25T05:23:03.443Z
               updated_at: 2026-06-11T07:11:42.453Z
         type: request
-        description: The BPP sends an unsolicited on_status callback to the BAP to
-          asynchronously update the loan application status, conveying either a
-          successful completion with finalized credit details or a failure with
-          explicit rejection codes after offline verifications or field visits
-          are completed.
+        description: The BPP sends an unsolicited on_status callback to the BAP to asynchronously update the loan application status, conveying either a successful completion with finalized credit details or a failure with explicit rejection codes after offline verifications or field visits are completed.
 transaction_history: []
 validationLib: ""
 helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLCBmb3JtSWQsIHNlc3Npb25EYXRhKSA9PiB7Cgljb25zdCBiYXNlVVJMID0gc2Vzc2lvbkRhdGEubW9ja0Jhc2VVcmw7Cgljb25zdCB0cmFuc2FjdGlvbklkID0gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZFswXTsKCWNvbnN0IHNlc3Npb25JZCA9IHNlc3Npb25EYXRhLnNlc3Npb25JZDsKCXJldHVybiBgJHtiYXNlVVJMfS9mb3Jtcy8ke2RvbWFpbn0vJHtmb3JtSWR9Lz90cmFuc2FjdGlvbl9pZD0ke3RyYW5zYWN0aW9uSWR9JnNlc3Npb25faWQ9JHtzZXNzaW9uSWR9YDsKfQoKCi8vIEdlbmVyYXRlcyBhIFVVSUQgdjQKZnVuY3Rpb24gdXVpZHY0KCkgewoJcmV0dXJuICd4eHh4eHh4eC14eHh4LTR4eHgteXh4eC14eHh4eHh4eHh4eHgnLnJlcGxhY2UoL1t4eV0vZywgZnVuY3Rpb24gKGMpIHsKCQljb25zdCByID0gTWF0aC5yYW5kb20oKSAqIDE2IHwgMDsKCQljb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCQlyZXR1cm4gdi50b1N0cmluZygxNik7Cgl9KTsKfQpmdW5jdGlvbiBnZW5lcmF0ZVRpbWVSYW5nZUZyb21Db250ZXh0KGNvbnRleHRUaW1lc3RhbXApIHsKCWNvbnN0IGNvbnRleHREYXRlID0gbmV3IERhdGUoY29udGV4dFRpbWVzdGFtcCk7Cgljb25zdCB5ZWFyID0gY29udGV4dERhdGUuZ2V0VVRDRnVsbFllYXIoKTsKCWNvbnN0IG1vbnRoID0gY29udGV4dERhdGUuZ2V0VVRDTW9udGgoKTsKCgkvLyBDcmVhdGUgc3RhcnQgb2YgbW9udGgKCWNvbnN0IHN0YXJ0ID0gbmV3IERhdGUoRGF0ZS5VVEMoeWVhciwgbW9udGgsIDEsIDAsIDAsIDAsIDApKTsKCS8vIENyZWF0ZSBlbmQgb2YgbW9udGgKCWNvbnN0IGVuZCA9IG5ldyBEYXRlKERhdGUuVVRDKHllYXIsIG1vbnRoICsgMSwgMCwgMjMsIDU5LCA1OSwgOTk5KSk7CgoJcmV0dXJuIHsKCQlzdGFydDogc3RhcnQudG9JU09TdHJpbmcoKSwKCQllbmQ6IGVuZC50b0lTT1N0cmluZygpCgl9Owp9CmZ1bmN0aW9uIHBhcnNlSVNPRHVyYXRpb25Ub01vbnRocyh0ZXJtKSB7CglpZiAoIXRlcm0pIHJldHVybiAxMjsKCWNvbnN0IHMgPSBTdHJpbmcodGVybSkudHJpbSgpOwoKCWNvbnN0IHllYXJXb3JkTWF0Y2ggPSBzLm1hdGNoKC8oXGQrKVxzKnllYXIvaSk7Cgljb25zdCBtb250aFdvcmRNYXRjaCA9IHMubWF0Y2goLyhcZCspXHMqbW9udGgvaSk7CgoJaWYgKHllYXJXb3JkTWF0Y2ggfHwgbW9udGhXb3JkTWF0Y2gpIHsKCQljb25zdCB5ZWFycyA9IHllYXJXb3JkTWF0Y2ggPyBwYXJzZUludCh5ZWFyV29yZE1hdGNoWzFdLCAxMCkgOiAwOwoJCWNvbnN0IG1vbnRocyA9IG1vbnRoV29yZE1hdGNoID8gcGFyc2VJbnQobW9udGhXb3JkTWF0Y2hbMV0sIDEwKSA6IDA7CgkJcmV0dXJuIHllYXJzICogMTIgKyBtb250aHMgfHwgMTI7Cgl9CgoJaWYgKHMuc3RhcnRzV2l0aCgnUCcpKSB7CgkJY29uc3QgeWVhck1hdGNoID0gcy5tYXRjaCgvKFxkKylZLyk7CgkJY29uc3QgbW9udGhNYXRjaCA9IHMubWF0Y2goLyhcZCspTS8pOwoKCQljb25zdCB5ZWFycyA9IHllYXJNYXRjaCA/IHBhcnNlSW50KHllYXJNYXRjaFsxXSwgMTApIDogMDsKCQljb25zdCBtb250aHMgPSBtb250aE1hdGNoID8gcGFyc2VJbnQobW9udGhNYXRjaFsxXSwgMTApIDogMDsKCgkJcmV0dXJuIHllYXJzICogMTIgKyBtb250aHMgfHwgMTI7Cgl9CgoJY29uc3QgbnVtZXJpYyA9IHBhcnNlSW50KHMsIDEwKTsKCXJldHVybiBpc05hTihudW1lcmljKSA/IDEyIDogbnVtZXJpYzsKfQphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZUNvbnNlbnRIYW5kbGVyKAoJc2Vzc2lvbkRhdGEsCgl7CgkJY3VzdElkLAoJCXRlbXBsYXRlTmFtZSA9ICJGSU5WVURFTU9fVEVTVElORyIsCgkJY29uc2VudERlc2NyaXB0aW9uID0gIkdvbGQgTG9hbiBBY2NvdW50IEFnZ3JlZ2F0b3IgQ29uc2VudCIsCgkJcmVkaXJlY3RVcmwgPSAiaHR0cHM6Ly9nb29nbGUuY28uaW4iLAoJfSwKKSB7CglpZiAoIWN1c3RJZCkgewoJCXRocm93IG5ldyBFcnJvcigiY3VzdElkIGlzIHJlcXVpcmVkIik7Cgl9Cgljb25zdCBiYXNlVXJsID0gc2Vzc2lvbkRhdGEgJiYgc2Vzc2lvbkRhdGEuZmludnVVcmw7CglpZiAoIWJhc2VVcmwpIHsKCQl0aHJvdyBuZXcgRXJyb3IoInNlc3Npb25EYXRhLmZpbnZ1VXJsIGlzIHJlcXVpcmVkIik7Cgl9CgoJY29uc3QgdXJsID0gYCR7YmFzZVVybH0vZmludnUtYWEvY29uc2VudC9nZW5lcmF0ZWA7CgoJY29uc3QgcGF5bG9hZCA9IHsKCQljdXN0SWQsCgkJdGVtcGxhdGVOYW1lLAoJCWNvbnNlbnREZXNjcmlwdGlvbiwKCQlyZWRpcmVjdFVybCwKCX07CgoJY29uc29sZS5sb2coIkNhbGxpbmcgRmludnUgQUEgU2VydmljZToiLCB1cmwpOwoJY29uc29sZS5sb2coIkNvbnNlbnQgcmVxdWVzdCBwYXlsb2FkOiIsIHBheWxvYWQpOwoKCWNvbnN0IGNvbnRyb2xsZXIgPSBuZXcgQWJvcnRDb250cm9sbGVyKCk7Cgljb25zdCB0aW1lb3V0ID0gc2V0VGltZW91dCgoKSA9PiBjb250cm9sbGVyLmFib3J0KCksIDEwMDAwKTsKCgl0cnkgewoJCWNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKHVybCwgewoJCQltZXRob2Q6ICJQT1NUIiwKCQkJaGVhZGVyczogewoJCQkJIkNvbnRlbnQtVHlwZSI6ICJhcHBsaWNhdGlvbi9qc29uIiwKCQkJfSwKCQkJYm9keTogSlNPTi5zdHJpbmdpZnkocGF5bG9hZCksCgkJCXNpZ25hbDogY29udHJvbGxlci5zaWduYWwsCgkJfSk7CgoJCWlmICghcmVzLm9rKSB7CgkJCWNvbnN0IHRleHQgPSBhd2FpdCByZXMudGV4dCgpOwoJCQl0aHJvdyBuZXcgRXJyb3IoYFJlcXVlc3QgZmFpbGVkOiAke3Jlcy5zdGF0dXN9ICR7dGV4dH1gKTsKCQl9CgoJCWNvbnN0IGRhdGEgPSBhd2FpdCByZXMuanNvbigpOwoKCQlpZiAoIWRhdGEgfHwgIWRhdGEuY29uc2VudEhhbmRsZXIpIHsKCQkJdGhyb3cgbmV3IEVycm9yKCJJbnZhbGlkIHJlc3BvbnNlOiBjb25zZW50SGFuZGxlciBtaXNzaW5nIik7CgkJfQoKCQlyZXR1cm4gZGF0YS5jb25zZW50SGFuZGxlcjsKCX0gY2F0Y2ggKGVycikgewoJCWlmIChlcnIgJiYgZXJyLm5hbWUgPT09ICJBYm9ydEVycm9yIikgewoJCQl0aHJvdyBuZXcgRXJyb3IoIlJlcXVlc3QgdGltZWQgb3V0IGFmdGVyIDEwIHNlY29uZHMiKTsKCQl9CgkJdGhyb3cgZXJyOwoJfSBmaW5hbGx5IHsKCQljbGVhclRpbWVvdXQodGltZW91dCk7Cgl9Cn0KCmZ1bmN0aW9uIGdlbmVyYXRlNkRpZ2l0SWQoKSB7CglyZXR1cm4gTWF0aC5mbG9vcigxMDAwMDAgKyBNYXRoLnJhbmRvbSgpICogOTAwMDAwKS50b1N0cmluZygpOwp9CgpmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKCWNvbnN0IGR1clJFID0gL1AoKGQrKVkpPygoZCspTSk/KChkKylXKT8oKGQrKUQpP1Q/KChkKylIKT8oKGQrKU0pPygoZCspUyk/LzsKCWNvbnN0IHMgPSBkdXJSRS5leGVjKGR1cmF0aW9uKTsKCWlmICghcykgcmV0dXJuIDA7CgoJcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCQkoTnVtYmVyKHM/Lls0XSkgfHwgMCkgKiAyNjI4Mjg4ICsKCQkoTnVtYmVyKHM/Lls2XSkgfHwgMCkgKiA2MDQ4MDAgKwoJCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCQkoTnVtYmVyKHM/LlsxMF0pIHx8IDApICogMzYwMCArCgkJKE51bWJlcihzPy5bMTJdKSB8fCAwKSAqIDYwICsKCQkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiBjYWxjdWxhdGVTZXR0bGVtZW50QW1vdW50KHNlc3Npb25EYXRhKSB7Cgljb25zdCBmZWVUeXBlID0gc2Vzc2lvbkRhdGEuYnV5ZXJfZmluZGVyX2ZlZXNfdHlwZSB8fCAicGVyY2VudC1hbm51YWxpemVkIjsKCWNvbnN0IGZlZVBlcmNlbnRhZ2UgPSBwYXJzZUZsb2F0KHNlc3Npb25EYXRhLmJ1eWVyX2ZpbmRlcl9mZWVzX3BlcmNlbnRhZ2UgfHwgIjAiKTsKCWNvbnN0IGZlZUFtb3VudCA9IHBhcnNlRmxvYXQoc2Vzc2lvbkRhdGEuYnV5ZXJfZmluZGVyX2ZlZXNfYW1vdW50IHx8ICIwIik7CgoJY29uc3QgcHJpbmNpcGFsQW1vdW50ID0gcGFyc2VGbG9hdChzZXNzaW9uRGF0YS5wcmluY2lwYWxfYW1vdW50IHx8ICIwIik7Cgljb25zdCB0b3RhbExvYW5BbW91bnQgPSBwYXJzZUZsb2F0KHNlc3Npb25EYXRhLnF1b3RlX3ByaWNlIHx8ICIwIik7Cgljb25zdCBsb2FuVGVybUlTTyA9IHNlc3Npb25EYXRhLmxvYW5fdGVybSB8fCAiUDEyTSI7Cgljb25zdCBsb2FuVGVybU1vbnRocyA9IHBhcnNlSVNPRHVyYXRpb25Ub01vbnRocyhsb2FuVGVybUlTTyk7CgoJY29uc29sZS5sb2coIltzZXR0bGVtZW50LXV0aWxzXSBDYWxjdWxhdGluZyBTRVRUTEVNRU5UX0FNT1VOVCB3aXRoOiIsIHsKCQlmZWVUeXBlLAoJCWZlZVBlcmNlbnRhZ2UsCgkJZmVlQW1vdW50LAoJCXByaW5jaXBhbEFtb3VudCwKCQl0b3RhbExvYW5BbW91bnQsCgkJbG9hblRlcm1JU08sCgkJbG9hblRlcm1Nb250aHMsCgl9KTsKCglsZXQgc2V0dGxlbWVudEFtb3VudCA9IDA7CgoJc3dpdGNoIChmZWVUeXBlKSB7CgkJY2FzZSAiYW1vdW50IjoKCQkJc2V0dGxlbWVudEFtb3VudCA9IGZlZUFtb3VudDsKCQkJY29uc29sZS5sb2coYFtzZXR0bGVtZW50LXV0aWxzXSBhbW91bnQgdHlwZSDihpIgJHtzZXR0bGVtZW50QW1vdW50fWApOwoJCQlicmVhazsKCgkJY2FzZSAicGVyY2VudCI6CgkJCXNldHRsZW1lbnRBbW91bnQgPSAoZmVlUGVyY2VudGFnZSAvIDEwMCkgKiB0b3RhbExvYW5BbW91bnQ7CgkJCWNvbnNvbGUubG9nKAoJCQkJYFtzZXR0bGVtZW50LXV0aWxzXSBwZXJjZW50IHR5cGUg4oaSICR7ZmVlUGVyY2VudGFnZX0lIMOXICR7dG90YWxMb2FuQW1vdW50fSA9ICR7c2V0dGxlbWVudEFtb3VudH1gCgkJCSk7CgkJCWJyZWFrOwoKCQljYXNlICJwZXJjZW50LWFubnVhbGl6ZWQiOgoJCWRlZmF1bHQ6CgkJCXNldHRsZW1lbnRBbW91bnQgPQoJCQkJKGZlZVBlcmNlbnRhZ2UgLyAxMDApICoKCQkJCShsb2FuVGVybU1vbnRocyAvIDEyKSAqCgkJCQlwcmluY2lwYWxBbW91bnQ7CgkJCWNvbnNvbGUubG9nKAoJCQkJYFtzZXR0bGVtZW50LXV0aWxzXSBwZXJjZW50LWFubnVhbGl6ZWQgdHlwZSDihpIgJHtmZWVQZXJjZW50YWdlfSUgw5cgKCR7bG9hblRlcm1Nb250aHN9LzEyKSDDlyAke3ByaW5jaXBhbEFtb3VudH0gPSAke3NldHRsZW1lbnRBbW91bnR9YAoJCQkpOwoJCQlicmVhazsKCX0KCgljb25zdCByZXN1bHQgPSBTdHJpbmcoTWF0aC5yb3VuZChzZXR0bGVtZW50QW1vdW50KSk7Cgljb25zb2xlLmxvZyhgW3NldHRsZW1lbnQtdXRpbHNdIEZpbmFsIFNFVFRMRU1FTlRfQU1PVU5UID0gJHtyZXN1bHR9YCk7CglyZXR1cm4gcmVzdWx0Owp9CmZ1bmN0aW9uIGluamVjdFNldHRsZW1lbnRBbW91bnQoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7Cgljb25zdCBzZXR0bGVtZW50QW1vdW50ID0KCQlzZXNzaW9uRGF0YS5zZXR0bGVtZW50X2Ftb3VudCA/PyBjYWxjdWxhdGVTZXR0bGVtZW50QW1vdW50KHNlc3Npb25EYXRhKTsKCgljb25zdCBwYXltZW50cyA9IGRlZmF1bHRQYXlsb2FkPy5tZXNzYWdlPy5vcmRlcj8ucGF5bWVudHMgfHwgW107CgoJcGF5bWVudHMuZm9yRWFjaCgocGF5bWVudCkgPT4gewoJCWlmICghQXJyYXkuaXNBcnJheShwYXltZW50Py50YWdzKSkgcmV0dXJuOwoKCQlwYXltZW50LnRhZ3MuZm9yRWFjaCgodGFnKSA9PiB7CgkJCWlmIChBcnJheS5pc0FycmF5KHRhZz8ubGlzdCkpIHsKCQkJCWNvbnN0IGl0ZW0gPSB0YWcubGlzdC5maW5kKAoJCQkJCShpKSA9PiBpPy5kZXNjcmlwdG9yPy5jb2RlID09PSAiU0VUVExFTUVOVF9BTU9VTlQiCgkJCQkpOwoJCQkJaWYgKGl0ZW0pIHsKCQkJCQlpdGVtLnZhbHVlID0gc2V0dGxlbWVudEFtb3VudDsKCQkJCQljb25zb2xlLmxvZygKCQkJCQkJYFtzZXR0bGVtZW50LXV0aWxzXSBJbmplY3RlZCBTRVRUTEVNRU5UX0FNT1VOVCA9ICR7c2V0dGxlbWVudEFtb3VudH1gCgkJCQkJKTsKCQkJCX0KCQkJfQoJCX0pOwoJfSk7CgoJcmV0dXJuIHNldHRsZW1lbnRBbW91bnQ7Cn0KCmZ1bmN0aW9uIHVwZGF0ZU1pc3NlZEVNSVN0YXR1cyhwYXltZW50cywgY29udGV4dFRpbWVzdGFtcCkgewoJaWYgKCFBcnJheS5pc0FycmF5KHBheW1lbnRzKSkgcmV0dXJuOwoKCWNvbnN0IGNvbnRleHREYXRlID0gbmV3IERhdGUoY29udGV4dFRpbWVzdGFtcCk7Cgljb25zdCBjb250ZXh0TW9udGggPSBjb250ZXh0RGF0ZS5nZXRVVENNb250aCgpOwoJY29uc3QgY29udGV4dFllYXIgPSBjb250ZXh0RGF0ZS5nZXRVVENGdWxsWWVhcigpOwoJcGF5bWVudHMuZm9yRWFjaChwYXltZW50ID0+IHsKCQlpZiAocGF5bWVudC50aW1lPy5sYWJlbCA9PT0gJ0lOU1RBTExNRU5UJyAmJiBwYXltZW50LnR5cGUgPT09ICdQT1NUX0ZVTEZJTExNRU5UJyAmJiBwYXltZW50LnRpbWU/LnJhbmdlPy5zdGFydCkgewoJCQljb25zdCBwYXltZW50RGF0ZSA9IG5ldyBEYXRlKHBheW1lbnQudGltZS5yYW5nZS5zdGFydCk7CgkJCWNvbnN0IHBheW1lbnRNb250aCA9IHBheW1lbnREYXRlLmdldFVUQ01vbnRoKCk7CgkJCWNvbnN0IHBheW1lbnRZZWFyID0gcGF5bWVudERhdGUuZ2V0VVRDRnVsbFllYXIoKTsKCgkJCWlmIChwYXltZW50TW9udGggPT09IGNvbnRleHRNb250aCAmJiBwYXltZW50WWVhciA9PT0gY29udGV4dFllYXIpIHsKCQkJCXBheW1lbnQuc3RhdHVzID0gJ1BBSUQnOwoJCQl9CgkJfQoJfSk7Cn0KCmZ1bmN0aW9uIHVwZGF0ZVByZVBhcnRQYXltZW50U3RhdHVzKHBheW1lbnRzLCBjb250ZXh0VGltZXN0YW1wKSB7CglpZiAoIUFycmF5LmlzQXJyYXkocGF5bWVudHMpKSByZXR1cm47CgoJY29uc3QgY29udGV4dERhdGUgPSBuZXcgRGF0ZShjb250ZXh0VGltZXN0YW1wKTsKCWNvbnN0IGNvbnRleHRNb250aCA9IGNvbnRleHREYXRlLmdldFVUQ01vbnRoKCk7Cgljb25zdCBjb250ZXh0WWVhciA9IGNvbnRleHREYXRlLmdldFVUQ0Z1bGxZZWFyKCk7CgoJbGV0IHBhaWRDb3VudCA9IDA7CglsZXQgZGVmZXJyZWRDb3VudCA9IDA7CgoJcGF5bWVudHMuZm9yRWFjaChwYXltZW50ID0+IHsKCQlpZiAocGF5bWVudC50aW1lPy5sYWJlbCA9PT0gJ0lOU1RBTExNRU5UJyAmJiBwYXltZW50LnR5cGUgPT09ICdQT1NUX0ZVTEZJTExNRU5UJyAmJiBwYXltZW50LnRpbWU/LnJhbmdlPy5zdGFydCkgewoJCQljb25zdCBwYXltZW50RGF0ZSA9IG5ldyBEYXRlKHBheW1lbnQudGltZS5yYW5nZS5zdGFydCk7CgkJCWNvbnN0IHBheW1lbnRNb250aCA9IHBheW1lbnREYXRlLmdldFVUQ01vbnRoKCk7CgkJCWNvbnN0IHBheW1lbnRZZWFyID0gcGF5bWVudERhdGUuZ2V0VVRDRnVsbFllYXIoKTsKCgkJCWlmIChwYXltZW50TW9udGggPj0gY29udGV4dE1vbnRoICYmIHBheW1lbnRNb250aCA8PSBjb250ZXh0TW9udGggKyAyICYmIHBheW1lbnRZZWFyID09PSBjb250ZXh0WWVhciAmJiBwYWlkQ291bnQgPCAzKSB7CgkJCQlwYXltZW50LnN0YXR1cyA9ICdQQUlEJzsKCQkJCXBhaWRDb3VudCsrOwoJCQl9CgkJCWVsc2UgaWYgKHBheW1lbnRNb250aCA+IGNvbnRleHRNb250aCArIDIgJiYgcGF5bWVudE1vbnRoIDw9IGNvbnRleHRNb250aCArIDQgJiYgcGF5bWVudFllYXIgPT09IGNvbnRleHRZZWFyICYmIGRlZmVycmVkQ291bnQgPCAyKSB7CgkJCQlwYXltZW50LnN0YXR1cyA9ICdERUZFUlJFRCc7CgkJCQlkZWZlcnJlZENvdW50Kys7CgkJCX0KCQl9Cgl9KTsKfQoKCmZ1bmN0aW9uIHVwZGF0ZUZvcmVjbG9zdXJlUGF5bWVudFN0YXR1cyhwYXltZW50cykgewoJaWYgKCFBcnJheS5pc0FycmF5KHBheW1lbnRzKSkgcmV0dXJuOwoKCXBheW1lbnRzLmZvckVhY2gocGF5bWVudCA9PiB7CgkJaWYgKHBheW1lbnQudGltZT8ubGFiZWwgPT09ICdJTlNUQUxMTUVOVCcgJiYgcGF5bWVudC50eXBlID09PSAnUE9TVF9GVUxGSUxMTUVOVCcpIHsKCQkJaWYgKHBheW1lbnQuc3RhdHVzICE9PSAnUEFJRCcpIHsKCQkJCXBheW1lbnQuc3RhdHVzID0gJ05PVC1QQUlEJzsKCQkJfQoJCX0KCX0pOwp9CgpmdW5jdGlvbiB1cHNlcnRCcmVha3VwKG9yZGVyLCB0aXRsZSwgdmFsdWUsIGN1cnJlbmN5ID0gJ0lOUicpIHsKCW9yZGVyLnF1b3RlID0gb3JkZXIucXVvdGUgfHwgeyBwcmljZTogeyBjdXJyZW5jeTogJ0lOUicsIHZhbHVlOiAnMCcgfSwgYnJlYWt1cDogW10gfTsKCW9yZGVyLnF1b3RlLmJyZWFrdXAgPSBBcnJheS5pc0FycmF5KG9yZGVyLnF1b3RlLmJyZWFrdXApID8gb3JkZXIucXVvdGUuYnJlYWt1cCA6IFtdOwoJY29uc3QgaWR4ID0gb3JkZXIucXVvdGUuYnJlYWt1cC5maW5kSW5kZXgoKGIpID0+IChiLnRpdGxlIHx8ICcnKS50b1VwcGVyQ2FzZSgpID09PSB0aXRsZS50b1VwcGVyQ2FzZSgpKTsKCWNvbnN0IHJvdyA9IHsgdGl0bGUsIHByaWNlOiB7IHZhbHVlLCBjdXJyZW5jeSB9IH07CglpZiAoaWR4ID49IDApIG9yZGVyLnF1b3RlLmJyZWFrdXBbaWR4XSA9IHJvdzsgZWxzZSBvcmRlci5xdW90ZS5icmVha3VwLnB1c2gocm93KTsKfQ==

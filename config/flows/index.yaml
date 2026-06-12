@@ -7,7 +7,7 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: A personal loan origination process where borrowers initiate applications through digital search and form completion, then await asynchronous status updates as the lender conducts offline verification and underwriting to reach a final lending decision.
+    description: A personal loan origination flow enabling borrowers to search, apply, and track their application while lenders perform offline verification and underwriting to deliver a lending decision.
     config:
       $ref: ./PERSONAL LOAN/Personal_Loan_Offline.yaml
   - type: playground
@@ -18,7 +18,7 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: A borrower searches for and selects a personal loan offer within the Buyer App, then completes the loan origination process through a single redirect to the lender's platform for KYC verification, account validation, mandate setup, and agreement signing, with real-time status updates provided throughout the application lifecycle.
+    description: A borrower discovers and selects a personal loan offer within an ONDC marketplace, then completes the full loan origination process—including KYC verification, account validation, mandate setup, and documentation—through seamless single-platform redirection with continuous status updates throughout the application lifecycle.
     config:
       $ref: ./PERSONAL LOAN/Personal_Loan_Single_Redirection.yaml
   - type: playground
@@ -29,7 +29,7 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: The flow verifies a borrower's identity against existing personal loan records during application intake to prevent duplicate submissions, enabling efficient onboarding and reducing redundant credit assessments.
+    description: A borrower searches for and selects a personal loan product while the system verifies against existing loan records to prevent duplicate submissions. This deduplication check ensures efficient loan origination by identifying and filtering redundant applications during the intake workflow.
     config:
       $ref: ./PERSONAL LOAN/Personal_Loan_Dedupe_Check.yaml
   - type: playground
@@ -38,7 +38,7 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: The Gold Loan Offline flow represents a loan application process where initial digital steps are followed by offline verification or manual underwriting, with the lender asynchronously updating the application status through multiple on_status callbacks until the loan is finalized, rejected, or completed.
+    description: A gold loan application flow where customers digitally search for loan products, configure their terms, and submit applications online, while lenders conduct offline verification and underwriting with periodic status updates to borrowers until final approval or rejection.
     config:
       $ref: ./GOLD LOAN/Gold_Loan_Offline.yaml
   - type: playground
@@ -49,7 +49,7 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: Enables borrowers to request and process full early repayment of a personal loan through offline channels, with lender verification and official account foreclosure. The flow manages borrower notification, manual verification, and lender-side processing through to final account closure.
+    description: Enables borrowers to request and process early settlement of a personal loan through offline channels, incorporating lender verification and official account closure.
     config:
       $ref: ./PERSONAL LOAN/Personal_Loan_Foreclosure_Offline.yaml
   - type: playground
@@ -60,7 +60,7 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: A borrower initiates offline settlement of a missed EMI payment including applicable penalties through a manual form-based process. The lender validates, reconciles, and confirms the payment before updating the loan account status.
+    description: A borrower settles a missed personal loan EMI payment offline, including applicable penalties, while the lender validates the settlement and updates the loan account status.
     config:
       $ref: ./PERSONAL LOAN/Personal_Loan_Missed_EMI_Offline.yaml
   - type: playground
@@ -71,6 +71,6 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: A borrower initiates a partial prepayment of their outstanding personal loan principal outside the regular EMI schedule, with the lender validating the request, recalculating repayment terms and charges, and updating the loan status upon successful payment execution.
+    description: A borrower initiates a partial prepayment of their personal loan principal outside the regular EMI schedule to reduce outstanding debt, with the lender validating the prepayment amount, recalculating revised repayment terms and associated charges, and updating the loan account status upon successful payment completion.
     config:
       $ref: ./PERSONAL LOAN/Personal_Loan_Pre_Part_Payment_Offline.yaml
