@@ -4146,6 +4146,8 @@ _TESTS_:
                       var_enum:
                         - Order-picked-up
                         - Order-delivered
+                        - Agent-assigned
+                        - Out-for-delivery
                       _RETURN_: attr all in var_enum
                     - _NAME_: UPDATE_STATE_REASON_ID
                       _CONTINUE_: "!(attr are present)"
