@@ -105,27 +105,7 @@ _TESTS_:
                 - BPP
                 - BAP
               _RETURN_: attr any in enumList
-            # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TYPE
-            #   attr: $.message.intent.payment.tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].list[?(@.descriptor.code=='BUYER_FINDER_FEES_TYPE')].value
-            #   _RETURN_: attr are present
-            # - _NAME_: REQUIRED_BUYER_FINDER_FEES_PERCENTAGE
-            #   attr: $.message.intent.payment.tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].list[?(@.descriptor.code=='BUYER_FINDER_FEES_PERCENTAGE')].value
-            #   _RETURN_: attr are present
-            # - _NAME_: REQUIRED_SETTLEMENT_WINDOW
-            #   attr: $.message.intent.payment.tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='SETTLEMENT_WINDOW')].value
-            #   _RETURN_: attr are present
-            # - _NAME_: REQUIRED_SETTLEMENT_BASIS
-            #   attr: $.message.intent.payment.tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='SETTLEMENT_BASIS')].value
-            #   _RETURN_: attr are present
-            # - _NAME_: REQUIRED_DELAY_INTEREST
-            #   attr: $.message.intent.payment.tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='DELAY_INTEREST')].value
-            #   _RETURN_: attr are present
-            # - _NAME_: REQUIRED_STATIC_TERMS
-            #   attr: $.message.intent.payment.tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='STATIC_TERMS')].value
-            #   _RETURN_: attr are present
-            # - _NAME_: REQUIRED_OFFLINE_CONTRACT
-            #   attr: $.message.intent.payment.tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='OFFLINE_CONTRACT')].value
-            #   _RETURN_: attr are present
+           
   on_search:
     - _NAME_: ON_SEARCH_CONTEXT
       action:
@@ -228,43 +208,7 @@ _TESTS_:
         - _NAME_: REQUIRED_PAYMENT_COLLECTED_BY
           attr: $.message.catalog.providers[*].payments[*].collected_by
           _RETURN_: attr are present
-        # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TAG
-        #   tagPath: $.message.catalog.providers[*].payments[*].tags[*].descriptor.code
-        #   validTags:
-        #     - BUYER_FINDER_FEES
-        #   _RETURN_: tagPath any in validTags
-        # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TYPE
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].list[?(@.descriptor.code=='BUYER_FINDER_FEES_TYPE')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_BUYER_FINDER_FEES_PERCENTAGE
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].list[?(@.descriptor.code=='BUYER_FINDER_FEES_PERCENTAGE')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_SETTLEMENT_TERMS_TAG
-        #   tagPath: $.message.catalog.providers[*].payments[*].tags[*].descriptor.code
-        #   validTags:
-        #     - SETTLEMENT_TERMS
-        #   _RETURN_: tagPath any in validTags
-        # - _NAME_: REQUIRED_SETTLEMENT_WINDOW
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='SETTLEMENT_WINDOW')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_SETTLEMENT_BASIS
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='SETTLEMENT_BASIS')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_DELAY_INTEREST
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='DELAY_INTEREST')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_STATIC_TERMS
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='STATIC_TERMS')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_OFFLINE_CONTRACT
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='OFFLINE_CONTRACT')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_MANDATORY_ARBITRATION
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='MANDATORY_ARBITRATION')].value
-        #   _RETURN_: attr are present
-        # - _NAME_: REQUIRED_COURT_JURISDICTION
-        #   attr: $.message.catalog.providers[*].payments[*].tags[?(@.descriptor.code=='SETTLEMENT_TERMS')].list[?(@.descriptor.code=='COURT_JURISDICTION')].value
-        #   _RETURN_: attr are present
+        
   select:
     - _NAME_: SELECT_CONTEXT
       action:
