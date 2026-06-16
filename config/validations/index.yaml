@@ -579,8 +579,8 @@ _TESTS_:
         - _NAME_: PAYMENT_PARAMS_CURRENCY
           attr: $.message.order.payments[*].params.currency
           _RETURN_: attr are present
-    - _NAME_: PAYMENT_TAGS_VALIDATION
-      _RETURN_:
+    # - _NAME_: PAYMENT_TAGS_VALIDATION
+    #   _RETURN_:
         # - _NAME_: TAG_BUYER_FINDER_FEES
         #   attr: $.message.order.payments[*].tags[*].descriptor.code
         #   enumList:
@@ -798,8 +798,8 @@ _TESTS_:
         - _NAME_: REQUIRED_QUOTE_PRICE_CURRENCY
           attr: $.message.order.quote.price.currency
           _RETURN_: attr are present
-    - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
-      _RETURN_:
+    # - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
+    #   _RETURN_:
         # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TAG
         #   attr: $.message.order.payments[*].tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].descriptor.code
         #   _RETURN_: attr are present
@@ -901,8 +901,8 @@ _TESTS_:
         - _NAME_: REQUIRED_PAYMENT_CURRENCY
           attr: $.message.order.payments[*].params.currency
           _RETURN_: attr are present
-    - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
-      _RETURN_:
+    # - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
+    #   _RETURN_:
         # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TAG
         #   attr: $.message.order.payments[*].tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].descriptor.code
         #   _RETURN_: attr are present
@@ -1024,8 +1024,8 @@ _TESTS_:
         - _NAME_: PAYMENT_TYPE
           attr: $.message.order.payments[*].type
           _RETURN_: attr are present
-    - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
-      _RETURN_:
+    # - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
+    #   _RETURN_:
         # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TAG
         #   attr: $.message.order.payments[*].tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].descriptor.code
         #   _RETURN_: attr are present
@@ -1334,8 +1334,8 @@ _TESTS_:
         - _NAME_: PAYMENT_CURRENCY
           attr: $.message.order.payments[*].params.currency
           _RETURN_: attr are present
-    - _NAME_: ON_UPDATE_ORDER_PAYMENT_TAG_VALIDATIONS
-      _RETURN_:
+    # - _NAME_: ON_UPDATE_ORDER_PAYMENT_TAG_VALIDATIONS
+    #   _RETURN_:
         # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TAG
         #   attr: $.message.order.payments[*].tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].descriptor.code
         #   _RETURN_: attr are present
@@ -1654,8 +1654,8 @@ _TESTS_:
         - _NAME_: PAYMENT_TYPE
           attr: $.message.order.payments[*].type
           _RETURN_: attr are present
-    - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
-      _RETURN_:
+    # - _NAME_: ORDER_PAYMENT_TAG_VALIDATIONS
+    #   _RETURN_:
         # - _NAME_: REQUIRED_BUYER_FINDER_FEES_TAG
         #   attr: $.message.order.payments[*].tags[?(@.descriptor.code=='BUYER_FINDER_FEES')].descriptor.code
         #   _RETURN_: attr are present
