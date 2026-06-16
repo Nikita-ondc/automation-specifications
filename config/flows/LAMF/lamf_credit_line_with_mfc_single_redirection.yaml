@@ -178,9 +178,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: search
-            timestamp: 2026-06-16T14:52:01.972Z
+            timestamp: 2026-06-16T15:26:56.121Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: ee592f07-cd74-421d-aa0d-fcc71b73d5a3
+            message_id: fe86b9e9-6b33-48ad-868c-f83291c373c0
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -646,9 +646,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_search
-            timestamp: 2026-06-16T14:52:02.015Z
+            timestamp: 2026-06-16T15:26:56.151Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: ee592f07-cd74-421d-aa0d-fcc71b73d5a3
+            message_id: fe86b9e9-6b33-48ad-868c-f83291c373c0
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1065,9 +1065,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: select
-            timestamp: 2026-06-16T14:52:03.350Z
+            timestamp: 2026-06-16T15:26:57.436Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: 30f91421-f495-409d-baad-3f3c43dca42b
+            message_id: 92b11548-aee1-4699-994b-8c1c924f6a33
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1134,11 +1134,11 @@ steps:
     owner: BPP
     responseFor: select_1
     unsolicited: false
-    description: BPP confirms the customer's selected credit product and furnishes
+    description: BPP Confirms the customer's selected credit product and furnishes
       the order containing offer terms and application parameters for the
       customer to review and confirm.
     mock:
-      generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgY29uc29sZS5sb2coInNlc3Npb25EYXRhIiwgSlNPTi5zdHJpbmdpZnkoc2Vzc2lvbkRhdGEpKTsKICBhd2FpdCBnZW5lcmF0ZU9uU2VsZWN0KGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSk7CiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9Cgphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZU9uU2VsZWN0KGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IHsgY2F0YWxvZywgYWN0aW9uX29yZGVyLCBwbGVkZ2VfcmVxdWlyZW1lbnRzIH0gPSBzZXNzaW9uRGF0YTsKCiAgaWYgKCFjYXRhbG9nPy5sZW5ndGggfHwgIWFjdGlvbl9vcmRlcj8ubGVuZ3RoKSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoImNhdGFsb2cgb3IgYWN0aW9uX29yZGVyIG1pc3NpbmciKTsKICB9CgogIGNvbnN0IG9yZGVyID0gYWN0aW9uX29yZGVyWzBdOwogIGNvbnN0IHByb3ZpZGVySWQgPSBvcmRlci5wcm92aWRlci5pZDsKICBjb25zdCBpdGVtSWQgPSBvcmRlci5pdGVtc1swXS5pZDsKICBjb25zdCBmdWxmaWxsbWVudElkID0gb3JkZXIuZnVsZmlsbG1lbnRzWzBdLmlkOwoKICBjb25zdCBwcm92aWRlcnMgPSBjYXRhbG9nWzBdLnByb3ZpZGVyczsKCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEZpbmQgcHJvdmlkZXIKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgcHJvdmlkZXIgPSBwcm92aWRlcnMuZmluZCgocCkgPT4gcC5pZCA9PT0gcHJvdmlkZXJJZCk7CiAgaWYgKCFwcm92aWRlcikgdGhyb3cgbmV3IEVycm9yKCJQcm92aWRlciBub3QgZm91bmQiKTsKCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEZpbmQgaXRlbQogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICBjb25zdCBpdGVtID0gcHJvdmlkZXIuaXRlbXMuZmluZCgoaSkgPT4gaS5pZCA9PT0gaXRlbUlkKTsKICBpZiAoIWl0ZW0pIHRocm93IG5ldyBFcnJvcigiSXRlbSBub3QgZm91bmQiKTsKCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEZpbmQgZnVsZmlsbG1lbnQKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgZnVsZmlsbG1lbnQgPSBwcm92aWRlci5mdWxmaWxsbWVudHMuZmluZCgKICAgIChmKSA9PiBmLmlkID09PSBmdWxmaWxsbWVudElkCiAgKTsKICBpZiAoIWZ1bGZpbGxtZW50KSB0aHJvdyBuZXcgRXJyb3IoIkZ1bGZpbGxtZW50IG5vdCBmb3VuZCIpOwoKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgLy8gRmxhdHRlbiBwbGVkZ2UgcmVxdWlyZW1lbnRzCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIGNvbnN0IHBsZWRnZVJlcXVpcmVtZW50cyA9CiAgICBwbGVkZ2VfcmVxdWlyZW1lbnRzPy5mbGF0KCkgfHwgW107CgogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICAvLyBVcGRhdGUgUExFREdFX1JFUVVJUkVNRU5UUyAoT05MWSB2YWx1ZSB1cGRhdGUpCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIGxldCB1cGRhdGVkVGFncyA9IFtdOwoKICBpZiAoQXJyYXkuaXNBcnJheShpdGVtLnRhZ3MpKSB7CiAgICB1cGRhdGVkVGFncyA9IGl0ZW0udGFncy5tYXAoKHRhZykgPT4gewogICAgICBpZiAodGFnLmRlc2NyaXB0b3I/LmNvZGUgIT09ICJQTEVER0VfUkVRVUlSRU1FTlRTIikgewogICAgICAgIHJldHVybiB0YWc7CiAgICAgIH0KCiAgICAgIGNvbnN0IHNjaGVtZUVudHJ5ID0gdGFnLmxpc3Q/LmZpbmQoCiAgICAgICAgKGUpID0+IGUuZGVzY3JpcHRvcj8uY29kZSA9PT0gIlNDSEVNRV9DT0RFIgogICAgICApOwoKICAgICAgaWYgKCFzY2hlbWVFbnRyeSkgcmV0dXJuIHRhZzsKCiAgICAgIGNvbnN0IHNjaGVtZUNvZGUgPSBzY2hlbWVFbnRyeS52YWx1ZTsKCiAgICAgIC8vIG1hdGNoIGZyb20gc2Vzc2lvbgogICAgICBjb25zdCBtYXRjaGVkUmVxdWlyZW1lbnQgPSBwbGVkZ2VSZXF1aXJlbWVudHMuZmluZCgocHIpID0+IHsKICAgICAgICBjb25zdCBzYyA9IHByLmxpc3Q/LmZpbmQoCiAgICAgICAgICAoZSkgPT4gZS5kZXNjcmlwdG9yPy5jb2RlID09PSAiU0NIRU1FX0NPREUiCiAgICAgICAgKTsKICAgICAgICByZXR1cm4gc2M/LnZhbHVlID09PSBzY2hlbWVDb2RlOwogICAgICB9KTsKCiAgICAgIGlmICghbWF0Y2hlZFJlcXVpcmVtZW50KSByZXR1cm4gdGFnOwoKICAgICAgY29uc3Qgc2Vzc2lvblVuaXRzRW50cnkgPSBtYXRjaGVkUmVxdWlyZW1lbnQubGlzdD8uZmluZCgKICAgICAgICAoZSkgPT4gZS5kZXNjcmlwdG9yPy5jb2RlID09PSAiVU5JVFNfUExFREdFRCIKICAgICAgKTsKCiAgICAgIGlmICghc2Vzc2lvblVuaXRzRW50cnkpIHJldHVybiB0YWc7CgogICAgICBjb25zdCB1cGRhdGVkTGlzdCA9IHRhZy5saXN0Lm1hcCgoZW50cnkpID0+IHsKICAgICAgICBpZiAoZW50cnkuZGVzY3JpcHRvcj8uY29kZSA9PT0gIlVOSVRTX1JFUVVJUkVEIikgewogICAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgLi4uZW50cnksCiAgICAgICAgICAgIHZhbHVlOiBzZXNzaW9uVW5pdHNFbnRyeS52YWx1ZQogICAgICAgICAgfTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGVudHJ5OwogICAgICB9KTsKCiAgICAgIHJldHVybiB7CiAgICAgICAgLi4udGFnLAogICAgICAgIGxpc3Q6IHVwZGF0ZWRMaXN0CiAgICAgIH07CiAgICB9KTsKICB9CgogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICAvLyBLZWVwIExPQU5fSU5GTyArIHVwZGF0ZWQgUExFREdFX1JFUVVJUkVNRU5UUwogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICBjb25zdCBsb2FuSW5mb1RhZyA9CiAgICBpdGVtLnRhZ3M/LmZpbHRlcigKICAgICAgKHQpID0+IHQuZGVzY3JpcHRvcj8uY29kZSA9PT0gIkxPQU5fSU5GTyIKICAgICkgfHwgW107CgogIGNvbnN0IHBsZWRnZVRhZ3MgPSB1cGRhdGVkVGFncy5maWx0ZXIoCiAgICAodCkgPT4gdC5kZXNjcmlwdG9yPy5jb2RlID09PSAiUExFREdFX1JFUVVJUkVNRU5UUyIKICApOwoKICBjb25zdCBmaW5hbFRhZ3MgPSBbLi4ubG9hbkluZm9UYWcsIC4uLnBsZWRnZVRhZ3NdOwoKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgLy8gT3B0aW9uYWwgYnJlYWt1cCAoTE9BTl9PRkZFUikKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgbG9hbk9mZmVyVGFnID0gaXRlbS50YWdzPy5maW5kKAogICAgKHQpID0+IHQuZGVzY3JpcHRvcj8uY29kZSA9PT0gIkxPQU5fT0ZGRVIiCiAgKTsKCiAgbGV0IGJyZWFrdXAgPSBbXTsKICBsZXQgdHRsID0gIlAxNUQiOwoKICBpZiAobG9hbk9mZmVyVGFnKSB7CiAgICBicmVha3VwID0gbG9hbk9mZmVyVGFnLmxpc3QKICAgICAgLmZpbHRlcigKICAgICAgICAoZW50cnkpID0+CiAgICAgICAgICBlbnRyeS5kZXNjcmlwdG9yLmNvZGUgIT09ICJPRkZFUl9WQUxJRElUWSIKICAgICAgKQogICAgICAubWFwKChlbnRyeSkgPT4gKHsKICAgICAgICB0aXRsZTogZW50cnkuZGVzY3JpcHRvci5jb2RlLAogICAgICAgIHByaWNlOiB7CiAgICAgICAgICB2YWx1ZTogZW50cnkudmFsdWUucmVwbGFjZSgiIElOUiIsICIiKSwKICAgICAgICAgIGN1cnJlbmN5OiAiSU5SIgogICAgICAgIH0KICAgICAgfSkpOwoKICAgIGNvbnN0IHZhbGlkaXR5ID0gbG9hbk9mZmVyVGFnLmxpc3QuZmluZCgKICAgICAgKHgpID0+IHguZGVzY3JpcHRvci5jb2RlID09PSAiT0ZGRVJfVkFMSURJVFkiCiAgICApOwoKICAgIGlmICh2YWxpZGl0eSkgewogICAgICB0dGwgPSB2YWxpZGl0eS52YWx1ZTsKICAgIH0KICB9CgogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICAvLyBRdW90ZSBmcm9tIGl0ZW0gcHJpY2UKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgaXRlbVByaWNlID0gaXRlbT8ucHJpY2U/LnZhbHVlOwogIGlmICghaXRlbVByaWNlKSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoIkl0ZW0gcHJpY2UgbWlzc2luZyIpOwogIH0KCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEJ1aWxkIHBheWxvYWQKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgZm9ybUlkID0KICAodHlwZW9mIHNlc3Npb25EYXRhPy5mb3JtX2lkID09PSAic3RyaW5nIiAmJgogIHNlc3Npb25EYXRhLmZvcm1faWQudHJpbSgpCiAgICA/IHNlc3Npb25EYXRhLmZvcm1faWQKICAgIDogYGZvcm1fJHt1dWlkdjQoKX1gKTsKCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZSA9IHsKICAgIG9yZGVyOiB7CiAgICAgIHByb3ZpZGVyOiB7CiAgICAgICAgaWQ6IHByb3ZpZGVyLmlkLAogICAgICAgIGRlc2NyaXB0b3I6IHByb3ZpZGVyLmRlc2NyaXB0b3IsCiAgICAgICAgdGFnczogcHJvdmlkZXIudGFncwogICAgICB9LAoKICAgICAgaXRlbXM6IFsKICAgICAgICB7CiAgICAgICAgICAuLi5pdGVtLAogICAgICAgICAgeGlucHV0OnsKICAgICAgICAgICAgaGVhZDogewogICAgICAgICAgICAgIGRlc2NyaXB0b3I6IHsKICAgICAgICAgICAgICAgIG5hbWU6ICJTaW5nbGUgUmVkaXJlY3Rpb24iLAogICAgICAgICAgICAgICAgY29kZTogIlNJTkdMRV9SRURJUkVDVElPTiIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgIGhlYWRpbmdzOiBbIlNJTkdMRV9SRURJUkVDVElPTiJdCiAgICAgICAgICAgIH0sCiAgICAgICAgICAgIGZvcm06IHsKICAgICAgICAgICAgICBpZDogZm9ybUlkLAogICAgICAgICAgICAgIG1pbWVfdHlwZTogImFwcGxpY2F0aW9uL2h0bWwiLAogICAgICAgICAgICAgIHVybDogY3JlYXRlRm9ybVVSTCgnT05EQzpGSVMxMicsICdzaW5nbGVfcmVkaXJlY3Rpb24nLCBzZXNzaW9uRGF0YSkgKwogICAgICAgICAgICAgICAgJyZiYXBfdXJpPScgKyBlbmNvZGVVUklDb21wb25lbnQoZGVmYXVsdFBheWxvYWQuY29udGV4dC5iYXBfdXJpKSwvLyJodHRwczovL2JwcC5jcmVkaXQuYmVja25wcm90b2NvbC5vcmcveGlucHV0L2Zvcm1pZC9GMDQiLAogICAgICAgICAgICAgIHJlc3VibWl0OiBmYWxzZSwKICAgICAgICAgICAgICBtdWx0aXBsZV9zdW1iaXNzaW9uczogZmFsc2UKICAgICAgICAgICAgfSwKICAgICAgICAgICAgcmVxdWlyZWQ6IHRydWUKICAgICAgICAgICAgfSwKICAgICAgICAgIHRhZ3M6IGZpbmFsVGFncwogICAgICAgIH0KICAgICAgXSwKCiAgICAgIGZ1bGZpbGxtZW50czogWwogICAgICAgIHsKICAgICAgICAgIGlkOiBmdWxmaWxsbWVudC5pZCwKICAgICAgICAgIHR5cGU6IGZ1bGZpbGxtZW50LnR5cGUsCiAgICAgICAgICBzdG9wczogZnVsZmlsbG1lbnQuc3RvcHMKICAgICAgICAgIC8vIHRhZ3M6IGZ1bGZpbGxtZW50LnRhZ3MKICAgICAgICB9CiAgICAgIF0sCgogICAgICBxdW90ZTogewogICAgICAgIGlkOiAiTE9BTl9MRUFEX0lEX09SX1NJTUlMQVIiLAogICAgICAgIHByaWNlOiB7CiAgICAgICAgICBjdXJyZW5jeTogIklOUiIsCiAgICAgICAgICB2YWx1ZTogU3RyaW5nKGl0ZW1QcmljZSkKICAgICAgICB9LAogICAgICAgIGJyZWFrdXAsCiAgICAgICAgdHRsCiAgICAgIH0KICAgIH0KICB9OwoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgY29uc29sZS5sb2coInNlc3Npb25EYXRhIiwgSlNPTi5zdHJpbmdpZnkoc2Vzc2lvbkRhdGEpKTsKICBhd2FpdCBnZW5lcmF0ZU9uU2VsZWN0KGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSk7CiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9Cgphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZU9uU2VsZWN0KGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IHsgY2F0YWxvZywgYWN0aW9uX29yZGVyLCBwbGVkZ2VfcmVxdWlyZW1lbnRzIH0gPSBzZXNzaW9uRGF0YTsKCiAgaWYgKCFjYXRhbG9nPy5sZW5ndGggfHwgIWFjdGlvbl9vcmRlcj8ubGVuZ3RoKSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoImNhdGFsb2cgb3IgYWN0aW9uX29yZGVyIG1pc3NpbmciKTsKICB9CgogIGNvbnN0IG9yZGVyID0gYWN0aW9uX29yZGVyWzBdOwogIGNvbnN0IHByb3ZpZGVySWQgPSBvcmRlci5wcm92aWRlci5pZDsKICBjb25zdCBpdGVtSWQgPSBvcmRlci5pdGVtc1swXS5pZDsKICBjb25zdCBmdWxmaWxsbWVudElkID0gb3JkZXIuZnVsZmlsbG1lbnRzWzBdLmlkOwoKICBjb25zdCBwcm92aWRlcnMgPSBjYXRhbG9nWzBdLnByb3ZpZGVyczsKCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEZpbmQgcHJvdmlkZXIKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgcHJvdmlkZXIgPSBwcm92aWRlcnMuZmluZCgocCkgPT4gcC5pZCA9PT0gcHJvdmlkZXJJZCk7CiAgaWYgKCFwcm92aWRlcikgdGhyb3cgbmV3IEVycm9yKCJQcm92aWRlciBub3QgZm91bmQiKTsKCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEZpbmQgaXRlbQogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICBjb25zdCBpdGVtID0gcHJvdmlkZXIuaXRlbXMuZmluZCgoaSkgPT4gaS5pZCA9PT0gaXRlbUlkKTsKICBpZiAoIWl0ZW0pIHRocm93IG5ldyBFcnJvcigiSXRlbSBub3QgZm91bmQiKTsKCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEZpbmQgZnVsZmlsbG1lbnQKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgZnVsZmlsbG1lbnQgPSBwcm92aWRlci5mdWxmaWxsbWVudHMuZmluZCgKICAgIChmKSA9PiBmLmlkID09PSBmdWxmaWxsbWVudElkCiAgKTsKICBpZiAoIWZ1bGZpbGxtZW50KSB0aHJvdyBuZXcgRXJyb3IoIkZ1bGZpbGxtZW50IG5vdCBmb3VuZCIpOwoKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgLy8gRmxhdHRlbiBwbGVkZ2UgcmVxdWlyZW1lbnRzCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIGNvbnN0IHBsZWRnZVJlcXVpcmVtZW50cyA9CiAgICBwbGVkZ2VfcmVxdWlyZW1lbnRzPy5mbGF0KCkgfHwgW107CgogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICAvLyBVcGRhdGUgUExFREdFX1JFUVVJUkVNRU5UUyAoT05MWSB2YWx1ZSB1cGRhdGUpCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIGxldCB1cGRhdGVkVGFncyA9IFtdOwoKICBpZiAoQXJyYXkuaXNBcnJheShpdGVtLnRhZ3MpKSB7CiAgICB1cGRhdGVkVGFncyA9IGl0ZW0udGFncy5tYXAoKHRhZykgPT4gewogICAgICBpZiAodGFnLmRlc2NyaXB0b3I/LmNvZGUgIT09ICJQTEVER0VfUkVRVUlSRU1FTlRTIikgewogICAgICAgIHJldHVybiB0YWc7CiAgICAgIH0KCiAgICAgIGNvbnN0IHNjaGVtZUVudHJ5ID0gdGFnLmxpc3Q/LmZpbmQoCiAgICAgICAgKGUpID0+IGUuZGVzY3JpcHRvcj8uY29kZSA9PT0gIlNDSEVNRV9DT0RFIgogICAgICApOwoKICAgICAgaWYgKCFzY2hlbWVFbnRyeSkgcmV0dXJuIHRhZzsKCiAgICAgIGNvbnN0IHNjaGVtZUNvZGUgPSBzY2hlbWVFbnRyeS52YWx1ZTsKCiAgICAgIC8vIG1hdGNoIGZyb20gc2Vzc2lvbgogICAgICBjb25zdCBtYXRjaGVkUmVxdWlyZW1lbnQgPSBwbGVkZ2VSZXF1aXJlbWVudHMuZmluZCgocHIpID0+IHsKICAgICAgICBjb25zdCBzYyA9IHByLmxpc3Q/LmZpbmQoCiAgICAgICAgICAoZSkgPT4gZS5kZXNjcmlwdG9yPy5jb2RlID09PSAiU0NIRU1FX0NPREUiCiAgICAgICAgKTsKICAgICAgICByZXR1cm4gc2M/LnZhbHVlID09PSBzY2hlbWVDb2RlOwogICAgICB9KTsKCiAgICAgIGlmICghbWF0Y2hlZFJlcXVpcmVtZW50KSByZXR1cm4gdGFnOwoKICAgICAgY29uc3Qgc2Vzc2lvblVuaXRzRW50cnkgPSBtYXRjaGVkUmVxdWlyZW1lbnQubGlzdD8uZmluZCgKICAgICAgICAoZSkgPT4gZS5kZXNjcmlwdG9yPy5jb2RlID09PSAiVU5JVFNfUExFREdFRCIKICAgICAgKTsKCiAgICAgIGlmICghc2Vzc2lvblVuaXRzRW50cnkpIHJldHVybiB0YWc7CgogICAgICBjb25zdCB1cGRhdGVkTGlzdCA9IHRhZy5saXN0Lm1hcCgoZW50cnkpID0+IHsKICAgICAgICBpZiAoZW50cnkuZGVzY3JpcHRvcj8uY29kZSA9PT0gIlVOSVRTX1JFUVVJUkVEIikgewogICAgICAgICAgcmV0dXJuIHsKICAgICAgICAgICAgLi4uZW50cnksCiAgICAgICAgICAgIHZhbHVlOiBzZXNzaW9uVW5pdHNFbnRyeS52YWx1ZQogICAgICAgICAgfTsKICAgICAgICB9CiAgICAgICAgcmV0dXJuIGVudHJ5OwogICAgICB9KTsKCiAgICAgIHJldHVybiB7CiAgICAgICAgLi4udGFnLAogICAgICAgIGxpc3Q6IHVwZGF0ZWRMaXN0CiAgICAgIH07CiAgICB9KTsKICB9CgogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICAvLyBLZWVwIExPQU5fSU5GTyArIHVwZGF0ZWQgUExFREdFX1JFUVVJUkVNRU5UUwogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICBjb25zdCBsb2FuSW5mb1RhZyA9CiAgICBpdGVtLnRhZ3M/LmZpbHRlcigKICAgICAgKHQpID0+IHQuZGVzY3JpcHRvcj8uY29kZSA9PT0gIkxPQU5fSU5GTyIKICAgICkgfHwgW107CgogIGNvbnN0IHBsZWRnZVRhZ3MgPSB1cGRhdGVkVGFncy5maWx0ZXIoCiAgICAodCkgPT4gdC5kZXNjcmlwdG9yPy5jb2RlID09PSAiUExFREdFX1JFUVVJUkVNRU5UUyIKICApOwoKICBjb25zdCBmaW5hbFRhZ3MgPSBbLi4ubG9hbkluZm9UYWcsIC4uLnBsZWRnZVRhZ3NdOwoKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgLy8gT3B0aW9uYWwgYnJlYWt1cCAoTE9BTl9PRkZFUikKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgbG9hbk9mZmVyVGFnID0gaXRlbS50YWdzPy5maW5kKAogICAgKHQpID0+IHQuZGVzY3JpcHRvcj8uY29kZSA9PT0gIkxPQU5fT0ZGRVIiCiAgKTsKCiAgbGV0IGJyZWFrdXAgPSBbXTsKICBsZXQgdHRsID0gIlAxNUQiOwoKICBpZiAobG9hbk9mZmVyVGFnKSB7CiAgICBicmVha3VwID0gbG9hbk9mZmVyVGFnLmxpc3QKICAgICAgLmZpbHRlcigKICAgICAgICAoZW50cnkpID0+CiAgICAgICAgICBlbnRyeS5kZXNjcmlwdG9yLmNvZGUgIT09ICJPRkZFUl9WQUxJRElUWSIKICAgICAgKQogICAgICAubWFwKChlbnRyeSkgPT4gKHsKICAgICAgICB0aXRsZTogZW50cnkuZGVzY3JpcHRvci5jb2RlLAogICAgICAgIHByaWNlOiB7CiAgICAgICAgICB2YWx1ZTogZW50cnkudmFsdWUucmVwbGFjZSgiIElOUiIsICIiKSwKICAgICAgICAgIGN1cnJlbmN5OiAiSU5SIgogICAgICAgIH0KICAgICAgfSkpOwoKICAgIGNvbnN0IHZhbGlkaXR5ID0gbG9hbk9mZmVyVGFnLmxpc3QuZmluZCgKICAgICAgKHgpID0+IHguZGVzY3JpcHRvci5jb2RlID09PSAiT0ZGRVJfVkFMSURJVFkiCiAgICApOwoKICAgIGlmICh2YWxpZGl0eSkgewogICAgICB0dGwgPSB2YWxpZGl0eS52YWx1ZTsKICAgIH0KICB9CgogIC8vID09PT09PT09PT09PT09PT09PT09PT09PT0KICAvLyBRdW90ZSBmcm9tIGl0ZW0gcHJpY2UKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgaXRlbVByaWNlID0gaXRlbT8ucHJpY2U/LnZhbHVlOwogIGlmICghaXRlbVByaWNlKSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoIkl0ZW0gcHJpY2UgbWlzc2luZyIpOwogIH0KCiAgLy8gPT09PT09PT09PT09PT09PT09PT09PT09PQogIC8vIEJ1aWxkIHBheWxvYWQKICAvLyA9PT09PT09PT09PT09PT09PT09PT09PT09CiAgY29uc3QgZm9ybUlkID0KICAodHlwZW9mIHNlc3Npb25EYXRhPy5mb3JtX2lkID09PSAic3RyaW5nIiAmJgogIHNlc3Npb25EYXRhLmZvcm1faWQudHJpbSgpCiAgICA/IHNlc3Npb25EYXRhLmZvcm1faWQKICAgIDogYHNpbmdsZV9yZWRpcmVjdGlvbl8ke3V1aWR2NCgpfWApOwoKICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlID0gewogICAgb3JkZXI6IHsKICAgICAgcHJvdmlkZXI6IHsKICAgICAgICBpZDogcHJvdmlkZXIuaWQsCiAgICAgICAgZGVzY3JpcHRvcjogcHJvdmlkZXIuZGVzY3JpcHRvciwKICAgICAgICB0YWdzOiBwcm92aWRlci50YWdzCiAgICAgIH0sCgogICAgICBpdGVtczogWwogICAgICAgIHsKICAgICAgICAgIC4uLml0ZW0sCiAgICAgICAgICB4aW5wdXQ6ewogICAgICAgICAgICBoZWFkOiB7CiAgICAgICAgICAgICAgZGVzY3JpcHRvcjogewogICAgICAgICAgICAgICAgbmFtZTogIlNpbmdsZSBSZWRpcmVjdGlvbiIsCiAgICAgICAgICAgICAgICBjb2RlOiAiU0lOR0xFX1JFRElSRUNUSU9OIgogICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgaGVhZGluZ3M6IFsiU0lOR0xFX1JFRElSRUNUSU9OIl0KICAgICAgICAgICAgfSwKICAgICAgICAgICAgZm9ybTogewogICAgICAgICAgICAgIGlkOiBmb3JtSWQsCiAgICAgICAgICAgICAgbWltZV90eXBlOiAiYXBwbGljYXRpb24vaHRtbCIsCiAgICAgICAgICAgICAgdXJsOiBjcmVhdGVGb3JtVVJMKCdPTkRDOkZJUzEyJywgJ3NpbmdsZV9yZWRpcmVjdGlvbicsIHNlc3Npb25EYXRhKSArCiAgICAgICAgICAgICAgICAnJmJhcF91cmk9JyArIGVuY29kZVVSSUNvbXBvbmVudChkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJhcF91cmkpLC8vImh0dHBzOi8vYnBwLmNyZWRpdC5iZWNrbnByb3RvY29sLm9yZy94aW5wdXQvZm9ybWlkL0YwNCIsCiAgICAgICAgICAgICAgcmVzdWJtaXQ6IGZhbHNlLAogICAgICAgICAgICAgIG11bHRpcGxlX3N1bWJpc3Npb25zOiBmYWxzZQogICAgICAgICAgICB9LAogICAgICAgICAgICByZXF1aXJlZDogdHJ1ZQogICAgICAgICAgICB9LAogICAgICAgICAgdGFnczogZmluYWxUYWdzCiAgICAgICAgfQogICAgICBdLAoKICAgICAgZnVsZmlsbG1lbnRzOiBbCiAgICAgICAgewogICAgICAgICAgaWQ6IGZ1bGZpbGxtZW50LmlkLAogICAgICAgICAgdHlwZTogZnVsZmlsbG1lbnQudHlwZSwKICAgICAgICAgIHN0b3BzOiBmdWxmaWxsbWVudC5zdG9wcwogICAgICAgICAgLy8gdGFnczogZnVsZmlsbG1lbnQudGFncwogICAgICAgIH0KICAgICAgXSwKCiAgICAgIHF1b3RlOiB7CiAgICAgICAgaWQ6ICJMT0FOX0xFQURfSURfT1JfU0lNSUxBUiIsCiAgICAgICAgcHJpY2U6IHsKICAgICAgICAgIGN1cnJlbmN5OiAiSU5SIiwKICAgICAgICAgIHZhbHVlOiBTdHJpbmcoaXRlbVByaWNlKQogICAgICAgIH0sCiAgICAgICAgYnJlYWt1cCwKICAgICAgICB0dGwKICAgICAgfQogICAgfQogIH07CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -1179,9 +1179,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_select
-            timestamp: 2026-06-16T14:52:03.376Z
+            timestamp: 2026-06-16T15:26:57.459Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: 30f91421-f495-409d-baad-3f3c43dca42b
+            message_id: 92b11548-aee1-4699-994b-8c1c924f6a33
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1437,7 +1437,7 @@ steps:
                       headings:
                         - SINGLE_REDIRECTION
                     form:
-                      id: form_d6127208-ad17-4b82-ba80-b168a79c2648
+                      id: single_redirection_1621d741-1f15-4109-b14e-bb391d887954
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS12/single_redirection/?transaction_id=c751921f-ca28-4de5-b4e9-192cf3a38e43&session_id=undefined&bap_uri=https%3A%2F%2Fbap.example.com
                       resubmit: false
@@ -1604,9 +1604,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-16T14:52:03.413Z
+            timestamp: 2026-06-16T15:26:57.488Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: a7fbae65-522a-477a-bf87-0dc31c5ec37c
+            message_id: bf72e2e0-7598-4a9b-ae22-a6416a8296fb
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1856,10 +1856,10 @@ steps:
                           value: "30"
                   xinput:
                     form:
-                      id: form_d6127208-ad17-4b82-ba80-b168a79c2648
+                      id: single_redirection_1621d741-1f15-4109-b14e-bb391d887954
                     form_response:
                       status: PENDING
-                      submission_id: 61b3ed01-78f1-4dc6-9f18-98ae7a67c974
+                      submission_id: a8fe17d7-2ba3-460d-bc1c-d015a8ca97b6
               fulfillments:
                 - customer:
                     person:
@@ -2011,9 +2011,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-16T14:52:03.453Z
+            timestamp: 2026-06-16T15:26:57.521Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: 3049185b-5278-42be-857e-5ddb40025244
+            message_id: d7cd9484-3a70-44a0-9265-ee8dd2c18767
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2263,10 +2263,10 @@ steps:
                           value: "30"
                   xinput:
                     form:
-                      id: form_d6127208-ad17-4b82-ba80-b168a79c2648
+                      id: single_redirection_1621d741-1f15-4109-b14e-bb391d887954
                     form_response:
                       status: PENDING
-                      submission_id: de8dacce-b784-4a3e-9bd3-9b2fa8e06db7
+                      submission_id: 4629ca1c-19ec-437c-a594-a4917fc63158
               fulfillments:
                 - id: F18
                   type: ONLINE
@@ -2398,9 +2398,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-16T14:52:03.489Z
+            timestamp: 2026-06-16T15:26:57.554Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: 0547fb88-6bae-4c8f-8270-71db2e4b093c
+            message_id: 5beda210-ae83-4a35-8904-8d1a3110ba64
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2650,10 +2650,10 @@ steps:
                           value: "30"
                   xinput:
                     form:
-                      id: form_d6127208-ad17-4b82-ba80-b168a79c2648
+                      id: single_redirection_1621d741-1f15-4109-b14e-bb391d887954
                     form_response:
                       status: PENDING
-                      submission_id: 198f99ec-ee7b-476f-8742-eac774377abd
+                      submission_id: bfcd722a-aab1-4c96-b023-af765127abfc
               fulfillments:
                 - id: F18
                   type: ONLINE
@@ -2787,9 +2787,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_status
-            timestamp: 2026-06-16T14:52:03.531Z
+            timestamp: 2026-06-16T15:26:57.587Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: d4ceb20b-2b9d-4430-a1a4-94c28978db9d
+            message_id: b38fcdc6-adc1-44fc-987b-c34a48de17b4
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3039,10 +3039,10 @@ steps:
                           value: "30"
                   xinput:
                     form:
-                      id: form_d6127208-ad17-4b82-ba80-b168a79c2648
+                      id: single_redirection_1621d741-1f15-4109-b14e-bb391d887954
                     form_response:
                       status: COMPLETED
-                      submission_id: a4916cc9-0339-4397-af04-d4ef10ff058f
+                      submission_id: 0d7e3c0b-fc57-43ed-bade-872f37aa6069
               fulfillments:
                 - id: F18
                   type: ONLINE
@@ -3208,9 +3208,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: select
-            timestamp: 2026-06-16T14:52:14.480Z
+            timestamp: 2026-06-16T15:27:05.657Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: e326b890-56ad-4d64-8fd3-66b9f67d9c31
+            message_id: a6245c94-e91b-4117-add8-91e56f795d49
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3235,10 +3235,10 @@ steps:
                         name: Single Redirection
                         code: SINGLE_REDIRECTION
                     form:
-                      id: form_d6127208-ad17-4b82-ba80-b168a79c2648
+                      id: single_redirection_1621d741-1f15-4109-b14e-bb391d887954
                     form_response:
                       status: SUCCESS
-                      submission_id: a4916cc9-0339-4397-af04-d4ef10ff058f
+                      submission_id: 0d7e3c0b-fc57-43ed-bade-872f37aa6069
               fulfillments:
                 - id: F18
         type: request
@@ -3292,9 +3292,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_select
-            timestamp: 2026-06-16T14:52:14.512Z
+            timestamp: 2026-06-16T15:27:05.681Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: e326b890-56ad-4d64-8fd3-66b9f67d9c31
+            message_id: a6245c94-e91b-4117-add8-91e56f795d49
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3730,9 +3730,9 @@ steps:
           context:
             domain: ONDC:FIS12
             action: on_confirm
-            timestamp: 2026-06-16T14:52:14.548Z
+            timestamp: 2026-06-16T15:27:05.711Z
             transaction_id: c751921f-ca28-4de5-b4e9-192cf3a38e43
-            message_id: 0081bac7-3f92-4a19-a9bc-3eda355c4840
+            message_id: 365a9c01-6123-45d2-84bb-01e7b141b509
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4092,8 +4092,8 @@ steps:
                   url: https://lender.com/loan/loan-agreement/O1.pdf
               status: ACTIVE
               id: LOAN_LEAD_ID_OR_SIMILAR_ORDER_ID
-              created_at: 2026-06-16T14:52:14.550Z
-              updated_at: 2026-06-16T14:52:14.550Z
+              created_at: 2026-06-16T15:27:05.713Z
+              updated_at: 2026-06-16T15:27:05.713Z
         type: request
         description: The BPP confirms the customer's credit line application and returns
           the finalized transaction details and confirmation status to the BAP.
