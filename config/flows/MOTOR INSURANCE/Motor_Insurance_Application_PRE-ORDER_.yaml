@@ -54,34 +54,6 @@ steps:
                   id: 0120TRVK
             payment:
               collected_by: BPP
-              tags:
-                - descriptor:
-                    code: BUYER_FINDER_FEES
-                  display: false
-                  list:
-                    - descriptor:
-                        code: BUYER_FINDER_FEES_TYPE
-                      value: percent-annualized
-                    - descriptor:
-                        code: BUYER_FINDER_FEES_PERCENTAGE
-                      value: '0'
-                - descriptor:
-                    code: SETTLEMENT_TERMS
-                  display: false
-                  list:
-                    - descriptor:
-                        code: DELAY_INTEREST
-                      value: '2.5'
-                    - descriptor:
-                        code: SETTLEMENT_WINDOW
-                      value: PT60M
-                    - descriptor:
-                        code: STATIC_TERMS
-                      value: >-
-                        https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan
-                    - descriptor:
-                        code: OFFLINE_CONTRACT
-                      value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -440,41 +412,8 @@ steps:
                           name: Daily Allowance
                           code: DAILY_ALLOWANCE
                 payments:
-                  - collected_by: BPP
-                    tags:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES
-                        display: false
-                        list:
-                          - descriptor:
-                              code: BUYER_FINDER_FEES_TYPE
-                            value: percent-annualized
-                          - descriptor:
-                              code: BUYER_FINDER_FEES_PERCENTAGE
-                            value: '0'
-                      - descriptor:
-                          code: SETTLEMENT_TERMS
-                        display: false
-                        list:
-                          - descriptor:
-                              code: SETTLEMENT_WINDOW
-                            value: PT60M
-                          - descriptor:
-                              code: DELAY_INTEREST
-                            value: '2.5'
-                          - descriptor:
-                              code: MANDATORY_ARBITRATION
-                            value: 'TRUE'
-                          - descriptor:
-                              code: COURT_JURISDICTION
-                            value: New Delhi
-                          - descriptor:
-                              code: STATIC_TERMS
-                            value: >-
-                              https://www.icicibank.com/personal-banking/loans/personal-loan
-                          - descriptor:
-                              code: OFFLINE_CONTRACT
-                            value: 'true'
+                  - id: payment_1
+                    collected_by: BPP
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -494,6 +433,7 @@ steps:
         selected_provider: '$.message.catalog.providers[0]'
         form_id: '$.message.catalog.providers[0].items[0].xinput.form.id'
         vehicle_details_form: '$.message.catalog.providers[0].items[0].xinput.form.url'
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: html_form
@@ -560,34 +500,6 @@ steps:
                       submission_id: e9a3b4a5-10f8-42c7-b888-dbf0e2edd684
             payment:
               collected_by: BPP
-              tags:
-                - descriptor:
-                    code: BUYER_FINDER_FEES
-                  display: false
-                  list:
-                    - descriptor:
-                        code: BUYER_FINDER_FEES_TYPE
-                      value: percent-annualized
-                    - descriptor:
-                        code: BUYER_FINDER_FEES_PERCENTAGE
-                      value: '0'
-                - descriptor:
-                    code: SETTLEMENT_TERMS
-                  display: false
-                  list:
-                    - descriptor:
-                        code: SETTLEMENT_WINDOW
-                      value: PT60M
-                    - descriptor:
-                        code: DELAY_INTEREST
-                      value: '2.5'
-                    - descriptor:
-                        code: STATIC_TERMS
-                      value: >-
-                        https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan
-                    - descriptor:
-                        code: OFFLINE_CONTRACT
-                      value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -818,40 +730,6 @@ steps:
                       duration: P1Y
                 payments:
                   - collected_by: BPP
-                    tags:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES
-                        display: false
-                        list:
-                          - descriptor:
-                              code: BUYER_FINDER_FEES_TYPE
-                            value: percent-annualized
-                          - descriptor:
-                              code: BUYER_FINDER_FEES_PERCENTAGE
-                            value: '0'
-                      - descriptor:
-                          code: SETTLEMENT_TERMS
-                        display: false
-                        list:
-                          - descriptor:
-                              code: SETTLEMENT_WINDOW
-                            value: PT60M
-                          - descriptor:
-                              code: DELAY_INTEREST
-                            value: '2.5'
-                          - descriptor:
-                              code: MANDATORY_ARBITRATION
-                            value: 'TRUE'
-                          - descriptor:
-                              code: COURT_JURISDICTION
-                            value: New Delhi
-                          - descriptor:
-                              code: STATIC_TERMS
-                            value: >-
-                              https://www.icicibank.com/personal-banking/loans/personal-loan
-                          - descriptor:
-                              code: OFFLINE_CONTRACT
-                            value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -861,6 +739,7 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: select
@@ -2560,7 +2439,8 @@ steps:
                     status: SUCCESS
                     submission_id: 73ef9742-c17d-4c4e-92e3-b057960863af
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -2568,43 +2448,6 @@ steps:
                   bank_account_number: '1800002341'
                   bank_code: SBIN0001234
                   currency: INR
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -2618,6 +2461,7 @@ steps:
         selected_fulfillments: '$.message.order.fulfillments[*]'
         selected_provider: $.message.order.provider
         tags: '$.message.order.tags[*]'
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: on_init
@@ -2854,7 +2698,8 @@ steps:
                           code: PREVIOUS_POLICY_END_DATE
                         value: '2022-01-02'
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 params:
                   amount: '12505'
                   bank_account_number: '1800002341'
@@ -2862,43 +2707,6 @@ steps:
                   currency: INR
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
             provider:
               id: P1
               descriptor:
@@ -2957,6 +2765,7 @@ steps:
         fulfillment_id: '$.message.order.fulfillments[0].id'
         provider_id: $.message.order.provider.id
         vehicle_nominee_details_form: '$.message.order.items[0].xinput.form.url'
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: html_form
@@ -3035,7 +2844,8 @@ steps:
                     status: SUCCESS
                     submission_id: 52c3432c-47ed-4f60-8128-20ccce140e78
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -3043,43 +2853,6 @@ steps:
                   bank_account_number: '1800002341'
                   bank_code: SBIN0001234
                   currency: INR
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -3094,6 +2867,7 @@ steps:
         selected_provider: $.message.order.provider
         billing: $.message.order.billing
         tags: '$.message.order.tags[*]'
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: on_init
@@ -3332,7 +3106,8 @@ steps:
                           code: PREVIOUS_POLICY_END_DATE
                         value: '2022-01-02'
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 params:
                   amount: '12505'
                   bank_account_number: '1800002341'
@@ -3340,43 +3115,6 @@ steps:
                   currency: INR
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
             provider:
               id: P1
               descriptor:
@@ -3435,6 +3173,7 @@ steps:
         fulfillment_id: '$.message.order.fulfillments[0].id'
         provider_id: $.message.order.provider.id
         personal_details_form: $..form.url
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: html_form
@@ -3513,7 +3252,8 @@ steps:
                     status: SUCCESS
                     submission_id: c844d5f4-29c3-4398-b594-8b4716ef5dbf
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -3521,43 +3261,6 @@ steps:
                   bank_account_number: '1800002341'
                   bank_code: SBIN0001234
                   currency: INR
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -3572,6 +3275,7 @@ steps:
         selected_provider: $.message.order.provider
         billing: $.message.order.billing
         tags: '$.message.order.tags[*]'
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: on_init
@@ -3808,7 +3512,8 @@ steps:
                           code: PREVIOUS_POLICY_END_DATE
                         value: '2022-01-02'
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 params:
                   amount: '12505'
                   bank_account_number: '1800002341'
@@ -3816,43 +3521,6 @@ steps:
                   currency: INR
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
             provider:
               id: P1
               descriptor:
@@ -3911,6 +3579,7 @@ steps:
         fulfillment_id: '$.message.order.fulfillments[0].id'
         provider_id: $.message.order.provider.id
         consumer_information_form: $..form.url
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: dynamic_form
@@ -4152,7 +3821,8 @@ steps:
                           code: PREVIOUS_POLICY_END_DATE
                         value: '2022-01-02'
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 params:
                   amount: '12505'
                   bank_account_number: '1800002341'
@@ -4160,43 +3830,6 @@ steps:
                   currency: INR
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
             provider:
               id: P1
               descriptor:
@@ -4249,6 +3882,7 @@ steps:
         order_id: $.message.order.id
         provider_id: $.message.order.provider.id
         second_fulfillment_id: '$.message.order.fulfillments[1].id'
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: confirm
@@ -4312,7 +3946,8 @@ steps:
                     status: SUCCESS
                     submission_id: 79f7fef5-a3a9-4275-9982-c592b524753f
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: PAID
                 type: PRE-ORDER
                 params:
@@ -4321,43 +3956,6 @@ steps:
                   bank_code: SBIN0001234
                   currency: INR
                   transaction_id: 85742a36-6636-4dcf-ae56-c47d3387d1d0
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -4373,6 +3971,7 @@ steps:
         tags: '$.message.order.tags[*]'
         payments: '$.message.order.payments[*]'
         quote: $.message.order.quote
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
   - api: on_confirm
@@ -4591,7 +4190,8 @@ steps:
                   - F1
             id: O1
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 params:
                   amount: '12505'
                   bank_account_number: '1800002341'
@@ -4600,43 +4200,6 @@ steps:
                   transaction_id: 85742a36-6636-4dcf-ae56-c47d3387d1d0
                 status: PAID
                 type: PRE-ORDER
-                tags:
-                  - descriptor:
-                      code: BUYER_FINDER_FEES
-                    display: false
-                    list:
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_TYPE
-                        value: percent-annualized
-                      - descriptor:
-                          code: BUYER_FINDER_FEES_PERCENTAGE
-                        value: '0'
-                  - descriptor:
-                      code: SETTLEMENT_TERMS
-                    display: false
-                    list:
-                      - descriptor:
-                          code: SETTLEMENT_WINDOW
-                        value: PT60M
-                      - descriptor:
-                          code: SETTLEMENT_TYPE
-                        value: upi
-                      - descriptor:
-                          code: MANDATORY_ARBITRATION
-                        value: 'true'
-                      - descriptor:
-                          code: COURT_JURISDICTION
-                        value: New Delhi
-                      - descriptor:
-                          code: DELAY_INTEREST
-                        value: '2.5'
-                      - descriptor:
-                          code: STATIC_TERMS
-                        value: >-
-                          https://www.icicibank.com/personal-banking/loans/personal-loan
-                      - descriptor:
-                          code: OFFLINE_CONTRACT
-                        value: 'true'
             provider:
               descriptor:
                 long_desc: >-
@@ -4730,6 +4293,7 @@ steps:
         quote_id: $.message.order.quote.id
         claim_form_motor: '$.message.order.documents[?(@.descriptor.code==''CLAIM_DOC'')].url'
         renew_form: '$.message.order.documents[?(@.descriptor.code==''RENEW_DOC'')].url'
+        payment_id: '$.message.order.payments[0].id'
       inputs: {}
     examples: []
 transaction_history: []
