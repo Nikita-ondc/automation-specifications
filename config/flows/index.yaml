@@ -6,7 +6,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Cancel Health Insurance
+    description: Complete cancellation workflow for a customer to search, select, and cancel their active family health insurance policy with confirmation and status updates.
     config:
       $ref: ./HEALTH INSURANCE/Cancel_Health_Insurance_Family_.yaml
   - type: playground
@@ -16,7 +16,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Cancel Health Insurance
+    description: An individual customer searches for their health insurance policy, selects it for cancellation, and proceeds through confirmation and verification steps to process the policy termination.
     config:
       $ref: ./HEALTH INSURANCE/Cancel_Health_Insurance_Individual_.yaml
   - type: playground
@@ -26,7 +26,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Claim Health Insurance
+    description: Family health insurance claim submission process, covering policy and member discovery, claim detail selection through multiple forms, confirmation, and real-time status tracking.
     config:
       $ref: ./HEALTH INSURANCE/Claim_Health_Insurance_Family_.yaml
   - type: playground
@@ -36,7 +36,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Claim Health Insurance
+    description: An individual searches for health insurance options, selects a suitable plan, submits a comprehensive claim through multi-step documentation forms, and tracks claim status throughout processing and approval.
     config:
       $ref: ./HEALTH INSURANCE/Claim_Health_Insurance_Individual_.yaml
   - type: playground
@@ -46,7 +46,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Health Insurance Application
+    description: A customer applies for family health insurance coverage by searching and selecting a suitable plan, providing household member details through guided forms, and completing the application for policy issuance.
     config:
       $ref: ./HEALTH INSURANCE/Health_Insurance_Application_Family_.yaml
   - type: playground
@@ -56,7 +56,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Health Insurance Application
+    description: An individual searches and selects a health insurance plan, completes an interactive application with personal details across multiple forms, and confirms enrollment.
     config:
       $ref: ./HEALTH INSURANCE/Health_Insurance_Application_Individual_.yaml
   - type: playground
@@ -66,7 +66,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Health Insurance Application(PRE-ORDER)
+    description: A family initiates a health insurance application by searching available plans, completing information forms for each family member, undergoing health assessment through dynamic questionnaires, and confirming their selected coverage.
     config:
       $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Family_.yaml
   - type: playground
@@ -76,10 +76,9 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Health Insurance Application(PRE-ORDER)
+    description: Family health insurance application process with multi-stage form submission and manual underwriting review before final confirmation.
     config:
-      $ref: ./HEALTH
-        INSURANCE/Health_Insurance_Application_PRE-ORDER-Family-With-ManualReview_.yaml
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Family-With-ManualReview_.yaml
   - type: playground
     id: Health_Insurance_Application(PRE-ORDER-Individual)
     usecase: HEALTH INSURANCE
@@ -87,7 +86,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Health Insurance Application(PRE-ORDER)
+    description: An individual health insurance applicant searches for available plans, selects a suitable offering, and completes the multi-step application process by providing personal and underwriting information before confirming their enrollment request.
     config:
       $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual_.yaml
   - type: playground
@@ -97,10 +96,9 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Health Insurance Application(PRE-ORDER)
+    description: Health insurance application journey for individual applicants, involving plan discovery and selection, progressive completion of health and personal information forms, and submission for manual underwriting review and approval.
     config:
-      $ref: ./HEALTH
-        INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual-With-ManualReview_.yaml
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual-With-ManualReview_.yaml
   - type: playground
     id: Renew_Health_Insurance(Family)
     usecase: HEALTH INSURANCE
@@ -108,7 +106,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Renew Health Insurance
+    description: Enable families to renew their health insurance policy by discovering available plans, selecting appropriate coverage, submitting updated health and personal information through multiple stages, and activating the renewed policy.
     config:
       $ref: ./HEALTH INSURANCE/Renew_Health_Insurance_Family_.yaml
   - type: playground
@@ -118,7 +116,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Renew Health Insurance
+    description: An individual searches for health insurance plans, selects a preferred policy, completes required information forms, and confirms the renewal of their coverage.
     config:
       $ref: ./HEALTH INSURANCE/Renew_Health_Insurance_Individual_.yaml
   - type: playground
@@ -128,7 +126,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Cancel Motor Insurance
+    description: A customer initiates cancellation of an active motor insurance policy by searching for their policy, selecting it, confirming cancellation terms and details, and submitting the cancellation request for network processing.
     config:
       $ref: ./MOTOR INSURANCE/Cancel_Motor_Insurance.yaml
   - type: playground
@@ -138,7 +136,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Claim Motor Insurance
+    description: Motor insurance claim registration and tracking workflow that enables customers to search relevant policies, select claim options, submit claim details through guided forms, and monitor claim status through resolution.
     config:
       $ref: ./MOTOR INSURANCE/Claim_Motor_Insurance.yaml
   - type: playground
@@ -148,7 +146,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Motor Insurance Application
+    description: An end-to-end motor insurance application journey enabling customers to search available policies, select preferred coverage options, complete application forms with applicant details, and finalize policy acquisition through confirmation and settlement.
     config:
       $ref: ./MOTOR INSURANCE/Motor_Insurance_Application.yaml
   - type: playground
@@ -158,6 +156,6 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Motor Insurance Application(PRE-ORDER)
+    description: End-to-end motor insurance application workflow where customers search for available policies, select coverage options, complete vehicle and coverage questionnaires through dynamic forms, and confirm their policy application for underwriting.
     config:
       $ref: ./MOTOR INSURANCE/Motor_Insurance_Application_PRE-ORDER_.yaml
