@@ -6,7 +6,7 @@ _TESTS_:
       domain:
         - ONDC:FIS13
       version:
-        - 2.0.1
+        - 2.0.0
       _RETURN_:
         - _NAME_: CONTEXT_REQUIRED
           _RETURN_:
@@ -113,7 +113,7 @@ _TESTS_:
       domain:
         - ONDC:FIS13
       version:
-        - 2.0.1
+        - 2.0.0
       _RETURN_:
         - _NAME_: CONTEXT_REQUIRED
           _RETURN_:
@@ -216,7 +216,7 @@ _TESTS_:
       domain:
         - ONDC:FIS13
       version:
-        - 2.0.1
+        - 2.0.0
       _RETURN_:
         - _NAME_: CONTEXT_REQUIRED
           _RETURN_:
@@ -290,7 +290,7 @@ _TESTS_:
       domain:
         - ONDC:FIS13
       version:
-        - 2.0.1
+        - 2.0.0
       _RETURN_: &a1
         - _NAME_: CONTEXT_REQUIRED
           _RETURN_:
@@ -465,7 +465,7 @@ _TESTS_:
       domain:
         - ONDC:FIS13
       version:
-        - 2.0.1
+        - 2.0.0
       _RETURN_: *a1
     - _NAME_: ORDER_VALIDATION
       _RETURN_:
@@ -887,7 +887,7 @@ _TESTS_:
       domain:
         - ONDC:FIS13
       version:
-        - 2.0.1
+        - 2.0.0
       _RETURN_: *a1
     - _NAME_: ORDER_BASIC
       _RETURN_:

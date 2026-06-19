@@ -3,7 +3,7 @@ info:
   title: ONDC Specification
   domain: ONDC:FIS13
   description: ONDC Specification
-  version: 2.0.1
+  version: 2.0.0
   x-usecases:
     - HEALTH INSURANCE
     - MOTOR INSURANCE

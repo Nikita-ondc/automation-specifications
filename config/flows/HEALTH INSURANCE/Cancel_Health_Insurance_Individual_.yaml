@@ -1,6 +1,6 @@
 meta:
   domain: ONDC:FIS13
-  version: 2.0.1
+  version: 2.0.0
   flowId: Cancel_Health_Insurance(Individual)
   config_version: 0.0.0001
   description: An individual customer searches for their health insurance policy, selects it for cancellation, and proceeds through confirmation and verification steps to process the policy termination.
@@ -37,7 +37,7 @@ steps:
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -132,7 +132,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -359,7 +359,7 @@ steps:
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -447,7 +447,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -935,7 +935,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1006,7 +1006,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1219,7 +1219,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1396,7 +1396,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1470,7 +1470,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1682,7 +1682,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1860,7 +1860,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1970,7 +1970,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2236,7 +2236,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2349,7 +2349,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2615,7 +2615,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2728,7 +2728,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2995,7 +2995,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3108,7 +3108,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3374,7 +3374,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3604,7 +3604,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3749,7 +3749,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4002,7 +4002,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4261,7 +4261,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4307,7 +4307,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4565,7 +4565,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4787,7 +4787,7 @@ transaction_history:
         bap_id: bap.example.com
         bap_uri: https://bap.example.com
         ttl: PT30S
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -4846,7 +4846,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -5051,7 +5051,7 @@ transaction_history:
         bap_id: bap.example.com
         bap_uri: https://bap.example.com
         ttl: PT30S
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -5115,7 +5115,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -5575,7 +5575,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -5603,7 +5603,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -5738,7 +5738,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -5892,7 +5892,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -5929,7 +5929,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -6072,7 +6072,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -6226,7 +6226,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -6309,7 +6309,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -6552,7 +6552,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -6639,7 +6639,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -6845,7 +6845,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -6932,7 +6932,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -7140,7 +7140,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -7353,7 +7353,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -7463,7 +7463,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -7647,7 +7647,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -7883,7 +7883,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -7909,7 +7909,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -8108,7 +8108,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND

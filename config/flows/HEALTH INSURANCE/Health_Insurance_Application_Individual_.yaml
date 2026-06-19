@@ -1,6 +1,6 @@
 meta:
   domain: ONDC:FIS13
-  version: 2.0.1
+  version: 2.0.0
   flowId: Health_Insurance_Application(Individual)
   config_version: 0.0.0001
   description: An individual searches and selects a health insurance plan, completes an interactive application with personal details across multiple forms, and confirms enrollment.
@@ -37,7 +37,7 @@ steps:
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -132,7 +132,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -359,7 +359,7 @@ steps:
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -447,7 +447,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -935,7 +935,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1069,7 +1069,7 @@ steps:
           timestamp: '2023-07-24T05:40:26.618Z'
           transaction_id: c04a04ee-d892-400f-bbe6-479a43b4448a
           ttl: PT24H
-          version: 2.0.1
+          version: 2.0.0
         message:
           order:
             items:
@@ -1274,7 +1274,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1448,7 +1448,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1522,7 +1522,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1732,7 +1732,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1910,7 +1910,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2017,7 +2017,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2281,7 +2281,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2391,7 +2391,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2662,7 +2662,7 @@ steps:
           timestamp: '2023-07-24T05:40:48.432Z'
           transaction_id: c04a04ee-d892-400f-bbe6-479a43b4448a
           ttl: PT24H
-          version: 2.0.1
+          version: 2.0.0
         message:
           order:
             fulfillments:
@@ -2777,7 +2777,7 @@ steps:
           timestamp: '2023-07-24T05:41:01.775Z'
           transaction_id: c04a04ee-d892-400f-bbe6-479a43b4448a
           ttl: PT24H
-          version: 2.0.1
+          version: 2.0.0
         message:
           order:
             fulfillments:
@@ -3048,7 +3048,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3161,7 +3161,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3425,7 +3425,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3652,7 +3652,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3797,7 +3797,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4051,7 +4051,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4299,7 +4299,7 @@ transaction_history:
         bap_id: bap.example.com
         bap_uri: https://bap.example.com
         ttl: PT30S
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND
@@ -4358,7 +4358,7 @@ transaction_history:
         ttl: PT30S
         bpp_id: bpp.example.com
         bpp_uri: https://bpp.example.com
-        version: 2.0.1
+        version: 2.0.0
         location:
           country:
             code: IND

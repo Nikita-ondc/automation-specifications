@@ -1,6 +1,6 @@
 meta:
   domain: ONDC:FIS13
-  version: 2.0.1
+  version: 2.0.0
   flowId: Renew_Health_Insurance(Family)
   config_version: 0.0.0001
   description: Enable families to renew their health insurance policy by discovering available plans, selecting appropriate coverage, submitting updated health and personal information through multiple stages, and activating the renewed policy.
@@ -34,7 +34,7 @@ steps:
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -120,7 +120,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -346,7 +346,7 @@ steps:
           bap_id: bap.example.com
           bap_uri: https://bap.example.com
           ttl: PT30S
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -434,7 +434,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -922,7 +922,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -993,7 +993,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1206,7 +1206,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1383,7 +1383,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1457,7 +1457,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1669,7 +1669,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1847,7 +1847,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -1957,7 +1957,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2223,7 +2223,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2336,7 +2336,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2602,7 +2602,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2715,7 +2715,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -2982,7 +2982,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3095,7 +3095,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3361,7 +3361,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3591,7 +3591,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3736,7 +3736,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -3989,7 +3989,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4261,7 +4261,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4537,7 +4537,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
@@ -4812,7 +4812,7 @@ steps:
           ttl: PT30S
           bpp_id: bpp.example.com
           bpp_uri: https://bpp.example.com
-          version: 2.0.1
+          version: 2.0.0
           location:
             country:
               code: IND
