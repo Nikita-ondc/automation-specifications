@@ -6,6 +6,7 @@ flows:
       - WORKBENCH
       - WITH_AA
       - REPORTABLE
+      
     description: A buyer-side purchase finance journey where the participant discovers financing options, is redirected once to an Account Aggregator for consent and data sharing, and then completes lender selection, onboarding, loan initiation, confirmation, and subsequent status updates end to end.
     config:
       $ref: ./PURCHASE FINANCE/Purchase_Finance_Single_Redirection_With_AA.yaml
