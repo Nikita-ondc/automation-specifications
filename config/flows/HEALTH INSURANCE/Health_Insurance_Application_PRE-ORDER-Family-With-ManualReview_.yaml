@@ -358,15 +358,15 @@ steps:
               descriptor:
                 code: HEALTH_INSURANCE
             provider:
-              id: P1
+              id: ''
               items:
-                - id: I1
+                - id: ''
                   xinput:
                     form:
-                      id: F03
+                      id: ''
                     form_response:
                       status: SUCCESS
-                      submission_id: e9a3b4a5-10f8-42c7-b888-dbf0e2edd684
+                      submission_id: ''
             payment:
               collected_by: BPP
               tags:
@@ -465,7 +465,7 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: P1
+                id: ''
                 items:
                   - id: I1
                     category_ids:
@@ -966,7 +966,82 @@ steps:
         user_selected_add_ons: $.message.order.items[0].add_ons[*]
         child_item_id: $.message.order.items[0].id
         parent_item_id: $.message.order.items[0].parent_item_id
-      inputs: {}
+      inputs:
+        id: fis13_select
+        jsonSchema:
+          $schema: 'http://json-schema.org/draft-07/schema#'
+          type: object
+          properties:
+            offer_ids:
+              type: string
+              default: ''
+            provider:
+              type: string
+              default: 813aba68-b89d-42f4-88d4-25960dc69115
+            items:
+              type: array
+              default:
+                - itemId: aeffbe85-7900-4700-8360-71229d242c81
+                  parentItemId: ''
+                  count: 1
+                  addOns:
+                    - A1
+                  addOnsQuantity: 1
+              items:
+                type: object
+                properties:
+                  itemId:
+                    type: string
+                    default: aeffbe85-7900-4700-8360-71229d242c81
+                  parentItemId:
+                    type: string
+                    default: ''
+                  count:
+                    type: number
+                    default: 1
+                  addOns:
+                    type: array
+                    default:
+                      - A1
+                    items:
+                      type: string
+                  addOnsQuantity:
+                    type: number
+                    default: 1
+                required:
+                  - itemId
+                additionalProperties: true
+            selected_add_ons:
+              type: array
+              default:
+                - id: A1
+                  descriptor:
+                    name: Consumables Cover
+                    code: CONSUMABLES_COVER
+                  price:
+                    currency: INR
+                    value: '900'
+                - id: A2
+                  descriptor:
+                    name: Depreciation Cover
+                    code: DEPRECIATION_COVER
+                  price:
+                    currency: INR
+                    value: '500'
+              items:
+                type: object
+                properties:
+                  id:
+                    type: string
+                  descriptor:
+                    type: object
+                  price:
+                    type: object
+                additionalProperties: true
+          required:
+            - provider
+            - items
+          additionalProperties: true
     examples: []
   - api: on_select
     action_id: on_select
@@ -1879,7 +1954,8 @@ steps:
             provider:
               id: P1
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -2077,7 +2153,8 @@ steps:
                               short_desc: Describes the format as 'Salutation | First Name | Middle Name | Last Name | Relationship | Contact Number' represents a full name structure, where the values are separated by a pipe (|) symbol
                             value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -2257,7 +2334,8 @@ steps:
                     status: SUCCESS
                     submission_id: f7df084a-483c-42e2-9aeb-9d6e6f95a5e8
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -2465,7 +2543,8 @@ steps:
                               short_desc: Describes the format as 'Salutation | First Name | Middle Name | Last Name | Relationship | Contact Number' represents a full name structure, where the values are separated by a pipe (|) symbol
                             value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -2636,7 +2715,8 @@ steps:
                     status: SUCCESS
                     submission_id: f7df084a-483c-42e2-9aeb-9d6e6f95a5e8
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -2845,7 +2925,8 @@ steps:
                               short_desc: Describes the format as 'Salutation | First Name | Middle Name | Last Name | Relationship | Contact Number' represents a full name structure, where the values are separated by a pipe (|) symbol
                             value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -3016,7 +3097,8 @@ steps:
                     status: SUCCESS
                     submission_id: 6ae80f7d-1fe2-4bb2-8ead-8c3c2ded9358
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -3224,7 +3306,8 @@ steps:
                               short_desc: Describes the format as 'Salutation | First Name | Middle Name | Last Name | Relationship | Contact Number' represents a full name structure, where the values are separated by a pipe (|) symbol
                             value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -3477,7 +3560,8 @@ steps:
                               short_desc: Describes the format as 'Salutation | First Name | Middle Name | Last Name | Relationship | Contact Number' represents a full name structure, where the values are separated by a pipe (|) symbol
                             value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 status: NOT-PAID
                 type: PRE-FULFILLMENT
                 params:
@@ -3623,7 +3707,8 @@ steps:
                     status: SUCCESS
                     submission_id: aab8e186-e9d6-4b93-8a70-8f6b8c471862
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 params:
                   amount: "1100"
                   bank_account_number: "1800002341"
@@ -3840,7 +3925,8 @@ steps:
                   label: TENURE
             id: POLICY_ID
             payments:
-              - collected_by: BPP
+              - id: payment_1
+                collected_by: BPP
                 params:
                   amount: "1100"
                   bank_account_number: "1800002341"

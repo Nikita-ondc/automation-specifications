@@ -7,7 +7,7 @@ info:
   x-usecases:
     - HEALTH INSURANCE
     - MOTOR INSURANCE
-  x-branch-name: draft-FIS13-HEALTH-2.0.1
+  x-branch-name: draft-FIS13-HEALTH-2.0.0
   x-reporting: true
 security:
   - SubscriberAuth: []
