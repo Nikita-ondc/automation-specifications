@@ -230,7 +230,13 @@ _TESTS_:
     action:
     - search
     usecasepath: $.message.intent.provider.id
-    _CONTINUE_: '!(usecasepath are present)'
+    category_code_path: $.message.intent.category.descriptor.code
+    var_category_code:
+    - MICRO_HOSPICASH_INSURANCE
+    - MICRO_TRANSIT_INSURANCE
+    - MICRO_INSURANCE
+    - MICRO_ACCIDENTAL_INSURANCE
+    _CONTINUE_: '!((category_code_path all in var_category_code) && (usecasepath are present))'
     _RETURN_:
     - _NAME_: REQUIRED_PROVIDER_ITEMS
       _RETURN_:
@@ -253,7 +259,13 @@ _TESTS_:
     action:
     - search
     usecasepath: $.message.intent.provider.items[*].id
-    _CONTINUE_: '!(usecasepath are present)'
+    category_code_path: $.message.intent.category.descriptor.code
+    var_category_code:
+    - MICRO_HOSPICASH_INSURANCE
+    - MICRO_TRANSIT_INSURANCE
+    - MICRO_INSURANCE
+    - MICRO_ACCIDENTAL_INSURANCE
+    _CONTINUE_: '!((category_code_path all in var_category_code) && (usecasepath are present))'
     _RETURN_:
     - _NAME_: REQUIRED_PROVIDER_ITEMS
       _RETURN_:
@@ -340,7 +352,13 @@ _TESTS_:
     action:
     - search
     usecasepath: $.message.intent.provider.id
-    _CONTINUE_: (usecasepath are present)
+    category_code_path: $.message.intent.category.descriptor.code
+    var_category_code:
+    - MICRO_HOSPICASH_INSURANCE
+    - MICRO_TRANSIT_INSURANCE
+    - MICRO_INSURANCE
+    - MICRO_ACCIDENTAL_INSURANCE
+    _CONTINUE_: '!((category_code_path all in var_category_code) && !(usecasepath are present))'
     _RETURN_:
     - _NAME_: SEARCH_REQUIRED_FULFILLMENTS
       _RETURN_:
@@ -561,7 +579,13 @@ _TESTS_:
         _RETURN_: attr are present
   - _NAME_: ON_SEARCH_ITEMS_SACHET
     usecasepath: $.message.catalog.providers[*].items[*].id
-    _CONTINUE_: '!(usecasepath are present)'
+    category_code_path: $.message.catalog.providers[*].categories[*].descriptor.code
+    var_category_code:
+    - MICRO_HOSPICASH_INSURANCE
+    - MICRO_TRANSIT_INSURANCE
+    - MICRO_INSURANCE
+    - MICRO_ACCIDENTAL_INSURANCE
+    _CONTINUE_: '!((category_code_path all in var_category_code) && (usecasepath are present))'
     _RETURN_:
     - _NAME_: REQUIRED_ITEMS
       _RETURN_:
@@ -1211,7 +1235,7 @@ _TESTS_:
         - TENURE_TYPE
         _RETURN_: validValues any in subTags
   - _NAME_: ON_SELECT_PROVIDER_SACHET
-    usecasepath: $.message.order.provider.id
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: '!(usecasepath are present)'
     _RETURN_: &id015
     - _NAME_: ON_SELECT_PROVIDER_ID
@@ -1301,7 +1325,7 @@ _TESTS_:
         - GOOD_HEALTH_DECLARATION
         _RETURN_: validValues any in subTags
   - _NAME_: ON_SELECT_QUOTE_SACHET
-    usecasepath: $.message.order.quote.id
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: '!(usecasepath are present)'
     _RETURN_: &id019
     - _NAME_: REQUIRED_COMMON_QUOTE_ITEMS
@@ -1714,7 +1738,7 @@ _TESTS_:
     - 2.0.0
     _RETURN_: *id001
   - _NAME_: ON_INIT_ITEMS
-    usecasepath: $.message.order.items[*].id
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: '!(usecasepath are present)'
     _RETURN_:
     - _NAME_: REQUIRED_ITEMS
@@ -1738,12 +1762,12 @@ _TESTS_:
     - *id014
   - &id028
     _NAME_: ON_SELECT_PROVIDER
-    usecasepath: $.message.order.provider.id
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: '!(usecasepath are present)'
     _RETURN_: *id015
   - &id025
     _NAME_: ON_INIT_FULFILLMENTS
-    usecasepath: $.message.order.fulfillments[*].id
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: '!(usecasepath are present)'
     _RETURN_:
     - _NAME_: REQUIRED_FULFILLMENTS
@@ -1772,11 +1796,11 @@ _TESTS_:
       _RETURN_: attr are present
   - &id030
     _NAME_: ON_SELECT_QUOTE
-    usecasepath: $.message.order.quote.id
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: '!(usecasepath are present)'
     _RETURN_: *id019
   - _NAME_: ON_INIT_PAYMENTS
-    usecasepath: $.message.order.payments[*].id
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: '!(usecasepath are present)'
     _RETURN_:
     - _NAME_: REQUIRED_PAYMENT_ITEMS
