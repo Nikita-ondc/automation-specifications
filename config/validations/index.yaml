@@ -57,7 +57,7 @@ _TESTS_:
       - _NAME_: REGEX_CONTEXT_LOCATION_CITY_CODE
         attr: $.context.location.city.code
         reg:
-        - ^\*$
+         - (\\*)|(^std\\:[0-9]{2,4}$)
         _RETURN_: attr follow regex reg
       - _NAME_: REGEX_CONTEXT_TIMESTAMP
         attr: $.context.timestamp
@@ -2589,7 +2589,193 @@ _TESTS_:
     - _NAME_: CONTEXT_CITY_CODE
       attr: $.context.location.city.code
       _RETURN_: attr are present
-  on_status: []
+  on_status: 
+  - _NAME_: ON_STATUS_CONTEXT
+    action:
+    - on_status
+    domain:
+    - ONDC:FIS13
+    version:
+    - 2.0.0
+    _RETURN_:                              
+    - _NAME_: CONTEXT_REQUIRED
+      _RETURN_:
+      - _NAME_: REQUIRED_CONTEXT_DOMAIN
+        attr: $.context.domain
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_ACTION
+        attr: $.context.action
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_TIMESTAMP
+        attr: $.context.timestamp
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_TRANSACTION_ID
+        attr: $.context.transaction_id
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_MESSAGE_ID
+        attr: $.context.message_id
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_VERSION
+        attr: $.context.version
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_BAP_ID
+        attr: $.context.bap_id
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_BAP_URI
+        attr: $.context.bap_uri
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_BPP_ID
+        attr: $.context.bpp_id
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_BPP_URI
+        attr: $.context.bpp_uri
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_TTL
+        attr: $.context.ttl
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_LOCATION_COUNTRY_CODE
+        attr: $.context.location.country.code
+        _RETURN_: attr are present
+      - _NAME_: REQUIRED_CONTEXT_LOCATION_CITY_CODE
+        attr: $.context.location.city.code
+        _RETURN_: attr are present
+    - _NAME_: CONTEXT_ENUM
+      _RETURN_:
+      - _NAME_: VALID_CONTEXT_LOCATION_COUNTRY_CODE
+        attr: $.context.location.country.code
+        enumList:
+        - IND
+        _RETURN_: attr any in enumList
+      - _NAME_: VALID_CONTEXT_DOMAIN
+        attr: $.context.domain
+        enumList:
+        - ONDC:FIS13
+        _RETURN_: attr all in enumList
+
+  - _NAME_: ON_STATUS_ORDER
+    _RETURN_:
+    - _NAME_: REQUIRED_ORDER_ID
+      attr: $.message.order.id
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ORDER_STATUS
+      attr: $.message.order.status
+      _RETURN_: attr are present
+    - _NAME_: VALID_ORDER_STATUS
+      attr: $.message.order.status
+      enumList:
+      - ACTIVE
+      - COMPLETED
+      - CANCELLED
+      - CANCELLATION_INITIATED
+      _RETURN_: attr any in enumList
+    - _NAME_: REQUIRED_ORDER_CREATED_AT
+      attr: $.message.order.created_at
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ORDER_UPDATED_AT
+      attr: $.message.order.updated_at
+      _RETURN_: attr are present
+
+  - _NAME_: ON_STATUS_PROVIDER
+    _RETURN_:
+    - _NAME_: REQUIRED_PROVIDER_ID
+      attr: $.message.order.provider.id
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_PROVIDER_NAME
+      attr: $.message.order.provider.descriptor.name
+      _RETURN_: attr are present
+
+  - _NAME_: ON_STATUS_ITEMS
+    _RETURN_:
+    - _NAME_: REQUIRED_ITEM_ID
+      attr: $.message.order.items[*].id
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ITEM_PARENT_ITEM_ID
+      attr: $.message.order.items[*].parent_item_id
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ITEM_CATEGORY_IDS
+      attr: $.message.order.items[*].category_ids[*]
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ITEM_PRICE_VALUE
+      attr: $.message.order.items[*].price.value
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ITEM_PRICE_CURRENCY
+      attr: $.message.order.items[*].price.currency
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ITEM_TIME_DURATION
+      attr: $.message.order.items[*].time.duration
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_ITEM_TIME_LABEL
+      attr: $.message.order.items[*].time.label
+      _RETURN_: attr are present
+
+  - _NAME_: ON_STATUS_GENERAL_INFO_TAG
+    _RETURN_:
+    - _NAME_: REQUIRED_GENERAL_INFO_TAG
+      attr: $.message.order.items[*].tags[?(@.descriptor.code=='GENERAL_INFO')].descriptor.code
+      _RETURN_: attr are present
+      
+
+  - _NAME_: ON_STATUS_FULFILLMENTS
+    _RETURN_:
+    - _NAME_: REQUIRED_FULFILLMENT_ID
+      attr: $.message.order.fulfillments[*].id
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_FULFILLMENT_STATE
+      attr: $.message.order.fulfillments[*].state.descriptor.code
+      _RETURN_: attr are present
+
+  - _NAME_: ON_STATUS_PAYMENTS
+    _RETURN_:
+    - _NAME_: REQUIRED_PAYMENT_COLLECTED_BY
+      attr: $.message.order.payments[*].collected_by
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_PAYMENT_STATUS
+      attr: $.message.order.payments[*].status
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_PAYMENT_TYPE
+      attr: $.message.order.payments[*].type
+      _RETURN_: attr are present
+
+  - _NAME_: ON_STATUS_QUOTE
+    _RETURN_:
+    - _NAME_: REQUIRED_QUOTE_ID
+      attr: $.message.order.quote.id
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_QUOTE_PRICE_VALUE
+      attr: $.message.order.quote.price.value
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_QUOTE_PRICE_CURRENCY
+      attr: $.message.order.quote.price.currency
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_QUOTE_BREAKUP_TITLE
+      attr: $.message.order.quote.breakup[*].title
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_QUOTE_BREAKUP_VALUE
+      attr: $.message.order.quote.breakup[*].price.value
+      _RETURN_: attr are present
+    - _NAME_: REQUIRED_QUOTE_BREAKUP_CURRENCY
+      attr: $.message.order.quote.breakup[*].price.currency
+      _RETURN_: attr are present
+
+
+  - _NAME_: ON_STATUS_GENERAL_INFO_HEALTH
+    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
+    _CONTINUE_: (usecasepath are present)
+    _SCOPE_: $.message.order.items[*].tags[?(@.descriptor.code=='GENERAL_INFO')]
+    subTags: $.list[*].descriptor.code
+    validValues:
+    - COVERAGE_AMOUNT
+    - CO_PAYMENT
+    - RESTORATION_BENEFIT
+    - CLAIM_SETTLEMENT_RATIO
+    - PRE_HOSPITALIZATION_COVERAGE_DAYS
+    - POST_HOSPITALIZATION_COVERAGE_DAYS
+    - MATERNITY_COVERAGE
+    - INITIAL_WAITING_PERIOD
+    - CASHLESS_HOSPITALS
+    - ROOM_CATEGORY
+    _RETURN_: validValues all in subTags
+
   cancel:
   - _NAME_: CANCEL_CONTEXT
     _RETURN_: *id002
