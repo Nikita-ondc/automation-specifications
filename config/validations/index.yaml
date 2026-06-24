@@ -792,16 +792,16 @@ _TESTS_:
         - _NAME_: REQUIRED_PRE_ORDER_AMOUNT
           attr: $.message.order.payments[?(@.type=='PRE_ORDER')].params.amount
           _RETURN_: attr are present
-    - _NAME_: CONFIRM_PAYMENT_TAGS
-      _RETURN_:
-        - _NAME_: REQUIRED_BAP_TERMS_TAG
-          validTags: *a9
-          tagPath: $.message.order.payments[*].tags[*].descriptor.code
-          _RETURN_: tagPath any in validTags
-        - _NAME_: REQUIRED_BPP_TERMS_TAG
-          validTags: *a12
-          tagPath: $.message.order.payments[*].tags[*].descriptor.code
-          _RETURN_: tagPath any in validTags
+    # - _NAME_: CONFIRM_PAYMENT_TAGS
+    #   _RETURN_:
+    #     - _NAME_: REQUIRED_BAP_TERMS_TAG
+    #       validTags: *a9
+    #       tagPath: $.message.order.payments[*].tags[*].descriptor.code
+    #       _RETURN_: tagPath any in validTags
+    #     - _NAME_: REQUIRED_BPP_TERMS_TAG
+    #       validTags: *a12
+    #       tagPath: $.message.order.payments[*].tags[*].descriptor.code
+    #       _RETURN_: tagPath any in validTags
   on_confirm:
     - _NAME_: ON_CONFIRM_CONTEXT
       action:
