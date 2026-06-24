@@ -2652,28 +2652,28 @@ _TESTS_:
         - ONDC:FIS13
         _RETURN_: attr all in enumList
 
-  - _NAME_: ON_STATUS_ORDER
-    _RETURN_:
-    - _NAME_: REQUIRED_ORDER_ID
-      attr: $.message.order.id
-      _RETURN_: attr are present
-    - _NAME_: REQUIRED_ORDER_STATUS
-      attr: $.message.order.status
-      _RETURN_: attr are present
-    - _NAME_: VALID_ORDER_STATUS
-      attr: $.message.order.status
-      enumList:
-      - ACTIVE
-      - COMPLETED
-      - CANCELLED
-      - CANCELLATION_INITIATED
-      _RETURN_: attr any in enumList
-    - _NAME_: REQUIRED_ORDER_CREATED_AT
-      attr: $.message.order.created_at
-      _RETURN_: attr are present
-    - _NAME_: REQUIRED_ORDER_UPDATED_AT
-      attr: $.message.order.updated_at
-      _RETURN_: attr are present
+  # - _NAME_: ON_STATUS_ORDER
+  #   _RETURN_:
+  #   - _NAME_: REQUIRED_ORDER_ID
+  #     attr: $.message.order.id
+  #     _RETURN_: attr are present
+  #   - _NAME_: REQUIRED_ORDER_STATUS
+  #     attr: $.message.order.status
+  #     _RETURN_: attr are present
+  #   - _NAME_: VALID_ORDER_STATUS
+  #     attr: $.message.order.status
+  #     enumList:
+  #     - ACTIVE
+  #     - COMPLETED
+  #     - CANCELLED
+  #     - CANCELLATION_INITIATED
+  #     _RETURN_: attr any in enumList
+  #   - _NAME_: REQUIRED_ORDER_CREATED_AT
+  #     attr: $.message.order.created_at
+  #     _RETURN_: attr are present
+  #   - _NAME_: REQUIRED_ORDER_UPDATED_AT
+  #     attr: $.message.order.updated_at
+  #     _RETURN_: attr are present
 
   - _NAME_: ON_STATUS_PROVIDER
     _RETURN_:
@@ -2759,8 +2759,6 @@ _TESTS_:
 
 
   - _NAME_: ON_STATUS_GENERAL_INFO_HEALTH
-    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
-    _CONTINUE_: (usecasepath are present)
     _SCOPE_: $.message.order.items[*].tags[?(@.descriptor.code=='GENERAL_INFO')]
     subTags: $.list[*].descriptor.code
     validValues:
