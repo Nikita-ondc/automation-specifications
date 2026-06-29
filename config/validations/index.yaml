@@ -2761,6 +2761,12 @@ _TESTS_:
   - _NAME_: ON_STATUS_GENERAL_INFO_HEALTH
     _SCOPE_: $.message.order.items[*].tags[?(@.descriptor.code=='GENERAL_INFO')]
     subTags: $.list[*].descriptor.code
+    validValuesList:
+    - ROOM_CATEGORY
+    - CO_PAYMENT
+    - MATERNITY_COVERAGE
+    - CLAIM_SETTLEMENT_RATIO
+    _CONTINUE_: '!(validValuesList any in subTags)'
     validValues:
     - COVERAGE_AMOUNT
     - CO_PAYMENT
@@ -2772,6 +2778,48 @@ _TESTS_:
     - INITIAL_WAITING_PERIOD
     - CASHLESS_HOSPITALS
     - ROOM_CATEGORY
+    _RETURN_: validValues all in subTags
+
+  - _NAME_: ON_STATUS_GENERAL_INFO_MOTOR
+    _SCOPE_: $.message.order.items[*].tags[?(@.descriptor.code=='GENERAL_INFO')]
+    subTags: $.list[*].descriptor.code
+    validValuesList:
+    - IDV_VALUE
+    - OWN_DAMAGE_PREMIUM
+    - THIRD_PARTY_PREMIUM
+    - PERSONAL_ACCIDENT_COVER
+    _CONTINUE_: '!(validValuesList any in subTags)'
+    validValues:
+    - PERSONAL_ACCIDENT_COVER
+    - DEPRECIATION_COVER
+    - ROAD_SIDE_ASSISTANCE
+    - CONSUMABLES_COVER
+    - ELECTRICAL_ACCESSORIES_COVER
+    - NON_ELECTRICAL_ACCESSORIES_COVER
+    - ENGINE_COVER
+    - EXTERNAL_CNG_OR_LPG_COVER
+    - KEY_COVER
+    - PERSONAL_BAGGAGE_COVER
+    - TYRE_COVER
+    - RETURN_TO_INVOICE
+    - PER_DAY_CASH
+    - BASE_PRICE
+    - CONVIENCE_FEE
+    - PROCESSING_FEE
+    - OFFER_VALIDITY
+    - MANUAL_REVIEW
+    - IDV_VALUE
+    - IDV_MIN_VALUE
+    - IDV_MAX_VALUE
+    - TAX
+    - IDV_SELECTED
+    - PREMIUM
+    - OWN_DAMAGE_PREMIUM
+    - THIRD_PARTY_PREMIUM
+    - NCB_DISCOUNT_PERCENTAGE
+    - NCB_DISCOUNT_AMOUNT
+    - OD_DISCOUNT_PERCENTAGE
+    - OD_DISCOUNT_AMOUNT
     _RETURN_: validValues all in subTags
 
   cancel:
