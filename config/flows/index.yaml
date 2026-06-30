@@ -190,7 +190,7 @@ flows:
     usecase: PURCHASE FINANCE
     tags:
       - WORKBENCH
-      - WITHOUT_AA
+      - WITH_AA
       # - REPORTABLE
     description: End-to-end purchase finance journey where a buyer discovers financing options, completes Account Aggregator consent and financial data sharing,selects a lender, and initiates the financing against a purchase. The flow exercises offer discovery, form capture, loan initiation, confirmation, and subsequent status updates through fulfillment.
     config:
