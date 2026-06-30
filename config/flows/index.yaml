@@ -184,7 +184,7 @@ flows:
 
 
   #  ____________IGM(1.0.0)__________ 
-    
+
   - type: playground
     id: Purchase_Finance_With_AA_With_IGM(v-1.0.0)
     usecase: PURCHASE FINANCE
@@ -194,7 +194,7 @@ flows:
       # - REPORTABLE
     description: End-to-end purchase finance journey where a buyer discovers financing options, completes Account Aggregator consent and financial data sharing,selects a lender, and initiates the financing against a purchase. The flow exercises offer discovery, form capture, loan initiation, confirmation, and subsequent status updates through fulfillment.
     config:
-      $ref: ./PURCHASE FINANCE/Purchase_Finance_With_AA_With_IGM(v-1.0.0).yaml
+      $ref: ./PURCHASE FINANCE/Purchase_Finance_With_AA_With_IGM_v-1_0_0_.yaml
 
   - type: playground
     id: Purchase_Finance_Without_AA_With_IGM(v-1.0.0)
@@ -205,4 +205,4 @@ flows:
       # - REPORTABLE
     description: A purchase finance journey without Account Aggregator, where the buyer discovers financing offers, selects a lender, completes form-based eligibility and KYC capture, initiates the loan, and confirms the financed purchase through to post-order updates.
     config:
-      $ref: ./PURCHASE FINANCE/Purchase_Finance_Without_AA_With_IGM(v-1.0.0).yaml     
+      $ref: ./PURCHASE FINANCE/Purchase_Finance_Without_AA_With_IGM_v-1_0_0_.yaml     
