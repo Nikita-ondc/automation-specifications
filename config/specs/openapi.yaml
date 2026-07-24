@@ -747,7 +747,7 @@ paths:
                                   id:
                                     type: string
                                   quantity:
-                                    type: string
+                                    type: integer
                             fulfillments: *locations
                             provider_id:
                               type: string

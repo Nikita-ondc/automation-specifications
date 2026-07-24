@@ -84,3 +84,17 @@ flows:
     description: A health and wellness buyer discovers and incrementally pulls updated product listings from a seller through successive search interactions, synchronizing only new or modified items. This efficient, pull-based discovery flow enables real-time catalog refresh while minimizing data transfer.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
+
+  # _________________IGM 1.0.0___________________
+
+  - type: playground
+    id: Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0
+    usecase: HEALTH&WELLNESS
+    tags:
+      - WORKBENCH
+      # - PRAMAAN
+      - MANDATORY
+      # - REPORTABLE
+    description: End-to-end prepaid order lifecycle for health and wellness products, from selection and confirmation through fulfillment and delivery tracking.
+    config:
+      $ref: ./HEALTH&WELLNESS/Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0.yaml
