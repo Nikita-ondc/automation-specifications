@@ -179,3 +179,12 @@ apiProperties:
       - confirm
       - on_confirm
       - track
+  issue:
+    async_predecessor: null
+    transaction_partner: []
+  on_issue:
+    async_predecessor: null
+    transaction_partner: []
+  on_issue_status:
+    async_predecessor: null
+    transaction_partner: []     

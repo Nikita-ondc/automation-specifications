@@ -84,3 +84,17 @@ flows:
     description: Discovery Flow Incremental Catalog Refresh Pull for HOME&KITCHEN
     config:
       $ref: ./HOME&KITCHEN/Discovery_Flow_incremental_catalog_refresh_pull.yaml
+
+  # __________________IGM 1.0.0____________________
+
+  - type: playground
+    id: Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0
+    usecase: HOME&KITCHEN
+    tags:
+      - WORKBENCH
+      # - PRAMAAN
+      - MANDATORY
+      # - REPORTABLE
+    description: Delivery Flow for HOME&KITCHEN
+    config:
+      $ref: ./HOME&KITCHEN/Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0.yaml
