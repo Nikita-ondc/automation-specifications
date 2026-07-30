@@ -3,7 +3,9 @@ meta:
   version: 1.2.5
   flowId: Discovery_Flow_full_catalog
   config_version: 0.0.0001
-  description: Buyers search for electronics products and sellers respond with matching items from their complete product catalog, enabling end-to-end discovery of available inventory.
+  description: Buyers search for electronics products and sellers respond with
+    matching items from their complete product catalog, enabling end-to-end
+    discovery of available inventory.
   use_case_id: ELECTRONICS
   flowName: Discovery Flow full catalog
 transaction_data:
@@ -19,10 +21,13 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The Buyer App sends a search request to discover available Electronics products in the specified location. This establishes the transaction context and buyer identifiers for the discovery flow between buyer and seller networks.
+    description: The Buyer App sends a search request to discover available
+      Electronics products in the specified location. This establishes the
+      transaction context and buyer identifiers for the discovery flow between
+      buyer and seller networks.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgICAgIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9CiAgc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5jaXR5X2NvZGU7CiAgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoc2Vzc2lvbkRhdGEudXNlcl9pbnB1dHMpKQogIGxldCBjb2Rlc0FycmF5ID0gc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5mZWF0dXJlX2Rpc2NvdmVyeSB8fCB7fTsKICBjb25zdCB0YWdzID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFnczsKICBpZiAoT2JqZWN0LmtleXMoY29kZXNBcnJheSkubGVuZ3RoID4gMCkgewogIHRhZ3MucHVzaCh7CiAgICBjb2RlOiAiYmFwX2ZlYXR1cmVzIiwKICAgIGxpc3Q6IE9iamVjdC5lbnRyaWVzKGNvZGVzQXJyYXkpCiAgICAgIC5maWx0ZXIoKFtfLCB2YWx1ZV0pID0+IHZhbHVlID09PSB0cnVlKQogICAgICAubWFwKChbY29kZV0pID0+IHsKICAgICAgICByZXR1cm4gewogICAgICAgICAgY29kZTogY29kZSwKICAgICAgICAgIHZhbHVlOiAieWVzIiwKICAgICAgICB9OwogICAgICB9KSwKICB9KTsKfQogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
-      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gInNlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJzZWFyY2giOwogIGNvbnN0IENVUlJFTlRfU1RFUF9JTkRFWCA9IDA7CgogIGlmICghdGFyZ2V0UGF5bG9hZCB8fCAhdGFyZ2V0UGF5bG9hZC5jb250ZXh0KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHBheWxvYWQgY29udGV4dCIgfTsKICB9CgogIGlmICh0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uICE9PSBDVVJSRU5UX1NURVBfQVBJKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJDb250ZXh0IGFjdGlvbiBkb2VzIG5vdCBtYXRjaCBzdGVwIEFQSTogIiArIHRhcmdldFBheWxvYWQuY29udGV4dC5hY3Rpb24gfTsKICB9CgogIGNvbnN0IG1lc3NhZ2UgPSB0YXJnZXRQYXlsb2FkLm1lc3NhZ2U7CiAgaWYgKCFtZXNzYWdlKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Ugb2JqZWN0IGluIHBheWxvYWQiIH07CiAgfQoKICAKCiAgCgogIAoKICAKCiAgCgogIC8vIERldGVybWluZSBpZiB3ZSBzaG91bGQgc2tpcCBjcm9zcy1zdGVwIHZlcmlmaWNhdGlvbiBkdWUgdG8gbWlzbWF0Y2hlZCB0cmFuc2FjdGlvbnMgaW4gbW9jayBleGFtcGxlcwogIGxldCBza2lwQ3Jvc3NTdGVwID0gZmFsc2U7CiAgaWYgKHNlc3Npb25EYXRhKSB7CiAgICBjb25zdCBwcmV2VHhJZCA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZCkgPyBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdIDogc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZDsKICAgIGNvbnN0IGFjdGl2ZVR4SWQgPSBwcmV2VHhJZCB8fCBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZDsKICAgIGlmIChhY3RpdmVUeElkICYmIHRhcmdldFBheWxvYWQuY29udGV4dC50cmFuc2FjdGlvbl9pZCAhPT0gYWN0aXZlVHhJZCkgewogICAgICBza2lwQ3Jvc3NTdGVwID0gdHJ1ZTsKICAgIH0KICB9IGVsc2UgewogICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgfQoKICBpZiAoIW1lc3NhZ2UuaW50ZW50KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2UgaW50ZW50IGluIHNlYXJjaCIgfTsKICB9CgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
       requirements: ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
         context:
@@ -103,28 +108,27 @@ steps:
             00C: false
             "016": true
     examples:
-      - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow "Discovery_Flow_full_catalog"
+      - name: example for search
         payload:
           context:
-            action: search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
-            city: std:080
-            core_version: 1.2.5
-            country: IND
             domain: ONDC:RET14
-            message_id: b83754cc-5dff-4075-84ee-1ad906e85c45
-            timestamp: 2026-03-20T12:06:44.654Z
-            transaction_id: 3a0ebe08-114e-4ddc-a880-bb049df1db16
+            action: search
+            timestamp: 2026-07-30T06:44:57.672Z
+            transaction_id: 797c96f7-f5e4-44ed-96d9-398cd414699a
+            message_id: 5465c2fc-ee1a-4853-b574-ccb0f4b54803
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
             ttl: PT30S
+            country: IND
+            city: std:044
+            core_version: 1.2.5
           message:
             intent:
               fulfillment:
                 type: Delivery
               payment:
-                "@ondc/org/buyer_app_finder_fee_amount": "3"
                 "@ondc/org/buyer_app_finder_fee_type": percent
+                "@ondc/org/buyer_app_finder_fee_amount": "3"
               tags:
                 - code: bap_terms
                   list:
@@ -134,17 +138,26 @@ steps:
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: effective_date
                       value: 2025-02-01T00:00:00.000Z
+                - code: bap_features
+                  list:
+                    - code: "0099"
+                      value: yes
         type: request
+        description: The Buyer App sends a search request to discover available
+          Electronics products in the specified location. This establishes the
+          transaction context and buyer identifiers for the discovery flow
+          between buyer and seller networks.
   - api: on_search
     action_id: on_search
     owner: BPP
     responseFor: search
     unsolicited: false
-    description: The BPP responds to the buyer app's search request by providing its product catalog, which includes available items and fulfillment options.
+    description: The BPP responds to the buyer app's search request by providing its
+      product catalog, which includes available items and fulfillment options.
     mock:
       generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0KICBzZXNzaW9uRGF0YT8uY2l0eV9jb2RlWzBdOwogIGNvbnN0IGRlc2NyaXB0b3JUYWdzID0gZGVmYXVsdFBheWxvYWQ/Lm1lc3NhZ2UuY2F0YWxvZz8uWydicHAvZGVzY3JpcHRvciddPy50YWdzOwoJCglzZXNzaW9uRGF0YS5iYXBfZmVhdHVyZXM/LmZvckVhY2goKGZlYXR1cmUpID0+IHsKCQljb25zb2xlLmxvZyhgRmVhdHVyZTogJHtmZWF0dXJlfWApOwoJfSk7CglpZiAoc2Vzc2lvbkRhdGEuYmFwX2ZlYXR1cmVzPy5pbmNsdWRlcygiMDA5OSIpKSB7CgkJbGV0IGJwcFRlcm1zVGFnID0gZGVzY3JpcHRvclRhZ3MuZmluZCgodCkgPT4gdC5jb2RlID09PSAiYnBwX3Rlcm1zIik7CgkJY29uc3QgcGF5bWVudENvbGxlY3Rpb24gPSB7CgkJCSJjb2RlIjoiY29sbGVjdF9wYXltZW50IiwKCQkJInZhbHVlIjoiWSIKCQl9CgkJYnBwVGVybXNUYWcubGlzdC5wdXNoKHBheW1lbnRDb2xsZWN0aW9uKTsKCQljb25zdCBwcm92aWRlciA9IGRlZmF1bHRQYXlsb2FkPy5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXVswXTsKCQlwcm92aWRlci5vZmZlcnMgPSBwcm92aWRlcj8ub2ZmZXJzIHx8IFtdOwoJCXByb3ZpZGVyLm9mZmVycy5wdXNoKHsKCQkJaWQ6ICJGSU4xIiwKCQkJZGVzY3JpcHRvcjogewoJCQljb2RlOiAiZmluYW5jaW5nIiwKCQkJaW1hZ2VzOiBbImh0dHBzOi8vc2VsbGVyTlAuY29tL2ltYWdlcy9vZmZlcjItYmFubmVyLnBuZyJdLAoJCQl9LAoJCQlsb2NhdGlvbl9pZHM6IFsiTDEiXSwKCQkJaXRlbV9pZHM6IFsiSTEiLCAiSTIiLCAiSTMiXSwKCQkJdGltZTogewoJCQlsYWJlbDogInZhbGlkIiwKCQkJcmFuZ2U6IHsKCQkJCXN0YXJ0OiAiMjAyNC0xMi0yM1QwNjo1NTo0NS4wMzVaIiwKCQkJCWVuZDogIjIwMzAtMTItMjNUMDg6MTI6MTUuMDMzWiIsCgkJCX0sCgkJCX0sCgkJCXRhZ3M6IFsKCQkJewoJCQkJY29kZTogImZpbmFuY2VfdGVybXMiLAoJCQkJbGlzdDogWwoJCQkJeyBjb2RlOiAic3VidmVudGlvbl90eXBlIiwgdmFsdWU6ICJwZXJjZW50IiB9LAoJCQkJeyBjb2RlOiAic3VidmVudGlvbl9hbW91bnQiLCB2YWx1ZTogIjEwLjAwIiB9LAoJCQkJXSwKCQkJfSwKCQkJewoJCQkJY29kZTogIm1ldGEiLAoJCQkJbGlzdDogWwoJCQkJeyBjb2RlOiAiYWRkaXRpdmUiLCB2YWx1ZTogIm5vIiB9LAoJCQkJeyBjb2RlOiAiYXV0byIsIHZhbHVlOiAibm8iIH0sCgkJCQldLAoJCQl9LAoJCQldLAoJCX0pOwoJfQogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
-      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2giOwogIGNvbnN0IENVUlJFTlRfU1RFUF9JTkRFWCA9IDE7CgogIGlmICghdGFyZ2V0UGF5bG9hZCB8fCAhdGFyZ2V0UGF5bG9hZC5jb250ZXh0KSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHBheWxvYWQgY29udGV4dCIgfTsKICB9CgogIGlmICh0YXJnZXRQYXlsb2FkLmNvbnRleHQuYWN0aW9uICE9PSBDVVJSRU5UX1NURVBfQVBJKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJDb250ZXh0IGFjdGlvbiBkb2VzIG5vdCBtYXRjaCBzdGVwIEFQSTogIiArIHRhcmdldFBheWxvYWQuY29udGV4dC5hY3Rpb24gfTsKICB9CgogIGNvbnN0IG1lc3NhZ2UgPSB0YXJnZXRQYXlsb2FkLm1lc3NhZ2U7CiAgaWYgKCFtZXNzYWdlKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIG1lc3NhZ2Ugb2JqZWN0IGluIHBheWxvYWQiIH07CiAgfQoKICAKCiAgCgogIAoKICAKCiAgCgogIC8vIERldGVybWluZSBpZiB3ZSBzaG91bGQgc2tpcCBjcm9zcy1zdGVwIHZlcmlmaWNhdGlvbiBkdWUgdG8gbWlzbWF0Y2hlZCB0cmFuc2FjdGlvbnMgaW4gbW9jayBleGFtcGxlcwogIGxldCBza2lwQ3Jvc3NTdGVwID0gZmFsc2U7CiAgaWYgKHNlc3Npb25EYXRhKSB7CiAgICBjb25zdCBwcmV2VHhJZCA9IEFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZCkgPyBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdIDogc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZDsKICAgIGNvbnN0IGFjdGl2ZVR4SWQgPSBwcmV2VHhJZCB8fCBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZDsKICAgIGlmIChhY3RpdmVUeElkICYmIHRhcmdldFBheWxvYWQuY29udGV4dC50cmFuc2FjdGlvbl9pZCAhPT0gYWN0aXZlVHhJZCkgewogICAgICBza2lwQ3Jvc3NTdGVwID0gdHJ1ZTsKICAgIH0KICB9IGVsc2UgewogICAgc2tpcENyb3NzU3RlcCA9IHRydWU7CiAgfQoKICBjb25zdCBjYXRhbG9nID0gbWVzc2FnZS5jYXRhbG9nOwogIGlmICghY2F0YWxvZykgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBjYXRhbG9nIGluIG9uX3NlYXJjaCIgfTsKICB9CiAgY29uc3QgcHJvdmlkZXJzID0gY2F0YWxvZ1siYnBwL3Byb3ZpZGVycyJdIHx8IGNhdGFsb2cucHJvdmlkZXJzOwogIGlmICghcHJvdmlkZXJzIHx8ICFBcnJheS5pc0FycmF5KHByb3ZpZGVycykgfHwgcHJvdmlkZXJzLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiQ2F0YWxvZyBpcyBtaXNzaW5nIHByb3ZpZGVycyBsaXN0IiB9OwogIH0KICBmb3IgKGNvbnN0IHByb3ZpZGVyIG9mIHByb3ZpZGVycykgewogICAgaWYgKCFwcm92aWRlci5pZCkgewogICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJQcm92aWRlciBpcyBtaXNzaW5nIElEIGluIGNhdGFsb2ciIH07CiAgICB9CiAgICBjb25zdCBpdGVtcyA9IHByb3ZpZGVyLml0ZW1zIHx8IFtdOwogICAgaWYgKCFBcnJheS5pc0FycmF5KGl0ZW1zKSB8fCBpdGVtcy5sZW5ndGggPT09IDApIHsKICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiUHJvdmlkZXIgIiArIHByb3ZpZGVyLmlkICsgIiBpcyBtaXNzaW5nIGl0ZW1zIGluIGNhdGFsb2ciIH07CiAgICB9CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
-      requirements: ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBDVVJSRU5UX1NURVBfQVBJID0gIm9uX3NlYXJjaCI7CiAgY29uc3QgQ1VSUkVOVF9TVEVQX0FDVElPTl9JRCA9ICJvbl9zZWFyY2giOwogIGNvbnN0IENVUlJFTlRfU1RFUF9JTkRFWCA9IDE7CgogIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3Npbmcgc2Vzc2lvbiBkYXRhIiB9OwogIH0KCiAgY29uc3QgdHhJZCA9IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQgfHwgc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQ7CiAgaWYgKCF0eElkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uIElEIGluIHNlc3Npb24iIH07CiAgfQoKICBpZiAoIXNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQgJiYgIXNlc3Npb25EYXRhLnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uSWQgaW4gc2Vzc2lvbiIgfTsKICB9CgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
+      validate: ZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: ZnVuY3Rpb24gbWVldHNSZXF1aXJlbWVudHMoc2Vzc2lvbkRhdGEpIHsKCiAgaWYgKCFzZXNzaW9uRGF0YSkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyBzZXNzaW9uIGRhdGEiIH07CiAgfQoKICBjb25zdCB0eElkID0gc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZCB8fCBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZDsKICBpZiAoIXR4SWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgdHJhbnNhY3Rpb24gSUQgaW4gc2Vzc2lvbiIgfTsKICB9CgogIGlmICghc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZCAmJiAhc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25faWQpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgdHJhbnNhY3Rpb25JZCBpbiBzZXNzaW9uIiB9OwogIH0KCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
           action: on_search
@@ -255,8 +268,16 @@ steps:
                     descriptor:
                       name: Power Bank
                       symbol: https://sellerNP.com/images/i1.png
-                      short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                      long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
+                      short_desc: A Power Bank is a portable charger designed to recharge your
+                        electronic devices when you're on the move. Ranging in
+                        size from slim, pocket-sized devices up to larger,
+                        higher-capacity Power Banks – they can be used to charge
+                        smartphones, tablets, earphones, smartwatches and other
+                        mobile devices.
+                      long_desc: A Power Bank is a portable charger designed to recharge your
+                        electronic devices when you're on the move. Ranging in
+                        size from slim, pocket-sized devices up to larger,
+                        higher-capacity Power Banks
                       images:
                         - https://sellerNP.com/images/i1.png
                       code: 3:9501101530007
@@ -285,7 +306,8 @@ steps:
                     "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
                     "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Seller Business
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
                       common_or_generic_name_of_commodity: Power Bank
                       month_year_of_manufacture_packing_import: NA
                     tags:
@@ -323,8 +345,16 @@ steps:
                     descriptor:
                       name: Adaptor  25W C  type
                       symbol: https://sellerNP.com/images/i1.png
-                      short_desc: An adapter or adaptor is a device that converts attributes of one electrical device or system to those of an otherwise incompatible device or system. Some modify power or signal attributes, while others merely adapt the physical form of one connector to another.
-                      long_desc: An adapter or adaptor is a device that converts attributes of one electrical device or system to those of an otherwise incompatible device or system. Some modify power or signal attributes, while others merely adapt the physical form of one connector to another.
+                      short_desc: An adapter or adaptor is a device that converts attributes of one
+                        electrical device or system to those of an otherwise
+                        incompatible device or system. Some modify power or
+                        signal attributes, while others merely adapt the
+                        physical form of one connector to another.
+                      long_desc: An adapter or adaptor is a device that converts attributes of one
+                        electrical device or system to those of an otherwise
+                        incompatible device or system. Some modify power or
+                        signal attributes, while others merely adapt the
+                        physical form of one connector to another.
                       images:
                         - https://sellerNP.com/images/i1.png
                       code: 3:7845632198471
@@ -353,7 +383,8 @@ steps:
                     "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
                     "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Seller Business
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
                       common_or_generic_name_of_commodity: Adaptor  25W C  type
                       month_year_of_manufacture_packing_import: NA
                     tags:
@@ -380,8 +411,21 @@ steps:
                       name: Charger 360plus 4500mah
                       code: 3:6213574890238
                       symbol: https://sellerNP.com/images/i1.png
-                      short_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent, thanks to the inbuilt Smart IC Protection feature.
-                      long_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent
+                      short_desc: Bring home this compact charger from boAt and keep your phone
+                        charged at all times. The Auto-detect charging feature
+                        keeps your devices charged by adapting to your device’s
+                        charging requirements. The Quick Charge 3.0 technology
+                        provides lightning-fast speeds of charging. Moreover,
+                        your charger is also protected from short circuits,
+                        overheating and overcurrent, thanks to the inbuilt Smart
+                        IC Protection feature.
+                      long_desc: Bring home this compact charger from boAt and keep your phone charged
+                        at all times. The Auto-detect charging feature keeps
+                        your devices charged by adapting to your device’s
+                        charging requirements. The Quick Charge 3.0 technology
+                        provides lightning-fast speeds of charging. Moreover,
+                        your charger is also protected from short circuits,
+                        overheating and overcurrent
                       images:
                         - https://sellerNP.com/images/i1.png
                     price:
@@ -415,7 +459,8 @@ steps:
                     "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
                     "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Seller Business
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
                       common_or_generic_name_of_commodity: Adaptor  25W C  type
                       month_year_of_manufacture_packing_import: NA
                     tags:
@@ -434,8 +479,21 @@ steps:
                       name: Charger 360plus 4500mah
                       code: 3:4012789543165
                       symbol: https://sellerNP.com/images/i1.png
-                      short_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent, thanks to the inbuilt Smart IC Protection feature.
-                      long_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent
+                      short_desc: Bring home this compact charger from boAt and keep your phone
+                        charged at all times. The Auto-detect charging feature
+                        keeps your devices charged by adapting to your device’s
+                        charging requirements. The Quick Charge 3.0 technology
+                        provides lightning-fast speeds of charging. Moreover,
+                        your charger is also protected from short circuits,
+                        overheating and overcurrent, thanks to the inbuilt Smart
+                        IC Protection feature.
+                      long_desc: Bring home this compact charger from boAt and keep your phone charged
+                        at all times. The Auto-detect charging feature keeps
+                        your devices charged by adapting to your device’s
+                        charging requirements. The Quick Charge 3.0 technology
+                        provides lightning-fast speeds of charging. Moreover,
+                        your charger is also protected from short circuits,
+                        overheating and overcurrent
                       images:
                         - https://sellerNP.com/images/i1.png
                     price:
@@ -469,7 +527,8 @@ steps:
                     "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
                     "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Seller Business
-                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                        Karnataka, India - 560011
                       common_or_generic_name_of_commodity: Adaptor  25W C  type
                       month_year_of_manufacture_packing_import: NA
                     tags:
@@ -582,45 +641,81 @@ steps:
         np_type: $.message.catalog['bpp/descriptor'].tags[?(@.code=='bpp_terms')].list[?(@.code=='np_type')].value
       inputs: {}
     examples:
-      - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow "Discovery_Flow_full_catalog"
+      - name: example for on_search
         payload:
           context:
-            action: on_search
-            bap_id: dev-automation.ondc.org
-            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/buyer
-            bpp_id: dev-automation.ondc.org
-            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET14/1.2.5/seller
-            city: std:080
-            core_version: 1.2.5
-            country: IND
             domain: ONDC:RET14
-            message_id: b83754cc-5dff-4075-84ee-1ad906e85c45
-            timestamp: 2026-03-20T12:06:45.033Z
-            transaction_id: 3a0ebe08-114e-4ddc-a880-bb049df1db16
+            action: on_search
+            timestamp: 2026-07-30T06:44:57.680Z
+            transaction_id: 797c96f7-f5e4-44ed-96d9-398cd414699a
+            message_id: 5465c2fc-ee1a-4853-b574-ccb0f4b54803
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
             ttl: PT30S
+            bpp_id: bpp.example.com
+            bpp_uri: https://bpp.example.com
+            country: IND
+            city: std:044
+            core_version: 1.2.5
           message:
             catalog:
+              bpp/fulfillments:
+                - id: F1
+                  type: Delivery
               bpp/descriptor:
+                name: Mock Seller NP
+                symbol: https://sellerNP.com/images/np.png
+                short_desc: Seller Marketplace
+                long_desc: Seller Marketplace
                 images:
                   - https://sellerNP.com/images/np.png
-                long_desc: Seller Marketplace
-                name: Mock Seller NP
-                short_desc: Seller Marketplace
-                symbol: https://sellerNP.com/images/np.png
                 tags:
                   - code: bpp_terms
                     list:
                       - code: np_type
                         value: MSN
-              bpp/fulfillments:
-                - id: F1
-                  type: Delivery
+                      - code: collect_payment
+                        value: Y
               bpp/providers:
-                - categories:
-                    - descriptor:
+                - id: P1
+                  time:
+                    label: enable
+                    timestamp: 2024-08-13T06:46:19.736Z
+                  ttl: PT24H
+                  locations:
+                    - id: L1
+                      gps: 12.925810,77.583624
+                      address:
+                        city: Bengaluru
+                        state: Karnataka
+                        area_code: "560011"
+                        street: Jayanagar
+                        locality: Jayanagar
+                      time:
+                        label: enable
+                        timestamp: 2024-08-13T06:46:19.736Z
+                        days: 1,2,3,4,5
+                        schedule:
+                          holidays: []
+                        range:
+                          start: "0000"
+                          end: "2359"
+                      circle:
+                        gps: 12.925810,77.583624
+                        radius:
+                          unit: km
+                          value: "5"
+                  descriptor:
+                    name: Store 1
+                    symbol: https://sellerNP.com/images/store1.png
+                    short_desc: Store 1
+                    long_desc: Store 1
+                    images:
+                      - https://sellerNP.com/images/store1.png
+                  categories:
+                    - id: V1
+                      descriptor:
                         name: Variant Group 1
-                      id: V1
                       tags:
                         - code: type
                           list:
@@ -632,9 +727,9 @@ steps:
                               value: item.tags.attribute.colour
                             - code: seq
                               value: "1"
-                    - descriptor:
+                    - id: CG1
+                      descriptor:
                         name: Custom_Input
-                      id: CG1
                       tags:
                         - code: type
                           list:
@@ -650,59 +745,57 @@ steps:
                               value: text
                             - code: seq
                               value: "1"
-                  descriptor:
-                    images:
-                      - https://sellerNP.com/images/store1.png
-                    long_desc: Store 1
-                    name: Store 1
-                    short_desc: Store 1
-                    symbol: https://sellerNP.com/images/store1.png
-                  fulfillments:
-                    - contact:
-                        email: test@gmail.com
-                        phone: "9876543210"
-                      id: F1
-                      type: Delivery
-                  id: P1
                   items:
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
-                        common_or_generic_name_of_commodity: Power Bank
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                        manufacturer_or_packer_name: Seller Business
-                        month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
-                      category_id: Power Bank
+                    - id: I1
+                      time:
+                        label: enable
+                        timestamp: 2024-08-12T05:30:48.998Z
+                      parent_item_id: ""
                       descriptor:
-                        code: 3:9501101530007
+                        name: Power Bank
+                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: A Power Bank is a portable charger designed to recharge your
+                          electronic devices when you're on the move. Ranging in
+                          size from slim, pocket-sized devices up to larger,
+                          higher-capacity Power Banks – they can be used to
+                          charge smartphones, tablets, earphones, smartwatches
+                          and other mobile devices.
+                        long_desc: A Power Bank is a portable charger designed to recharge your
+                          electronic devices when you're on the move. Ranging in
+                          size from slim, pocket-sized devices up to larger,
+                          higher-capacity Power Banks
                         images:
                           - https://sellerNP.com/images/i1.png
-                        long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
-                        name: Power Bank
-                        short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                        symbol: https://sellerNP.com/images/i1.png
-                      fulfillment_id: F1
-                      id: I1
-                      location_id: L1
-                      parent_item_id: ""
-                      price:
-                        currency: INR
-                        maximum_value: "2260"
-                        value: "2260"
+                        code: 3:9501101530007
                       quantity:
-                        available:
-                          count: "99"
-                        maximum:
-                          count: "8"
                         unitized:
                           measure:
                             unit: unit
                             value: "1"
+                        available:
+                          count: "99"
+                        maximum:
+                          count: "8"
+                      price:
+                        currency: INR
+                        value: "2260"
+                        maximum_value: "2260"
+                      category_id: Power Bank
+                      location_id: L1
+                      fulfillment_id: F1
+                      "@ondc/org/returnable": true
+                      "@ondc/org/cancellable": true
+                      "@ondc/org/available_on_cod": false
+                      "@ondc/org/time_to_ship": P2D
+                      "@ondc/org/seller_pickup_return": true
+                      "@ondc/org/return_window": P7D
+                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
+                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        manufacturer_or_packer_name: Seller Business
+                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        common_or_generic_name_of_commodity: Power Bank
+                        month_year_of_manufacture_packing_import: NA
                       tags:
                         - code: origin
                           list:
@@ -730,47 +823,56 @@ steps:
                           list:
                             - code: id
                               value: CG1
+                    - id: I2
                       time:
                         label: enable
-                        timestamp: 2024-08-12T05:30:48.998Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                      "@ondc/org/return_window": P7D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": true
-                      "@ondc/org/statutory_reqs_packaged_commodities":
-                        common_or_generic_name_of_commodity: Adaptor  25W C  type
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                        manufacturer_or_packer_name: Seller Business
-                        month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P2D
-                      category_id: Adapter
+                        timestamp: 2024-08-12T10:27:48.913Z
+                      parent_item_id: ""
                       descriptor:
-                        code: 3:7845632198471
+                        name: Adaptor  25W C  type
+                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: An adapter or adaptor is a device that converts attributes of one
+                          electrical device or system to those of an otherwise
+                          incompatible device or system. Some modify power or
+                          signal attributes, while others merely adapt the
+                          physical form of one connector to another.
+                        long_desc: An adapter or adaptor is a device that converts attributes of one
+                          electrical device or system to those of an otherwise
+                          incompatible device or system. Some modify power or
+                          signal attributes, while others merely adapt the
+                          physical form of one connector to another.
                         images:
                           - https://sellerNP.com/images/i1.png
-                        long_desc: An adapter or adaptor is a device that converts attributes of one electrical device or system to those of an otherwise incompatible device or system. Some modify power or signal attributes, while others merely adapt the physical form of one connector to another.
-                        name: Adaptor  25W C  type
-                        short_desc: An adapter or adaptor is a device that converts attributes of one electrical device or system to those of an otherwise incompatible device or system. Some modify power or signal attributes, while others merely adapt the physical form of one connector to another.
-                        symbol: https://sellerNP.com/images/i1.png
-                      fulfillment_id: F1
-                      id: I2
-                      location_id: L1
-                      parent_item_id: ""
-                      price:
-                        currency: INR
-                        maximum_value: "2460"
-                        value: "2460"
+                        code: 3:7845632198471
                       quantity:
-                        available:
-                          count: "99"
-                        maximum:
-                          count: "10"
                         unitized:
                           measure:
                             unit: unit
                             value: "1"
+                        available:
+                          count: "99"
+                        maximum:
+                          count: "10"
+                      price:
+                        currency: INR
+                        value: "2460"
+                        maximum_value: "2460"
+                      category_id: Adapter
+                      location_id: L1
+                      fulfillment_id: F1
+                      "@ondc/org/returnable": true
+                      "@ondc/org/cancellable": true
+                      "@ondc/org/available_on_cod": false
+                      "@ondc/org/time_to_ship": P2D
+                      "@ondc/org/seller_pickup_return": true
+                      "@ondc/org/return_window": P7D
+                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
+                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        manufacturer_or_packer_name: Seller Business
+                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        common_or_generic_name_of_commodity: Adaptor  25W C  type
+                        month_year_of_manufacture_packing_import: NA
                       tags:
                         - code: origin
                           list:
@@ -790,38 +892,41 @@ steps:
                           list:
                             - code: id
                               value: CG1
+                    - id: I3
+                      descriptor:
+                        name: Charger 360plus 4500mah
+                        code: 3:6213574890238
+                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: Bring home this compact charger from boAt and keep your phone
+                          charged at all times. The Auto-detect charging feature
+                          keeps your devices charged by adapting to your
+                          device’s charging requirements. The Quick Charge 3.0
+                          technology provides lightning-fast speeds of charging.
+                          Moreover, your charger is also protected from short
+                          circuits, overheating and overcurrent, thanks to the
+                          inbuilt Smart IC Protection feature.
+                        long_desc: Bring home this compact charger from boAt and keep your phone charged
+                          at all times. The Auto-detect charging feature keeps
+                          your devices charged by adapting to your device’s
+                          charging requirements. The Quick Charge 3.0 technology
+                          provides lightning-fast speeds of charging. Moreover,
+                          your charger is also protected from short circuits,
+                          overheating and overcurrent
+                        images:
+                          - https://sellerNP.com/images/i1.png
+                      price:
+                        currency: INR
+                        value: "499.00"
+                        maximum_value: "1199.00"
+                      parent_item_id: V1
+                      category_id: Charger
+                      fulfillment_id: F1
+                      location_id: L1
                       time:
                         label: enable
                         timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P3D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
-                        common_or_generic_name_of_commodity: Adaptor  25W C  type
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                        manufacturer_or_packer_name: Seller Business
-                        month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P1D
-                      category_id: Charger
-                      descriptor:
-                        code: 3:6213574890238
-                        images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent
-                        name: Charger 360plus 4500mah
-                        short_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent, thanks to the inbuilt Smart IC Protection feature.
-                        symbol: https://sellerNP.com/images/i1.png
-                      fulfillment_id: F1
-                      id: I3
-                      location_id: L1
-                      parent_item_id: V1
-                      price:
-                        currency: INR
-                        maximum_value: "1199.00"
-                        value: "499.00"
+                      related: true
+                      recommended: true
                       quantity:
                         available:
                           count: "99"
@@ -829,10 +934,21 @@ steps:
                           count: "99"
                         unitized:
                           measure:
-                            unit: unit
                             value: "1"
-                      recommended: true
-                      related: true
+                            unit: unit
+                      "@ondc/org/returnable": true
+                      "@ondc/org/seller_pickup_return": false
+                      "@ondc/org/return_window": P3D
+                      "@ondc/org/cancellable": true
+                      "@ondc/org/time_to_ship": P1D
+                      "@ondc/org/available_on_cod": false
+                      "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
+                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        manufacturer_or_packer_name: Seller Business
+                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        common_or_generic_name_of_commodity: Adaptor  25W C  type
+                        month_year_of_manufacture_packing_import: NA
                       tags:
                         - code: origin
                           list:
@@ -844,38 +960,41 @@ steps:
                               value: "#0B0B3B"
                             - code: brand
                               value: Shiv Electricals
+                    - id: I4
+                      descriptor:
+                        name: Charger 360plus 4500mah
+                        code: 3:4012789543165
+                        symbol: https://sellerNP.com/images/i1.png
+                        short_desc: Bring home this compact charger from boAt and keep your phone
+                          charged at all times. The Auto-detect charging feature
+                          keeps your devices charged by adapting to your
+                          device’s charging requirements. The Quick Charge 3.0
+                          technology provides lightning-fast speeds of charging.
+                          Moreover, your charger is also protected from short
+                          circuits, overheating and overcurrent, thanks to the
+                          inbuilt Smart IC Protection feature.
+                        long_desc: Bring home this compact charger from boAt and keep your phone charged
+                          at all times. The Auto-detect charging feature keeps
+                          your devices charged by adapting to your device’s
+                          charging requirements. The Quick Charge 3.0 technology
+                          provides lightning-fast speeds of charging. Moreover,
+                          your charger is also protected from short circuits,
+                          overheating and overcurrent
+                        images:
+                          - https://sellerNP.com/images/i1.png
+                      price:
+                        currency: INR
+                        value: "599.00"
+                        maximum_value: "1199.00"
+                      parent_item_id: V1
+                      category_id: Charger
+                      fulfillment_id: F1
+                      location_id: L1
                       time:
                         label: enable
                         timestamp: 2024-08-12T10:27:48.913Z
-                    - "@ondc/org/available_on_cod": false
-                      "@ondc/org/cancellable": true
-                      "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                      "@ondc/org/return_window": P3D
-                      "@ondc/org/returnable": true
-                      "@ondc/org/seller_pickup_return": false
-                      "@ondc/org/statutory_reqs_packaged_commodities":
-                        common_or_generic_name_of_commodity: Adaptor  25W C  type
-                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                        manufacturer_or_packer_name: Seller Business
-                        month_year_of_manufacture_packing_import: NA
-                      "@ondc/org/time_to_ship": P1D
-                      category_id: Charger
-                      descriptor:
-                        code: 3:4012789543165
-                        images:
-                          - https://sellerNP.com/images/i1.png
-                        long_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent
-                        name: Charger 360plus 4500mah
-                        short_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent, thanks to the inbuilt Smart IC Protection feature.
-                        symbol: https://sellerNP.com/images/i1.png
-                      fulfillment_id: F1
-                      id: I4
-                      location_id: L1
-                      parent_item_id: V1
-                      price:
-                        currency: INR
-                        maximum_value: "1199.00"
-                        value: "599.00"
+                      related: true
+                      recommended: true
                       quantity:
                         available:
                           count: "99"
@@ -883,10 +1002,21 @@ steps:
                           count: "99"
                         unitized:
                           measure:
-                            unit: unit
                             value: "1"
-                      recommended: true
-                      related: true
+                            unit: unit
+                      "@ondc/org/returnable": true
+                      "@ondc/org/seller_pickup_return": false
+                      "@ondc/org/return_window": P3D
+                      "@ondc/org/cancellable": true
+                      "@ondc/org/time_to_ship": P1D
+                      "@ondc/org/available_on_cod": false
+                      "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
+                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        manufacturer_or_packer_name: Seller Business
+                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru,
+                          Karnataka, India - 560011
+                        common_or_generic_name_of_commodity: Adaptor  25W C  type
+                        month_year_of_manufacture_packing_import: NA
                       tags:
                         - code: origin
                           list:
@@ -898,26 +1028,23 @@ steps:
                               value: "#FF69B4"
                             - code: brand
                               value: Shiv Electricals
-                      time:
-                        label: enable
-                        timestamp: 2024-08-12T10:27:48.913Z
-                    - category_id: Power Bank
+                    - id: C1
                       descriptor:
                         name: Custom_Input
-                      id: C1
-                      price:
-                        currency: INR
-                        maximum_value: "0.0"
-                        value: "0.0"
                       quantity:
-                        available:
-                          count: "99"
-                        maximum:
-                          count: "99"
                         unitized:
                           measure:
                             unit: unit
                             value: "1"
+                        available:
+                          count: "99"
+                        maximum:
+                          count: "99"
+                      price:
+                        currency: INR
+                        value: "0.0"
+                        maximum_value: "0.0"
+                      category_id: Power Bank
                       related: true
                       tags:
                         - code: type
@@ -928,29 +1055,12 @@ steps:
                           list:
                             - code: id
                               value: CG1
-                  locations:
-                    - address:
-                        area_code: "560011"
-                        city: Bengaluru
-                        locality: Jayanagar
-                        state: Karnataka
-                        street: Jayanagar
-                      circle:
-                        gps: 12.925810,77.583624
-                        radius:
-                          unit: km
-                          value: "5"
-                      gps: 12.925810,77.583624
-                      id: L1
-                      time:
-                        days: 1,2,3,4,5
-                        label: enable
-                        range:
-                          end: "2359"
-                          start: "0000"
-                        schedule:
-                          holidays: []
-                        timestamp: 2024-08-13T06:46:19.736Z
+                  fulfillments:
+                    - id: F1
+                      type: Delivery
+                      contact:
+                        phone: "9876543210"
+                        email: test@gmail.com
                   tags:
                     - code: serviceability
                       list:
@@ -1002,472 +1112,40 @@ steps:
                           value: "0000"
                         - code: time_to
                           value: "2359"
-                  time:
-                    label: enable
-                    timestamp: 2024-08-13T06:46:19.736Z
-                  ttl: PT24H
+                  offers:
+                    - id: FIN1
+                      descriptor:
+                        code: financing
+                        images:
+                          - https://sellerNP.com/images/offer2-banner.png
+                      location_ids:
+                        - L1
+                      item_ids:
+                        - I1
+                        - I2
+                        - I3
+                      time:
+                        label: valid
+                        range:
+                          start: 2024-12-23T06:55:45.035Z
+                          end: 2030-12-23T08:12:15.033Z
+                      tags:
+                        - code: finance_terms
+                          list:
+                            - code: subvention_type
+                              value: percent
+                            - code: subvention_amount
+                              value: "10.00"
+                        - code: meta
+                          list:
+                            - code: additive
+                              value: no
+                            - code: auto
+                              value: no
         type: request
-transaction_history:
-  - action_id: search
-    payload:
-      context:
-        domain: ONDC:RET14
-        action: search
-        timestamp: 2026-05-25T05:53:14.941Z
-        transaction_id: 797c96f7-f5e4-44ed-96d9-398cd414699a
-        message_id: e0596fe3-4d8c-4d86-89e1-77ff88acc246
-        bap_id: bap.example.com
-        bap_uri: https://bap.example.com
-        ttl: PT30S
-        country: IND
-        city: std:011
-        core_version: 1.2.5
-      message:
-        intent:
-          fulfillment:
-            type: Delivery
-          payment:
-            "@ondc/org/buyer_app_finder_fee_type": percent
-            "@ondc/org/buyer_app_finder_fee_amount": "3"
-          tags:
-            - code: bap_terms
-              list:
-                - code: static_terms
-                  value: ""
-                - code: static_terms_new
-                  value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
-                - code: effective_date
-                  value: 2025-02-01T00:00:00.000Z
-            - code: bap_features
-              list:
-                - code: 00C
-                  value: yes
-    action: search
-    saved_info: {}
-  - action_id: on_search
-    payload:
-      context:
-        domain: ONDC:RET14
-        action: on_search
-        timestamp: 2026-05-25T05:53:16.202Z
-        transaction_id: 797c96f7-f5e4-44ed-96d9-398cd414699a
-        message_id: e0596fe3-4d8c-4d86-89e1-77ff88acc246
-        bap_id: bap.example.com
-        bap_uri: https://bap.example.com
-        ttl: PT30S
-        bpp_id: bpp.example.com
-        bpp_uri: https://bpp.example.com
-        country: IND
-        city: std:011
-        core_version: 1.2.5
-      message:
-        catalog:
-          bpp/fulfillments:
-            - id: F1
-              type: Delivery
-          bpp/descriptor:
-            name: Mock Seller NP
-            symbol: https://sellerNP.com/images/np.png
-            short_desc: Seller Marketplace
-            long_desc: Seller Marketplace
-            images:
-              - https://sellerNP.com/images/np.png
-            tags:
-              - code: bpp_terms
-                list:
-                  - code: np_type
-                    value: MSN
-          bpp/providers:
-            - id: P1
-              time:
-                label: enable
-                timestamp: 2024-08-13T06:46:19.736Z
-              ttl: PT24H
-              locations:
-                - id: L1
-                  gps: 12.925810,77.583624
-                  address:
-                    city: Bengaluru
-                    state: Karnataka
-                    area_code: "560011"
-                    street: Jayanagar
-                    locality: Jayanagar
-                  time:
-                    label: enable
-                    timestamp: 2024-08-13T06:46:19.736Z
-                    days: 1,2,3,4,5
-                    schedule:
-                      holidays: []
-                    range:
-                      start: "0000"
-                      end: "2359"
-                  circle:
-                    gps: 12.925810,77.583624
-                    radius:
-                      unit: km
-                      value: "5"
-              descriptor:
-                name: Store 1
-                symbol: https://sellerNP.com/images/store1.png
-                short_desc: Store 1
-                long_desc: Store 1
-                images:
-                  - https://sellerNP.com/images/store1.png
-              categories:
-                - id: V1
-                  descriptor:
-                    name: Variant Group 1
-                  tags:
-                    - code: type
-                      list:
-                        - code: type
-                          value: variant_group
-                    - code: attr
-                      list:
-                        - code: name
-                          value: item.tags.attribute.colour
-                        - code: seq
-                          value: "1"
-                - id: CG1
-                  descriptor:
-                    name: Custom_Input
-                  tags:
-                    - code: type
-                      list:
-                        - code: type
-                          value: custom_group
-                    - code: config
-                      list:
-                        - code: min
-                          value: "0"
-                        - code: max
-                          value: "1"
-                        - code: input
-                          value: text
-                        - code: seq
-                          value: "1"
-              items:
-                - id: I1
-                  time:
-                    label: enable
-                    timestamp: 2024-08-12T05:30:48.998Z
-                  parent_item_id: ""
-                  descriptor:
-                    name: Power Bank
-                    symbol: https://sellerNP.com/images/i1.png
-                    short_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks – they can be used to charge smartphones, tablets, earphones, smartwatches and other mobile devices.
-                    long_desc: A Power Bank is a portable charger designed to recharge your electronic devices when you're on the move. Ranging in size from slim, pocket-sized devices up to larger, higher-capacity Power Banks
-                    images:
-                      - https://sellerNP.com/images/i1.png
-                    code: 3:9501101530007
-                  quantity:
-                    unitized:
-                      measure:
-                        unit: unit
-                        value: "1"
-                    available:
-                      count: "99"
-                    maximum:
-                      count: "8"
-                  price:
-                    currency: INR
-                    value: "2260"
-                    maximum_value: "2260"
-                  category_id: Power Bank
-                  location_id: L1
-                  fulfillment_id: F1
-                  "@ondc/org/returnable": true
-                  "@ondc/org/cancellable": true
-                  "@ondc/org/available_on_cod": false
-                  "@ondc/org/time_to_ship": P2D
-                  "@ondc/org/seller_pickup_return": true
-                  "@ondc/org/return_window": P7D
-                  "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                  "@ondc/org/statutory_reqs_packaged_commodities":
-                    manufacturer_or_packer_name: Seller Business
-                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                    common_or_generic_name_of_commodity: Power Bank
-                    month_year_of_manufacture_packing_import: NA
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: brand
-                          value: Shiv Electricals
-                        - code: weight
-                          value: "103"
-                        - code: model
-                          value: "2012"
-                        - code: breadth
-                          value: "12.3"
-                        - code: length
-                          value: "10.2"
-                        - code: height
-                          value: "15.5"
-                    - code: type
-                      list:
-                        - code: type
-                          value: item
-                    - code: custom_group
-                      list:
-                        - code: id
-                          value: CG1
-                - id: I2
-                  time:
-                    label: enable
-                    timestamp: 2024-08-12T10:27:48.913Z
-                  parent_item_id: ""
-                  descriptor:
-                    name: Adaptor  25W C  type
-                    symbol: https://sellerNP.com/images/i1.png
-                    short_desc: An adapter or adaptor is a device that converts attributes of one electrical device or system to those of an otherwise incompatible device or system. Some modify power or signal attributes, while others merely adapt the physical form of one connector to another.
-                    long_desc: An adapter or adaptor is a device that converts attributes of one electrical device or system to those of an otherwise incompatible device or system. Some modify power or signal attributes, while others merely adapt the physical form of one connector to another.
-                    images:
-                      - https://sellerNP.com/images/i1.png
-                    code: 3:7845632198471
-                  quantity:
-                    unitized:
-                      measure:
-                        unit: unit
-                        value: "1"
-                    available:
-                      count: "99"
-                    maximum:
-                      count: "10"
-                  price:
-                    currency: INR
-                    value: "2460"
-                    maximum_value: "2460"
-                  category_id: Adapter
-                  location_id: L1
-                  fulfillment_id: F1
-                  "@ondc/org/returnable": true
-                  "@ondc/org/cancellable": true
-                  "@ondc/org/available_on_cod": false
-                  "@ondc/org/time_to_ship": P2D
-                  "@ondc/org/seller_pickup_return": true
-                  "@ondc/org/return_window": P7D
-                  "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
-                  "@ondc/org/statutory_reqs_packaged_commodities":
-                    manufacturer_or_packer_name: Seller Business
-                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                    common_or_generic_name_of_commodity: Adaptor  25W C  type
-                    month_year_of_manufacture_packing_import: NA
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: colour
-                          value: "#FF69B4"
-                        - code: brand
-                          value: Shiv Electricals
-                    - code: type
-                      list:
-                        - code: type
-                          value: item
-                    - code: custom_group
-                      list:
-                        - code: id
-                          value: CG1
-                - id: I3
-                  descriptor:
-                    name: Charger 360plus 4500mah
-                    code: 3:6213574890238
-                    symbol: https://sellerNP.com/images/i1.png
-                    short_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent, thanks to the inbuilt Smart IC Protection feature.
-                    long_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent
-                    images:
-                      - https://sellerNP.com/images/i1.png
-                  price:
-                    currency: INR
-                    value: "499.00"
-                    maximum_value: "1199.00"
-                  parent_item_id: V1
-                  category_id: Charger
-                  fulfillment_id: F1
-                  location_id: L1
-                  time:
-                    label: enable
-                    timestamp: 2024-08-12T10:27:48.913Z
-                  related: true
-                  recommended: true
-                  quantity:
-                    available:
-                      count: "99"
-                    maximum:
-                      count: "99"
-                    unitized:
-                      measure:
-                        value: "1"
-                        unit: unit
-                  "@ondc/org/returnable": true
-                  "@ondc/org/seller_pickup_return": false
-                  "@ondc/org/return_window": P3D
-                  "@ondc/org/cancellable": true
-                  "@ondc/org/time_to_ship": P1D
-                  "@ondc/org/available_on_cod": false
-                  "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                  "@ondc/org/statutory_reqs_packaged_commodities":
-                    manufacturer_or_packer_name: Seller Business
-                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                    common_or_generic_name_of_commodity: Adaptor  25W C  type
-                    month_year_of_manufacture_packing_import: NA
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: colour
-                          value: "#0B0B3B"
-                        - code: brand
-                          value: Shiv Electricals
-                - id: I4
-                  descriptor:
-                    name: Charger 360plus 4500mah
-                    code: 3:4012789543165
-                    symbol: https://sellerNP.com/images/i1.png
-                    short_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent, thanks to the inbuilt Smart IC Protection feature.
-                    long_desc: Bring home this compact charger from boAt and keep your phone charged at all times. The Auto-detect charging feature keeps your devices charged by adapting to your device’s charging requirements. The Quick Charge 3.0 technology provides lightning-fast speeds of charging. Moreover, your charger is also protected from short circuits, overheating and overcurrent
-                    images:
-                      - https://sellerNP.com/images/i1.png
-                  price:
-                    currency: INR
-                    value: "599.00"
-                    maximum_value: "1199.00"
-                  parent_item_id: V1
-                  category_id: Charger
-                  fulfillment_id: F1
-                  location_id: L1
-                  time:
-                    label: enable
-                    timestamp: 2024-08-12T10:27:48.913Z
-                  related: true
-                  recommended: true
-                  quantity:
-                    available:
-                      count: "99"
-                    maximum:
-                      count: "99"
-                    unitized:
-                      measure:
-                        value: "1"
-                        unit: unit
-                  "@ondc/org/returnable": true
-                  "@ondc/org/seller_pickup_return": false
-                  "@ondc/org/return_window": P3D
-                  "@ondc/org/cancellable": true
-                  "@ondc/org/time_to_ship": P1D
-                  "@ondc/org/available_on_cod": false
-                  "@ondc/org/contact_details_consumer_care": Dailywear Fashion,support@gmail.com,2343453434
-                  "@ondc/org/statutory_reqs_packaged_commodities":
-                    manufacturer_or_packer_name: Seller Business
-                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
-                    common_or_generic_name_of_commodity: Adaptor  25W C  type
-                    month_year_of_manufacture_packing_import: NA
-                  tags:
-                    - code: origin
-                      list:
-                        - code: country
-                          value: IND
-                    - code: attribute
-                      list:
-                        - code: colour
-                          value: "#FF69B4"
-                        - code: brand
-                          value: Shiv Electricals
-                - id: C1
-                  descriptor:
-                    name: Custom_Input
-                  quantity:
-                    unitized:
-                      measure:
-                        unit: unit
-                        value: "1"
-                    available:
-                      count: "99"
-                    maximum:
-                      count: "99"
-                  price:
-                    currency: INR
-                    value: "0.0"
-                    maximum_value: "0.0"
-                  category_id: Power Bank
-                  related: true
-                  tags:
-                    - code: type
-                      list:
-                        - code: type
-                          value: customization
-                    - code: parent
-                      list:
-                        - code: id
-                          value: CG1
-              fulfillments:
-                - id: F1
-                  type: Delivery
-                  contact:
-                    phone: "9876543210"
-                    email: test@gmail.com
-              tags:
-                - code: serviceability
-                  list:
-                    - code: location
-                      value: L1
-                    - code: category
-                      value: Power Bank
-                    - code: type
-                      value: "11"
-                    - code: unit
-                      value: pincode
-                    - code: val
-                      value: 560001-560076,560083
-                - code: serviceability
-                  list:
-                    - code: location
-                      value: L1
-                    - code: category
-                      value: Adapter
-                    - code: type
-                      value: "12"
-                    - code: unit
-                      value: country
-                    - code: val
-                      value: IND
-                - code: serviceability
-                  list:
-                    - code: location
-                      value: L1
-                    - code: category
-                      value: Charger
-                    - code: type
-                      value: "12"
-                    - code: unit
-                      value: country
-                    - code: val
-                      value: IND
-                - code: timing
-                  list:
-                    - code: type
-                      value: All
-                    - code: location
-                      value: L1
-                    - code: day_from
-                      value: "1"
-                    - code: day_to
-                      value: "5"
-                    - code: time_from
-                      value: "0000"
-                    - code: time_to
-                      value: "2359"
-    action: on_search
-    saved_info: {}
+        description: The BPP responds to the buyer app's search request by providing its
+          product catalog, which includes available items and fulfillment
+          options.
+transaction_history: []
 validationLib: ""
 helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9Cg==
