@@ -1,60 +1,56 @@
 meta:
-  domain: 'ONDC:RET13'
+  domain: ONDC:RET13
   version: 1.2.0
   flowId: Discovery_Flow_incremental_catalog_refresh_pull
   config_version: 0.0.0001
-  description: Buyer Search & Quotation
+  description: A BPC discovery flow that validates the incremental catalog refresh pull mechanism through a sequence of repeated search requests and responses.
   use_case_id: BPC
   flowName: Discovery Flow incremental catalog refresh pull
 transaction_data:
   transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
-  latest_timestamp: '1970-01-01T00:00:00.000Z'
+  latest_timestamp: 1970-01-01T00:00:00.000Z
   bap_id: bap.example.com
-  bap_uri: 'https://bap.example.com'
+  bap_uri: https://bap.example.com
   bpp_id: bpp.example.com
-  bpp_uri: 'https://bpp.example.com'
+  bpp_uri: https://bpp.example.com
 steps:
   - api: search
     action_id: search_1
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: BAP sends the search request
+    description: The BAP initiates a search request to the BPP to pull an incremental refresh of the catalog for the specified city.
     mock:
-      generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBpbnB1dHMgPSBzZXNzaW9uRGF0YS51c2VyX2lucHV0czsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlCiAgY29uc3QgdGFncyA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3M7CgoJdGFnc1swXS5saXN0WzJdLnZhbHVlID0gbmV3IERhdGUoCgkJbmV3IERhdGUoKS5nZXRUaW1lKCkgKyAxMDAwICogNjAgKiA2MCAqIDI0ICogMTAKCSkudG9JU09TdHJpbmcoKTsKICAKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: >-
-        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCBpbnB1dHMgPSBzZXNzaW9uRGF0YS51c2VyX2lucHV0czsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlCiAgY29uc3QgdGFncyA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3M7CgoJdGFnc1swXS5saXN0WzJdLnZhbHVlID0gbmV3IERhdGUoCgkJbmV3IERhdGUoKS5nZXRUaW1lKCkgKyAxMDAwICogNjAgKiA2MCAqIDI0ICogMTAKCSkudG9JU09TdHJpbmcoKTsKICAKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
-          domain: 'ONDC:RET13'
+          domain: ONDC:RET13
           action: search
-          timestamp: '2026-01-20T09:05:17.039Z'
+          timestamp: 2026-01-20T09:05:17.039Z
           transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
           message_id: b00ce1b2-b91d-4634-931e-7822bb0cd34c
           bap_id: sample-bap-id
-          bap_uri: 'https://bap.example.com'
+          bap_uri: https://bap.example.com
           ttl: PT30S
           country: IND
-          city: '*'
+          city: "*"
           core_version: 1.2.0
         message:
           intent:
             payment:
-              '@ondc/org/buyer_app_finder_fee_type': percent
-              '@ondc/org/buyer_app_finder_fee_amount': '3'
+              "@ondc/org/buyer_app_finder_fee_type": percent
+              "@ondc/org/buyer_app_finder_fee_amount": "3"
             tags:
               - code: bap_terms
                 list:
                   - code: static_terms
-                    value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                    value: " https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf"
                   - code: static_terms_new
-                    value: >-
-                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                   - code: effective_date
-                    value: '2025-02-01T00:00:00.000Z'
+                    value: 2025-02-01T00:00:00.000Z
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -67,7 +63,7 @@ steps:
       inputs:
         id: ExampleInputId
         jsonSchema:
-          $schema: 'http://json-schema.org/draft-07/schema#'
+          $schema: http://json-schema.org/draft-07/schema#
           type: object
           properties:
             city_code:
@@ -79,65 +75,59 @@ steps:
           additionalProperties: false
     examples:
       - name: Example for action "search"
-        description: >-
-          Auto-generated example for action "search" in flow
-          "Search_and_Custom_Menu_(Full_Catalog_City)"
+        description: Auto-generated example for action "search" in flow "Search_and_Custom_Menu_(Full_Catalog_City)"
         payload:
           context:
             action: search
             bap_id: dev-automation.ondc.org
-            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer'
-            city: 'std:011'
+            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer
+            city: std:011
             core_version: 1.2.0
             country: IND
-            domain: 'ONDC:RET13'
+            domain: ONDC:RET13
             message_id: 15d2ed18-9151-4b81-bf9d-e51b4c17fed5
-            timestamp: '2026-03-23T10:34:37.712Z'
+            timestamp: 2026-03-23T10:34:37.712Z
             transaction_id: b2a7b62a-001e-4a20-b09b-d0298fbb0cb8
             ttl: PT30S
           message:
             intent:
               payment:
-                '@ondc/org/buyer_app_finder_fee_amount': '3'
-                '@ondc/org/buyer_app_finder_fee_type': percent
+                "@ondc/org/buyer_app_finder_fee_amount": "3"
+                "@ondc/org/buyer_app_finder_fee_type": percent
               tags:
                 - code: bap_terms
                   list:
                     - code: static_terms
-                      value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                      value: " https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf"
                     - code: static_terms_new
-                      value: >-
-                        https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                      value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: effective_date
-                      value: '2026-04-02T10:34:37.717Z'
+                      value: 2026-04-02T10:34:37.717Z
         type: request
   - api: on_search
     action_id: on_search1
     owner: BPP
     responseFor: search_1
     unsolicited: false
-    description: BPP returns the full catalog refresh
+    description: The BPP responds to the search request by providing a filtered set of catalog items and fulfillment details relevant to the incremental refresh.
     mock:
-      generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKYXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5PXNlc3Npb25EYXRhLmNpdHlbMF0KCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF0ubG9jYXRpb25zWzBdLmFkZHJlc3MuYXJlYV9jb2RlID0gc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5hcmVhX2NvZGUKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0Lm1lc3NhZ2VfaWQgPSBzZXNzaW9uRGF0YS5sYXRlc3RNZXNzYWdlX2lkWzBdCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
-      validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
-      requirements: >-
-        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKYXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5PXNlc3Npb25EYXRhLmNpdHlbMF0KCiAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF0ubG9jYXRpb25zWzBdLmFkZHJlc3MuYXJlYV9jb2RlID0gc2Vzc2lvbkRhdGE/LnVzZXJfaW5wdXRzPy5hcmVhX2NvZGUKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0Lm1lc3NhZ2VfaWQgPSBzZXNzaW9uRGF0YS5sYXRlc3RNZXNzYWdlX2lkWzBdCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
-          domain: 'ONDC:RET13'
+          domain: ONDC:RET13
           action: on_search
-          timestamp: '2026-01-20T10:27:04.570Z'
+          timestamp: 2026-01-20T10:27:04.570Z
           transaction_id: 7bff96fb-28c1-4b0f-82b0-c6e13beb0cfc
           message_id: 6a02cb20-722c-433e-ab13-da8621f5aaa6
           bap_id: sample-bap-id
-          bap_uri: 'https://bap.example.com'
+          bap_uri: https://bap.example.com
           ttl: PT30S
           bpp_id: sample-bpp-id
-          bpp_uri: 'https://bpp.example.com'
+          bpp_uri: https://bpp.example.com
           country: IND
-          city: '*'
+          city: "*"
           core_version: 1.2.0
         message:
           catalog:
@@ -145,15 +135,15 @@ steps:
               - id: F1
                 type: Delivery
                 contact:
-                  phone: '9876543210'
+                  phone: "9876543210"
                   email: test@gmail.com
             bpp/descriptor:
               name: Mock Seller NP
-              symbol: 'https://sellerNP.com/images/np.png'
+              symbol: https://sellerNP.com/images/np.png
               short_desc: Seller Marketplace
               long_desc: Seller Marketplace
               images:
-                - 'https://sellerNP.com/images/np.png'
+                - https://sellerNP.com/images/np.png
               tags:
                 - code: bpp_terms
                   list:
@@ -163,38 +153,38 @@ steps:
               - id: P1
                 time:
                   label: enable
-                  timestamp: '2024-08-13T06:46:19.736Z'
+                  timestamp: 2024-08-13T06:46:19.736Z
                 ttl: PT24H
                 locations:
                   - id: L1
-                    gps: '12.925810,77.583624'
+                    gps: 12.925810,77.583624
                     address:
                       city: Bengaluru
                       state: Karnataka
-                      area_code: '560011'
+                      area_code: "560011"
                       street: Jayanagar
                       locality: Jayanagar
                     time:
                       label: enable
-                      timestamp: '2024-08-13T06:46:19.736Z'
-                      days: '1,2,3,4,5'
+                      timestamp: 2024-08-13T06:46:19.736Z
+                      days: 1,2,3,4,5
                       schedule:
                         holidays: []
                       range:
-                        start: '0000'
-                        end: '2359'
+                        start: "0000"
+                        end: "2359"
                     circle:
-                      gps: '12.925810,77.583624'
+                      gps: 12.925810,77.583624
                       radius:
                         unit: km
-                        value: '5'
+                        value: "5"
                 descriptor:
                   name: Store 1
-                  symbol: 'https://sellerNP.com/images/store1.png'
+                  symbol: https://sellerNP.com/images/store1.png
                   short_desc: Store 1
                   long_desc: Store 1
                   images:
-                    - 'https://sellerNP.com/images/store1.png'
+                    - https://sellerNP.com/images/store1.png
                 categories:
                   - id: V1
                     descriptor:
@@ -209,58 +199,50 @@ steps:
                           - code: name
                             value: item.tags.attribute.plating
                           - code: seq
-                            value: '1'
+                            value: "1"
                 items:
                   - id: I1
                     time:
                       label: enable
-                      timestamp: '2024-08-12T05:30:48.998Z'
+                      timestamp: 2024-08-12T05:30:48.998Z
                     parent_item_id: V1
                     descriptor:
                       name: AHA PHA BHA 32%
-                      code: '1:8809326333661'
-                      symbol: 'https://sellerNP.com/images/i1.png'
+                      code: 1:8809326333661
+                      symbol: https://sellerNP.com/images/i1.png
                       short_desc: Weekend Exfoliating Facial
-                      long_desc: >-
-                        A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that
-                        provides multi-level exfoliation, both on the surface &
-                        inside the pores, giving you a healthy, plump, and
-                        glowing skin.Fragrance free. Non-comedogenic 30ml
+                      long_desc: A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that provides multi-level exfoliation, both on the surface & inside the pores, giving you a healthy, plump, and glowing skin.Fragrance free. Non-comedogenic 30ml
                       images:
-                        - 'https://sellerNP.com/images/i1.png'
-                        - 'https://sellerNP.com/images/i1.png'
-                        - 'https://sellerNP.com/images/i1.png'
+                        - https://sellerNP.com/images/i1.png
+                        - https://sellerNP.com/images/i1.png
+                        - https://sellerNP.com/images/i1.png
                     quantity:
                       unitized:
                         measure:
                           unit: millilitre
-                          value: '30'
+                          value: "30"
                       available:
-                        count: '99'
+                        count: "99"
                       maximum:
-                        count: '8'
+                        count: "8"
                     price:
                       currency: INR
-                      value: '2260'
-                      maximum_value: '2260'
+                      value: "2260"
+                      maximum_value: "2260"
                     category_id: Skin Care - Face Cleansers
                     location_id: L1
                     fulfillment_id: F1
-                    '@ondc/org/returnable': true
-                    '@ondc/org/cancellable': true
-                    '@ondc/org/return_window': P7D
-                    '@ondc/org/seller_pickup_return': false
-                    '@ondc/org/time_to_ship': PT5M
-                    '@ondc/org/available_on_cod': true
-                    '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,help@beminimalist.co,9772346555'
-                    '@ondc/org/statutory_reqs_packaged_commodities':
+                    "@ondc/org/returnable": true
+                    "@ondc/org/cancellable": true
+                    "@ondc/org/return_window": P7D
+                    "@ondc/org/seller_pickup_return": false
+                    "@ondc/org/time_to_ship": PT5M
+                    "@ondc/org/available_on_cod": true
+                    "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,help@beminimalist.co,9772346555
+                    "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Seller Business
-                      manufacturer_or_packer_address: >-
-                        Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
-                      common_or_generic_name_of_commodity: >-
-                        AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids)
-                        and PHA (Polyhydroxy Acid)
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                      common_or_generic_name_of_commodity: AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids) and PHA (Polyhydroxy Acid)
                       month_year_of_manufacture_packing_import: 03/2024
                     tags:
                       - code: origin
@@ -274,51 +256,42 @@ steps:
                   - id: I2
                     time:
                       label: enable
-                      timestamp: '2024-08-12T10:27:48.913Z'
+                      timestamp: 2024-08-12T10:27:48.913Z
                     parent_item_id: V1
                     descriptor:
                       name: Marula Oil 05% Moisturizer
-                      code: '1:8906128100436'
-                      symbol: 'https://sellerNP.com/images/i1.png'
-                      short_desc: >-
-                        Deep & Intense Moisturization. Treats Dryness, Roughness
-                        and Flakiness
-                      long_desc: >-
-                        An everyday moisturizing cream with 5% Marula Oil,
-                        paired with Vitamin F and Vitamin E to nourish,
-                        moisturize and improve skin softness. It's a heavy
-                        cream, suitable for dry/damaged to normal skin
-                        types.Fragrance free    Non-comedogenic     50g
+                      code: 1:8906128100436
+                      symbol: https://sellerNP.com/images/i1.png
+                      short_desc: Deep & Intense Moisturization. Treats Dryness, Roughness and Flakiness
+                      long_desc: An everyday moisturizing cream with 5% Marula Oil, paired with Vitamin F and Vitamin E to nourish, moisturize and improve skin softness. It's a heavy cream, suitable for dry/damaged to normal skin types.Fragrance free    Non-comedogenic     50g
                       images:
-                        - 'https://sellerNP.com/images/i1.png'
+                        - https://sellerNP.com/images/i1.png
                     quantity:
                       unitized:
                         measure:
                           unit: gram
-                          value: '50'
+                          value: "50"
                       available:
-                        count: '99'
+                        count: "99"
                       maximum:
-                        count: '10'
+                        count: "10"
                     price:
                       currency: INR
-                      value: '2360'
-                      maximum_value: '2360'
-                    category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                      value: "2360"
+                      maximum_value: "2360"
+                    category_id: Skin Care - Lotions, Moisturisers, and Creams
                     location_id: L1
                     fulfillment_id: F1
-                    '@ondc/org/returnable': true
-                    '@ondc/org/cancellable': true
-                    '@ondc/org/return_window': P7D
-                    '@ondc/org/seller_pickup_return': false
-                    '@ondc/org/time_to_ship': PT5M
-                    '@ondc/org/available_on_cod': true
-                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
-                    '@ondc/org/statutory_reqs_packaged_commodities':
+                    "@ondc/org/returnable": true
+                    "@ondc/org/cancellable": true
+                    "@ondc/org/return_window": P7D
+                    "@ondc/org/seller_pickup_return": false
+                    "@ondc/org/time_to_ship": PT5M
+                    "@ondc/org/available_on_cod": true
+                    "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
+                    "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Seller Business
-                      manufacturer_or_packer_address: >-
-                        Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                       common_or_generic_name_of_commodity: Marula Oil
                       month_year_of_manufacture_packing_import: 03/2024
                     tags:
@@ -333,48 +306,41 @@ steps:
                   - id: I3
                     descriptor:
                       name: Niacinamide 05%
-                      code: '1:8906128100108'
-                      symbol: 'https://sellerNP.com/images/i1.png'
-                      short_desc: 'Hydrates, Repairs & Soothes Skin'
-                      long_desc: >-
-                        A nourishing & hydrating daily serum that repairs
-                        damaged barrier & soothes sensitive skin. Ideal for
-                        people with dry, sensitive skin & those who find
-                        Niacinamide 10% a little strong.Fragrance free   
-                        Non-comedogenic 30ml
+                      code: 1:8906128100108
+                      symbol: https://sellerNP.com/images/i1.png
+                      short_desc: Hydrates, Repairs & Soothes Skin
+                      long_desc: A nourishing & hydrating daily serum that repairs damaged barrier & soothes sensitive skin. Ideal for people with dry, sensitive skin & those who find Niacinamide 10% a little strong.Fragrance free    Non-comedogenic 30ml
                       images:
-                        - 'https://sellerNP.com/images/i1.png'
+                        - https://sellerNP.com/images/i1.png
                     price:
                       currency: INR
-                      value: '499.00'
-                      maximum_value: '1199.00'
-                    category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                      value: "499.00"
+                      maximum_value: "1199.00"
+                    category_id: Skin Care - Lotions, Moisturisers, and Creams
                     fulfillment_id: F1
                     location_id: L1
                     time:
                       label: enable
-                      timestamp: '2024-08-12T10:27:48.913Z'
+                      timestamp: 2024-08-12T10:27:48.913Z
                     quantity:
                       available:
-                        count: '99'
+                        count: "99"
                       maximum:
-                        count: '99'
+                        count: "99"
                       unitized:
                         measure:
-                          value: '1'
+                          value: "1"
                           unit: unit
-                    '@ondc/org/returnable': true
-                    '@ondc/org/cancellable': true
-                    '@ondc/org/return_window': P7D
-                    '@ondc/org/seller_pickup_return': false
-                    '@ondc/org/time_to_ship': PT5M
-                    '@ondc/org/available_on_cod': true
-                    '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,support@gmail.com,2343453434'
-                    '@ondc/org/statutory_reqs_packaged_commodities':
+                    "@ondc/org/returnable": true
+                    "@ondc/org/cancellable": true
+                    "@ondc/org/return_window": P7D
+                    "@ondc/org/seller_pickup_return": false
+                    "@ondc/org/time_to_ship": PT5M
+                    "@ondc/org/available_on_cod": true
+                    "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,support@gmail.com,2343453434
+                    "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Minimalist
-                      manufacturer_or_packer_address: >-
-                        Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                       common_or_generic_name_of_commodity: Niacinamide
                       month_year_of_manufacture_packing_import: 03/2024
                     tags:
@@ -390,40 +356,40 @@ steps:
                   - id: F1
                     type: Delivery
                     contact:
-                      phone: '9876543210'
+                      phone: "9876543210"
                       email: test@gmail.com
                 creds:
                   - id: gi-12345678
                     descriptor:
                       code: Social Sector
                       short_desc: GI
-                    url: 'https://abcd.cdn.com/images/badge-img'
+                    url: https://abcd.cdn.com/images/badge-img
                     tags:
                       - code: verification
                         list:
                           - code: verify_url
-                            value: 'https://abcd.gi.com/verify?id=gi-12345678'
+                            value: https://abcd.gi.com/verify?id=gi-12345678
                           - code: verifier
                             value: CSP-ABC
                           - code: issuer
                             value: Example Authority
                           - code: valid_from
-                            value: '2023-06-03T00:00:00:000Z'
+                            value: 2023-06-03T00:00:00:000Z
                           - code: valid_to
-                            value: '2024-06-03T23:59:59:999Z'
+                            value: 2024-06-03T23:59:59:999Z
                 tags:
                   - code: serviceability
                     list:
                       - code: location
                         value: L1
                       - code: category
-                        value: 'Skin Care - Lotions, Moisturisers, and Creams'
+                        value: Skin Care - Lotions, Moisturisers, and Creams
                       - code: type
-                        value: '12'
+                        value: "12"
                       - code: unit
                         value: pincode
                       - code: val
-                        value: '560001-560076,560083'
+                        value: 560001-560076,560083
                   - code: serviceability
                     list:
                       - code: location
@@ -431,7 +397,7 @@ steps:
                       - code: category
                         value: Skin Care - Face Cleansers
                       - code: type
-                        value: '12'
+                        value: "12"
                       - code: unit
                         value: country
                       - code: val
@@ -443,13 +409,13 @@ steps:
                       - code: location
                         value: L1
                       - code: day_from
-                        value: '1'
+                        value: "1"
                       - code: day_to
-                        value: '6'
+                        value: "6"
                       - code: time_from
-                        value: '0000'
+                        value: "0000"
                       - code: time_to
-                        value: '2359'
+                        value: "2359"
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -461,47 +427,44 @@ steps:
       inputs:
         id: ExampleInputId
         jsonSchema:
-          $schema: 'http://json-schema.org/draft-07/schema#'
+          $schema: http://json-schema.org/draft-07/schema#
           type: object
           properties:
             area_code:
               type: string
               description: Enter the area code
-              default: '144203'
+              default: "144203"
           required:
             - area_code
           additionalProperties: true
           default: {}
     examples:
       - name: Example for action "on_search"
-        description: >-
-          Auto-generated example for action "on_search" in flow
-          "Search_and_Custom_Menu_(Full_Catalog_City)"
+        description: Auto-generated example for action "on_search" in flow "Search_and_Custom_Menu_(Full_Catalog_City)"
         payload:
           context:
             action: on_search
             bap_id: dev-automation.ondc.org
-            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer'
+            bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/buyer
             bpp_id: dev-automation.ondc.org
-            bpp_uri: >-
-              https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/seller
-            city: 'std:011'
+            bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.0/seller
+            city: std:011
             core_version: 1.2.0
             country: IND
-            domain: 'ONDC:RET13'
+            domain: ONDC:RET13
             message_id: 15d2ed18-9151-4b81-bf9d-e51b4c17fed5
-            timestamp: '2026-03-23T10:34:40.503Z'
+            timestamp: 2026-03-23T10:34:40.503Z
             transaction_id: b2a7b62a-001e-4a20-b09b-d0298fbb0cb8
             ttl: PT30S
           message:
             catalog:
               bpp/descriptor:
                 images:
-                  - 'https://sellerNP.com/images/np.png'
+                  - https://sellerNP.com/images/np.png
                 long_desc: Seller Marketplace
                 name: Mock Seller NP
                 short_desc: Seller Marketplace
-                symbol: 'https://sellerNP.com/images/np.png'
+                symbol: https://sellerNP.com/images/np.png
                 tags:
                   - code: bpp_terms
                     list:
@@ -510,7 +473,7 @@ steps:
               bpp/fulfillments:
                 - contact:
                     email: test@gmail.com
-                    phone: '9876543210'
+                    phone: "9876543210"
                   id: F1
                   type: Delivery
               bpp/providers:
@@ -528,7 +491,7 @@ steps:
                             - code: name
                               value: item.tags.attribute.plating
                             - code: seq
-                              value: '1'
+                              value: "1"
                   creds:
                     - descriptor:
                         code: Social Sector
@@ -538,80 +501,71 @@ steps:
                         - code: verification
                           list:
                             - code: verify_url
-                              value: 'https://abcd.gi.com/verify?id=gi-12345678'
+                              value: https://abcd.gi.com/verify?id=gi-12345678
                             - code: verifier
                               value: CSP-ABC
                             - code: issuer
                               value: Example Authority
                             - code: valid_from
-                              value: '2023-06-03T00:00:00:000Z'
+                              value: 2023-06-03T00:00:00:000Z
                             - code: valid_to
-                              value: '2024-06-03T23:59:59:999Z'
-                      url: 'https://abcd.cdn.com/images/badge-img'
+                              value: 2024-06-03T23:59:59:999Z
+                      url: https://abcd.cdn.com/images/badge-img
                   descriptor:
                     images:
-                      - 'https://sellerNP.com/images/store1.png'
+                      - https://sellerNP.com/images/store1.png
                     long_desc: Store 1
                     name: Store 1
                     short_desc: Store 1
-                    symbol: 'https://sellerNP.com/images/store1.png'
+                    symbol: https://sellerNP.com/images/store1.png
                   fulfillments:
                     - contact:
                         email: test@gmail.com
-                        phone: '9876543210'
+                        phone: "9876543210"
                       id: F1
                       type: Delivery
                   id: P1
                   items:
-                    - '@ondc/org/available_on_cod': true
-                      '@ondc/org/cancellable': true
-                      '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,help@beminimalist.co,9772346555'
-                      '@ondc/org/return_window': P7D
-                      '@ondc/org/returnable': true
-                      '@ondc/org/seller_pickup_return': false
-                      '@ondc/org/statutory_reqs_packaged_commodities':
-                        common_or_generic_name_of_commodity: >-
-                          AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy
-                          Acids) and PHA (Polyhydroxy Acid)
-                        manufacturer_or_packer_address: >-
-                          Seller Building Address, Jayanagar, Bengaluru,
-                          Karnataka, India - 560011
+                    - "@ondc/org/available_on_cod": true
+                      "@ondc/org/cancellable": true
+                      "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,help@beminimalist.co,9772346555
+                      "@ondc/org/return_window": P7D
+                      "@ondc/org/returnable": true
+                      "@ondc/org/seller_pickup_return": false
+                      "@ondc/org/statutory_reqs_packaged_commodities":
+                        common_or_generic_name_of_commodity: AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids) and PHA (Polyhydroxy Acid)
+                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: 03/2024
-                      '@ondc/org/time_to_ship': PT5M
+                      "@ondc/org/time_to_ship": PT5M
                       category_id: Skin Care - Face Cleansers
                       descriptor:
-                        code: '1:8809326333661'
+                        code: 1:8809326333661
                         images:
-                          - 'https://sellerNP.com/images/i1.png'
-                          - 'https://sellerNP.com/images/i1.png'
-                          - 'https://sellerNP.com/images/i1.png'
-                        long_desc: >-
-                          A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA
-                          that provides multi-level exfoliation, both on the
-                          surface & inside the pores, giving you a healthy,
-                          plump, and glowing skin.Fragrance free.
-                          Non-comedogenic 30ml
+                          - https://sellerNP.com/images/i1.png
+                          - https://sellerNP.com/images/i1.png
+                          - https://sellerNP.com/images/i1.png
+                        long_desc: A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that provides multi-level exfoliation, both on the surface & inside the pores, giving you a healthy, plump, and glowing skin.Fragrance free. Non-comedogenic 30ml
                         name: AHA PHA BHA 32%
                         short_desc: Weekend Exfoliating Facial
-                        symbol: 'https://sellerNP.com/images/i1.png'
+                        symbol: https://sellerNP.com/images/i1.png
                       fulfillment_id: F1
                       id: I1
                       location_id: L1
                       parent_item_id: V1
                       price:
                         currency: INR
-                        maximum_value: '2260'
-                        value: '2260'
+                        maximum_value: "2260"
+                        value: "2260"
                       quantity:
                         available:
-                          count: '99'
+                          count: "99"
                         maximum:
-                          count: '8'
+                          count: "8"
                         unitized:
                           measure:
                             unit: millilitre
-                            value: '30'
+                            value: "30"
                       tags:
                         - code: origin
                           list:
@@ -623,54 +577,45 @@ steps:
                               value: Minimalist
                       time:
                         label: enable
-                        timestamp: '2024-08-12T05:30:48.998Z'
-                    - '@ondc/org/available_on_cod': true
-                      '@ondc/org/cancellable': true
-                      '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
-                      '@ondc/org/return_window': P7D
-                      '@ondc/org/returnable': true
-                      '@ondc/org/seller_pickup_return': false
-                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        timestamp: 2024-08-12T05:30:48.998Z
+                    - "@ondc/org/available_on_cod": true
+                      "@ondc/org/cancellable": true
+                      "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
+                      "@ondc/org/return_window": P7D
+                      "@ondc/org/returnable": true
+                      "@ondc/org/seller_pickup_return": false
+                      "@ondc/org/statutory_reqs_packaged_commodities":
                         common_or_generic_name_of_commodity: Marula Oil
-                        manufacturer_or_packer_address: >-
-                          Seller Building Address, Jayanagar, Bengaluru,
-                          Karnataka, India - 560011
+                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                         manufacturer_or_packer_name: Seller Business
                         month_year_of_manufacture_packing_import: 03/2024
-                      '@ondc/org/time_to_ship': PT5M
-                      category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                      "@ondc/org/time_to_ship": PT5M
+                      category_id: Skin Care - Lotions, Moisturisers, and Creams
                       descriptor:
-                        code: '1:8906128100436'
+                        code: 1:8906128100436
                         images:
-                          - 'https://sellerNP.com/images/i1.png'
-                        long_desc: >-
-                          An everyday moisturizing cream with 5% Marula Oil,
-                          paired with Vitamin F and Vitamin E to nourish,
-                          moisturize and improve skin softness. It's a heavy
-                          cream, suitable for dry/damaged to normal skin
-                          types.Fragrance free    Non-comedogenic     50g
+                          - https://sellerNP.com/images/i1.png
+                        long_desc: An everyday moisturizing cream with 5% Marula Oil, paired with Vitamin F and Vitamin E to nourish, moisturize and improve skin softness. It's a heavy cream, suitable for dry/damaged to normal skin types.Fragrance free    Non-comedogenic     50g
                         name: Marula Oil 05% Moisturizer
-                        short_desc: >-
-                          Deep & Intense Moisturization. Treats Dryness,
-                          Roughness and Flakiness
-                        symbol: 'https://sellerNP.com/images/i1.png'
+                        short_desc: Deep & Intense Moisturization. Treats Dryness, Roughness and Flakiness
+                        symbol: https://sellerNP.com/images/i1.png
                       fulfillment_id: F1
                       id: I2
                       location_id: L1
                       parent_item_id: V1
                       price:
                         currency: INR
-                        maximum_value: '2360'
-                        value: '2360'
+                        maximum_value: "2360"
+                        value: "2360"
                       quantity:
                         available:
-                          count: '99'
+                          count: "99"
                         maximum:
-                          count: '10'
+                          count: "10"
                         unitized:
                           measure:
                             unit: gram
-                            value: '50'
+                            value: "50"
                       tags:
                         - code: origin
                           list:
@@ -682,51 +627,44 @@ steps:
                               value: Minamilist
                       time:
                         label: enable
-                        timestamp: '2024-08-12T10:27:48.913Z'
-                    - '@ondc/org/available_on_cod': true
-                      '@ondc/org/cancellable': true
-                      '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,support@gmail.com,2343453434'
-                      '@ondc/org/return_window': P7D
-                      '@ondc/org/returnable': true
-                      '@ondc/org/seller_pickup_return': false
-                      '@ondc/org/statutory_reqs_packaged_commodities':
+                        timestamp: 2024-08-12T10:27:48.913Z
+                    - "@ondc/org/available_on_cod": true
+                      "@ondc/org/cancellable": true
+                      "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,support@gmail.com,2343453434
+                      "@ondc/org/return_window": P7D
+                      "@ondc/org/returnable": true
+                      "@ondc/org/seller_pickup_return": false
+                      "@ondc/org/statutory_reqs_packaged_commodities":
                         common_or_generic_name_of_commodity: Niacinamide
-                        manufacturer_or_packer_address: >-
-                          Seller Building Address, Jayanagar, Bengaluru,
-                          Karnataka, India - 560011
+                        manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                         manufacturer_or_packer_name: Minimalist
                         month_year_of_manufacture_packing_import: 03/2024
-                      '@ondc/org/time_to_ship': PT5M
-                      category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                      "@ondc/org/time_to_ship": PT5M
+                      category_id: Skin Care - Lotions, Moisturisers, and Creams
                       descriptor:
-                        code: '1:8906128100108'
+                        code: 1:8906128100108
                         images:
-                          - 'https://sellerNP.com/images/i1.png'
-                        long_desc: >-
-                          A nourishing & hydrating daily serum that repairs
-                          damaged barrier & soothes sensitive skin. Ideal for
-                          people with dry, sensitive skin & those who find
-                          Niacinamide 10% a little strong.Fragrance free   
-                          Non-comedogenic 30ml
+                          - https://sellerNP.com/images/i1.png
+                        long_desc: A nourishing & hydrating daily serum that repairs damaged barrier & soothes sensitive skin. Ideal for people with dry, sensitive skin & those who find Niacinamide 10% a little strong.Fragrance free    Non-comedogenic 30ml
                         name: Niacinamide 05%
-                        short_desc: 'Hydrates, Repairs & Soothes Skin'
-                        symbol: 'https://sellerNP.com/images/i1.png'
+                        short_desc: Hydrates, Repairs & Soothes Skin
+                        symbol: https://sellerNP.com/images/i1.png
                       fulfillment_id: F1
                       id: I3
                       location_id: L1
                       price:
                         currency: INR
-                        maximum_value: '1199.00'
-                        value: '499.00'
+                        maximum_value: "1199.00"
+                        value: "499.00"
                       quantity:
                         available:
-                          count: '99'
+                          count: "99"
                         maximum:
-                          count: '99'
+                          count: "99"
                         unitized:
                           measure:
                             unit: unit
-                            value: '1'
+                            value: "1"
                       tags:
                         - code: origin
                           list:
@@ -738,43 +676,43 @@ steps:
                               value: Minimalist
                       time:
                         label: enable
-                        timestamp: '2024-08-12T10:27:48.913Z'
+                        timestamp: 2024-08-12T10:27:48.913Z
                   locations:
                     - address:
-                        area_code: '144203'
+                        area_code: "144203"
                         city: Bengaluru
                         locality: Jayanagar
                         state: Karnataka
                         street: Jayanagar
                       circle:
-                        gps: '12.925810,77.583624'
+                        gps: 12.925810,77.583624
                         radius:
                           unit: km
-                          value: '5'
-                      gps: '12.925810,77.583624'
+                          value: "5"
+                      gps: 12.925810,77.583624
                       id: L1
                       time:
-                        days: '1,2,3,4,5'
+                        days: 1,2,3,4,5
                         label: enable
                         range:
-                          end: '2359'
-                          start: '0000'
+                          end: "2359"
+                          start: "0000"
                         schedule:
                           holidays: []
-                        timestamp: '2024-08-13T06:46:19.736Z'
+                        timestamp: 2024-08-13T06:46:19.736Z
                   tags:
                     - code: serviceability
                       list:
                         - code: location
                           value: L1
                         - code: category
-                          value: 'Skin Care - Lotions, Moisturisers, and Creams'
+                          value: Skin Care - Lotions, Moisturisers, and Creams
                         - code: type
-                          value: '12'
+                          value: "12"
                         - code: unit
                           value: pincode
                         - code: val
-                          value: '560001-560076,560083'
+                          value: 560001-560076,560083
                     - code: serviceability
                       list:
                         - code: location
@@ -782,7 +720,7 @@ steps:
                         - code: category
                           value: Skin Care - Face Cleansers
                         - code: type
-                          value: '12'
+                          value: "12"
                         - code: unit
                           value: country
                         - code: val
@@ -794,16 +732,16 @@ steps:
                         - code: location
                           value: L1
                         - code: day_from
-                          value: '1'
+                          value: "1"
                         - code: day_to
-                          value: '6'
+                          value: "6"
                         - code: time_from
-                          value: '0000'
+                          value: "0000"
                         - code: time_to
-                          value: '2359'
+                          value: "2359"
                   time:
                     label: enable
-                    timestamp: '2024-08-13T06:46:19.736Z'
+                    timestamp: 2024-08-13T06:46:19.736Z
                   ttl: PT24H
         type: request
   - api: search
@@ -811,49 +749,44 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: please add relevant description
+    description: The BAP initiates a search request to the BPP to pull incremental catalog updates for a specific time range and city.
     mock:
-      generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBzZWFyY2hfaW5jX3B1bGwuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEKICogQHJldHVybnMge09iamVjdH0KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKIGNvbnN0IGN1cnJlbnRUaW1lID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAvLyBEZWZhdWx0OiBsYXN0IDIgaG91cnMgd2luZG93CmNvbnN0IHN0YXJ0VGltZSA9IG5ldyBEYXRlKAogIERhdGUubm93KCkgLSAoMiAqIDYwICogNjAgKiAxMDAwKQopLnRvSVNPU3RyaW5nKCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC50aW1lc3RhbXAgPSBjdXJyZW50VGltZTsKCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiY2F0YWxvZ19pbmMiCiAgICApOwoKICBpZiAoY2F0YWxvZ0luY1RhZykgewogICAgY29uc3Qgc3RhcnRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJzdGFydF90aW1lIgogICAgKTsKCiAgICBjb25zdCBlbmRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJlbmRfdGltZSIKICAgICk7CgogICAgaWYgKHN0YXJ0VGltZU9iaikgewogICAgICBzdGFydFRpbWVPYmoudmFsdWUgPSBzdGFydFRpbWU7CiAgICB9CgogICAgaWYgKGVuZFRpbWVPYmopIHsKICAgICAgLy8gZW5kX3RpbWUgbXVzdCBtYXRjaCBjb250ZXh0LnRpbWVzdGFtcAogICAgICBlbmRUaW1lT2JqLnZhbHVlID0gY3VycmVudFRpbWU7CiAgICB9CiAgfQoKICBjb25zdCBiYXBUZXJtc1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiYmFwX3Rlcm1zIgogICAgKTsKCiAgaWYgKGJhcFRlcm1zVGFnKSB7CiAgICBjb25zdCBlZmZlY3RpdmVEYXRlID0gYmFwVGVybXNUYWcubGlzdC5maW5kKAogICAgICAoaXRlbSkgPT4gaXRlbS5jb2RlID09PSAiZWZmZWN0aXZlX2RhdGUiCiAgICApOwoKICAgIGlmIChlZmZlY3RpdmVEYXRlKSB7CiAgICAgIGVmZmVjdGl2ZURhdGUudmFsdWUgPSBjdXJyZW50VGltZTsKICAgIH0KICB9CgoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
-      validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZD8uY29udGV4dCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dCBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLmludGVudC50YWdzIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncy5maW5kKAogICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJjYXRhbG9nX2luYyIKICApOwoKICBpZiAoIWNhdGFsb2dJbmNUYWcpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNhdGFsb2dfaW5jIHRhZyBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGNvbnN0IGJhcFRlcm1zVGFnID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gImJhcF90ZXJtcyIKICApOwoKICBpZiAoIWJhcFRlcm1zVGFnKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJiYXBfdGVybXMgdGFnIGlzIG1pc3NpbmciCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
-      requirements: >-
-        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBzZWFyY2hfaW5jX3B1bGwuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEKICogQHJldHVybnMge09iamVjdH0KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewoKIGNvbnN0IGN1cnJlbnRUaW1lID0gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwogICAvLyBEZWZhdWx0OiBsYXN0IDIgaG91cnMgd2luZG93CmNvbnN0IHN0YXJ0VGltZSA9IG5ldyBEYXRlKAogIERhdGUubm93KCkgLSAoMiAqIDYwICogNjAgKiAxMDAwKQopLnRvSVNPU3RyaW5nKCk7CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC50aW1lc3RhbXAgPSBjdXJyZW50VGltZTsKCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiY2F0YWxvZ19pbmMiCiAgICApOwoKICBpZiAoY2F0YWxvZ0luY1RhZykgewogICAgY29uc3Qgc3RhcnRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJzdGFydF90aW1lIgogICAgKTsKCiAgICBjb25zdCBlbmRUaW1lT2JqID0gY2F0YWxvZ0luY1RhZy5saXN0LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtLmNvZGUgPT09ICJlbmRfdGltZSIKICAgICk7CgogICAgaWYgKHN0YXJ0VGltZU9iaikgewogICAgICBzdGFydFRpbWVPYmoudmFsdWUgPSBzdGFydFRpbWU7CiAgICB9CgogICAgaWYgKGVuZFRpbWVPYmopIHsKICAgICAgLy8gZW5kX3RpbWUgbXVzdCBtYXRjaCBjb250ZXh0LnRpbWVzdGFtcAogICAgICBlbmRUaW1lT2JqLnZhbHVlID0gY3VycmVudFRpbWU7CiAgICB9CiAgfQoKICBjb25zdCBiYXBUZXJtc1RhZyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAgICh0YWcpID0+IHRhZy5jb2RlID09PSAiYmFwX3Rlcm1zIgogICAgKTsKCiAgaWYgKGJhcFRlcm1zVGFnKSB7CiAgICBjb25zdCBlZmZlY3RpdmVEYXRlID0gYmFwVGVybXNUYWcubGlzdC5maW5kKAogICAgICAoaXRlbSkgPT4gaXRlbS5jb2RlID09PSAiZWZmZWN0aXZlX2RhdGUiCiAgICApOwoKICAgIGlmIChlZmZlY3RpdmVEYXRlKSB7CiAgICAgIGVmZmVjdGl2ZURhdGUudmFsdWUgPSBjdXJyZW50VGltZTsKICAgIH0KICB9CgoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGlmICghdGFyZ2V0UGF5bG9hZD8uY29udGV4dCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dCBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8uaW50ZW50Py50YWdzKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLmludGVudC50YWdzIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgY29uc3QgY2F0YWxvZ0luY1RhZyA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5pbnRlbnQudGFncy5maW5kKAogICAgKHRhZykgPT4gdGFnLmNvZGUgPT09ICJjYXRhbG9nX2luYyIKICApOwoKICBpZiAoIWNhdGFsb2dJbmNUYWcpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogImNhdGFsb2dfaW5jIHRhZyBpcyBtaXNzaW5nIgogICAgfTsKICB9CgogIGNvbnN0IGJhcFRlcm1zVGFnID0gdGFyZ2V0UGF5bG9hZC5tZXNzYWdlLmludGVudC50YWdzLmZpbmQoCiAgICAodGFnKSA9PiB0YWcuY29kZSA9PT0gImJhcF90ZXJtcyIKICApOwoKICBpZiAoIWJhcFRlcm1zVGFnKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJiYXBfdGVybXMgdGFnIGlzIG1pc3NpbmciCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
         context:
-          domain: 'ONDC:RET13'
+          domain: ONDC:RET13
           action: search
-          timestamp: '2026-06-03T17:12:39.304Z'
+          timestamp: 2026-06-03T17:12:39.304Z
           transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
           message_id: 92633d10-3c52-4637-8d6e-c78eb6148297
           bap_id: bap.example.com
-          bap_uri: 'https://bap.example.com'
+          bap_uri: https://bap.example.com
           ttl: PT30S
           country: IND
-          city: '*'
+          city: "*"
           core_version: 1.2.0
         message:
           intent:
             payment:
-              '@ondc/org/buyer_app_finder_fee_type': percent
-              '@ondc/org/buyer_app_finder_fee_amount': '3.54'
+              "@ondc/org/buyer_app_finder_fee_type": percent
+              "@ondc/org/buyer_app_finder_fee_amount": "3.54"
             tags:
               - code: catalog_inc
                 list:
                   - code: start_time
-                    value: ''
+                    value: ""
                   - code: end_time
-                    value: ''
+                    value: ""
               - code: bap_terms
                 list:
                   - code: static_terms
-                    value: >-
-                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                   - code: static_terms_new
-                    value: >-
-                      https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                    value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                   - code: effective_date
-                    value: ''
+                    value: ""
       saveData:
         transactionId: $.context.transaction_id
         latestMessage_id: $.context.message_id
@@ -863,48 +796,43 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.city
-        catalog_inc_start_time: >-
-          $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='start_time')].value
-        catalog_inc_end_time: >-
-          $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='end_time')].value
+        catalog_inc_start_time: $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='start_time')].value
+        catalog_inc_end_time: $.message.intent.tags[?(@.code=='catalog_inc')].list[?(@.code=='end_time')].value
       inputs: {}
   - api: on_search
     action_id: on_search_inc_pull
     owner: BPP
     responseFor: search_inc_pull
     unsolicited: false
-    description: please add relevant description
+    description: The BPP responds to the search request by providing the incremental catalog updates relevant to the specified city and time frame.
     mock:
-      generate: >-
-        LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IHN0YXJ0VGltZSA9IHNlc3Npb25EYXRhLmNhdGFsb2dfaW5jX3N0YXJ0X3RpbWU/LlswXTsKICBjb25zdCBlbmRUaW1lID0gc2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXTsKCiAgaWYgKCFzdGFydFRpbWUgfHwgIWVuZFRpbWUpIHsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKICB9CiAgIGNvbnN0IGl0ZW1UaW1lc3RhbXAgPSBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKAogICAgc3RhcnRUaW1lLAogICAgZW5kVGltZQogICk7CgogIGNvbnN0IHByb3ZpZGVycyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSB8fCBbXTsKCiAgcHJvdmlkZXJzLmZvckVhY2goKHByb3ZpZGVyKSA9PiB7CiAgICBwcm92aWRlci5pdGVtcyA9IChwcm92aWRlci5pdGVtcyB8fCBbXSkubWFwKChpdGVtKSA9PiAoewogICAgICAuLi5pdGVtLAogICAgICB0aW1lOiB7CiAgICAgICAgbGFiZWw6ICJlbmFibGUiLAogICAgICAgIHRpbWVzdGFtcDogaXRlbVRpbWVzdGFtcAogICAgICB9CiAgICB9KSk7CiAgfSk7CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
-      validate: >-
-        LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICdtZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSBpcyBtaXNzaW5nJwogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
-      requirements: >-
-        LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfc3RhcnRfdGltZT8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJzZXNzaW9uRGF0YS5jYXRhbG9nX2luY19zdGFydF90aW1lIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAic2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWUgaXMgbWlzc2luZyIKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwoKCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGRlZmF1bHRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IHN0YXJ0VGltZSA9IHNlc3Npb25EYXRhLmNhdGFsb2dfaW5jX3N0YXJ0X3RpbWU/LlswXTsKICBjb25zdCBlbmRUaW1lID0gc2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXTsKCiAgaWYgKCFzdGFydFRpbWUgfHwgIWVuZFRpbWUpIHsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKICB9CiAgIGNvbnN0IGl0ZW1UaW1lc3RhbXAgPSBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKAogICAgc3RhcnRUaW1lLAogICAgZW5kVGltZQogICk7CgogIGNvbnN0IHByb3ZpZGVycyA9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSB8fCBbXTsKCiAgcHJvdmlkZXJzLmZvckVhY2goKHByb3ZpZGVyKSA9PiB7CiAgICBwcm92aWRlci5pdGVtcyA9IChwcm92aWRlci5pdGVtcyB8fCBbXSkubWFwKChpdGVtKSA9PiAoewogICAgICAuLi5pdGVtLAogICAgICB0aW1lOiB7CiAgICAgICAgbGFiZWw6ICJlbmFibGUiLAogICAgICAgIHRpbWVzdGFtcDogaXRlbVRpbWVzdGFtcAogICAgICB9CiAgICB9KSk7CiAgfSk7CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/LmNhdGFsb2c/LlsiYnBwL3Byb3ZpZGVycyJdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICdtZXNzYWdlLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXSBpcyBtaXNzaW5nJwogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfc3RhcnRfdGltZT8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJzZXNzaW9uRGF0YS5jYXRhbG9nX2luY19zdGFydF90aW1lIGlzIG1pc3NpbmciCiAgICB9OwogIH0KCiAgaWYgKCFzZXNzaW9uRGF0YT8uY2F0YWxvZ19pbmNfZW5kX3RpbWU/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAic2Vzc2lvbkRhdGEuY2F0YWxvZ19pbmNfZW5kX3RpbWUgaXMgbWlzc2luZyIKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
       defaultPayload:
         context:
-          domain: 'ONDC:RET13'
+          domain: ONDC:RET13
           action: on_search
-          timestamp: '2026-06-03T17:12:48.106Z'
+          timestamp: 2026-06-03T17:12:48.106Z
           transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
           message_id: 82c32385-e6c1-4ae6-bc73-735cfcdc5ba3
           bap_id: bap.example.com
-          bap_uri: 'https://bap.example.com'
+          bap_uri: https://bap.example.com
           ttl: PT30S
           bpp_id: bpp.example.com
-          bpp_uri: 'https://bpp.example.com'
+          bpp_uri: https://bpp.example.com
           country: IND
-          city: '*'
+          city: "*"
           core_version: 1.2.0
         message:
           catalog:
             bpp/descriptor:
               images:
-                - 'https://sellerNP.com/images/np.png'
+                - https://sellerNP.com/images/np.png
               long_desc: Seller Marketplace
               name: Mock Seller NP
               short_desc: Seller Marketplace
-              symbol: 'https://sellerNP.com/images/np.png'
+              symbol: https://sellerNP.com/images/np.png
               tags:
                 - code: bpp_terms
                   list:
@@ -913,7 +841,7 @@ steps:
             bpp/fulfillments:
               - contact:
                   email: test@gmail.com
-                  phone: '9876543210'
+                  phone: "9876543210"
                 id: F1
                 type: Delivery
             bpp/providers:
@@ -931,7 +859,7 @@ steps:
                           - code: name
                             value: item.tags.attribute.plating
                           - code: seq
-                            value: '1'
+                            value: "1"
                 creds:
                   - descriptor:
                       code: Social Sector
@@ -941,79 +869,71 @@ steps:
                       - code: verification
                         list:
                           - code: verify_url
-                            value: 'https://abcd.gi.com/verify?id=gi-12345678'
+                            value: https://abcd.gi.com/verify?id=gi-12345678
                           - code: verifier
                             value: CSP-ABC
                           - code: issuer
                             value: Example Authority
                           - code: valid_from
-                            value: '2023-06-03T00:00:00:000Z'
+                            value: 2023-06-03T00:00:00:000Z
                           - code: valid_to
-                            value: '2024-06-03T23:59:59:999Z'
-                    url: 'https://abcd.cdn.com/images/badge-img'
+                            value: 2024-06-03T23:59:59:999Z
+                    url: https://abcd.cdn.com/images/badge-img
                 descriptor:
                   images:
-                    - 'https://sellerNP.com/images/store1.png'
+                    - https://sellerNP.com/images/store1.png
                   long_desc: Store 1
                   name: Store 1
                   short_desc: Store 1
-                  symbol: 'https://sellerNP.com/images/store1.png'
+                  symbol: https://sellerNP.com/images/store1.png
                 fulfillments:
                   - contact:
                       email: test@gmail.com
-                      phone: '9876543210'
+                      phone: "9876543210"
                     id: F1
                     type: Delivery
                 id: P1
                 items:
-                  - '@ondc/org/available_on_cod': true
-                    '@ondc/org/cancellable': true
-                    '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,help@beminimalist.co,9772346555'
-                    '@ondc/org/return_window': P7D
-                    '@ondc/org/returnable': true
-                    '@ondc/org/seller_pickup_return': false
-                    '@ondc/org/statutory_reqs_packaged_commodities':
-                      common_or_generic_name_of_commodity: >-
-                        AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids)
-                        and PHA (Polyhydroxy Acid)
-                      manufacturer_or_packer_address: >-
-                        Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
+                  - "@ondc/org/available_on_cod": true
+                    "@ondc/org/cancellable": true
+                    "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,help@beminimalist.co,9772346555
+                    "@ondc/org/return_window": P7D
+                    "@ondc/org/returnable": true
+                    "@ondc/org/seller_pickup_return": false
+                    "@ondc/org/statutory_reqs_packaged_commodities":
+                      common_or_generic_name_of_commodity: AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids) and PHA (Polyhydroxy Acid)
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                       manufacturer_or_packer_name: Seller Business
                       month_year_of_manufacture_packing_import: 03/2024
-                    '@ondc/org/time_to_ship': PT5M
+                    "@ondc/org/time_to_ship": PT5M
                     category_id: Skin Care - Face Cleansers
                     descriptor:
-                      code: '1:8809326333661'
+                      code: 1:8809326333661
                       images:
-                        - 'https://sellerNP.com/images/i1.png'
-                        - 'https://sellerNP.com/images/i1.png'
-                        - 'https://sellerNP.com/images/i1.png'
-                      long_desc: >-
-                        A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that
-                        provides multi-level exfoliation, both on the surface &
-                        inside the pores, giving you a healthy, plump, and
-                        glowing skin.Fragrance free. Non-comedogenic 30ml
+                        - https://sellerNP.com/images/i1.png
+                        - https://sellerNP.com/images/i1.png
+                        - https://sellerNP.com/images/i1.png
+                      long_desc: A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that provides multi-level exfoliation, both on the surface & inside the pores, giving you a healthy, plump, and glowing skin.Fragrance free. Non-comedogenic 30ml
                       name: AHA PHA BHA 32%
                       short_desc: Weekend Exfoliating Facial
-                      symbol: 'https://sellerNP.com/images/i1.png'
+                      symbol: https://sellerNP.com/images/i1.png
                     fulfillment_id: F1
                     id: I1
                     location_id: L1
                     parent_item_id: V1
                     price:
                       currency: INR
-                      maximum_value: '2260'
-                      value: '2260'
+                      maximum_value: "2260"
+                      value: "2260"
                     quantity:
                       available:
-                        count: '99'
+                        count: "99"
                       maximum:
-                        count: '8'
+                        count: "8"
                       unitized:
                         measure:
                           unit: millilitre
-                          value: '30'
+                          value: "30"
                     tags:
                       - code: origin
                         list:
@@ -1025,54 +945,45 @@ steps:
                             value: Minimalist
                     time:
                       label: enable
-                      timestamp: '2024-08-12T05:30:48.998Z'
-                  - '@ondc/org/available_on_cod': true
-                    '@ondc/org/cancellable': true
-                    '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
-                    '@ondc/org/return_window': P7D
-                    '@ondc/org/returnable': true
-                    '@ondc/org/seller_pickup_return': false
-                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      timestamp: 2024-08-12T05:30:48.998Z
+                  - "@ondc/org/available_on_cod": true
+                    "@ondc/org/cancellable": true
+                    "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
+                    "@ondc/org/return_window": P7D
+                    "@ondc/org/returnable": true
+                    "@ondc/org/seller_pickup_return": false
+                    "@ondc/org/statutory_reqs_packaged_commodities":
                       common_or_generic_name_of_commodity: Marula Oil
-                      manufacturer_or_packer_address: >-
-                        Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                       manufacturer_or_packer_name: Seller Business
                       month_year_of_manufacture_packing_import: 03/2024
-                    '@ondc/org/time_to_ship': PT5M
-                    category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                    "@ondc/org/time_to_ship": PT5M
+                    category_id: Skin Care - Lotions, Moisturisers, and Creams
                     descriptor:
-                      code: '1:8906128100436'
+                      code: 1:8906128100436
                       images:
-                        - 'https://sellerNP.com/images/i1.png'
-                      long_desc: >-
-                        An everyday moisturizing cream with 5% Marula Oil,
-                        paired with Vitamin F and Vitamin E to nourish,
-                        moisturize and improve skin softness. It's a heavy
-                        cream, suitable for dry/damaged to normal skin
-                        types.Fragrance free    Non-comedogenic     50g
+                        - https://sellerNP.com/images/i1.png
+                      long_desc: An everyday moisturizing cream with 5% Marula Oil, paired with Vitamin F and Vitamin E to nourish, moisturize and improve skin softness. It's a heavy cream, suitable for dry/damaged to normal skin types.Fragrance free    Non-comedogenic     50g
                       name: Marula Oil 05% Moisturizer
-                      short_desc: >-
-                        Deep & Intense Moisturization. Treats Dryness, Roughness
-                        and Flakiness
-                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Deep & Intense Moisturization. Treats Dryness, Roughness and Flakiness
+                      symbol: https://sellerNP.com/images/i1.png
                     fulfillment_id: F1
                     id: I2
                     location_id: L1
                     parent_item_id: V1
                     price:
                       currency: INR
-                      maximum_value: '2360'
-                      value: '2360'
+                      maximum_value: "2360"
+                      value: "2360"
                     quantity:
                       available:
-                        count: '99'
+                        count: "99"
                       maximum:
-                        count: '10'
+                        count: "10"
                       unitized:
                         measure:
                           unit: gram
-                          value: '50'
+                          value: "50"
                     tags:
                       - code: origin
                         list:
@@ -1084,51 +995,44 @@ steps:
                             value: Minamilist
                     time:
                       label: enable
-                      timestamp: '2024-08-12T10:27:48.913Z'
-                  - '@ondc/org/available_on_cod': true
-                    '@ondc/org/cancellable': true
-                    '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,support@gmail.com,2343453434'
-                    '@ondc/org/return_window': P7D
-                    '@ondc/org/returnable': true
-                    '@ondc/org/seller_pickup_return': false
-                    '@ondc/org/statutory_reqs_packaged_commodities':
+                      timestamp: 2024-08-12T10:27:48.913Z
+                  - "@ondc/org/available_on_cod": true
+                    "@ondc/org/cancellable": true
+                    "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,support@gmail.com,2343453434
+                    "@ondc/org/return_window": P7D
+                    "@ondc/org/returnable": true
+                    "@ondc/org/seller_pickup_return": false
+                    "@ondc/org/statutory_reqs_packaged_commodities":
                       common_or_generic_name_of_commodity: Niacinamide
-                      manufacturer_or_packer_address: >-
-                        Seller Building Address, Jayanagar, Bengaluru,
-                        Karnataka, India - 560011
+                      manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                       manufacturer_or_packer_name: Minimalist
                       month_year_of_manufacture_packing_import: 03/2024
-                    '@ondc/org/time_to_ship': PT5M
-                    category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                    "@ondc/org/time_to_ship": PT5M
+                    category_id: Skin Care - Lotions, Moisturisers, and Creams
                     descriptor:
-                      code: '1:8906128100108'
+                      code: 1:8906128100108
                       images:
-                        - 'https://sellerNP.com/images/i1.png'
-                      long_desc: >-
-                        A nourishing & hydrating daily serum that repairs
-                        damaged barrier & soothes sensitive skin. Ideal for
-                        people with dry, sensitive skin & those who find
-                        Niacinamide 10% a little strong.Fragrance free   
-                        Non-comedogenic 30ml
+                        - https://sellerNP.com/images/i1.png
+                      long_desc: A nourishing & hydrating daily serum that repairs damaged barrier & soothes sensitive skin. Ideal for people with dry, sensitive skin & those who find Niacinamide 10% a little strong.Fragrance free    Non-comedogenic 30ml
                       name: Niacinamide 05%
-                      short_desc: 'Hydrates, Repairs & Soothes Skin'
-                      symbol: 'https://sellerNP.com/images/i1.png'
+                      short_desc: Hydrates, Repairs & Soothes Skin
+                      symbol: https://sellerNP.com/images/i1.png
                     fulfillment_id: F1
                     id: I3
                     location_id: L1
                     price:
                       currency: INR
-                      maximum_value: '1199.00'
-                      value: '499.00'
+                      maximum_value: "1199.00"
+                      value: "499.00"
                     quantity:
                       available:
-                        count: '99'
+                        count: "99"
                       maximum:
-                        count: '99'
+                        count: "99"
                       unitized:
                         measure:
                           unit: unit
-                          value: '1'
+                          value: "1"
                     tags:
                       - code: origin
                         list:
@@ -1140,34 +1044,34 @@ steps:
                             value: Minimalist
                     time:
                       label: enable
-                      timestamp: '2024-08-12T10:27:48.913Z'
+                      timestamp: 2024-08-12T10:27:48.913Z
                 locations:
                   - address:
-                      area_code: '560011'
+                      area_code: "560011"
                       city: Bengaluru
                       locality: Jayanagar
                       state: Karnataka
                       street: Jayanagar
-                    gps: '12.925810,77.583624'
+                    gps: 12.925810,77.583624
                     id: L1
                     time:
                       label: enable
                       schedule:
                         holidays: []
-                      timestamp: '2024-08-13T06:46:19.736Z'
+                      timestamp: 2024-08-13T06:46:19.736Z
                 tags:
                   - code: serviceability
                     list:
                       - code: location
                         value: L1
                       - code: category
-                        value: 'Skin Care - Lotions, Moisturisers, and Creams'
+                        value: Skin Care - Lotions, Moisturisers, and Creams
                       - code: type
-                        value: '12'
+                        value: "12"
                       - code: unit
                         value: pincode
                       - code: val
-                        value: '560001-560076,560083'
+                        value: 560001-560076,560083
                   - code: serviceability
                     list:
                       - code: location
@@ -1175,7 +1079,7 @@ steps:
                       - code: category
                         value: Skin Care - Face Cleansers
                       - code: type
-                        value: '12'
+                        value: "12"
                       - code: unit
                         value: country
                       - code: val
@@ -1187,16 +1091,16 @@ steps:
                       - code: location
                         value: L1
                       - code: day_from
-                        value: '1'
+                        value: "1"
                       - code: day_to
-                        value: '6'
+                        value: "6"
                       - code: time_from
-                        value: '0000'
+                        value: "0000"
                       - code: time_to
-                        value: '2359'
+                        value: "2359"
                 time:
                   label: enable
-                  timestamp: '2024-08-13T06:46:19.736Z'
+                  timestamp: 2024-08-13T06:46:19.736Z
                 ttl: PT24H
       saveData:
         transactionId: $.context.transaction_id
@@ -1212,49 +1116,48 @@ transaction_history:
   - action_id: search_1
     payload:
       context:
-        domain: 'ONDC:RET13'
+        domain: ONDC:RET13
         action: search
-        timestamp: '2026-06-05T09:42:50.119Z'
+        timestamp: 2026-06-05T09:42:50.119Z
         transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
         message_id: 4a247fca-0cff-448a-8a5c-55e7c7fcb3b1
         bap_id: bap.example.com
-        bap_uri: 'https://bap.example.com'
+        bap_uri: https://bap.example.com
         ttl: PT30S
         country: IND
-        city: 'std:011'
+        city: std:011
         core_version: 1.2.0
       message:
         intent:
           payment:
-            '@ondc/org/buyer_app_finder_fee_type': percent
-            '@ondc/org/buyer_app_finder_fee_amount': '3'
+            "@ondc/org/buyer_app_finder_fee_type": percent
+            "@ondc/org/buyer_app_finder_fee_amount": "3"
           tags:
             - code: bap_terms
               list:
                 - code: static_terms
-                  value: ' https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf'
+                  value: " https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/0.9/tc.pdf"
                 - code: static_terms_new
-                  value: >-
-                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: effective_date
-                  value: '2026-06-15T09:42:50.134Z'
+                  value: 2026-06-15T09:42:50.134Z
     action: search
     saved_info: {}
   - action_id: on_search1
     payload:
       context:
-        domain: 'ONDC:RET13'
+        domain: ONDC:RET13
         action: on_search
-        timestamp: '2026-06-05T09:42:51.063Z'
+        timestamp: 2026-06-05T09:42:51.063Z
         transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
         message_id: 4a247fca-0cff-448a-8a5c-55e7c7fcb3b1
         bap_id: bap.example.com
-        bap_uri: 'https://bap.example.com'
+        bap_uri: https://bap.example.com
         ttl: PT30S
         bpp_id: bpp.example.com
-        bpp_uri: 'https://bpp.example.com'
+        bpp_uri: https://bpp.example.com
         country: IND
-        city: 'std:011'
+        city: std:011
         core_version: 1.2.0
       message:
         catalog:
@@ -1262,15 +1165,15 @@ transaction_history:
             - id: F1
               type: Delivery
               contact:
-                phone: '9876543210'
+                phone: "9876543210"
                 email: test@gmail.com
           bpp/descriptor:
             name: Mock Seller NP
-            symbol: 'https://sellerNP.com/images/np.png'
+            symbol: https://sellerNP.com/images/np.png
             short_desc: Seller Marketplace
             long_desc: Seller Marketplace
             images:
-              - 'https://sellerNP.com/images/np.png'
+              - https://sellerNP.com/images/np.png
             tags:
               - code: bpp_terms
                 list:
@@ -1280,38 +1183,38 @@ transaction_history:
             - id: P1
               time:
                 label: enable
-                timestamp: '2024-08-13T06:46:19.736Z'
+                timestamp: 2024-08-13T06:46:19.736Z
               ttl: PT24H
               locations:
                 - id: L1
-                  gps: '12.925810,77.583624'
+                  gps: 12.925810,77.583624
                   address:
                     city: Bengaluru
                     state: Karnataka
-                    area_code: '144203'
+                    area_code: "144203"
                     street: Jayanagar
                     locality: Jayanagar
                   time:
                     label: enable
-                    timestamp: '2024-08-13T06:46:19.736Z'
-                    days: '1,2,3,4,5'
+                    timestamp: 2024-08-13T06:46:19.736Z
+                    days: 1,2,3,4,5
                     schedule:
                       holidays: []
                     range:
-                      start: '0000'
-                      end: '2359'
+                      start: "0000"
+                      end: "2359"
                   circle:
-                    gps: '12.925810,77.583624'
+                    gps: 12.925810,77.583624
                     radius:
                       unit: km
-                      value: '5'
+                      value: "5"
               descriptor:
                 name: Store 1
-                symbol: 'https://sellerNP.com/images/store1.png'
+                symbol: https://sellerNP.com/images/store1.png
                 short_desc: Store 1
                 long_desc: Store 1
                 images:
-                  - 'https://sellerNP.com/images/store1.png'
+                  - https://sellerNP.com/images/store1.png
               categories:
                 - id: V1
                   descriptor:
@@ -1326,58 +1229,50 @@ transaction_history:
                         - code: name
                           value: item.tags.attribute.plating
                         - code: seq
-                          value: '1'
+                          value: "1"
               items:
                 - id: I1
                   time:
                     label: enable
-                    timestamp: '2024-08-12T05:30:48.998Z'
+                    timestamp: 2024-08-12T05:30:48.998Z
                   parent_item_id: V1
                   descriptor:
                     name: AHA PHA BHA 32%
-                    code: '1:8809326333661'
-                    symbol: 'https://sellerNP.com/images/i1.png'
+                    code: 1:8809326333661
+                    symbol: https://sellerNP.com/images/i1.png
                     short_desc: Weekend Exfoliating Facial
-                    long_desc: >-
-                      A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that
-                      provides multi-level exfoliation, both on the surface &
-                      inside the pores, giving you a healthy, plump, and glowing
-                      skin.Fragrance free. Non-comedogenic 30ml
+                    long_desc: A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that provides multi-level exfoliation, both on the surface & inside the pores, giving you a healthy, plump, and glowing skin.Fragrance free. Non-comedogenic 30ml
                     images:
-                      - 'https://sellerNP.com/images/i1.png'
-                      - 'https://sellerNP.com/images/i1.png'
-                      - 'https://sellerNP.com/images/i1.png'
+                      - https://sellerNP.com/images/i1.png
+                      - https://sellerNP.com/images/i1.png
+                      - https://sellerNP.com/images/i1.png
                   quantity:
                     unitized:
                       measure:
                         unit: millilitre
-                        value: '30'
+                        value: "30"
                     available:
-                      count: '99'
+                      count: "99"
                     maximum:
-                      count: '8'
+                      count: "8"
                   price:
                     currency: INR
-                    value: '2260'
-                    maximum_value: '2260'
+                    value: "2260"
+                    maximum_value: "2260"
                   category_id: Skin Care - Face Cleansers
                   location_id: L1
                   fulfillment_id: F1
-                  '@ondc/org/returnable': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/time_to_ship': PT5M
-                  '@ondc/org/available_on_cod': true
-                  '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,help@beminimalist.co,9772346555'
-                  '@ondc/org/statutory_reqs_packaged_commodities':
+                  "@ondc/org/returnable": true
+                  "@ondc/org/cancellable": true
+                  "@ondc/org/return_window": P7D
+                  "@ondc/org/seller_pickup_return": false
+                  "@ondc/org/time_to_ship": PT5M
+                  "@ondc/org/available_on_cod": true
+                  "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,help@beminimalist.co,9772346555
+                  "@ondc/org/statutory_reqs_packaged_commodities":
                     manufacturer_or_packer_name: Seller Business
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
-                    common_or_generic_name_of_commodity: >-
-                      AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids)
-                      and PHA (Polyhydroxy Acid)
+                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
+                    common_or_generic_name_of_commodity: AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids) and PHA (Polyhydroxy Acid)
                     month_year_of_manufacture_packing_import: 03/2024
                   tags:
                     - code: origin
@@ -1391,51 +1286,42 @@ transaction_history:
                 - id: I2
                   time:
                     label: enable
-                    timestamp: '2024-08-12T10:27:48.913Z'
+                    timestamp: 2024-08-12T10:27:48.913Z
                   parent_item_id: V1
                   descriptor:
                     name: Marula Oil 05% Moisturizer
-                    code: '1:8906128100436'
-                    symbol: 'https://sellerNP.com/images/i1.png'
-                    short_desc: >-
-                      Deep & Intense Moisturization. Treats Dryness, Roughness
-                      and Flakiness
-                    long_desc: >-
-                      An everyday moisturizing cream with 5% Marula Oil, paired
-                      with Vitamin F and Vitamin E to nourish, moisturize and
-                      improve skin softness. It's a heavy cream, suitable for
-                      dry/damaged to normal skin types.Fragrance free   
-                      Non-comedogenic     50g
+                    code: 1:8906128100436
+                    symbol: https://sellerNP.com/images/i1.png
+                    short_desc: Deep & Intense Moisturization. Treats Dryness, Roughness and Flakiness
+                    long_desc: An everyday moisturizing cream with 5% Marula Oil, paired with Vitamin F and Vitamin E to nourish, moisturize and improve skin softness. It's a heavy cream, suitable for dry/damaged to normal skin types.Fragrance free    Non-comedogenic     50g
                     images:
-                      - 'https://sellerNP.com/images/i1.png'
+                      - https://sellerNP.com/images/i1.png
                   quantity:
                     unitized:
                       measure:
                         unit: gram
-                        value: '50'
+                        value: "50"
                     available:
-                      count: '99'
+                      count: "99"
                     maximum:
-                      count: '10'
+                      count: "10"
                   price:
                     currency: INR
-                    value: '2360'
-                    maximum_value: '2360'
-                  category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                    value: "2360"
+                    maximum_value: "2360"
+                  category_id: Skin Care - Lotions, Moisturisers, and Creams
                   location_id: L1
                   fulfillment_id: F1
-                  '@ondc/org/returnable': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/time_to_ship': PT5M
-                  '@ondc/org/available_on_cod': true
-                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
-                  '@ondc/org/statutory_reqs_packaged_commodities':
+                  "@ondc/org/returnable": true
+                  "@ondc/org/cancellable": true
+                  "@ondc/org/return_window": P7D
+                  "@ondc/org/seller_pickup_return": false
+                  "@ondc/org/time_to_ship": PT5M
+                  "@ondc/org/available_on_cod": true
+                  "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
+                  "@ondc/org/statutory_reqs_packaged_commodities":
                     manufacturer_or_packer_name: Seller Business
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
+                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                     common_or_generic_name_of_commodity: Marula Oil
                     month_year_of_manufacture_packing_import: 03/2024
                   tags:
@@ -1450,47 +1336,41 @@ transaction_history:
                 - id: I3
                   descriptor:
                     name: Niacinamide 05%
-                    code: '1:8906128100108'
-                    symbol: 'https://sellerNP.com/images/i1.png'
-                    short_desc: 'Hydrates, Repairs & Soothes Skin'
-                    long_desc: >-
-                      A nourishing & hydrating daily serum that repairs damaged
-                      barrier & soothes sensitive skin. Ideal for people with
-                      dry, sensitive skin & those who find Niacinamide 10% a
-                      little strong.Fragrance free    Non-comedogenic 30ml
+                    code: 1:8906128100108
+                    symbol: https://sellerNP.com/images/i1.png
+                    short_desc: Hydrates, Repairs & Soothes Skin
+                    long_desc: A nourishing & hydrating daily serum that repairs damaged barrier & soothes sensitive skin. Ideal for people with dry, sensitive skin & those who find Niacinamide 10% a little strong.Fragrance free    Non-comedogenic 30ml
                     images:
-                      - 'https://sellerNP.com/images/i1.png'
+                      - https://sellerNP.com/images/i1.png
                   price:
                     currency: INR
-                    value: '499.00'
-                    maximum_value: '1199.00'
-                  category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                    value: "499.00"
+                    maximum_value: "1199.00"
+                  category_id: Skin Care - Lotions, Moisturisers, and Creams
                   fulfillment_id: F1
                   location_id: L1
                   time:
                     label: enable
-                    timestamp: '2024-08-12T10:27:48.913Z'
+                    timestamp: 2024-08-12T10:27:48.913Z
                   quantity:
                     available:
-                      count: '99'
+                      count: "99"
                     maximum:
-                      count: '99'
+                      count: "99"
                     unitized:
                       measure:
-                        value: '1'
+                        value: "1"
                         unit: unit
-                  '@ondc/org/returnable': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/time_to_ship': PT5M
-                  '@ondc/org/available_on_cod': true
-                  '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,support@gmail.com,2343453434'
-                  '@ondc/org/statutory_reqs_packaged_commodities':
+                  "@ondc/org/returnable": true
+                  "@ondc/org/cancellable": true
+                  "@ondc/org/return_window": P7D
+                  "@ondc/org/seller_pickup_return": false
+                  "@ondc/org/time_to_ship": PT5M
+                  "@ondc/org/available_on_cod": true
+                  "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,support@gmail.com,2343453434
+                  "@ondc/org/statutory_reqs_packaged_commodities":
                     manufacturer_or_packer_name: Minimalist
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
+                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                     common_or_generic_name_of_commodity: Niacinamide
                     month_year_of_manufacture_packing_import: 03/2024
                   tags:
@@ -1506,40 +1386,40 @@ transaction_history:
                 - id: F1
                   type: Delivery
                   contact:
-                    phone: '9876543210'
+                    phone: "9876543210"
                     email: test@gmail.com
               creds:
                 - id: gi-12345678
                   descriptor:
                     code: Social Sector
                     short_desc: GI
-                  url: 'https://abcd.cdn.com/images/badge-img'
+                  url: https://abcd.cdn.com/images/badge-img
                   tags:
                     - code: verification
                       list:
                         - code: verify_url
-                          value: 'https://abcd.gi.com/verify?id=gi-12345678'
+                          value: https://abcd.gi.com/verify?id=gi-12345678
                         - code: verifier
                           value: CSP-ABC
                         - code: issuer
                           value: Example Authority
                         - code: valid_from
-                          value: '2023-06-03T00:00:00:000Z'
+                          value: 2023-06-03T00:00:00:000Z
                         - code: valid_to
-                          value: '2024-06-03T23:59:59:999Z'
+                          value: 2024-06-03T23:59:59:999Z
               tags:
                 - code: serviceability
                   list:
                     - code: location
                       value: L1
                     - code: category
-                      value: 'Skin Care - Lotions, Moisturisers, and Creams'
+                      value: Skin Care - Lotions, Moisturisers, and Creams
                     - code: type
-                      value: '12'
+                      value: "12"
                     - code: unit
                       value: pincode
                     - code: val
-                      value: '560001-560076,560083'
+                      value: 560001-560076,560083
                 - code: serviceability
                   list:
                     - code: location
@@ -1547,7 +1427,7 @@ transaction_history:
                     - code: category
                       value: Skin Care - Face Cleansers
                     - code: type
-                      value: '12'
+                      value: "12"
                     - code: unit
                       value: country
                     - code: val
@@ -1559,78 +1439,76 @@ transaction_history:
                     - code: location
                       value: L1
                     - code: day_from
-                      value: '1'
+                      value: "1"
                     - code: day_to
-                      value: '6'
+                      value: "6"
                     - code: time_from
-                      value: '0000'
+                      value: "0000"
                     - code: time_to
-                      value: '2359'
+                      value: "2359"
     action: on_search
     saved_info: {}
   - action_id: search_inc_pull
     payload:
       context:
-        domain: 'ONDC:RET13'
+        domain: ONDC:RET13
         action: search
-        timestamp: '2026-06-05T09:42:51.077Z'
+        timestamp: 2026-06-05T09:42:51.077Z
         transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
         message_id: f64af8c0-72c8-4639-96d3-88f53bff4d52
         bap_id: bap.example.com
-        bap_uri: 'https://bap.example.com'
+        bap_uri: https://bap.example.com
         ttl: PT30S
         country: IND
-        city: '*'
+        city: "*"
         core_version: 1.2.0
       message:
         intent:
           payment:
-            '@ondc/org/buyer_app_finder_fee_type': percent
-            '@ondc/org/buyer_app_finder_fee_amount': '3.54'
+            "@ondc/org/buyer_app_finder_fee_type": percent
+            "@ondc/org/buyer_app_finder_fee_amount": "3.54"
           tags:
             - code: catalog_inc
               list:
                 - code: start_time
-                  value: '2026-06-05T07:42:51.077Z'
+                  value: 2026-06-05T07:42:51.077Z
                 - code: end_time
-                  value: '2026-06-05T09:42:51.077Z'
+                  value: 2026-06-05T09:42:51.077Z
             - code: bap_terms
               list:
                 - code: static_terms
-                  value: >-
-                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: static_terms_new
-                  value: >-
-                    https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
+                  value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                 - code: effective_date
-                  value: '2026-06-05T09:42:51.077Z'
+                  value: 2026-06-05T09:42:51.077Z
     action: search
     saved_info: {}
   - action_id: on_search_inc_pull
     payload:
       context:
-        domain: 'ONDC:RET13'
+        domain: ONDC:RET13
         action: on_search
-        timestamp: '2026-06-05T09:42:51.087Z'
+        timestamp: 2026-06-05T09:42:51.087Z
         transaction_id: 11292185-e962-452b-88ef-83be14c3d0ed
         message_id: f64af8c0-72c8-4639-96d3-88f53bff4d52
         bap_id: bap.example.com
-        bap_uri: 'https://bap.example.com'
+        bap_uri: https://bap.example.com
         ttl: PT30S
         bpp_id: bpp.example.com
-        bpp_uri: 'https://bpp.example.com'
+        bpp_uri: https://bpp.example.com
         country: IND
-        city: '*'
+        city: "*"
         core_version: 1.2.0
       message:
         catalog:
           bpp/descriptor:
             images:
-              - 'https://sellerNP.com/images/np.png'
+              - https://sellerNP.com/images/np.png
             long_desc: Seller Marketplace
             name: Mock Seller NP
             short_desc: Seller Marketplace
-            symbol: 'https://sellerNP.com/images/np.png'
+            symbol: https://sellerNP.com/images/np.png
             tags:
               - code: bpp_terms
                 list:
@@ -1639,7 +1517,7 @@ transaction_history:
           bpp/fulfillments:
             - contact:
                 email: test@gmail.com
-                phone: '9876543210'
+                phone: "9876543210"
               id: F1
               type: Delivery
           bpp/providers:
@@ -1657,7 +1535,7 @@ transaction_history:
                         - code: name
                           value: item.tags.attribute.plating
                         - code: seq
-                          value: '1'
+                          value: "1"
               creds:
                 - descriptor:
                     code: Social Sector
@@ -1667,79 +1545,71 @@ transaction_history:
                     - code: verification
                       list:
                         - code: verify_url
-                          value: 'https://abcd.gi.com/verify?id=gi-12345678'
+                          value: https://abcd.gi.com/verify?id=gi-12345678
                         - code: verifier
                           value: CSP-ABC
                         - code: issuer
                           value: Example Authority
                         - code: valid_from
-                          value: '2023-06-03T00:00:00:000Z'
+                          value: 2023-06-03T00:00:00:000Z
                         - code: valid_to
-                          value: '2024-06-03T23:59:59:999Z'
-                  url: 'https://abcd.cdn.com/images/badge-img'
+                          value: 2024-06-03T23:59:59:999Z
+                  url: https://abcd.cdn.com/images/badge-img
               descriptor:
                 images:
-                  - 'https://sellerNP.com/images/store1.png'
+                  - https://sellerNP.com/images/store1.png
                 long_desc: Store 1
                 name: Store 1
                 short_desc: Store 1
-                symbol: 'https://sellerNP.com/images/store1.png'
+                symbol: https://sellerNP.com/images/store1.png
               fulfillments:
                 - contact:
                     email: test@gmail.com
-                    phone: '9876543210'
+                    phone: "9876543210"
                   id: F1
                   type: Delivery
               id: P1
               items:
-                - '@ondc/org/available_on_cod': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,help@beminimalist.co,9772346555'
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/returnable': true
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/statutory_reqs_packaged_commodities':
-                    common_or_generic_name_of_commodity: >-
-                      AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids)
-                      and PHA (Polyhydroxy Acid)
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
+                - "@ondc/org/available_on_cod": true
+                  "@ondc/org/cancellable": true
+                  "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,help@beminimalist.co,9772346555
+                  "@ondc/org/return_window": P7D
+                  "@ondc/org/returnable": true
+                  "@ondc/org/seller_pickup_return": false
+                  "@ondc/org/statutory_reqs_packaged_commodities":
+                    common_or_generic_name_of_commodity: AHAs (Alpha Hydroxy Acids) and BHAs (Beta Hydroxy Acids) and PHA (Polyhydroxy Acid)
+                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                     manufacturer_or_packer_name: Seller Business
                     month_year_of_manufacture_packing_import: 03/2024
-                  '@ondc/org/time_to_ship': PT5M
+                  "@ondc/org/time_to_ship": PT5M
                   category_id: Skin Care - Face Cleansers
                   descriptor:
-                    code: '1:8809326333661'
+                    code: 1:8809326333661
                     images:
-                      - 'https://sellerNP.com/images/i1.png'
-                      - 'https://sellerNP.com/images/i1.png'
-                      - 'https://sellerNP.com/images/i1.png'
-                    long_desc: >-
-                      A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that
-                      provides multi-level exfoliation, both on the surface &
-                      inside the pores, giving you a healthy, plump, and glowing
-                      skin.Fragrance free. Non-comedogenic 30ml
+                      - https://sellerNP.com/images/i1.png
+                      - https://sellerNP.com/images/i1.png
+                      - https://sellerNP.com/images/i1.png
+                    long_desc: A powerful peeling trio of 25% AHA, 5% PHA & 2% BHA that provides multi-level exfoliation, both on the surface & inside the pores, giving you a healthy, plump, and glowing skin.Fragrance free. Non-comedogenic 30ml
                     name: AHA PHA BHA 32%
                     short_desc: Weekend Exfoliating Facial
-                    symbol: 'https://sellerNP.com/images/i1.png'
+                    symbol: https://sellerNP.com/images/i1.png
                   fulfillment_id: F1
                   id: I1
                   location_id: L1
                   parent_item_id: V1
                   price:
                     currency: INR
-                    maximum_value: '2260'
-                    value: '2260'
+                    maximum_value: "2260"
+                    value: "2260"
                   quantity:
                     available:
-                      count: '99'
+                      count: "99"
                     maximum:
-                      count: '8'
+                      count: "8"
                     unitized:
                       measure:
                         unit: millilitre
-                        value: '30'
+                        value: "30"
                   tags:
                     - code: origin
                       list:
@@ -1751,54 +1621,45 @@ transaction_history:
                           value: Minimalist
                   time:
                     label: enable
-                    timestamp: '2026-06-05T09:35:11.217Z'
-                - '@ondc/org/available_on_cod': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/contact_details_consumer_care': 'Seller Business,test@gmail.com,9876543210'
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/returnable': true
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    timestamp: 2026-06-05T09:35:11.217Z
+                - "@ondc/org/available_on_cod": true
+                  "@ondc/org/cancellable": true
+                  "@ondc/org/contact_details_consumer_care": Seller Business,test@gmail.com,9876543210
+                  "@ondc/org/return_window": P7D
+                  "@ondc/org/returnable": true
+                  "@ondc/org/seller_pickup_return": false
+                  "@ondc/org/statutory_reqs_packaged_commodities":
                     common_or_generic_name_of_commodity: Marula Oil
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
+                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                     manufacturer_or_packer_name: Seller Business
                     month_year_of_manufacture_packing_import: 03/2024
-                  '@ondc/org/time_to_ship': PT5M
-                  category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                  "@ondc/org/time_to_ship": PT5M
+                  category_id: Skin Care - Lotions, Moisturisers, and Creams
                   descriptor:
-                    code: '1:8906128100436'
+                    code: 1:8906128100436
                     images:
-                      - 'https://sellerNP.com/images/i1.png'
-                    long_desc: >-
-                      An everyday moisturizing cream with 5% Marula Oil, paired
-                      with Vitamin F and Vitamin E to nourish, moisturize and
-                      improve skin softness. It's a heavy cream, suitable for
-                      dry/damaged to normal skin types.Fragrance free   
-                      Non-comedogenic     50g
+                      - https://sellerNP.com/images/i1.png
+                    long_desc: An everyday moisturizing cream with 5% Marula Oil, paired with Vitamin F and Vitamin E to nourish, moisturize and improve skin softness. It's a heavy cream, suitable for dry/damaged to normal skin types.Fragrance free    Non-comedogenic     50g
                     name: Marula Oil 05% Moisturizer
-                    short_desc: >-
-                      Deep & Intense Moisturization. Treats Dryness, Roughness
-                      and Flakiness
-                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Deep & Intense Moisturization. Treats Dryness, Roughness and Flakiness
+                    symbol: https://sellerNP.com/images/i1.png
                   fulfillment_id: F1
                   id: I2
                   location_id: L1
                   parent_item_id: V1
                   price:
                     currency: INR
-                    maximum_value: '2360'
-                    value: '2360'
+                    maximum_value: "2360"
+                    value: "2360"
                   quantity:
                     available:
-                      count: '99'
+                      count: "99"
                     maximum:
-                      count: '10'
+                      count: "10"
                     unitized:
                       measure:
                         unit: gram
-                        value: '50'
+                        value: "50"
                   tags:
                     - code: origin
                       list:
@@ -1810,50 +1671,44 @@ transaction_history:
                           value: Minamilist
                   time:
                     label: enable
-                    timestamp: '2026-06-05T09:35:11.217Z'
-                - '@ondc/org/available_on_cod': true
-                  '@ondc/org/cancellable': true
-                  '@ondc/org/contact_details_consumer_care': 'Minimalist Customer Care,support@gmail.com,2343453434'
-                  '@ondc/org/return_window': P7D
-                  '@ondc/org/returnable': true
-                  '@ondc/org/seller_pickup_return': false
-                  '@ondc/org/statutory_reqs_packaged_commodities':
+                    timestamp: 2026-06-05T09:35:11.217Z
+                - "@ondc/org/available_on_cod": true
+                  "@ondc/org/cancellable": true
+                  "@ondc/org/contact_details_consumer_care": Minimalist Customer Care,support@gmail.com,2343453434
+                  "@ondc/org/return_window": P7D
+                  "@ondc/org/returnable": true
+                  "@ondc/org/seller_pickup_return": false
+                  "@ondc/org/statutory_reqs_packaged_commodities":
                     common_or_generic_name_of_commodity: Niacinamide
-                    manufacturer_or_packer_address: >-
-                      Seller Building Address, Jayanagar, Bengaluru, Karnataka,
-                      India - 560011
+                    manufacturer_or_packer_address: Seller Building Address, Jayanagar, Bengaluru, Karnataka, India - 560011
                     manufacturer_or_packer_name: Minimalist
                     month_year_of_manufacture_packing_import: 03/2024
-                  '@ondc/org/time_to_ship': PT5M
-                  category_id: 'Skin Care - Lotions, Moisturisers, and Creams'
+                  "@ondc/org/time_to_ship": PT5M
+                  category_id: Skin Care - Lotions, Moisturisers, and Creams
                   descriptor:
-                    code: '1:8906128100108'
+                    code: 1:8906128100108
                     images:
-                      - 'https://sellerNP.com/images/i1.png'
-                    long_desc: >-
-                      A nourishing & hydrating daily serum that repairs damaged
-                      barrier & soothes sensitive skin. Ideal for people with
-                      dry, sensitive skin & those who find Niacinamide 10% a
-                      little strong.Fragrance free    Non-comedogenic 30ml
+                      - https://sellerNP.com/images/i1.png
+                    long_desc: A nourishing & hydrating daily serum that repairs damaged barrier & soothes sensitive skin. Ideal for people with dry, sensitive skin & those who find Niacinamide 10% a little strong.Fragrance free    Non-comedogenic 30ml
                     name: Niacinamide 05%
-                    short_desc: 'Hydrates, Repairs & Soothes Skin'
-                    symbol: 'https://sellerNP.com/images/i1.png'
+                    short_desc: Hydrates, Repairs & Soothes Skin
+                    symbol: https://sellerNP.com/images/i1.png
                   fulfillment_id: F1
                   id: I3
                   location_id: L1
                   price:
                     currency: INR
-                    maximum_value: '1199.00'
-                    value: '499.00'
+                    maximum_value: "1199.00"
+                    value: "499.00"
                   quantity:
                     available:
-                      count: '99'
+                      count: "99"
                     maximum:
-                      count: '99'
+                      count: "99"
                     unitized:
                       measure:
                         unit: unit
-                        value: '1'
+                        value: "1"
                   tags:
                     - code: origin
                       list:
@@ -1865,34 +1720,34 @@ transaction_history:
                           value: Minimalist
                   time:
                     label: enable
-                    timestamp: '2026-06-05T09:35:11.217Z'
+                    timestamp: 2026-06-05T09:35:11.217Z
               locations:
                 - address:
-                    area_code: '560011'
+                    area_code: "560011"
                     city: Bengaluru
                     locality: Jayanagar
                     state: Karnataka
                     street: Jayanagar
-                  gps: '12.925810,77.583624'
+                  gps: 12.925810,77.583624
                   id: L1
                   time:
                     label: enable
                     schedule:
                       holidays: []
-                    timestamp: '2024-08-13T06:46:19.736Z'
+                    timestamp: 2024-08-13T06:46:19.736Z
               tags:
                 - code: serviceability
                   list:
                     - code: location
                       value: L1
                     - code: category
-                      value: 'Skin Care - Lotions, Moisturisers, and Creams'
+                      value: Skin Care - Lotions, Moisturisers, and Creams
                     - code: type
-                      value: '12'
+                      value: "12"
                     - code: unit
                       value: pincode
                     - code: val
-                      value: '560001-560076,560083'
+                      value: 560001-560076,560083
                 - code: serviceability
                   list:
                     - code: location
@@ -1900,7 +1755,7 @@ transaction_history:
                     - code: category
                       value: Skin Care - Face Cleansers
                     - code: type
-                      value: '12'
+                      value: "12"
                     - code: unit
                       value: country
                     - code: val
@@ -1912,19 +1767,18 @@ transaction_history:
                     - code: location
                       value: L1
                     - code: day_from
-                      value: '1'
+                      value: "1"
                     - code: day_to
-                      value: '6'
+                      value: "6"
                     - code: time_from
-                      value: '0000'
+                      value: "0000"
                     - code: time_to
-                      value: '2359'
+                      value: "2359"
               time:
                 label: enable
-                timestamp: '2024-08-13T06:46:19.736Z'
+                timestamp: 2024-08-13T06:46:19.736Z
               ttl: PT24H
     action: on_search
     saved_info: {}
-validationLib: ''
-helperLib: >-
-  LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiB1cGRhdGVUaW1lc3RhbXBzKG9iaikgewogIGNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIGZ1bmN0aW9uIHJlY3Vyc2l2ZVVwZGF0ZShjdXJyZW50KSB7CiAgICBpZiAodHlwZW9mIGN1cnJlbnQgIT09ICJvYmplY3QiIHx8IGN1cnJlbnQgPT09IG51bGwpIHsKICAgICAgcmV0dXJuOwogICAgfQoKICAgIGZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKICAgICAgaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKICAgICAgICBjdXJyZW50W2tleV0gPSBjdXJyZW50VGltZXN0YW1wOwogICAgICB9IGVsc2UgaWYgKHR5cGVvZiBjdXJyZW50W2tleV0gPT09ICJvYmplY3QiKSB7CiAgICAgICAgcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSk7CiAgICAgIH0KICAgIH0KICB9CgogIHJlY3Vyc2l2ZVVwZGF0ZShvYmopOwogIHJldHVybiBvYmo7Cn0KCgpmdW5jdGlvbiBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKHN0YXJ0VGltZSwgZW5kVGltZSkgewoJY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZShzdGFydFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IGVuZCA9IG5ldyBEYXRlKGVuZFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IHJhbmRvbVRpbWUgPQoJCU1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChlbmQgLSBzdGFydCArIDEpKSArIHN0YXJ0OwoJcmV0dXJuIG5ldyBEYXRlKHJhbmRvbVRpbWUpLnRvSVNPU3RyaW5nKCk7Cn0=
+validationLib: ""
+helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCmNvbnN0IGNyZWF0ZUZvcm1VUkwgPSAoZG9tYWluLGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKCWNvbnN0IGJhc2VVUkwgPSBzZXNzaW9uRGF0YS5tb2NrQmFzZVVybDsKCWNvbnN0IHRyYW5zYWN0aW9uSWQgPSBzZXNzaW9uRGF0YS50cmFuc2FjdGlvbklkWzBdOwoJY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwoJcmV0dXJuIGAke2Jhc2VVUkx9L2Zvcm1zLyR7ZG9tYWlufS8ke2Zvcm1JZH0vP3RyYW5zYWN0aW9uX2lkPSR7dHJhbnNhY3Rpb25JZH0mc2Vzc2lvbl9pZD0ke3Nlc3Npb25JZH1gOwp9CgovLyBHZW5lcmF0ZXMgYSBVVUlEIHY0CmZ1bmN0aW9uIHV1aWR2NCgpIHsKCXJldHVybiAneHh4eHh4eHgteHh4eC00eHh4LXl4eHgteHh4eHh4eHh4eHh4Jy5yZXBsYWNlKC9beHldL2csIGZ1bmN0aW9uIChjKSB7CgkgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwoJICBjb25zdCB2ID0gYyA9PT0gJ3gnID8gciA6IChyICYgMHgzIHwgMHg4KTsKCSAgcmV0dXJuIHYudG9TdHJpbmcoMTYpOwoJfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKCXJldHVybiBNYXRoLmZsb29yKDEwMDAwMCArIE1hdGgucmFuZG9tKCkgKiA5MDAwMDApLnRvU3RyaW5nKCk7Cn0KCi8vIFJldHVybnMgdGhlIGN1cnJlbnQgSVNPIHRpbWVzdGFtcApmdW5jdGlvbiBjdXJyZW50VGltZXN0YW1wKCkgewoJcmV0dXJuIG5ldyBEYXRlKCkudG9JU09TdHJpbmcoKTsKfQoKLy8gQ29udmVydHMgSVNPIDg2MDEgZHVyYXRpb24gc3RyaW5nIHRvIHRvdGFsIHNlY29uZHMKY29uc3QgaXNvRHVyVG9TZWMgPSAoZHVyYXRpb24pID0+IHsKICBjb25zdCBkdXJSRSA9IC9QKChkKylZKT8oKGQrKU0pPygoZCspVyk/KChkKylEKT9UPygoZCspSCk/KChkKylNKT8oKGQrKVMpPy87CiAgY29uc3QgcyA9IGR1clJFLmV4ZWMoZHVyYXRpb24pOwogIGlmICghcykgcmV0dXJuIDA7CiAgCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKCShOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwoJKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKCShOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKCShOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKCShOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCgkoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CglpZiAoIWlucHV0cykgcmV0dXJuICIqIjsKCWxldCB2ZXJzaW9uID0gcGF5bG9hZC5jb250ZXh0LnZlcnNpb24gfHwgcGF5bG9hZC5jb250ZXh0LmNvcmVfdmVyc2lvbiB8fCAiMi4wLjAiOwoJaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CgkJcGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHMuY2l0eV9jb2RlID8/ICIqIjsKCX0gZWxzZSB7CgkJcGF5bG9hZC5jb250ZXh0LmxvY2F0aW9uLmNpdHkuY29kZSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwoJfQp9CgpmdW5jdGlvbiB1cGRhdGVUaW1lc3RhbXBzKG9iaikgewogIGNvbnN0IGN1cnJlbnRUaW1lc3RhbXAgPSBuZXcgRGF0ZSgpLnRvSVNPU3RyaW5nKCk7CgogIGZ1bmN0aW9uIHJlY3Vyc2l2ZVVwZGF0ZShjdXJyZW50KSB7CiAgICBpZiAodHlwZW9mIGN1cnJlbnQgIT09ICJvYmplY3QiIHx8IGN1cnJlbnQgPT09IG51bGwpIHsKICAgICAgcmV0dXJuOwogICAgfQoKICAgIGZvciAoY29uc3Qga2V5IGluIGN1cnJlbnQpIHsKICAgICAgaWYgKGtleSA9PT0gInRpbWVzdGFtcCIgJiYgdHlwZW9mIGN1cnJlbnRba2V5XSA9PT0gInN0cmluZyIpIHsKICAgICAgICBjdXJyZW50W2tleV0gPSBjdXJyZW50VGltZXN0YW1wOwogICAgICB9IGVsc2UgaWYgKHR5cGVvZiBjdXJyZW50W2tleV0gPT09ICJvYmplY3QiKSB7CiAgICAgICAgcmVjdXJzaXZlVXBkYXRlKGN1cnJlbnRba2V5XSk7CiAgICAgIH0KICAgIH0KICB9CgogIHJlY3Vyc2l2ZVVwZGF0ZShvYmopOwogIHJldHVybiBvYmo7Cn0KCgpmdW5jdGlvbiBnZXRSYW5kb21UaW1lc3RhbXBCZXR3ZWVuKHN0YXJ0VGltZSwgZW5kVGltZSkgewoJY29uc3Qgc3RhcnQgPSBuZXcgRGF0ZShzdGFydFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IGVuZCA9IG5ldyBEYXRlKGVuZFRpbWUpLmdldFRpbWUoKTsKCWNvbnN0IHJhbmRvbVRpbWUgPQoJCU1hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIChlbmQgLSBzdGFydCArIDEpKSArIHN0YXJ0OwoJcmV0dXJuIG5ldyBEYXRlKHJhbmRvbVRpbWUpLnRvSVNPU3RyaW5nKCk7Cn0=

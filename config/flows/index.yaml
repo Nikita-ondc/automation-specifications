@@ -7,7 +7,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Return Flow for BPC
+    description: A comprehensive transaction flow for Buyer-initiated returns in the BPC domain, covering the end-to-end lifecycle of both full and partial order returns from initial selection and confirmation through to status tracking and final updates.
     config:
       $ref: ./BPC/Buyer_Initiated_Return__Full_Order_and_Partial_Order_.yaml
   - type: playground
@@ -18,7 +18,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Cancellation Flow for BPC
+    description: This flow manages the end-to-end process of a buyer initiating and completing the cancellation of an order, covering the sequence from selection and initialization to final confirmation and cancellation acknowledgement.
     config:
       $ref: ./BPC/Buyer_Side_Order_Cancellation.yaml
   - type: playground
@@ -29,7 +29,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: RTO and Part Cancellation Flow for BPC
+    description: This flow handles the end-to-end process for Return to Origin (RTO) and partial order cancellations within the BPC domain, covering everything from initial selection and confirmation to final status updates.
     config:
       $ref: ./BPC/Merchant_Side_RTO_and_Part_Order_Cancellation_Flow.yaml
   - type: playground
@@ -40,7 +40,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Delivery Flow for BPC
+    description: A complete prepaid order lifecycle for BPC, covering the journey from item selection and payment initiation to order confirmation, fulfillment tracking, and final status updates.
     config:
       $ref: ./BPC/Order_to_confirm_to_fulfillment__Prepaid_.yaml
   - type: playground
@@ -51,7 +51,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Out of Stock Flow for BPC
+    description: Handles the scenario where a selected item is unavailable at the time of order processing, triggering an out-of-stock error notification to the buyer.
     config:
       $ref: ./BPC/Out_of_Stock_Error_code_.yaml
   - type: playground
@@ -62,7 +62,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Discovery Flow (Full Catalog) for BPC
+    description: A discovery flow for Beauty and Personal Care (BPC) that enables users to search the full city catalog and receive a curated list of available products and services.
     config:
       $ref: ./BPC/Search_and_Custom_Menu__Full_Catalog_City_.yaml
   - type: playground
@@ -73,7 +73,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Discovery Flow (Incremental Catalog) for BPC
+    description: A BPC discovery sequence utilizing an incremental catalog push to validate search and custom menu functionality through repetitive search iterations.
     config:
       $ref: ./BPC/Search_and_Custom_Menu__Incremental_Push_.yaml
   - type: playground
@@ -81,6 +81,21 @@ flows:
     usecase: BPC
     tags:
       - WORKBENCH
-    description: Discovery Flow Incremental Catalog Refresh Pull
+    description: A BPC discovery flow that validates the incremental catalog refresh pull mechanism through a sequence of repeated search requests and responses.
     config:
       $ref: ./BPC/Discovery_Flow_incremental_catalog_refresh_pull.yaml
+
+
+  # ________________IGM_1.0.0__________________
+
+  - type: playground
+    id: Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0
+    usecase: BPC
+    tags:
+      - WORKBENCH
+      # - PRAMAAN
+      - MANDATORY
+      # - REPORTABLE
+    description: A complete prepaid order lifecycle for BPC, covering the journey from item selection and payment initiation to order confirmation, fulfillment tracking, and final status updates.
+    config:
+      $ref: ./BPC/Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0.yaml
