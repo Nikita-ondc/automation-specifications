@@ -3644,7 +3644,7 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.location.city.code
+        city_code: $.context.city
         latest_issue_payload: $.message.issue
         message_id: $.context.message_id
         last_action: $.context.action
@@ -3796,7 +3796,7 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.location.city.code
+        city_code: $.context.city
         latest_issue_payload: $.message.issue
         last_action: $.context.action
         issue_action: $.message.issue.actions[*]
@@ -3940,7 +3940,7 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.location.city.code
+        city_code: $.context.city
         latest_issue_payload: $.message.issue
         last_action: $.context.action
         issue_action: $.message.issue.actions[*]
@@ -4072,7 +4072,7 @@ steps:
         bapUri: $.context.bap_uri
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
-        city_code: $.context.location.city.code
+        city_code: $.context.city
         latest_issue_payload: $.message.issue
         message_id: $.context.message_id
         last_action: $.context.action
