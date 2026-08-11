@@ -7,7 +7,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Cancellation)
+    description: End-to-end ONDC transaction validating a buyer's ability to select, confirm, and cancel an electronics order, exercising the complete order lifecycle including cancellation processing.
     config:
       $ref: ./ELECTRONICS/Buyer_Cancellation_Flow.yaml
   - type: playground
@@ -17,7 +17,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Customization input)
+    description: Retail transaction flow enabling customers to select electronics products, input personalized text customization, confirm orders, and track fulfillment.
     config:
       $ref: ./ELECTRONICS/Customization_Input_Text_Flow.yaml
   - type: playground
@@ -28,7 +28,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery)
+    description: Complete electronics e-commerce transaction flow from product selection and order confirmation through fulfillment tracking and last-mile delivery execution.
     config:
       $ref: ./ELECTRONICS/Delivery_Flow.yaml
   - type: playground
@@ -39,7 +39,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery with IGM 1)
+    description: Complete electronics transaction flow enabling product selection, order confirmation, and delivery tracking with integrated issue grievance management for customer complaint resolution.
     config:
       $ref: ./ELECTRONICS/Delivery_Flow_With_IGM_v-1_0_0_.yaml
   - type: playground
@@ -50,7 +50,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery with IGM 1)
+    description: Electronics delivery flow with integrated grievance management, covering the complete order lifecycle from selection through delivery tracking and customer issue resolution.
     config:
       $ref: ./ELECTRONICS/Delivery_Flow_With_IGM_v-2_0_0_.yaml
   - type: playground
@@ -59,7 +59,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Delivery with IGM 3)
+    description: Complete electronics delivery transaction including order placement, delivery tracking, and issue grievance management without resolution action.
     config:
       $ref: ./ELECTRONICS/Delivery_Flow_With_IGM_No_Action_v-2_0_0_.yaml
   - type: playground
@@ -70,7 +70,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery with IGM 2)
+    description: Retail electronics delivery order lifecycle from product selection through delivery with integrated issue governance and seller rejection of customer disputes during fulfillment.
     config:
       $ref: ./ELECTRONICS/Delivery_Flow_With_IGM_Rejection_v-2_0_0_.yaml
   - type: playground
@@ -81,7 +81,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Discovery Flow)
+    description: Buyers search for electronics products and sellers respond with matching items from their complete product catalog, enabling end-to-end discovery of available inventory.
     config:
       $ref: ./ELECTRONICS/Discovery_Flow_full_catalog.yaml
   - type: playground
@@ -92,7 +92,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Discovery Flow Incremental Catalog)
+    description: An electronics discovery flow where buyers conduct refined product searches and sellers provide incremental catalog updates, enabling dynamic product visibility and optimized buyer-seller matching.
     config:
       $ref: ./ELECTRONICS/Discovery_Flow_incremental_catalog.yaml
   - type: playground
@@ -100,14 +100,14 @@ flows:
     usecase: ELECTRONICS
     tags:
       - WORKBENCH
-    description: Retail 1.2.5 (Discovery Flow Incremental Catalog Refresh Pull)
+    description: A buyer discovers electronics products from a seller through iterative searches, with the seller's catalog refreshed incrementally between each search cycle to ensure current inventory and pricing visibility.
     config:
       $ref: ./ELECTRONICS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
   - type: playground
     id: Force_Cancellation_Flow
     usecase: ELECTRONICS
     tags: []
-    description: Retail 1.2.5 (Cancellation)
+    description: A customer selects and confirms an electronics order, then cancels it, exercising the complete cancellation workflow with periodic status verification and final system update.
     config:
       $ref: ./ELECTRONICS/Force_Cancellation_Flow.yaml
   - type: playground
@@ -116,7 +116,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Out Of Stock)
+    description: End-to-end electronics purchase journey from product selection and order confirmation through multi-point status tracking and delivery verification.
     config:
       $ref: ./ELECTRONICS/Out_Of_Stock_Flow.yaml
   - type: playground
@@ -126,7 +126,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Out Of Stock)
+    description: Exercises the transaction flow when a buyer selects an electronics product that is out of stock, validating proper error communication and unavailability status handling from the seller.
     config:
       $ref: ./ELECTRONICS/Out_Of_Stock_Flow_Error-code_.yaml
   - type: playground
@@ -136,14 +136,14 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (purchase finance)
+    description: Purchase of electronics with a financing option, from product selection through seller confirmation and multiple status updates tracking fulfillment and installment progress.
     config:
       $ref: ./ELECTRONICS/Purchase_Finance_Flow.yaml
   - type: playground
     id: Return_Flow
     usecase: ELECTRONICS
     tags: []
-    description: Retail 1.2.5 (Return)
+    description: Electronic products return flow allowing customers to select items, confirm returns, and monitor status through each stage of fulfillment from initiation to final resolution.
     config:
       $ref: ./ELECTRONICS/Return_Flow.yaml
   - type: playground
@@ -152,7 +152,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (SNP collecting payment)
+    description: Customer-initiated electronics retail transaction enabling product selection, payment collection, and order confirmation with real-time status tracking through the transaction lifecycle.
     config:
       $ref: ./ELECTRONICS/SNP_Collecting_Payment_Flow.yaml
   - type: playground
@@ -161,7 +161,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Cancellation)
+    description: Seller cancellation of a confirmed electronics order, demonstrating the complete order lifecycle from product selection and confirmation through seller-initiated cancellation with status updates to the buyer.
     config:
       $ref: ./ELECTRONICS/Seller_Cancellation_Flow.yaml
   - type: playground
@@ -172,6 +172,6 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Replacement)
+    description: Electronics replacement transaction flow covering product selection, order confirmation, and fulfillment with comprehensive status tracking.
     config:
       $ref: ./ELECTRONICS/Replacement_Flow.yaml
