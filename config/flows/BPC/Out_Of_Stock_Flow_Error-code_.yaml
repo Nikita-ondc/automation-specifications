@@ -119,9 +119,9 @@ steps:
           context:
             domain: ONDC:RET13
             action: select
-            timestamp: 2026-07-15T06:54:50.490Z
+            timestamp: 2026-08-17T10:52:19.323Z
             transaction_id: 1b17d5f1-db9d-4f45-88cd-0027a19889db
-            message_id: beb8cb96-1872-4754-bf3a-ff1c5e7b8020
+            message_id: 2df15255-5415-4415-b25b-de2887804b12
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -136,7 +136,11 @@ steps:
                 id: P1
                 locations:
                   - id: L1
-              items: []
+              items:
+                - id: I1
+                  quantity:
+                    count: 1
+                  location_id: L1
               fulfillments:
                 - end:
                     location:
@@ -156,7 +160,7 @@ steps:
       communicating that the requested items are out of stock and unavailable,
       terminating the transaction at the selection stage.
     mock:
-      generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgICBjb25zdCBzZWxlY3RlZEl0ZW1zT2JqID0gc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfaXRlbXM7CiAgICBjb25zb2xlLmxvZygiU2VsZWN0ZWQgSXRlbXM6ICIsIHNlbGVjdGVkSXRlbXNPYmopOwogICAgY29uc3QgY2F0YWxvZyA9IFJFVDE2SE9NRUtJVENIRU4xMjVDYXRhbG9nOwogICAgbGV0IG91dF9vZl9zdG9ja3NfaXRlbV9pZHMgPSBbXTsKCiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zID0gc2VsZWN0ZWRJdGVtc09iai5tYXAoKGl0ZW0pID0+ICh7CiAgICAgICAgaWQ6IGl0ZW0uaWQsCiAgICAgICAgZnVsZmlsbG1lbnRfaWQ6ICJGMSIsCiAgICB9KSk7CgogICAgY29uc3QgaWRNYXAgPSBzZWxlY3RlZEl0ZW1zT2JqLm1hcCgoaXRlbSkgPT4gaXRlbS5pZCk7CiAgICBjb25zdCBjYXRhbG9nSXRlbXMgPSBjYXRhbG9nLmNhdGFsb2dbImJwcC9wcm92aWRlcnMiXVswXS5pdGVtcy5maWx0ZXIoKGkpID0+CiAgICAgICAgaWRNYXAuaW5jbHVkZXMoaS5pZCkKICAgICk7CgogICAgY29uc29sZS5sb2coIkNhdGFsb2cgSXRlbXM6ICIsIGNhdGFsb2dJdGVtcyk7CgogICAgLy8g4pyFIElubGluZSByZXBsYWNlbWVudCBmb3IgZ2V0UmFuZG9tSXRlbQogICAgY29uc3QgcmFuZG9tT3V0T2ZTdG9ja0l0ZW0gPSBjYXRhbG9nSXRlbXMubGVuZ3RoID4gMAogICAgICAgID8gY2F0YWxvZ0l0ZW1zW01hdGguZmxvb3IoTWF0aC5yYW5kb20oKSAqIGNhdGFsb2dJdGVtcy5sZW5ndGgpXS5pZAogICAgICAgIDogbnVsbDsKCiAgICBsZXQgdG90YWxQcmljZSA9IDA7CiAgICBjb25zdCBicmVha3VwT2JqZWN0ID0gW107CgogICAgZm9yIChjb25zdCBpIG9mIGNhdGFsb2dJdGVtcykgewogICAgICAgIGNvbnN0IGl0ZW0gPSBKU09OLnBhcnNlKEpTT04uc3RyaW5naWZ5KGJyZWFrdXBJdGVtKSk7CgogICAgICAgIGl0ZW1bIkBvbmRjL29yZy9pdGVtX2lkIl0gPSBpLmlkOwogICAgICAgIGl0ZW0udGl0bGUgPSBpLmRlc2NyaXB0b3IubmFtZTsKICAgICAgICBpdGVtWyJAb25kYy9vcmcvaXRlbV9xdWFudGl0eSJdID0geyBjb3VudDogMCB9OwogICAgICAgIGl0ZW0ucHJpY2UgPSB7IGN1cnJlbmN5OiAiSU5SIiwgdmFsdWU6ICIwLjAwIiB9OwogICAgICAgIGl0ZW0uaXRlbS5wcmljZSA9IHsgY3VycmVuY3k6ICJJTlIiLCB2YWx1ZTogIjAuMDAiIH07CgogICAgICAgIGlmIChpdGVtLml0ZW0/LnF1YW50aXR5Py5hdmFpbGFibGUpIGl0ZW0uaXRlbS5xdWFudGl0eS5hdmFpbGFibGUuY291bnQgPSAiMCI7CiAgICAgICAgaWYgKGl0ZW0uaXRlbT8ucXVhbnRpdHk/Lm1heGltdW0pIGl0ZW0uaXRlbS5xdWFudGl0eS5tYXhpbXVtLmNvdW50ID0gIjAiOwoKICAgICAgICBpZiAoc2Vzc2lvbkRhdGEub3V0X29mX3N0b2NrX2l0ZW1faWRzPy5pbmNsdWRlcyhpLmlkKSB8fCBpLmlkID09PSByYW5kb21PdXRPZlN0b2NrSXRlbSkgewogICAgICAgICAgICBpdGVtLml0ZW0ucXVhbnRpdHkuYXZhaWxhYmxlLmNvdW50ID0gIjAiOwogICAgICAgICAgICBpdGVtLml0ZW0ucXVhbnRpdHkubWF4aW11bS5jb3VudCA9ICIwIjsKICAgICAgICAgICAgb3V0X29mX3N0b2Nrc19pdGVtX2lkcy5wdXNoKHsgaXRlbV9pZDogaS5pZCwgZXJyb3I6ICI0MDAwMiIgfSk7CiAgICAgICAgfQoKICAgICAgICBicmVha3VwT2JqZWN0LnB1c2goaXRlbSk7CiAgICB9CgogICAgZGVmYXVsdFBheWxvYWQuZXJyb3IgPSB7CiAgICAgICAgdHlwZTogIkRPTUFJTi1FUlJPUiIsCiAgICAgICAgY29kZTogIjQwMDAyIiwKICAgICAgICBtZXNzYWdlOiBKU09OLnN0cmluZ2lmeShvdXRfb2Zfc3RvY2tzX2l0ZW1faWRzKSwKICAgIH07CgogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZS5icmVha3VwID0gYnJlYWt1cE9iamVjdDsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQo=
+      generate: YXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgICBjb25zdCBzZWxlY3RlZEl0ZW1zT2JqID0gc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfaXRlbXM7CiAgICBjb25zb2xlLmxvZygiU2VsZWN0ZWQgSXRlbXM6ICIsIHNlbGVjdGVkSXRlbXNPYmopOwogICAgY29uc3QgY2F0YWxvZyA9IFJFVDE2SE9NRUtJVENIRU4xMjVDYXRhbG9nOwogICAgbGV0IG91dF9vZl9zdG9ja3NfaXRlbV9pZHMgPSBbXTsKCiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zID0gc2VsZWN0ZWRJdGVtc09iai5tYXAoKGl0ZW0pID0+ICh7CiAgICAgICAgaWQ6IGl0ZW0uaWQsCiAgICAgICAgZnVsZmlsbG1lbnRfaWQ6ICJGMSIsCiAgICB9KSk7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyID0gc2Vzc2lvbkRhdGEucHJvdmlkZXJbMF0KICAgIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuY2l0eSA9IHNlc3Npb25EYXRhLmNpdHlfY29kZVswXQoKICAgIGNvbnN0IGlkTWFwID0gc2VsZWN0ZWRJdGVtc09iai5tYXAoKGl0ZW0pID0+IGl0ZW0uaWQpOwogICAgY29uc3QgY2F0YWxvZ0l0ZW1zID0gY2F0YWxvZy5jYXRhbG9nWyJicHAvcHJvdmlkZXJzIl1bMF0uaXRlbXMuZmlsdGVyKChpKSA9PgogICAgICAgIGlkTWFwLmluY2x1ZGVzKGkuaWQpCiAgICApOwoKICAgIGNvbnNvbGUubG9nKCJDYXRhbG9nIEl0ZW1zOiAiLCBjYXRhbG9nSXRlbXMpOwoKICAgIC8vIOKchSBJbmxpbmUgcmVwbGFjZW1lbnQgZm9yIGdldFJhbmRvbUl0ZW0KICAgIGNvbnN0IHJhbmRvbU91dE9mU3RvY2tJdGVtID0gY2F0YWxvZ0l0ZW1zLmxlbmd0aCA+IDAKICAgICAgICA/IGNhdGFsb2dJdGVtc1tNYXRoLmZsb29yKE1hdGgucmFuZG9tKCkgKiBjYXRhbG9nSXRlbXMubGVuZ3RoKV0uaWQKICAgICAgICA6IG51bGw7CgogICAgbGV0IHRvdGFsUHJpY2UgPSAwOwogICAgY29uc3QgYnJlYWt1cE9iamVjdCA9IFtdOwoKICAgIGZvciAoY29uc3QgaSBvZiBjYXRhbG9nSXRlbXMpIHsKICAgICAgICBjb25zdCBpdGVtID0gSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShicmVha3VwSXRlbSkpOwoKICAgICAgICBpdGVtWyJAb25kYy9vcmcvaXRlbV9pZCJdID0gaS5pZDsKICAgICAgICBpdGVtLnRpdGxlID0gaS5kZXNjcmlwdG9yLm5hbWU7CiAgICAgICAgaXRlbVsiQG9uZGMvb3JnL2l0ZW1fcXVhbnRpdHkiXSA9IHsgY291bnQ6IDAgfTsKICAgICAgICBpdGVtLnByaWNlID0geyBjdXJyZW5jeTogIklOUiIsIHZhbHVlOiAiMC4wMCIgfTsKICAgICAgICBpdGVtLml0ZW0ucHJpY2UgPSB7IGN1cnJlbmN5OiAiSU5SIiwgdmFsdWU6ICIwLjAwIiB9OwoKICAgICAgICBpZiAoaXRlbS5pdGVtPy5xdWFudGl0eT8uYXZhaWxhYmxlKSBpdGVtLml0ZW0ucXVhbnRpdHkuYXZhaWxhYmxlLmNvdW50ID0gIjAiOwogICAgICAgIGlmIChpdGVtLml0ZW0/LnF1YW50aXR5Py5tYXhpbXVtKSBpdGVtLml0ZW0ucXVhbnRpdHkubWF4aW11bS5jb3VudCA9ICIwIjsKCiAgICAgICAgaWYgKHNlc3Npb25EYXRhLm91dF9vZl9zdG9ja19pdGVtX2lkcz8uaW5jbHVkZXMoaS5pZCkgfHwgaS5pZCA9PT0gcmFuZG9tT3V0T2ZTdG9ja0l0ZW0pIHsKICAgICAgICAgICAgaXRlbS5pdGVtLnF1YW50aXR5LmF2YWlsYWJsZS5jb3VudCA9ICIwIjsKICAgICAgICAgICAgaXRlbS5pdGVtLnF1YW50aXR5Lm1heGltdW0uY291bnQgPSAiMCI7CiAgICAgICAgICAgIG91dF9vZl9zdG9ja3NfaXRlbV9pZHMucHVzaCh7IGl0ZW1faWQ6IGkuaWQsIGVycm9yOiAiNDAwMDIiIH0pOwogICAgICAgIH0KCiAgICAgICAgYnJlYWt1cE9iamVjdC5wdXNoKGl0ZW0pOwogICAgfQoKICAgIGRlZmF1bHRQYXlsb2FkLmVycm9yID0gewogICAgICAgIHR5cGU6ICJET01BSU4tRVJST1IiLAogICAgICAgIGNvZGU6ICI0MDAwMiIsCiAgICAgICAgbWVzc2FnZTogSlNPTi5zdHJpbmdpZnkob3V0X29mX3N0b2Nrc19pdGVtX2lkcyksCiAgICB9OwoKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucXVvdGUuYnJlYWt1cCA9IGJyZWFrdXBPYmplY3Q7CiAgICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0K
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJPcmRlciBvYmplY3QgaXMgbWlzc2luZyIsCiAgICB9OwogIH0KCiAgY29uc3Qgb3JkZXIgPSB0YXJnZXRQYXlsb2FkLm1lc3NhZ2Uub3JkZXI7CgogIGlmICghb3JkZXIucHJvdmlkZXIgfHwgIW9yZGVyLnByb3ZpZGVyLmlkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJQcm92aWRlciBJRCBpcyBtaXNzaW5nIiwKICAgIH07CiAgfQoKICBpZiAoIUFycmF5LmlzQXJyYXkob3JkZXIuaXRlbXMpIHx8IG9yZGVyLml0ZW1zLmxlbmd0aCA9PT0gMCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiT3JkZXIgaXRlbXMgYXJlIG1pc3NpbmciLAogICAgfTsKICB9CgogIGZvciAoY29uc3QgaXRlbSBvZiBvcmRlci5pdGVtcykgewogICAgaWYgKCFpdGVtLmlkKSB7CiAgICAgIHJldHVybiB7CiAgICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICAgIGNvZGU6IDQwMCwKICAgICAgICBkZXNjcmlwdGlvbjogIkl0ZW0gSUQgaXMgbWlzc2luZyIsCiAgICAgIH07CiAgICB9CgogICAgY29uc3Qgc2VsZWN0ZWRJdGVtID0gc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfaXRlbXMuZmluZCgKICAgICAgKGkpID0+IGkuaWQgPT09IGl0ZW0uaWQKICAgICk7CgogICAgaWYgKCFzZWxlY3RlZEl0ZW0pIHsKICAgICAgcmV0dXJuIHsKICAgICAgICB2YWxpZDogZmFsc2UsCiAgICAgICAgY29kZTogNDAwLAogICAgICAgIGRlc2NyaXB0aW9uOiBgSW52YWxpZCBpdGVtIElEICR7aXRlbS5pZH1gLAogICAgICB9OwogICAgfQogIH0KCiAgaWYgKCFvcmRlci5xdW90ZSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiUXVvdGUgaXMgbWlzc2luZyIsCiAgICB9OwogIH0KCiAgaWYgKAogICAgIW9yZGVyLnF1b3RlLnByaWNlIHx8CiAgICAhb3JkZXIucXVvdGUucHJpY2UudmFsdWUKICApIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIlF1b3RlIHByaWNlIGlzIG1pc3NpbmciLAogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgIGlmICghc2Vzc2lvbkRhdGEpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogInNlc3Npb25EYXRhIGlzIG1pc3NpbmciLAogICAgfTsKICB9CgogIGlmICghc2Vzc2lvbkRhdGEucHJvdmlkZXIgfHwgIXNlc3Npb25EYXRhLnByb3ZpZGVyWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJQcm92aWRlciBkYXRhIGlzIG1pc3NpbmciLAogICAgfTsKICB9CgogIGlmICgKICAgICFzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtcyB8fAogICAgIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfaXRlbXMpIHx8CiAgICBzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtcy5sZW5ndGggPT09IDAKICApIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIlNlbGVjdGVkIGl0ZW1zIGFyZSBtaXNzaW5nIiwKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
       defaultPayload:
@@ -252,21 +256,21 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_select
-            timestamp: 2026-07-15T06:54:50.535Z
+            timestamp: 2026-08-17T10:52:19.479Z
             transaction_id: 1b17d5f1-db9d-4f45-88cd-0027a19889db
-            message_id: beb8cb96-1872-4754-bf3a-ff1c5e7b8020
+            message_id: 2df15255-5415-4415-b25b-de2887804b12
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: "*"
+            city: std:022
             core_version: 1.2.5
           error:
             type: DOMAIN-ERROR
             code: "40002"
-            message: "[]"
+            message: '[{"item_id":"I1","error":"40002"}]'
           message:
             order:
               provider:
@@ -287,9 +291,28 @@ steps:
                 price:
                   value: "0"
                   currency: INR
-                breakup: []
+                breakup:
+                  - "@ondc/org/item_id": I1
+                    "@ondc/org/item_quantity":
+                      count: 0
+                    title: MINISO Two-Layer Drawer Organizer
+                    "@ondc/org/title_type": item
+                    price:
+                      currency: INR
+                      value: "0.00"
+                    item:
+                      quantity:
+                        available:
+                          count: "0"
+                        maximum:
+                          count: "0"
+                      price:
+                        currency: INR
+                        value: "0.00"
                 ttl: P1D
-              items: []
+              items:
+                - id: I1
+                  fulfillment_id: F1
         type: request
         description: The seller application responds to the buyer's item selection by
           communicating that the requested items are out of stock and
