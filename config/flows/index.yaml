@@ -7,7 +7,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Cancellation)
+    description: Buyer cancels a confirmed health and wellness product order after selection and confirmation steps, triggering order reversal and payment settlement processing.
     config:
       $ref: ./HEALTH&WELLNESS/Buyer_Cancellation_Flow.yaml
   - type: playground
@@ -16,7 +16,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Buyer Delivery Flow)
+    description: A buyer selects health and wellness products, confirms purchase, and monitors delivery tracking from order confirmation through fulfillment. This flow validates the complete transaction lifecycle for buyer-initiated wellness product delivery.
     config:
       $ref: ./HEALTH&WELLNESS/Buyer_Delivery_Flow.yaml
   - type: playground
@@ -26,7 +26,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Buyer Instructions)
+    description: A health and wellness product purchase flow that captures buyer-specified delivery instructions and provides comprehensive order and delivery status tracking from confirmation through fulfillment.
     config:
       $ref: ./HEALTH&WELLNESS/Buyer_Instructions_And_Delivery_Update_Flow.yaml
   - type: playground
@@ -37,7 +37,7 @@ flows:
       - OPTIONAL
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Cash On Delivery)
+    description: End-to-end health and wellness retail transaction where a customer selects products, confirms an order, and completes payment on delivery while receiving fulfillment status updates.
     config:
       $ref: ./HEALTH&WELLNESS/Cash_On_Delivery_Flow.yaml
   - type: playground
@@ -46,7 +46,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Cross Category Cart Flow)
+    description: Health and wellness transaction flow where customers select and purchase products across multiple categories in a single cart, proceeding through order confirmation and real-time fulfillment status tracking.
     config:
       $ref: ./HEALTH&WELLNESS/Cross_Category_Cart_Flow.yaml
   - type: playground
@@ -55,7 +55,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Delivery with IGM 3)
+    description: A health and wellness delivery order flow testing end-to-end fulfillment—from selection through confirmation and status tracking—with issue and grievance logging scenarios that require no corrective action.
     config:
       $ref: ./HEALTH&WELLNESS/DELIVERY_FLOW_WITH_IGM_No_Action_v-2_0_0_.yaml
   - type: playground
@@ -66,7 +66,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery)
+    description: End-to-end delivery flow for health and wellness products, from catalog selection through order confirmation to tracked delivery at the customer location.
     config:
       $ref: ./HEALTH&WELLNESS/Delivery_Flow.yaml
   - type: playground
@@ -77,7 +77,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery with IGM 1)
+    description: Health and wellness product delivery with integrated issue grievance management for handling customer disputes and concerns throughout the transaction lifecycle.
     config:
       $ref: ./HEALTH&WELLNESS/Delivery_Flow_With_IGM_v-1_0_0_.yaml
   - type: playground
@@ -88,7 +88,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery with IGM 1)
+    description: An end-to-end health and wellness product delivery workflow with integrated issue and grievance management, enabling customers to order items, track deliveries in real-time, and escalate or resolve grievances throughout the transaction lifecycle.
     config:
       $ref: ./HEALTH&WELLNESS/Delivery_Flow_With_IGM_v-2_0_0_.yaml
   - type: playground
@@ -99,7 +99,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Delivery with IGM 2)
+    description: A health and wellness product delivery flow that exercises the complete transaction lifecycle from order selection through delivery, with integrated issue grievance management including scenarios where customer complaints are rejected by the seller or platform. This validates end-to-end order fulfillment, delivery tracking, and dispute resolution workflows in the healthcare products domain.
     config:
       $ref: ./HEALTH&WELLNESS/Delivery_Flow_With_IGM_Rejection_v-2_0_0_.yaml
   - type: playground
@@ -110,7 +110,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Discovery Flow)
+    description: A buyer searches for health and wellness products in the digital marketplace, and sellers respond with matching catalog items to enable product discovery across the network.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_full_catalog.yaml
   - type: playground
@@ -121,7 +121,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Discovery Flow Incremental Catalog)
+    description: Buyer discovers health and wellness products through iterative search with incrementally updated seller catalogs reflecting real-time inventory availability.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog.yaml
   - type: playground
@@ -129,7 +129,7 @@ flows:
     usecase: HEALTH&WELLNESS
     tags:
       - WORKBENCH
-    description: Retail 1.2.5 (Discovery Flow Incremental Catalog Refresh Pull)
+    description: Buyers incrementally discover updated health and wellness product catalogs from sellers through successive search queries, enabling real-time access to current offerings.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
   - type: playground
@@ -139,7 +139,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Cancellation)
+    description: Forced cancellation of a health and wellness order following confirmation when critical constraints prevent fulfillment, ensuring proper settlement and buyer notification. This mandatory flow captures the complete lifecycle from product selection through cancellation acknowledgment across the buyer-seller network.
     config:
       $ref: ./HEALTH&WELLNESS/Force_Cancellation_Flow.yaml
   - type: playground
@@ -148,7 +148,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Out Of Stock)
+    description: A health and wellness order where customers select products and the seller manages out-of-stock inventory while providing real-time fulfillment status updates.
     config:
       $ref: ./HEALTH&WELLNESS/Out_Of_Stock_Flow.yaml
   - type: playground
@@ -158,14 +158,14 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Out Of Stock)
+    description: Tests out-of-stock error handling in health and wellness commerce when a customer selects an unavailable product and the seller returns an availability error.
     config:
       $ref: ./HEALTH&WELLNESS/Out_Of_Stock_Flow_Error-code_.yaml
   - type: playground
     id: Return_Flow
     usecase: HEALTH&WELLNESS
     tags: []
-    description: Retail 1.2.5 (Return)
+    description: Manages the end-to-end return process for health and wellness products, from customer item selection and return confirmation through multiple status tracking phases to final completion.
     config:
       $ref: ./HEALTH&WELLNESS/Return_Flow.yaml
   - type: playground
@@ -176,7 +176,7 @@ flows:
       - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: Retail 1.2.5 (Replacement)
+    description: End-to-end replacement order processing for health and wellness products, spanning customer selection, retailer confirmation, and tracked fulfillment with continuous status visibility.
     config:
       $ref: ./HEALTH&WELLNESS/Replacement_Flow.yaml
   - type: playground
@@ -186,7 +186,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Self Pickup)
+    description: A health and wellness transaction flow where customers select items, confirm orders for self-pickup fulfillment, and receive status updates until their order is ready for collection.
     config:
       $ref: ./HEALTH&WELLNESS/Self_Pickup_Flow.yaml
   - type: playground
@@ -195,7 +195,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
-    description: Retail 1.2.5 (Cancellation)
+    description: A health and wellness seller cancels a confirmed customer order, demonstrating the complete order lifecycle from product selection through cancellation to final status reconciliation.
     config:
       $ref: ./HEALTH&WELLNESS/Seller_Cancellation_Flow.yaml
   - type: playground
@@ -205,7 +205,7 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Delivery)
+    description: End-to-end health and wellness retail transaction where buyers select and purchase products from credentialed sellers, progressing through order initialization and confirmation stages.
     config:
       $ref: ./HEALTH&WELLNESS/Seller_Cred_Flow.yaml
   - type: playground
@@ -215,6 +215,6 @@ flows:
       - WORKBENCH
       - MANDATORY
       - REPORTABLE
-    description: Retail 1.2.5 (Slotted Delivery)
+    description: A health and wellness product transaction with time-slot-based delivery, spanning product selection, order confirmation, and multi-stage fulfillment status tracking.
     config:
       $ref: ./HEALTH&WELLNESS/Slotted_Delivery_Flow.yaml

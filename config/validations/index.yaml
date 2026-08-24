@@ -1384,20 +1384,33 @@ _TESTS_:
                     - _NAME_: BREAKUP_ITEM_ITEM
                       _RETURN_:
                         - _NAME_: BREAKUP_ITEM_ITEM_QUANTITY_AVAILABLE_COUNT
+                          _CONTINUE_: "!(attr are present)"
                           attr: $.message.order.quote.breakup[*].item.quantity.available.count
                           var_enum:
                             - "99"
                             - "0"
                           _RETURN_: attr all in var_enum
                         - _NAME_: BREAKUP_ITEM_ITEM_QUANTITY_MAXIMUM_COUNT
-                          attr: $.message.order.quote.breakup[*].item.quantity.maximum.count
-                          _RETURN_: attr are present
+                          _SCOPE_: $.message.order.quote.breakup[*]
+                          maximumCount: $.item.quantity.maximum.count
+                          value: "$['@ondc/org/title_type']"
+                          item: ["item"]
+                          _CONTINUE_: "!(value all in item)"
+                          _RETURN_: maximumCount are present
                         - _NAME_: BREAKUP_ITEM_ITEM_PRICE_CURRENCY
-                          attr: $.message.order.quote.breakup[*].item.price.currency
-                          _RETURN_: attr are present
+                          _SCOPE_: $.message.order.quote.breakup[*]
+                          priceCurrency: $.item.price.currency
+                          value: "$['@ondc/org/title_type']"
+                          item: ["item"]
+                          _CONTINUE_: "!(value all in item)"
+                          _RETURN_: priceCurrency are present
                         - _NAME_: BREAKUP_ITEM_ITEM_PRICE_VALUE
-                          attr: $.message.order.quote.breakup[*].item.price.value
-                          _RETURN_: attr are present
+                          _SCOPE_: $.message.order.quote.breakup[*]
+                          priceValue: $.item.price.value
+                          value: "$['@ondc/org/title_type']"
+                          item: ["item"]
+                          _CONTINUE_: "!(value all in item)"
+                          _RETURN_: priceValue are present
                         - _NAME_: BREAKUP_ITEM_ITEM_TAGS
                           _RETURN_:
                             - _NAME_: BREAKUP_ITEM_VALID_TAGS
@@ -1426,6 +1439,9 @@ _TESTS_:
                                     - packaging
                                     - misc
                                   _RETURN_: attr all in var_enum
+        
+        
+        
         - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_NP_FEES
           _RETURN_:
             - _NAME_: BREAKUP_ITEM_ITEM_TAGS_VALID_TAGS
@@ -1752,11 +1768,19 @@ _TESTS_:
                     - _NAME_: BREAKUP_ITEM_ITEM
                       _RETURN_:
                         - _NAME_: BREAKUP_ITEM_ITEM_PRICE_CURRENCY
-                          attr: $.message.order.quote.breakup[*].item.price.currency
-                          _RETURN_: attr are present
+                          _SCOPE_: $.message.order.quote.breakup[*]
+                          priceCurrency: $.item.price.currency
+                          value: "$['@ondc/org/title_type']"
+                          item: ["item"]
+                          _CONTINUE_: "!(value all in item)"
+                          _RETURN_: priceCurrency are present
                         - _NAME_: BREAKUP_ITEM_ITEM_PRICE_VALUE
-                          attr: $.message.order.quote.breakup[*].item.price.value
-                          _RETURN_: attr are present
+                          _SCOPE_: $.message.order.quote.breakup[*]
+                          priceValue: $.item.price.value
+                          value: "$['@ondc/org/title_type']"
+                          item: ["item"]
+                          _CONTINUE_: "!(value all in item)"
+                          _RETURN_: priceValue are present
                         - _NAME_: BREAKUP_ITEM_ITEM_TAGS
                           _RETURN_:
                             - _NAME_: BREAKUP_ITEM_VALID_TAGS
@@ -1786,6 +1810,7 @@ _TESTS_:
                                     - packaging
                                     - misc
                                   _RETURN_: attr all in var_enum
+ 
         - _NAME_: ORDER_QUOTE_ADDITIONAL_TAGS
           _RETURN_:
             - _NAME_: TAGS_FINANCE_TERMS
@@ -2495,6 +2520,8 @@ _TESTS_:
                     - cancel_request
                     - quote_trail
                     - precancel_state
+                    - return_request
+                    - replace_request
                   _RETURN_: attr all in valid
                 - _NAME_: TAGS_STATE
                   _RETURN_:
@@ -2778,6 +2805,8 @@ _TESTS_:
                         - images
                         - ttl_approval
                         - ttl_reverseqc
+                        - initiated_by
+                        - replace
                       _RETURN_: attr all in valid
                     - _NAME_: RETURN_REQUEST_ID
                       _CONTINUE_: "!(attr are present)"
@@ -3511,17 +3540,18 @@ _TESTS_:
                     - _NAME_: FULFILLMENTS_START_LOCATION_ADDRESS
                       _RETURN_:
                         - _NAME_: FULFILLMENTS_START_LOCATION_ADDRESS_LOCALITY
-                          attr: $.message.order.fulfillments[*].start.location.address.locality
+                          attr: $.message.order.fulfillments[?(@.type=='Delivery')].start.location.address.locality
                           _RETURN_: attr are present
                         - _NAME_: FULFILLMENTS_START_LOCATION_ADDRESS_CITY
-                          attr: $.message.order.fulfillments[*].start.location.address.city
+                          attr: $.message.order.fulfillments[?(@.type=='Delivery')].start.location.address.city
                           _RETURN_: attr are present
                         - _NAME_: FULFILLMENTS_START_LOCATION_ADDRESS_AREA_CODE
-                          attr: $.message.order.fulfillments[*].start.location.address.area_code
+                          attr: $.message.order.fulfillments[?(@.type=='Delivery')].start.location.address.area_code
                           _RETURN_: attr are present
                         - _NAME_: FULFILLMENTS_START_LOCATION_ADDRESS_STATE
-                          attr: $.message.order.fulfillments[*].start.location.address.state
+                          attr: $.message.order.fulfillments[?(@.type=='Delivery')].start.location.address.state
                           _RETURN_: attr are present
+                
                 - _NAME_: FULFILLMENTS_START_TIME
                   _RETURN_:
                     - _NAME_: FULFILLMENTS_START_TIME_RANGE_START
@@ -3535,18 +3565,19 @@ _TESTS_:
                 - _NAME_: FULFILLMENTS_START_CONTACT
                   _RETURN_:
                     - _NAME_: FULFILLMENTS_START_CONTACT_PHONE
-                      attr: $.message.order.fulfillments[*].start.contact.phone
+                      attr: $.message.order.fulfillments[?(@.type=='Delivery')].start.contact.phone
                       _RETURN_: attr are present
                     - _NAME_: FULFILLMENTS_START_CONTACT_EMAIL
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].start.contact.email
+                      attr: $.message.order.fulfillments[?(@.type=='Delivery')].start.contact.email
                       _RETURN_: attr are present
+            
             - _NAME_: FULFILLMENTS_END
               _RETURN_:
                 - _NAME_: FULFILLMENTS_END_LOCATION
                   _RETURN_:
                     - _NAME_: FULFILLMENTS_END_LOCATION_GPS
-                      attr: $.message.order.fulfillments[*].end.location.gps
+                      attr: $.message.order.fulfillments[?(@.type=='Delivery')].end.location.gps
                       _RETURN_: attr are present
                     - _NAME_: FULFILLMENTS_END_LOCATION_ADDRESS
                       _RETURN_:
