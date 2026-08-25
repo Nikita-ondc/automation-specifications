@@ -110,6 +110,7 @@ flows:
     usecase: BPC
     tags:
       - WORKBENCH
+      - OPTIONAL
     description: Buyers discover products through sequential searches while the platform pulls incremental catalog updates from sellers, ensuring fresh product availability and details with each interaction.
     config:
       $ref: ./BPC/Discovery_Flow_incremental_catalog_refresh_pull.yaml
@@ -155,7 +156,8 @@ flows:
   - type: playground
     id: Return_Flow
     usecase: BPC
-    tags: []
+    tags:
+      - MANDATORY
     description: Complete retail return transaction flow enabling buyers to select and return purchased items with real-time status tracking from initiation through refund completion.
     config:
       $ref: ./BPC/Return_Flow.yaml
@@ -184,7 +186,7 @@ flows:
     tags:
       - PRAMAAN
       - WORKBENCH
-      - MANDATORY
+      - OPTIONAL
       - REPORTABLE
     description: Product replacement transaction flow for retail customers, enabling selection and ordering of replacement items with complete fulfillment status tracking and confirmation.
     config:
@@ -194,6 +196,7 @@ flows:
     usecase: BPC
     tags:
       - WORKBENCH
+      - MANDATORY
     description: A buyer searches for products and the seller responds with catalog results; the flow validates rejection handling when catalog items are unavailable or fail fulfillment eligibility checks. This exercises the catalog rejection path in the ONDC search and fulfillment lifecycle.
     config:
       $ref: ./BPC/Catalog_Rejection_Flow.yaml
