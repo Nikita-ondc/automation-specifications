@@ -14,8 +14,10 @@ flows:
     id: Buyer_Delivery_Flow
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
-      - MANDATORY
+      - OPTIONAL
     description: A buyer selects health and wellness products, confirms purchase, and monitors delivery tracking from order confirmation through fulfillment. This flow validates the complete transaction lifecycle for buyer-initiated wellness product delivery.
     config:
       $ref: ./HEALTH&WELLNESS/Buyer_Delivery_Flow.yaml
@@ -23,9 +25,10 @@ flows:
     id: Buyer_Instructions_And_Delivery_Update_Flow
     usecase: HEALTH&WELLNESS
     tags:
-      - WORKBENCH
-      - MANDATORY
+      - PRAMAAN
       - REPORTABLE
+      - WORKBENCH
+      - OPTIONAL
     description: A health and wellness product purchase flow that captures buyer-specified delivery instructions and provides comprehensive order and delivery status tracking from confirmation through fulfillment.
     config:
       $ref: ./HEALTH&WELLNESS/Buyer_Instructions_And_Delivery_Update_Flow.yaml
@@ -44,6 +47,8 @@ flows:
     id: Cross_Category_Cart_Flow
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Health and wellness transaction flow where customers select and purchase products across multiple categories in a single cart, proceeding through order confirmation and real-time fulfillment status tracking.
@@ -53,6 +58,8 @@ flows:
     id: DELIVERY_FLOW_WITH_IGM_No_Action(v-2.0.0)
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: A health and wellness delivery order flow testing end-to-end fulfillment—from selection through confirmation and status tracking—with issue and grievance logging scenarios that require no corrective action.
@@ -128,7 +135,10 @@ flows:
     id: Discovery_Flow_incremental_catalog_refresh_pull
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
+      - OPTIONAL
     description: Buyers incrementally discover updated health and wellness product catalogs from sellers through successive search queries, enabling real-time access to current offerings.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
@@ -136,9 +146,10 @@ flows:
     id: Force_Cancellation_Flow
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Forced cancellation of a health and wellness order following confirmation when critical constraints prevent fulfillment, ensuring proper settlement and buyer notification. This mandatory flow captures the complete lifecycle from product selection through cancellation acknowledgment across the buyer-seller network.
     config:
       $ref: ./HEALTH&WELLNESS/Force_Cancellation_Flow.yaml
@@ -146,6 +157,8 @@ flows:
     id: Out_Of_Stock_Flow
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: A health and wellness order where customers select products and the seller manages out-of-stock inventory while providing real-time fulfillment status updates.
@@ -155,16 +168,21 @@ flows:
     id: Out_Of_Stock_Flow(Error-code)
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Tests out-of-stock error handling in health and wellness commerce when a customer selects an unavailable product and the seller returns an availability error.
     config:
       $ref: ./HEALTH&WELLNESS/Out_Of_Stock_Flow_Error-code_.yaml
   - type: playground
     id: Return_Flow
     usecase: HEALTH&WELLNESS
-    tags: []
+    tags:
+      - PRAMAAN
+      - REPORTABLE
+      - WORKBENCH
+      - MANDATORY
     description: Manages the end-to-end return process for health and wellness products, from customer item selection and return confirmation through multiple status tracking phases to final completion.
     config:
       $ref: ./HEALTH&WELLNESS/Return_Flow.yaml
@@ -173,9 +191,9 @@ flows:
     usecase: HEALTH&WELLNESS
     tags:
       - PRAMAAN
-      - MANDATORY
       - REPORTABLE
       - WORKBENCH
+      - OPTIONAL
     description: End-to-end replacement order processing for health and wellness products, spanning customer selection, retailer confirmation, and tracked fulfillment with continuous status visibility.
     config:
       $ref: ./HEALTH&WELLNESS/Replacement_Flow.yaml
@@ -183,9 +201,10 @@ flows:
     id: Self_Pickup_Flow
     usecase: HEALTH&WELLNESS
     tags:
-      - WORKBENCH
-      - MANDATORY
+      - PRAMAAN
       - REPORTABLE
+      - WORKBENCH
+      - OPTIONAL
     description: A health and wellness transaction flow where customers select items, confirm orders for self-pickup fulfillment, and receive status updates until their order is ready for collection.
     config:
       $ref: ./HEALTH&WELLNESS/Self_Pickup_Flow.yaml
@@ -193,6 +212,8 @@ flows:
     id: Seller_Cancellation_Flow
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: A health and wellness seller cancels a confirmed customer order, demonstrating the complete order lifecycle from product selection through cancellation to final status reconciliation.
@@ -202,9 +223,10 @@ flows:
     id: Seller_Cred_Flow
     usecase: HEALTH&WELLNESS
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: End-to-end health and wellness retail transaction where buyers select and purchase products from credentialed sellers, progressing through order initialization and confirmation stages.
     config:
       $ref: ./HEALTH&WELLNESS/Seller_Cred_Flow.yaml
@@ -212,9 +234,10 @@ flows:
     id: Slotted_Delivery_Flow
     usecase: HEALTH&WELLNESS
     tags:
-      - WORKBENCH
-      - MANDATORY
+      - PRAMAAN
       - REPORTABLE
+      - WORKBENCH
+      - OPTIONAL
     description: A health and wellness product transaction with time-slot-based delivery, spanning product selection, order confirmation, and multi-stage fulfillment status tracking.
     config:
       $ref: ./HEALTH&WELLNESS/Slotted_Delivery_Flow.yaml
