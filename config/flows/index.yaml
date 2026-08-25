@@ -27,6 +27,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: A buyer selects and combines products across multiple retail categories into a single cart, confirms the order, and tracks fulfillment through sequential status updates.
     config:
       $ref: ./BPC/Cross_Category_Cart_Flow.yaml
@@ -69,6 +70,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: A retail delivery transaction flow that demonstrates the complete customer journey from order selection and confirmation through delivery, including issue reporting and grievance management where problems are logged but remain unresolved.
     config:
       $ref: ./BPC/Delivery_Flow_With_IGM_No_Action_v-2_0_0_.yaml
@@ -110,6 +112,8 @@ flows:
     usecase: BPC
     tags:
       - WORKBENCH
+      - OPTIONAL
+      - REPORTABLE
     description: Buyers discover products through sequential searches while the platform pulls incremental catalog updates from sellers, ensuring fresh product availability and details with each interaction.
     config:
       $ref: ./BPC/Discovery_Flow_incremental_catalog_refresh_pull.yaml
@@ -139,6 +143,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: End-to-end retail transaction where a buyer selects and confirms an order for out-of-stock items, with continuous status tracking through the fulfillment process.
     config:
       $ref: ./BPC/Out_Of_Stock_Flow.yaml
@@ -155,7 +160,10 @@ flows:
   - type: playground
     id: Return_Flow
     usecase: BPC
-    tags: []
+    tags:
+      - WORKBENCH
+      - MANDATORY
+      - REPORTABLE
     description: Complete retail return transaction flow enabling buyers to select and return purchased items with real-time status tracking from initiation through refund completion.
     config:
       $ref: ./BPC/Return_Flow.yaml
@@ -165,6 +173,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: End-to-end retail flow in which a seller initiates and processes an order cancellation post-confirmation, maintaining buyer communication through multiple status updates.
     config:
       $ref: ./BPC/Seller_Cancellation_Flow.yaml
@@ -184,7 +193,7 @@ flows:
     tags:
       - PRAMAAN
       - WORKBENCH
-      - MANDATORY
+      - OPTIONAL
       - REPORTABLE
     description: Product replacement transaction flow for retail customers, enabling selection and ordering of replacement items with complete fulfillment status tracking and confirmation.
     config:
@@ -194,6 +203,8 @@ flows:
     usecase: BPC
     tags:
       - WORKBENCH
+      - MANDATORY
+      - REPORTABLE
     description: A buyer searches for products and the seller responds with catalog results; the flow validates rejection handling when catalog items are unavailable or fail fulfillment eligibility checks. This exercises the catalog rejection path in the ONDC search and fulfillment lifecycle.
     config:
       $ref: ./BPC/Catalog_Rejection_Flow.yaml
