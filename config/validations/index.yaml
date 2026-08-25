@@ -719,17 +719,22 @@ _TESTS_:
                   _CONTINUE_: "!(attr are present)"
                   _RETURN_: attr are present
                 - _NAME_: ITEMS_ONDC_ORG_STATUTORY_REQS_PACKAGED_COMMODITIES
+                  _SCOPE_: $.message.catalog['bpp/providers'][*].items[*]
                   _RETURN_:
                     - _NAME_: MANUFACTURER_OR_PACKER_NAME
+                      _CONTINUE_: "!(attr are present)"
                       attr: $.message.catalog['bpp/providers'][*].items[*]['@ondc/org/statutory_reqs_packaged_commodities'].manufacturer_or_packer_name
                       _RETURN_: attr are present
                     - _NAME_: MANUFACTURER_OR_PACKER_ADDRESS
+                      _CONTINUE_: "!(attr are present)" 
                       attr: $.message.catalog['bpp/providers'][*].items[*]['@ondc/org/statutory_reqs_packaged_commodities'].manufacturer_or_packer_address
                       _RETURN_: attr are present
                     - _NAME_: COMMON_OR_GENERIC_NAME_OF_COMMODITY
+                      _CONTINUE_: "!(attr are present)" 
                       attr: $.message.catalog['bpp/providers'][*].items[*]['@ondc/org/statutory_reqs_packaged_commodities'].common_or_generic_name_of_commodity
                       _RETURN_: attr are present
                     - _NAME_: MONTH_YEAR_OF_MANUFACTURE_PACKING_IMPORT
+                      _CONTINUE_: "!(attr are present)"
                       attr: $.message.catalog['bpp/providers'][*].items[*]['@ondc/org/statutory_reqs_packaged_commodities'].month_year_of_manufacture_packing_import
                       reg:
                         - ^\\d{2}/\\d{4}|NA$
@@ -1693,7 +1698,8 @@ _TESTS_:
                 - ^[0-9a-zA-Z/-_]{1,36}$
               _RETURN_: attr are present
             - _NAME_: FULFILLMENTS_STATE_DESCRIPTOR_CODE
-              attr: $.message.order.fulfillments[*].state.descriptor.code
+              _CONTINUE_: "!(attr are present)"
+              attr: $.message.order.fulfillments[?(@.type!='Return')].state.descriptor.code
               var_enum:
                 - Pending
                 - Packed
@@ -1705,7 +1711,7 @@ _TESTS_:
                 - RTO-Initiated
                 - RTO-Disposed
                 - RTO-Delivered
-              _RETURN_: attr are present && attr all in var_enum
+              _RETURN_: attr all in var_enum
             - _NAME_: FULFILLMENTS_TYPE
               var_enum:
                 - Delivery
@@ -1713,6 +1719,7 @@ _TESTS_:
                 - Buyer-Delivery
                 - RTO
                 - Cancel
+                - Return
               attr: $.message.order.fulfillments[*].type
               _RETURN_: attr are present && attr all in var_enum
             - _NAME_: FULFILLMENTS_ONDC_ORG_PROVIDER_NAME
@@ -2148,8 +2155,9 @@ _TESTS_:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
                     - _NAME_: FULFILLMENTS_START_TIME_RANGE_END
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].start.time.range.end
+                      attr: $.start.time.range.end
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
@@ -2186,8 +2194,9 @@ _TESTS_:
                 - _NAME_: FULFILLMENTS_END_TIME
                   _RETURN_:
                     - _NAME_: FULFILLMENTS_END_TIME_RANGE_START
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].end.time.range.start
+                      attr: $.end.time.range.start
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
@@ -2471,7 +2480,8 @@ _TESTS_:
                 - ^P(?=\\d|T)(\\d+Y)?(\\d+M)?(\\d+W)?(\\d+D)?(T(?=\\d)(\\d+H)?(\\d+M)?(\\d+S)?)?$
               _RETURN_: attr follow regex reg
             - _NAME_: FULFILLMENTS_STATE_DESCRIPTOR_CODE
-              attr: $.message.order.fulfillments[*].state.descriptor.code
+              _CONTINUE_: "!(attr are present)"
+              attr: $.message.order.fulfillments[?(@.type=='Delivery')].state.descriptor.code
               var_enum:
                 - Accepted
                 - Cancelled
@@ -2484,7 +2494,7 @@ _TESTS_:
                 - Return_Delivered
                 - Liquidated
                 - Return_Rejected
-              _RETURN_: attr are present && attr all in var_enum
+              _RETURN_: attr all in var_enum
             - _NAME_: FULFILLMENTS_START
               _RETURN_:
                 - _NAME_: FULFILLMENTS_START_LOCATION
@@ -2520,20 +2530,23 @@ _TESTS_:
                 - _NAME_: FULFILLMENTS_START_TIME
                   _RETURN_:
                     - _NAME_: FULFILLMENTS_START_TIME_RANGE_START
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].start.time.range.start
+                      attr: $.start.time.range.start
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
                     - _NAME_: FULFILLMENTS_START_TIME_RANGE_END
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].start.time.range.end
+                      attr: $.start.time.range.end
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
                     - _NAME_: FULFILLMENTS_START_TIME_TIMESTAMP
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].start.time.timestamp
+                      attr: $.start.time.timestamp
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
@@ -2564,20 +2577,23 @@ _TESTS_:
                 - _NAME_: FULFILLMENTS_END_TIME
                   _RETURN_:
                     - _NAME_: FULFILLMENTS_END_TIME_RANGE_START
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].end.time.range.start
+                      attr: $.end.time.range.start
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
                     - _NAME_: FULFILLMENTS_END_TIME_RANGE_END
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].end.time.range.end
+                      attr: $.end.time.range.end
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
                     - _NAME_: FULFILLMENTS_END_TIME_TIMESTAMP
+                      _SCOPE_: $.message.order.fulfillments[?(@.type=='Delivery')]
                       _CONTINUE_: "!(attr are present)"
-                      attr: $.message.order.fulfillments[*].end.time.timestamp
+                      attr: $.end.time.timestamp
                       reg:
                         - ^[0-9]{4}-[0-9]{2}-[0-9]{2}T[0-9]{2}:[0-9]{2}:[0-9]{2}\.[0-9]{3}Z$
                       _RETURN_: attr follow regex reg
@@ -3196,4 +3212,37 @@ _TESTS_:
         - _NAME_: REQUIRED_RESOLUTION_PROVIDER_PERSON_NAME
           attr: $.message.issue.resolution_provider.respondent_info.organization.person.name
           _RETURN_: attr are present
+  catalog_rejection:
+    - _NAME_: CATALOG_REJECTION_CONTEXT
+      _DESCRIPTION_: Validate catalog rejection context
+      action:
+        - catalog_rejection
+      _RETURN_: *a1
+    - _NAME_: CATALOG_REJECTION_MESSAGE
+      _DESCRIPTION_: Validate catalog rejection message errors
+      _RETURN_:
+        - _NAME_: CATALOG_REJECTION_ERRORS_REQUIRED
+          _RETURN_:
+            - _NAME_: CATALOG_REJECTION_ERRORS_TYPE
+              attr: $.errors[*].type
+              _RETURN_: attr are present
+            - _NAME_: CATALOG_REJECTION_ERRORS_CODE
+              attr: $.errors[*].code
+              _RETURN_: attr are present
+            - _NAME_: CATALOG_REJECTION_ERRORS_MESSAGE
+              attr: $.errors[*].message
+              _RETURN_: attr are present
+            - _NAME_: CATALOG_REJECTION_ERRORS_PATH
+              attr: $.errors[*].path
+              _RETURN_: attr are present
+        - _NAME_: CATALOG_REJECTION_ERRORS_ENUM
+          _RETURN_:
+            - _NAME_: CATALOG_REJECTION_ERRORS_TYPE_ENUM
+              attr: $.errors[*].type
+              var_error_types:
+                - ITEM-ERROR
+                - PROVIDER-ERROR
+                - CATALOG-ERROR
+              _RETURN_: attr all in var_error_types
+
 _SESSION_DATA_: {}

@@ -12,6 +12,11 @@ supportedActions:
     - select
     - init
     - on_search
+    - catalog_rejection
+  catalog_rejection:
+    - select
+    - on_search
+    - search
   select:
     - on_select
   on_select:
@@ -192,3 +197,6 @@ apiProperties:
     async_predecessor: null
     transaction_partner:
       - issue
+  catalog_rejection:
+    async_predecessor: null
+    transaction_partner: []
