@@ -59,6 +59,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: Complete electronics delivery transaction including order placement, delivery tracking, and issue grievance management without resolution action.
     config:
       $ref: ./ELECTRONICS/Delivery_Flow_With_IGM_No_Action_v-2_0_0_.yaml
@@ -100,13 +101,18 @@ flows:
     usecase: ELECTRONICS
     tags:
       - WORKBENCH
+      - OPTIONAL
+      - REPORTABLE
     description: A buyer discovers electronics products from a seller through iterative searches, with the seller's catalog refreshed incrementally between each search cycle to ensure current inventory and pricing visibility.
     config:
       $ref: ./ELECTRONICS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
   - type: playground
     id: Force_Cancellation_Flow
     usecase: ELECTRONICS
-    tags: []
+    tags:
+      - WORKBENCH
+      - MANDATORY
+      - REPORTABLE
     description: A customer selects and confirms an electronics order, then cancels it, exercising the complete cancellation workflow with periodic status verification and final system update.
     config:
       $ref: ./ELECTRONICS/Force_Cancellation_Flow.yaml
@@ -116,6 +122,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: End-to-end electronics purchase journey from product selection and order confirmation through multi-point status tracking and delivery verification.
     config:
       $ref: ./ELECTRONICS/Out_Of_Stock_Flow.yaml
@@ -142,7 +149,10 @@ flows:
   - type: playground
     id: Return_Flow
     usecase: ELECTRONICS
-    tags: []
+    tags:
+      - WORKBENCH
+      - MANDATORY
+      - REPORTABLE
     description: Electronic products return flow allowing customers to select items, confirm returns, and monitor status through each stage of fulfillment from initiation to final resolution.
     config:
       $ref: ./ELECTRONICS/Return_Flow.yaml
@@ -152,6 +162,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: Customer-initiated electronics retail transaction enabling product selection, payment collection, and order confirmation with real-time status tracking through the transaction lifecycle.
     config:
       $ref: ./ELECTRONICS/SNP_Collecting_Payment_Flow.yaml
@@ -161,6 +172,7 @@ flows:
     tags:
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: Seller cancellation of a confirmed electronics order, demonstrating the complete order lifecycle from product selection and confirmation through seller-initiated cancellation with status updates to the buyer.
     config:
       $ref: ./ELECTRONICS/Seller_Cancellation_Flow.yaml
@@ -169,7 +181,7 @@ flows:
     usecase: ELECTRONICS
     tags:
       - PRAMAAN
-      - MANDATORY
+      - OPTIONAL
       - REPORTABLE
       - WORKBENCH
     description: Electronics replacement transaction flow covering product selection, order confirmation, and fulfillment with comprehensive status tracking.
