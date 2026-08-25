@@ -4,8 +4,9 @@ flows:
     usecase: HOME&KITCHEN
     tags:
       - PRAMAAN
-      - MANDATORY
       - REPORTABLE
+      - WORKBENCH
+      - MANDATORY
     description: Retail 1.2.5 (Cancellation)
     config:
       $ref: ./HOME&KITCHEN/Buyer_Cancellation_Flow.yaml
@@ -13,9 +14,10 @@ flows:
     id: Catalog_Rejection_Flow
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (Catalog Rejection)
     config:
       $ref: ./HOME&KITCHEN/Catalog_Rejection_Flow.yaml
@@ -23,9 +25,10 @@ flows:
     id: Customization_Input_Text_Flow
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (Customization input)
     config:
       $ref: ./HOME&KITCHEN/Customization_Input_Text_Flow.yaml
@@ -34,8 +37,9 @@ flows:
     usecase: HOME&KITCHEN
     tags:
       - PRAMAAN
-      - MANDATORY
       - REPORTABLE
+      - WORKBENCH
+      - MANDATORY
     description: Retail 1.2.5 (Delivery)
     config:
       $ref: ./HOME&KITCHEN/Delivery_Flow.yaml
@@ -65,6 +69,8 @@ flows:
     id: Delivery_Flow_With_IGM_No_Action(v-2.0.0)
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Retail 1.2.5 (Delivery  with IGM 3)
@@ -97,8 +103,9 @@ flows:
     usecase: HOME&KITCHEN
     tags:
       - PRAMAAN
-      - MANDATORY
       - REPORTABLE
+      - WORKBENCH
+      - MANDATORY
     description: Retail 1.2.5 (Discovery Flow Incremental Catalog)
     config:
       $ref: ./HOME&KITCHEN/Discovery_Flow_incremental_catalog.yaml
@@ -106,7 +113,10 @@ flows:
     id: Discovery_Flow_incremental_catalog_refresh_pull
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
+      - OPTIONAL
     description: Retail 1.2.5 (Discovery Flow Incremental Catalog Refresh Pull)
     config:
       $ref: ./HOME&KITCHEN/Discovery_Flow_incremental_catalog_refresh_pull.yaml
@@ -114,9 +124,10 @@ flows:
     id: Force_Cancellation_Flow
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (Cancellation)
     config:
       $ref: ./HOME&KITCHEN/Force_Cancellation_Flow.yaml
@@ -124,6 +135,8 @@ flows:
     id: Out_Of_Stock_Flow
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Retail 1.2.5 (Out Of Stock)
@@ -133,9 +146,10 @@ flows:
     id: Out_Of_Stock_Flow(Error-code)
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (Out Of Stock)
     config:
       $ref: ./HOME&KITCHEN/Out_Of_Stock_Flow_Error-code_.yaml
@@ -143,23 +157,32 @@ flows:
     id: Purchase_Finance_Flow
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (purchase finance)
     config:
       $ref: ./HOME&KITCHEN/Purchase_Finance_Flow.yaml
   - type: playground
     id: Return_Flow
     usecase: HOME&KITCHEN
-    tags: []
+    tags:
+      - PRAMAAN
+      - REPORTABLE
+      - WORKBENCH
+      - MANDATORY
     description: Retail 1.2.5 (Return)
     config:
       $ref: ./HOME&KITCHEN/Return_Flow.yaml
   - type: playground
     id: Replacement_Flow
     usecase: HOME&KITCHEN
-    tags: []
+    tags:
+      - PRAMAAN
+      - REPORTABLE
+      - WORKBENCH
+      - OPTIONAL
     description: Retail 1.2.5 (Replacement)
     config:
       $ref: ./HOME&KITCHEN/Replacement_Flow.yaml
@@ -167,6 +190,8 @@ flows:
     id: SNP_Collecting_Payment_Flow
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Retail 1.2.5 (SNP collecting paymen)
@@ -176,6 +201,8 @@ flows:
     id: Seller_Cancellation_Flow
     usecase: HOME&KITCHEN
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Retail 1.2.5 (Cancellation)
@@ -186,9 +213,9 @@ flows:
     usecase: HOME&KITCHEN
     tags:
       - PRAMAAN
-      - MANDATORY
       - REPORTABLE
       - WORKBENCH
+      - OPTIONAL
     description: Retail 1.2.5 (Replacement)
     config:
       $ref: ./HOME&KITCHEN/Replacement_Flow.yaml
