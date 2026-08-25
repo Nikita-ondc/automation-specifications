@@ -14,10 +14,11 @@ flows:
     id: Customization_Input_Text_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
-    description: This flow exercises the end-to-end purchase journey for an appliance with a text-based customization input, covering buyer-side item selection and order configuration through to seller-side acknowledgement and multi-stage fulfillment status progression. It validates that custom specification details entered by the buyer are correctly propagated and confirmed across the ONDC transaction lifecycle from select through final delivery status updates.
+    description: Retail 1.2.5 (Customization input)
     config:
       $ref: ./APPLIANCES/Customization_Input_Text_Flow.yaml
   - type: playground
@@ -57,6 +58,8 @@ flows:
     id: Delivery_Flow_With_IGM_No_Action(v-2.0.0)
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: A complete appliance retail delivery transaction that covers buyer-side order placement (select through confirm) and fulfillment status tracking, followed by a multi-round grievance resolution cycle via the Issue & Grievance Management (IGM) protocol — exercising the scenario where issues are raised and responded to across multiple exchanges before the final delivery status is updated.
@@ -99,6 +102,9 @@ flows:
     id: Discovery_Flow_incremental_catalog_refresh_pull
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - OPTIONAL
+      - REPORTABLE
       - WORKBENCH
     description: A buyer-side network participant initiates an incremental catalog discovery for appliances by issuing a targeted search request, prompting the seller NP to respond with only the updated or newly added catalog entries since the last sync. A subsequent search-and-response cycle confirms the incremental refresh, ensuring the buyer app maintains an up-to-date appliances catalog without fetching the full inventory on each pull.
     config:
@@ -117,6 +123,8 @@ flows:
     id: Out_Of_Stock_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: This flow exercises the end-to-end appliance retail purchase journey where a buyer selects an item, receives an out-of-stock signal during quote negotiation, and the order subsequently progresses through confirmation and multiple status updates reflecting the fulfilment lifecycle under the ONDC retail 1.2.5 specification.
@@ -126,33 +134,41 @@ flows:
     id: Out_Of_Stock_Flow(Error-code)
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
-    description: This flow exercises the scenario where a buyer selects an appliance item and the seller network responds indicating that the requested product is currently out of stock, returning an appropriate ONDC error code to signal unavailability during the item selection phase.
+    description: Retail 1.2.5 (Out Of Stock)
     config:
       $ref: ./APPLIANCES/Out_Of_Stock_Flow_Error-code_.yaml
   - type: playground
     id: Purchase_Finance_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
-    description: A buyer selects a financed purchase option for a home appliance, negotiates order terms, and confirms the order through a financing arrangement; the seller subsequently emits a series of status updates tracking the order through fulfillment milestones from acceptance to delivery.
+    description: Retail 1.2.5 (purchase finance)
     config:
       $ref: ./APPLIANCES/Purchase_Finance_Flow.yaml
   - type: playground
     id: Return_Flow
     usecase: APPLIANCES
-    tags: []
-    description: This flow exercises the end-to-end return lifecycle for an appliances purchase on ONDC, beginning with item selection and order confirmation, followed by multiple status updates tracking order fulfillment, and culminating in a return initiation by the buyer with subsequent return processing and acknowledgment updates from the seller.
+    tags:
+      - PRAMAAN
+      - REPORTABLE
+      - WORKBENCH
+      - MANDATORY
+    description: Retail 1.2.5 (Return)
     config:
       $ref: ./APPLIANCES/Return_Flow.yaml
   - type: playground
     id: SNP_Collecting_Payment_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: A mandatory end-to-end appliances purchase flow in which the Seller Network Participant (SNP) collects payment directly from the buyer, covering item selection, order initialisation with SNP-side payment terms, order confirmation, and the full lifecycle of post-confirmation status updates tracking the order through to fulfilment.
@@ -162,6 +178,8 @@ flows:
     id: Seller_Cancellation_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: This flow exercises the end-to-end lifecycle of a seller-initiated cancellation for an appliances order on the ONDC network, covering order discovery, cart finalisation, and confirmation before the seller triggers a cancellation request, which progresses through a series of order status transitions and culminates in the formal cancellation acknowledgement and a final post-cancellation status update to the buyer.
@@ -172,17 +190,20 @@ flows:
     usecase: APPLIANCES
     tags:
       - PRAMAAN
-      - MANDATORY
       - REPORTABLE
       - WORKBENCH
-    description: This flow covers the end-to-end replacement lifecycle for an appliance order on ONDC, beginning with item selection and order confirmation, progressing through multiple status updates tracking the original order's fulfilment, and culminating in a replacement request initiation via update calls followed by status tracking of the replacement item's pick-up, processing, and re-delivery to the buyer.
+      - OPTIONAL
+    description: Retail 1.2.5 (Replacement)
     config:
       $ref: ./APPLIANCES/Replacement_Flow.yaml
   - type: playground
     id: Catalog_Rejection_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
-    description: A buyer platform issues a search request for appliances, the seller platform responds with a catalog via on_search, and the network validates and rejects that catalog due to non-compliance or data quality failures, exercising the end-to-end catalog rejection pathway in the ONDC retail 1.2.5 protocol.
+      - MANDATORY
+    description: Retail 1.2.5 (Catalog Rejection)
     config:
       $ref: ./APPLIANCES/Catalog_Rejection_Flow.yaml
