@@ -14,9 +14,10 @@ flows:
     id: Customization_Input_Text_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (Customization input)
     config:
       $ref: ./APPLIANCES/Customization_Input_Text_Flow.yaml
@@ -57,8 +58,11 @@ flows:
     id: Delivery_Flow_With_IGM_No_Action(v-2.0.0)
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
+      - REPORTABLE
     description: Retail 1.2.5 (Delivery with IGM 3)
     config:
       $ref: ./APPLIANCES/Delivery_Flow_With_IGM_No_Action_v-2_0_0_.yaml
@@ -99,6 +103,9 @@ flows:
     id: Discovery_Flow_incremental_catalog_refresh_pull
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - OPTIONAL
+      - REPORTABLE
       - WORKBENCH
     description: Retail 1.2.5 (Discovery_Flow_incremental_catalog_refresh_pull)
     config:
@@ -117,6 +124,8 @@ flows:
     id: Out_Of_Stock_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Retail 1.2.5 (Out Of Stock)
@@ -126,9 +135,10 @@ flows:
     id: Out_Of_Stock_Flow(Error-code)
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (Out Of Stock)
     config:
       $ref: ./APPLIANCES/Out_Of_Stock_Flow_Error-code_.yaml
@@ -136,16 +146,21 @@ flows:
     id: Purchase_Finance_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
-      - REPORTABLE
     description: Retail 1.2.5 (purchase finance)
     config:
       $ref: ./APPLIANCES/Purchase_Finance_Flow.yaml
   - type: playground
     id: Return_Flow
     usecase: APPLIANCES
-    tags: []
+    tags:
+      - PRAMAAN
+      - REPORTABLE
+      - WORKBENCH
+      - MANDATORY
     description: Retail 1.2.5 (Return)
     config:
       $ref: ./APPLIANCES/Return_Flow.yaml
@@ -153,6 +168,8 @@ flows:
     id: SNP_Collecting_Payment_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Retail 1.2.5 (SNP collecting paymen)
@@ -162,6 +179,8 @@ flows:
     id: Seller_Cancellation_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
       - MANDATORY
     description: Retail 1.2.5 (Cancellation)
@@ -172,9 +191,9 @@ flows:
     usecase: APPLIANCES
     tags:
       - PRAMAAN
-      - MANDATORY
       - REPORTABLE
       - WORKBENCH
+      - OPTIONAL
     description: Retail 1.2.5 (Replacement)
     config:
       $ref: ./APPLIANCES/Replacement_Flow.yaml
@@ -182,7 +201,10 @@ flows:
     id:  Catalog_Rejection_Flow
     usecase: APPLIANCES
     tags:
+      - PRAMAAN
+      - REPORTABLE
       - WORKBENCH
+      - MANDATORY
     description: Retail 1.2.5 (Catalog Rejection)
     config:
       $ref: ./APPLIANCES/Catalog_Rejection_Flow.yaml
