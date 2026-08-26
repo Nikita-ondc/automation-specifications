@@ -2,7 +2,7 @@ meta:
   domain: ONDC:RET18
   version: 1.2.0
   flowId: Search_and_Custom_Menu_(Incremental_Push)
-  description: Buyer Search & Quotation
+  description: Discovery and incremental presentation of health and wellness products in response to buyer search queries, simulating progressive catalog delivery as sellers match and push items to interested buyers.
   flowName: Search and Custom Menu (Incremental Push)
   use_case_id: HEALTH&WELLNESS
 transaction_data:
@@ -18,7 +18,7 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: Bap starts search for incremental c   hanges
+    description: The Buyer App Provider sends a search request to discover Health & Wellness products, initiating a new transaction and establishing the session context with transaction identifiers, participant information, and location details.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBpZiAoc2Vzc2lvbkRhdGEuaW5jX21vZGUpIHsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2UuaW50ZW50LnRhZ3NbMF0ubGlzdFswXS52YWx1ZSA9ICJzdG9wIjsKICB9CiAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5jaXR5ID0gIioiOwogIAogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -58,8 +58,7 @@ steps:
       inputs: {}
     examples:
       - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
-          "Search_and_Custom_Menu_(Incremental_Push)"
+        description: Auto-generated example for action "search" in flow "Search_and_Custom_Menu_(Incremental_Push)"
         payload:
           context:
             action: search
@@ -89,7 +88,7 @@ steps:
     owner: BPP
     responseFor: null
     unsolicited: true
-    description: BPP returns the incremental changes
+    description: The BPP sends an unsolicited on_search response to the BAP containing the Health & Wellness catalog and fulfillment options for incremental discovery.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmNpdHkgPSAiKiI7CiAgZGVmYXVsdFBheWxvYWQgPSB1cGRhdGVUaW1lc3RhbXBzKGRlZmF1bHRQYXlsb2FkKTsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -164,19 +163,14 @@ steps:
                     "@ondc/org/contact_details_consumer_care": Ramesh,ramesh@abc.com,18004254444
                     "@ondc/org/statutory_reqs_packaged_commodities":
                       manufacturer_or_packer_name: Pure and Cure Healthcare Pvt Ltd
-                      manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur,
-                        Haridwar-249403
+                      manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur, Haridwar-249403
                       mfg_license_no: 51/UA/SC/P-2013
                       common_or_generic_name_of_commodity: Shelcal HD
                       multiple_products_name_number_or_qty: "15"
                       month_year_of_manufacture_packing_import: Mar-24
                       expiry_date: Feb-25
                     "@ondc/org/statutory_reqs_prepackaged_food":
-                      ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate
-                        from an organic source (powdered oyster shell)
-                        equivalent to Elemental Calcium 500 mg, Vitamin D3 I.P
-                        500 IU, Colors: lake of sunset yellow FCF and titanium
-                        dioxide I.P"
+                      ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate from an organic source (powdered oyster shell) equivalent to Elemental Calcium 500 mg, Vitamin D3 I.P 500 IU, Colors: lake of sunset yellow FCF and titanium dioxide I.P"
                     tags:
                       - code: origin
                         list:
@@ -205,8 +199,7 @@ steps:
       inputs: {}
     examples:
       - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
-          "Search_and_Custom_Menu_(Incremental_Push)"
+        description: Auto-generated example for action "on_search" in flow "Search_and_Custom_Menu_(Incremental_Push)"
         payload:
           context:
             action: on_search
@@ -248,18 +241,13 @@ steps:
                       "@ondc/org/statutory_reqs_packaged_commodities":
                         common_or_generic_name_of_commodity: Shelcal HD
                         expiry_date: Feb-25
-                        manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur,
-                          Haridwar-249403
+                        manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur, Haridwar-249403
                         manufacturer_or_packer_name: Pure and Cure Healthcare Pvt Ltd
                         mfg_license_no: 51/UA/SC/P-2013
                         month_year_of_manufacture_packing_import: Mar-24
                         multiple_products_name_number_or_qty: "15"
                       "@ondc/org/statutory_reqs_prepackaged_food":
-                        ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate
-                          from an organic source (powdered oyster shell)
-                          equivalent to Elemental Calcium 500 mg, Vitamin D3 I.P
-                          500 IU, Colors: lake of sunset yellow FCF and titanium
-                          dioxide I.P"
+                        ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate from an organic source (powdered oyster shell) equivalent to Elemental Calcium 500 mg, Vitamin D3 I.P 500 IU, Colors: lake of sunset yellow FCF and titanium dioxide I.P"
                       "@ondc/org/time_to_ship": PT45M
                       category_id: Nutrition and Fitness Supplements
                       descriptor:
@@ -313,7 +301,7 @@ steps:
     owner: BPP
     responseFor: null
     unsolicited: true
-    description: please add relevant description
+    description: BPP responds to the BAP's search with a catalog of available health and wellness products, establishing transaction context and defining the offer validity window.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCWRlZmF1bHRQYXlsb2FkID0gdXBkYXRlVGltZXN0YW1wcyhkZWZhdWx0UGF5bG9hZCk7CiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -351,8 +339,7 @@ steps:
       inputs: {}
     examples:
       - name: Example for action "on_search"
-        description: Auto-generated example for action "on_search" in flow
-          "Search_and_Custom_Menu_(Incremental_Push)"
+        description: Auto-generated example for action "on_search" in flow "Search_and_Custom_Menu_(Incremental_Push)"
         payload:
           context:
             action: on_search
@@ -394,18 +381,13 @@ steps:
                       "@ondc/org/statutory_reqs_packaged_commodities":
                         common_or_generic_name_of_commodity: Shelcal HD
                         expiry_date: Feb-25
-                        manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur,
-                          Haridwar-249403
+                        manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur, Haridwar-249403
                         manufacturer_or_packer_name: Pure and Cure Healthcare Pvt Ltd
                         mfg_license_no: 51/UA/SC/P-2013
                         month_year_of_manufacture_packing_import: Mar-24
                         multiple_products_name_number_or_qty: "15"
                       "@ondc/org/statutory_reqs_prepackaged_food":
-                        ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate
-                          from an organic source (powdered oyster shell)
-                          equivalent to Elemental Calcium 500 mg, Vitamin D3 I.P
-                          500 IU, Colors: lake of sunset yellow FCF and titanium
-                          dioxide I.P"
+                        ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate from an organic source (powdered oyster shell) equivalent to Elemental Calcium 500 mg, Vitamin D3 I.P 500 IU, Colors: lake of sunset yellow FCF and titanium dioxide I.P"
                       "@ondc/org/time_to_ship": PT45M
                       category_id: Nutrition and Fitness Supplements
                       descriptor:
@@ -459,7 +441,7 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: Bap stops search for incremental changes
+    description: The BAP sends a search request in the health and wellness domain to discover products and services available from BPPs, using the transaction context established in prior steps. This initiates the catalog discovery phase where the BPP responds with matching items.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -498,8 +480,7 @@ steps:
       inputs: {}
     examples:
       - name: Example for action "search"
-        description: Auto-generated example for action "search" in flow
-          "Search_and_Custom_Menu_(Incremental_Push)"
+        description: Auto-generated example for action "search" in flow "Search_and_Custom_Menu_(Incremental_Push)"
         payload:
           context:
             action: search
@@ -622,19 +603,14 @@ transaction_history:
                   "@ondc/org/contact_details_consumer_care": Ramesh,ramesh@abc.com,18004254444
                   "@ondc/org/statutory_reqs_packaged_commodities":
                     manufacturer_or_packer_name: Pure and Cure Healthcare Pvt Ltd
-                    manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur,
-                      Haridwar-249403
+                    manufacturer_or_packer_address: Plot No 26A-30, Sector 8A, IIE, SIDCUL, Ranipur, Haridwar-249403
                     mfg_license_no: 51/UA/SC/P-2013
                     common_or_generic_name_of_commodity: Shelcal HD
                     multiple_products_name_number_or_qty: "15"
                     month_year_of_manufacture_packing_import: Mar-24
                     expiry_date: Feb-25
                   "@ondc/org/statutory_reqs_prepackaged_food":
-                    ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate
-                      from an organic source (powdered oyster shell) equivalent
-                      to Elemental Calcium 500 mg, Vitamin D3 I.P 500 IU,
-                      Colors: lake of sunset yellow FCF and titanium dioxide
-                      I.P"
+                    ingredients_info: "Every film-coated tablet contains: 1250 mg Calcium Carbonate from an organic source (powdered oyster shell) equivalent to Elemental Calcium 500 mg, Vitamin D3 I.P 500 IU, Colors: lake of sunset yellow FCF and titanium dioxide I.P"
                   tags:
                     - code: origin
                       list:

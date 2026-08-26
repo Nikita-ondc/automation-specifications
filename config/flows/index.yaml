@@ -7,7 +7,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Return Flow for Health&Wellness
+    description: Buyer-initiated return flow for health and wellness products that facilitates customer returns of complete orders or partial selections, including comprehensive request processing, confirmation, and delivery status tracking throughout the return lifecycle.
     config:
       $ref: ./HEALTH&WELLNESS/Buyer_Initiated_Return__Full_Order_and_Partial_Order_.yaml
   - type: playground
@@ -18,7 +18,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Cancellation Flow for Health&Wellness
+    description: End-to-end health and wellness buyer journey demonstrating product discovery, selection, order placement, and buyer-initiated order cancellation within the ONDC network.
     config:
       $ref: ./HEALTH&WELLNESS/Buyer_Side_Order_Cancellation.yaml
   - type: playground
@@ -29,7 +29,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: RTO and Part Cancellation Flow for Health&Wellness
+    description: Enables merchants to manage partial order cancellations and coordinate returns for health and wellness products across the complete transaction lifecycle.
     config:
       $ref: ./HEALTH&WELLNESS/Merchant_Side_RTO_and_Part_Order_Cancellation_Flow.yaml
   - type: playground
@@ -40,7 +40,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Delivery Flow for Health&Wellness
+    description: End-to-end prepaid order lifecycle for health and wellness products, from selection and confirmation through fulfillment and delivery tracking.
     config:
       $ref: ./HEALTH&WELLNESS/Order_to_confirm_to_fulfillment__Prepaid_.yaml
   - type: playground
@@ -51,7 +51,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Out of Stock Flow for Health&Wellness
+    description: Health and wellness buyer initiates product selection for an out-of-stock item, testing the seller's out-of-stock error communication and the system's mandatory error reporting protocol. This flow validates the seller's ability to inform buyers of inventory constraints and exercises the required error handling path.
     config:
       $ref: ./HEALTH&WELLNESS/Out_of_Stock_Error_code_.yaml
   - type: playground
@@ -62,7 +62,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Discovery Flow (Full Catalog) for Health&Wellness
+    description: Health and wellness product discovery where a buyer searches for available offerings and receives the seller's complete catalog tailored to their specified city, enabling full-catalog exploration at the locality level.
     config:
       $ref: ./HEALTH&WELLNESS/Search_and_Custom_Menu__Full_Catalog_City_.yaml
   - type: playground
@@ -73,7 +73,7 @@ flows:
       - PRAMAAN
       - MANDATORY
       - REPORTABLE
-    description: Discovery Flow (Incremental Catalog) for Health&Wellness
+    description: Discovery and incremental presentation of health and wellness products in response to buyer search queries, simulating progressive catalog delivery as sellers match and push items to interested buyers.
     config:
       $ref: ./HEALTH&WELLNESS/Search_and_Custom_Menu__Incremental_Push_.yaml
   - type: playground
@@ -81,6 +81,20 @@ flows:
     usecase: HEALTH&WELLNESS
     tags:
       - WORKBENCH
-    description: Discovery Flow Incremental Catalog Refresh Pull for Health&Wellness
+    description: A health and wellness buyer discovers and incrementally pulls updated product listings from a seller through successive search interactions, synchronizing only new or modified items. This efficient, pull-based discovery flow enables real-time catalog refresh while minimizing data transfer.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
+
+  # _________________IGM 1.0.0___________________
+
+  - type: playground
+    id: Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0
+    usecase: HEALTH&WELLNESS
+    tags:
+      - WORKBENCH
+      # - PRAMAAN
+      - MANDATORY
+      # - REPORTABLE
+    description: End-to-end prepaid order lifecycle for health and wellness products, from selection and confirmation through fulfillment and delivery tracking.
+    config:
+      $ref: ./HEALTH&WELLNESS/Order_to_confirm_to_fulfillment__Prepaid_with_igm_1.0.0.yaml
