@@ -1745,6 +1745,7 @@ _TESTS_:
                                 - quote
                                 - np_fees
                                 - offer
+                                - finance_terms
                               _RETURN_: attr all in valid
                             - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_QUOTE
                               _RETURN_:
@@ -1766,25 +1767,61 @@ _TESTS_:
                                   _RETURN_: attr all in var_enum
         - _NAME_: ORDER_QUOTE_ADDITIONAL_TAGS
           _RETURN_:
-            - _NAME_: TAGS_ITEM_VALID_TAGS
-              _CONTINUE_: "!(attr are present)"
-              attr: $.message.order.quote.breakup[*].item.tags[*].code
-              valid:
-                - finance_terms
-                - np_fees
-              _RETURN_: attr all in valid
             - _NAME_: TAGS_FINANCE_TERMS
               _RETURN_: &a9
                 - _NAME_: TAGS_FINANCE_SUBVENTION_TYPE_VALID_TAGS
                   _CONTINUE_: "!(attr are present)"
                   attr: $.message.order.quote.breakup[*].item.tags[?(@.code=='finance_terms')].list[*].code
                   valid:
+                    - type
                     - subvention_type
                     - subvention_amount
                     - provider_tax_number
                     - bank_account_no
                     - ifsc_code
                   _RETURN_: attr all in valid
+                - _NAME_: TAGS_FINANCE_TERMS_TYPE
+                  _CONTINUE_: "!(attr are present)"
+                  attr: $.message.order.quote.breakup[*].item.tags[?(@.code=='finance_terms')].list[?(@.code=='type')].value
+                  var_enum:
+                    - order
+                    - fulfillment
+                  _RETURN_: attr all in var_enum
+            - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_OFFER
+              _RETURN_:
+                - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_OFFER_VALID_TAGS
+                  _CONTINUE_: "!(attr are present)"
+                  attr: $.message.order.quote.breakup[*].item.tags[?(@.code=='offer')].list[*].code
+                  valid:
+                    - id
+                    - type
+                    - auto
+                    - additive
+                    - item_id
+                    - item_value
+                    - item_count
+                  _RETURN_: attr all in valid
+                - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_OFFER_TYPE
+                  _CONTINUE_: "!(attr are present)"
+                  attr: $.message.order.quote.breakup[*].item.tags[?(@.code=='offer')].list[?(@.code=='type')].value
+                  var_enum:
+                    - delivery
+                    - discount
+                  _RETURN_: attr all in var_enum
+                - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_OFFER_AUTO
+                  _CONTINUE_: "!(attr are present)"
+                  attr: $.message.order.quote.breakup[*].item.tags[?(@.code=='offer')].list[?(@.code=='auto')].value
+                  var_enum:
+                    - yes
+                    - no
+                  _RETURN_: attr all in var_enum
+                - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_OFFER_ADDITIVE
+                  _CONTINUE_: "!(attr are present)"
+                  attr: $.message.order.quote.breakup[*].item.tags[?(@.code=='offer')].list[?(@.code=='additive')].value
+                  var_enum:
+                    - yes
+                    - no
+                  _RETURN_: attr all in var_enum
             - _NAME_: BREAKUP_ITEM_ITEM_TAGS_TAGS_NP_FEES
               _RETURN_:
                 - _NAME_: TAGS_NP_FEES_VALID_TAGS
