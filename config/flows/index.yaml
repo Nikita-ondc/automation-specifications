@@ -114,7 +114,6 @@ flows:
       - WORKBENCH
       - OPTIONAL
       - REPORTABLE
-      - MANDATORY
     description: Buyers discover products through sequential searches while the platform pulls incremental catalog updates from sellers, ensuring fresh product availability and details with each interaction.
     config:
       $ref: ./BPC/Discovery_Flow_incremental_catalog_refresh_pull.yaml
