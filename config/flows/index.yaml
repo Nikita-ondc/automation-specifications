@@ -138,7 +138,7 @@ flows:
       - PRAMAAN
       - REPORTABLE
       - WORKBENCH
-      - OPTIONAL
+      - MANDATORY
     description: Buyers incrementally discover updated health and wellness product catalogs from sellers through successive search queries, enabling real-time access to current offerings.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
