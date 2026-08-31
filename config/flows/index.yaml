@@ -106,6 +106,7 @@ flows:
       - OPTIONAL
       - REPORTABLE
       - WORKBENCH
+      - MANDATORY
     description: A buyer-side network participant initiates an incremental catalog discovery for appliances by issuing a targeted search request, prompting the seller NP to respond with only the updated or newly added catalog entries since the last sync. A subsequent search-and-response cycle confirms the incremental refresh, ensuring the buyer app maintains an up-to-date appliances catalog without fetching the full inventory on each pull.
     config:
       $ref: ./APPLIANCES/Discovery_Flow_incremental_catalog_refresh_pull.yaml
