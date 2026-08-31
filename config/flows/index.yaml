@@ -116,7 +116,7 @@ flows:
       - PRAMAAN
       - REPORTABLE
       - WORKBENCH
-      - OPTIONAL
+      - MANDATORY
     description: Retail 1.2.5 (Discovery Flow Incremental Catalog Refresh Pull)
     config:
       $ref: ./HOME&KITCHEN/Discovery_Flow_incremental_catalog_refresh_pull.yaml
