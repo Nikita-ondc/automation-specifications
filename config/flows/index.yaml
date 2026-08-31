@@ -81,6 +81,7 @@ flows:
     usecase: HEALTH&WELLNESS
     tags:
       - WORKBENCH
+      - MANDATORY
     description: A health and wellness buyer discovers and incrementally pulls updated product listings from a seller through successive search interactions, synchronizing only new or modified items. This efficient, pull-based discovery flow enables real-time catalog refresh while minimizing data transfer.
     config:
       $ref: ./HEALTH&WELLNESS/Discovery_Flow_incremental_catalog_refresh_pull.yaml
