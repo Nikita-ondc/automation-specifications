@@ -81,6 +81,7 @@ flows:
     usecase: APPLIANCES
     tags:
       - WORKBENCH
+      - MANDATORY
     description: A buyer discovers appliances through successive searches while the seller incrementally refreshes and pulls updated product catalog information, simulating real-time inventory synchronization across multiple discovery interactions.
     config:
       $ref: ./APPLIANCES/Discovery_Flow_incremental_catalog_refresh_pull.yaml
