@@ -81,6 +81,7 @@ flows:
     usecase: BPC
     tags:
       - WORKBENCH
+      - MANDATORY
     description: A BPC discovery flow that validates the incremental catalog refresh pull mechanism through a sequence of repeated search requests and responses.
     config:
       $ref: ./BPC/Discovery_Flow_incremental_catalog_refresh_pull.yaml
