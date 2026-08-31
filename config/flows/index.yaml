@@ -81,6 +81,7 @@ flows:
     usecase: HOME&KITCHEN
     tags:
       - WORKBENCH
+      - MANDATORY
     description: Discovery Flow Incremental Catalog Refresh Pull for HOME&KITCHEN
     config:
       $ref: ./HOME&KITCHEN/Discovery_Flow_incremental_catalog_refresh_pull.yaml
