@@ -99,9 +99,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: search
-            timestamp: 2026-08-12T08:48:30.801Z
+            timestamp: 2026-09-02T12:26:54.323Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: d92dd09e-99ca-443c-8bf2-6e82e772c581
+            message_id: 21892641-1e30-43b2-8bed-e37758d23533
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -337,9 +337,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_search
-            timestamp: 2026-08-12T08:48:30.813Z
+            timestamp: 2026-09-02T12:26:54.334Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: d92dd09e-99ca-443c-8bf2-6e82e772c581
+            message_id: 21892641-1e30-43b2-8bed-e37758d23533
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -368,7 +368,7 @@ steps:
               descriptor:
                 name: ABC Insurance Ltd
               providers:
-                - id: a922df00-d179-4715-8377-91c0fc5e29f0
+                - id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
                   descriptor:
                     name: ABC Insurance Ltd.
                     short_desc: ABC Insurance Ltd. India
@@ -489,7 +489,7 @@ steps:
                           headings:
                             - FAMILY_DETAILS
                         form:
-                          id: b1e49bee-ad02-4647-ab23-994d8247daf9
+                          id: d7eadc12-42d2-42c5-9553-fe369ee70752
                           mime_type: text/html-multi
                           url: undefined/forms/ONDC:FIS13/family_information_form/?transaction_id=17d60447-c97c-4d75-9d54-4c900208166f&session_id=undefined
                           resubmit: true
@@ -526,11 +526,11 @@ steps:
         payload:
           firstName: test
           lastName: nikita
-          dob: 2026-08-05
+          dob: 2026-09-16
           gender: male
           phone: "9877667788"
           email: nikita.sharma@test.com
-          relation: spouse
+          relation: self
           PED: ""
           height: ""
           weight: ""
@@ -541,7 +541,8 @@ steps:
           tenure: "1"
           panValue: ""
           dobAsPerPan: ""
-          formId: F02
+          formId: <%= formId %>
+          transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
         description: The BPP presents an HTML form to the BAP to collect personal,
           health, and family relationship details for each family member
@@ -655,9 +656,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: search
-            timestamp: 2026-08-12T08:49:02.513Z
+            timestamp: 2026-09-02T12:27:17.132Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: d3ec393b-5964-4ad2-a0cc-3e7e46e8760a
+            message_id: 32c924c1-35b1-4f7c-b402-2481c8f3bd05
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -684,15 +685,15 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
               provider:
-                id: "909988888"
+                id: pro909988888
                 items:
                   - id: item5678
                     xinput:
                       form:
-                        id: b1e49bee-ad02-4647-ab23-994d8247daf9
+                        id: d7eadc12-42d2-42c5-9553-fe369ee70752
                       form_response:
                         status: SUCCESS
-                        submission_id: e42b6d56-1c38-4d50-a0a9-1d94e47b21a5
+                        submission_id: 52eae0a8-2d50-4c01-8fb4-68867b7b2fc6
               payment:
                 collected_by: BPP
               category:
@@ -1205,9 +1206,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_search
-            timestamp: 2026-08-12T08:49:02.543Z
+            timestamp: 2026-09-02T12:27:17.146Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: d3ec393b-5964-4ad2-a0cc-3e7e46e8760a
+            message_id: 32c924c1-35b1-4f7c-b402-2481c8f3bd05
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1257,7 +1258,7 @@ steps:
                     images:
                       - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                         size_type: xs
-                  id: a922df00-d179-4715-8377-91c0fc5e29f0
+                  id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
                   items:
                     - id: 1b0fb502-630d-4650-a195-9262c1436e2d
                       category_ids:
@@ -1361,7 +1362,7 @@ steps:
                           price:
                             value: "100"
                             currency: INR
-                    - id: 2640f13e-9e0a-4c07-990c-2055efb92c44
+                    - id: e75c937e-e3ff-41fb-9aba-037f31ef56eb
                       parent_item_id: 1b0fb502-630d-4650-a195-9262c1436e2d
                       category_ids:
                         - C2
@@ -1515,7 +1516,7 @@ steps:
                           price:
                             value: "100"
                             currency: INR
-                    - id: ad125d60-3fcb-4e0f-912e-770a884be367
+                    - id: aebb33e7-10d3-4f83-b702-df46bbf94469
                       parent_item_id: 1b0fb502-630d-4650-a195-9262c1436e2d
                       category_ids:
                         - C2
@@ -1768,9 +1769,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: select
-            timestamp: 2026-08-12T08:49:04.198Z
+            timestamp: 2026-09-02T12:27:18.667Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: d9bbb66a-f35b-496a-863e-9897b0bbe5d7
+            message_id: 62b15f8d-dd71-4c04-bc3b-71de37a7fe71
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1839,7 +1840,7 @@ steps:
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
         type: request
         description: please add relevant description
   - api: on_select
@@ -2010,7 +2011,6 @@ steps:
                     value: "10"
                     currency: INR
                   title: PROCESSING_FEE
-                
               price:
                 currency: INR
                 value: "1100"
@@ -2044,9 +2044,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_select
-            timestamp: 2026-08-12T08:49:04.211Z
+            timestamp: 2026-09-02T12:27:18.681Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: d9bbb66a-f35b-496a-863e-9897b0bbe5d7
+            message_id: 62b15f8d-dd71-4c04-bc3b-71de37a7fe71
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2131,7 +2131,7 @@ steps:
                         - PED
                         - EKYC
                     form:
-                      id: 4ebef205-46b6-4784-be71-26badeaaf9f8
+                      id: 762806f8-a039-481c-a76f-fea21c556be8
                       mime_type: text/html
                       url: undefined/forms/ONDC:FIS13/ped_details_form/?transaction_id=17d60447-c97c-4d75-9d54-4c900208166f&session_id=undefined
                       resubmit: true
@@ -2146,9 +2146,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -2168,14 +2168,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -2188,7 +2180,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
         type: request
         description: please add relevant description
@@ -2246,7 +2238,8 @@ steps:
           question9_1: yes
           question9_1a: ""
           question10_1: yes
-          formId: FO5
+          formId: <%= formId %>
+          transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
         description: please add relevant description
   - api: select
@@ -2301,9 +2294,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: select
-            timestamp: 2026-08-12T08:49:07.185Z
+            timestamp: 2026-09-02T12:27:21.325Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 230415ee-3598-4d68-bfce-cd3a2571c818
+            message_id: fa6fc013-7b11-45e7-b5ff-e3fc74630a51
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2322,12 +2315,12 @@ steps:
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 4ebef205-46b6-4784-be71-26badeaaf9f8
+                      id: 762806f8-a039-481c-a76f-fea21c556be8
                     form_response:
                       status: SUCCESS
-                      submission_id: 8c0e6ea5-07d3-4aa2-a18c-f933f60d448e
+                      submission_id: 557edc42-b11b-4934-8334-7f72eceb2bd8
               provider:
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
         type: request
         description: The BAP selects a specific health insurance provider and associated
           coverage items from the available options. This selection captures the
@@ -2396,9 +2389,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_select
-            timestamp: 2026-08-12T08:49:07.223Z
+            timestamp: 2026-09-02T12:27:21.337Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 230415ee-3598-4d68-bfce-cd3a2571c818
+            message_id: fa6fc013-7b11-45e7-b5ff-e3fc74630a51
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2483,7 +2476,7 @@ steps:
                         - PED
                         - EKYC
                     form:
-                      id: 46e942f8-c305-4296-9f77-f576caa1d7b1
+                      id: 0a48b490-089d-4e12-9150-eea894f7357e
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS13/Ekyc_details_form/?transaction_id=17d60447-c97c-4d75-9d54-4c900208166f&session_id=undefined&bap_uri=https%3A%2F%2Fbap.example.com
                       resubmit: true
@@ -2498,9 +2491,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -2520,14 +2513,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -2540,7 +2525,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
         type: request
         description: The BPP confirms the customer's selected insurance provider and
@@ -2568,6 +2553,8 @@ steps:
       - name: example for dynamic_form
         payload:
           idType: SUCCESS
+          formId: <%= formId %>
+          transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
         description: The BPP presents a dynamic eKYC form to the BAP for collecting
           applicant identity verification credentials and personal information
@@ -2624,9 +2611,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_status
-            timestamp: 2026-08-12T08:49:09.619Z
+            timestamp: 2026-09-02T12:27:23.550Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: af582b66-9aca-4668-925d-33d85fd8f842
+            message_id: e59827c6-8641-4fe3-815e-3cdd36b929d9
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2701,10 +2688,10 @@ steps:
                     label: TENURE
                   xinput:
                     form:
-                      id: 46e942f8-c305-4296-9f77-f576caa1d7b1
+                      id: 0a48b490-089d-4e12-9150-eea894f7357e
                     form_response:
                       status: SUCCESS
-                      submission_id: de260941-26cc-4e6b-9692-98ed6abbbd8a
+                      submission_id: 4b89fc29-1cec-4117-8f8a-ef95a3cb9012
               provider:
                 descriptor:
                   long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
@@ -2714,9 +2701,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -2736,14 +2723,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -2756,7 +2735,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
         type: request
         description: The BPP sends an unsolicited status notification to the BAP
@@ -2835,9 +2814,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: init
-            timestamp: 2026-08-12T08:49:09.662Z
+            timestamp: 2026-09-02T12:27:23.566Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: b086cf99-751e-4536-ba61-f90612c54f03
+            message_id: 932143a3-7ba1-49eb-925a-619e90c909d4
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2863,12 +2842,12 @@ steps:
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 46e942f8-c305-4296-9f77-f576caa1d7b1
+                      id: 0a48b490-089d-4e12-9150-eea894f7357e
                     form_response:
                       status: SUCCESS
-                      submission_id: de260941-26cc-4e6b-9692-98ed6abbbd8a
+                      submission_id: 4b89fc29-1cec-4117-8f8a-ef95a3cb9012
               provider:
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -2877,7 +2856,7 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
+                    amount: "2900"
               tags:
                 - descriptor:
                     code: BAP_TERMS
@@ -2975,9 +2954,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_init
-            timestamp: 2026-08-12T08:49:09.730Z
+            timestamp: 2026-09-02T12:27:23.615Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: b086cf99-751e-4536-ba61-f90612c54f03
+            message_id: 932143a3-7ba1-49eb-925a-619e90c909d4
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2998,7 +2977,7 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
               items:
                 - category_ids:
@@ -3072,14 +3051,14 @@ steps:
                         - NOMINEE_DETAILS
                         - CIS_AND_PAYMENT
                     form:
-                      id: b88af376-e0e3-4eea-a357-e403010d7a9b
+                      id: 142564e8-012e-4116-be2d-6f488ed3da69
                       mime_type: text/html
                       url: undefined/forms/ONDC:FIS13/Proposer_Details_form/?transaction_id=17d60447-c97c-4d75-9d54-4c900208166f&session_id=undefined
                       resubmit: true
                       multiple_sumbissions: false
                     required: true
                   fulfillment_ids:
-                    - f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                    - 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -3088,8 +3067,8 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
-                  id: 93eed9ff-3c2d-4f03-a6e7-2b2efd1ceaec
+                    amount: "2900"
+                  id: 810a89fa-563d-4844-9b32-0259e0d02f91
               provider:
                 descriptor:
                   long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
@@ -3099,9 +3078,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -3121,14 +3100,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -3141,7 +3112,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
               cancellation_terms:
                 - external_ref:
@@ -3187,8 +3158,8 @@ steps:
           firstName: test
           lastName: nikita
           address: jhguguy
-          dob: 2026-08-04
-          gender: female
+          dob: 2026-09-30
+          gender: transgender
           politicallyExposedPerson: on
           email: nikita.sharma@test.com
           phone: "9877667788"
@@ -3196,12 +3167,12 @@ steps:
           weight: "22"
           height: "33"
           relation: spouse
-          formId: F05
+          formId: <%= formId %>
+          transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
         description: The BPP generates an HTML form that collects the individual
           applicant's personal, health, and insurance preference information to
           facilitate the health insurance application and underwriting workflow.
-  
   - api: init
     action_id: init2
     owner: BAP
@@ -3257,9 +3228,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: init
-            timestamp: 2026-08-12T08:49:25.482Z
+            timestamp: 2026-09-02T12:27:34.526Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 4c8d2e60-b041-4d0e-ba80-b3ac664295e4
+            message_id: a9eb6cfc-b9ed-4606-b914-6024e70a2c5e
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3280,19 +3251,19 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
               items:
                 - id: CHILD_ITEM_ID_I1
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: b88af376-e0e3-4eea-a357-e403010d7a9b
+                      id: 142564e8-012e-4116-be2d-6f488ed3da69
                     form_response:
                       status: SUCCESS
-                      submission_id: cc63f58e-be1f-489e-8067-01bd8d13dcbd
+                      submission_id: 4cbed435-0b79-48fb-986d-ae7a9b158924
               provider:
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -3301,7 +3272,7 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
+                    amount: "2900"
               tags:
                 - descriptor:
                     code: BAP_TERMS
@@ -3377,9 +3348,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_init
-            timestamp: 2026-08-12T08:49:25.520Z
+            timestamp: 2026-09-02T12:27:34.541Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 4c8d2e60-b041-4d0e-ba80-b3ac664295e4
+            message_id: a9eb6cfc-b9ed-4606-b914-6024e70a2c5e
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3400,7 +3371,7 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
               items:
                 - category_ids:
@@ -3475,13 +3446,13 @@ steps:
                         - NOMINEE_DETAILS
                         - CIS_AND_PAYMENT
                     form:
-                      id: ce3dbf1c-1a8a-405f-af6b-cd5448dff78f
+                      id: e7adafd2-44e1-4e76-b3b1-06a7e5ac90fb
                       mime_type: text/html
                       url: undefined/forms/ONDC:FIS13/nominee_details_form/?transaction_id=17d60447-c97c-4d75-9d54-4c900208166f&session_id=undefined
                       resubmit: true
                       multiple_sumbissions: false
                   fulfillment_ids:
-                    - f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                    - 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -3490,8 +3461,8 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
-                  id: 93eed9ff-3c2d-4f03-a6e7-2b2efd1ceaec
+                    amount: "2900"
+                  id: 810a89fa-563d-4844-9b32-0259e0d02f91
               provider:
                 descriptor:
                   long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
@@ -3501,9 +3472,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -3523,14 +3494,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -3543,7 +3506,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
               cancellation_terms:
                 - external_ref:
@@ -3587,13 +3550,14 @@ steps:
         payload:
           nominee1_firstName: NIKITA
           nominee1_lastName: nikita
-          nominee1_dob: 2026-08-05
-          nominee1_relation: daughter
+          nominee1_dob: 2026-09-13
+          nominee1_relation: son
           nominee2_firstName: ""
           nominee2_lastName: ""
           nominee2_dob: ""
           nominee2_relation: ""
-          formId: F08
+          formId: <%= formId %>
+          transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
         description: The BPP generates and transmits an HTML form to the BAP to collect
           the applicant's personal, health, and insurance plan preference
@@ -3653,9 +3617,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: init
-            timestamp: 2026-08-12T08:49:32.660Z
+            timestamp: 2026-09-02T12:27:42.378Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 810df27b-6890-4da2-9414-049500b591b3
+            message_id: 84f77a8c-d2ac-4938-aa7e-94b87cc95029
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3676,19 +3640,19 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
               items:
                 - id: CHILD_ITEM_ID_I1
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: ce3dbf1c-1a8a-405f-af6b-cd5448dff78f
+                      id: e7adafd2-44e1-4e76-b3b1-06a7e5ac90fb
                     form_response:
                       status: SUCCESS
-                      submission_id: 2dcd8a97-815c-4e44-affc-af09ab032725
+                      submission_id: 2708a244-19b7-457c-883a-4f3577412923
               provider:
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -3697,8 +3661,8 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
-                  id: 93eed9ff-3c2d-4f03-a6e7-2b2efd1ceaec
+                    amount: "2900"
+                  id: 810a89fa-563d-4844-9b32-0259e0d02f91
               tags:
                 - descriptor:
                     code: BAP_TERMS
@@ -3773,9 +3737,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_init
-            timestamp: 2026-08-12T08:49:32.699Z
+            timestamp: 2026-09-02T12:27:42.392Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 810df27b-6890-4da2-9414-049500b591b3
+            message_id: 84f77a8c-d2ac-4938-aa7e-94b87cc95029
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3796,7 +3760,7 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
               items:
                 - category_ids:
@@ -3870,7 +3834,7 @@ steps:
                         - NOMINEE_DETAILS
                         - CIS_AND_PAYMENT
                     form:
-                      id: 8ce89e68-454a-4297-8323-b357eda51428
+                      id: 9b87f282-3087-4076-ae8b-92e257066a21
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS13/consumer_information_form/?transaction_id=17d60447-c97c-4d75-9d54-4c900208166f&session_id=undefined&bap_uri=https%3A%2F%2Fbap.example.com
                       resubmit: true
@@ -3884,8 +3848,8 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
-                  id: 93eed9ff-3c2d-4f03-a6e7-2b2efd1ceaec
+                    amount: "2900"
+                  id: 810a89fa-563d-4844-9b32-0259e0d02f91
               provider:
                 descriptor:
                   long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
@@ -3895,9 +3859,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -3917,14 +3881,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -3937,7 +3893,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
               cancellation_terms:
                 - external_ref:
@@ -3981,6 +3937,8 @@ steps:
       - name: example for dynamic_form
         payload:
           idType: SUCCESS
+          formId: <%= formId %>
+          transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
         description: The BPP transmits a dynamic form to the BAP to request collection
           of eKYC-verified applicant personal information and identity
@@ -4039,9 +3997,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_status
-            timestamp: 2026-08-12T08:49:35.394Z
+            timestamp: 2026-09-02T12:27:45.058Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 65f0b25a-1b64-4cf6-aab2-25200b63c9ec
+            message_id: 3e050aa9-ba0a-46a0-bc4e-8bac9d38638d
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4062,7 +4020,7 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
               items:
                 - category_ids:
@@ -4125,10 +4083,10 @@ steps:
                     label: TENURE
                   xinput:
                     form:
-                      id: 8ce89e68-454a-4297-8323-b357eda51428
+                      id: 9b87f282-3087-4076-ae8b-92e257066a21
                     form_response:
                       status: SUCCESS
-                      submission_id: 40df06a0-0b3e-45ca-831f-ce691e126d6b
+                      submission_id: 8ed28a88-ef83-42cf-bf04-6e02aa2326f3
               payments:
                 - collected_by: BPP
                   status: PAID
@@ -4137,9 +4095,9 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
-                    transaction_id: 373f8423-6f75-4517-9243-f6a5c5b77f01
-                  id: 93eed9ff-3c2d-4f03-a6e7-2b2efd1ceaec
+                    amount: "2900"
+                    transaction_id: 119cff43-8042-46ad-abb7-92d31aed3f28
+                  id: 810a89fa-563d-4844-9b32-0259e0d02f91
               provider:
                 descriptor:
                   long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
@@ -4149,9 +4107,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -4171,14 +4129,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -4191,7 +4141,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
               cancellation_terms:
                 - external_ref:
@@ -4224,7 +4174,7 @@ steps:
       transmitting the selected items, fulfillment details, and agreed payment
       terms to authorize policy issuance.
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCmxldCBjb21iaW5lZFRhZ3MgCmlmKHNlc3Npb25EYXRhPy5zZWFyY2hfdGFncyAmJiBzZXNzaW9uRGF0YT8ub25fc2VhcmNoX3RhZ3MpewogIGNvbWJpbmVkVGFncyA9IFtzZXNzaW9uRGF0YT8uc2VhcmNoX3RhZ3NbMF0sIHNlc3Npb25EYXRhPy5vbl9zZWFyY2hfdGFnc1swXV0KfQoKICBjb25zdCBzdWJtaXNzaW9uX2lkID0gc2Vzc2lvbkRhdGE/LmNvbnN1bWVyX2luZm9ybWF0aW9uX2Zvcm0KICBjb25zdCBmb3JtX3N0YXR1cyA9IHN1Ym1pc3Npb25faWQgPyAiU1VDQ0VTUyIKICAgIDogIlBFTkRJTkciOwogCgoKICBjb25zdCB4aW5wdXQgPSB7CiAgICAiZm9ybSI6IHsKICAgICAgImlkIjogIkYwOCIKICAgIH0sCiAgICAiZm9ybV9yZXNwb25zZSI6IHsKICAgICAgInN0YXR1cyI6ICJTVUNDRVNTIiwKICAgICAgInN1Ym1pc3Npb25faWQiOiAiYWFiOGUxODYtZTlkNi00YjkzLThhNzAtOGY2YjhjNDcxODYyIgogICAgfQogIH0KICBpZiAoc2Vzc2lvbkRhdGEuaW5pdF9vcmRlcikgewogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlciA9IHNlc3Npb25EYXRhLmluaXRfb3JkZXJbMF07CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50cyA9IHNlc3Npb25EYXRhLm9yZGVyWzBdLmZ1bGZpbGxtZW50czsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIudGFncyA9IGNvbWJpbmVkVGFnczsKCgogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXS54aW5wdXQgPSB4aW5wdXQ7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzWzBdLnBhcmFtcy50cmFuc2FjdGlvbl9pZCA9IHNlc3Npb25EYXRhLnBheW1lbnRfdHJhbnNhY3Rpb25faWRbMF07CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzWzBdLnN0YXR1cyA9ICJQQUlEIjsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucXVvdGUgPSBzZXNzaW9uRGF0YS5xdW90ZVswXTsKCiAgfQoKCgoKICBpZiAoZGVmYXVsdFBheWxvYWQubWVzc2FnZT8ub3JkZXI/Lml0ZW1zPy5bMF0pIHsKICAgIGNvbnN0IGl0ZW0gPSBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdOwogICAgaWYgKGl0ZW0ueGlucHV0Py5mb3JtKSB7CiAgICAgIGNvbnN0IGZvcm1JZCA9IHNlc3Npb25EYXRhLmZvcm1faWQgfHwgIkYwOCI7CiAgICAgIGl0ZW0ueGlucHV0LmZvcm0uaWQgPSBmb3JtSWRbMF07CiAgICB9CgogICAgLy8gICAvLyBTZXQgZm9ybSBzdGF0dXMgYW5kIHN1Ym1pc3Npb25faWQKICAgIGlmIChpdGVtLnhpbnB1dCkgewogICAgICAvLyBDcmVhdGUgZm9ybV9yZXNwb25zZSBpZiBpdCBkb2Vzbid0IGV4aXN0CiAgICAgIGlmICghaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZSkgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2UgPSB7fTsKICAgICAgfQogICAgICBpZiAoZm9ybV9zdGF0dXMpIHsKICAgICAgICBpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlLnN0YXR1cyA9IGZvcm1fc3RhdHVzOwogICAgICB9CiAgICAgIGlmIChzdWJtaXNzaW9uX2lkKSB7CiAgICAgICAgaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZS5zdWJtaXNzaW9uX2lkID0gc3VibWlzc2lvbl9pZDsKICAgICAgfQogICAgfQogIH0KCgoKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCmxldCBjb21iaW5lZFRhZ3MgCmlmKHNlc3Npb25EYXRhPy5zZWFyY2hfdGFncyAmJiBzZXNzaW9uRGF0YT8ub25fc2VhcmNoX3RhZ3MpewogIGNvbWJpbmVkVGFncyA9IFtzZXNzaW9uRGF0YT8uc2VhcmNoX3RhZ3NbMF0sIHNlc3Npb25EYXRhPy5vbl9zZWFyY2hfdGFnc1swXV0KfQoKICBjb25zdCBzdWJtaXNzaW9uX2lkID0gc2Vzc2lvbkRhdGE/LmNvbnN1bWVyX2luZm9ybWF0aW9uX2Zvcm0KICBjb25zdCBmb3JtX3N0YXR1cyA9IHN1Ym1pc3Npb25faWQgPyAiU1VDQ0VTUyIKICAgIDogIlBFTkRJTkciOwogCgoKICBjb25zdCB4aW5wdXQgPSB7CiAgICAiZm9ybSI6IHsKICAgICAgImlkIjogIkYwOCIKICAgIH0sCiAgICAiZm9ybV9yZXNwb25zZSI6IHsKICAgICAgInN0YXR1cyI6ICJTVUNDRVNTIiwKICAgICAgInN1Ym1pc3Npb25faWQiOiAiYWFiOGUxODYtZTlkNi00YjkzLThhNzAtOGY2YjhjNDcxODYyIgogICAgfQogIH0KICBpZiAoc2Vzc2lvbkRhdGEuaW5pdF9vcmRlciAmJiBzZXNzaW9uRGF0YS5vbl9pbml0X29yZGVyKSB7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyID0gc2Vzc2lvbkRhdGEuaW5pdF9vcmRlclswXTsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuZnVsZmlsbG1lbnRzID0gc2Vzc2lvbkRhdGEub3JkZXJbMF0uZnVsZmlsbG1lbnRzOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci50YWdzID0gY29tYmluZWRUYWdzOwpkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzWzBdLmlkID0gc2Vzc2lvbkRhdGEub25faW5pdF9vcmRlclswXS5wYXltZW50c1swXS5pZDsKCiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLnhpbnB1dCA9IHhpbnB1dDsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucGF5bWVudHNbMF0ucGFyYW1zLnRyYW5zYWN0aW9uX2lkID0gc2Vzc2lvbkRhdGEucGF5bWVudF90cmFuc2FjdGlvbl9pZFswXTsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucGF5bWVudHNbMF0uc3RhdHVzID0gIlBBSUQiOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZSA9IHNlc3Npb25EYXRhLnF1b3RlWzBdOwoKICB9CgoKCgogIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXSkgewogICAgY29uc3QgaXRlbSA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF07CiAgICBpZiAoaXRlbS54aW5wdXQ/LmZvcm0pIHsKICAgICAgY29uc3QgZm9ybUlkID0gc2Vzc2lvbkRhdGEuZm9ybV9pZCB8fCAiRjA4IjsKICAgICAgaXRlbS54aW5wdXQuZm9ybS5pZCA9IGZvcm1JZFswXTsKICAgIH0KCiAgICAvLyAgIC8vIFNldCBmb3JtIHN0YXR1cyBhbmQgc3VibWlzc2lvbl9pZAogICAgaWYgKGl0ZW0ueGlucHV0KSB7CiAgICAgIC8vIENyZWF0ZSBmb3JtX3Jlc3BvbnNlIGlmIGl0IGRvZXNuJ3QgZXhpc3QKICAgICAgaWYgKCFpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlKSB7CiAgICAgICAgaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZSA9IHt9OwogICAgICB9CiAgICAgIGlmIChmb3JtX3N0YXR1cykgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3RhdHVzID0gZm9ybV9zdGF0dXM7CiAgICAgIH0KICAgICAgaWYgKHN1Ym1pc3Npb25faWQpIHsKICAgICAgICBpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlLnN1Ym1pc3Npb25faWQgPSBzdWJtaXNzaW9uX2lkOwogICAgICB9CiAgICB9CiAgfQoKCgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgIGlmICghc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfcHJvdmlkZXIpIHsKICAgICAgICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiAyMDMsIGRlc2NyaXB0aW9uOiAiTm8gc2VsZWN0ZWRfcHJvdmlkZXIgYXZhaWxhYmxlIGluIHNlc3Npb24gZGF0YSIgfTsKICAgICAgICB9CiAgICAgICAgY29uc3QgaGFzSXRlbXMgPSAoQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5zZWxlY3RlZF9pdGVtcykgJiYgc2Vzc2lvbkRhdGEuc2VsZWN0ZWRfaXRlbXMubGVuZ3RoID4gMCkgfHwgISFzZXNzaW9uRGF0YS5pdGVtOwogICAgICAgIGlmICghaGFzSXRlbXMpIHsKICAgICAgICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiAyMDMsIGRlc2NyaXB0aW9uOiAiTm8gaXRlbXMgYXZhaWxhYmxlIGluIHNlc3Npb24gZGF0YSIgfTsKICAgICAgICB9CiAgICAgICAgaWYgKCFzZXNzaW9uRGF0YS50cmFuc2FjdGlvbl9pZCkgewogICAgICAgICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDIwMywgZGVzY3JpcHRpb246ICJObyB0cmFuc2FjdGlvbl9pZCBhdmFpbGFibGUgaW4gc2Vzc2lvbiBkYXRhIiB9OwogICAgICAgIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0=
       defaultPayload:
@@ -4269,9 +4219,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: confirm
-            timestamp: 2026-08-12T08:49:35.448Z
+            timestamp: 2026-09-02T12:27:45.076Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 9f9a2a6e-73c5-4ada-af67-4e63f79559d9
+            message_id: 6a815bc1-e608-4225-8e5e-4ced44b704dc
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4292,19 +4242,19 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
               items:
                 - id: CHILD_ITEM_ID_I1
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 8ce89e68-454a-4297-8323-b357eda51428
+                      id: 9b87f282-3087-4076-ae8b-92e257066a21
                     form_response:
                       status: SUCCESS
-                      submission_id: c9b71538-a62b-40e5-b723-e88cfa0026f5
+                      submission_id: 2ecb7abf-0ed7-4a85-a746-de3412b71e14
               provider:
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               payments:
                 - collected_by: BPP
                   status: PAID
@@ -4313,8 +4263,9 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
-                    transaction_id: 373f8423-6f75-4517-9243-f6a5c5b77f01
+                    amount: "2900"
+                    transaction_id: 119cff43-8042-46ad-abb7-92d31aed3f28
+                  id: 810a89fa-563d-4844-9b32-0259e0d02f91
               tags:
                 - descriptor:
                     code: BAP_TERMS
@@ -4339,7 +4290,7 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -4359,14 +4310,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -4379,7 +4322,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
         type: request
         description: The BAP confirms the finalized health insurance order to the BPP,
@@ -4473,9 +4416,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_confirm
-            timestamp: 2026-08-12T08:49:35.539Z
+            timestamp: 2026-09-02T12:27:45.136Z
             transaction_id: 17d60447-c97c-4d75-9d54-4c900208166f
-            message_id: 9f9a2a6e-73c5-4ada-af67-4e63f79559d9
+            message_id: 6a815bc1-e608-4225-8e5e-4ced44b704dc
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4496,7 +4439,7 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
+                  id: 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
                   type: POLICY
                   state:
                     descriptor:
@@ -4558,8 +4501,8 @@ steps:
                     duration: P1Y
                     label: TENURE
                   fulfillment_ids:
-                    - f53f4bf4-061b-48c1-b07d-8d430d2ba9b6
-              id: b6778e44-f1a6-42cc-a68b-d92eb9efa428
+                    - 1eee1e2c-56a5-4d39-a53a-cd12716efd1a
+              id: e83ad658-5b84-4dff-b552-3a1a29831bd5
               payments:
                 - collected_by: BPP
                   status: PAID
@@ -4568,9 +4511,9 @@ steps:
                     bank_account_number: "1800002341"
                     bank_code: SBIN0001234
                     currency: INR
-                    amount: "3000"
-                    transaction_id: 373f8423-6f75-4517-9243-f6a5c5b77f01
-                  id: 93eed9ff-3c2d-4f03-a6e7-2b2efd1ceaec
+                    amount: "2900"
+                    transaction_id: 119cff43-8042-46ad-abb7-92d31aed3f28
+                  id: 810a89fa-563d-4844-9b32-0259e0d02f91
               provider:
                 descriptor:
                   long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
@@ -4580,9 +4523,9 @@ steps:
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: a922df00-d179-4715-8377-91c0fc5e29f0
+                id: b4fe17e1-485b-4303-82a6-941b2a1f61fd
               quote:
-                id: 6431786f-3a6d-441e-8924-32da5884f03a
+                id: c706fd4b-73db-4ccc-8539-c74ca99d3116
                 breakup:
                   - price:
                       value: "900"
@@ -4602,14 +4545,6 @@ steps:
                     title: PROCESSING_FEE
                   - title: ADD_ONS
                     item:
-                      id: aeffbe85-7900-4700-8360-71229d242c81
-                      add_ons:
-                        - id: A1
-                    price:
-                      value: "100"
-                      currency: INR
-                  - title: ADD_ONS
-                    item:
                       id: A1
                     price:
                       currency: INR
@@ -4622,7 +4557,7 @@ steps:
                       value: "1000"
                 price:
                   currency: INR
-                  value: "3000"
+                  value: "2900"
                 ttl: P15D
               status: ACTIVE
               documents:
@@ -4652,12 +4587,12 @@ steps:
                       following URL
                   mime_type: application/html
                   url: https://abcinsurance.com/renew-policy/
-              updated_at: 2026-08-12T08:49:35.540Z
+              updated_at: 2026-09-02T12:27:45.137Z
               cancellation_terms:
                 - external_ref:
                     mimetype: text/html,
                     url: https://fis.test.bpp.io/cancellation-terms
-              created_at: 2026-08-12T08:49:35.540Z
+              created_at: 2026-09-02T12:27:45.137Z
               tags:
                 - descriptor:
                     code: BAP_TERMS
