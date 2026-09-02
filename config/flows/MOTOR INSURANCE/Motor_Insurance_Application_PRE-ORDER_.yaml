@@ -1017,15 +1017,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: search
-<<<<<<< Updated upstream
             timestamp: 2026-09-01T08:45:44.882Z
             transaction_id: 989c6aa6-4e48-4f43-8269-9f5f7c9ba743
             message_id: cf7253e1-1311-42ab-900d-bcea143ada42
-=======
-            timestamp: 2026-09-01T12:23:21.574Z
-            transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
-            message_id: 0a6ff538-71b0-45fd-a49b-b6e2d0848369
->>>>>>> Stashed changes
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1048,17 +1042,10 @@ steps:
                   - id: ITEM_ID_AGRI
                     xinput:
                       form:
-<<<<<<< Updated upstream
                         id: 09e4ece6-5787-40ff-8458-605288dc8e1f
                       form_response:
                         status: SUCCESS
                         submission_id: 3e6a8b5b-4506-4370-aaed-72c0b95121dc
-=======
-                        id: 5f36a6f1-69ac-4281-afff-bf33e81c19c9
-                      form_response:
-                        status: SUCCESS
-                        submission_id: c964bd03-60e1-473e-9e6a-b7fae3f48bad
->>>>>>> Stashed changes
               payment:
                 collected_by: BPP
                 tags:

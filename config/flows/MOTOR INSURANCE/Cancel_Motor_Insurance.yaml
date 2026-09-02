@@ -115,15 +115,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: search
-<<<<<<< Updated upstream
             timestamp: 2026-09-01T08:35:22.097Z
             transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
             message_id: 3bc65c2a-9f24-4891-ab73-a5cccc4c76a0
-=======
-            timestamp: 2026-09-01T12:22:43.502Z
-            transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
-            message_id: 15aa3a50-1396-4b13-9750-9e70c70d2203
->>>>>>> Stashed changes
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -535,15 +529,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_search
-<<<<<<< Updated upstream
             timestamp: 2026-09-01T08:35:22.114Z
             transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
             message_id: 3bc65c2a-9f24-4891-ab73-a5cccc4c76a0
-=======
-            timestamp: 2026-09-01T12:22:43.526Z
-            transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
-            message_id: 15aa3a50-1396-4b13-9750-9e70c70d2203
->>>>>>> Stashed changes
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -560,11 +548,7 @@ steps:
               descriptor:
                 name: ABC Insurance Ltd
               providers:
-<<<<<<< Updated upstream
                 - id: 647109b4-0da0-499d-9961-bad8cc97f1e3
-=======
-                - id: d37171e0-3504-4fd4-b4d9-8036007e8105
->>>>>>> Stashed changes
                   categories:
                     - descriptor:
                         name: Two Wheeler Comprehensive
@@ -618,11 +602,7 @@ steps:
                       - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                         size_type: xs
                   items:
-<<<<<<< Updated upstream
                     - id: 14350607-b5e6-45c5-ab6e-f34433b79896
-=======
-                    - id: 074474fc-0598-4889-83aa-8cfed17de28e
->>>>>>> Stashed changes
                       category_ids:
                         - C1
                         - C2
@@ -647,11 +627,7 @@ steps:
                           headings:
                             - VEHICLE_DETAILS
                         form:
-<<<<<<< Updated upstream
                           id: efecdda5-41ec-4e36-8eb8-b41d8ee74c4c
-=======
-                          id: 5f36a6f1-69ac-4281-afff-bf33e81c19c9
->>>>>>> Stashed changes
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS13/vehicle_details_form/?transaction_id=4ef70074-2f56-4bb3-a504-ec55e559c572&session_id=undefined
                           multiple_sumbissions: false
@@ -739,11 +715,7 @@ steps:
                           descriptor:
                             name: Daily Allowance
                             code: DAILY_ALLOWANCE
-<<<<<<< Updated upstream
                     - id: e5fa2a46-9187-4282-8039-efa9ca313370
-=======
-                    - id: c25813ed-e70d-4ee8-8a65-7259b507c507
->>>>>>> Stashed changes
                       category_ids:
                         - C4
                         - C5
@@ -768,11 +740,7 @@ steps:
                           headings:
                             - Vehicle Details
                         form:
-<<<<<<< Updated upstream
                           id: f9cfe9da-6525-412b-b336-a9734f8813cd
-=======
-                          id: 3754c3be-afad-42a3-88d6-601046e8bb58
->>>>>>> Stashed changes
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS13/vehicle_details_form/?transaction_id=4ef70074-2f56-4bb3-a504-ec55e559c572&session_id=undefined
                           multiple_sumbissions: false
@@ -912,13 +880,8 @@ steps:
           phone: "8581975420"
           gender: female
           vehicleUniqueCode: ""
-<<<<<<< Updated upstream
           rtoCode: GJ98
           registrationDate: 2026-09-20
-=======
-          rtoCode: GJ01
-          registrationDate: 2026-09-24
->>>>>>> Stashed changes
           idv: ""
           coverType: ownDamage
           PersonalAccidentCover: ""
@@ -1058,15 +1021,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: search
-<<<<<<< Updated upstream
             timestamp: 2026-09-01T08:35:43.268Z
             transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
             message_id: 20ab8f90-9425-4c6b-8646-8a6d9f1bb2da
-=======
-            timestamp: 2026-09-01T12:23:21.574Z
-            transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
-            message_id: 0a6ff538-71b0-45fd-a49b-b6e2d0848369
->>>>>>> Stashed changes
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1089,17 +1046,10 @@ steps:
                   - id: ITEM_ID_AGRI
                     xinput:
                       form:
-<<<<<<< Updated upstream
                         id: efecdda5-41ec-4e36-8eb8-b41d8ee74c4c
                       form_response:
                         status: SUCCESS
                         submission_id: fab2d111-616a-486b-9ef2-747f75ad902b
-=======
-                        id: 5f36a6f1-69ac-4281-afff-bf33e81c19c9
-                      form_response:
-                        status: SUCCESS
-                        submission_id: c964bd03-60e1-473e-9e6a-b7fae3f48bad
->>>>>>> Stashed changes
               payment:
                 collected_by: BPP
                 tags:
@@ -1440,15 +1390,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_search
-<<<<<<< Updated upstream
             timestamp: 2026-09-01T08:35:43.287Z
             transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
             message_id: 20ab8f90-9425-4c6b-8646-8a6d9f1bb2da
-=======
-            timestamp: 2026-09-01T12:23:21.598Z
-            transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
-            message_id: 0a6ff538-71b0-45fd-a49b-b6e2d0848369
->>>>>>> Stashed changes
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1839,15 +1783,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: select
-<<<<<<< Updated upstream
             timestamp: 2026-09-01T08:35:44.748Z
             transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
             message_id: d8515ddf-7917-427e-bb74-80469a75830b
-=======
-            timestamp: 2026-09-01T12:23:23.671Z
-            transaction_id: 4ef70074-2f56-4bb3-a504-ec55e559c572
-            message_id: c1975a39-7e50-412d-9ccd-6e80af281f15
->>>>>>> Stashed changes
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
