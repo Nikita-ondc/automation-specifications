@@ -39,6 +39,7 @@ supportedActions:
     - status
     - on_status
     - init
+    - on_init
     - select
     - on_select
     - confirm
