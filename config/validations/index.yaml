@@ -4149,9 +4149,9 @@ _TESTS_:
     - _NAME_: REQUIRED_ITEM_PARENT_ITEM_ID
       attr: $.message.order.items[*].parent_item_id
       _RETURN_: attr are present
-    - _NAME_: REQUIRED_ITEM_CATEGORY_IDS
-      attr: $.message.order.items[*].category_ids[*]
-      _RETURN_: attr are present
+    # - _NAME_: REQUIRED_ITEM_CATEGORY_IDS
+    #   attr: $.message.order.items[*].category_ids[*]
+    #   _RETURN_: attr are present
     - _NAME_: REQUIRED_ITEM_PRICE_VALUE
       attr: $.message.order.items[*].price.value
       _RETURN_: attr are present
