@@ -5733,7 +5733,6 @@ steps:
         second_fulfillment_id: $.message.order.fulfillments[1].id
         claim_form: $.message.order.documents[?(@.descriptor.code=='CLAIM_DOC')].url
         renew_form: $.message.order.documents[?(@.descriptor.code=='RENEW_DOC')].url
-        order: $.message.order
       inputs: {}
     examples:
       - name: example for on_update

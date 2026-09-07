@@ -3480,7 +3480,6 @@ steps:
         fulfillment_id: $.message.order.fulfillments[0].id
         provider_id: $.message.order.provider.id
         nominee_details_form: $.message.order.items[0].xinput.form.url
-        order: $.message.order
       inputs: {}
     examples:
       - name: example for on_init
@@ -6142,7 +6141,7 @@ steps:
           bap_uri: https://dev-automation.ondc.org/api-service/ONDC:TRV10/2.1.0/buyer
           bpp_id: dev-automation.ondc.org
           bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:TRV10/2.1.0/seller
-          domain: ONDC:TRV10
+          domain: ONDC:FIS13
           location:
             city:
               code: std:080
@@ -6152,7 +6151,7 @@ steps:
           timestamp: 2026-03-23T11:45:09.388Z
           transaction_id: 36e55fc3-47a2-4560-b8a3-b73007aef870
           ttl: PT30S
-          version: 2.1.0
+          version: 2.0.0
         message:
           issue: {}
       saveData:
@@ -6209,7 +6208,7 @@ steps:
             bpp_id: dev-automation.ondc.org
             bpp_uri: >-
               https://dev-automation.ondc.org/api-service/ONDC:TRV10/2.1.0/seller
-            domain: 'ONDC:TRV10'
+            domain: 'ONDC:FIS13'
             location:
               city:
                 code: 'std:080'
