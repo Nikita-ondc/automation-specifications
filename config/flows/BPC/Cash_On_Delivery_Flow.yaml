@@ -26,7 +26,7 @@ steps:
       the seller's catalog, establishing the order composition and fulfillment
       method for the cash-on-delivery transaction.
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgY29uc3QgaW5wdXRzID0gc2Vzc2lvbkRhdGEudXNlcl9pbnB1dHMKICBpZiAoIWlucHV0cykgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZAogY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoaW5wdXRzKSkKICBpZiAoaW5wdXRzLnByb3ZpZGVyKSB7CiAgICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5pZCA9IGlucHV0cy5wcm92aWRlcgogIH0KICBpZiAoaW5wdXRzLnByb3ZpZGVyX2xvY2F0aW9uKSB7CiAgICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5sb2NhdGlvbnMgPSBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5sb2NhdGlvbnMubWFwKAogICAgICBsb2NhdGlvbiA9PiB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgIGlkOiBpbnB1dHMucHJvdmlkZXJfbG9jYXRpb24KICAgICAgICB9CiAgICAgIH0KICAgICkKICB9CiAgaWYgKGlucHV0cy5sb2NhdGlvbl9ncHMpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS5lbmQubG9jYXRpb24uZ3BzID0KICAgICAgaW5wdXRzLmxvY2F0aW9uX2dwcwogIH0KICBpZiAoaW5wdXRzLmxvY2F0aW9uX3Bpbl9jb2RlKSB7CiAgICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uZW5kLmxvY2F0aW9uLmFkZHJlc3MuYXJlYV9jb2RlID0KICAgICAgaW5wdXRzLmxvY2F0aW9uX3Bpbl9jb2RlCiAgICBleGlzdGluZ1BheWxvYWQuY29udGV4dC5jaXR5ID0gYHN0ZDoke3N0YXRlQ29kZXNbCiAgICAgIGlucHV0cy5sb2NhdGlvbl9waW5fY29kZQogICAgXSA/PyAiMDExIn1gCiAgfQogIGlmIChpbnB1dHMuaXRlbXMpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zID0gaW5wdXRzLml0ZW1zLm1hcChpdGVtID0+IHsKICAgICAgcmV0dXJuIHsKICAgICAgICBpZDogaXRlbS5pdGVtSWQsCiAgICAgICAgcXVhbnRpdHk6IHsKICAgICAgICAgIGNvdW50OiBpdGVtLnF1YW50aXR5CiAgICAgICAgfSwKICAgICAgICBsb2NhdGlvbl9pZDogaXRlbS5sb2NhdGlvbgogICAgICB9CiAgICB9KQogIH0KICByZXR1cm4gZXhpc3RpbmdQYXlsb2FkCn0K
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShleGlzdGluZ1BheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgY29uc3QgaW5wdXRzID0gc2Vzc2lvbkRhdGEudXNlcl9pbnB1dHMKICBpZiAoIWlucHV0cykgcmV0dXJuIGV4aXN0aW5nUGF5bG9hZAogIGlmIChpbnB1dHMucHJvdmlkZXIpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmlkID0gaW5wdXRzLnByb3ZpZGVyCiAgfQogIGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LmNpdHkgPSBpbnB1dHM/LmNpdHlfY29kZTsKICBpZiAoaW5wdXRzLnByb3ZpZGVyX2xvY2F0aW9uKSB7CiAgICBjb25zb2xlLmxvZyhpbnB1dHMucHJvdmlkZXJfbG9jYXRpb24pCiAgICBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5sb2NhdGlvbnMgPSBleGlzdGluZ1BheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5sb2NhdGlvbnMubWFwKAogICAgICBsb2NhdGlvbiA9PiB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgIGlkOiBTdHJpbmcoaW5wdXRzLnByb3ZpZGVyX2xvY2F0aW9uKQogICAgICAgIH0KICAgICAgfQogICAgKQogIH0KICBpZiAoaW5wdXRzLmxvY2F0aW9uX2dwcykgewogICAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuZnVsZmlsbG1lbnRzWzBdLmVuZC5sb2NhdGlvbi5ncHMgPQogICAgICBpbnB1dHMubG9jYXRpb25fZ3BzCiAgfQogIGlmIChpbnB1dHMubG9jYXRpb25fcGluX2NvZGUpIHsKICAgIGV4aXN0aW5nUGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS5lbmQubG9jYXRpb24uYWRkcmVzcy5hcmVhX2NvZGUgPQogICAgICBpbnB1dHMubG9jYXRpb25fcGluX2NvZGUKICAgIC8vIGV4aXN0aW5nUGF5bG9hZC5jb250ZXh0LmNpdHkgPSBgc3RkOiR7c3RhdGVDb2Rlc1sKICAgIC8vICAgaW5wdXRzLmxvY2F0aW9uX3Bpbl9jb2RlCiAgICAvLyBdID8/ICIwMTEifWAKICB9CiAgaWYgKGlucHV0cy5pdGVtcykgewogICAgZXhpc3RpbmdQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXMgPSBpbnB1dHMuaXRlbXMubWFwKGl0ZW0gPT4gewogICAgICByZXR1cm4gewogICAgICAgIGlkOiBpdGVtLml0ZW1JZCwKICAgICAgICBxdWFudGl0eTogewogICAgICAgICAgY291bnQ6IGl0ZW0ucXVhbnRpdHkKICAgICAgICB9LAogICAgICAgIGxvY2F0aW9uX2lkOiBpdGVtLmxvY2F0aW9uCiAgICAgIH0KICAgIH0pCiAgfQogIHJldHVybiBleGlzdGluZ1BheWxvYWQKfQo=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9
       defaultPayload:
@@ -36,7 +36,7 @@ steps:
           bap_uri: https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.5/buyer
           bpp_id: dev-automation.ondc.org
           bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:RET13/1.2.5/seller
-          city: std:0124
+          city: std:011
           core_version: 1.2.5
           country: IND
           domain: ONDC:RET13
@@ -121,16 +121,16 @@ steps:
           context:
             domain: ONDC:RET13
             action: select
-            timestamp: 2026-08-21T07:43:21.768Z
+            timestamp: 2026-09-07T10:36:16.345Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 6ed21a7e-48ec-40c6-84ea-36062e9345b9
+            message_id: 0dbb02d6-d2e7-437f-80b0-5f3ec53b9892
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
@@ -254,16 +254,16 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_select
-            timestamp: 2026-08-21T07:43:21.854Z
+            timestamp: 2026-09-07T10:36:16.453Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 6ed21a7e-48ec-40c6-84ea-36062e9345b9
+            message_id: 0dbb02d6-d2e7-437f-80b0-5f3ec53b9892
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
@@ -414,16 +414,16 @@ steps:
           context:
             domain: ONDC:RET13
             action: init
-            timestamp: 2026-08-21T07:43:21.925Z
+            timestamp: 2026-09-07T10:36:16.574Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 619d374a-71a7-4c55-9773-dc2fb9993460
+            message_id: c5d22219-f6c2-4555-886e-cb4725e7bb70
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
@@ -449,8 +449,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -620,16 +620,16 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_init
-            timestamp: 2026-08-21T07:43:22.016Z
+            timestamp: 2026-09-07T10:36:16.653Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 619d374a-71a7-4c55-9773-dc2fb9993460
+            message_id: c5d22219-f6c2-4555-886e-cb4725e7bb70
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
@@ -655,8 +655,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -906,20 +906,20 @@ steps:
           context:
             domain: ONDC:RET13
             action: confirm
-            timestamp: 2026-08-21T07:43:22.081Z
+            timestamp: 2026-09-07T10:36:16.740Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 71d31c50-7b42-4d6f-8fe2-6c2c4f069b21
+            message_id: a4f48007-0929-44c1-a2ca-c51fd6b62cbc
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
-              id: "561131"
+              id: "148773"
               state: Created
               billing:
                 address:
@@ -933,8 +933,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               items:
                 - id: I1
                   fulfillment_id: F1
@@ -1029,8 +1029,8 @@ steps:
                       value: https://github.com/ONDC-Official/NP-Static-Terms/buyerNP_BNP/1.0/tc.pdf
                     - code: tax_number
                       value: 37BABCA6712B1Z6
-              created_at: 2026-08-21T07:43:22.081Z
-              updated_at: 2026-08-21T07:43:22.081Z
+              created_at: 2026-09-07T10:36:16.740Z
+              updated_at: 2026-09-07T10:36:16.740Z
         type: request
         description: The BAP confirms the order with the BPP, committing to the selected
           items and fulfillment method to enable order creation and processing.
@@ -1219,20 +1219,20 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_confirm
-            timestamp: 2026-08-21T07:43:22.186Z
+            timestamp: 2026-09-07T10:36:16.849Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 71d31c50-7b42-4d6f-8fe2-6c2c4f069b21
+            message_id: a4f48007-0929-44c1-a2ca-c51fd6b62cbc
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
-              id: "561131"
+              id: "148773"
               state: Created
               provider:
                 id: P1
@@ -1256,8 +1256,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -1370,8 +1370,8 @@ steps:
                       value: https://github.com/ONDC-Official/protocol-network-extension/discussions/79
                     - code: tax_number
                       value: 37BABCA6712B1Z6
-              created_at: 2026-08-21T07:43:22.081Z
-              updated_at: 2026-08-21T07:43:22.186Z
+              created_at: 2026-09-07T10:36:16.740Z
+              updated_at: 2026-09-07T10:36:16.849Z
         type: request
         description: The seller app (BPP) acknowledges the buyer's order confirmation
           request and responds with the confirmed order state, fulfillments, and
@@ -1560,20 +1560,20 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_status
-            timestamp: 2026-08-21T07:43:22.308Z
+            timestamp: 2026-09-07T10:36:16.980Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 9b531830-3e4f-4849-ba59-0eb8c055a4a8
+            message_id: fb39a55c-43f9-446e-957f-e70a98368581
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
-              id: "561131"
+              id: "148773"
               state: Accepted
               provider:
                 id: P1
@@ -1597,8 +1597,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -1694,8 +1694,8 @@ steps:
                 "@ondc/org/settlement_basis": delivery
                 "@ondc/org/settlement_window": P1D
                 "@ondc/org/withholding_amount": "10.00"
-              created_at: 2026-08-21T07:43:22.081Z
-              updated_at: 2026-08-21T07:43:22.308Z
+              created_at: 2026-09-07T10:36:16.740Z
+              updated_at: 2026-09-07T10:36:16.980Z
         type: request
         description: The Seller App (BPP) proactively sends an order status update to
           the Buyer App (BAP) conveying the current order state, fulfillment
@@ -2055,16 +2055,16 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_status
-            timestamp: 2026-08-21T07:43:22.380Z
+            timestamp: 2026-09-07T10:36:17.085Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: be7f00b0-74b5-49cb-9eb3-17b42c9281c8
+            message_id: 580e662f-baa8-4b15-9edc-31a9cc907257
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
@@ -2091,8 +2091,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -2188,9 +2188,9 @@ steps:
                 "@ondc/org/settlement_basis": delivery
                 "@ondc/org/settlement_window": P1D
                 "@ondc/org/withholding_amount": "10.00"
-              id: "561131"
-              created_at: 2026-08-21T07:43:22.081Z
-              updated_at: 2026-08-21T07:43:22.380Z
+              id: "148773"
+              created_at: 2026-09-07T10:36:16.740Z
+              updated_at: 2026-09-07T10:36:17.085Z
               documents:
                 - url: https://invoice_url
                   label: Invoice
@@ -2386,20 +2386,20 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_status
-            timestamp: 2026-08-21T07:43:22.482Z
+            timestamp: 2026-09-07T10:36:17.194Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: ca392cef-14f4-4f61-be7b-3a8a5eaf53a9
+            message_id: 7518629f-49ca-4f35-8e80-54e49a3b0c1c
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
-              id: "561131"
+              id: "148773"
               state: In-progress
               provider:
                 id: P1
@@ -2423,8 +2423,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -2452,7 +2452,7 @@ steps:
                       phone: "9594663710"
                       email: nobody@nomail.com
                     time:
-                      timestamp: 2026-08-21T07:43:22.482Z
+                      timestamp: 2026-09-07T10:36:17.194Z
                   end:
                     contact:
                       email: nobody@nomail.com
@@ -2538,8 +2538,8 @@ steps:
               documents:
                 - url: https://dev-automation.ondc.org
                   label: Invoice
-              created_at: 2026-08-21T07:43:22.081Z
-              updated_at: 2026-08-21T07:43:22.482Z
+              created_at: 2026-09-07T10:36:16.740Z
+              updated_at: 2026-09-07T10:36:17.194Z
         type: request
         description: The BPP proactively notifies the BAP of order status changes,
           including fulfillment progress, payment confirmation, and updated
@@ -2731,20 +2731,20 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_status
-            timestamp: 2026-08-21T07:43:22.561Z
+            timestamp: 2026-09-07T10:36:17.294Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 55e47536-96e0-4a87-9218-c41c1e5ed2be
+            message_id: bb00dcc2-150c-4e09-8dd3-455804f2b146
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
-              id: "561131"
+              id: "148773"
               state: In-progress
               provider:
                 id: P1
@@ -2768,8 +2768,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -2797,7 +2797,7 @@ steps:
                       phone: "9594663710"
                       email: nobody@nomail.com
                     time:
-                      timestamp: 2026-08-21T07:43:22.561Z
+                      timestamp: 2026-09-07T10:36:17.294Z
                   end:
                     contact:
                       email: nobody@nomail.com
@@ -2883,8 +2883,8 @@ steps:
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-08-21T07:43:22.081Z
-              updated_at: 2026-08-21T07:43:22.561Z
+              created_at: 2026-09-07T10:36:16.740Z
+              updated_at: 2026-09-07T10:36:17.294Z
         type: request
         description: The seller sends the buyer an unsolicited order status update
           conveying the current order state, fulfillment progress, and payment
@@ -3082,20 +3082,20 @@ steps:
           context:
             domain: ONDC:RET13
             action: on_status
-            timestamp: 2026-08-21T07:43:22.642Z
+            timestamp: 2026-09-07T10:36:17.395Z
             transaction_id: e67a1a1f-dfc9-4dbf-b484-fe8a2b7c7fa6
-            message_id: 59a69693-fec6-4ed3-bcf0-e99168765269
+            message_id: 1c46ce97-979d-454f-afe1-aa65488c3efd
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
             bpp_id: bpp.example.com
             bpp_uri: https://bpp.example.com
             country: IND
-            city: std:022
+            city: std:011
             core_version: 1.2.5
           message:
             order:
-              id: "561131"
+              id: "148773"
               state: Completed
               provider:
                 id: P1
@@ -3119,8 +3119,8 @@ steps:
                 phone: "9898989898"
                 name: ONDC Buyer
                 email: nobody@nomail.com
-                created_at: 2026-08-21T07:43:16.961Z
-                updated_at: 2026-08-21T07:43:16.961Z
+                created_at: 2026-09-07T10:36:11.604Z
+                updated_at: 2026-09-07T10:36:11.604Z
               fulfillments:
                 - id: F1
                   type: Delivery
@@ -3148,7 +3148,7 @@ steps:
                       phone: "9594663710"
                       email: nobody@nomail.com
                     time:
-                      timestamp: 2026-08-21T07:43:22.561Z
+                      timestamp: 2026-09-07T10:36:17.294Z
                   end:
                     contact:
                       email: nobody@nomail.com
@@ -3166,7 +3166,7 @@ steps:
                         locality: mock-locality
                         name: mock-house-name
                     time:
-                      timestamp: 2026-08-21T07:43:22.642Z
+                      timestamp: 2026-09-07T10:36:17.395Z
                   tags:
                     - code: routing
                       list:
@@ -3214,7 +3214,7 @@ steps:
                 params:
                   currency: INR
                   amount: "2756.75"
-                  transaction_id: "314154"
+                  transaction_id: "211902"
                 "@ondc/org/settlement_details":
                   - settlement_counterparty: seller-app
                     settlement_phase: sale-amount
@@ -3234,12 +3234,12 @@ steps:
                 "@ondc/org/settlement_window": P1D
                 "@ondc/org/withholding_amount": "10.00"
                 time:
-                  timestamp: 2026-08-21T07:43:22.671Z
+                  timestamp: 2026-09-07T10:36:17.428Z
               documents:
                 - url: https://invoice_url
                   label: Invoice
-              created_at: 2026-08-21T07:43:22.081Z
-              updated_at: 2026-08-21T07:43:22.642Z
+              created_at: 2026-09-07T10:36:16.740Z
+              updated_at: 2026-09-07T10:36:17.395Z
         type: request
         description: The BPP sends an unsolicited status update to the BAP, conveying
           the current order fulfillment progress and payment state in the
