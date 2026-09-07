@@ -3295,7 +3295,7 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
-        order: $.message.orde
+        order: $.message.order
         fullfillment_ids: $.message.order.fulfillments[*].id
         quote_id: $.message.order.quote.id
         form_id: $.message.order.items[0].xinput.form.id
@@ -3304,7 +3304,6 @@ steps:
         fulfillment_id: $.message.order.fulfillments[0].id
         provider_id: $.message.order.provider.id
         nominee_details_form: $.message.order.items[0].xinput.form.url
-        order: $.message.order
       inputs: {}
     examples:
       - name: example for on_init
