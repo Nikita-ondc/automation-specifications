@@ -5795,7 +5795,6 @@ steps:
         last_actions_id: $.message.issue.actions[*]
         on_issue_actions: $.message.issue.issue_actions
         on_issue_processing_payload: $.message.issue
-        order: $.message.order
       inputs: {}
     examples:
       - name: example for on_issue
@@ -6141,7 +6140,7 @@ steps:
           bap_uri: https://dev-automation.ondc.org/api-service/ONDC:TRV10/2.1.0/buyer
           bpp_id: dev-automation.ondc.org
           bpp_uri: https://dev-automation.ondc.org/api-service/ONDC:TRV10/2.1.0/seller
-          domain: ONDC:FIS13
+          domain: ONDC:TRV10
           location:
             city:
               code: std:080
@@ -6151,7 +6150,7 @@ steps:
           timestamp: 2026-03-23T11:45:09.388Z
           transaction_id: 36e55fc3-47a2-4560-b8a3-b73007aef870
           ttl: PT30S
-          version: 2.0.0
+          version: 2.1.0
         message:
           issue: {}
       saveData:
@@ -6203,81 +6202,55 @@ steps:
           context:
             domain: ONDC:FIS13
             action: issue
-            bap_id: dev-automation.ondc.org
-            bap_uri: 'https://dev-automation.ondc.org/api-service/ONDC:TRV10/2.1.0/buyer'
-            bpp_id: dev-automation.ondc.org
-            bpp_uri: >-
-              https://dev-automation.ondc.org/api-service/ONDC:TRV10/2.1.0/seller
-            domain: 'ONDC:FIS13'
+            timestamp: 2026-09-03T09:42:37.386Z
+            transaction_id: d2349a3b-5a41-496e-94e7-bc810d364e18
+            message_id: 5501e02a-b062-4f22-9c24-3545920a8221
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: bpp.example.com
+            bpp_uri: https://bpp.example.com
+            version: 2.0.0
             location:
-              city:
-                code: 'std:080'
               country:
                 code: IND
-            message_id: 187450fc-7065-427a-bd7c-3915d1c7ea05
-            timestamp: '2026-03-23T11:45:09.388Z'
-            transaction_id: 36e55fc3-47a2-4560-b8a3-b73007aef870
-            ttl: PT30S
-            version: 2.1.0
+              city:
+                code: "*"
           message:
             issue:
-              category: FULFILLMENT
-              complainant_info:
-                contact:
-                  email: sam@yahoo.com
-                  phone: '9879879870'
-                person:
-                  name: Sam Manuel
-              created_at: '2026-03-23T11:45:09.388Z'
-              description:
-                additional_desc:
-                  content_type: text/plain
-                  url: 'https://buyerapp.com/additonal-details/desc.txt'
-                images:
-                  - 'http://buyerapp.com/addtional-details/img1.png'
-                  - 'http://buyerapp.com/addtional-details/img2.png'
-                long_desc: >-
-                  product quality is not correct. facing issues while using the
-                  product
-                short_desc: Issue with product quality
-              expected_resolution_time:
-                duration: P1D
-              expected_response_time:
-                duration: PT2H
-              id: ISSUE-1
+              created_at: 2026-09-03T09:42:35.131Z
+              updated_at: 2026-09-03T09:42:37.386Z
+              id: 7345d3d4-1d21-48dd-aedf-606b457045ec
+              status: CLOSED
+              rating: THUMBS_UP
               issue_actions:
                 complainant_actions:
                   - complainant_action: OPEN
                     short_desc: Complaint created
-                    updated_at: '2026-03-23T11:45:09.388Z'
+                    updated_at: 2026-09-03T09:42:35.131Z
                     updated_by:
-                      contact:
-                        email: buyerapp@interface.com
-                        phone: '9450394039'
                       org:
-                        name: 'dev-automation.ondc.org::ONDC:TRV10'
+                        name: bap.example.com::ONDC:FIS13
+                      contact:
+                        phone: "9879879870"
+                        email: sam@yahoo.com
                       person:
-                        name: John Doe
-              issue_type: ISSUE
-              order_details:
-                fulfillments:
-                  - id: F1
-                    state: CLAIMED
-                id: wz27a4h4kb
-                items:
-                  - id: I1
-                    quantity: 1
-                provider_id: P1
-                state: Completed
-              source:
-                network_participant_id: buyerapp.com/ondc
-                type: CONSUMER
-              status: OPEN
-              sub_category: FLM112
-              updated_at: '2026-03-23T11:45:09.388Z'
+                        name: Sam Manuel
+                  - complainant_action: CLOSE
+                    short_desc: Complaint closed
+                    updated_at: 2026-09-03T09:42:37.386Z
+                    updated_by:
+                      org:
+                        name: bap.example.com::ONDC:FIS13
+                      contact:
+                        phone: "9879879870"
+                        email: sam@yahoo.com
+                      person:
+                        name: Sam Manuel
         type: request
-
-
+        description: The BAP reports an issue to the BPP regarding the confirmed ride
+          order, creating a formal grievance record with problem details,
+          expected response timelines, and resolution expectations.
 transaction_history:
   - action_id: search2
     payload:
