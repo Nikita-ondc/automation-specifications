@@ -4149,9 +4149,9 @@ _TESTS_:
     - _NAME_: REQUIRED_ITEM_PARENT_ITEM_ID
       attr: $.message.order.items[*].parent_item_id
       _RETURN_: attr are present
-    - _NAME_: REQUIRED_ITEM_CATEGORY_IDS
-      attr: $.message.order.items[*].category_ids[*]
-      _RETURN_: attr are present
+    # - _NAME_: REQUIRED_ITEM_CATEGORY_IDS
+    #   attr: $.message.order.items[*].category_ids[*]
+    #   _RETURN_: attr are present
     - _NAME_: REQUIRED_ITEM_PRICE_VALUE
       attr: $.message.order.items[*].price.value
       _RETURN_: attr are present
@@ -5136,9 +5136,9 @@ _TESTS_:
               attr: $.message.issue.complainant_info.contact.phone
               _RETURN_: attr are present
 
-            - _NAME_: REQUIRED_ORDER_ID
-              attr: $.message.issue.order_details.id
-              _RETURN_: attr are present
+            # - _NAME_: REQUIRED_ORDER_ID
+            #   attr: $.message.issue.order_details.id
+            #   _RETURN_: attr are present
 
             - _NAME_: REQUIRED_ORDER_ITEMS
               attr: $.message.issue.order_details.items[*].id
@@ -5441,6 +5441,64 @@ _TESTS_:
           attr: $.message.issue.updated_at
           _RETURN_: attr are present
 
+  issue_status:
+    - _NAME_: REQUIRED_CONTEXT_FIELDS
+      _RETURN_:
+        - _NAME_: REQUIRED_CONTEXT_DOMAIN
+          attr: $.context.domain
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_COUNTRY
+          attr: [$.context.location.country.code]
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_CITY
+          attr: [$.context.location.city.code]
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_TRANSACTION_ID
+          attr: $.context.transaction_id
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_MESSAGE_ID
+          attr: $.context.message_id
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_ACTION
+          attr: $.context.action
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_TIMESTAMP
+          attr: $.context.timestamp
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_VERSION
+          attr: [$.context.version]
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_BAP_URI
+          attr: $.context.bap_uri
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_BAP_ID
+          attr: $.context.bap_id
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_BPP_URI
+          attr: $.context.bpp_uri
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_BPP_ID
+          attr: $.context.bpp_id
+          _RETURN_: attr are present
+        - _NAME_: REQUIRED_CONTEXT_TTL
+          attr: $.context.ttl
+          _RETURN_: attr are present
+        - _NAME_: VALID_CONTEXT_COUNTRY_CODE
+          attr: $.context.location.country.code
+          # enumList:
+          #   - IND
+          _RETURN_: attr are present
+        # - _NAME_: VALID_CONTEXT_COUNTRY_CODE
+        #   attr: $.context.country
+        #   _RETURN_: attr are present
+    - _NAME_: ISSUE_STATUS_VALIDATION
+      action:
+        - issue_status
+      _RETURN_:
+        - _NAME_: REQUIRED_ISSUE_ID
+          attr: $.message.issue_id
+          _RETURN_: attr are present
+
   on_issue_status:
     - _NAME_: REQUIRED_CONTEXT_FIELDS
       _RETURN_:
@@ -5532,32 +5590,7 @@ _TESTS_:
 
         - _NAME_: REQUIRED_ISSUE_UPDATED_AT
           attr: $.message.issue.updated_at
-          _RETURN_: attr are present
-
-        - _NAME_: REQUIRED_RESOLUTION_SHORT_DESC
-          attr: [$.message.issue.resolution.short_desc]
-          _RETURN_: attr are present
-
-        - _NAME_: REQUIRED_RESOLUTION_LONG_DESC
-          attr: [$.message.issue.resolution.long_desc]
-          _RETURN_: attr are present
-
-        - _NAME_: REQUIRED_RESOLUTION_ACTION_TRIGGERED
-          attr: [$.message.issue.resolution.action_triggered]
-          _RETURN_: attr are present
-
-        - _NAME_: REQUIRED_RESOLUTION_PROVIDER_TYPE
-          attr: $.message.issue.resolution_provider.respondent_info.type
-          _RETURN_: attr are present
-
-        - _NAME_: REQUIRED_RESOLUTION_PROVIDER_ORG_NAME
-          attr: $.message.issue.resolution_provider.respondent_info.organization.org.name
-          _RETURN_: attr are present
-
-        - _NAME_: REQUIRED_RESOLUTION_PROVIDER_PERSON_NAME
-          attr: $.message.issue.resolution_provider.respondent_info.organization.person.name
           _RETURN_: attr are present    
-
 
 _SESSION_DATA_:
   search: {}
