@@ -289,10 +289,10 @@ steps:
                           cur: 0
                           max: 0
                         headings:
-                          - FAMILY_DETAILS
+                          - INSURED_PERSONAL_DETAILS
                       form:
                         id: F03
-                        mime_type: text/html-multi
+                        mime_type: text/html
                         url: https://fis.test.bpp.io/form/family_dtls?formId=FO2
                         resubmit: true
                         multiple_sumbissions: true
@@ -475,10 +475,10 @@ steps:
                             cur: 0
                             max: 0
                           headings:
-                            - FAMILY_DETAILS
+                            - INSURED_PERSONAL_DETAILS
                         form:
                           id: ef01d7aa-b7c8-45e4-a31c-cc85c8134ddf
-                          mime_type: text/html-multi
+                          mime_type: text/html
                           url: undefined/forms/ONDC:FIS13/family_information_form/?transaction_id=d2349a3b-5a41-496e-94e7-bc810d364e18&session_id=undefined
                           resubmit: true
                           multiple_sumbissions: true
@@ -6548,10 +6548,10 @@ transaction_history:
                         cur: 0
                         max: 0
                       headings:
-                        - FAMILY_DETAILS
+                        - INSURED_PERSONAL_DETAILS
                     form:
                       id: 801f5822-7297-404c-8f2e-67b648035584
-                      mime_type: text/html-multi
+                      mime_type: text/html
                       url: >-
                         undefined/forms/ONDC:FIS13/family_information_form/?transaction_id=d2349a3b-5a41-496e-94e7-bc810d364e18&session_id=undefined
                       resubmit: true
