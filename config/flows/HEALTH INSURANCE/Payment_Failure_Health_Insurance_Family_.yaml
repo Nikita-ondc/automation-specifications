@@ -507,7 +507,7 @@ steps:
           plans, provider information, coverage options, and the family
           application form required for the BAP to present to the customer for
           enrollment.
-  - api: html_form
+  - api: html_form_multi
     action_id: family_information_form
     owner: BPP
     responseFor: null
