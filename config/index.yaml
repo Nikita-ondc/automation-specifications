@@ -6,11 +6,8 @@ info:
   version: 2.3.0
   x-usecases:
     - BUSINESS LOAN
-    - LAMF LOAN
   x-status:
     - use_case: BUSINESS LOAN
-      status: DRAFT
-    - use_case: LAMF LOAN
       status: DRAFT
   x-branch-name: draft-FIS12BL-2.3.0
   x-reporting: true
