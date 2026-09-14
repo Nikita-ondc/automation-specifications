@@ -140,6 +140,14 @@ steps:
               type: string
               description: Enter provider id
               default: PROVIDER_ID
+            bpp_id:
+              type: string
+              description: Enter bpp id
+              default: dev-workbench.ondc.tech
+            bpp_uri:
+              type: string
+              description: Enter bpp uri
+              default: https://dev-workbench.ondc.tech/api-service/ONDC:FIS12:BL/2.3.0/seller
             pan:
               type: string
               pattern: ^[A-Z]{5}[0-9]{4}[A-Z]$
