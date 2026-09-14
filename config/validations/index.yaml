@@ -1055,11 +1055,17 @@ _TESTS_:
     - ONDC:FIS13
     version:
     - 2.0.0
-    _SCOPE_: $.message.order.items[*].tags[?(@.descriptor.code=='GENERAL_INFO')]
-    subTags: $.list[*].descriptor.code
-    validValues:
-    - IDV_SELECTED
-    _RETURN_: validValues all in subTags
+    tagPath: $.message.order.items[*].tags[*].descriptor.code
+    validTagsList:
+    - GENERAL_INFO
+    _CONTINUE_: '!(validTagsList any in tagPath)'
+    _RETURN_:
+    - _NAME_: REQUIRED_MOTOR_IDV_SELECTED
+      _SCOPE_: $.message.order.items[*].tags[?(@.descriptor.code=='GENERAL_INFO')]
+      subTags: $.list[*].descriptor.code
+      validValues:
+      - IDV_SELECTED
+      _RETURN_: validValues all in subTags
   on_select:
   - _NAME_: ON_SELECT_CONTEXT
     action:
