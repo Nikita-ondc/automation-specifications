@@ -1,8 +1,6 @@
-# Business Loans on ONDC — Developer Guide
+## Business Loans 
 
-## Business Loans (BL)
 
-### On this page
 
 - [Overview](#overview)
 - [Participants](#participants)
