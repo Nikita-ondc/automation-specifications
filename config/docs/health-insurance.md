@@ -130,7 +130,7 @@ Network interaction:
 
 ### 1. Renewal
 
-The buyer app displays active policies with a renewal option. The insurer provides revised policy details and a payment URL.
+The buyer app displays active policies with a renewal option. The insurer provides revised policy details and a payment details.
 
 Network interaction:
 
