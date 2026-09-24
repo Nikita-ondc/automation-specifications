@@ -56,6 +56,14 @@ flows:
     meta:
       is_secondary: true
       parent_flow: Gold_Loan_Offline
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+        - on_issue_status_closed_100
     usecase: GOLD LOAN
     tags:
       - WORKBENCH
@@ -71,6 +79,11 @@ flows:
       order: 4
       is_secondary: true
       parent_flow: Personal_Loan_Offline
+      visible_actions:
+        - update_personal_loan_3
+        - on_update_foreclosure_pl
+        - payment_url_form
+        - on_update_foreclosure_unsolicitated
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -84,6 +97,11 @@ flows:
       order: 6
       is_secondary: true
       parent_flow: Personal_Loan_Offline
+      visible_actions:
+        - update_personal_loan_3
+        - on_update_missed_emi_pl
+        - payment_url_form
+        - on_update_missed_emi_unsolicitated
     usecase: PERSONAL LOAN
     tags:
       - WORKBENCH
@@ -99,6 +117,11 @@ flows:
       order: 5
       is_secondary: true
       parent_flow: Personal_Loan_Offline
+      visible_actions:
+        - update_personal_loan_3
+        - on_update_pre_part_payment_pl
+        - payment_url_form
+        - on_update_unsolicitated
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -115,6 +138,14 @@ flows:
       order: 7
       is_secondary: true
       parent_flow: Personal_Loan_Offline
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+        - on_issue_status_closed_100
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -129,6 +160,14 @@ flows:
       order: 8
       is_secondary: true
       parent_flow: Personal_Loan_Single_Redirection
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+        - on_issue_status_closed_100
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -143,6 +182,11 @@ flows:
       order: 9
       is_secondary: true
       parent_flow: Personal_Loan_Single_Redirection
+      visible_actions:
+        - update_personal_loan_3
+        - on_update_foreclosure_pl
+        - payment_url_form
+        - on_update_foreclosure_unsolicitated
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -157,6 +201,11 @@ flows:
       order: 10
       is_secondary: true
       parent_flow: Personal_Loan_Single_Redirection
+      visible_actions:
+        - update_personal_loan_3
+        - on_update_missed_emi_pl
+        - payment_url_form
+        - on_update_missed_emi_unsolicitated
     tags:
       - WORKBENCH
       - REPORTABLE
@@ -171,6 +220,11 @@ flows:
       order: 11
       is_secondary: true
       parent_flow: Personal_Loan_Single_Redirection
+      visible_actions:
+        - update_personal_loan_3
+        - on_update_pre_part_payment_pl
+        - payment_url_form
+        - on_update_unsolicitated
     tags:
       - WORKBENCH
       - REPORTABLE
