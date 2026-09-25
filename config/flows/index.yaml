@@ -2,6 +2,7 @@ flows:
   - type: playground
     id: master_search
     meta:
+      type: PREREQUISITE
       order: 0
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
@@ -9,10 +10,12 @@ flows:
       - REPORTABLE
     description: Master Search
     config:
-      $ref:  "./LAMF/master_search.yaml"
+      $ref: "./LAMF/master_search.yaml"
+
   # - type: playground
   #   id: lamf_credit_line_with_mfc_offline_journey
   #   meta:
+  #     type: PRIMARY
   #     order: 1
   #   usecase: LOAN AGAINST MUTUAL FUNDS
   #   tags:
@@ -21,10 +24,17 @@ flows:
   #   description: LAMF Credit Line with Offline Journey
   #   config:
   #     $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey.yaml"
+
   - type: playground
     id: lamf_credit_line_with_mfc_single_redirection
     meta:
+      type: PRIMARY
       order: 2
+      secondary_flows:
+        - lamf_credit_line_with_mfc_single_redirection_with_igm_1.0.0
+        - lamf_credit_line_drawdown_with_mfc_single_redirection
+        - lamf_credit_line_prepart_with_mfc_single_redirection
+        - lamf_credit_line_foreclosure_with_mfc_single_redirection
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
@@ -32,107 +42,250 @@ flows:
       - REPORTABLE
     description: LAMF Credit Line with MFC
     config:
-      $ref:  "./LAMF/lamf_credit_line_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_credit_line_with_mfc_single_redirection.yaml"
 
   - type: playground
     id: lamf_credit_line_with_mfc_single_redirection_with_igm_1.0.0
     meta:
+      type: SECONDARY
       order: 3
+      hide_actions:
+        - search_1
+        - on_search_1
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - Mandatory
-      # - REPORTABLE
     description: LAMF Credit Line with MFC With IGM 1.0.0
     config:
-      $ref:  "./LAMF/lamf_credit_line_with_mfc_single_redirection._with_igm_1.0.0.yaml"    
+      $ref: "./LAMF/lamf_credit_line_with_mfc_single_redirection._with_igm_1.0.0.yaml"
 
   - type: playground
     id: lamf_credit_line_drawdown_with_mfc_single_redirection
     meta:
+      type: SECONDARY
       order: 4
+      hide_actions:
+        - search_1
+        - on_search_1
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+      visible_actions:
+        - init_1
+        - on_init_1
+        - confirm_1
+        - on_confirm_1
+        - on_update_1
+        - on_update_2
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - REPORTABLE
     description: "Drawdown - LAMF Credit Line with MFC"
     config:
-      $ref:  "./LAMF/lamf_credit_line_drawdown_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_credit_line_drawdown_with_mfc_single_redirection.yaml"
 
   - type: playground
     id: lamf_credit_line_prepart_with_mfc_single_redirection
     meta:
+      type: SECONDARY
       order: 5
+      hide_actions:
+        - search_1
+        - on_search_1
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+      visible_actions:
+        - update_1
+        - on_update_1
+        - on_update_2
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - REPORTABLE
     description: "Pre-Part Payment - LAMF Credit Line with MFC"
     config:
-      $ref:  "./LAMF/lamf_credit_line_prepart_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_credit_line_prepart_with_mfc_single_redirection.yaml"
 
   - type: playground
     id: lamf_credit_line_foreclosure_with_mfc_single_redirection
     meta:
+      type: SECONDARY
       order: 6
+      hide_actions:
+        - search_1
+        - on_search_1
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+      visible_actions:
+        - update_1
+        - on_update_1
+        - on_update_2
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - REPORTABLE
     description: "Foreclosure - LAMF Credit Line with MFC"
     config:
-      $ref:  "./LAMF/lamf_credit_line_foreclosure_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_credit_line_foreclosure_with_mfc_single_redirection.yaml"
 
   - type: playground
     id: lamf_term_loan_with_mfc_single_redirection
     meta:
+      type: PRIMARY
       order: 7
+      secondary_flows:
+        - lamf_term_loan_foreclosure_with_mfc_single_redirection
+        - lamf_term_loan_prepart_with_mfc_single_redirection
+        - lamf_term_loan_missed_emi_with_mfc_single_redirection
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - REPORTABLE
     description: "LAMF Term Loan with MFC"
     config:
-      $ref:  "./LAMF/lamf_term_loan_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_term_loan_with_mfc_single_redirection.yaml"
 
   - type: playground
     id: lamf_term_loan_foreclosure_with_mfc_single_redirection
     meta:
+      type: SECONDARY
       order: 8
+      hide_actions:
+        - search_1
+        - on_search_1
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+      visible_actions:
+        - on_update_1
+        - LENDER_UTR_TERM_001
+        - update_1
+        - on_update_2
+        - on_update_3
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - REPORTABLE
     description: "Foreclosure - LAMF Term Loan with MFC"
     config:
-      $ref:  "./LAMF/lamf_term_loan_foreclosure_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_term_loan_foreclosure_with_mfc_single_redirection.yaml"
 
   - type: playground
     id: lamf_term_loan_prepart_with_mfc_single_redirection
     meta:
+      type: SECONDARY
       order: 9
+      hide_actions:
+        - search_1
+        - on_search_1
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+      visible_actions:
+        - on_update_1
+        - LENDER_UTR_TERM_001
+        - update_1
+        - on_update_2
+        - on_update_3
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - REPORTABLE
     description: "Pre-Part Payment - LAMF Term Loan with MFC"
     config:
-      $ref:  "./LAMF/lamf_term_loan_prepart_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_term_loan_prepart_with_mfc_single_redirection.yaml"
 
   - type: playground
     id: lamf_term_loan_missed_emi_with_mfc_single_redirection
     meta:
+      type: SECONDARY
       order: 10
+      hide_actions:
+        - search_1
+        - on_search_1
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+      visible_actions:
+        - on_update_1
+        - LENDER_UTR_TERM_001
+        - update_1
+        - on_update_2
+        - on_update_3
     usecase: LOAN AGAINST MUTUAL FUNDS
     tags:
       - WORKBENCH
       - REPORTABLE
     description: "Missed EMI - LAMF Term Loan with MFC"
     config:
-      $ref:  "./LAMF/lamf_term_loan_missed_emi_with_mfc_single_redirection.yaml"
+      $ref: "./LAMF/lamf_term_loan_missed_emi_with_mfc_single_redirection.yaml"
+
   # - type: playground
   #   id: lamf_credit_line_with_mfc
   #   meta:
+  #     type: PRIMARY
   #     order: 3
   #   usecase: LOAN AGAINST MUTUAL FUNDS
   #   tags:
@@ -140,11 +293,12 @@ flows:
   #     - REPORTABLE
   #   description: LAMF Credit Line with MFC
   #   config:
-  #     $ref:  "./LAMF/lamf_credit_line_with_mfc.yaml"        
- 
+  #     $ref:  "./LAMF/lamf_credit_line_with_mfc.yaml"
+
   # - type: playground
   #   id: lamf_credit_line_with_mfc_offline_journey_drawdown
   #   meta:
+  #     type: SECONDARY
   #     order: 4
   #   usecase: LOAN AGAINST MUTUAL FUNDS
   #   tags:
@@ -153,9 +307,11 @@ flows:
   #   description: Drawdown - LAMF Credit Line with Offline Journey
   #   config:
   #     $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown.yaml"
+
   # - type: playground
   #   id: lamf_credit_line_with_mfc_offline_journey_drawdown_foreclosure
   #   meta:
+  #     type: SECONDARY
   #     order: 5
   #   usecase: LOAN AGAINST MUTUAL FUNDS
   #   tags:
@@ -164,9 +320,11 @@ flows:
   #   description: Drawdown - LAMF Credit Line with Offline Journey(ForeClosure)
   #   config:
   #     $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_foreclosure.yaml"
+
   # - type: playground
   #   id: lamf_credit_line_with_mfc_offline_journey_drawdown_missed_emi
   #   meta:
+  #     type: SECONDARY
   #     order: 6
   #   usecase: LOAN AGAINST MUTUAL FUNDS
   #   tags:
@@ -175,9 +333,11 @@ flows:
   #   description: Drawdown - LAMF Credit Line with Offline Journey(Missed EMI)
   #   config:
   #     $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_missed_emi.yaml"
+
   # - type: playground
   #   id: lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part
   #   meta:
+  #     type: SECONDARY
   #     order: 7
   #   usecase: LOAN AGAINST MUTUAL FUNDS
   #   tags:
@@ -185,6 +345,4 @@ flows:
   #     - REPORTABLE
   #   description: Drawdown - LAMF Credit Line with Offline Journey(Pre Part)
   #   config:
-  #     $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part.yaml"    
-
-
+  #     $ref:  "./LAMF/lamf_credit_line_with_mfc_offline_journey_drawdown_pre_part.yaml"
