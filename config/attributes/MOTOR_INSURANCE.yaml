@@ -1,5 +1,5 @@
 meta:
-  use_case_id: MOTOR INSURANCE
+  use_case_id: Motor Insurance
 attribute_set:
   search:
     context:

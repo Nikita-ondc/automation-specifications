@@ -5,21 +5,21 @@ info:
   description: ONDC Specification
   version: 2.0.0
   x-usecases:
-    - HEALTH INSURANCE
-    - MOTOR INSURANCE
-    - ACCIDENTAL INSURANCE
-    - HOSPICASH INSURANCE
-    - TRANSIT INSURANCE
+    - Health Insurance
+    - Motor Insurance
+    - Accidental Insurance
+    - Hospicash Insurance
+    - Transit Insurance
   x-status:
-    - use_case: HEALTH INSURANCE
+    - use_case: Health Insurance
       status: RELEASED
-    - use_case: MOTOR INSURANCE
+    - use_case: Motor Insurance
       status: RELEASED
-    - use_case: ACCIDENTAL INSURANCE
+    - use_case: Accidental Insurance
       status: RELEASED
-    - use_case: HOSPICASH INSURANCE
+    - use_case: Hospicash Insurance
       status: RELEASED
-    - use_case: TRANSIT INSURANCE
+    - use_case: Transit Insurance
       status: RELEASED
   x-branch-name: draft-FIS13-HEALTH-2.0.0
   x-reporting: true

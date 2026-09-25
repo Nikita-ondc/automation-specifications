@@ -3,7 +3,7 @@ flows:
     id: Cancel_Health_Insurance(Family)
     meta:
       order: 11
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -15,7 +15,7 @@ flows:
     id: Cancel_Health_Insurance(Individual)
     meta:
       order: 10
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -27,7 +27,7 @@ flows:
     id: Claim_Health_Insurance(Family)
     meta:
       order: 7
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -39,7 +39,7 @@ flows:
     id: Claim_Health_Insurance(Individual)
     meta:
       order: 6
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -51,7 +51,7 @@ flows:
     id: Health_Insurance_Application(Family)
     meta:
       order: 1
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -63,7 +63,7 @@ flows:
     id: Payment_Failure_Health_Insurance(Family)
     meta:
       order: 14
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
     description: A family health insurance journey that follows the standard application flow up to on_confirm, then exercises a payment-failure path with a Not-Pay option, an unsolicited on_update marking the payment FAILED, a BAP update retry, and an on_update returning a fresh NOT-PAID payment link.
@@ -74,7 +74,7 @@ flows:
     id: Health_Insurance_Application(Family)_With_IGM(v-1.0.0)
     meta:
       order: 13
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -85,7 +85,7 @@ flows:
     id: Health_Insurance_Application(Individual)
     meta:
       order: 0
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -97,7 +97,7 @@ flows:
     id: Payment_Failure_Health_Insurance(Individual)
     meta:
       order: 15
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       
@@ -109,7 +109,7 @@ flows:
     id: Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
     meta:
       order: 12
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -120,7 +120,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Family)
     meta:
       order: 4
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -132,7 +132,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Family-With-ManualReview)
     meta:
       order: 5
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -144,7 +144,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Individual)
     meta:
       order: 2
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -156,7 +156,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Individual-With-ManualReview)
     meta:
       order: 3
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -168,7 +168,7 @@ flows:
     id: Payment_Failure_Health_Insurance(PRE-ORDER-Family-With-ManualReview)
     meta:
       order: 16
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
     description: A family health insurance PRE-ORDER journey that follows the standard application flow up to on_init, then exercises a payment-failure path - an unsolicited on_status marks the payment FAILED with an ERROR_INFORMATION reason, the BAP retries with a fresh NOT-PAID init, and the BPP responds with a new NOT-PAID payment link on on_init.
@@ -178,7 +178,7 @@ flows:
     id: Payment_Failure_Health_Insurance(PRE-ORDER-Individual-With-ManualReview)
     meta:
       order: 17
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
     description: An individual health insurance PRE-ORDER journey (with manual review) that follows the standard application flow up to on_init, then exercises a payment-failure path - an unsolicited on_status marks the payment FAILED with an ERROR_INFORMATION reason, the BAP retries with a fresh NOT-PAID init, and the BPP responds with a new NOT-PAID payment link on on_init.
@@ -188,7 +188,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Family-Without-CIS)
     meta:
       order: 18
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
     description: A family health insurance PRE-ORDER application journey (with manual underwriting review) without the CIS_AND_PAYMENT step - after the manual review completes, the BPP directly sends an unsolicited on_status marking the payment PAID and the buyer confirms the policy, with no consumer information form or its init/on_init round-trip.
@@ -198,7 +198,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Individual-Without-CIS)
     meta:
       order: 19
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
     description: An individual health insurance PRE-ORDER application journey (with manual underwriting review) without the CIS_AND_PAYMENT step - after the manual review completes, the BPP directly sends an unsolicited on_status marking the payment PAID and the buyer confirms the policy, with no consumer information form or its init/on_init round-trip.
@@ -208,7 +208,7 @@ flows:
     id: Renew_Health_Insurance(Family)
     meta:
       order: 9
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -220,7 +220,7 @@ flows:
     id: Renew_Health_Insurance(Individual)
     meta:
       order: 8
-    usecase: HEALTH INSURANCE
+    usecase: Health Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -232,7 +232,7 @@ flows:
     id: Cancel_Motor_Insurance
     meta:
       order: 3
-    usecase: MOTOR INSURANCE
+    usecase: Motor Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -244,7 +244,7 @@ flows:
     id: Claim_Motor_Insurance
     meta:
       order: 2
-    usecase: MOTOR INSURANCE
+    usecase: Motor Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -256,7 +256,7 @@ flows:
     id: Motor_Insurance_Application
     meta:
       order: 0
-    usecase: MOTOR INSURANCE
+    usecase: Motor Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -268,7 +268,7 @@ flows:
     id: Payment_Failure_Motor_Insurance
     meta:
       order: 5
-    usecase: MOTOR INSURANCE
+    usecase: Motor Insurance
     tags:
       - WORKBENCH
     description: A motor insurance journey that follows the standard application flow up to on_confirm, then exercises a payment-failure path with a Not-Pay option, an unsolicited on_update marking the payment FAILED, a BAP update retry, and an on_update returning a fresh NOT-PAID payment link.
@@ -278,7 +278,7 @@ flows:
     id: Payment_Failure_Motor_Insurance(PRE-ORDER)
     meta:
       order: 6
-    usecase: MOTOR INSURANCE
+    usecase: Motor Insurance
     tags:
       - WORKBENCH
     description: A motor insurance journey that follows the standard application flow , then exercises a payment-failure path with a Not-Pay option, an unsolicited on_status marking the payment FAILED, a BAP init retry, and an on_init returning a fresh NOT-PAID payment link.
@@ -288,7 +288,7 @@ flows:
     id: Motor_Insurance_Application_With_IGM
     meta:
       order: 4
-    usecase: MOTOR INSURANCE
+    usecase: Motor Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -299,7 +299,7 @@ flows:
     id: Motor_Insurance_Application(PRE-ORDER)
     meta:
       order: 1
-    usecase: MOTOR INSURANCE
+    usecase: Motor Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -311,7 +311,7 @@ flows:
     id: CD_Balance_Error_Accidental_Insurance
     meta:
       order: 3
-    usecase: ACCIDENTAL INSURANCE
+    usecase: Accidental Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -323,7 +323,7 @@ flows:
     id: Discovery_of_Insurer_Providers_and_Master_Policies
     meta:
       order: 0
-    usecase: ACCIDENTAL INSURANCE
+    usecase: Accidental Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -335,7 +335,7 @@ flows:
     id: Discovery_of_Products_from_Master_Policies (Accidental Insurance)
     meta:
       order: 1
-    usecase: ACCIDENTAL INSURANCE
+    usecase: Accidental Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -347,7 +347,7 @@ flows:
     id: Purchase_Journey_Accidental_Insurance
     meta:
       order: 2
-    usecase: ACCIDENTAL INSURANCE
+    usecase: Accidental Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -361,7 +361,7 @@ flows:
     id: Purchase_Journey_Accidental_Insurance_with_igm_1.0.0
     meta:
       order: 4
-    usecase: ACCIDENTAL INSURANCE
+    usecase: Accidental Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -375,7 +375,7 @@ flows:
     id: CD_Balance_Error_Hospicash_Insurance
     meta:
       order: 3
-    usecase: HOSPICASH INSURANCE
+    usecase: Hospicash Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -387,7 +387,7 @@ flows:
     id: Discovery_of_Insurer_Providers_and_Master_Policies
     meta:
       order: 0
-    usecase: HOSPICASH INSURANCE
+    usecase: Hospicash Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -399,7 +399,7 @@ flows:
     id: Discovery_of_Products_from_Master_Policies (Hospicash Insurance)
     meta:
       order: 1
-    usecase: HOSPICASH INSURANCE
+    usecase: Hospicash Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -411,7 +411,7 @@ flows:
     id: Purchase_Journey_Hospicash_Insurance
     meta:
       order: 2
-    usecase: HOSPICASH INSURANCE
+    usecase: Hospicash Insurance
     tags:
       - PRAMAAN
       - MANDATORY
@@ -426,7 +426,7 @@ flows:
     id: Purchase_Journey_Hospicash_Insurance_with_igm_1.0.0
     meta:
       order: 4
-    usecase: HOSPICASH INSURANCE
+    usecase: Hospicash Insurance
     tags:
       # - PRAMAAN
       - MANDATORY
@@ -440,7 +440,7 @@ flows:
     id: CD_Balance_Error_Transit_Insurance
     meta:
       order: 3
-    usecase: TRANSIT INSURANCE
+    usecase: Transit Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -452,7 +452,7 @@ flows:
     id: Discovery_of_Insurer_Providers_and_Master_Policies
     meta:
       order: 0
-    usecase: TRANSIT INSURANCE
+    usecase: Transit Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -464,7 +464,7 @@ flows:
     id: Discovery_of_Products_from_Master_Policies (Transit Insurance)
     meta:
       order: 1
-    usecase: TRANSIT INSURANCE
+    usecase: Transit Insurance
     tags:
       - WORKBENCH
       - MANDATORY
@@ -476,7 +476,7 @@ flows:
     id: Purchase_Journey_Transit_Insurance
     meta:
       order: 2
-    usecase: TRANSIT INSURANCE
+    usecase: Transit Insurance
     tags:
       - PRAMAAN
       - MANDATORY
@@ -491,7 +491,7 @@ flows:
     id: Purchase_Journey_Transit_Insurance_with_igm_1.0.0
     meta:
       order: 4
-    usecase: TRANSIT INSURANCE
+    usecase: Transit Insurance
     tags:
       # - PRAMAAN
       - MANDATORY

@@ -1,5 +1,5 @@
 meta:
-  use_case_id: HOSPICASH INSURANCE
+  use_case_id: Hospicash Insurance
 attribute_set:
   search:
     context:

@@ -1,5 +1,5 @@
 meta:
-  use_case_id: TRANSIT INSURANCE
+  use_case_id: Transit Insurance
 attribute_set:
   search:
     context:
