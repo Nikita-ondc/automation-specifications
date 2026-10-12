@@ -1,0 +1,8 @@
+supportedActions:
+  "null":
+    - receiver_recon
+    - on_receiver_recon
+  receiver_recon:
+    - on_receiver_recon
+  on_receiver_recon:
+    - receiver_recon

@@ -1,0 +1,783 @@
+meta:
+  use_case_id: RSF
+attribute_set:
+  receiver_recon:
+    context:
+      domain:
+        _description:
+          required: true
+          usage: ONDC:NTS10
+          info: Describes the domain code of the Reconciliation and Settlement Framework transaction
+          owner: BAP
+          type: string
+      country:
+        _description:
+          required: true
+          usage: IND
+          info: Describes the country code in ISO 3166-1 format
+          owner: BAP
+          type: string
+      city:
+        _description:
+          required: true
+          usage: std:080
+          info: Describes the city code the transaction is anchored to
+          owner: BAP
+          type: string
+      action:
+        _description:
+          required: true
+          usage: receiver_recon
+          info: Describes the API being called
+          owner: BAP
+          type: enum
+          enums:
+          - code: receiver_recon
+            description: receiver_recon API
+            reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+      core_version:
+        _description:
+          required: true
+          usage: 1.0.0
+          info: Describes the core protocol version of the RSF contract
+          owner: BAP
+          type: string
+      bap_id:
+        _description:
+          required: true
+          usage: bap.example.com
+          info: Subscriber ID of the collector application
+          owner: BAP
+          type: string
+      bap_uri:
+        _description:
+          required: true
+          usage: https://bap.example.com
+          info: Subscriber URL of the collector application
+          owner: BAP
+          type: string
+      bpp_id:
+        _description:
+          required: true
+          usage: bpp.example.com
+          info: Subscriber ID of the receiver application
+          owner: BAP
+          type: string
+      bpp_uri:
+        _description:
+          required: true
+          usage: https://bpp.example.com
+          info: Subscriber URL of the receiver application
+          owner: BAP
+          type: string
+      transaction_id:
+        _description:
+          required: true
+          usage: 7c1f2a0e-4a53-4b8e-9f43-2d1e0a6b9c11
+          info: Transaction ID that stays the same for all calls of one reconciliation journey
+          owner: BAP
+          type: string
+      message_id:
+        _description:
+          required: true
+          usage: 5f6b3d2c-0a4e-4c1b-8d57-3b9b7d1a0c01
+          info: Unique ID of this message; a response carries the message_id of the request it answers
+          owner: BAP
+          type: string
+      timestamp:
+        _description:
+          required: true
+          usage: '2026-10-12T10:34:58.469Z'
+          info: Time of generation of this call in RFC3339 format
+          owner: BAP
+          type: string
+      ttl:
+        _description:
+          required: true
+          usage: P2D
+          info: Duration in ISO8601 format after timestamp for which this message holds valid
+          owner: BAP
+          type: string
+    message:
+      orderbook:
+        orders:
+          id:
+            _description:
+              required: true
+              usage: O1
+              info: Order ID of the order being reconciled
+              owner: BAP
+              type: string
+          invoice_no:
+            _description:
+              required: false
+              usage: I1
+              info: Invoice number of the order
+              owner: BAP
+              type: string
+          collector_app_id:
+            _description:
+              required: true
+              usage: abc.collectorapp.com
+              info: Subscriber ID of the collector app
+              owner: BAP
+              type: string
+          receiver_app_id:
+            _description:
+              required: true
+              usage: abc.receiverapp.com
+              info: Subscriber ID of the receiver app
+              owner: BAP
+              type: string
+          state:
+            _description:
+              required: true
+              usage: Completed
+              info: State of the order in the transaction journey
+              owner: BAP
+              type: string
+          provider:
+            name:
+              name:
+                _description:
+                  required: true
+                  usage: SABJI XPRESS PVT LTD - BANASWADI
+                  info: Provider name as in the order transaction journey
+                  owner: BAP
+                  type: string
+              code:
+                _description:
+                  required: true
+                  usage: 18275-ONDC-1
+                  info: Provider ID as in the order transaction journey
+                  owner: BAP
+                  type: string
+            address:
+              _description:
+                required: false
+                usage: Siri Fort, Delhi
+                info: Provider address
+                owner: BAP
+                type: string
+          payment:
+            uri:
+              _description:
+                required: false
+                usage: abcdcd/upi
+                info: Payment URI
+                owner: BAP
+                type: string
+            tl_method:
+              _description:
+                required: false
+                usage: http/get
+                info: Transport layer method of the payment URI
+                owner: BAP
+                type: string
+            params:
+              transaction_id:
+                _description:
+                  required: false
+                  usage: transaction1
+                  info: Payment transaction ID; sent when present in the core flow
+                  owner: BAP
+                  type: string
+              transaction_status:
+                _description:
+                  required: true
+                  usage: PAID
+                  info: Status of the payment transaction
+                  owner: BAP
+                  type: string
+              amount:
+                _description:
+                  required: true
+                  usage: '1200'
+                  info: Order payment amount
+                  owner: BAP
+                  type: string
+              currency:
+                _description:
+                  required: true
+                  usage: INR
+                  info: Payment currency
+                  owner: BAP
+                  type: string
+            type:
+              _description:
+                required: true
+                usage: ON-ORDER
+                info: Payment type of the order
+                owner: BAP
+                type: string
+            status:
+              _description:
+                required: true
+                usage: PAID
+                info: Payment status of the order
+                owner: BAP
+                type: string
+            collected_by:
+              _description:
+                required: true
+                usage: BAP
+                info: Entity that collected the payment
+                owner: BAP
+                type: enum
+                enums:
+                - code: BAP
+                  description: Buyer app collected
+                  reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+                - code: BPP
+                  description: Seller app collected
+                  reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+            '@ondc/org/collected_by_status':
+              _description:
+                required: false
+                usage: Assert
+                info: Status of the collected_by assertion
+                owner: BAP
+                type: string
+            '@ondc/org/buyer_app_finder_fee_type':
+              _description:
+                required: true
+                usage: Percentage
+                info: Buyer app finder fee type
+                owner: BAP
+                type: string
+            '@ondc/org/buyer_app_finder_fee_amount':
+              _description:
+                required: true
+                usage: '5'
+                info: Buyer app finder fee amount
+                owner: BAP
+                type: string
+            '@ondc/org/withholding_amount':
+              _description:
+                required: false
+                usage: '50'
+                info: Amount withheld from settlement
+                owner: BAP
+                type: string
+            '@ondc/org/withholding_amount_status':
+              _description:
+                required: false
+                usage: Assert
+                info: Status of the withholding amount assertion
+                owner: BAP
+                type: string
+            '@ondc/org/return_window':
+              _description:
+                required: false
+                usage: P6D
+                info: Return window of the order
+                owner: BAP
+                type: string
+            '@ondc/org/return_window_status':
+              _description:
+                required: false
+                usage: Assert
+                info: Status of the return window assertion
+                owner: BAP
+                type: string
+            '@ondc/org/settlement_basis':
+              _description:
+                required: true
+                usage: Collection
+                info: Basis on which the order is settled
+                owner: BAP
+                type: string
+            '@ondc/org/settlement_basis_status':
+              _description:
+                required: false
+                usage: Assert
+                info: Status of the settlement basis assertion
+                owner: BAP
+                type: string
+            '@ondc/org/settlement_window':
+              _description:
+                required: true
+                usage: P8D
+                info: Window within which the order is settled
+                owner: BAP
+                type: string
+            '@ondc/org/settlement_window_status':
+              _description:
+                required: false
+                usage: Assert
+                info: Status of the settlement window assertion
+                owner: BAP
+                type: string
+            '@ondc/org/settlement_details':
+              settlement_counterparty:
+                _description:
+                  required: true
+                  usage: seller-app
+                  info: Counterparty the amount is settled to
+                  owner: BAP
+                  type: string
+              settlement_phase:
+                _description:
+                  required: false
+                  usage: sale-amount
+                  info: Phase of the settlement
+                  owner: BAP
+                  type: string
+              settlement_amount:
+                _description:
+                  required: true
+                  usage: '1050'
+                  info: Amount settled in this settlement. When an order has several settlements (correction, part settlement), each gets its own settlement_details object; a correction for an overpayment is a negative amount
+                  owner: BAP
+                  type: number
+              settlement_type:
+                _description:
+                  required: true
+                  usage: neft
+                  info: Mode of the settlement
+                  owner: BAP
+                  type: string
+              settlement_bank_account_no:
+                _description:
+                  required: true
+                  usage: '99679007677676'
+                  info: Receiver bank account the amount was settled to
+                  owner: BAP
+                  type: string
+              settlement_ifsc_code:
+                _description:
+                  required: true
+                  usage: HDFC900008
+                  info: IFSC code of the receiver bank account
+                  owner: BAP
+                  type: string
+              upi_address:
+                _description:
+                  required: false
+                  usage: sellerapp@upi
+                  info: UPI address of the receiver
+                  owner: BAP
+                  type: string
+              bank_name:
+                _description:
+                  required: false
+                  usage: HDFC
+                  info: Receiver bank name
+                  owner: BAP
+                  type: string
+              branch_name:
+                _description:
+                  required: false
+                  usage: Delhi
+                  info: Receiver bank branch name
+                  owner: BAP
+                  type: string
+              beneficiary_address:
+                _description:
+                  required: false
+                  usage: delhi
+                  info: Beneficiary address
+                  owner: BAP
+                  type: string
+              beneficiary_name:
+                _description:
+                  required: false
+                  usage: A to Z Printing Solutions Pvt. Ltd
+                  info: Beneficiary name
+                  owner: BAP
+                  type: string
+              settlement_status:
+                _description:
+                  required: true
+                  usage: PAID
+                  info: Status of this settlement
+                  owner: BAP
+                  type: string
+              settlement_reference:
+                _description:
+                  required: true
+                  usage: SREF1
+                  info: UTR / settlement reference number of this settlement
+                  owner: BAP
+                  type: string
+              settlement_timestamp:
+                _description:
+                  required: true
+                  usage: '2026-10-12T10:34:58.469Z'
+                  info: Time at which this settlement was made
+                  owner: BAP
+                  type: string
+          withholding_tax_gst:
+            currency:
+              _description:
+                required: false
+                usage: INR
+                info: Currency of the GST withheld
+                owner: BAP
+                type: string
+            value:
+              _description:
+                required: false
+                usage: '25'
+                info: GST withheld
+                owner: BAP
+                type: string
+          withholding_tax_tds:
+            currency:
+              _description:
+                required: false
+                usage: INR
+                info: Currency of the TDS withheld
+                owner: BAP
+                type: string
+            value:
+              _description:
+                required: false
+                usage: '25'
+                info: TDS withheld
+                owner: BAP
+                type: string
+          deduction_by_collector:
+            currency:
+              _description:
+                required: true
+                usage: INR
+                info: Currency of the amount deducted by the collector
+                owner: BAP
+                type: string
+            value:
+              _description:
+                required: true
+                usage: '100'
+                info: Amount deducted by the collector
+                owner: BAP
+                type: string
+          payerdetails:
+            payer_name:
+              _description:
+                required: true
+                usage: Example1 company Pvt. Ltd
+                info: Name of the payer
+                owner: BAP
+                type: string
+            payer_address:
+              _description:
+                required: false
+                usage: string
+                info: Address of the payer
+                owner: BAP
+                type: string
+            payer_account_no:
+              _description:
+                required: true
+                usage: '509424924294248'
+                info: Bank account number of the payer
+                owner: BAP
+                type: number
+            payer_bank_code:
+              _description:
+                required: true
+                usage: HDFC0000000
+                info: Bank code of the payer
+                owner: BAP
+                type: string
+            payer_virtual_payment_address:
+              _description:
+                required: false
+                usage: 80abc@abctMh2h
+                info: Virtual payment address of the payer
+                owner: BAP
+                type: string
+          settlement_reason_code:
+            _description:
+              required: true
+              usage: '01'
+              info: Reason for the settlement; 04 (Correction) is used when settling a deviation reported by the receiver
+              owner: BAP
+              type: enum
+              enums:
+              - code: '01'
+                description: Order payment
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '02'
+                description: Part refund
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '03'
+                description: Refund
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '04'
+                description: Correction
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '05'
+                description: Buyer App fee Payment
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '06'
+                description: Buyer app fee gst payment
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+          transaction_id:
+            _description:
+              required: true
+              usage: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+              info: Transaction ID of the order
+              owner: BAP
+              type: string
+          settlement_id:
+            _description:
+              required: true
+              usage: '123123'
+              info: ID of the settlement; a new one is used for each correction / part settlement
+              owner: BAP
+              type: string
+          settlement_reference_no:
+            _description:
+              required: true
+              usage: SREF1
+              info: UTR / settlement reference number of the latest settlement
+              owner: BAP
+              type: string
+          recon_status:
+            _description:
+              required: true
+              usage: '01'
+              info: Reconciliation status of the order as known to the collector
+              owner: BAP
+              type: enum
+              enums: &id002
+              - code: '01'
+                description: Paid
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '02'
+                description: Overpaid
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '03'
+                description: Underpaid
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '04'
+                description: Not paid
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+          order_recon_status:
+            _description:
+              required: true
+              usage: '01'
+              info: Status of the order reconciliation
+              owner: BAP
+              type: enum
+              enums: &id001
+              - code: '01'
+                description: Provisional
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '02'
+                description: Final
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+              - code: '03'
+                description: Deemed settled
+                reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+          created_at:
+            _description:
+              required: true
+              usage: '2026-10-12T10:34:58.472Z'
+              info: Time at which the order record was created
+              owner: BAP
+              type: string
+          updated_at:
+            _description:
+              required: true
+              usage: '2026-10-12T10:34:58.472Z'
+              info: Time at which the order record was last updated
+              owner: BAP
+              type: string
+  on_receiver_recon:
+    context:
+      domain:
+        _description:
+          required: true
+          usage: ONDC:NTS10
+          info: Describes the domain code of the Reconciliation and Settlement Framework transaction
+          owner: BPP
+          type: string
+      country:
+        _description:
+          required: true
+          usage: IND
+          info: Describes the country code in ISO 3166-1 format
+          owner: BPP
+          type: string
+      city:
+        _description:
+          required: true
+          usage: std:080
+          info: Describes the city code the transaction is anchored to
+          owner: BPP
+          type: string
+      action:
+        _description:
+          required: true
+          usage: on_receiver_recon
+          info: Describes the API being called
+          owner: BPP
+          type: enum
+          enums:
+          - code: on_receiver_recon
+            description: on_receiver_recon API
+            reference: https://github.com/ONDC-Official/protocol-network-extension/tree/main/specifications/rsp/enums
+      core_version:
+        _description:
+          required: true
+          usage: 1.0.0
+          info: Describes the core protocol version of the RSF contract
+          owner: BPP
+          type: string
+      bap_id:
+        _description:
+          required: true
+          usage: bap.example.com
+          info: Subscriber ID of the collector application
+          owner: BPP
+          type: string
+      bap_uri:
+        _description:
+          required: true
+          usage: https://bap.example.com
+          info: Subscriber URL of the collector application
+          owner: BPP
+          type: string
+      bpp_id:
+        _description:
+          required: true
+          usage: bpp.example.com
+          info: Subscriber ID of the receiver application
+          owner: BPP
+          type: string
+      bpp_uri:
+        _description:
+          required: true
+          usage: https://bpp.example.com
+          info: Subscriber URL of the receiver application
+          owner: BPP
+          type: string
+      transaction_id:
+        _description:
+          required: true
+          usage: 7c1f2a0e-4a53-4b8e-9f43-2d1e0a6b9c11
+          info: Transaction ID that stays the same for all calls of one reconciliation journey
+          owner: BPP
+          type: string
+      message_id:
+        _description:
+          required: true
+          usage: 5f6b3d2c-0a4e-4c1b-8d57-3b9b7d1a0c01
+          info: Unique ID of this message; a response carries the message_id of the request it answers
+          owner: BPP
+          type: string
+      timestamp:
+        _description:
+          required: true
+          usage: '2026-10-12T10:34:58.469Z'
+          info: Time of generation of this call in RFC3339 format
+          owner: BPP
+          type: string
+      ttl:
+        _description:
+          required: true
+          usage: P2D
+          info: Duration in ISO8601 format after timestamp for which this message holds valid
+          owner: BPP
+          type: string
+    message:
+      orderbook:
+        orders:
+          id:
+            _description:
+              required: true
+              usage: O1
+              info: Order ID the receiver is responding for
+              owner: BPP
+              type: string
+          invoice_no:
+            _description:
+              required: false
+              usage: I1
+              info: Invoice number of the order
+              owner: BPP
+              type: string
+          collector_app_id:
+            _description:
+              required: true
+              usage: abc.collectorapp.com
+              info: Subscriber ID of the collector app
+              owner: BPP
+              type: string
+          receiver_app_id:
+            _description:
+              required: true
+              usage: abc.receiverapp.com
+              info: Subscriber ID of the receiver app
+              owner: BPP
+              type: string
+          order_recon_status:
+            _description:
+              required: true
+              usage: '02'
+              info: Status of the order reconciliation as determined by the receiver
+              owner: BPP
+              type: enum
+              enums: *id001
+          transaction_id:
+            _description:
+              required: true
+              usage: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+              info: Transaction ID of the order
+              owner: BPP
+              type: string
+          settlement_id:
+            _description:
+              required: true
+              usage: '123123'
+              info: ID of the settlement being responded to; not sent in an unsolicited on_receiver_recon for an order that has no settlement
+              owner: BPP
+              type: string
+          settlement_reference_no:
+            _description:
+              required: false
+              usage: SREF1
+              info: UTR / settlement reference number being responded to
+              owner: BPP
+              type: string
+          counterparty_recon_status:
+            _description:
+              required: true
+              usage: '01'
+              info: 'Result of the receiver''s reconciliation: paid, overpaid, underpaid or not paid'
+              owner: BPP
+              type: enum
+              enums: *id002
+          counterparty_diff_amount:
+            currency:
+              _description:
+                required: false
+                usage: INR
+                info: Currency of the deviation amount; sent with a deviation
+                owner: BPP
+                type: string
+            value:
+              _description:
+                required: false
+                usage: '20'
+                info: Deviation amount between the expected and the settled amount; sent with a deviation
+                owner: BPP
+                type: string
+          message:
+            name:
+              _description:
+                required: false
+                usage: lesser amount
+                info: Description of the deviation
+                owner: BPP
+                type: string
+            code:
+              _description:
+                required: false
+                usage: less
+                info: Code of the deviation, e.g. less, missing or an error code such as 70010
+                owner: BPP
+                type: string

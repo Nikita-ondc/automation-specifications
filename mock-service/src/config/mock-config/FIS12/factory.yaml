@@ -1,0 +1,243 @@
+codes:
+  - code: 200
+    action_id: search
+    action: search
+    default: FIS12/2.2.1/search/default.yaml
+    message_id: true
+  - code: 2001
+    action_id: search1_purchase_finance
+    action: search
+    default: FIS12/2.2.1/search/default.yaml
+    message_id: true
+  - code: 2002
+    action_id: search2_purchase_finance
+    action: search
+    default: FIS12/2.2.1/search2/default.yaml
+    message_id: true
+  - code: 2003
+    action_id: search3_purchase_finance
+    action: search
+    default: FIS12/2.2.1/search3/default.yaml
+    message_id: true
+  - code: 2004
+    action_id: search4_purchase_finance
+    action: search
+    default: FIS12/2.2.1/search4/default.yaml
+    message_id: true
+  - code: 201
+    action_id: on_search
+    action: on_search
+    default: FIS12/2.2.1/on_search/default.yaml
+    message_id: false
+  - code: 2011
+    action_id: on_search1_purchase_finance
+    action: on_search
+    default: FIS12/2.2.1/on_search/default.yaml
+    message_id: false
+  - code: 2012
+    action_id: on_search2_purchase_finance
+    action: on_search
+    default: FIS12/2.2.1/on_search2/default.yaml
+    message_id: false
+  - code: 2013
+    action_id: on_search3_purchase_finance
+    action: on_search
+    default: FIS12/2.2.1/on_search3/default.yaml
+    message_id: false
+  - code: 2014
+    action_id: on_search4_purchase_finance
+    action: on_search
+    default: FIS12/2.2.1/on_search4/default.yaml
+    message_id: false
+  - code: 2015
+    action_id: on_search5_purchase_finance
+    action: on_search
+    default: FIS12/2.2.1/on_search5/default.yaml
+    message_id: false
+  - code: 2016
+    action_id: on_search6_purchase_finance
+    action: on_search
+    default: FIS12/2.2.1/on_search6/default.yaml
+    message_id: false
+  - code: 202
+    action_id: select_purchase_finance
+    action: select
+    default: FIS12/2.2.1/select/default.yaml
+    message_id: true
+  - code: 2021
+    action_id: select1_purchase_finance
+    action: select
+    default: FIS12/2.2.1/select1/default.yaml
+    message_id: true
+  - code: 2022
+    action_id: select2_purchase_finance
+    action: select
+    default: FIS12/2.2.1/select2/default.yaml
+    message_id: true
+  - code: 203
+    action_id: on_select_purchase_finance
+    action: on_select
+    default: FIS12/2.2.1/on_select/default.yaml
+    message_id: false
+  - code: 2031
+    action_id: on_select1_purchase_finance
+    action: on_select
+    default: FIS12/2.2.1/on_select1/default.yaml
+    message_id: false
+  - code: 2032
+    action_id: on_select2_purchase_finance
+    action: on_select
+    default: FIS12/2.2.1/on_select2/default.yaml
+    message_id: false
+  - code: 204
+    action_id: init1_purchase_finance
+    action: init
+    default: FIS12/2.2.1/init/default.yaml
+    message_id: true
+  - code: 2041
+    action_id: init2_purchase_finance
+    action: init
+    default: FIS12/2.2.1/init2/default.yaml
+    message_id: true
+  - code: 2042
+    action_id: init3_purchase_finance
+    action: init
+    default: FIS12/2.2.1/init3/default.yaml
+    message_id: true
+  - code: 205
+    action_id: on_init1_purchase_finance
+    action: on_init
+    default: FIS12/2.2.1/on_init/default.yaml
+    message_id: false
+  - code: 2051
+    action_id: on_init2_purchase_finance
+    action: on_init
+    default: FIS12/2.2.1/on_init2/default.yaml
+    message_id: false
+  - code: 2052
+    action_id: on_init3_purchase_finance
+    action: on_init
+    default: FIS12/2.2.1/on_init3/default.yaml
+    message_id: false
+  - code: 206
+    action_id: confirm_purchase_finance
+    action: confirm
+    default: FIS12/2.2.1/confirm/default.yaml
+    message_id: true
+  
+  - code: 207
+    action_id: on_confirm_purchase_finance
+    action: on_confirm
+    default: FIS12/2.2.1/on_confirm/default.yaml
+    message_id: false
+  - code: 208
+    action_id: update_purchase_finance
+    action: update
+    default: FIS12/2.2.1/update/default.yaml
+    message_id: true
+  - code: 2081
+    action_id: update_missed_Emi
+    action: update
+    default: FIS12/2.2.1/update_missed_Emi/default.yaml
+    message_id: true
+  - code: 2082
+    action_id: update_foreclosure
+    action: update
+    default: FIS12/2.2.1/update_foreclosure/default.yaml
+    message_id: true
+  - code: 2083
+    action_id: update_prepart
+    action: update
+    default: FIS12/2.2.1/update_prepart/default.yaml
+    message_id: true
+  - code: 209
+    action_id: on_update_purchase_finance
+    action: on_update
+    default: FIS12/2.2.1/on_update/default.yaml
+    message_id: false
+  - code: 2091
+    action_id: on_update_missed_Emi
+    action: on_update
+    default: FIS12/2.2.1/on_update_missed_Emi/default.yaml
+    message_id: true
+  - code: 2092
+    action_id: on_update_foreclosure
+    action: on_update
+    default: FIS12/2.2.1/on_update_foreclosure/default.yaml
+    message_id: true
+  - code: 2093
+    action_id: on_update_prepart
+    action: on_update
+    default: FIS12/2.2.1/on_update_prepart/default.yaml
+    message_id: true
+  - code: 2101
+    action_id: on_update1_unsolicited_purchase_finance
+    action: on_update
+    default: FIS12/2.2.1/on_update_unsolicited/default.yaml
+    message_id: false
+  - code: 2102
+    action_id: on_update_unsolicited_cancel
+    action: on_update
+    default: FIS12/2.2.1/on_update_unsolicited_cancel/default.yaml
+    message_id: false
+  - code: 2103
+    action_id: on_update_unsolicited_missed_Emi
+    action: on_update
+    default: FIS12/2.2.1/on_update_unsolicited_missed_Emi/default.yaml
+    message_id: false
+  - code: 2104
+    action_id: on_update_unsolicited_foreclosure
+    action: on_update
+    default: FIS12/2.2.1/on_update_unsolicited_foreclosure/default.yaml
+    message_id: false
+  - code: 2105
+    action_id: on_update_unsolicited_prepart
+    action: on_update
+    default: FIS12/2.2.1/on_update_unsolicited_prepart/default.yaml
+    message_id: false
+  - code: 211
+    action_id: status_purchase_finance
+    action: status
+    default: FIS12/2.2.1/status/default.yaml
+    message_id: true
+  - code: 212
+    action_id: on_status_purchase_finance
+    action: on_status
+    default: FIS12/2.2.1/on_status/default.yaml
+    message_id: false
+  - code: 213
+    action_id: on_status_unsolicited
+    action: on_status
+    default: FIS12/2.2.1/on_status_unsolicited/default.yaml
+    message_id: true
+
+  - code: 214
+    action_id: on_status_purchase_finance1
+    action: on_status
+    default: FIS12/2.2.1/on_status/default.yaml
+    message_id: false
+  - code: 215
+    action_id: on_status_purchase_finance2
+    action: on_status
+    default: FIS12/2.2.1/on_status/default.yaml
+    message_id: false
+  - code: 221
+    action_id: soft_cancel_purchase_finance
+    action: cancel
+    default: FIS12/2.2.1/soft_cancel/default.yaml
+    message_id: true
+  - code: 222
+    action_id: soft_on_cancel_purchase_finance
+    action: on_cancel
+    default: FIS12/2.2.1/soft_on_cancel/default.yaml
+    message_id: false
+  - code: 223
+    action_id: confirmed_cancel_purchase_finance
+    action: cancel
+    default: FIS12/2.2.1/confirmed_cancel/default.yaml
+    message_id: true
+  - code: 224
+    action_id: confirmed_on_cancel_purchase_finance
+    action: on_cancel
+    default: FIS12/2.2.1/confirmed_on_cancel/default.yaml
+    message_id: false

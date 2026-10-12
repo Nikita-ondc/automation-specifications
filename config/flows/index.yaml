@@ -1,0 +1,28 @@
+flows:
+  - type: playground
+    id: RSF_Paid_Appropriately
+    usecase: RSF
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: "Reconciliation where the collector has settled the order amount correctly: the collector sends receiver_recon with the order book and settlement details, and the receiver confirms the order as paid with on_receiver_recon."
+    config:
+      $ref: ./RSF/RSF_Paid_Appropriately.yaml
+  - type: playground
+    id: RSF_Underpaid_Overpaid
+    usecase: RSF
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: "Reconciliation where the settled amount deviates from the expected amount: the receiver reports an underpaid or overpaid order in on_receiver_recon, the collector settles the difference and sends receiver_recon with multiple settlement_details, and the receiver confirms with on_receiver_recon."
+    config:
+      $ref: ./RSF/RSF_Underpaid_Overpaid.yaml
+  - type: playground
+    id: RSF_Unsolicited_On_Receiver_Recon
+    usecase: RSF
+    tags:
+      - WORKBENCH
+      - REPORTABLE
+    description: "Reconciliation initiated by the receiver for an order that was not paid: the receiver sends an unsolicited on_receiver_recon flagging the missing settlement, the collector settles it and sends receiver_recon, and the receiver confirms with on_receiver_recon."
+    config:
+      $ref: ./RSF/RSF_Unsolicited_On_Receiver_Recon.yaml

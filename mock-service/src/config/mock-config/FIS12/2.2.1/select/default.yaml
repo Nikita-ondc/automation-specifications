@@ -1,0 +1,7 @@
+order:
+  provider:
+    id: P1
+  items:
+    - id: "CHILD_ITEM_ID_I1"
+      parent_item_id: "ITEM_ID_ELECTRONICS"
+    

@@ -1,0 +1,11 @@
+save-data:
+  transaction_id: "$.context.transaction_id"
+  message_id: "$.context.message_id"
+  selected_items: "$.message.order.items[*]"
+  selected_fulfillments: "$.message.order.fulfillments[*]"
+  selected_provider: "$.message.order.provider"
+  tags: "$.message.order.tags[*]"
+  payments: "$.message.order.payments[*]" 
+  quote: "$.message.order.quote"
+  item: "$.message.order.items[1]"
+  settlement_amount: "$.message.order.payments[0].tags[0].list[?(@.descriptor.code=='SETTLEMENT_AMOUNT')].value"

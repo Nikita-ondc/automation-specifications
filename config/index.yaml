@@ -1,0 +1,31 @@
+openapi: 3.0.0
+info:
+  title: ONDC Specification
+  domain: ONDC:NTS10
+  description: ONDC Specification
+  version: 1.0.0
+  x-usecases:
+    - RSF
+  x-status:
+    - use_case: RSF
+      status: RELEASED
+  x-branch-name: draft-NTS10-RSF-1.0
+  x-reporting: true
+security:
+  - SubscriberAuth: []
+paths:
+  $ref: ./specs/openapi.yaml#/paths
+components:
+  $ref: ./specs/openapi.yaml#/components
+x-attributes:
+  $ref: ./attributes/index.yaml
+x-validations:
+  $ref: ./validations/index.yaml
+x-errorcodes:
+  $ref: ./errors/index.yaml
+x-supported-actions:
+  $ref: ./actions/index.yaml
+x-flows:
+  $ref: ./flows/index.yaml#/flows
+x-docs:
+  $ref: ./docs

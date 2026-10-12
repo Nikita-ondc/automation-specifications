@@ -1,0 +1,5 @@
+order_id: "LOAN_LEAD_ID_OR_SIMILAR_ORDER_ID"
+cancellation_reason_id: "000"
+descriptor:
+  name: "Soft Cancel"
+  code: "CONFIRM_CANCEL"

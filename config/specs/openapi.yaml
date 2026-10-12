@@ -1,0 +1,342 @@
+openapi: 3.1.0
+info:
+  title: ONDC Specification
+  description: ONDC Specification
+  version: 1.0.0
+  domain: ONDC:NTS10
+paths:
+  /receiver_recon:
+    post:
+      operationId: receiver_recon
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  type: object
+                  properties:
+                    domain:
+                      type: string
+                    country:
+                      type: string
+                    city:
+                      type: string
+                    action:
+                      type: string
+                    core_version:
+                      type: string
+                    bap_id:
+                      type: string
+                    bap_uri:
+                      type: string
+                    bpp_id:
+                      type: string
+                    bpp_uri:
+                      type: string
+                    transaction_id:
+                      type: string
+                    message_id:
+                      type: string
+                    timestamp:
+                      type: string
+                    ttl:
+                      type: string
+                message:
+                  type: object
+                  properties:
+                    orderbook:
+                      type: object
+                      properties:
+                        orders:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              invoice_no:
+                                type: string
+                              collector_app_id:
+                                type: string
+                              receiver_app_id:
+                                type: string
+                              state:
+                                type: string
+                              provider:
+                                type: object
+                                properties:
+                                  name:
+                                    type: object
+                                    properties:
+                                      name:
+                                        type: string
+                                      code:
+                                        type: string
+                                  address:
+                                    type: string
+                              payment:
+                                type: object
+                                properties:
+                                  uri:
+                                    type: string
+                                  tl_method:
+                                    type: string
+                                  params:
+                                    type: object
+                                    properties:
+                                      transaction_id:
+                                        type: string
+                                      transaction_status:
+                                        type: string
+                                      amount:
+                                        type: string
+                                      currency:
+                                        type: string
+                                  type:
+                                    type: string
+                                  status:
+                                    type: string
+                                  collected_by:
+                                    type: string
+                                  "@ondc/org/collected_by_status":
+                                    type: string
+                                  "@ondc/org/buyer_app_finder_fee_type":
+                                    type: string
+                                  "@ondc/org/buyer_app_finder_fee_amount":
+                                    type: string
+                                  "@ondc/org/withholding_amount":
+                                    type: string
+                                  "@ondc/org/withholding_amount_status":
+                                    type: string
+                                  "@ondc/org/return_window":
+                                    type: string
+                                  "@ondc/org/return_window_status":
+                                    type: string
+                                  "@ondc/org/settlement_basis":
+                                    type: string
+                                  "@ondc/org/settlement_basis_status":
+                                    type: string
+                                  "@ondc/org/settlement_window":
+                                    type: string
+                                  "@ondc/org/settlement_window_status":
+                                    type: string
+                                  "@ondc/org/settlement_details":
+                                    type: array
+                                    items:
+                                      type: object
+                                      properties:
+                                        settlement_counterparty:
+                                          type: string
+                                        settlement_phase:
+                                          type: string
+                                        settlement_amount:
+                                          type: number
+                                        settlement_type:
+                                          type: string
+                                        settlement_bank_account_no:
+                                          type: string
+                                        settlement_ifsc_code:
+                                          type: string
+                                        upi_address:
+                                          type: string
+                                        bank_name:
+                                          type: string
+                                        branch_name:
+                                          type: string
+                                        beneficiary_address:
+                                          type: string
+                                        beneficiary_name:
+                                          type: string
+                                        settlement_status:
+                                          type: string
+                                        settlement_reference:
+                                          type: string
+                                        settlement_timestamp:
+                                          type: string
+                              withholding_tax_gst:
+                                type: object
+                                properties:
+                                  currency:
+                                    type: string
+                                  value:
+                                    type: string
+                              withholding_tax_tds:
+                                type: object
+                                properties:
+                                  currency:
+                                    type: string
+                                  value:
+                                    type: string
+                              deduction_by_collector:
+                                type: object
+                                properties:
+                                  currency:
+                                    type: string
+                                  value:
+                                    type: string
+                              payerdetails:
+                                type: object
+                                properties:
+                                  payer_name:
+                                    type: string
+                                  payer_address:
+                                    type: string
+                                  payer_account_no:
+                                    type: number
+                                  payer_bank_code:
+                                    type: string
+                                  payer_virtual_payment_address:
+                                    type: string
+                              settlement_reason_code:
+                                type: string
+                              transaction_id:
+                                type: string
+                              settlement_id:
+                                type: string
+                              settlement_reference_no:
+                                type: string
+                              recon_status:
+                                type: string
+                              order_recon_status:
+                                type: string
+                              created_at:
+                                type: string
+                              updated_at:
+                                type: string
+      responses:
+        "200":
+          description: Synchronous ACK/NACK response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      ack:
+                        properties:
+                          status:
+                            enum:
+                              - ACK
+                              - NACK
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      path:
+                        type: string
+                      message:
+                        type: string
+  /on_receiver_recon:
+    post:
+      operationId: on_receiver_recon
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                context:
+                  type: object
+                  properties:
+                    domain:
+                      type: string
+                    country:
+                      type: string
+                    city:
+                      type: string
+                    action:
+                      type: string
+                    core_version:
+                      type: string
+                    bap_id:
+                      type: string
+                    bap_uri:
+                      type: string
+                    bpp_id:
+                      type: string
+                    bpp_uri:
+                      type: string
+                    transaction_id:
+                      type: string
+                    message_id:
+                      type: string
+                    timestamp:
+                      type: string
+                    ttl:
+                      type: string
+                message:
+                  type: object
+                  properties:
+                    orderbook:
+                      type: object
+                      properties:
+                        orders:
+                          type: array
+                          items:
+                            type: object
+                            properties:
+                              id:
+                                type: string
+                              invoice_no:
+                                type: string
+                              collector_app_id:
+                                type: string
+                              receiver_app_id:
+                                type: string
+                              order_recon_status:
+                                type: string
+                              transaction_id:
+                                type: string
+                              settlement_id:
+                                type: string
+                              settlement_reference_no:
+                                type: string
+                              counterparty_recon_status:
+                                type: string
+                              counterparty_diff_amount:
+                                type: object
+                                properties:
+                                  currency:
+                                    type: string
+                                  value:
+                                    type: string
+                              message:
+                                type: object
+                                properties:
+                                  name:
+                                    type: string
+                                  code:
+                                    type: string
+      responses:
+        "200":
+          description: Synchronous ACK/NACK response
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: object
+                    properties:
+                      ack:
+                        properties:
+                          status:
+                            enum:
+                              - ACK
+                              - NACK
+                  error:
+                    type: object
+                    properties:
+                      code:
+                        type: string
+                      path:
+                        type: string
+                      message:
+                        type: string

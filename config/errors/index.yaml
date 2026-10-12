@@ -1,0 +1,69 @@
+code:
+  - Event: Bad or Invalid Request error - Mandatory Attribute
+    Description: Mandatory Attributes were missing i.e. Var1, Var2, Var3.
+    From: BAP/BPP
+    code: 70000
+  - Event: Bad or Invalid Request error - Enumeration
+    Description: Wrong Enum Value Provided for Var1, Var2, Var3.
+    From: BAP/BPP
+    code: 70001
+  - Event: Bad or Invalid Request error - wrong key/value format
+    Description: Invalid Key Provided Var3, Var4.
+    From: BAP/BPP
+    code: 70002
+  - Event: Duplicate Transaction ID
+    Description: Same Transaction Id already exist in the Database
+    From: BAP/BPP
+    code: 70003
+  - Event: Invalid Signature
+    Description: Cannot verify signature for request
+    From: BAP/BPP
+    code: 70004
+  - Event: Duplicate Record Found
+    Description: Found Duplicate Record in RSP if orderid-receiver-transaction_id is same
+    From: BAP/BPP
+    code: 70005
+  - Event: No Record for settlement id Found
+    Description: Settlement_id not found in RSP
+    From: BAP/BPP
+    code: 70008
+  - Event: No record found
+    Description: If No record found having same order id-receiver_app_id_transaction_id
+    From: BAP/BPP
+    code: 70010
+  - Event: Record Already Processed
+    Description: If Receiver send Same Object twice, or send after it is deemed settled by RSP
+    From: BAP/BPP
+    code: 70011
+  - Event: No Transaction found
+    Description: No Transaction found, if user tried to request for txn which doesn't exist in RSP / belong to some other collector
+    From: BAP/BPP
+    code: 70012
+  - Event: Invalid Schema
+    Description: Invalid schema for request, corresponds to details which are not in accordance with schema (if any new fields are added/ schema not in line with API contract doc).
+    From: BAP/BPP
+    code: 70014
+  - Event: Invalid Header
+    Description: Invalid header for request
+    From: BAP/BPP
+    code: 70015
+  - Event: Participant Key Expired
+    Description: Participant key expired. NPs may raise this in case the keys of RSP are expired
+    From: BAP/BPP
+    code: 70017
+  - Event: Invalid Payer Bank Details
+    Description: Collector's bank details are not matching with registered details
+    From: BAP/BPP
+    code: 70018
+  - Event: Invalid Payee Bank Details
+    Description: Receiver's bank details are not matching with registered details
+    From: BAP/BPP
+    code: 70019
+  - Event: Invalid Amount
+    Description: Settlement amount is less than 0 or invalid
+    From: BAP/BPP
+    code: 70020
+  - Event: Invalid Currency
+    Description: Current is other than INR
+    From: BAP/BPP
+    code: 70021
