@@ -1,8 +1,8 @@
 meta:
   domain: ONDC:NTS10
   version: 1.0.0
-  flowId: RSF_Paid_Appropriately
-  flowName: RSF - Paid Appropriately
+  flowId: Settlement_Paid_In_Full
+  flowName: Settlement Reconciliation - Paid in Full
   config_version: 0.0.0001
   description: 'Reconciliation where the collector has settled the order amount correctly: the collector sends receiver_recon with the order book and settlement details, and the receiver confirms the order as paid with on_receiver_recon.'
   use_case_id: RSF

@@ -1,0 +1,536 @@
+meta:
+  domain: ONDC:NTS10
+  version: 1.0.0
+  flowId: Settlement_Underpaid_Or_Overpaid
+  flowName: Settlement Reconciliation - Underpaid or Overpaid
+  config_version: 0.0.0001
+  description: "Reconciliation where the settled amount deviates from the expected
+    amount: the receiver reports an underpaid or overpaid order in
+    on_receiver_recon, the collector settles the difference and sends
+    receiver_recon with multiple settlement_details, and the receiver confirms
+    with on_receiver_recon."
+  use_case_id: RSF
+transaction_data:
+  transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+  latest_timestamp: 1970-01-01T00:00:00.000Z
+  bap_id: bap.example.com
+  bap_uri: https://bap.example.com
+  bpp_id: dev-workbench.ondc.tech
+  bpp_uri: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+steps:
+  - api: receiver_recon
+    action_id: receiver_recon_1
+    owner: BAP
+    responseFor: null
+    unsolicited: false
+    description: The collector (BAP) shares the order book with the receiver (BPP)
+      after settling the order amount, along with the settlement reference of
+      the settlement made to the receiver's bank account.
+    mock:
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICoKICogQHBhcmFtIHtPYmplY3R9IGRlZmF1bHRQYXlsb2FkIC0gVGhlIGJhc2UgcGF5bG9hZCBvYmplY3Qgd2l0aCBjb250ZXh0IGFscmVhZHkgcG9wdWxhdGVkLgogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiBAcmV0dXJucyB7T2JqZWN0fSBUaGUgZ2VuZXJhdGVkIHBheWxvYWQgb2JqZWN0IHRvIGJlIHNlbnQgaW4gdGhlIEFQSSByZXF1ZXN0LgogKi8KYXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgdHJ5IHsKICAgIGNvbnN0IG5vdyA9IGN1cnJlbnRUaW1lc3RhbXAoKTsKICAgIGNvbnN0IG9yZGVyID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlcmJvb2sub3JkZXJzWzBdOwogICAgY29uc3QgaSA9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIHx8IHt9OwogICAgZGVmYXVsdFBheWxvYWQuY29udGV4dC5icHBfaWQgPSBpLmJwcF9pZCA/PyBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKICAgIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaSA9IGkuYnBwX3VyaSA/PyBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF91cmk7CiAgICBjb25zdCBwYXkgPSBvcmRlci5wYXltZW50OwogICAgY29uc3QgZGV0YWlsID0gcGF5WyJAb25kYy9vcmcvc2V0dGxlbWVudF9kZXRhaWxzIl1bMF07CiAgICBvcmRlci5wcm92aWRlci5uYW1lLm5hbWUgPSBpLnByb3ZpZGVyX25hbWUgPz8gb3JkZXIucHJvdmlkZXIubmFtZS5uYW1lOwogICAgb3JkZXIucHJvdmlkZXIubmFtZS5jb2RlID0gaS5wcm92aWRlcl9jb2RlID8/IG9yZGVyLnByb3ZpZGVyLm5hbWUuY29kZTsKICAgIHBheS5wYXJhbXMuYW1vdW50ID0gU3RyaW5nKGkucGF5bWVudF9hbW91bnQgPz8gcGF5LnBhcmFtcy5hbW91bnQpOwogICAgcGF5WyJAb25kYy9vcmcvYnV5ZXJfYXBwX2ZpbmRlcl9mZWVfdHlwZSJdID0gaS5idXllcl9maW5kZXJfZmVlc190eXBlID8/IHBheVsiQG9uZGMvb3JnL2J1eWVyX2FwcF9maW5kZXJfZmVlX3R5cGUiXTsKICAgIHBheVsiQG9uZGMvb3JnL2J1eWVyX2FwcF9maW5kZXJfZmVlX2Ftb3VudCJdID0gU3RyaW5nKGkuYnV5ZXJfZmluZGVyX2ZlZXNfYW1vdW50ID8/IHBheVsiQG9uZGMvb3JnL2J1eWVyX2FwcF9maW5kZXJfZmVlX2Ftb3VudCJdKTsKICAgIHBheVsiQG9uZGMvb3JnL3NldHRsZW1lbnRfYmFzaXMiXSA9IGkuc2V0dGxlbWVudF9iYXNpcyA/PyBwYXlbIkBvbmRjL29yZy9zZXR0bGVtZW50X2Jhc2lzIl07CiAgICBvcmRlci5kZWR1Y3Rpb25fYnlfY29sbGVjdG9yLnZhbHVlID0gU3RyaW5nKGkuZGVkdWN0aW9uX2J5X2NvbGxlY3Rvcl9hbW91bnQgPz8gb3JkZXIuZGVkdWN0aW9uX2J5X2NvbGxlY3Rvci52YWx1ZSk7CiAgICBvcmRlci5zZXR0bGVtZW50X2lkID0gU3RyaW5nKGkuc2V0dGxlbWVudF9pZCA/PyBvcmRlci5zZXR0bGVtZW50X2lkKTsKICAgIG9yZGVyLnNldHRsZW1lbnRfcmVmZXJlbmNlX25vID0gaS5zZXR0bGVtZW50X3JlZl9ubyA/PyBvcmRlci5zZXR0bGVtZW50X3JlZmVyZW5jZV9ubzsKICAgIGRldGFpbC5zZXR0bGVtZW50X3JlZmVyZW5jZSA9IG9yZGVyLnNldHRsZW1lbnRfcmVmZXJlbmNlX25vOwogICAgb3JkZXIuaWQgPSBpLm9yZGVyX2lkID8/IG9yZGVyLmlkOwogICAgb3JkZXIudHJhbnNhY3Rpb25faWQgPSBpLnRyYW5zYWN0aW9uX2lkID8/IG9yZGVyLnRyYW5zYWN0aW9uX2lkOwogICAgZGV0YWlsLnNldHRsZW1lbnRfYW1vdW50ID0gTnVtYmVyKGkuc2V0dGxlbWVudF9hbW91bnQgPz8gZGV0YWlsLnNldHRsZW1lbnRfYW1vdW50KTsKICAgIGRldGFpbC5zZXR0bGVtZW50X3RpbWVzdGFtcCA9IG5vdzsKICAgIG9yZGVyLmNyZWF0ZWRfYXQgPSBub3c7CiAgICBvcmRlci51cGRhdGVkX2F0ID0gbm93OwogICAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCJyZWNlaXZlcl9yZWNvbiBnZW5lcmF0ZSBmYWlsZWQ6IiwgZXJyb3IpOwogICAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwogIH0KfQo=
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGFnYWluc3QgZGF0YSBzYXZlZCBmcm9tIHByZXZpb3VzIHN0ZXBzLgogKgogKiBAcGFyYW0ge09iamVjdH0gdGFyZ2V0UGF5bG9hZCAtIFRoZSBpbmNvbWluZyByZXF1ZXN0IHBheWxvYWQgdG8gdmFsaWRhdGUuCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQo=
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiBtZWV0c1JlcXVpcmVtZW50cyhzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQo=
+      defaultPayload:
+        context:
+          domain: ONDC:NTS10
+          country: IND
+          city: std:080
+          action: receiver_recon
+          core_version: 1.0.0
+          bap_id: bap.example.com
+          bap_uri: https://bap.example.com
+          bpp_id: dev-workbench.ondc.tech
+          bpp_uri: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+          transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+          message_id: 0c9d8e7f-1a2b-4c3d-8e4f-5a6b7c8d9e01
+          timestamp: 2026-10-12T10:34:58.469Z
+          ttl: P2D
+        message:
+          orderbook:
+            orders:
+              - id: O1
+                collector_app_id: abc.collectorapp.com
+                receiver_app_id: abc.receiverapp.com
+                state: Completed
+                provider:
+                  name:
+                    name: SABJI XPRESS PVT LTD - BANASWADI
+                    code: 18275-ONDC-1
+                payment:
+                  params:
+                    amount: "1200"
+                    currency: INR
+                    transaction_status: PAID
+                  type: ON-ORDER
+                  status: PAID
+                  collected_by: BAP
+                  "@ondc/org/buyer_app_finder_fee_type": Percentage
+                  "@ondc/org/buyer_app_finder_fee_amount": "5"
+                  "@ondc/org/settlement_basis": DELIVERY
+                  "@ondc/org/settlement_window": P8D
+                  "@ondc/org/settlement_details":
+                    - settlement_counterparty: seller-app
+                      settlement_amount: 1050
+                      settlement_type: neft
+                      settlement_bank_account_no: "99679007677676"
+                      settlement_ifsc_code: HDFC900008
+                      settlement_status: PAID
+                      settlement_reference: SREF1
+                      settlement_timestamp: 2026-10-12T10:34:58.469Z
+                deduction_by_collector:
+                  currency: INR
+                  value: "100"
+                payerdetails:
+                  payer_name: Example1 company Pvt. Ltd
+                  payer_account_no: 509424924294248
+                  payer_bank_code: HDFC0000000
+                settlement_reason_code: "01"
+                transaction_id: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+                settlement_id: "123123"
+                settlement_reference_no: SREF1
+                recon_status: "01"
+                order_recon_status: "01"
+                created_at: 2026-10-12T10:34:58.469Z
+                updated_at: 2026-10-12T10:34:58.469Z
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        recon_order: $.message.orderbook.orders[0]
+      inputs:
+        id: nts10_receiver_recon_input
+        jsonSchema:
+          $schema: http://json-schema.org/draft-07/schema#
+          type: object
+          additionalProperties: false
+          properties:
+            bpp_id:
+              type: string
+              description: Subscriber ID of the receiver app (BPP)
+              default: dev-workbench.ondc.tech
+            bpp_uri:
+              type: string
+              description: Subscriber URL of the receiver app (BPP)
+              default: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+            provider_name:
+              type: string
+              description: Provider name
+              default: SABJI XPRESS PVT LTD - BANASWADI
+            provider_code:
+              type: string
+              description: Provider ID
+              default: 18275-ONDC-1
+            order_id:
+              type: string
+              description: Order ID
+              default: O1
+            transaction_id:
+              type: string
+              description: Transaction ID of the order
+              default: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+            payment_amount:
+              type: string
+              description: Payment order value (INR)
+              default: "1200"
+            buyer_finder_fees_type:
+              type: string
+              description: Buyer finder fees type
+              default: Percentage
+            buyer_finder_fees_amount:
+              type: string
+              description: Buyer finder fees amount / value
+              default: "5"
+            settlement_amount:
+              type: number
+              description: Settlement amount (INR)
+              default: 1050
+            settlement_basis:
+              type: string
+              description: Settlement basis
+              default: DELIVERY
+            settlement_ref_no:
+              type: string
+              description: Settlement reference (UTR) number
+              default: SREF1
+            deduction_by_collector_amount:
+              type: string
+              description: Amount deducted by the collector (INR)
+              default: "100"
+            settlement_id:
+              type: string
+              description: Settlement ID
+              default: "123123"
+          required:
+            - bpp_id
+            - bpp_uri
+            - provider_name
+            - provider_code
+            - order_id
+            - transaction_id
+            - payment_amount
+            - buyer_finder_fees_type
+            - buyer_finder_fees_amount
+            - settlement_amount
+            - settlement_basis
+            - settlement_ref_no
+            - deduction_by_collector_amount
+            - settlement_id
+    examples:
+      - name: example for receiver_recon
+        payload:
+          context:
+            domain: ONDC:NTS10
+            action: receiver_recon
+            timestamp: 2026-10-12T13:49:47.732Z
+            transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+            message_id: 00b051db-6357-44bb-82be-84f3d235ca1e
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: dev-workbench.ondc.tech
+            bpp_uri: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+            country: IND
+            city: "*"
+            core_version: 1.0.0
+          message:
+            orderbook:
+              orders:
+                - id: O1
+                  collector_app_id: abc.collectorapp.com
+                  receiver_app_id: abc.receiverapp.com
+                  state: Completed
+                  provider:
+                    name:
+                      name: SABJI XPRESS PVT LTD - BANASWADI
+                      code: 18275-ONDC-1
+                  payment:
+                    params:
+                      amount: "1200"
+                      currency: INR
+                      transaction_status: PAID
+                    type: ON-ORDER
+                    status: PAID
+                    collected_by: BAP
+                    "@ondc/org/buyer_app_finder_fee_type": Percentage
+                    "@ondc/org/buyer_app_finder_fee_amount": "5"
+                    "@ondc/org/settlement_basis": DELIVERY
+                    "@ondc/org/settlement_window": P8D
+                    "@ondc/org/settlement_details":
+                      - settlement_counterparty: seller-app
+                        settlement_amount: 1050
+                        settlement_type: neft
+                        settlement_bank_account_no: "99679007677676"
+                        settlement_ifsc_code: HDFC900008
+                        settlement_status: PAID
+                        settlement_reference: SREF1
+                        settlement_timestamp: 2026-10-12T13:49:47.733Z
+                  deduction_by_collector:
+                    currency: INR
+                    value: "100"
+                  payerdetails:
+                    payer_name: Example1 company Pvt. Ltd
+                    payer_account_no: 509424924294248
+                    payer_bank_code: HDFC0000000
+                  settlement_reason_code: "01"
+                  transaction_id: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+                  settlement_id: "123123"
+                  settlement_reference_no: SREF1
+                  recon_status: "01"
+                  order_recon_status: "01"
+                  created_at: 2026-10-12T13:49:47.733Z
+                  updated_at: 2026-10-12T13:49:47.733Z
+        type: request
+        description: The collector (BAP) shares the order book with the receiver (BPP)
+          after settling the order amount, along with the settlement reference
+          of the settlement made to the receiver's bank account.
+  - api: on_receiver_recon
+    action_id: on_receiver_recon_1
+    owner: BPP
+    responseFor: receiver_recon_1
+    unsolicited: false
+    description: "The receiver (BPP) reconciles the order book against its bank
+      statement and reports a deviation: the order was underpaid
+      (counterparty_recon_status 03) or overpaid (02) by the diff amount given
+      as user input."
+    mock:
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICoKICogQHBhcmFtIHtPYmplY3R9IGRlZmF1bHRQYXlsb2FkIC0gVGhlIGJhc2UgcGF5bG9hZCBvYmplY3Qgd2l0aCBjb250ZXh0IGFscmVhZHkgcG9wdWxhdGVkLgogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiBAcmV0dXJucyB7T2JqZWN0fSBUaGUgZ2VuZXJhdGVkIHBheWxvYWQgb2JqZWN0IHRvIGJlIHNlbnQgaW4gdGhlIEFQSSByZXF1ZXN0LgogKi8KYXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgdHJ5IHsKICAgIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX2lkID0gc2Vzc2lvbkRhdGEuYnBwSWQ/LlswXSA/PyBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKICAgIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaSA9IHNlc3Npb25EYXRhLmJwcFVyaT8uWzBdID8/IGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaTsKICAgIGNvbnN0IG9yZGVyID0gc2Vzc2lvbkRhdGEucmVjb25fb3JkZXJbMF07CiAgICBjb25zdCBpbnB1dHMgPSBzZXNzaW9uRGF0YS51c2VyX2lucHV0cyB8fCB7fTsKICAgIGNvbnN0IG92ZXJwYWlkID0gaW5wdXRzLmRldmlhdGlvbl90eXBlID09PSAiT1ZFUlBBSUQiOwogICAgY29uc3QgZGlmZiA9IFN0cmluZyhpbnB1dHMuZGlmZl9hbW91bnQgPz8gIjIwIik7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlID0gewogICAgICBvcmRlcmJvb2s6IHsKICAgICAgICBvcmRlcnM6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgaWQ6IG9yZGVyLmlkLAogICAgICAgICAgICBjb2xsZWN0b3JfYXBwX2lkOiBvcmRlci5jb2xsZWN0b3JfYXBwX2lkLAogICAgICAgICAgICByZWNlaXZlcl9hcHBfaWQ6IG9yZGVyLnJlY2VpdmVyX2FwcF9pZCwKICAgICAgICAgICAgb3JkZXJfcmVjb25fc3RhdHVzOiAiMDIiLAogICAgICAgICAgICB0cmFuc2FjdGlvbl9pZDogb3JkZXIudHJhbnNhY3Rpb25faWQsCiAgICAgICAgICAgIHNldHRsZW1lbnRfaWQ6IG9yZGVyLnNldHRsZW1lbnRfaWQsCiAgICAgICAgICAgIGNvdW50ZXJwYXJ0eV9yZWNvbl9zdGF0dXM6IG92ZXJwYWlkID8gIjAyIiA6ICIwMyIsCiAgICAgICAgICAgIGNvdW50ZXJwYXJ0eV9kaWZmX2Ftb3VudDogeyBjdXJyZW5jeTogIklOUiIsIHZhbHVlOiBkaWZmIH0sCiAgICAgICAgICAgIG1lc3NhZ2U6IG92ZXJwYWlkCiAgICAgICAgICAgICAgPyB7IG5hbWU6ICJncmVhdGVyIGFtb3VudCIsIGNvZGU6ICJtb3JlIiB9CiAgICAgICAgICAgICAgOiB7IG5hbWU6ICJsZXNzZXIgYW1vdW50IiwgY29kZTogImxlc3MiIH0sCiAgICAgICAgICB9LAogICAgICAgIF0sCiAgICAgIH0sCiAgICB9OwogICAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCJvbl9yZWNlaXZlcl9yZWNvbiAoZGV2aWF0aW9uKSBnZW5lcmF0ZSBmYWlsZWQ6IiwgZXJyb3IpOwogICAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwogIH0KfQo=
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGFnYWluc3QgZGF0YSBzYXZlZCBmcm9tIHByZXZpb3VzIHN0ZXBzLgogKgogKiBAcGFyYW0ge09iamVjdH0gdGFyZ2V0UGF5bG9hZCAtIFRoZSBpbmNvbWluZyByZXF1ZXN0IHBheWxvYWQgdG8gdmFsaWRhdGUuCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXJib29rPy5vcmRlcnM/LlswXTsKCiAgY29uc3QgYWN0aXZlVHhJZCA9IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ/LlswXTsKICBjb25zdCBza2lwQ3Jvc3NTdGVwID0gQm9vbGVhbihhY3RpdmVUeElkKSAmJiB0YXJnZXRQYXlsb2FkPy5jb250ZXh0Py50cmFuc2FjdGlvbl9pZCAhPT0gYWN0aXZlVHhJZDsKCiAgaWYgKCFza2lwQ3Jvc3NTdGVwKSB7CiAgICBjb25zdCByZWNvbk9yZGVyID0gc2Vzc2lvbkRhdGEucmVjb25fb3JkZXI/LlswXTsKICAgIGlmIChyZWNvbk9yZGVyKSB7CiAgICAgIGlmIChvcmRlcj8uaWQgIT09IHJlY29uT3JkZXIuaWQpIHsKICAgICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJPcmRlciBJRCBkb2VzIG5vdCBtYXRjaCB0aGUgb3JkZXIgc2VudCBpbiByZWNlaXZlcl9yZWNvbiIgfTsKICAgICAgfQogICAgICBpZiAob3JkZXI/LnRyYW5zYWN0aW9uX2lkICE9PSByZWNvbk9yZGVyLnRyYW5zYWN0aW9uX2lkKSB7CiAgICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiT3JkZXIgdHJhbnNhY3Rpb25faWQgZG9lcyBub3QgbWF0Y2ggdGhlIG9yZGVyIHNlbnQgaW4gcmVjZWl2ZXJfcmVjb24iIH07CiAgICAgIH0KICAgICAgaWYgKG9yZGVyPy5zZXR0bGVtZW50X2lkICE9PSByZWNvbk9yZGVyLnNldHRsZW1lbnRfaWQpIHsKICAgICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJzZXR0bGVtZW50X2lkIGRvZXMgbm90IG1hdGNoIHRoZSBzZXR0bGVtZW50IHNlbnQgaW4gcmVjZWl2ZXJfcmVjb24iIH07CiAgICAgIH0KICAgIH0KICB9CgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQo=
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiBtZWV0c1JlcXVpcmVtZW50cyhzZXNzaW9uRGF0YSkgewogIGlmICghc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZD8ubGVuZ3RoKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uIElEIGluIHNlc3Npb24iIH07CiAgfQogIGlmICghc2Vzc2lvbkRhdGEucmVjb25fb3JkZXI/Lmxlbmd0aCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyByZWNvbl9vcmRlciBpbiBzZXNzaW9uIOKAlCByZWNlaXZlcl9yZWNvbl8xIGhhcyBub3QgY29tcGxldGVkIiB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0K
+      defaultPayload:
+        context:
+          domain: ONDC:NTS10
+          country: IND
+          city: std:080
+          action: on_receiver_recon
+          core_version: 1.0.0
+          bap_id: bap.example.com
+          bap_uri: https://bap.example.com
+          bpp_id: dev-workbench.ondc.tech
+          bpp_uri: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+          transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+          message_id: 0c9d8e7f-1a2b-4c3d-8e4f-5a6b7c8d9e01
+          timestamp: 2026-10-12T10:34:58.469Z
+          ttl: P2D
+        message: {}
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        counterparty_recon_status: $.message.orderbook.orders[0].counterparty_recon_status
+        counterparty_diff_value: $.message.orderbook.orders[0].counterparty_diff_amount.value
+      inputs:
+        id: nts10_underpaid_overpaid_input
+        jsonSchema:
+          $schema: http://json-schema.org/draft-07/schema#
+          type: object
+          additionalProperties: false
+          properties:
+            deviation_type:
+              type: string
+              description: Whether the receiver was underpaid or overpaid
+              enum:
+                - UNDERPAID
+                - OVERPAID
+              default: UNDERPAID
+            diff_amount:
+              type: string
+              description: Deviation amount (INR) between the expected and the settled amount
+              default: "20"
+          required:
+            - deviation_type
+            - diff_amount
+    examples:
+      - name: example for on_receiver_recon
+        payload:
+          context:
+            domain: ONDC:NTS10
+            action: on_receiver_recon
+            timestamp: 2026-10-12T13:49:49.448Z
+            transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+            message_id: 00b051db-6357-44bb-82be-84f3d235ca1e
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: dev-workbench.ondc.tech
+            bpp_uri: h
+            country: IND
+            city: "*"
+            core_version: 1.0.0
+          message:
+            orderbook:
+              orders:
+                - id: O1
+                  collector_app_id: abc.collectorapp.com
+                  receiver_app_id: abc.receiverapp.com
+                  order_recon_status: "02"
+                  transaction_id: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+                  settlement_id: "123123"
+                  counterparty_recon_status: "03"
+                  counterparty_diff_amount:
+                    currency: INR
+                    value: "20"
+                  message:
+                    name: lesser amount
+                    code: less
+        type: request
+        description: "The receiver (BPP) reconciles the order book against its bank
+          statement and reports a deviation: the order was underpaid
+          (counterparty_recon_status 03) or overpaid (02) by the diff amount
+          given as user input."
+  - api: receiver_recon
+    action_id: receiver_recon_2
+    owner: BAP
+    responseFor: null
+    unsolicited: false
+    description: The collector (BAP) settles the deviation in a subsequent
+      settlement and sends receiver_recon again with settlement_details holding
+      the original settlement plus the correction settlement (new settlement id
+      and reference, reason code 04).
+    mock:
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICoKICogQHBhcmFtIHtPYmplY3R9IGRlZmF1bHRQYXlsb2FkIC0gVGhlIGJhc2UgcGF5bG9hZCBvYmplY3Qgd2l0aCBjb250ZXh0IGFscmVhZHkgcG9wdWxhdGVkLgogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiBAcmV0dXJucyB7T2JqZWN0fSBUaGUgZ2VuZXJhdGVkIHBheWxvYWQgb2JqZWN0IHRvIGJlIHNlbnQgaW4gdGhlIEFQSSByZXF1ZXN0LgogKi8KYXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgdHJ5IHsKICAgIGNvbnN0IG9yZGVyID0gSlNPTi5wYXJzZShKU09OLnN0cmluZ2lmeShzZXNzaW9uRGF0YS5yZWNvbl9vcmRlclswXSkpOwogICAgY29uc3QgZGlmZiA9IE51bWJlcihzZXNzaW9uRGF0YS5jb3VudGVycGFydHlfZGlmZl92YWx1ZVswXSk7CiAgICBjb25zdCBvdmVycGFpZCA9IHNlc3Npb25EYXRhLmNvdW50ZXJwYXJ0eV9yZWNvbl9zdGF0dXNbMF0gPT09ICIwMiI7CiAgICBjb25zdCBub3cgPSBjdXJyZW50VGltZXN0YW1wKCk7CgogICAgY29uc3QgZGV0YWlscyA9IG9yZGVyLnBheW1lbnRbIkBvbmRjL29yZy9zZXR0bGVtZW50X2RldGFpbHMiXTsKICAgIGNvbnN0IGxhc3REZXRhaWwgPSBkZXRhaWxzW2RldGFpbHMubGVuZ3RoIC0gMV07CgogICAgY29uc3QgcHJldklkTnVtID0gTnVtYmVyKG9yZGVyLnNldHRsZW1lbnRfaWQpOwogICAgY29uc3QgbmV3U2V0dGxlbWVudElkID0gTnVtYmVyLmlzTmFOKHByZXZJZE51bSkgPyBnZW5lcmF0ZTZEaWdpdElkKCkgOiBTdHJpbmcocHJldklkTnVtICsgMSk7CiAgICBjb25zdCBwcmV2UmVmTnVtID0gTnVtYmVyKFN0cmluZyhvcmRlci5zZXR0bGVtZW50X3JlZmVyZW5jZV9ubykucmVwbGFjZSgvXEQvZywgIiIpKTsKICAgIGNvbnN0IG5ld1JlZmVyZW5jZSA9ICJTUkVGIiArIChOdW1iZXIuaXNOYU4ocHJldlJlZk51bSkgPyBuZXdTZXR0bGVtZW50SWQgOiBwcmV2UmVmTnVtICsgMSk7CgogICAgLy8gQSBuZXcgc2V0dGxlbWVudCBvYmplY3QgaXMgYXBwZW5kZWQ7IHRoZSBvcmlnaW5hbCBzdGF5cyBpbnRhY3QKICAgIGRldGFpbHMucHVzaCh7CiAgICAgIC4uLmxhc3REZXRhaWwsCiAgICAgIHNldHRsZW1lbnRfYW1vdW50OiBvdmVycGFpZCA/IC1kaWZmIDogZGlmZiwKICAgICAgc2V0dGxlbWVudF9zdGF0dXM6ICJQQUlEIiwKICAgICAgc2V0dGxlbWVudF9yZWZlcmVuY2U6IG5ld1JlZmVyZW5jZSwKICAgICAgc2V0dGxlbWVudF90aW1lc3RhbXA6IG5vdywKICAgIH0pOwoKICAgIG9yZGVyLnNldHRsZW1lbnRfaWQgPSBuZXdTZXR0bGVtZW50SWQ7CiAgICBvcmRlci5zZXR0bGVtZW50X3JlZmVyZW5jZV9ubyA9IG5ld1JlZmVyZW5jZTsKICAgIG9yZGVyLnNldHRsZW1lbnRfcmVhc29uX2NvZGUgPSAiMDQiOwogICAgb3JkZXIudXBkYXRlZF9hdCA9IG5vdzsKCiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlID0geyBvcmRlcmJvb2s6IHsgb3JkZXJzOiBbb3JkZXJdIH0gfTsKICAgIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKICB9IGNhdGNoIChlcnJvcikgewogICAgY29uc29sZS5lcnJvcigicmVjZWl2ZXJfcmVjb24gKGNvcnJlY3Rpb24pIGdlbmVyYXRlIGZhaWxlZDoiLCBlcnJvcik7CiAgICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7CiAgfQp9Cg==
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGFnYWluc3QgZGF0YSBzYXZlZCBmcm9tIHByZXZpb3VzIHN0ZXBzLgogKgogKiBAcGFyYW0ge09iamVjdH0gdGFyZ2V0UGF5bG9hZCAtIFRoZSBpbmNvbWluZyByZXF1ZXN0IHBheWxvYWQgdG8gdmFsaWRhdGUuCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXJib29rPy5vcmRlcnM/LlswXTsKCiAgY29uc3QgYWN0aXZlVHhJZCA9IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ/LlswXTsKICBjb25zdCBza2lwQ3Jvc3NTdGVwID0gQm9vbGVhbihhY3RpdmVUeElkKSAmJiB0YXJnZXRQYXlsb2FkPy5jb250ZXh0Py50cmFuc2FjdGlvbl9pZCAhPT0gYWN0aXZlVHhJZDsKCiAgaWYgKCFza2lwQ3Jvc3NTdGVwKSB7CiAgICBjb25zdCBwcmV2ID0gc2Vzc2lvbkRhdGEucmVjb25fb3JkZXI/LlswXTsKICAgIGNvbnN0IGRpZmYgPSBOdW1iZXIoc2Vzc2lvbkRhdGEuY291bnRlcnBhcnR5X2RpZmZfdmFsdWU/LlswXSk7CiAgICBjb25zdCBvdmVycGFpZCA9IHNlc3Npb25EYXRhLmNvdW50ZXJwYXJ0eV9yZWNvbl9zdGF0dXM/LlswXSA9PT0gIjAyIjsKCiAgICBpZiAocHJldikgewogICAgICBpZiAob3JkZXI/LmlkICE9PSBwcmV2LmlkKSB7CiAgICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiT3JkZXIgSUQgZG9lcyBub3QgbWF0Y2ggdGhlIG9yZGVyIHNlbnQgaW4gdGhlIGZpcnN0IHJlY2VpdmVyX3JlY29uIiB9OwogICAgICB9CiAgICAgIGlmIChvcmRlcj8uc2V0dGxlbWVudF9pZCA9PT0gcHJldi5zZXR0bGVtZW50X2lkKSB7CiAgICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAic2V0dGxlbWVudF9pZCBtdXN0IGRpZmZlciBmcm9tIHRoZSBmaXJzdCBzZXR0bGVtZW50IiB9OwogICAgICB9CiAgICAgIGlmIChvcmRlcj8uc2V0dGxlbWVudF9yZWZlcmVuY2Vfbm8gPT09IHByZXYuc2V0dGxlbWVudF9yZWZlcmVuY2Vfbm8pIHsKICAgICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJzZXR0bGVtZW50X3JlZmVyZW5jZV9ubyBtdXN0IGRpZmZlciBmcm9tIHRoZSBmaXJzdCBzZXR0bGVtZW50IiB9OwogICAgICB9CgogICAgICBjb25zdCBwcmV2RGV0YWlscyA9IHByZXYucGF5bWVudD8uWyJAb25kYy9vcmcvc2V0dGxlbWVudF9kZXRhaWxzIl0gPz8gW107CiAgICAgIGNvbnN0IGRldGFpbHMgPSBvcmRlcj8ucGF5bWVudD8uWyJAb25kYy9vcmcvc2V0dGxlbWVudF9kZXRhaWxzIl0gPz8gW107CiAgICAgIGlmIChkZXRhaWxzLmxlbmd0aCA8PSBwcmV2RGV0YWlscy5sZW5ndGgpIHsKICAgICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJzZXR0bGVtZW50X2RldGFpbHMgbXVzdCBrZWVwIHRoZSBvcmlnaW5hbCBzZXR0bGVtZW50IGFuZCBhZGQgdGhlIGNvcnJlY3Rpb24gc2V0dGxlbWVudCIgfTsKICAgICAgfQoKICAgICAgY29uc3Qgc3VtID0gKGxpc3QpID0+IGxpc3QucmVkdWNlKCh0b3RhbCwgZCkgPT4gdG90YWwgKyBOdW1iZXIoZD8uc2V0dGxlbWVudF9hbW91bnQgPz8gMCksIDApOwogICAgICBpZiAoIU51bWJlci5pc05hTihkaWZmKSkgewogICAgICAgIGNvbnN0IGV4cGVjdGVkID0gc3VtKHByZXZEZXRhaWxzKSArIChvdmVycGFpZCA/IC1kaWZmIDogZGlmZik7CiAgICAgICAgaWYgKHN1bShkZXRhaWxzKSAhPT0gZXhwZWN0ZWQpIHsKICAgICAgICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIlRvdGFsIG9mIHNldHRsZW1lbnRfZGV0YWlscyBkb2VzIG5vdCBtYXRjaCB0aGUgb3JpZ2luYWwgc2V0dGxlbWVudCBhZGp1c3RlZCBieSB0aGUgZGlmZiBhbW91bnQgcmVwb3J0ZWQgaW4gb25fcmVjZWl2ZXJfcmVjb24iIH07CiAgICAgICAgfQogICAgICB9CiAgICB9CiAgfQoKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0K
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiBtZWV0c1JlcXVpcmVtZW50cyhzZXNzaW9uRGF0YSkgewogIGlmICghc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZD8ubGVuZ3RoKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uIElEIGluIHNlc3Npb24iIH07CiAgfQogIGlmICghc2Vzc2lvbkRhdGEucmVjb25fb3JkZXI/Lmxlbmd0aCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyByZWNvbl9vcmRlciBpbiBzZXNzaW9uIOKAlCByZWNlaXZlcl9yZWNvbl8xIGhhcyBub3QgY29tcGxldGVkIiB9OwogIH0KICBpZiAoIXNlc3Npb25EYXRhLmNvdW50ZXJwYXJ0eV9kaWZmX3ZhbHVlPy5sZW5ndGgpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgY291bnRlcnBhcnR5X2RpZmZfdmFsdWUgaW4gc2Vzc2lvbiDigJQgb25fcmVjZWl2ZXJfcmVjb25fMSBoYXMgbm90IGNvbXBsZXRlZCIgfTsKICB9CiAgaWYgKCFzZXNzaW9uRGF0YS5jb3VudGVycGFydHlfcmVjb25fc3RhdHVzPy5sZW5ndGgpIHsKICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogIk1pc3NpbmcgY291bnRlcnBhcnR5X3JlY29uX3N0YXR1cyBpbiBzZXNzaW9uIOKAlCBvbl9yZWNlaXZlcl9yZWNvbl8xIGhhcyBub3QgY29tcGxldGVkIiB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0K
+      defaultPayload:
+        context:
+          domain: ONDC:NTS10
+          country: IND
+          city: std:080
+          action: receiver_recon
+          core_version: 1.0.0
+          bap_id: bap.example.com
+          bap_uri: https://bap.example.com
+          bpp_id: dev-workbench.ondc.tech
+          bpp_uri: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+          transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+          message_id: 4d5e6f70-8192-4a3b-9c4d-5e6f708192a3
+          timestamp: 2026-10-12T10:34:58.469Z
+          ttl: P2D
+        message: {}
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+        recon_order: $.message.orderbook.orders[0]
+      inputs: {}
+    examples:
+      - name: example for receiver_recon
+        payload:
+          context:
+            domain: ONDC:NTS10
+            action: receiver_recon
+            timestamp: 2026-10-12T13:49:49.456Z
+            transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+            message_id: 280f373e-2de1-465d-aae8-684518898073
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: dev-workbench.ondc.tech
+            bpp_uri: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+            country: IND
+            city: "*"
+            core_version: 1.0.0
+          message:
+            orderbook:
+              orders:
+                - id: O1
+                  collector_app_id: abc.collectorapp.com
+                  receiver_app_id: abc.receiverapp.com
+                  state: Completed
+                  provider:
+                    name:
+                      name: SABJI XPRESS PVT LTD - BANASWADI
+                      code: 18275-ONDC-1
+                  payment:
+                    params:
+                      amount: "1200"
+                      currency: INR
+                      transaction_status: PAID
+                    type: ON-ORDER
+                    status: PAID
+                    collected_by: BAP
+                    "@ondc/org/buyer_app_finder_fee_type": Percentage
+                    "@ondc/org/buyer_app_finder_fee_amount": "5"
+                    "@ondc/org/settlement_basis": DELIVERY
+                    "@ondc/org/settlement_window": P8D
+                    "@ondc/org/settlement_details":
+                      - settlement_counterparty: seller-app
+                        settlement_amount: 1050
+                        settlement_type: neft
+                        settlement_bank_account_no: "99679007677676"
+                        settlement_ifsc_code: HDFC900008
+                        settlement_status: PAID
+                        settlement_reference: SREF1
+                        settlement_timestamp: 2026-10-12T13:49:47.733Z
+                      - settlement_counterparty: seller-app
+                        settlement_amount: 20
+                        settlement_type: neft
+                        settlement_bank_account_no: "99679007677676"
+                        settlement_ifsc_code: HDFC900008
+                        settlement_status: PAID
+                        settlement_reference: SREF2
+                        settlement_timestamp: 2026-10-12T13:49:49.458Z
+                  deduction_by_collector:
+                    currency: INR
+                    value: "100"
+                  payerdetails:
+                    payer_name: Example1 company Pvt. Ltd
+                    payer_account_no: 509424924294248
+                    payer_bank_code: HDFC0000000
+                  settlement_reason_code: "04"
+                  transaction_id: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+                  settlement_id: "123124"
+                  settlement_reference_no: SREF2
+                  recon_status: "01"
+                  order_recon_status: "01"
+                  created_at: 2026-10-12T13:49:47.733Z
+                  updated_at: 2026-10-12T13:49:49.458Z
+        type: request
+        description: The collector (BAP) settles the deviation in a subsequent
+          settlement and sends receiver_recon again with settlement_details
+          holding the original settlement plus the correction settlement (new
+          settlement id and reference, reason code 04).
+  - api: on_receiver_recon
+    action_id: on_receiver_recon_2
+    owner: BPP
+    responseFor: receiver_recon_2
+    unsolicited: false
+    description: The receiver (BPP) reconciles the correction settlement and
+      confirms the order as paid (counterparty_recon_status 01).
+    mock:
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICoKICogQHBhcmFtIHtPYmplY3R9IGRlZmF1bHRQYXlsb2FkIC0gVGhlIGJhc2UgcGF5bG9hZCBvYmplY3Qgd2l0aCBjb250ZXh0IGFscmVhZHkgcG9wdWxhdGVkLgogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiBAcmV0dXJucyB7T2JqZWN0fSBUaGUgZ2VuZXJhdGVkIHBheWxvYWQgb2JqZWN0IHRvIGJlIHNlbnQgaW4gdGhlIEFQSSByZXF1ZXN0LgogKi8KYXN5bmMgZnVuY3Rpb24gZ2VuZXJhdGUoZGVmYXVsdFBheWxvYWQsIHNlc3Npb25EYXRhKSB7CiAgdHJ5IHsKICAgIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX2lkID0gc2Vzc2lvbkRhdGEuYnBwSWQ/LlswXSA/PyBkZWZhdWx0UGF5bG9hZC5jb250ZXh0LmJwcF9pZDsKICAgIGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaSA9IHNlc3Npb25EYXRhLmJwcFVyaT8uWzBdID8/IGRlZmF1bHRQYXlsb2FkLmNvbnRleHQuYnBwX3VyaTsKICAgIGNvbnN0IG9yZGVyID0gc2Vzc2lvbkRhdGEucmVjb25fb3JkZXJbMF07CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlID0gewogICAgICBvcmRlcmJvb2s6IHsKICAgICAgICBvcmRlcnM6IFsKICAgICAgICAgIHsKICAgICAgICAgICAgaWQ6IG9yZGVyLmlkLAogICAgICAgICAgICBjb2xsZWN0b3JfYXBwX2lkOiBvcmRlci5jb2xsZWN0b3JfYXBwX2lkLAogICAgICAgICAgICByZWNlaXZlcl9hcHBfaWQ6IG9yZGVyLnJlY2VpdmVyX2FwcF9pZCwKICAgICAgICAgICAgb3JkZXJfcmVjb25fc3RhdHVzOiAiMDIiLAogICAgICAgICAgICB0cmFuc2FjdGlvbl9pZDogb3JkZXIudHJhbnNhY3Rpb25faWQsCiAgICAgICAgICAgIHNldHRsZW1lbnRfaWQ6IG9yZGVyLnNldHRsZW1lbnRfaWQsCiAgICAgICAgICAgIGNvdW50ZXJwYXJ0eV9yZWNvbl9zdGF0dXM6ICIwMSIsCiAgICAgICAgICB9LAogICAgICAgIF0sCiAgICAgIH0sCiAgICB9OwogICAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwogIH0gY2F0Y2ggKGVycm9yKSB7CiAgICBjb25zb2xlLmVycm9yKCJvbl9yZWNlaXZlcl9yZWNvbiBnZW5lcmF0ZSBmYWlsZWQ6IiwgZXJyb3IpOwogICAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwogIH0KfQo=
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGFnYWluc3QgZGF0YSBzYXZlZCBmcm9tIHByZXZpb3VzIHN0ZXBzLgogKgogKiBAcGFyYW0ge09iamVjdH0gdGFyZ2V0UGF5bG9hZCAtIFRoZSBpbmNvbWluZyByZXF1ZXN0IHBheWxvYWQgdG8gdmFsaWRhdGUuCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIGNvbnN0IG9yZGVyID0gdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXJib29rPy5vcmRlcnM/LlswXTsKCiAgLy8gQ3Jvc3Mtc3RlcCB2ZXJpZmljYXRpb24gKHNraXBwZWQgd2hlbiB0aGUgcGF5bG9hZCBiZWxvbmdzIHRvIGFub3RoZXIgdHJhbnNhY3Rpb24pCiAgY29uc3QgYWN0aXZlVHhJZCA9IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQ/LlswXTsKICBjb25zdCBza2lwQ3Jvc3NTdGVwID0gQm9vbGVhbihhY3RpdmVUeElkKSAmJiB0YXJnZXRQYXlsb2FkPy5jb250ZXh0Py50cmFuc2FjdGlvbl9pZCAhPT0gYWN0aXZlVHhJZDsKCiAgaWYgKCFza2lwQ3Jvc3NTdGVwKSB7CiAgICBjb25zdCByZWNvbk9yZGVyID0gc2Vzc2lvbkRhdGEucmVjb25fb3JkZXI/LlswXTsKICAgIGlmIChyZWNvbk9yZGVyKSB7CiAgICAgIGlmIChvcmRlcj8uaWQgIT09IHJlY29uT3JkZXIuaWQpIHsKICAgICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJPcmRlciBJRCBkb2VzIG5vdCBtYXRjaCB0aGUgb3JkZXIgc2VudCBpbiByZWNlaXZlcl9yZWNvbiIgfTsKICAgICAgfQogICAgICBpZiAob3JkZXI/LmNvbGxlY3Rvcl9hcHBfaWQgIT09IHJlY29uT3JkZXIuY29sbGVjdG9yX2FwcF9pZCkgewogICAgICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogImNvbGxlY3Rvcl9hcHBfaWQgZG9lcyBub3QgbWF0Y2ggdGhlIG9yZGVyIHNlbnQgaW4gcmVjZWl2ZXJfcmVjb24iIH07CiAgICAgIH0KICAgICAgaWYgKG9yZGVyPy5yZWNlaXZlcl9hcHBfaWQgIT09IHJlY29uT3JkZXIucmVjZWl2ZXJfYXBwX2lkKSB7CiAgICAgICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAicmVjZWl2ZXJfYXBwX2lkIGRvZXMgbm90IG1hdGNoIHRoZSBvcmRlciBzZW50IGluIHJlY2VpdmVyX3JlY29uIiB9OwogICAgICB9CiAgICAgIGlmIChvcmRlcj8udHJhbnNhY3Rpb25faWQgIT09IHJlY29uT3JkZXIudHJhbnNhY3Rpb25faWQpIHsKICAgICAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJPcmRlciB0cmFuc2FjdGlvbl9pZCBkb2VzIG5vdCBtYXRjaCB0aGUgb3JkZXIgc2VudCBpbiByZWNlaXZlcl9yZWNvbiIgfTsKICAgICAgfQogICAgICBpZiAob3JkZXI/LnNldHRsZW1lbnRfaWQgIT09IHJlY29uT3JkZXIuc2V0dGxlbWVudF9pZCkgewogICAgICAgIHJldHVybiB7IHZhbGlkOiBmYWxzZSwgY29kZTogNDAwLCBkZXNjcmlwdGlvbjogInNldHRsZW1lbnRfaWQgZG9lcyBub3QgbWF0Y2ggdGhlIHNldHRsZW1lbnQgc2VudCBpbiByZWNlaXZlcl9yZWNvbiIgfTsKICAgICAgfQogICAgfQogIH0KCiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9Cg==
+      requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiBtZWV0c1JlcXVpcmVtZW50cyhzZXNzaW9uRGF0YSkgewogIGlmICghc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZD8ubGVuZ3RoKSB7CiAgICByZXR1cm4geyB2YWxpZDogZmFsc2UsIGNvZGU6IDQwMCwgZGVzY3JpcHRpb246ICJNaXNzaW5nIHRyYW5zYWN0aW9uIElEIGluIHNlc3Npb24iIH07CiAgfQogIGlmICghc2Vzc2lvbkRhdGEucmVjb25fb3JkZXI/Lmxlbmd0aCkgewogICAgcmV0dXJuIHsgdmFsaWQ6IGZhbHNlLCBjb2RlOiA0MDAsIGRlc2NyaXB0aW9uOiAiTWlzc2luZyByZWNvbl9vcmRlciBpbiBzZXNzaW9uIOKAlCByZWNlaXZlcl9yZWNvbl8yIGhhcyBub3QgY29tcGxldGVkIiB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlJlcXVpcmVtZW50cyBtZXQiIH07Cn0K
+      defaultPayload:
+        context:
+          domain: ONDC:NTS10
+          country: IND
+          city: std:080
+          action: on_receiver_recon
+          core_version: 1.0.0
+          bap_id: bap.example.com
+          bap_uri: https://bap.example.com
+          bpp_id: dev-workbench.ondc.tech
+          bpp_uri: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
+          transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+          message_id: 4d5e6f70-8192-4a3b-9c4d-5e6f708192a3
+          timestamp: 2026-10-12T10:34:58.469Z
+          ttl: P2D
+        message: {}
+      saveData:
+        transactionId: $.context.transaction_id
+        latestMessage_id: $.context.message_id
+        latestTimestamp: $.context.timestamp
+        bapId: $.context.bap_id
+        bapUri: $.context.bap_uri
+        bppId: $.context.bpp_id
+        bppUri: $.context.bpp_uri
+        city_code: $.context.city
+      inputs: {}
+    examples:
+      - name: example for on_receiver_recon
+        payload:
+          context:
+            domain: ONDC:NTS10
+            action: on_receiver_recon
+            timestamp: 2026-10-12T13:49:49.480Z
+            transaction_id: b1a8c3d4-6e2f-4a07-8c55-9e4d3f2b1a22
+            message_id: 280f373e-2de1-465d-aae8-684518898073
+            bap_id: bap.example.com
+            bap_uri: https://bap.example.com
+            ttl: PT30S
+            bpp_id: dev-workbench.ondc.tech
+            bpp_uri: h
+            country: IND
+            city: "*"
+            core_version: 1.0.0
+          message:
+            orderbook:
+              orders:
+                - id: O1
+                  collector_app_id: abc.collectorapp.com
+                  receiver_app_id: abc.receiverapp.com
+                  order_recon_status: "02"
+                  transaction_id: 3df395a9-c196-4678-a4d1-5eaf4f7df8dc
+                  settlement_id: "123124"
+                  counterparty_recon_status: "01"
+        type: request
+        description: The receiver (BPP) reconciles the correction settlement and
+          confirms the order as paid (counterparty_recon_status 01).
+transaction_history: []
+validationLib: ""
+helperLib: LyoKCUN1c3RvbSBoZWxwZXIgZnVuY3Rpb25zIGF2YWlsYWJsZSBpbiBhbGwgbW9jayBnZW5lcmF0aW9uIGZ1bmN0aW9ucy4KCXRoZXNlIGFyZSBhcHBlbmRlZCBiZWxvdyB0aGUgZ2VuZXJhdGUgZnVuY3Rpb24gZm9yIGVhY2ggc3RlcC4KKi8KCi8vIEdlbmVyYXRlcyBhIFVVSUQgdjQKZnVuY3Rpb24gdXVpZHY0KCkgewoJcmV0dXJuICd4eHh4eHh4eC14eHh4LTR4eHgteXh4eC14eHh4eHh4eHh4eHgnLnJlcGxhY2UoL1t4eV0vZywgZnVuY3Rpb24gKGMpIHsKCSAgY29uc3QgciA9IE1hdGgucmFuZG9tKCkgKiAxNiB8IDA7CgkgIGNvbnN0IHYgPSBjID09PSAneCcgPyByIDogKHIgJiAweDMgfCAweDgpOwoJICByZXR1cm4gdi50b1N0cmluZygxNik7Cgl9KTsKfQoKLy8gR2VuZXJhdGUgYSA2IGRpZ2l0IHN0cmluZyBJRApmdW5jdGlvbiBnZW5lcmF0ZTZEaWdpdElkKCkgewoJcmV0dXJuIE1hdGguZmxvb3IoMTAwMDAwICsgTWF0aC5yYW5kb20oKSAqIDkwMDAwMCkudG9TdHJpbmcoKTsKfQoKLy8gUmV0dXJucyB0aGUgY3VycmVudCBJU08gdGltZXN0YW1wCmZ1bmN0aW9uIGN1cnJlbnRUaW1lc3RhbXAoKSB7CglyZXR1cm4gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwp9Cg==

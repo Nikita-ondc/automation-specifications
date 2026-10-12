@@ -1,8 +1,8 @@
 meta:
   domain: ONDC:NTS10
   version: 1.0.0
-  flowId: RSF_Unsolicited_On_Receiver_Recon
-  flowName: RSF - Unsolicited on_receiver_recon
+  flowId: Settlement_Payment_Not_Received
+  flowName: Settlement Reconciliation - Payment Not Received
   config_version: 0.0.0001
   description: 'Reconciliation initiated by the receiver for an order that was not paid: the receiver sends an unsolicited on_receiver_recon flagging the missing settlement, the collector settles it and sends receiver_recon, and the receiver confirms with on_receiver_recon.'
   use_case_id: RSF
