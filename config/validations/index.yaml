@@ -337,23 +337,31 @@ _TESTS_:
             - "INR"
           _CONTINUE_: "!(attr are present)"
           _RETURN_: attr all in enumList
-    - _NAME_: ON_RECEIVER_RECON_COUNTERPARTY_DIFF_AMOUNT
-      diffPath: $.message.orderbook.orders[*].counterparty_diff_amount
-      _CONTINUE_: "!(diffPath are present)"
+    - _NAME_: ON_RECEIVER_RECON_COUNTERPARTY_DIFF_AMOUNT_CURRENCY
+      diffValue: $.message.orderbook.orders[*].counterparty_diff_amount.value
+      _CONTINUE_: "!(diffValue are present)"
       _RETURN_:
         - _NAME_: REQUIRED_ON_RECEIVER_RECON_DIFF_CURRENCY
           attr: $.message.orderbook.orders[*].counterparty_diff_amount.currency
           _RETURN_: attr are present
+    - _NAME_: ON_RECEIVER_RECON_COUNTERPARTY_DIFF_AMOUNT_VALUE
+      diffCurrency: $.message.orderbook.orders[*].counterparty_diff_amount.currency
+      _CONTINUE_: "!(diffCurrency are present)"
+      _RETURN_:
         - _NAME_: REQUIRED_ON_RECEIVER_RECON_DIFF_VALUE
           attr: $.message.orderbook.orders[*].counterparty_diff_amount.value
           _RETURN_: attr are present
-    - _NAME_: ON_RECEIVER_RECON_MESSAGE
-      msgPath: $.message.orderbook.orders[*].message
-      _CONTINUE_: "!(msgPath are present)"
+    - _NAME_: ON_RECEIVER_RECON_MESSAGE_NAME
+      msgCode: $.message.orderbook.orders[*].message.code
+      _CONTINUE_: "!(msgCode are present)"
       _RETURN_:
         - _NAME_: REQUIRED_ON_RECEIVER_RECON_MESSAGE_NAME
           attr: $.message.orderbook.orders[*].message.name
           _RETURN_: attr are present
+    - _NAME_: ON_RECEIVER_RECON_MESSAGE_CODE
+      msgName: $.message.orderbook.orders[*].message.name
+      _CONTINUE_: "!(msgName are present)"
+      _RETURN_:
         - _NAME_: REQUIRED_ON_RECEIVER_RECON_MESSAGE_CODE
           attr: $.message.orderbook.orders[*].message.code
           _RETURN_: attr are present
