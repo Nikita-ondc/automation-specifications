@@ -5,7 +5,7 @@ flows:
     tags:
       - WORKBENCH
       - REPORTABLE
-    description: "Reconciliation where the collector has settled the order amount correctly: the collector sends receiver_recon with the order book and settlement details, and the receiver confirms the order as paid with on_receiver_recon."
+    description: "Reconciliation where the collector has settled the order amount correctly, the collector sends receiver_recon with the order book and settlement details, and the receiver confirms the order as paid with on_receiver_recon."
     config:
       $ref: ./RSF/RSF_Paid_Appropriately.yaml
   - type: playground
