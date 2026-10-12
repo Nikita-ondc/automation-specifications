@@ -74,7 +74,7 @@ _TESTS_:
             - _NAME_: REGEX_CONTEXT_CITY
               attr: $.context.city
               reg:
-                - ^std:\d+$
+                - ^(std:\d+|\*)$
               _CONTINUE_: "!(attr are present)"
               _RETURN_: attr follow regex reg
             - _NAME_: REGEX_CONTEXT_TIMESTAMP
