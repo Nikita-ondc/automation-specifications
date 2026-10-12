@@ -9,9 +9,7 @@ supportedActions:
 apiProperties:
   receiver_recon:
     async_predecessor: null
-    transaction_partner:
-      - on_receiver_recon
+    transaction_partner: []
   on_receiver_recon:
     async_predecessor: null
-    transaction_partner:
-      - receiver_recon
+    transaction_partner: []
