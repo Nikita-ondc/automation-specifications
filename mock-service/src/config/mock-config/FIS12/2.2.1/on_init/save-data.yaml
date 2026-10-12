@@ -1,0 +1,7 @@
+save-data:
+    transaction_id: "$.context.transaction_id"
+    message_id: "$.context.message_id"
+    order: "$.message.order"
+    item: "$.message.order.items[1]"
+    Emanadate_verification_status: "$..form.url"
+    form_id: "$.message.order.items[*].xinput.form.id"

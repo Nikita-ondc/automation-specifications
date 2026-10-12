@@ -1,0 +1,13 @@
+update_target: "fulfillments"
+order:
+  id: LOAN_LEAD_ID_OR_SIMILAR_ORDER_ID
+  fulfillments:
+    - state:
+        descriptor:
+          code: "DELIVERED"
+      customer:
+        person:
+          creds:
+            - type: "IMEI"
+              id: "324124135678567"
+      id: "F2"

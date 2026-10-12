@@ -1,0 +1,8 @@
+save-data:
+  transaction_id: "$.context.transaction_id"
+  message_id: "$.context.message_id"
+  order_id: "$.message.order.id"
+  update_target: "$.message.update_target"
+  update_label: "$.message.order.payments[0].time.label"
+  update_amount: "$.message.order.payments[0].params.amount"
+  update_currency: "$.message.order.payments[0].params.currency"

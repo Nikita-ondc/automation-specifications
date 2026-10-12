@@ -1,0 +1,12 @@
+order:
+  provider:
+    id: P1
+  items:
+    - "id": "CHILD_ITEM_ID_I1"
+      "parent_item_id": "ITEM_ID_ELECTRONICS"
+      xinput:
+        form:
+          id: "F03"
+        form_response:
+          status: "SUCCESS"
+          submission_id: "F03_SUBMISSION_ID"

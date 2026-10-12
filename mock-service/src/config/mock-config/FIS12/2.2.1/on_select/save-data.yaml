@@ -1,0 +1,18 @@
+save-data:
+  transaction_id: "$.context.transaction_id"
+  message_id: "$.context.message_id"
+  selected_provider: "$.message.order.provider"
+  selected_items: "$.message.order.items[*]"
+  item: "$.message.order.items[1]"
+  order: "$.message.order"
+  selected_fulfillments: "$.message.order.fulfillments[*]"
+  quote: "$.message.quote" 
+  form_id: "$..form.id"
+  down_payment_form: "$..form.url"
+  # Loan data for dynamic SETTLEMENT_AMOUNT calculation
+  quote_price: "$.message.order.quote.price.value"
+  net_disbursed_amount: "$.message.order.quote.breakup[?(@.title=='NET_DISBURSED_AMOUNT')].price.value"
+  loan_term: "$.message.order.items[0].tags[?(@.descriptor.code=='INFO')].list[?(@.descriptor.code=='TERM')].value"
+  # Loan amount (product price) and interest rate for EMI calculation
+  loan_amount: "$.message.order.items[0].price.value"
+  interest_rate: "$.message.order.items[0].tags[?(@.descriptor.code=='INFO')].list[?(@.descriptor.code=='INTEREST_RATE')].value"

@@ -1,0 +1,15 @@
+supportedActions:
+  "null":
+    - receiver_recon
+    - on_receiver_recon
+  receiver_recon:
+    - on_receiver_recon
+  on_receiver_recon:
+    - receiver_recon
+apiProperties:
+  receiver_recon:
+    async_predecessor: null
+    transaction_partner: []
+  on_receiver_recon:
+    async_predecessor: null
+    transaction_partner: []

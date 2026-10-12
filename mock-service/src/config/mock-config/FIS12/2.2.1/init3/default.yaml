@@ -1,0 +1,56 @@
+order:
+  provider:
+    id: P1
+  items:
+    - id: CHILD_ITEM_ID_I1
+      parent_item_id: ITEM_ID_ELECTRONICS
+      xinput:
+        form:
+          id: "F06"
+        form_response:
+          status: "SUCCESS"
+          submission_id: "F06_SUBMISSION_ID"
+  payments:
+    - id: "PID-8000"
+      collected_by: "BPP"
+      type: "ON_ORDER"
+      status: "NOT-PAID"
+      params:
+        bank_code: "XXXXXXXX"
+        bank_account_number: "xxxxxxxxxxxxxx"
+        virtual_payment_address: "9988199772@okicic"
+      tags:
+        - descriptor:
+            code: "BAP_TERMS"
+            name: "BAP Terms of Engagement"
+          display: false
+          list:
+            - descriptor:
+                code: "BUYER_FINDER_FEES_TYPE"
+              value: "percent-annualized"
+            - descriptor:
+                code: "BUYER_FINDER_FEES_PERCENTAGE"
+              value: "1"
+            - descriptor:
+                code: "SETTLEMENT_AMOUNT"
+              value: "1159"
+            - descriptor:
+                code: "SETTLEMENT_TYPE"
+              value: "neft"
+            - descriptor:
+                code: "DELAY_INTEREST"
+              value: "5"
+            - descriptor:
+                code: "STATIC_TERMS"
+              value: "https://bap.credit.becknprotocol.io/personal-banking/loans/personal-loan"
+            - descriptor:
+                code: "OFFLINE_CONTRACT"
+              value: "true"
+    - id: "PID-5555"
+      type: "PRE_ORDER"
+      status: "PAID"
+      collected_by: "BPP"
+      params:
+        amount: "1000"
+        currency: "INR"
+        transaction_id: "3b5a664d-077e-47f0-96d1-06e68d397c78"

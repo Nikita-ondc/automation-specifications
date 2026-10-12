@@ -1,0 +1,11 @@
+save-data:
+  - path: "$.context.transaction_id"
+    key: "transaction_id"
+  - path: "$.context.message_id"
+    key: "message_id"
+  - path: "$.message.order"
+    key: "order" 
+  - path: "$.message.order.items[1]"
+    key: "item"
+  - path: "$.message.order.items[*].xinput.form.id"
+    key: "form_id"

@@ -1,0 +1,6 @@
+update_target: payments
+order:
+  id: LOAN_LEAD_ID_OR_SIMILAR_ORDER_ID
+  payments:
+    - time:
+        label: FORECLOSURE
