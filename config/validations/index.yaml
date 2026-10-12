@@ -74,13 +74,13 @@ _TESTS_:
             - _NAME_: REGEX_CONTEXT_CITY
               attr: $.context.city
               reg:
-                - ^std:\\d+$
+                - ^std:\d+$
               _CONTINUE_: "!(attr are present)"
               _RETURN_: attr follow regex reg
             - _NAME_: REGEX_CONTEXT_TIMESTAMP
               attr: $.context.timestamp
               reg:
-                - ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$
+                - ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$
               _CONTINUE_: "!(attr are present)"
               _RETURN_: attr follow regex reg
             - _NAME_: REGEX_CONTEXT_BAP_ID
@@ -98,7 +98,7 @@ _TESTS_:
             - _NAME_: REGEX_CONTEXT_TTL
               attr: $.context.ttl
               reg:
-                - ^P(?=\\d|T\\d)(\\d+Y)?(\\d+M)?(\\d+D)?(T(\\d+H)?(\\d+M)?(\\d+S)?)?$
+                - ^P(?=\d|T\d)(\d+Y)?(\d+M)?(\d+D)?(T(\d+H)?(\d+M)?(\d+S)?)?$
               _CONTINUE_: "!(attr are present)"
               _RETURN_: attr follow regex reg
     - _NAME_: RECEIVER_RECON_ORDERBOOK_REQUIRED
@@ -268,19 +268,19 @@ _TESTS_:
         - _NAME_: REGEX_RECEIVER_RECON_CREATED_AT
           attr: $.message.orderbook.orders[*].created_at
           reg:
-            - ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$
+            - ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$
           _CONTINUE_: "!(attr are present)"
           _RETURN_: attr follow regex reg
         - _NAME_: REGEX_RECEIVER_RECON_UPDATED_AT
           attr: $.message.orderbook.orders[*].updated_at
           reg:
-            - ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$
+            - ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$
           _CONTINUE_: "!(attr are present)"
           _RETURN_: attr follow regex reg
         - _NAME_: REGEX_RECEIVER_RECON_SETTLEMENT_TIMESTAMP
           attr: $.message.orderbook.orders[*].payment['@ondc/org/settlement_details'][*].settlement_timestamp
           reg:
-            - ^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(Z|[+-]\\d{2}:\\d{2})$
+            - ^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}(\.\d+)?(Z|[+-]\d{2}:\d{2})$
           _CONTINUE_: "!(attr are present)"
           _RETURN_: attr follow regex reg
   on_receiver_recon:

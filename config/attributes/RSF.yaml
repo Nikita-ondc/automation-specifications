@@ -59,14 +59,14 @@ attribute_set:
       bpp_id:
         _description:
           required: true
-          usage: bpp.example.com
+          usage: dev-workbench.ondc.tech
           info: Subscriber ID of the receiver application
           owner: BAP
           type: string
       bpp_uri:
         _description:
           required: true
-          usage: https://bpp.example.com
+          usage: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
           info: Subscriber URL of the receiver application
           owner: BAP
           type: string
@@ -644,14 +644,14 @@ attribute_set:
       bpp_id:
         _description:
           required: true
-          usage: bpp.example.com
+          usage: dev-workbench.ondc.tech
           info: Subscriber ID of the receiver application
           owner: BPP
           type: string
       bpp_uri:
         _description:
           required: true
-          usage: https://bpp.example.com
+          usage: https://dev-workbench.ondc.tech/api-service/ONDC:NTS10/1.0.0/seller
           info: Subscriber URL of the receiver application
           owner: BPP
           type: string
