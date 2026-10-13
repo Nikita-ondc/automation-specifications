@@ -2,6 +2,7 @@ flows:
   - type: playground
     id: master_search
     meta:
+      type: PRIMARY
       order: 0
     usecase: Solar Purchase Finance
     tags:
@@ -11,10 +12,16 @@ flows:
     description: Master Search
     config:
       $ref: "./PURCHASE_FINANCE/master_search.yaml"
+
   - type: playground
     id: solar_purchase_finance_single_redirection
     meta:
+      type: PRIMARY
       order: 1
+      secondary_flows:
+        - solar_purchase_finance_foreclosure
+        - solar_purchase_finance_pre_part_payment
+        - solar_purchase_finance_missed_emi_payment
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
@@ -23,10 +30,36 @@ flows:
     description: Solar Purchase Finance Single Redirection
     config:
       $ref: "./PURCHASE_FINANCE/solar_purchase_finance_single_redirection.yaml"
+
   - type: playground
     id: solar_purchase_finance_foreclosure
     meta:
+      type: SECONDARY
       order: 2
+      secondary_of: solar_purchase_finance_single_redirection
+      hide_actions:
+        - search_2
+        - on_search_2
+        - search_3
+        - on_search_3
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+        - update
+        - on_update
+        - unsolicited_on_update
+      visible_actions:
+        - update_2
+        - on_update_2
+        - payment_url_form
+        - on_update_3
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
@@ -34,10 +67,36 @@ flows:
     description: Solar Purchase Finance - Loan Foreclosure
     config:
       $ref: "./PURCHASE_FINANCE/solar_purchase_finance_foreclosure.yaml"
+
   - type: playground
     id: solar_purchase_finance_pre_part_payment
     meta:
+      type: SECONDARY
       order: 3
+      secondary_of: solar_purchase_finance_single_redirection
+      hide_actions:
+        - search_2
+        - on_search_2
+        - search_3
+        - on_search_3
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+        - update
+        - on_update
+        - unsolicited_on_update
+      visible_actions:
+        - update_2
+        - on_update_2
+        - payment_url_form
+        - on_update_3
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
@@ -45,10 +104,36 @@ flows:
     description: Solar Purchase Finance - Pre-Part Payment
     config:
       $ref: "./PURCHASE_FINANCE/solar_purchase_finance_pre_part_payment.yaml"
+
   - type: playground
     id: solar_purchase_finance_missed_emi_payment
     meta:
+      type: SECONDARY
       order: 4
+      secondary_of: solar_purchase_finance_single_redirection
+      hide_actions:
+        - search_2
+        - on_search_2
+        - search_3
+        - on_search_3
+        - select_1
+        - on_select_1
+        - on_status_1
+        - on_status_2
+        - on_status_3
+        - on_status_4
+        - single_redirection
+        - select_2
+        - on_select_2
+        - on_confirm_1
+        - update
+        - on_update
+        - unsolicited_on_update
+      visible_actions:
+        - update_2
+        - on_update_2
+        - payment_url_form
+        - on_update_3
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
