@@ -1,5 +1,3 @@
-# **Use Case Brief**
-
 # **Sachet Hospicash Insurance**
 
 ## **Overview**

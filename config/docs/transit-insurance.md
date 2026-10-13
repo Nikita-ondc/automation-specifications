@@ -1,5 +1,3 @@
-# **Use Case Brief**
-
 #  **Sachet Transit Insurance**
 
 ## **Overview**

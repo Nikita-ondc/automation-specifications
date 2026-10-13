@@ -1,5 +1,3 @@
-# **Use Case Brief** 
-
 # **Sachet Accidental Insurance**
 
 ## **Overview**
