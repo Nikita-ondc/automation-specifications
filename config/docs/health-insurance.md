@@ -1,23 +1,6 @@
 # Health Insurance
 
 
-- [Overview](#overview)
-- [Participants](#participants)
-- [The User Journey](#the-user-journey)
-  - [1. Plan Discovery](#1-plan-discovery)
-  - [2. Eligibility Check and PED Disclosure](#2-eligibility-check-and-ped-disclosure)
-  - [3. Add-on Selection](#3-add-on-selection)
-  - [4. eKYC](#4-ekyc)
-  - [5. Proposer and Medical Details](#5-proposer-and-medical-details)
-  - [6. Nominee Details](#6-nominee-details)
-  - [7. Manual Review (Where Required)](#7-manual-review-where-required)
-  - [8. Consent (CIS) and Payment](#8-consent-cis-and-payment)
-- [Additional Scenarios](#additional-scenarios)
-  - [1. Renewal](#1-renewal)
-  - [2. Cancellation and Refund](#2-cancellation-and-refund)
-  - [3. Claims](#3-claims)
-- [Issue and Grievance Management](#issue-and-grievance-management)
-
 ## Overview
 
 Health Insurance covers medical expenses in exchange for a premium. An Individual plan covers one person, a Family Floater plan pools everyone covered under a single Sum Insured - sized against the oldest member's age, so any one person's claim draws down the whole family's pool. A declared Pre-Existing Disease (PED) triggers a waiting period before related claims are admissible, and a claim is settled either cashless (the insurer pays the network hospital directly) or via reimbursement (the customer pays first and claims back).
