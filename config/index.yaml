@@ -8,7 +8,7 @@ info:
     - Loan Against Mutual Funds
   x-status:
     - use_case: Loan Against Mutual Funds
-      status: RELEASED
+      status: DRAFT
   x-branch-name: draft-FIS12SL-2.3.0
   x-reporting: true
 security: 
