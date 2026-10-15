@@ -4,6 +4,10 @@ flows:
     meta:
       type: PRIMARY
       order: 0
+      display:
+        actions:
+          search_1: Search for Loan Services
+          on_Search_1: Receive the product catalogue
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
@@ -22,6 +26,58 @@ flows:
         - solar_purchase_finance_foreclosure
         - solar_purchase_finance_pre_part_payment
         - solar_purchase_finance_missed_emi_payment
+      display:
+        preferred: true
+        # Attestation of Order Fulfillment / Tranche Disbursement reordered here to
+        # the desired reading order — the backend actually sends the unsolicited
+        # on_update (Tranche Disbursement) after the update/on_update pair
+        # (Attestation), but both read fine in either order since neither depends
+        # on the other's display position; this is simply the authored order.
+        #
+        # Master Search lands as the SECOND card (after Merchant and Product
+        # Details), not first — the inline mechanism only anchors AFTER an
+        # existing section, and there's no section before the first one to
+        # anchor to.
+        inline:
+          - flow: master_search
+            after_section: Merchant and Product Details
+            label: Master Search
+        sections:
+          - name: Merchant and Product Details
+            actions:
+              search_2: Search for Solar Purchase Finance products
+              on_search_2: Receive Solar Purchase Finance product catalogue
+          - name: Generic Offer Generation
+            actions:
+              search_3: Request a generic Solar Purchase Finance offer
+              on_search_3: Receive the generic Solar Purchase Finance offer
+          - name: Offer Generation and Selection
+            actions:
+              select_1: Select a Solar Purchase Finance offer
+              on_select_1: Receive the Solar Purchase Finance offer quote
+          - name: Loan Processing (Single Redirection)
+            actions:
+              single_redirection: App-in-App Experience
+          - name: Status Updates
+            actions:
+              on_status_1: Receive loan processing status update
+              on_status_2: Receive loan processing status update
+              on_status_3: Receive loan processing status update
+              on_status_4: Receive loan processing status update
+          - name: Additional Step Required
+            actions:
+              select_2: Provide additional details for loan processing
+              on_select_2: Receive updated loan terms
+          - name: Loan Confirmation
+            actions:
+              on_confirm_1: Receive the confirmed Solar Purchase Finance order
+          - name: Attestation of Order Fulfillment
+            actions:
+              update: Attest fulfillment of the order
+              on_update: Receive fulfillment attestation confirmation
+          - name: Tranche Disbursement
+            actions:
+              unsolicited_on_update: Receive tranche disbursement confirmation
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
@@ -60,6 +116,12 @@ flows:
         - on_update_2
         - payment_url_form
         - on_update_3
+      display:
+        actions:
+          update_2: Request foreclosure of the Solar Purchase Finance loan
+          on_update_2: Receive foreclosure request with payment URL
+          payment_url_form: Payment Link Redirection
+          on_update_3: Receive foreclosure payment confirmation and loan closure status
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
@@ -97,6 +159,12 @@ flows:
         - on_update_2
         - payment_url_form
         - on_update_3
+      display:
+        actions:
+          update_2: Request a partial prepayment of the Solar Purchase Finance loan
+          on_update_2: Receive prepayment request with payment URL
+          payment_url_form: Payment Link Redirection
+          on_update_3: Receive prepayment confirmation and revised terms status
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
@@ -134,6 +202,12 @@ flows:
         - on_update_2
         - payment_url_form
         - on_update_3
+      display:
+        actions:
+          update_2: Request settlement of the missed EMI
+          on_update_2: Receive missed EMI payment request with payment URL
+          payment_url_form: Payment Link Redirection
+          on_update_3: Receive missed EMI payment confirmation and account status
     usecase: Solar Purchase Finance
     tags:
       - WORKBENCH
