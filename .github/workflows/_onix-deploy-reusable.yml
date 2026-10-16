@@ -48,7 +48,7 @@ on:
 env:
   REGISTRY: ghcr.io
   REGISTRY_NAMESPACE: ondc-official
-  GENERATOR_VERSION: "1.1.1"
+  GENERATOR_VERSION: "1.1.2"
 
 jobs:
   build-and-deploy:
