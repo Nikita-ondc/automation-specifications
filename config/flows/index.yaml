@@ -224,6 +224,7 @@ flows:
         - lamf_term_loan_prepart_with_mfc_single_redirection
         - lamf_term_loan_missed_emi_with_mfc_single_redirection
       display:
+        preferred: true
         sections:
           - name: Loan Services Discovery
             actions:
