@@ -4,6 +4,10 @@ flows:
     meta:
       type: PREREQUISITE
       order: 0
+      display:
+        actions:
+          search_1: Search for Loan Against Mutual Funds services
+          on_Search_1: Receive LAMF product catalogue
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -35,6 +39,33 @@ flows:
         - lamf_credit_line_drawdown_with_mfc_single_redirection
         - lamf_credit_line_prepart_with_mfc_single_redirection
         - lamf_credit_line_foreclosure_with_mfc_single_redirection
+      display:
+        preferred: true
+        sections:
+          - name: Loan Services Discovery
+            actions:
+              search_1: Search for Loan Against Mutual Funds services
+              on_search_1: Receive LAMF product catalogue
+          - name: Offer Selection
+            actions:
+              select_1: Select a LAMF Credit Line offer
+              on_select_1: Receive the LAMF Credit Line offer quote
+          - name: Status Updates
+            actions:
+              on_status_1: Receive loan processing status update
+              on_status_2: Receive loan processing status update
+              on_status_3: Receive loan processing status update
+              on_status_4: Receive loan processing status update
+          - name: Loan Processing (Single Redirection)
+            actions:
+              single_redirection: App-in-App Experience
+          - name: Additional Step Required
+            actions:
+              select_2: Provide additional details for loan processing
+              on_select_2: Receive updated loan terms
+          - name: Loan Confirmation (Credit Line Creation / Disbursement)
+            actions:
+              on_confirm_1: Receive the confirmed and disbursed LAMF Credit Line order
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -69,6 +100,14 @@ flows:
         - on_issue_status_processing_100
         - on_issue_resolved_100
         - issue_close_100
+      display:
+        actions:
+          issue_open_100: Raise an issue or grievance
+          on_issue_processing_100: Receive issue raised acknowledgement
+          issue_status_processing_100: Check the issue resolution status
+          on_issue_status_processing_100: Receive the issue status update
+          on_issue_resolved_100: Receive the issue resolution and closure
+          issue_close_100: Close the issue
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -89,6 +128,14 @@ flows:
         - on_confirm_1
         - on_update_1
         - on_update_2
+      display:
+        actions:
+          init_1: Initiate a drawdown request
+          on_init_1: Receive drawdown initiation confirmation
+          confirm_1: Confirm the drawdown
+          on_confirm_1: Receive drawdown confirmed with disbursement details
+          on_update_1: Receive drawdown disbursement status update
+          on_update_2: Receive updated credit line account summary
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -119,6 +166,11 @@ flows:
         - update_1
         - on_update_1
         - on_update_2
+      display:
+        actions:
+          update_1: Request a partial prepayment of the credit line
+          on_update_1: Receive prepayment request with payment URL
+          on_update_2: Receive prepayment confirmation and revised terms status
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -149,6 +201,11 @@ flows:
         - update_1
         - on_update_1
         - on_update_2
+      display:
+        actions:
+          update_1: Request foreclosure of the credit line
+          on_update_1: Receive foreclosure payment request with payment URL
+          on_update_2: Receive foreclosure payment confirmation and closure status
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -166,6 +223,35 @@ flows:
         - lamf_term_loan_foreclosure_with_mfc_single_redirection
         - lamf_term_loan_prepart_with_mfc_single_redirection
         - lamf_term_loan_missed_emi_with_mfc_single_redirection
+      display:
+        sections:
+          - name: Loan Services Discovery
+            actions:
+              search_1: Search for LAMF Term Loan services
+              on_search_1: Receive LAMF Term Loan catalogue
+          - name: Offer Selection
+            actions:
+              select_1: Select a LAMF Term Loan offer
+              on_select_1: Receive the LAMF Term Loan offer quote
+          - name: Status Updates
+            actions:
+              on_status_1: Receive loan processing status update
+              on_status_2: Receive loan processing status update
+              on_status_3: Receive loan processing status update
+              on_status_4: Receive loan processing status update
+          - name: Loan Processing (Single Redirection)
+            actions:
+              single_redirection: App-in-App Experience
+          - name: Additional Step Required
+            actions:
+              select_2: Provide additional details for loan processing
+              on_select_2: Receive updated loan terms
+          - name: Loan Confirmation (Term Loan Disbursement)
+            actions:
+              on_confirm_1: Receive the confirmed and disbursed LAMF Term Loan order
+          - name: Disbursement Status
+            actions:
+              on_update_1: Receive the term loan disbursement status update
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -198,6 +284,14 @@ flows:
         - update_1
         - on_update_2
         - on_update_3
+      display:
+        # LENDER_UTR_TERM_001 is not a real action_id in this flow's steps (it's a
+        # transaction_id example value) — omitted here, not a display.actions key.
+        actions:
+          on_update_1: Receive foreclosure settlement amount
+          update_1: Request foreclosure of the term loan
+          on_update_2: Receive foreclosure payment request with payment URL
+          on_update_3: Receive foreclosure payment confirmation and loan closure
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -230,6 +324,12 @@ flows:
         - update_1
         - on_update_2
         - on_update_3
+      display:
+        actions:
+          on_update_1: Receive prepayment settlement amount
+          update_1: Request a partial prepayment of the term loan
+          on_update_2: Receive prepayment request with payment URL
+          on_update_3: Receive prepayment confirmation and revised loan terms
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
@@ -262,6 +362,12 @@ flows:
         - update_1
         - on_update_2
         - on_update_3
+      display:
+        actions:
+          on_update_1: Receive missed EMI penalty details
+          update_1: Request of missed EMI
+          on_update_2: Receive missed EMI payment request with payment URL
+          on_update_3: Receive missed EMI payment confirmation and account status
     usecase: Loan Against Mutual Funds
     tags:
       - WORKBENCH
