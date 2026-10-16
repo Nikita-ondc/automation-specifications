@@ -2,7 +2,7 @@ flows:
   - type: playground
     id: master_search
     meta:
-      type: PRIMARY
+      type: PREREQUISITE
       order: 0
       display:
         actions:
@@ -33,15 +33,6 @@ flows:
         # on_update (Tranche Disbursement) after the update/on_update pair
         # (Attestation), but both read fine in either order since neither depends
         # on the other's display position; this is simply the authored order.
-        #
-        # Master Search lands as the SECOND card (after Merchant and Product
-        # Details), not first — the inline mechanism only anchors AFTER an
-        # existing section, and there's no section before the first one to
-        # anchor to.
-        inline:
-          - flow: master_search
-            after_section: Merchant and Product Details
-            label: Master Search
         sections:
           - name: Merchant and Product Details
             actions:

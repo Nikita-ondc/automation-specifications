@@ -8,7 +8,7 @@ info:
     - Solar Purchase Finance
   x-status:
     - use_case: Solar Purchase Finance
-      status: RELEASED
+      status: DRAFT
   x-branch-name: draft-FIS12-PF-2.3.0
   x-reporting: true
 security: 
