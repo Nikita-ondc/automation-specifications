@@ -18,6 +18,7 @@ supportedActions:
   init:
     - on_init
   on_init:
+    - on_update
     - confirm
     - init
   confirm:
@@ -36,6 +37,7 @@ supportedActions:
     - status
     - on_status
     - issue
+    - on_init
   status:
     - on_status
   on_status:
