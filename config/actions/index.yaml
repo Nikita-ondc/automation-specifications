@@ -23,6 +23,7 @@ supportedActions:
     - init
   confirm:
     - on_confirm
+    - on_update
   on_confirm:
     - update
     - on_update
