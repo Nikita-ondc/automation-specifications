@@ -1996,6 +1996,7 @@ steps:
         bppId: $.context.bpp_id
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
+        item: $.message.order.items[0]
       inputs: {}
     examples:
       - name: example for on_init
