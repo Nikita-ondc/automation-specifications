@@ -48,7 +48,7 @@ flows:
               on_select_1: Receive the Solar Purchase Finance offer quote
           - name: Loan Processing (Single Redirection)
             actions:
-              single_redirection: App-in-App Experience
+              single_redirection: App-in-App Experience (/callback Handling)
           - name: Status Updates
             actions:
               on_status_1: Receive loan processing status update
