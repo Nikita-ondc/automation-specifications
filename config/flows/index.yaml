@@ -112,7 +112,7 @@ flows:
     tags:
       - WORKBENCH
       - Mandatory
-    description: LAMF Credit Line with MFC With IGM 1.0.0
+    description: LAMF Credit Line with MFC With Issue Grievance and Management 1.0.0
     config:
       $ref: "./LAMF/lamf_credit_line_with_mfc_single_redirection._with_igm_1.0.0.yaml"
 
