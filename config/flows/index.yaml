@@ -7,6 +7,7 @@ flows:
     id: master_search
     meta:
       type: PREREQUISITE
+      prerequisite_kind: mandatory
       order: 0
       display:
         actions:
@@ -34,9 +35,6 @@ flows:
       display:
         preferred: true
         inline:
-          - flow: dedupe_check
-            after_section: Application Submission
-            label: Dedupe Check
           - flow: business_term_loan_with_aa
             after_section: Application Submission
             label: Consent Handler for AA
@@ -93,10 +91,6 @@ flows:
         - business_term_loan_with_offline_online_pre_part
         - business_term_loan_with_file_upload_with_igm_1.0.0
       display:
-        inline:
-          - flow: dedupe_check
-            after_section: Application Submission
-            label: Dedupe Check
         sections:
           - name: Application Submission
             actions:
@@ -141,10 +135,6 @@ flows:
         - business_term_loan_with_offline_online_pre_part
         - business_term_loan_with_aa_with_igm_1.0.0
       display:
-        inline:
-          - flow: dedupe_check
-            after_section: Application Submission
-            label: Dedupe Check
         sections:
           - name: Application Submission
             actions:
@@ -191,7 +181,8 @@ flows:
   - type: playground
     id: dedupe_check
     meta:
-      type: OPTIONAL
+      type: PREREQUISITE
+      prerequisite_kind: optional
       order: 4
       display:
         actions:
