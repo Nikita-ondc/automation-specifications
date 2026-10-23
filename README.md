@@ -1,6 +1,6 @@
-# ONDC:FIS13 — version 2.0.1
+# ONDC:FIS13 — version 2.0.0
 
-**Branch:** `draft-FIS13-HEALTH-2.0.1`  
+**Branch:** `draft-FIS13-HEALTH-2.0.0`  
 **Use Cases:** HEALTH INSURANCE, MOTOR INSURANCE
 
 ---
@@ -8,7 +8,7 @@
 ## Directory Structure
 
 ```
-2.0.1/
+2.0.0/
 ├── README.md                   ← This file
 └── config/
     ├── index.yaml              ← Top-level manifest; mirrors build.yaml structure with $ref links
@@ -42,7 +42,7 @@ Top-level manifest that mimics the build.yaml structure but replaces inline cont
 | `info.title` | string? | Human-readable title |
 | `info.domain` | string | ONDC domain identifier (e.g. `ONDC:FIS13`) |
 | `info.description` | string? | Domain description |
-| `info.version` | string | Spec version (e.g. `2.0.1`) |
+| `info.version` | string | Spec version (e.g. `2.0.0`) |
 | `info.x-usecases` | string[] | List of supported use case IDs |
 | `info.x-branch-name` | string? | Source git branch name |
 | `info.x-reporting` | boolean | Whether this domain/version is enabled for reporting |
@@ -158,3 +158,6 @@ Supported actions and API orchestration properties:
 
   - HEALTH INSURANCE
   - MOTOR INSURANCE
+  - ACCIDENTAL INSURANCE
+  - HOSPICASH INSURANCE
+  - TRANSIT INSURANCE
