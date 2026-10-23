@@ -558,21 +558,21 @@ _TESTS_:
         - _NAME_: REQUIRED_CUSTOMER_PERSON_ID
           attr: $.message.order.fulfillments[?(@.type=='SIP')].customer.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_CUSTOMER_PERSON_ID
-        #   attr: $.message.order.fulfillments[?(@.type=='SIP')].customer.person.id
-        #   reg:
-        #     - ^pan:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_CUSTOMER_PERSON_ID
+          attr: $.message.order.fulfillments[?(@.type=='SIP')].customer.person.id
+          reg:
+            - ^([pP][aA][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
         - _NAME_: REQUIRED_AGENT_PERSON_ID
           attr: $.message.order.fulfillments[?(@.type=='SIP')].agent.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_AGENT_PERSON_ID
-        #   attr: $.message.order.fulfillments[?(@.type=='SIP')].agent.person.id
-        #   reg:
-        #     - ^euin:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_AGENT_PERSON_ID
+          attr: $.message.order.fulfillments[?(@.type=='SIP')].agent.person.id
+          reg:
+            - ^([eE][uU][iI][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
         - _NAME_: REQUIRED_AGENT_ORGANIZATION_CREDS
           attr: $.message.order.fulfillments[?(@.type=='SIP')].agent.organization.creds[*].id
           _RETURN_: attr are present
@@ -673,21 +673,21 @@ _TESTS_:
         - _NAME_: REQUIRED_FULFILLMENT_CUSTOMER
           attr: $.message.order.fulfillments[*].customer.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_FULFILLMENT_CUSTOMER
-        #   attr: $.message.order.fulfillments[*].customer.person.id
-        #   reg:
-        #     - ^pan:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_CUSTOMER
+          attr: $.message.order.fulfillments[*].customer.person.id
+          reg:
+            - ^([pP][aA][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
         - _NAME_: REQUIRED_FULFILLMENT_AGENT
           attr: $.message.order.fulfillments[*].agent.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_FULFILLMENT_AGENT
-        #   attr: $.message.order.fulfillments[*].agent.person.id
-        #   reg:
-        #     - ^euin:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_AGENT
+          attr: $.message.order.fulfillments[*].agent.person.id
+          reg:
+            - ^([eE][uU][iI][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
         - _NAME_: REQUIRED_THRESHOLDS_TAG_GROUP
           validTags: *a9
           tagPath: $.message.order.fulfillments[*].tags[*].descriptor.code
@@ -790,12 +790,12 @@ _TESTS_:
         - _NAME_: REQUIRED_FULFILLMENT_CUSTOMER_PERSON_ID
           attr: $.message.order.fulfillments[*].customer.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_FULFILLMENT_CUSTOMER_PERSON_ID
-        #   attr: $.message.order.fulfillments[*].customer.person.id
-        #   reg:
-        #     - ^pan:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_CUSTOMER_PERSON_ID
+          attr: $.message.order.fulfillments[*].customer.person.id
+          reg:
+            - ^([pP][aA][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
         - _NAME_: REQUIRED_FULFILLMENT_CUSTOMER_CREDS
           attr: $.message.order.fulfillments[*].customer.person.creds[*].id
           _RETURN_: attr are present
@@ -811,12 +811,12 @@ _TESTS_:
         - _NAME_: REQUIRED_FULFILLMENT_AGENT
           attr: $.message.order.fulfillments[*].agent.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_FULFILLMENT_AGENT
-        #   attr: $.message.order.fulfillments[*].agent.person.id
-        #   reg:
-        #     - ^euin:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_AGENT
+          attr: $.message.order.fulfillments[*].agent.person.id
+          reg:
+            - ^([eE][uU][iI][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
     - _NAME_: INIT_XINPUT
       xinputpath: $.message.order.xinput.form.id
       _CONTINUE_: "!(xinputpath are present)"
@@ -919,18 +919,18 @@ _TESTS_:
         - _NAME_: REQUIRED_FULFILLMENT_CUSTOMER
           attr: $.message.order.fulfillments[*].customer.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_FULFILLMENT_CUSTOMER
-        #   attr: $.message.order.fulfillments[*].customer.person.id
-        #   reg:
-        #     - ^pan:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
-        # - _NAME_: REGEX_FULFILLMENT_AGENT
-        #   attr: $.message.order.fulfillments[*].agent.person.id
-        #   reg:
-        #     - ^euin:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_CUSTOMER
+          attr: $.message.order.fulfillments[*].customer.person.id
+          reg:
+            - ^([pP][aA][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_AGENT
+          attr: $.message.order.fulfillments[*].agent.person.id
+          reg:
+            - ^([eE][uU][iI][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
     - _NAME_: ON_INIT_PAYMENTS
       existspath: $.message.order.payments[*].id
       _CONTINUE_: "!(existspath are present)"
@@ -1006,18 +1006,18 @@ _TESTS_:
         - _NAME_: REQUIRED_FULFILLMENT_CUSTOMER
           attr: $.message.order.fulfillments[*].customer.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_FULFILLMENT_CUSTOMER
-        #   attr: $.message.order.fulfillments[*].customer.person.id
-        #   reg:
-        #     - ^pan:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
-        # - _NAME_: REGEX_FULFILLMENT_AGENT
-        #   attr: $.message.order.fulfillments[*].agent.person.id
-        #   reg:
-        #     - ^euin:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_CUSTOMER
+          attr: $.message.order.fulfillments[*].customer.person.id
+          reg:
+            - ^([pP][aA][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_AGENT
+          attr: $.message.order.fulfillments[*].agent.person.id
+          reg:
+            - ^([eE][uU][iI][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
     - _NAME_: CONFIRM_PAYMENTS
       paymentspath: $.message.order.payments[*].id
       _CONTINUE_: "!(paymentspath are present)"
@@ -1106,18 +1106,18 @@ _TESTS_:
         - _NAME_: REQUIRED_FULFILLMENT_CUSTOMER
           attr: $.message.order.fulfillments[*].customer.person.id
           _RETURN_: attr are present
-        # - _NAME_: REGEX_FULFILLMENT_CUSTOMER
-        #   attr: $.message.order.fulfillments[*].customer.person.id
-        #   reg:
-        #     - ^pan:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
-        # - _NAME_: REGEX_FULFILLMENT_AGENT
-        #   attr: $.message.order.fulfillments[*].agent.person.id
-        #   reg:
-        #     - ^euin:.+$
-        #   _CONTINUE_: "!(attr are present)"
-        #   _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_CUSTOMER
+          attr: $.message.order.fulfillments[*].customer.person.id
+          reg:
+            - ^([pP][aA][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
+        - _NAME_: REGEX_FULFILLMENT_AGENT
+          attr: $.message.order.fulfillments[*].agent.person.id
+          reg:
+            - ^([eE][uU][iI][nN]:)?.+$
+          _CONTINUE_: "!(attr are present)"
+          _RETURN_: attr follow regex reg
     - _NAME_: ON_CONFIRM_PAYMENTS
       existspath: $.message.order.payments[*].id
       _CONTINUE_: "!(existspath are present)"
