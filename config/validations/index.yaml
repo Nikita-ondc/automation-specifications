@@ -1003,15 +1003,6 @@ _TESTS_:
         enumList:
         - IND
         _RETURN_: attr any in enumList
-  - _NAME_: SELECT_ORDER
-    action:
-    - select
-    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
-    _CONTINUE_: (usecasepath are present)
-    _RETURN_:
-    - _NAME_: REQUIRED_PROVIDER_ID
-      attr: $.message.order.provider.id
-      _RETURN_: attr are present
   - _NAME_: SELECT_ITEMS
     action:
     - select
@@ -1045,8 +1036,6 @@ _TESTS_:
   - &id004
     _NAME_: REQUIRED_PROVIDER_ID
     attr: $.message.order.provider.id
-    usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
-    _CONTINUE_: '!(usecasepath are present)'
     _RETURN_: attr are present
   - _NAME_: SELECT_MOTOR_ITEM_GENERAL_INFO
     action:
@@ -2845,13 +2834,11 @@ _TESTS_:
     - _NAME_: PAYMENT_TYPE
       attr: $.message.order.payments[*].type
       _RETURN_: attr are present
+  - *id004
   - _NAME_: PROVIDER_VALIDATIONS
     usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: (usecasepath are present)
     _RETURN_:
-    - _NAME_: PROVIDER_ID
-      attr: $.message.order.provider.id
-      _RETURN_: attr are present
     - _NAME_: PROVIDER_NAME
       attr: $.message.order.provider.descriptor.name
       _RETURN_: attr are present
@@ -3385,6 +3372,7 @@ _TESTS_:
     - _NAME_: TRANSACTION_ID_MANDATORY
       attr: $.context.transaction_id
       _RETURN_: attr are present
+  - *id004
   - _NAME_: UPDATE_DOMAIN
     _RETURN_:
     - _NAME_: DOMAIN_MANDATORY
@@ -3512,13 +3500,11 @@ _TESTS_:
     - _NAME_: ORDER_UPDATED_AT
       attr: $.message.order.updated_at
       _RETURN_: attr are present
+  - *id004
   - _NAME_: ON_UPDATE_PROVIDER
     usecasepath: $.message.order.provider.tags[?(@.descriptor.code=='MASTER_POLICY')].descriptor.code
     _CONTINUE_: (usecasepath are present)
     _RETURN_:
-    - _NAME_: PROVIDER_ID
-      attr: $.message.order.provider.id
-      _RETURN_: attr are present
     - _NAME_: PROVIDER_NAME
       attr: $.message.order.provider.descriptor.name
       _RETURN_: attr are present
