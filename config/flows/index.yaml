@@ -1,6 +1,7 @@
 flows:
   - type: playground
     id: Purchase_Finance_Single_Redirection_With_AA
+    preferred: true
     meta:
       type: PRIMARY
       order: 1
