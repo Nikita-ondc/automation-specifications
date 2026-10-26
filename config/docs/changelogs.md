@@ -1,0 +1,67 @@
+### Change Log:  Mutual Funds API specs
+
+| Version | FIS14_2.1.0_220325 |
+| :------ | :----------------- |
+
+##### Mutual Funds:
+
+****22nd March 2025****
+- Using seller app as provider and moving amc name into item creator object
+- Adding ability to place multiple items in an order (cart functionality)
+- Adding redeem by units and redeem functionality
+- Using quote object to capture stamp duty, stt etc breakups
+- Using update apis for cancellation, instead of cancel apis. This allows for part cancellation when there are two items in an order.
+- example fix: sip instalment payment failure shouldn't fail the fulfillment and shouldn't cancel the order
+- fix: using uppercase in quote object title attribute
+- Adding child order installment ids to the parent sip order
+- example fix: removing cancellation terms from redemption on_update examples
+- fix: capturing source bank account type in the payments objects to facilitate payments through different bank a/c than the given payout bank a/c
+- fix: adding granular payment methods to allow custom ux build for the buyer apps
+- Capturing mandate limit in a separate tag in payments to support having a separate sip debit amount (matching with the order amount) and mandate limit amount. This is useful in a scenario where debit is made along with the mandate authorization - amount in payments object represent the debit and mandate limit tag represents the max limit on the mandate.
+- Adding ability to create sip without setting a payment mandate upfront and ability to later add a new mandate to the sip
+- Adding ability to collect payment and set mandate together in one payment call
+- Adding ability to manually trigger an sip instalment. This can be used to make payment for the first instalment instantly at the time of the sip creation.
+- fix: keeping payment.params.amount to zero in case of SIP orders as there is no payment collection involved in an SIP order. That will help in payment object being self contained for the seller app to determine if a debit has to happen or not - in case of payment mode being upi autopay where auth and debit is possible together.
+- fix: adding allocated object in items even for failed fulfillments to keep the structure consistent
+- Adding ability to modify sip: amount change, pause
+- Adding ability for the buyer app to collect payments from the investor and settle it to the AMCs
+- Adding other services - ability to create zero balance folio
+- Adding other services - ability to create kyc independent of a purchase order
+- Adding other services - ability to register a payment mandate independently
+- Adding the ability to place order in an external folio i.e a folio created previously outside of the seller app
+- fix: `on_confirm` calls for redemption and switch has fulfillment state as `INITIATED`
+- Adding ability to provide instructions to generate first instalment of an sip immediately irrespective of the actual schedule
+- Adding the recurring orders instlalment date to fulfillment object. This is needed as the created date can be different to the actual instalment date. And also adding payment debit date to sip instalments through existing mandate
+- Adding ability to send the rta order reference for the buyer app to reconcile directly with the rta feeds
+- fix: adding explicit mention of the previous xinput form submission id from init calls also. This is needed so the action calls explictly provides either a folio number or a submission id. sip instalments need not contain this or checklists because it already has a reference to the parent order
+- Adding ability for instant redemption for applicable schemes
+- Adding ability for NRI investments
+- Seller app doesn't send the payment url in `on_init` (this is to accommodate upi uri cases where the usage of it cannot be restricted till a `confirm` call is made)
+
+****10th July 2025****
+- For sip instalments with mandate payments - Payment information is not sent during `on_confirm` call, but another `on_update` callback is sent with the payment details. This change is made to avoid problems of not having a id for the payment during `on_confirm` callback.
+- Adding `EXTERNAL_REFS` to `on_confirm` and `on_status` calls as well.
+- Adding `CHECKLISTS` tag group in `on_select` only after the first xinput form is successfully submitted. Not before that.
+- for sip flows: seller app will send payment success, fulfillment pending in `on_status` and then fulfillment ongoing with information tag group in the `on_update` call.
+
+****25th Sep 2025****
+- Added new categories:
+  - CLOSE_ENDED
+      - CLOSE_ENDED_DEBT
+      - CLOSE_ENDED_EQUITY
+      - CLOSE_ENDED_HYBRID
+
+****27th Oct 2025****
+  - Added missing tags in the tags section
+
+****29th Oct 2025****
+- Adding `FREQUENCY_DAY_TYPE` tag to the `THRESHOLDS` tag group to differentiate between calendar day and business day daily sip. This tag is only applicable for daily sips; other frequency sips don't contain this tag.
+
+****26th Nov 2025****
+- Adding `INDIA_TAX_RESIDENCY_STATUS` type to person.creds in fulfillment object to identify an NRI investor. Seller app needs to know upfront if the customer is an NRI investor to determine whether investments are allowed or not based on the investor's kra kyc status. If tax status is provided, seller app will use it and respond back in all on action callbacks. If not provided, seller app will not assume the tax status, but will act as if the tax status is unknown to it at that point in time.
+
+****13th Dec 2025****
+- Merging `EXTERNAL_FOLIO_INFO` into `FOLIO_INFORMATION` as there is no need to identify if it is an external folio or not. Seller app implementation can identify and determine how to handle an external folio order. This also keeps a single tag group for folio information and simplifies development for the participants.
+
+****24th August 2026****
+  - Removed on_status call after on_confirm in `SIP Creation (New Folio)` & `SIP Creation (New Folio w/ KYC)` Flows

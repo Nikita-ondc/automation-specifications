@@ -1,25 +1,5 @@
 # Mutual Fund Investments
 
-
-
-- [Overview](#overview)
-- [Participants](#participants)
-- [The User Journey](#the-user-journey)
-  - [1. Fund Discovery](#1-fund-discovery)
-  - [2. Fund and Investment Type Selection](#2-fund-and-investment-type-selection)
-  - [3. KYC and Folio Setup](#3-kyc-and-folio-setup)
-  - [4. Order Initiation](#4-order-initiation)
-  - [5. Agreement Signing and Payment](#5-agreement-signing-and-payment)
-  - [6. Unit Allocation and NAV Update](#6-unit-allocation-and-nav-update)
-- [Additional Scenarios](#additional-scenarios)
-  - [1. Recurring SIP Instalments](#1-recurring-sip-instalments)
-  - [2. Pausing or Cancelling a SIP](#2-pausing-or-cancelling-a-sip)
-  - [3. Redemption](#3-redemption)
-  - [4. Switch, STP, and SWP](#4-switch-stp-and-swp)
-  - [5. Cart Investments](#5-cart-investments)
-  - [6. Additional Investment into an Existing Folio](#6-additional-investment-into-an-existing-folio)
-- [Issue and Grievance Management](#issue-and-grievance-management)
-
 ## Overview
 
 A mutual fund pools money from many investors into a scheme run by an AMC (Asset Management Company), and prices each unit by its NAV (Net Asset Value) - the per-unit price, recalculated daily off the fund's underlying holdings. An investor puts money in either as a Lumpsum (a one-time amount) or a SIP (Systematic Investment Plan) - a fixed amount debited automatically on a chosen date each period. Every investment sits inside a Folio, the investor's account number with a specific AMC, and every distributor selling funds needs an ARN (AMFI Registration Number) - the license, issued by AMFI after a NISM certification, that makes fund distribution legal in India.
