@@ -95,7 +95,6 @@ flows:
           - flow: Purchase_Finance_Without_AA
             after_section: Final Offer Selection
             label: Multi Redirection
-            kind: alternative
             skip_sections:
               - Product Discovery
               - Merchant and Product Details Form
@@ -427,7 +426,6 @@ flows:
           - flow: Purchase_Finance_Single_Redirection_With_AA
             after_section: Final Offer Selection
             label: Single Redirection
-            kind: alternative
             skip_sections:
               - Product Discovery
               - Merchant and Product Details Form
