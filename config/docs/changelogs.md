@@ -1,0 +1,119 @@
+### Change Logs: FIS12-2.2.1 API specs
+
+| Version                         | FIS12_2.2.1_221024 |
+| :------------------------------ | :----------------- |
+
+
+
+##### Purchase Finance:
+
+****22st October 2024****
+- In payment's, removed transaction_id for status NOT-PAID for on_update call.
+- Fixed incorrect file reference for Missed EMI flow.
+- Fixed incorrect EMI breakup amount
+- Timestamp is missing for paid installments
+- TransactionID is missing for paid installments
+- Loan-Foreclosure, fixed the foreclosure amount
+- Missed EMI flow,  updated payment’s amount & changed status to DEFERRED.
+- PRE-PART, updated payment statuses & added transaction_id for paid payments.
+
+****4th November 2024****
+- Added created_at & updated_at to examples.
+- Fixed, garbage value in tags section for INFO tag group
+- Removed unused tags for EMI tag group
+- Added `CHECKLIST` tag group.
+
+****20th February 2025****
+- Added `Return Window` field in `MERCHANT_AND_PRDOUCT_DEATILS`.
+
+****7th April 2025****
+- Added two new child categories:
+  - ELECTRONICS_PURCHASE_FINANCE
+  - AGRI_PURCHASE_FINANCE
+
+****28th April 2025****
+- Added Max seller subvention(optional field) in the MERCHANT_AND_PRDOUCT_DEATILS (1st form)
+- Added Tenure (optional field) in PERSONAL_INFORMATION (2nd form).
+- Added SELLER_SUBVENTION_RATE tag value on product offer.
+- Enabled multi-offer use case
+- Updated use-casse for downpayment collection along with e-mandate form.
+- In update call, added placeholder for IMEI number in customer creds.
+- Added Cancellation Flow(Post Disbursal) 
+
+****18th Sep 2025****
+  - Added a new flow for the Single Redirection journey.
+  - Added the missing field Max Seller Subvention (%) in the Without Account Aggregator flow.
+
+****9th Oct 2025****
+  - Updated the status of CHECKLIST from `form_submission_id` to `COMPLETED`
+
+****15th Oct 2025****  
+  - Updated missing tags in the tags section.
+
+****26th Oct 2025****
+- Added below missing fields as part of quote object:
+  - LATE_FEE_AMOUNT
+  - PRE_PAYMENT_CHARGE
+  - FORCLOSUER_CHARGES
+  - OUTSTANDING_PRINCIPAL
+  - OUTSTANDING_INTEREST
+- Updated statuses in the cancel flows.
+- Updated Purchase Journey examples with multiple offers.
+
+****15th Dec 2025****
+  - Updated the payment object in the init call for both Purchase Finance and Single Redirection flows.
+
+****8th Jan 2026****
+  - Added missing child items in api examples
+
+
+****15th Jan 2026****
+  - Updated post-disbursal journey flow to use on_update instead of on_confirm.
+
+****11th March 2026****
+  - Updated the `head -> descriptor -> name` based on the current form heading.
+      ```
+        xinput:
+              head:
+                descriptor:
+                  name: Set down payment
+                index:
+                  min: 0
+                  cur: 0
+                  max: 1
+                headings:
+                  - SET_DOWN_PAYMENT
+                  - KYC
+    ```
+
+  - Updated the payments.breakup tag to include `FORECLOSURE_CHARGES, LATE_FEE_AMOUNT, and PRE_PAYMENT_CHARGE` based on the respective post-disbursal loan journeys.
+
+****7th May 2026****
+  - Added optional fields as part of update call.
+    ```
+    list:
+        - descriptor:
+            code: COURIER_NAME
+          value: Blue Dart Express
+        - descriptor:
+            code: AWB_NUMBER
+          value: '784512369874'
+        - descriptor:
+            code: FINAL_DELIVERY_ADDRESS
+          value: '221B Baker Street, Near Central Plaza'
+        - descriptor:
+            code: RECEIVERS_NAME
+          value: John Doe
+        - descriptor:
+            code: RECEIVERS_PHOTO
+          value: https://bpp.purchase-finance.becknprotoco.org/delivery/receiver-photo-784512369874.jpg
+        - descriptor:
+            code: INVOICE_PHOTO
+          value: https://bpp.purchase-finance.becknprotoco.org/delivery/invoice-photo-784512369874.jpg
+        
+    ```
+
+****21st August 2026****
+  - Updated the name attribute for the personalEmail and officialEmail fields in the PERSONAL_INFORMATION form.
+
+
