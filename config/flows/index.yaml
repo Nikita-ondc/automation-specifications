@@ -3,7 +3,43 @@ flows:
     id: Cancel_Health_Insurance(Family)
     meta:
       order: 11
-      type: PRIMARY
+      type: SECONDARY
+      hide_actions:
+        - search2
+        - on_search2
+        - family_information_form
+        - search4
+        - on_search4
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - cancel
+        - on_cancel
+        - on_update_unsolicited7
+      display:
+        actions:
+          cancel: Request policy cancellation
+          on_cancel: Receive the cancellation confirmation
+          on_update_unsolicited7: Receive a cancellation status update
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -65,7 +101,47 @@ flows:
     id: Claim_Health_Insurance(Family)
     meta:
       order: 7
-      type: PRIMARY
+      type: SECONDARY
+      hide_actions:
+        - search2
+        - on_search2
+        - family_information_form
+        - search4
+        - on_search4
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - claim_form
+        - on_update_unsolicited2
+        - on_update_unsolicited3
+        - on_status_unsolicited
+        - on_update_unsolicited4
+      display:
+        actions:
+          claim_form: Submit identity and personal details for claim verification
+          on_update_unsolicited2: Receive the processed claim order with claim form documents
+          on_update_unsolicited3: Receive a claim order update with documentation
+          on_status_unsolicited: Receive a claim status update with document references
+          on_update_unsolicited4: Receive the claim processing status update
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -132,6 +208,10 @@ flows:
     meta:
       order: 1
       type: PRIMARY
+      secondary_flows:
+        - Claim_Health_Insurance(Family)
+        - Renew_Health_Insurance(Family)
+        - Cancel_Health_Insurance(Family)
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -360,7 +440,47 @@ flows:
     id: Renew_Health_Insurance(Family)
     meta:
       order: 9
-      type: PRIMARY
+      type: SECONDARY
+      hide_actions:
+        - search2
+        - on_search2
+        - family_information_form
+        - search4
+        - on_search4
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - on_update_unsolicited
+        - renew_form
+        - on_update_unsolicited5
+        - on_status_unsolicited2
+        - on_update_unsolicited6
+      display:
+        actions:
+          on_update_unsolicited: Receive the renewal order confirmation with form documents
+          renew_form: Submit identity details for renewal authorization
+          on_update_unsolicited5: Receive the completed renewal policy details
+          on_status_unsolicited2: Receive a renewal order status update
+          on_update_unsolicited6: Receive a renewal progress update
     usecase: Health Insurance
     tags:
       - WORKBENCH
