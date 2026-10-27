@@ -3,6 +3,7 @@ flows:
     id: Cancel_Health_Insurance(Family)
     meta:
       order: 11
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -15,6 +16,43 @@ flows:
     id: Cancel_Health_Insurance(Individual)
     meta:
       order: 10
+      type: SECONDARY
+      hide_actions:
+        - search
+        - on_search
+        - individual_information_form
+        - search3
+        - on_search3
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - cancel
+        - on_cancel
+        - on_update_unsolicited7
+      display:
+        actions:
+          cancel: Request policy cancellation
+          on_cancel: Receive the cancellation confirmation
+          on_update_unsolicited7: Receive a cancellation status update
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -27,6 +65,7 @@ flows:
     id: Claim_Health_Insurance(Family)
     meta:
       order: 7
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -39,6 +78,47 @@ flows:
     id: Claim_Health_Insurance(Individual)
     meta:
       order: 6
+      type: SECONDARY
+      hide_actions:
+        - search
+        - on_search
+        - individual_information_form
+        - search3
+        - on_search3
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - claim_form
+        - on_update_unsolicited2
+        - on_update_unsolicited3
+        - on_status_unsolicited
+        - on_update_unsolicited4
+      display:
+        actions:
+          claim_form: Submit identity and personal details for claim verification
+          on_update_unsolicited2: Receive the processed claim order with claim form documents
+          on_update_unsolicited3: Receive a claim order update with documentation
+          on_status_unsolicited: Receive a claim status update with document references
+          on_update_unsolicited4: Receive the claim processing status update
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -51,6 +131,7 @@ flows:
     id: Health_Insurance_Application(Family)
     meta:
       order: 1
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -63,6 +144,7 @@ flows:
     id: Payment_Failure_Health_Insurance(Family)
     meta:
       order: 14
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -74,6 +156,7 @@ flows:
     id: Health_Insurance_Application(Family)_With_IGM(v-1.0.0)
     meta:
       order: 13
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -85,6 +168,65 @@ flows:
     id: Health_Insurance_Application(Individual)
     meta:
       order: 0
+      type: PRIMARY
+      secondary_flows:
+        - Claim_Health_Insurance(Individual)
+        - Renew_Health_Insurance(Individual)
+        - Cancel_Health_Insurance(Individual)
+      display:
+        preferred: true
+        sections:
+          - name: Product Discovery
+            actions:
+              search: Search for Health Insurance products
+              on_search: Receive Health Insurance product catalogue
+          - name: Personal Details Form
+            actions:
+              individual_information_form: Submit individual personal details
+          - name: Personalized Offer Generation
+            actions:
+              search3: Request personalized Health Insurance offers
+              on_search3: Receive personalized Health Insurance offers
+          - name: Offer Selection
+            actions:
+              select: Select a Health Insurance offer
+              on_select: Receive the selected Health Insurance offer quote
+          - name: Pre-Existing Disease Form
+            actions:
+              ped_details_form: Submit pre-existing disease details
+          - name: Offer Finalization
+            actions:
+              select2: Finalize the selected Health Insurance offer
+              on_select2: Receive the finalized Health Insurance offer quote
+          - name: EKYC Step
+            actions:
+              Ekyc_details_form: Submit EKYC details
+              on_status_unsolicited4: Receive EKYC verification status update
+              init: Initialize the Health Insurance order
+              on_init: Receive the initialized Health Insurance order
+          - name: Proposer Details Form
+            actions:
+              Proposer_Details_form: Submit proposer details
+              init2: Initialize the order with proposer details
+              on_init2: Receive the order updated with proposer details
+          - name: Nominee Details Form
+            actions:
+              nominee_details_form: Submit nominee details
+              init4: Initialize the order with nominee details
+              on_init4: Receive the order updated with nominee details
+          - name: Manual Review and Quote update
+            optional: true
+            actions:
+              manual_review_form: Submit documents for manual review
+              on_status_unsolicited8: Receive manual review status update
+          - name: Policy Confirmation And Payment
+            actions:
+              confirm: Confirm the Health Insurance policy purchase
+              on_confirm: Receive the confirmed Health Insurance policy order
+              payment_form: Submit payment for the Health Insurance policy
+          - name: Policy Sharing
+            actions:
+              on_update: Receive the shared Health Insurance policy document
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -97,6 +239,7 @@ flows:
     id: Payment_Failure_Health_Insurance(Individual)
     meta:
       order: 15
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -109,6 +252,7 @@ flows:
     id: Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
     meta:
       order: 12
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -120,6 +264,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Family)
     meta:
       order: 4
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -132,6 +277,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Family-With-ManualReview)
     meta:
       order: 5
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -144,6 +290,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Individual)
     meta:
       order: 2
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -156,6 +303,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Individual-With-ManualReview)
     meta:
       order: 3
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -168,6 +316,7 @@ flows:
     id: Payment_Failure_Health_Insurance(PRE-ORDER-Family-With-ManualReview)
     meta:
       order: 16
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -178,6 +327,7 @@ flows:
     id: Payment_Failure_Health_Insurance(PRE-ORDER-Individual-With-ManualReview)
     meta:
       order: 17
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -188,6 +338,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Family-Without-CIS)
     meta:
       order: 18
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -198,6 +349,7 @@ flows:
     id: Health_Insurance_Application(PRE-ORDER-Individual-Without-CIS)
     meta:
       order: 19
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -208,6 +360,7 @@ flows:
     id: Renew_Health_Insurance(Family)
     meta:
       order: 9
+      type: PRIMARY
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -220,6 +373,47 @@ flows:
     id: Renew_Health_Insurance(Individual)
     meta:
       order: 8
+      type: SECONDARY
+      hide_actions:
+        - search
+        - on_search
+        - individual_information_form
+        - search3
+        - on_search3
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - on_update_unsolicited
+        - renew_form
+        - on_update_unsolicited5
+        - on_status_unsolicited2
+        - on_update_unsolicited6
+      display:
+        actions:
+          on_update_unsolicited: Receive the renewal order confirmation with form documents
+          renew_form: Submit identity details for renewal authorization
+          on_update_unsolicited5: Receive the completed renewal policy details
+          on_status_unsolicited2: Receive a renewal order status update
+          on_update_unsolicited6: Receive a renewal progress update
     usecase: Health Insurance
     tags:
       - WORKBENCH
