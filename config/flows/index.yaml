@@ -212,6 +212,60 @@ flows:
         - Claim_Health_Insurance(Family)
         - Renew_Health_Insurance(Family)
         - Cancel_Health_Insurance(Family)
+      display:
+        preferred: true
+        sections:
+          - name: Product Discovery
+            actions:
+              search2: Search for Health Insurance products
+              on_search2: Receive Health Insurance product catalogue
+          - name: Personal Details Form
+            actions:
+              family_information_form: Submit family personal details
+          - name: Personalized Offer Generation
+            actions:
+              search4: Request personalized Health Insurance offers
+              on_search4: Receive personalized Health Insurance offers
+          - name: Offer Selection
+            actions:
+              select: Select a Health Insurance offer
+              on_select: Receive the selected Health Insurance offer quote
+          - name: Pre-Existing Disease Form
+            actions:
+              ped_details_form: Submit pre-existing disease details
+          - name: Offer Finalization
+            actions:
+              select2: Finalize the selected Health Insurance offer
+              on_select2: Receive the finalized Health Insurance offer quote
+          - name: EKYC Step
+            actions:
+              Ekyc_details_form: Submit EKYC details
+              on_status_unsolicited4: Receive EKYC verification status update
+              init: Initialize the Health Insurance order
+              on_init: Receive the initialized Health Insurance order
+          - name: Proposer Details Form
+            actions:
+              Proposer_Details_form: Submit proposer details
+              init2: Initialize the order with proposer details
+              on_init2: Receive the order updated with proposer details
+          - name: Nominee Details Form
+            actions:
+              nominee_details_form: Submit nominee details
+              init4: Initialize the order with nominee details
+              on_init4: Receive the order updated with nominee details
+          - name: Manual Review and Quote update
+            optional: true
+            actions:
+              manual_review_form: Submit documents for manual review
+              on_status_unsolicited8: Receive manual review status update
+          - name: Policy Confirmation And Payment
+            actions:
+              confirm: Confirm the Health Insurance policy purchase
+              on_confirm: Receive the confirmed Health Insurance policy order
+              payment_form: Submit payment for the Health Insurance policy
+          - name: Policy Sharing
+            actions:
+              on_update: Receive the shared Health Insurance policy document
     usecase: Health Insurance
     tags:
       - WORKBENCH
