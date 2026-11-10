@@ -1,7 +1,7 @@
 meta:
   domain: ONDC:FIS13
   version: 2.0.0
-  flowId: Health_Insurance_Application(PRE-ORDER-Family)
+  flowId: Health_Insurance_Application(PRE-ORDER-Family-Without-PED)
   config_version: 0.0.0001
   description: A family initiates a health insurance application by searching
     available plans, completing information forms for each family member,
