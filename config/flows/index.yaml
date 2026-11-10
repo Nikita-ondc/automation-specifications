@@ -212,6 +212,7 @@ flows:
         - Claim_Health_Insurance(Family)
         - Renew_Health_Insurance(Family)
         - Cancel_Health_Insurance(Family)
+        - Health_Insurance_Application(Family)_With_IGM(v-1.0.0)
       display:
         preferred: true
         sections:
@@ -290,7 +291,49 @@ flows:
     id: Health_Insurance_Application(Family)_With_IGM(v-1.0.0)
     meta:
       order: 13
-      type: PRIMARY
+      type: SECONDARY
+      hide_actions:
+        - search2
+        - on_search2
+        - family_information_form
+        - search4
+        - on_search4
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+      display:
+        actions:
+          issue_open_100: Raise a grievance on the Health Insurance order
+          on_issue_processing_100: Receive grievance acknowledgement and resolution actions
+          issue_status_processing_100: Request the grievance status
+          on_issue_status_processing_100: Receive the grievance status update
+          on_issue_resolved_100: Receive grievance resolution confirmation
+          issue_close_100: Close the resolved grievance
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -307,6 +350,7 @@ flows:
         - Claim_Health_Insurance(Individual)
         - Renew_Health_Insurance(Individual)
         - Cancel_Health_Insurance(Individual)
+        - Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
       display:
         preferred: true
         sections:
@@ -386,7 +430,49 @@ flows:
     id: Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
     meta:
       order: 12
-      type: PRIMARY
+      type: SECONDARY
+      hide_actions:
+        - search
+        - on_search
+        - individual_information_form
+        - search3
+        - on_search3
+        - select
+        - on_select
+        - ped_details_form
+        - select2
+        - on_select2
+        - Ekyc_details_form
+        - on_status_unsolicited4
+        - init
+        - on_init
+        - Proposer_Details_form
+        - init2
+        - on_init2
+        - nominee_details_form
+        - init4
+        - on_init4
+        - manual_review_form
+        - on_status_unsolicited8
+        - confirm
+        - on_confirm
+        - payment_form
+        - on_update
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+      display:
+        actions:
+          issue_open_100: Raise a grievance on the Health Insurance order
+          on_issue_processing_100: Receive grievance acknowledgement and resolution actions
+          issue_status_processing_100: Request the grievance status
+          on_issue_status_processing_100: Receive the grievance status update
+          on_issue_resolved_100: Receive grievance resolution confirmation
+          issue_close_100: Close the resolved grievance
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -490,6 +576,28 @@ flows:
     description: An individual health insurance PRE-ORDER application journey (with manual underwriting review) without the CIS_AND_PAYMENT step - after the manual review completes, the BPP directly sends an unsolicited on_status marking the payment PAID and the buyer confirms the policy, with no consumer information form or its init/on_init round-trip.
     config:
       $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual-Without-CIS_.yaml
+  - type: playground
+    id: Health_Insurance_Application(PRE-ORDER-Family-Without-PED)
+    meta:
+      order: 20
+      type: PRIMARY
+    usecase: Health Insurance
+    tags:
+      - WORKBENCH
+    description: A family health insurance PRE-ORDER application journey without the Pre-Existing Disease (PED) declaration form - after offer selection, the flow proceeds directly to EKYC and order initialization, through nominee details, payment, and confirmation, with no PED form or its round-trip.
+    config:
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Family_Without_PED.yaml
+  - type: playground
+    id: Health_Insurance_Application(PRE-ORDER-Individual-Without-PED)
+    meta:
+      order: 21
+      type: PRIMARY
+    usecase: Health Insurance
+    tags:
+      - WORKBENCH
+    description: An individual health insurance PRE-ORDER application journey without the Pre-Existing Disease (PED) declaration form - after offer selection, the flow proceeds directly to EKYC and order initialization, through nominee details, payment, and confirmation.
+    config:
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual_Without_PED.yaml
   - type: playground
     id: Renew_Health_Insurance(Family)
     meta:
@@ -993,6 +1101,19 @@ flows:
     id: CD_Balance_Error_Accidental_Insurance
     meta:
       order: 3
+      type: PRIMARY
+      display:
+        sections:
+          - name: Select Preferred Offer
+            actions:
+              search_purchase_journey_accidental: Search for Accidental Insurance offers
+              on_search_purchase_journey_accidental: Receive Accidental Insurance offer catalogue
+              select: Select an Accidental Insurance offer
+              on_select_accidental: Receive the selected Accidental Insurance offer quote
+          - name: Insurance Plan Booking Initialization - CD Balance Check Failure
+            actions:
+              init_accidental: Initialize the Accidental Insurance plan booking
+              on_init_cd_balance_error: Receive CD Balance check failure (insufficient balance)
     usecase: Accidental Insurance
     tags:
       - WORKBENCH
@@ -1005,6 +1126,12 @@ flows:
     id: Discovery_of_Insurer_Providers_and_Master_Policies
     meta:
       order: 0
+      type: PREREQUISITE
+      prerequisite_kind: mandatory
+      display:
+        actions:
+          search_insurence_accidental_provider: Search for Accidental Insurance providers and master policies
+          on_search_insurence_provider_accidental: Receive Accidental Insurance master policy catalogue
     usecase: Accidental Insurance
     tags:
       - WORKBENCH
@@ -1017,6 +1144,11 @@ flows:
     id: Discovery_of_Products_from_Master_Policies (Accidental Insurance)
     meta:
       order: 1
+      type: PRIMARY
+      display:
+        actions:
+          search_discover_product_accidental: Share personal and insurance details for Accidental Insurance offers
+          on_search_discover_product_accidental: Receive personalized Accidental Insurance offers
     usecase: Accidental Insurance
     tags:
       - WORKBENCH
@@ -1029,6 +1161,29 @@ flows:
     id: Purchase_Journey_Accidental_Insurance
     meta:
       order: 2
+      type: PRIMARY
+      secondary_flows:
+        - Purchase_Journey_Accidental_Insurance_with_igm_1.0.0
+      display:
+        preferred: true
+        sections:
+          - name: Select Preferred Offer
+            actions:
+              search_purchase_journey_accidental: Search for Accidental Insurance offers
+              on_search_purchase_journey_accidental: Receive Accidental Insurance offer catalogue
+              select: Select an Accidental Insurance offer
+              on_select_accidental: Receive the selected Accidental Insurance offer quote
+          - name: Insurance Plan Booking Initialization
+            actions:
+              init_accidental: Initialize the Accidental Insurance plan booking
+              on_init_accidental: Receive the initialized Accidental Insurance order
+          - name: Insurance Plan Booking Confirmation
+            actions:
+              confirm_accidental: Confirm the Accidental Insurance plan booking
+              on_confirm_accidental: Receive the confirmed Accidental Insurance order
+          - name: Policy Document Sharing
+            actions:
+              on_update_accidental: Receive the shared Accidental Insurance policy document
     usecase: Accidental Insurance
     tags:
       - WORKBENCH
@@ -1043,6 +1198,32 @@ flows:
     id: Purchase_Journey_Accidental_Insurance_with_igm_1.0.0
     meta:
       order: 4
+      type: SECONDARY
+      hide_actions:
+        - search_purchase_journey_accidental
+        - on_search_purchase_journey_accidental
+        - select
+        - on_select_accidental
+        - init_accidental
+        - on_init_accidental
+        - confirm_accidental
+        - on_confirm_accidental
+        - on_update_accidental
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+      display:
+        actions:
+          issue_open_100: Raise a grievance on the Accidental Insurance order
+          on_issue_processing_100: Receive grievance acknowledgement and resolution actions
+          issue_status_processing_100: Request the grievance status
+          on_issue_status_processing_100: Receive the grievance status update
+          on_issue_resolved_100: Receive grievance resolution confirmation
+          issue_close_100: Close the resolved grievance
     usecase: Accidental Insurance
     tags:
       - WORKBENCH
@@ -1057,6 +1238,19 @@ flows:
     id: CD_Balance_Error_Hospicash_Insurance
     meta:
       order: 3
+      type: PRIMARY
+      display:
+        sections:
+          - name: Select Preferred Offer
+            actions:
+              search_purchase_journey_hospicash: Search for Hospicash Insurance offers
+              on_search_purchase_journey_hospicash: Receive Hospicash Insurance offer catalogue
+              select: Select a Hospicash Insurance offer
+              on_select_hospicash: Receive the selected Hospicash Insurance offer quote
+          - name: Insurance Plan Booking Initialization - CD Balance Check Failure
+            actions:
+              init_hospicash: Initialize the Hospicash Insurance plan booking
+              on_init_cd_balance_error: Receive CD Balance check failure (insufficient balance)
     usecase: Hospicash Insurance
     tags:
       - WORKBENCH
@@ -1069,6 +1263,12 @@ flows:
     id: Discovery_of_Insurer_Providers_and_Master_Policies
     meta:
       order: 0
+      type: PREREQUISITE
+      prerequisite_kind: mandatory
+      display:
+        actions:
+          search_insurence_accidental_provider: Search for Hospicash Insurance providers and master policies
+          on_search_insurence_provider_accidental: Receive Hospicash Insurance master policy catalogue
     usecase: Hospicash Insurance
     tags:
       - WORKBENCH
@@ -1081,6 +1281,11 @@ flows:
     id: Discovery_of_Products_from_Master_Policies (Hospicash Insurance)
     meta:
       order: 1
+      type: PRIMARY
+      display:
+        actions:
+          search_discover_product_hospicash: Share personal and insurance details for Hospicash Insurance offers
+          on_search_discover_product_hospicash: Receive personalized Hospicash Insurance offers
     usecase: Hospicash Insurance
     tags:
       - WORKBENCH
@@ -1093,6 +1298,29 @@ flows:
     id: Purchase_Journey_Hospicash_Insurance
     meta:
       order: 2
+      type: PRIMARY
+      secondary_flows:
+        - Purchase_Journey_Hospicash_Insurance_with_igm_1.0.0
+      display:
+        preferred: true
+        sections:
+          - name: Select Preferred Offer
+            actions:
+              search_purchase_journey_hospicash: Search for Hospicash Insurance offers
+              on_search_purchase_journey_hospicash: Receive Hospicash Insurance offer catalogue
+              select: Select a Hospicash Insurance offer
+              on_select_hospicash: Receive the selected Hospicash Insurance offer quote
+          - name: Insurance Plan Booking Initialization
+            actions:
+              init_hospicash: Initialize the Hospicash Insurance plan booking
+              on_init_hospicash: Receive the initialized Hospicash Insurance order
+          - name: Insurance Plan Booking Confirmation
+            actions:
+              confirm_hospicash: Confirm the Hospicash Insurance plan booking
+              on_confirm_hospicash: Receive the confirmed Hospicash Insurance order
+          - name: Policy Document Sharing
+            actions:
+              on_update_hospicash: Receive the shared Hospicash Insurance policy document
     usecase: Hospicash Insurance
     tags:
       - PRAMAAN
@@ -1108,6 +1336,32 @@ flows:
     id: Purchase_Journey_Hospicash_Insurance_with_igm_1.0.0
     meta:
       order: 4
+      type: SECONDARY
+      hide_actions:
+        - search_purchase_journey_hospicash
+        - on_search_purchase_journey_hospicash
+        - select
+        - on_select_hospicash
+        - init_hospicash
+        - on_init_hospicash
+        - confirm_hospicash
+        - on_confirm_hospicash
+        - on_update_hospicash
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+      display:
+        actions:
+          issue_open_100: Raise a grievance on the Hospicash Insurance order
+          on_issue_processing_100: Receive grievance acknowledgement and resolution actions
+          issue_status_processing_100: Request the grievance status
+          on_issue_status_processing_100: Receive the grievance status update
+          on_issue_resolved_100: Receive grievance resolution confirmation
+          issue_close_100: Close the resolved grievance
     usecase: Hospicash Insurance
     tags:
       # - PRAMAAN
@@ -1122,6 +1376,19 @@ flows:
     id: CD_Balance_Error_Transit_Insurance
     meta:
       order: 3
+      type: PRIMARY
+      display:
+        sections:
+          - name: Select Preferred Offer
+            actions:
+              search_purchase_journey_transit: Search for Transit Insurance offers
+              on_search_purchase_journey_transit: Receive Transit Insurance offer catalogue
+              select: Select a Transit Insurance offer
+              on_select: Receive the selected Transit Insurance offer quote
+          - name: Insurance Plan Booking Initialization - CD Balance Check Failure
+            actions:
+              init: Initialize the Transit Insurance plan booking
+              on_init_cd_balance_error: Receive CD Balance check failure (insufficient balance)
     usecase: Transit Insurance
     tags:
       - WORKBENCH
@@ -1134,6 +1401,12 @@ flows:
     id: Discovery_of_Insurer_Providers_and_Master_Policies
     meta:
       order: 0
+      type: PREREQUISITE
+      prerequisite_kind: mandatory
+      display:
+        actions:
+          search_insurence_transit_provider: Search for Transit Insurance providers and master policies
+          on_search_insurence_provider_transit: Receive Transit Insurance master policy catalogue
     usecase: Transit Insurance
     tags:
       - WORKBENCH
@@ -1146,6 +1419,11 @@ flows:
     id: Discovery_of_Products_from_Master_Policies (Transit Insurance)
     meta:
       order: 1
+      type: PRIMARY
+      display:
+        actions:
+          search_discover_product_transit: Share personal and insurance details for Transit Insurance offers
+          on_search_discover_product_tranist: Receive personalized Transit Insurance offers
     usecase: Transit Insurance
     tags:
       - WORKBENCH
@@ -1158,6 +1436,29 @@ flows:
     id: Purchase_Journey_Transit_Insurance
     meta:
       order: 2
+      type: PRIMARY
+      secondary_flows:
+        - Purchase_Journey_Transit_Insurance_with_igm_1.0.0
+      display:
+        preferred: true
+        sections:
+          - name: Select Preferred Offer
+            actions:
+              search_purchase_journey_transit: Search for Transit Insurance offers
+              on_search_purchase_journey_transit: Receive Transit Insurance offer catalogue
+              select: Select a Transit Insurance offer
+              on_select: Receive the selected Transit Insurance offer quote
+          - name: Insurance Plan Booking Initialization
+            actions:
+              init: Initialize the Transit Insurance plan booking
+              on_init: Receive the initialized Transit Insurance order
+          - name: Insurance Plan Booking Confirmation
+            actions:
+              confirm: Confirm the Transit Insurance plan booking
+              on_confirm: Receive the confirmed Transit Insurance order
+          - name: Policy Document Sharing
+            actions:
+              on_update: Receive the shared Transit Insurance policy document
     usecase: Transit Insurance
     tags:
       - PRAMAAN
@@ -1173,6 +1474,32 @@ flows:
     id: Purchase_Journey_Transit_Insurance_with_igm_1.0.0
     meta:
       order: 4
+      type: SECONDARY
+      hide_actions:
+        - search_purchase_journey_transit
+        - on_search_purchase_journey_transit
+        - select
+        - on_select
+        - init
+        - on_init
+        - confirm
+        - on_confirm
+        - on_update
+      visible_actions:
+        - issue_open_100
+        - on_issue_processing_100
+        - issue_status_processing_100
+        - on_issue_status_processing_100
+        - on_issue_resolved_100
+        - issue_close_100
+      display:
+        actions:
+          issue_open_100: Raise a grievance on the Transit Insurance order
+          on_issue_processing_100: Receive grievance acknowledgement and resolution actions
+          issue_status_processing_100: Request the grievance status
+          on_issue_status_processing_100: Receive the grievance status update
+          on_issue_resolved_100: Receive grievance resolution confirmation
+          issue_close_100: Close the resolved grievance
     usecase: Transit Insurance
     tags:
       # - PRAMAAN
