@@ -1,0 +1,94 @@
+### Change Logs: Insurance API specs
+
+<table>
+<colgroup>
+<col style="width: 63%" />
+<col style="width: 36%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>FIS13_2.0.1_140725</th>
+</tr>
+<tr class="odd">
+<th>Updates in BRD</th>
+<th>14th July 2025</th>
+</tr>
+<tr class="header">
+<th>Updates in PRD/Change log</th>
+<th>14th July 2025</th>
+</tr>
+<tr class="odd">
+<th>Updates in API Specs on dev doc</th>
+<th>14th July 2025</th>
+</tr>
+</thead>
+<tbody>
+</tbody>
+</table>
+
+**Health Insurance**
+
+
+****11th July 2025****
+  - Created enum values for form headings
+      - INSURED_PERSONAL_DETAILS
+      - PROPOSER_DETAILS
+      - NOMINEE_DETAILS
+      - CIS
+  - Added new CIS form after Nominee Details form
+  - Shifted payment link to on_confirm call from on_init call.
+  - Changed payment type to PRE-FULFILLMENT
+
+****22nd August 2025****
+- Introduced the `BAP_INPUT` & `INFO` tags at add_ons level
+
+****26th Nov 2025****
+- Added the Manual Review form to the on_select calls.
+
+****27th Feb 2026****
+- Fixed incorrect index in xInput forms (on_select call) for the Health Insurance Application (PRE-ORDER) flow.
+
+****20th Mar 2026****
+- Added missing created_at & updated_at in on_status call for Claim flow.
+
+****27th Mar 2026****
+  - Added `Payment Failure` flows for both pre-fulfillment and pre-order stages.
+  - Added id field in the payments object.
+
+****15th June 2026****
+  * Removed PED details from the `PROPOSER_DETAILS` form in `on_init`.
+  * Added the `PED` form to the `on_select`.
+  * Moved the `MANUAL_REVIEW` form from `on_select` to `on_init`.
+  * Introduced a separate flow for `Health Insurance Application (Family)`.
+****15th July 2026****
+  - Updated the `SETTLEMENT_TERMS` tag group with `STATIC_TERMS` and `OFFLINE_CONTRACT` only.  
+  - Added flow `Health Insurance Application(PRE-ORDER, without CIS)`
+  - Marked below fields as Mandatory in `INSURED_PERSONAL_DETAILS` form
+      - Coverage amount
+      - Pan India Cover
+      - Date of Birth
+      - PED
+      - Phone 
+
+****7th August 2026****
+  - Updated TLC terms by replacing BUYER_FINDER_FEES and SETTLEMENT_TERMS with BAP_TERMS and BPP_TERMS
+  - Added UIN tag as part of GENERAL_INFO tag group.
+
+****1st September 2026****
+  - Removed CIS form from the `Health Insurance Application (Individual & Family)` flows.
+
+****9th September 2026****
+  - Changed the PED form `mime_type` from `text/html` to `text/html-multi` for the Health Insurance Application (Family) flow.
+
+****22nd September 2026****
+  - Added the optional `agent.id` field as part of `fulfillments`.
+
+****7th October 2026****
+  - Added an additional `action/on_action` call when the `cur` and `max` index values are the same in `xinput` forms. Previously, this was handled as part of the subsequent `action` API call.
+  - Added a new **Health Insurance Application (Individual - Offer Update)**.
+
+  
+
+
+  
