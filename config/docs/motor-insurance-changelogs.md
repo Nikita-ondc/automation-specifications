@@ -1,36 +1,5 @@
 ### Change Logs: Insurance API specs
 
-<table>
-<colgroup>
-<col style="width: 63%" />
-<col style="width: 36%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th>Version</th>
-<th>FIS13_2.0.0_140725</th>
-</tr>
-<tr class="odd">
-<th>Updates in BRD</th>
-<th>14th July 2025</th>
-</tr>
-<tr class="header">
-<th>Updates in PRD/Change log</th>
-<th>14th July 2025</th>
-</tr>
-<tr class="odd">
-<th>Updates in API Specs on dev doc</th>
-<th>14th July 2025</th>
-</tr>
-<tr class="odd">
-<th>Updates in MOTOR-API Specs on dev doc</th>
-<th>14th July 2025</th>
-</tr>
-</thead>
-<tbody>
-</tbody>
-</table>
-
 ##### Motor Insurance:
 
 ****14th July 2025****
