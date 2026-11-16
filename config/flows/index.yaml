@@ -421,10 +421,34 @@ flows:
     usecase: Health Insurance
     tags:
       - WORKBENCH
-      
+
     description: An individual health insurance journey that follows the standard application flow up to on_confirm, then exercises a payment-failure path with a Not-Pay option, an unsolicited on_update marking the payment FAILED, a BAP update retry, and an on_update returning a fresh NOT-PAID payment link.
     config:
       $ref: ./HEALTH INSURANCE/Payment_Failure_Health_Insurance_Individual_.yaml
+
+  - type: playground
+    id: Health_Insurance_Application(Individual)_Offer_Update
+    meta:
+      order: 22
+      type: PRIMARY
+    usecase: Health Insurance
+    tags:
+      - WORKBENCH
+    description: An individual health insurance journey that follows the standard application flow, and after manual underwriting review the BPP issues an additional init/on_init round confirming the reviewed order before enrollment is confirmed.
+    config:
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_Individual_Offer_Update.yaml
+
+  - type: playground
+    id: Health_Insurance_Application(Individual)_Offer_Update_Rejected
+    meta:
+      order: 23
+      type: PRIMARY
+    usecase: Health Insurance
+    tags:
+      - WORKBENCH
+    description: An individual health insurance journey that follows the standard application flow up to manual underwriting review, then the BPP rejects the additional init request with error 81208 (Policy booking rejection), ending the flow without proceeding to confirmation.
+    config:
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_Individual_Offer_Update_Rejected.yaml
 
   - type: playground
     id: Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
