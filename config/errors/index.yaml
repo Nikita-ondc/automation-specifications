@@ -28,8 +28,8 @@ code:
     Description: Insurer failed to share policy document with buyer app
     From: BPP
     code: 81207
-  - Event: Previous Policy Details Required
-    Description: The seller app can NACK out the submission of the form with the
-      error code 81208
+  - Event: Policy booking rejection
+    Description: Insurer failed to continue with the policy booking for offer
+      rejection
     From: BPP
     code: 81208
