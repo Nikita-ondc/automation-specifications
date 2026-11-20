@@ -5,9 +5,9 @@ meta:
   config_version: 0.0.0001
   description: An individual searches and selects a health insurance plan and
     completes an interactive application with personal details across multiple
-    forms. After manual underwriting review, the BPP rejects the additional
-    init request with error 81208 (Policy booking rejection),
-    and the flow ends without proceeding to confirmation.
+    forms. After manual underwriting review, the BPP rejects the additional init
+    request with error 81208 (Policy booking rejection), and the flow ends
+    without proceeding to confirmation.
   use_case_id: HEALTH INSURANCE
   flowName: Health Insurance Application(Individual) Offer Update Rejected
 transaction_data:
@@ -101,9 +101,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: search
-            timestamp: 2026-10-01T09:47:52.311Z
+            timestamp: 2026-11-19T11:37:35.814Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 18bd5ed4-3e40-46d3-8191-8758147d62b6
+            message_id: b0476d9b-81b4-43b5-84c4-777b94342e4c
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -137,8 +137,7 @@ steps:
               payment:
                 collected_by: BPP
         type: request
-        description:
-          The BAP initiates a search request to discover available health
+        description: The BAP initiates a search request to discover available health
           insurance providers and their products within a specified geographic
           location. This step establishes the transaction context and location
           parameters that scope the insurance coverage inquiry.
@@ -147,8 +146,7 @@ steps:
     owner: BPP
     responseFor: search
     unsolicited: false
-    description:
-      The BPP responds to the initial search with a catalog containing
+    description: The BPP responds to the initial search with a catalog containing
       available health insurance providers, their products, fulfillment
       mechanisms, and application forms for individual coverage. This callback
       provides the complete set of pre-order insurance offerings and data
@@ -196,8 +194,7 @@ steps:
                 descriptor:
                   name: ABC Insurance Ltd.
                   short_desc: ABC Insurance Ltd. India
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
@@ -376,9 +373,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_search
-            timestamp: 2026-10-01T09:47:52.330Z
+            timestamp: 2026-11-19T11:37:35.843Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 18bd5ed4-3e40-46d3-8191-8758147d62b6
+            message_id: b0476d9b-81b4-43b5-84c4-777b94342e4c
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -407,12 +404,11 @@ steps:
               descriptor:
                 name: ABC Insurance Ltd
               providers:
-                - id: b71194d5-1509-4689-8027-e4d237853469
+                - id: f228ed28-d290-481f-9edf-0ce321623ff5
                   descriptor:
                     name: ABC Insurance Ltd.
                     short_desc: ABC Insurance Ltd. India
-                    long_desc:
-                      ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                    long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                       Motor, Marine etc
                     images:
                       - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
@@ -431,7 +427,7 @@ steps:
                         name: Health Insurance
                         code: HEALTH_INSURANCE
                   items:
-                    - id: d0fedbe0-147a-440b-89e1-69bd99d428b7
+                    - id: d5f1733c-ae24-41f0-801a-3d70f1776d19
                       category_ids:
                         - C1
                         - C3
@@ -530,7 +526,7 @@ steps:
                           headings:
                             - INSURED_PERSONAL_DETAILS
                         form:
-                          id: 0f59a602-6ee2-45c5-a67d-00ec09355a47
+                          id: 27fa8aee-314c-412e-a5bf-ae9cbbd60892
                           mime_type: text/html
                           url: undefined/forms/ONDC:FIS13/individual_information_form/?transaction_id=8a5f94c0-59d7-42a2-9035-d5c725b6fda4&session_id=undefined
                           resubmit: true
@@ -559,14 +555,13 @@ steps:
                                 code: OFFLINE_CONTRACT
                               value: "true"
                   fulfillments:
-                    - id: ea54ed2c-764f-419e-8eeb-b20fbe115112
+                    - id: 14874b5d-a20b-40bc-bc32-9e9fe773468d
                       type: POLICY
                       agent:
                         person:
                           id: AGT001
         type: request
-        description:
-          The BPP responds to the initial search with a catalog containing
+        description: The BPP responds to the initial search with a catalog containing
           available health insurance providers, their products, fulfillment
           mechanisms, and application forms for individual coverage. This
           callback provides the complete set of pre-order insurance offerings
@@ -587,28 +582,27 @@ steps:
       defaultPayload: {}
       saveData: {}
       inputs: {}
-      formHtml: PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KCjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgPHRpdGxlPlBlcnNvbmFsIERldGFpbHM8L3RpdGxlPgo8L2hlYWQ+Cgo8Ym9keT4KICA8Zm9ybSBpZD0iaW5kaXZpZHVhbF9pbmZvcm1hdGlvbl9mb3JtIiBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iPCU9IGFjdGlvblVybCAlPiI+CgogICAgPGxhYmVsIGZvcj0iZmlyc3ROYW1lIj5GaXJzdCBOYW1lIDwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9ImZpcnN0TmFtZSIgbmFtZT0iZmlyc3ROYW1lIiBwbGFjZWhvbGRlcj0iRW50ZXIgeW91ciBmaXJzdCBuYW1lIiBwYXR0ZXJuPSJbQS1aYS16XHNdezIsNTB9IiBtYXhsZW5ndGg9IjUwIiB0aXRsZT0iTmFtZSBtdXN0IGNvbnRhaW4gb25seSBsZXR0ZXJzIGFuZCBzcGFjZXMgKDItNTAgY2hhcmFjdGVycykiICAvPgoKICAgIDxsYWJlbCBmb3I9Imxhc3ROYW1lIj5MYXN0IE5hbWUgPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibGFzdE5hbWUiIG5hbWU9Imxhc3ROYW1lIiBwbGFjZWhvbGRlcj0iRW50ZXIgeW91ciBsYXN0IG5hbWUiIHBhdHRlcm49IltBLVphLXpcc117Miw1MH0iIG1heGxlbmd0aD0iNTAiIHRpdGxlPSJOYW1lIG11c3QgY29udGFpbiBvbmx5IGxldHRlcnMgYW5kIHNwYWNlcyAoMi01MCBjaGFyYWN0ZXJzKSIgIC8+CgogICAgPGxhYmVsIGZvcj0iZG9iIj5EYXRlIG9mIEJpcnRoIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJkYXRlIiBpZD0iZG9iIiBuYW1lPSJkb2IiIHJlcXVpcmVkIC8+CgogICAgPGxhYmVsIGZvcj0iZ2VuZGVyIj5HZW5kZXIgPC9sYWJlbD4KICAgIDxzZWxlY3QgbmFtZT0iZ2VuZGVyIiBpZD0iZ2VuZGVyIiA+CiAgICAgIDxvcHRpb24gdmFsdWU9IiI+LS0gU2VsZWN0IC0tPC9vcHRpb24+CiAgICAgIDxvcHRpb24gdmFsdWU9Im1hbGUiPk1hbGU8L29wdGlvbj4KICAgICAgPG9wdGlvbiB2YWx1ZT0iZmVtYWxlIj5GZW1hbGU8L29wdGlvbj4KICAgIDwvc2VsZWN0PgoKICAgIDxsYWJlbCBmb3I9IlBFRCI+UEVEIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgIDxzZWxlY3QgbmFtZT0iUEVEIiBpZD0iUEVEIiByZXF1aXJlZD4KICAgICAgPG9wdGlvbiB2YWx1ZT0iIj4tLSBTZWxlY3QgLS08L29wdGlvbj4KICAgICAgPG9wdGlvbiB2YWx1ZT0iWWVzIj5ZZXM8L29wdGlvbj4KICAgICAgPG9wdGlvbiB2YWx1ZT0iTm8iPk5vPC9vcHRpb24+CiAgICA8L3NlbGVjdD4KCiAgIAoKICAgIDxsYWJlbCBmb3I9InBob25lIj5QaG9uZSA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0idGVsIiBpZD0icGhvbmUiIG5hbWU9InBob25lIiBwbGFjZWhvbGRlcj0iOTg3NjU0MzIxMCIgcGF0dGVybj0iWzYtOV1bMC05XXs5fSIgbWF4bGVuZ3RoPSIxMCIgdGl0bGU9IlBob25lIG51bWJlciBtdXN0IGJlIDEwIGRpZ2l0cyBzdGFydGluZyB3aXRoIDYsIDcsIDgsIG9yIDkiIHJlcXVpcmVkIC8+CgogICAgPGxhYmVsIGZvcj0iZW1haWwiPkVtYWlsPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgaWQ9ImVtYWlsIiBuYW1lPSJlbWFpbCIgcGxhY2Vob2xkZXI9ImV4YW1wbGVAZW1haWwuY29tIiAvPgoKICAgIDxsYWJlbCBmb3I9ImFtb3VudCI+Q292ZXJhZ2UgQW1vdW50IDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJudW1iZXIiIGlkPSJhbW91bnQiIG5hbWU9ImFtb3VudCIgcGxhY2Vob2xkZXI9IkVudGVyIGNvdmVyYWdlIGFtb3VudCIgbWluPSIxIiByZXF1aXJlZCAvPgoKICAgIAoKICAgPGxhYmVsIGZvcj0icGFuSW5kaWEiPgogIFBhbiBJbmRpYSBDb3ZlciA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPgo8L2xhYmVsPgo8aW5wdXQgdHlwZT0iY2hlY2tib3giIGlkPSJwYW5JbmRpYSIgbmFtZT0icGFuSW5kaWEiIHJlcXVpcmVkIC8+CgogICAgPGxhYmVsIGZvcj0iaGVpZ2h0Ij5IZWlnaHQgKGNtKSA8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9Im51bWJlciIgaWQ9ImhlaWdodCIgbmFtZT0iaGVpZ2h0IiBwbGFjZWhvbGRlcj0iRW50ZXIgaGVpZ2h0IGluIGNtIiBtaW49IjEiIG1heD0iMzAwIiAgLz4KCiAgICA8bGFiZWwgZm9yPSJ3ZWlnaHQiPldlaWdodCAoa2cpIDwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0id2VpZ2h0IiBuYW1lPSJ3ZWlnaHQiIHBsYWNlaG9sZGVyPSJFbnRlciB3ZWlnaHQgaW4ga2ciIG1pbj0iMSIgbWF4PSI1MDAiICAvPgoKICAgIDxsYWJlbCBmb3I9InBpbmNvZGUiPlBpbmNvZGU8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJwaW5jb2RlIiBuYW1lPSJwaW5jb2RlIiBwbGFjZWhvbGRlcj0iMTIzNDU2IiBwYXR0ZXJuPSJbMS05XVswLTldezV9IiBtYXhsZW5ndGg9IjYiIHRpdGxlPSJQaW5jb2RlIG11c3QgYmUgNiBkaWdpdHMgYW5kIGNhbm5vdCBzdGFydCB3aXRoIDAiIC8+CgogIAoKICAgIDxsYWJlbD5QRUQgRGV0YWlsczwvbGFiZWw+CgogICAgPGxhYmVsIGZvcj0iZGlhYmV0ZXMiPkRpYWJldGVzPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJjaGVja2JveCIgaWQ9ImRpYWJldGVzIiBuYW1lPSJkaWFiZXRlcyIgLz4KCiAgICA8bGFiZWwgZm9yPSJibG9vZFByZXNzdXJlIj5CbG9vZCBQcmVzc3VyZSAvIEh5cGVydGVuc2lvbjwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0iY2hlY2tib3giIGlkPSJibG9vZFByZXNzdXJlIiBuYW1lPSJibG9vZFByZXNzdXJlIiAvPgoKICAgIDxsYWJlbCBmb3I9ImhlYXJ0QWlsbWVudHMiPkhlYXJ0IEFpbG1lbnRzPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJjaGVja2JveCIgaWQ9ImhlYXJ0QWlsbWVudHMiIG5hbWU9ImhlYXJ0QWlsbWVudHMiIC8+CgogICAgPGxhYmVsIGZvcj0ib3RoZXIiPk90aGVyIGhlYWx0aCBpc3N1ZXM8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9ImNoZWNrYm94IiBpZD0ib3RoZXIiIG5hbWU9Im90aGVyIiAvPgoKICAgIDxsYWJlbCBmb3I9InBhblZhbHVlIj5QQU4gTnVtYmVyPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0icGFuVmFsdWUiIG5hbWU9InBhblZhbHVlIiBwbGFjZWhvbGRlcj0iQUJDREUxMjM0RiIgcGF0dGVybj0iW0EtWl17NX1bMC05XXs0fVtBLVpdezF9IiBtYXhsZW5ndGg9IjEwIiB0aXRsZT0iUEFOIG11c3QgYmUgaW4gZm9ybWF0OiBBQkNERTEyMzRGIiAvPgoKICAKCiAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iZm9ybUlkIiBuYW1lPSJmb3JtSWQiIHZhbHVlPSI8JT0gZm9ybUlkICU+Ij4KCiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJ0cmFuc2FjdGlvbklkIiBuYW1lPSJ0cmFuc2FjdGlvbklkIiB2YWx1ZT0iPCU9IEpTT04ucGFyc2Uoc3VibWlzc2lvbkRhdGEpLnRyYW5zYWN0aW9uX2lkICU+Ij4KICAgIDxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJTdWJtaXQiPgogIDwvZm9ybT4KPC9ib2R5PgoKPC9odG1sPgo=
+      formHtml: PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImVuIj4KCjxoZWFkPgogIDxtZXRhIGNoYXJzZXQ9IlVURi04Ij4KICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgPHRpdGxlPlBlcnNvbmFsIERldGFpbHM8L3RpdGxlPgo8L2hlYWQ+Cgo8Ym9keT4KICA8Zm9ybSBpZD0iaW5kaXZpZHVhbF9pbmZvcm1hdGlvbl9mb3JtIiBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iPCU9IGFjdGlvblVybCAlPiI+CgogICAgPGxhYmVsIGZvcj0iZmlyc3ROYW1lIj5GaXJzdCBOYW1lIDwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9ImZpcnN0TmFtZSIgbmFtZT0iZmlyc3ROYW1lIiBwbGFjZWhvbGRlcj0iRW50ZXIgeW91ciBmaXJzdCBuYW1lIiBwYXR0ZXJuPSJbQS1aYS16XHNdezIsNTB9IiBtYXhsZW5ndGg9IjUwIiB0aXRsZT0iTmFtZSBtdXN0IGNvbnRhaW4gb25seSBsZXR0ZXJzIGFuZCBzcGFjZXMgKDItNTAgY2hhcmFjdGVycykiICAvPgoKICAgIDxsYWJlbCBmb3I9Imxhc3ROYW1lIj5MYXN0IE5hbWUgPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibGFzdE5hbWUiIG5hbWU9Imxhc3ROYW1lIiBwbGFjZWhvbGRlcj0iRW50ZXIgeW91ciBsYXN0IG5hbWUiIHBhdHRlcm49IltBLVphLXpcc117Miw1MH0iIG1heGxlbmd0aD0iNTAiIHRpdGxlPSJOYW1lIG11c3QgY29udGFpbiBvbmx5IGxldHRlcnMgYW5kIHNwYWNlcyAoMi01MCBjaGFyYWN0ZXJzKSIgIC8+CgogICAgPGxhYmVsIGZvcj0iZG9iIj5EYXRlIG9mIEJpcnRoIDwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0iZGF0ZSIgaWQ9ImRvYiIgbmFtZT0iZG9iIiByZXF1aXJlZCAvPgoKICAgIDxsYWJlbCBmb3I9ImdlbmRlciI+R2VuZGVyIDwvbGFiZWw+CiAgICA8c2VsZWN0IG5hbWU9ImdlbmRlciIgaWQ9ImdlbmRlciIgPgogICAgICA8b3B0aW9uIHZhbHVlPSJtYWxlIj5NYWxlPC9vcHRpb24+CiAgICAgIDxvcHRpb24gdmFsdWU9ImZlbWFsZSI+RmVtYWxlPC9vcHRpb24+CiAgICAgIDxvcHRpb24gdmFsdWU9InRyYW5zZ2VuZGVyIj5UcmFuc2dlbmRlcjwvb3B0aW9uPgogICAgPC9zZWxlY3Q+CgogICAgPGxhYmVsIGZvcj0iUEVEIj5QRUQgPC9sYWJlbD4KICAgIDxzZWxlY3QgbmFtZT0iUEVEIiBpZD0iUEVEIiByZXF1aXJlZD4KICAgICAgPG9wdGlvbiB2YWx1ZT0iWWVzIj5ZZXM8L29wdGlvbj4KICAgICAgPG9wdGlvbiB2YWx1ZT0iTm8iPk5vPC9vcHRpb24+CiAgICA8L3NlbGVjdD4KCiAgIAoKICAgIDxsYWJlbCBmb3I9InBob25lIj5QaG9uZSA8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9InRlbCIgaWQ9InBob25lIiBuYW1lPSJwaG9uZSIgcGxhY2Vob2xkZXI9Ijk4NzY1NDMyMTAiIHBhdHRlcm49Ils2LTldWzAtOV17OX0iIG1heGxlbmd0aD0iMTAiIHRpdGxlPSJQaG9uZSBudW1iZXIgbXVzdCBiZSAxMCBkaWdpdHMgc3RhcnRpbmcgd2l0aCA2LCA3LCA4LCBvciA5IiByZXF1aXJlZCAvPgoKICAgIDxsYWJlbCBmb3I9ImVtYWlsIj5FbWFpbDwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0iZW1haWwiIGlkPSJlbWFpbCIgbmFtZT0iZW1haWwiIHBsYWNlaG9sZGVyPSJleGFtcGxlQGVtYWlsLmNvbSIgLz4KCiAgICA8bGFiZWwgZm9yPSJhbW91bnQiPkNvdmVyYWdlIEFtb3VudCA8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9Im51bWJlciIgaWQ9ImFtb3VudCIgbmFtZT0iYW1vdW50IiBwbGFjZWhvbGRlcj0iRW50ZXIgY292ZXJhZ2UgYW1vdW50IiBtaW49IjEiIHJlcXVpcmVkIC8+CgogICAgCgogICA8bGFiZWwgZm9yPSJwYW5JbmRpYSI+CiAgUGFuIEluZGlhIENvdmVyCjwvbGFiZWw+CjxpbnB1dCB0eXBlPSJjaGVja2JveCIgaWQ9InBhbkluZGlhIiBuYW1lPSJwYW5JbmRpYSIgcmVxdWlyZWQgLz4KCiAgICA8bGFiZWwgZm9yPSJoZWlnaHQiPkhlaWdodCAoY20pIDwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0iaGVpZ2h0IiBuYW1lPSJoZWlnaHQiIHBsYWNlaG9sZGVyPSJFbnRlciBoZWlnaHQgaW4gY20iIG1pbj0iMSIgbWF4PSIzMDAiICAvPgoKICAgIDxsYWJlbCBmb3I9IndlaWdodCI+V2VpZ2h0IChrZykgPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJudW1iZXIiIGlkPSJ3ZWlnaHQiIG5hbWU9IndlaWdodCIgcGxhY2Vob2xkZXI9IkVudGVyIHdlaWdodCBpbiBrZyIgbWluPSIxIiBtYXg9IjUwMCIgIC8+CgogICAgPGxhYmVsIGZvcj0icGluY29kZSI+UGluY29kZTwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9InBpbmNvZGUiIG5hbWU9InBpbmNvZGUiIHBsYWNlaG9sZGVyPSIxMjM0NTYiIHBhdHRlcm49IlsxLTldWzAtOV17NX0iIG1heGxlbmd0aD0iNiIgdGl0bGU9IlBpbmNvZGUgbXVzdCBiZSA2IGRpZ2l0cyBhbmQgY2Fubm90IHN0YXJ0IHdpdGggMCIgLz4KCiAgCgogICAgPGxhYmVsPlBFRCBEZXRhaWxzPC9sYWJlbD4KCiAgICA8bGFiZWwgZm9yPSJkaWFiZXRlcyI+RGlhYmV0ZXM8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9ImNoZWNrYm94IiBpZD0iZGlhYmV0ZXMiIG5hbWU9ImRpYWJldGVzIiAvPgoKICAgIDxsYWJlbCBmb3I9ImJsb29kUHJlc3N1cmUiPkJsb29kIFByZXNzdXJlIC8gSHlwZXJ0ZW5zaW9uPC9sYWJlbD4KICAgIDxpbnB1dCB0eXBlPSJjaGVja2JveCIgaWQ9ImJsb29kUHJlc3N1cmUiIG5hbWU9ImJsb29kUHJlc3N1cmUiIC8+CgogICAgPGxhYmVsIGZvcj0iaGVhcnRBaWxtZW50cyI+SGVhcnQgQWlsbWVudHM8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9ImNoZWNrYm94IiBpZD0iaGVhcnRBaWxtZW50cyIgbmFtZT0iaGVhcnRBaWxtZW50cyIgLz4KCiAgICA8bGFiZWwgZm9yPSJvdGhlciI+T3RoZXIgaGVhbHRoIGlzc3VlczwvbGFiZWw+CiAgICA8aW5wdXQgdHlwZT0iY2hlY2tib3giIGlkPSJvdGhlciIgbmFtZT0ib3RoZXIiIC8+CgogICAgPGxhYmVsIGZvcj0icGFuVmFsdWUiPlBBTiBOdW1iZXI8L2xhYmVsPgogICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJwYW5WYWx1ZSIgbmFtZT0icGFuVmFsdWUiIHBsYWNlaG9sZGVyPSJBQkNERTEyMzRGIiBwYXR0ZXJuPSJbQS1aXXs1fVswLTldezR9W0EtWl17MX0iIG1heGxlbmd0aD0iMTAiIHRpdGxlPSJQQU4gbXVzdCBiZSBpbiBmb3JtYXQ6IEFCQ0RFMTIzNEYiIC8+CgogIAoKICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJmb3JtSWQiIG5hbWU9ImZvcm1JZCIgdmFsdWU9IjwlPSBmb3JtSWQgJT4iPgoKICAgICAgICAgICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgaWQ9InRyYW5zYWN0aW9uSWQiIG5hbWU9InRyYW5zYWN0aW9uSWQiIHZhbHVlPSI8JT0gSlNPTi5wYXJzZShzdWJtaXNzaW9uRGF0YSkudHJhbnNhY3Rpb25faWQgJT4iPgogICAgPGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IlN1Ym1pdCI+CiAgPC9mb3JtPgo8L2JvZHk+Cgo8L2h0bWw+Cg==
     examples:
       - name: example for html_form
         payload:
           firstName: Nikita
           lastName: Sharma
-          dob: 2026-10-29
-          gender: ""
+          dob: 2026-11-16
+          gender: female
           PED: Yes
-          phone: "9920294029"
+          phone: "9988998899"
           email: nikita.sharma@test.com
-          amount: "60000"
+          amount: "788"
           panIndia: on
           height: ""
           weight: ""
-          pincode: "134242"
+          pincode: "140301"
           panValue: ""
           formId: <%= formId %>
           transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
-        description:
-          The BPP presents an HTML form to collect individual applicant
+        description: The BPP presents an HTML form to collect individual applicant
           demographics, health information, and insurance plan preferences
           required for underwriting and policy administration in the health
           insurance application.
@@ -711,9 +705,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: search
-            timestamp: 2026-10-01T09:48:29.632Z
+            timestamp: 2026-11-19T11:38:07.222Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 6ef533b0-6beb-4709-b723-e348e30ba606
+            message_id: a8b71f42-60ef-4745-aee4-92118554edcd
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -728,15 +722,15 @@ steps:
           message:
             intent:
               provider:
-                id: PROVIDER_ID3456
+                id: profd
                 items:
-                  - id: item5678
+                  - id: "2333"
                     xinput:
                       form:
-                        id: 0f59a602-6ee2-45c5-a67d-00ec09355a47
+                        id: 27fa8aee-314c-412e-a5bf-ae9cbbd60892
                       form_response:
                         status: SUCCESS
-                        submission_id: cc4d0455-1deb-4238-9ccc-147e92571eb0
+                        submission_id: 4f34b2ac-b50b-4092-911d-513f45505f2f
               payment:
                 collected_by: BPP
               category:
@@ -759,8 +753,7 @@ steps:
                   person:
                     id: AGT001
         type: request
-        description:
-          The BAP initiates a search request to discover available health
+        description: The BAP initiates a search request to discover available health
           insurance providers and plans for the specified geographic location
           and domain. This step signals the start of the transaction and
           requests the BPP to present matching insurance offerings based on the
@@ -814,8 +807,7 @@ steps:
                       code: HEALTH_INSURANCE
                     id: C3
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
@@ -1037,8 +1029,7 @@ steps:
                                 value: "50000"
                               - descriptor:
                                   code: NOMINEE_DETAILS
-                                  short_desc:
-                                    Describes the format as 'Salutation | First Name | Middle Name |
+                                  short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                     Last Name | Relationship | Contact Number'
                                 value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
                       - id: A2
@@ -1265,9 +1256,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_search
-            timestamp: 2026-10-01T09:48:29.657Z
+            timestamp: 2026-11-19T11:38:07.252Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 6ef533b0-6beb-4709-b723-e348e30ba606
+            message_id: a8b71f42-60ef-4745-aee4-92118554edcd
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1298,17 +1289,16 @@ steps:
                         code: HEALTH_INSURANCE
                       id: C3
                   descriptor:
-                    long_desc:
-                      ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                    long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                       Motor, Marine etc
                     name: ABC Insurance Ltd.
                     short_desc: "ABC Insurance Ltd. India "
                     images:
                       - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                         size_type: xs
-                  id: b71194d5-1509-4689-8027-e4d237853469
+                  id: f228ed28-d290-481f-9edf-0ce321623ff5
                   items:
-                    - id: d0fedbe0-147a-440b-89e1-69bd99d428b7
+                    - id: d5f1733c-ae24-41f0-801a-3d70f1776d19
                       category_ids:
                         - C1
                         - C3
@@ -1410,8 +1400,8 @@ steps:
                           price:
                             value: "100"
                             currency: INR
-                    - id: fb37e2aa-ba1e-41b3-bcf1-f4c2a5dfdf92
-                      parent_item_id: d0fedbe0-147a-440b-89e1-69bd99d428b7
+                    - id: 980f2eff-26ed-4e0c-9a9e-2659ef478c51
+                      parent_item_id: d5f1733c-ae24-41f0-801a-3d70f1776d19
                       category_ids:
                         - C1
                         - C3
@@ -1521,8 +1511,7 @@ steps:
                                   value: "50000"
                                 - descriptor:
                                     code: NOMINEE_DETAILS
-                                    short_desc:
-                                      Describes the format as 'Salutation | First Name | Middle Name |
+                                    short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                       Last Name | Relationship | Contact Number'
                                   value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
                         - id: A2
@@ -1565,8 +1554,8 @@ steps:
                           price:
                             value: "100"
                             currency: INR
-                    - id: f33c0cea-c679-4cf3-b3a5-3d935f60baa9
-                      parent_item_id: d0fedbe0-147a-440b-89e1-69bd99d428b7
+                    - id: 94d3cc56-bb83-4ef5-8701-a2ab394e8ba7
+                      parent_item_id: d5f1733c-ae24-41f0-801a-3d70f1776d19
                       category_ids:
                         - C1
                         - C3
@@ -1720,7 +1709,7 @@ steps:
                                 code: OFFLINE_CONTRACT
                               value: "true"
                   fulfillments:
-                    - id: f1acb21f-e3c0-4ef7-81f7-487741480622
+                    - id: 9794b03b-5bca-4362-b605-25648bc79e16
                       type: POLICY
                       agent:
                         person:
@@ -1746,7 +1735,9 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP selects a specific Health Insurance offer from the personalized quotes returned by the BPP, indicating the applicant's preferred plan and add-ons to proceed toward policy finalization.
+    description: The BAP selects a specific Health Insurance offer from the
+      personalized quotes returned by the BPP, indicating the applicant's
+      preferred plan and add-ons to proceed toward policy finalization.
     mock:
       generate: LyoqCiAqIHNlbGVjdCDigJQgQkFQIHNlbGVjdHMgYSBwcm92aWRlciBpdGVtIChhbmQgb3B0aW9uYWwgYWRkLW9ucyAvIG9mZmVycykgdG8gcmVxdWVzdCBhIHF1b3RlLgogKiBQcm92aWRlciwgaXRlbSwgZnVsZmlsbG1lbnQsIGFkZC1vbnMgYW5kIG9mZmVycyBhcmUgcmVzb2x2ZWQgZnJvbSB1c2VyIGlucHV0cyBvciBzZXNzaW9uOwogKiB0aGUgY29udGV4dCAodHJhbnNhY3Rpb25faWQgLyBtZXNzYWdlX2lkIC8gdGltZXN0YW1wKSBpcyBwb3B1bGF0ZWQgYnkgdGhlIHJ1bnRpbWUuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCB1c2VySW5wdXRzID0gc2Vzc2lvbkRhdGEudXNlcl9pbnB1dHMgfHwge307CiAgaWYgKHNlc3Npb25EYXRhLnByb3ZpZGVyX2lkKSB7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnByb3ZpZGVyLmlkID0gc2Vzc2lvbkRhdGEucHJvdmlkZXJfaWRbMF07CiAgfQogIGNvbnN0IGl0ZW1JZHMgPQogICAgdXNlcklucHV0cy5zZWxlY3RlZF9pdGVtX2lkcwogICAgICA/LnNwbGl0KCIsIikKICAgICAgLm1hcCh4ID0+IHgudHJpbSgpKQogICAgICAuZmlsdGVyKEJvb2xlYW4pIHx8IFtdOwogIGNvbnN0IHBhcmVudElkcyA9CiAgICB1c2VySW5wdXRzLnNlbGVjdGVkX3BhcmVudF9pdGVtX2lkcwogICAgICA/LnNwbGl0KCIsIikKICAgICAgLm1hcCh4ID0+IHgudHJpbSgpKQogICAgICAuZmlsdGVyKEJvb2xlYW4pIHx8IFtdOwogIGNvbnN0IHNlbGVjdGVkSXRlbSA9IGl0ZW1JZHNbMF07CgogIGlmIChzZWxlY3RlZEl0ZW0pIHsKICAgIGNvbnN0IHBheWxvYWRJdGVtID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXTsKICAgIHBheWxvYWRJdGVtLmlkID0gc2VsZWN0ZWRJdGVtOwogICAgcGF5bG9hZEl0ZW0ucGFyZW50X2l0ZW1faWQgPSBwYXJlbnRJZHNbMF07CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdID0gcGF5bG9hZEl0ZW07CiAgfQoKICBjb25zdCBhZGRvbl90YWdzID0gWwogICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAiZGVzY3JpcHRvciI6IHsKICAgICAgICAgICAgICAgICAgICAibmFtZSI6ICJCQVAgSW5wdXRzIiwKICAgICAgICAgICAgICAgICAgICAiY29kZSI6ICJCQVBfSU5QVVRTIgogICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAibGlzdCI6IFsKICAgICAgICAgICAgICAgICAgICB7CiAgICAgICAgICAgICAgICAgICAgICAiZGVzY3JpcHRvciI6IHsKICAgICAgICAgICAgICAgICAgICAgICAgImNvZGUiOiAiU1VNX0lOU1VSRUQiCiAgICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAgInZhbHVlIjogIjUwMDAwIgogICAgICAgICAgICAgICAgICAgIH0sCiAgICAgICAgICAgICAgICAgICAgewogICAgICAgICAgICAgICAgICAgICAgImRlc2NyaXB0b3IiOiB7CiAgICAgICAgICAgICAgICAgICAgICAgICJjb2RlIjogIk5PTUlORUVfREVUQUlMUyIsCiAgICAgICAgICAgICAgICAgICAgICAgICJzaG9ydF9kZXNjIjogIkRlc2NyaWJlcyB0aGUgZm9ybWF0IGFzICdTYWx1dGF0aW9uIHwgRmlyc3QgTmFtZSB8IE1pZGRsZSBOYW1lIHwgTGFzdCBOYW1lIHwgUmVsYXRpb25zaGlwIHwgQ29udGFjdCBOdW1iZXInIHJlcHJlc2VudHMgYSBmdWxsIG5hbWUgc3RydWN0dXJlLCB3aGVyZSB0aGUgdmFsdWVzIGFyZSBzZXBhcmF0ZWQgYnkgYSBwaXBlICh8KSBzeW1ib2wiCiAgICAgICAgICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICAgICAgICAgInZhbHVlIjogIk1yLiB8IEpvZSB8IFdpY2sgfCBBZGFtcyB8IFNvbiB8ICs5MS05OTg4Nzc2NjU1IgogICAgICAgICAgICAgICAgICAgIH0KICAgICAgICAgICAgICAgICAgXQogICAgICAgICAgICAgICAgfV0KICAgICAgICAgICAgICAKCiAgLy8gQURELU9OUwogIGNvbnN0IGFkZG9uSWRzID0KICAgIHVzZXJJbnB1dHMuYWRkb25faWRzCiAgICAgID8uc3BsaXQoIiwiKQogICAgICAubWFwKHggPT4geC50cmltKCkpCiAgICAgIC5maWx0ZXIoQm9vbGVhbikgfHwgW107CgoKICBjb25zdCBhZGRvblF0eXMgPQogICAgdXNlcklucHV0cy5hZGRvbl9xdWFudGl0aWVzCiAgICAgID8uc3BsaXQoIiwiKQogICAgICAubWFwKE51bWJlcikgfHwgW107CgogIGNvbnN0IGFkZG9uRGV0YWlscyA9CiAgICBKU09OLnBhcnNlKHVzZXJJbnB1dHMuc2VsZWN0ZWRfYWRkX29uX2RldGFpbHMgfHwgIltdIik7CgogIGlmIChhZGRvbklkcy5sZW5ndGggPiAwKSB7CgogICAgY29uc3Qgc2VsZWN0ZWRBZGRPbnMgPSBhZGRvbklkcy5tYXAoKGFkZG9uSWQsIGluZGV4KSA9PiB7CiAgICAgIGNvbnN0IGFkZG9uID0gYWRkb25EZXRhaWxzLmZpbmQoCiAgICAgICAgKGEpID0+IFN0cmluZyhhLmlkKSA9PT0gU3RyaW5nKGFkZG9uSWQpCiAgICAgICk7CgogICAgICBjb25zdCBxdHkgPSBhZGRvblF0eXNbaW5kZXhdIHx8IDE7CgogICAgICBpZiAoIWFkZG9uKSB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgIGlkOiBhZGRvbklkLAogICAgICAgICAgcXVhbnRpdHk6IHsKICAgICAgICAgICAgc2VsZWN0ZWQ6IHsKICAgICAgICAgICAgICBjb3VudDogcXR5LAogICAgICAgICAgICB9LAogICAgICAgICAgfSwKICAgICAgICAgIHByaWNlOiB7CiAgICAgICAgICAgIGN1cnJlbmN5OiAiSU5SIiwKICAgICAgICAgICAgdmFsdWU6ICIwIiwKICAgICAgICAgIH0sCiAgICAgICAgfTsKICAgICAgfQoKICAgICAgY29uc3QgdW5pdFByaWNlID0gTnVtYmVyKGFkZG9uLnByaWNlPy52YWx1ZSB8fCAwKTsKCiAgICAgIHJldHVybiB7CiAgICAgICAgaWQ6IGFkZG9uLmlkLAogICAgICAgIGRlc2NyaXB0b3I6IGFkZG9uLmRlc2NyaXB0b3IsCiAgICAgICAgcXVhbnRpdHk6IHsKICAgICAgICAgIHNlbGVjdGVkOiB7CiAgICAgICAgICAgIGNvdW50OiBxdHksCiAgICAgICAgICB9LAogICAgICAgIH0sCiAgICAgICAgcHJpY2U6IHsKICAgICAgICAgIGN1cnJlbmN5OiBhZGRvbi5wcmljZT8uY3VycmVuY3kgfHwgIklOUiIsCiAgICAgICAgICB2YWx1ZTogU3RyaW5nKHVuaXRQcmljZSAqIHF0eSksCiAgICAgICAgfSwKICAgICAgICB0YWdzOiBhZGRvbl90YWdzCgogICAgICB9OwogICAgfSk7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLmFkZF9vbnMgPSBzZWxlY3RlZEFkZE9uczsKICB9CiAgZWxzZSB7CiAgICBkZWxldGUgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXS5hZGRfb25zOwogIH0KICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBjb25zdCBvcmRlciA9IHRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyOwoKICBpZiAoIW9yZGVyPy5wcm92aWRlcj8uaWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIlByb3ZpZGVyIElEIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIGlmICghb3JkZXI/Lml0ZW1zPy5sZW5ndGgpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIkF0IGxlYXN0IG9uZSBpdGVtIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIGlmICghb3JkZXIuaXRlbXNbMF0/LmlkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJJdGVtIElEIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIC8vIFZhbGlkYXRlIGFkZC1vbnMgaWYgcHJlc2VudAogIGNvbnN0IGFkZE9ucyA9IG9yZGVyLml0ZW1zWzBdPy5hZGRfb25zOwogIGlmIChBcnJheS5pc0FycmF5KGFkZE9ucykpIHsKICAgIGZvciAoY29uc3QgYWRkb24gb2YgYWRkT25zKSB7CiAgICAgIGlmICghYWRkb24uaWQpIHsKICAgICAgICByZXR1cm4gewogICAgICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICAgICAgY29kZTogNDAwLAogICAgICAgICAgZGVzY3JpcHRpb246ICJBZGQtb24gSUQgaXMgcmVxdWlyZWQiCiAgICAgICAgfTsKICAgICAgfQoKICAgICAgaWYgKAogICAgICAgIGFkZG9uLnF1YW50aXR5Py5zZWxlY3RlZD8uY291bnQgJiYKICAgICAgICBhZGRvbi5xdWFudGl0eS5zZWxlY3RlZC5jb3VudCA8IDEKICAgICAgKSB7CiAgICAgICAgcmV0dXJuIHsKICAgICAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgICAgIGNvZGU6IDQwMCwKICAgICAgICAgIGRlc2NyaXB0aW9uOiAiQWRkLW9uIHF1YW50aXR5IG11c3QgYmUgZ3JlYXRlciB0aGFuIDAiCiAgICAgICAgfTsKICAgICAgfQogICAgfQogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -1836,9 +1827,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: select
-            timestamp: 2026-10-01T09:48:31.931Z
+            timestamp: 2026-11-19T11:38:08.682Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 8171a20d-ea25-4378-b7bc-9be423fda508
+            message_id: 76a93dde-2ccb-470b-8b8a-98e7ec8fd6af
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -1876,8 +1867,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -1902,22 +1892,25 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
         type: request
-        description: please add relevant description
+        description: The BAP selects a specific Health Insurance offer from the
+          personalized quotes returned by the BPP, indicating the applicant's
+          preferred plan and add-ons to proceed toward policy finalization.
   - api: on_select
     action_id: on_select
     owner: BPP
     responseFor: select
     unsolicited: false
-    description: The BPP acknowledges the selected Health Insurance offer and returns an updated quote along with the Pre-Existing Disease (PED) declaration form required before the offer can be finalized.
+    description: The BPP acknowledges the selected Health Insurance offer and
+      returns an updated quote along with the Pre-Existing Disease (PED)
+      declaration form required before the offer can be finalized.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCiAgaWYgKHNlc3Npb25EYXRhPy5wcm92aWRlcl9pZCkgewogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5wcm92aWRlci5pZCA9IHNlc3Npb25EYXRhLnByb3ZpZGVyX2lkWzBdOwogIH0KCiAgY29uc3QgeGlucHV0ID0gewogICAgImhlYWQiOiB7CiAgICAgICJkZXNjcmlwdG9yIjogewogICAgICAgICJuYW1lIjogIlBFRCIKICAgICAgfSwKICAgICAgImluZGV4IjogewogICAgICAgICJtaW4iOiAwLAogICAgICAgICJjdXIiOiAwLAogICAgICAgICJtYXgiOiAxCiAgICAgIH0sCiAgICAgICJoZWFkaW5ncyI6IFsKICAgICAgICAiUEVEIiwKICAgICAgICAiRUtZQyIKICAgICAgXQogICAgfSwKICAgICJmb3JtIjogewogICAgICAiaWQiOiAiRk80IiwKICAgICAgIm1pbWVfdHlwZSI6ICJ0ZXh0L2h0bWwiLAogICAgICAidXJsIjogImh0dHBzOi8vZmlzLnRlc3QuYnBwLmlvL2Zvcm0vcGVkP2Zvcm1pZD1GTzQiLAogICAgICAicmVzdWJtaXQiOiB0cnVlLAogICAgICAibXVsdGlwbGVfc3VtYmlzc2lvbnMiOiBmYWxzZQogICAgfSwKICAgICJyZXF1aXJlZCI6IHRydWUKICB9CgoKCgogIGlmIChzZXNzaW9uRGF0YT8uaXRlbXMgJiYgc2Vzc2lvbkRhdGE/LmNoaWxkX2l0ZW1faWQpIHsKICAgIGNvbnN0IGl0ZW1zID0gc2Vzc2lvbkRhdGE/Lml0ZW1zIHx8IFtdOwogICAgY29uc3Qgc2VsZWN0ZWRJdGVtID0gaXRlbXM/LmZpbmQoCiAgICAgIChpdGVtKSA9PiBpdGVtPy5pZCA9PT0gc2Vzc2lvbkRhdGE/LmNoaWxkX2l0ZW1faWRbMF0KICAgICk7CgogICAgaWYgKHNlbGVjdGVkSXRlbSkgewogICAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdID0gc2VsZWN0ZWRJdGVtIHx8IHt9OwogICAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLnhpbnB1dCA9IHhpbnB1dAogICAgfQoKICB9CiAgaWYgKGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucXVvdGUpIHsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucXVvdGUuaWQgPSB1dWlkdjQoKTsKICB9CgogIC8vIFVwZGF0ZSBxdW90ZSBicmVha3VwIGl0ZW0gcmVmZXJlbmNlcyB3aXRoIGR5bmFtaWMgY2hpbGQgaXRlbSBJRAogIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8ucXVvdGU/LmJyZWFrdXAgJiYgc2Vzc2lvbkRhdGE/LmNoaWxkX2l0ZW1faWRbMF0pIHsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucXVvdGUuYnJlYWt1cC5mb3JFYWNoKChiKSA9PiB7CiAgICAgIGlmIChiLml0ZW0/LmlkICYmIGIudGl0bGUgPT09ICdBRERfT05TJykgYi5pdGVtLmlkID0gc2Vzc2lvbkRhdGE/LmNoaWxkX2l0ZW1faWRbMF07CiAgICB9KTsKICB9CgogIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXT8ueGlucHV0Py5mb3JtKSB7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLnhpbnB1dC5mb3JtLmlkID0gdXVpZHY0KCkKICAgIGNvbnN0IHVybCA9IGNyZWF0ZUZvcm1VUkwoIk9OREM6RklTMTMiLCAicGVkX2RldGFpbHNfZm9ybSIsIHNlc3Npb25EYXRhKTsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF0ueGlucHV0LmZvcm0udXJsID0gdXJsOwogIH0KCgogIGlmIChzZXNzaW9uRGF0YT8udXNlcl9zZWxlY3RlZF9hZGRfb25zKSB7CiAgICBjb25zdCB1c2VyQWRkT25zID0gc2Vzc2lvbkRhdGE/LnVzZXJfc2VsZWN0ZWRfYWRkX29uczsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF0uYWRkX29ucyA9IHVzZXJBZGRPbnM7CgogIH0KCiAgbGV0IHRvdGFsUHJpY2UKCiAgaWYgKGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2U/Lm9yZGVyPy5xdW90ZT8uYnJlYWt1cCkgewogICAgY29uc3Qgc2VsZWN0ZWRBZGRPbnMgPSBzZXNzaW9uRGF0YS51c2VyX3NlbGVjdGVkX2FkZF9vbnM7CiAgICBpZiAoQXJyYXkuaXNBcnJheShzZWxlY3RlZEFkZE9ucykgJiYgc2VsZWN0ZWRBZGRPbnMubGVuZ3RoID4gMCkgewogICAgICBzZWxlY3RlZEFkZE9ucy5mb3JFYWNoKChhZGRvbikgPT4gewogICAgICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucXVvdGUuYnJlYWt1cC5wdXNoKHsKICAgICAgICAgIHRpdGxlOiAnQUREX09OUycsCiAgICAgICAgICBpdGVtOiB7CiAgICAgICAgICAgIGlkOiBhZGRvbi5pZCwKICAgICAgICAgIH0sCiAgICAgICAgICBwcmljZTogYWRkb24ucHJpY2UgfHwgeyB2YWx1ZTogIjAiLCBjdXJyZW5jeTogIklOUiIgfQogICAgICAgIH0pOwogICAgICB9KTsKICAgIH0KICAgIC8vIFJlY2FsY3VsYXRlIHRvdGFsIHF1b3RlIHByaWNlIGZyb20gYWxsIGJyZWFrdXAgaXRlbXMKICAgIHRvdGFsUHJpY2UgPSBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnF1b3RlLmJyZWFrdXAucmVkdWNlKAogICAgICAoc3VtLCBiKSA9PiBzdW0gKyAocGFyc2VGbG9hdChiLnByaWNlPy52YWx1ZSkgfHwgMCksIDAKICAgICk7CiAgICBpZiAoZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5xdW90ZS5wcmljZSkgewogICAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnF1b3RlLnByaWNlLnZhbHVlID0gU3RyaW5nKHRvdGFsUHJpY2UpOwogICAgfQoKICB9CgogIGlmIChzZXNzaW9uRGF0YT8uYWdlbnRfaWRbMF0gJiYgc2Vzc2lvbkRhdGE/LmZ1bGZpbGxtZW50cykgewogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHMgPSBzZXNzaW9uRGF0YT8uZnVsZmlsbG1lbnRzOwoKCiAgfQogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgY29uc3Qgb3JkZXIgPSB0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5vcmRlcjsKCiAgaWYgKCFvcmRlcikgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiT3JkZXIgaXMgbWlzc2luZyIKICAgIH07CiAgfQoKICBpZiAoIW9yZGVyLnByb3ZpZGVyLmlkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJQcm92aWRlciBJRCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICBpZiAoIW9yZGVyLml0ZW1zPy5sZW5ndGggfHwgIW9yZGVyLml0ZW1zWzBdPy5pZCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiSXRlbSBJRCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICBpZiAoIW9yZGVyLnF1b3RlPy5pZCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiUXVvdGUgSUQgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgaWYgKCFvcmRlci5xdW90ZT8ucHJpY2U/LnZhbHVlKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDQwMCwKICAgICAgZGVzY3JpcHRpb246ICJRdW90ZSBwcmljZSBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICBpZiAoIW9yZGVyLml0ZW1zPy5bMF0/LnhpbnB1dD8uZm9ybT8uaWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogNDAwLAogICAgICBkZXNjcmlwdGlvbjogIkZvcm0gSUQgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgaWYgKCFvcmRlci5pdGVtcz8uWzBdPy54aW5wdXQ/LmZvcm0/LnVybCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiA0MDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiRm9ybSBVUkwgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -2046,16 +2039,14 @@ steps:
                             value: "50000"
                           - descriptor:
                               code: NOMINEE_DETAILS
-                              short_desc:
-                                Describes the format as 'Salutation | First Name | Middle Name |
+                              short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                 Last Name | Relationship | Contact Number'
                                 represents a full name structure, where the
                                 values are separated by a pipe (|) symbol
                             value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
             provider:
               descriptor:
-                long_desc:
-                  ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                   Motor, Marine etc
                 name: ABC Insurance Ltd.
                 short_desc: "ABC Insurance Ltd. India "
@@ -2115,9 +2106,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_select
-            timestamp: 2026-10-01T09:48:31.947Z
+            timestamp: 2026-11-19T11:38:08.696Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 8171a20d-ea25-4378-b7bc-9be423fda508
+            message_id: 76a93dde-2ccb-470b-8b8a-98e7ec8fd6af
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2202,7 +2193,7 @@ steps:
                         - PED
                         - EKYC
                     form:
-                      id: 97996f74-0411-4aae-86eb-2bc5dfeac862
+                      id: aaf4f58e-4f89-408d-b63b-4fff8c02100f
                       mime_type: text/html
                       url: undefined/forms/ONDC:FIS13/ped_details_form/?transaction_id=8a5f94c0-59d7-42a2-9035-d5c725b6fda4&session_id=undefined
                       resubmit: true
@@ -2229,8 +2220,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -2255,25 +2245,23 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               quote:
-                id: 13f9decf-c1c3-4946-88b4-b2be9f031db8
+                id: 21db6eac-9196-4493-b63b-3dbb94f0befa
                 breakup:
                   - price:
                       value: "900"
@@ -2308,19 +2296,23 @@ steps:
                   value: "2900"
                 ttl: P15D
               fulfillments:
-                - id: f1acb21f-e3c0-4ef7-81f7-487741480622
+                - id: 9794b03b-5bca-4362-b605-25648bc79e16
                   type: POLICY
                   agent:
                     person:
                       id: AGT001
         type: request
-        description: please add relevant description
+        description: The BPP acknowledges the selected Health Insurance offer and
+          returns an updated quote along with the Pre-Existing Disease (PED)
+          declaration form required before the offer can be finalized.
   - api: html_form
     action_id: ped_details_form
     owner: BPP
     responseFor: null
     unsolicited: false
-    description: The BPP presents a dynamic form for the applicant to declare any pre-existing diseases or medical conditions, information the insurer needs to underwrite the policy and finalize the selected offer.
+    description: The BPP presents a dynamic form for the applicant to declare any
+      pre-existing diseases or medical conditions, information the insurer needs
+      to underwrite the policy and finalize the selected offer.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -2372,14 +2364,15 @@ steps:
           formId: <%= formId %>
           transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
-        description: please add relevant description
+        description: The BPP presents a dynamic form for the applicant to declare any
+          pre-existing diseases or medical conditions, information the insurer
+          needs to underwrite the policy and finalize the selected offer.
   - api: select
     action_id: select2
     owner: BAP
     responseFor: null
     unsolicited: false
-    description:
-      The BAP selects a specific health insurance provider and associated
+    description: The BAP selects a specific health insurance provider and associated
       coverage items from the available options. This selection captures the
       chosen provider and plan details that drive the subsequent application
       workflow.
@@ -2426,9 +2419,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: select
-            timestamp: 2026-10-01T09:48:34.860Z
+            timestamp: 2026-11-19T11:38:11.394Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 48480f0a-828f-4444-9af1-219e89adec09
+            message_id: c48478f9-51bb-43f3-afdc-271604c250ef
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2447,10 +2440,10 @@ steps:
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 97996f74-0411-4aae-86eb-2bc5dfeac862
+                      id: aaf4f58e-4f89-408d-b63b-4fff8c02100f
                     form_response:
                       status: SUCCESS
-                      submission_id: 901b96db-be94-4546-bc40-a24edff78f53
+                      submission_id: 35fc186f-1a39-4bcb-85cd-8ac45b3f9b57
                   add_ons:
                     - id: A1
                       descriptor:
@@ -2472,8 +2465,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -2498,17 +2490,15 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
         type: request
-        description:
-          The BAP selects a specific health insurance provider and associated
+        description: The BAP selects a specific health insurance provider and associated
           coverage items from the available options. This selection captures the
           chosen provider and plan details that drive the subsequent application
           workflow.
@@ -2576,9 +2566,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_select
-            timestamp: 2026-10-01T09:48:34.875Z
+            timestamp: 2026-11-19T11:38:11.411Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 48480f0a-828f-4444-9af1-219e89adec09
+            message_id: c48478f9-51bb-43f3-afdc-271604c250ef
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2663,7 +2653,7 @@ steps:
                         - PED
                         - EKYC
                     form:
-                      id: 3b52aff4-6ec6-4152-b4fa-ef77f3609165
+                      id: da45281c-cd57-41de-bcd5-24700c0adbfb
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS13/Ekyc_details_form/?transaction_id=8a5f94c0-59d7-42a2-9035-d5c725b6fda4&session_id=undefined&bap_uri=https%3A%2F%2Fbap.example.com
                       resubmit: true
@@ -2690,8 +2680,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -2716,25 +2705,23 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               quote:
-                id: 13f9decf-c1c3-4946-88b4-b2be9f031db8
+                id: 21db6eac-9196-4493-b63b-3dbb94f0befa
                 breakup:
                   - price:
                       value: "900"
@@ -2769,14 +2756,13 @@ steps:
                   value: "2900"
                 ttl: P15D
               fulfillments:
-                - id: f1acb21f-e3c0-4ef7-81f7-487741480622
+                - id: 9794b03b-5bca-4362-b605-25648bc79e16
                   type: POLICY
                   agent:
                     person:
                       id: AGT001
         type: request
-        description:
-          The BPP confirms the customer's selected insurance provider and
+        description: The BPP confirms the customer's selected insurance provider and
           items, responding with the finalized pricing quote, e-KYC form
           requirements, and fulfillment details for the health insurance
           application. This callback establishes the confirmed order that
@@ -2804,8 +2790,7 @@ steps:
           formId: <%= formId %>
           transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
-        description:
-          The BPP presents a dynamic eKYC form to the BAP for collecting
+        description: The BPP presents a dynamic eKYC form to the BAP for collecting
           applicant identity verification credentials and personal information
           required for health insurance policy underwriting.
   - api: on_status
@@ -2860,9 +2845,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_status
-            timestamp: 2026-10-01T09:48:38.384Z
+            timestamp: 2026-11-19T11:38:14.099Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 5b75bb31-d7a7-48ae-af79-ce3994d119fc
+            message_id: 0dfada2d-1bc0-4e1d-9a17-88b6e2f30c4a
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -2937,10 +2922,10 @@ steps:
                     label: TENURE
                   xinput:
                     form:
-                      id: 3b52aff4-6ec6-4152-b4fa-ef77f3609165
+                      id: da45281c-cd57-41de-bcd5-24700c0adbfb
                     form_response:
                       status: SUCCESS
-                      submission_id: 8d2759d6-5313-401e-9a4f-e12e3bd31070
+                      submission_id: 78b20946-8580-4d84-99c8-b6f150717b7a
                   add_ons:
                     - id: A1
                       descriptor:
@@ -2962,8 +2947,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -2988,25 +2972,23 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               quote:
-                id: 13f9decf-c1c3-4946-88b4-b2be9f031db8
+                id: 21db6eac-9196-4493-b63b-3dbb94f0befa
                 breakup:
                   - price:
                       value: "900"
@@ -3041,7 +3023,7 @@ steps:
                   value: "2900"
                 ttl: P15D
               fulfillments:
-                - id: f1acb21f-e3c0-4ef7-81f7-487741480622
+                - id: 9794b03b-5bca-4362-b605-25648bc79e16
                   type: POLICY
                   agent:
                     person:
@@ -3055,8 +3037,7 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description:
-      The BAP initiates an order with the BPP, committing the selected
+    description: The BAP initiates an order with the BPP, committing the selected
       health insurance products, add-ons, fulfillment options, and applicant
       information gathered during the pre-order phase.
     mock:
@@ -3124,9 +3105,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: init
-            timestamp: 2026-10-01T09:48:38.405Z
+            timestamp: 2026-11-19T11:38:14.137Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 415c4377-3805-4255-b434-b286beb07752
+            message_id: 51d9ceda-9959-41f2-887e-9b83b1c2ffa6
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3152,10 +3133,10 @@ steps:
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 3b52aff4-6ec6-4152-b4fa-ef77f3609165
+                      id: da45281c-cd57-41de-bcd5-24700c0adbfb
                     form_response:
                       status: SUCCESS
-                      submission_id: 8d2759d6-5313-401e-9a4f-e12e3bd31070
+                      submission_id: 78b20946-8580-4d84-99c8-b6f150717b7a
                   add_ons:
                     - id: A1
                       descriptor:
@@ -3177,8 +3158,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -3203,14 +3183,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -3233,8 +3212,7 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description:
-          The BAP initiates an order with the BPP, committing the selected
+        description: The BAP initiates an order with the BPP, committing the selected
           health insurance products, add-ons, fulfillment options, and applicant
           information gathered during the pre-order phase.
   - api: on_init
@@ -3242,14 +3220,13 @@ steps:
     owner: BPP
     responseFor: init
     unsolicited: false
-    description:
-      The BPP sends the on_init callback to confirm order initialization
+    description: The BPP sends the on_init callback to confirm order initialization
       and provides the initialized order structure including the insurance
       quote, fulfillment plan, and required proposer information form. This
       response allows the BAP to present the form to the customer and proceed
       with collecting application details.
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCiAgaWYgKHNlc3Npb25EYXRhLm9uX3NlbGVjdF9vcmRlcikgewogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcyA9IHNlc3Npb25EYXRhLm9uX3NlbGVjdF9vcmRlclswXS5pdGVtczsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucHJvdmlkZXIgPSBzZXNzaW9uRGF0YS5vbl9zZWxlY3Rfb3JkZXJbMF0ucHJvdmlkZXI7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnF1b3RlID0gc2Vzc2lvbkRhdGEub25fc2VsZWN0X29yZGVyWzBdLnF1b3RlOwogICAgZGVsZXRlIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF0uZnVsZmlsbG1lbnRfaWRzCgogIH0KCgoKICAvLyBHZW5lcmF0ZSBkeW5hbWljIGZ1bGZpbGxtZW50IElEIChCUFAgYXNzaWducyBmdWxmaWxsbWVudCBJRCBpbiBvbl9pbml0KQogIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uZnVsZmlsbG1lbnRzPy5bMF0pIHsKICAgIGNvbnN0IGR5bmFtaWNGdWxmaWxsbWVudElkID0gdXVpZHY0KCkKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuZnVsZmlsbG1lbnRzWzBdLmlkID0gZHluYW1pY0Z1bGZpbGxtZW50SWQ7CiAgICAvLyBTYXZlIGdlbmVyYXRlZCBmdWxmaWxsbWVudF9pZCBiYWNrIHRvIHNlc3Npb25EYXRhIGZvciBkb3duc3RyZWFtIGdlbmVyYXRvcnMKICAgIHNlc3Npb25EYXRhLmZ1bGZpbGxtZW50X2lkID0gZHluYW1pY0Z1bGZpbGxtZW50SWQ7CiAgICAvLyBTeW5jIGl0ZW1zIGZ1bGZpbGxtZW50X2lkcyB3aXRoIHRoZSBuZXcgZnVsZmlsbG1lbnQgSUQKICAgIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXSkgewogICAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLmZ1bGZpbGxtZW50X2lkcyA9IFtkeW5hbWljRnVsZmlsbG1lbnRJZF07CiAgICB9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS5jdXN0b21lciA9IHNlc3Npb25EYXRhLnNlbGVjdGVkX2Z1bGZpbGxtZW50c1swXS5jdXN0b21lcjsKICAgIGRlbGV0ZSAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uY3VzdG9tZXIucGVyc29uCiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS5hZ2VudCA9IHNlc3Npb25EYXRhPy5zZWFyY2hfZnVsZmlsbG1lbnRbMF0uYWdlbnQKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuZnVsZmlsbG1lbnRzWzBdLnR5cGUgPSAiUE9MSUNZIgoKICB9CgoKICBpZiAoZGVmYXVsdFBheWxvYWQubWVzc2FnZT8ub3JkZXI/LnBheW1lbnRzPy5bMF0pIHsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucGF5bWVudHNbMF0gPSBzZXNzaW9uRGF0YS5wYXltZW50c1swXQogICAgY29uc29sZS5sb2coSlNPTi5zdHJpbmdpZnkoc2Vzc2lvbkRhdGEucGF5bWVudHMpKQogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5wYXltZW50c1swXS5pZCA9IHV1aWR2NCgpOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5wYXltZW50c1swXS50eXBlID0gIlBSRS1GVUxGSUxMTUVOVCI7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzWzBdLmNvbGxlY3RlZF9ieSA9IHNlc3Npb25EYXRhLmNvbGxlY3RlZF9ieVswXTsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucGF5bWVudHNbMF0ucGFyYW1zLmFtb3VudFswXSA9IFN0cmluZyhzZXNzaW9uRGF0YS50b3RhbF9wcmljZVswXSk7CgogIH0KCgoKCiAgLy8gVXBkYXRlIGZvcm0gVVJMcyBhbmQgZ2VuZXJhdGUgZHluYW1pYyBmb3JtIElEcyBmb3IgaXRlbXMKCiAgY29uc3QgeGlucHV0ID0gewogICAgImhlYWQiOiB7CiAgICAgICJkZXNjcmlwdG9yIjogewogICAgICAgICJuYW1lIjogIlByb3Bvc2VyIGRldGFpbHMiCiAgICAgIH0sCiAgICAgICJpbmRleCI6IHsKICAgICAgICAibWluIjogMCwKICAgICAgICAiY3VyIjogMCwKICAgICAgICAibWF4IjogMgogICAgICB9LAogICAgICAiaGVhZGluZ3MiOiBbCiAgICAgICAgIlBST1BPU0VSX0RFVEFJTFMiLAogICAgICAgICJOT01JTkVFX0RFVEFJTFMiLAogICAgICAgICJNQU5VQUxfUkVWSUVXIgogICAgICBdCiAgICB9LAogICAgImZvcm0iOiB7CiAgICAgICJpZCI6ICJGMDYiLAogICAgICAibWltZV90eXBlIjogInRleHQvaHRtbCIsCiAgICAgICJ1cmwiOiAiaHR0cHM6Ly9maXMudGVzdC5icHAuaW8vZm9ybS9tZWRpY2FsX2R0bHM/Zm9ybWlkPUZPNSIsCiAgICAgICJyZXN1Ym1pdCI6IHRydWUsCiAgICAgICJtdWx0aXBsZV9zdW1iaXNzaW9ucyI6IGZhbHNlCiAgICB9LAogICAgInJlcXVpcmVkIjogdHJ1ZQogIH0KICBpZiAoZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcykgewoKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXM/LmZvckVhY2goKGl0ZW0pID0+IHsKICAgICAgaWYgKCFpdGVtPy54aW5wdXQ/LmhlYWQpIHJldHVybjsKCiAgICAgIGl0ZW0ueGlucHV0ID0geGlucHV0OwogICAgfSk7CiAgfQogIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXMpIHsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXMgPSBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zLm1hcCgoaXRlbSkgPT4gewogICAgICBpZiAoaXRlbS54aW5wdXQ/LmZvcm0pIHsKICAgICAgICBpdGVtLnhpbnB1dC5mb3JtLmlkID0gdXVpZHY0KCkKICAgICAgICBjb25zdCB1cmwgPSBjcmVhdGVGb3JtVVJMKCJPTkRDOkZJUzEzIiwgIlByb3Bvc2VyX0RldGFpbHNfZm9ybSIsIHNlc3Npb25EYXRhKTsKICAgICAgICBpdGVtLnhpbnB1dC5mb3JtLnVybCA9IHVybDsKICAgICAgfQogICAgICByZXR1cm4gaXRlbTsKICAgIH0pOwogIH0KCgoKaWYoc2Vzc2lvbkRhdGE/Lm9uX3NlYXJjaF90YWdzKXsKICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci50YWdzID0gc2Vzc2lvbkRhdGEub25fc2VhcmNoX3RhZ3M7Cn0KCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCiAgaWYgKHNlc3Npb25EYXRhLm9uX3NlbGVjdF9vcmRlcikgewogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcyA9IHNlc3Npb25EYXRhLm9uX3NlbGVjdF9vcmRlclswXS5pdGVtczsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucHJvdmlkZXIgPSBzZXNzaW9uRGF0YS5vbl9zZWxlY3Rfb3JkZXJbMF0ucHJvdmlkZXI7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnF1b3RlID0gc2Vzc2lvbkRhdGEub25fc2VsZWN0X29yZGVyWzBdLnF1b3RlOwogICAgZGVsZXRlIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF0uZnVsZmlsbG1lbnRfaWRzCgogIH0KCgoKICAvLyBHZW5lcmF0ZSBkeW5hbWljIGZ1bGZpbGxtZW50IElEIChCUFAgYXNzaWducyBmdWxmaWxsbWVudCBJRCBpbiBvbl9pbml0KQogIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uZnVsZmlsbG1lbnRzPy5bMF0pIHsKICAgIGNvbnN0IGR5bmFtaWNGdWxmaWxsbWVudElkID0gdXVpZHY0KCkKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuZnVsZmlsbG1lbnRzWzBdLmlkID0gZHluYW1pY0Z1bGZpbGxtZW50SWQ7CiAgICAvLyBTYXZlIGdlbmVyYXRlZCBmdWxmaWxsbWVudF9pZCBiYWNrIHRvIHNlc3Npb25EYXRhIGZvciBkb3duc3RyZWFtIGdlbmVyYXRvcnMKICAgIHNlc3Npb25EYXRhLmZ1bGZpbGxtZW50X2lkID0gZHluYW1pY0Z1bGZpbGxtZW50SWQ7CiAgICAvLyBTeW5jIGl0ZW1zIGZ1bGZpbGxtZW50X2lkcyB3aXRoIHRoZSBuZXcgZnVsZmlsbG1lbnQgSUQKICAgIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXSkgewogICAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLmZ1bGZpbGxtZW50X2lkcyA9IFtkeW5hbWljRnVsZmlsbG1lbnRJZF07CiAgICB9CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS5jdXN0b21lciA9IHNlc3Npb25EYXRhLnNlbGVjdGVkX2Z1bGZpbGxtZW50c1swXS5jdXN0b21lcjsKICAgIGRlbGV0ZSAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uY3VzdG9tZXIucGVyc29uCiAgICBpZihzZXNzaW9uRGF0YT8uc2VhcmNoX2Z1bGZpbGxtZW50WzBdPy5hZ2VudCl7CiBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS5hZ2VudCA9IHNlc3Npb25EYXRhPy5zZWFyY2hfZnVsZmlsbG1lbnRbMF0uYWdlbnQKICAgIH0KICAgCiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS50eXBlID0gIlBPTElDWSIKCiAgfQoKCiAgaWYgKGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2U/Lm9yZGVyPy5wYXltZW50cz8uWzBdKSB7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzWzBdID0gc2Vzc2lvbkRhdGEucGF5bWVudHNbMF0KICAgIGNvbnNvbGUubG9nKEpTT04uc3RyaW5naWZ5KHNlc3Npb25EYXRhLnBheW1lbnRzKSkKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucGF5bWVudHNbMF0uaWQgPSB1dWlkdjQoKTsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucGF5bWVudHNbMF0udHlwZSA9ICJQUkUtRlVMRklMTE1FTlQiOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5wYXltZW50c1swXS5jb2xsZWN0ZWRfYnkgPSBzZXNzaW9uRGF0YS5jb2xsZWN0ZWRfYnlbMF07CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzWzBdLnBhcmFtcy5hbW91bnRbMF0gPSBTdHJpbmcoc2Vzc2lvbkRhdGEudG90YWxfcHJpY2VbMF0pOwoKICB9CgoKCgogIC8vIFVwZGF0ZSBmb3JtIFVSTHMgYW5kIGdlbmVyYXRlIGR5bmFtaWMgZm9ybSBJRHMgZm9yIGl0ZW1zCgogIGNvbnN0IHhpbnB1dCA9IHsKICAgICJoZWFkIjogewogICAgICAiZGVzY3JpcHRvciI6IHsKICAgICAgICAibmFtZSI6ICJQcm9wb3NlciBkZXRhaWxzIgogICAgICB9LAogICAgICAiaW5kZXgiOiB7CiAgICAgICAgIm1pbiI6IDAsCiAgICAgICAgImN1ciI6IDAsCiAgICAgICAgIm1heCI6IDIKICAgICAgfSwKICAgICAgImhlYWRpbmdzIjogWwogICAgICAgICJQUk9QT1NFUl9ERVRBSUxTIiwKICAgICAgICAiTk9NSU5FRV9ERVRBSUxTIiwKICAgICAgICAiTUFOVUFMX1JFVklFVyIKICAgICAgXQogICAgfSwKICAgICJmb3JtIjogewogICAgICAiaWQiOiAiRjA2IiwKICAgICAgIm1pbWVfdHlwZSI6ICJ0ZXh0L2h0bWwiLAogICAgICAidXJsIjogImh0dHBzOi8vZmlzLnRlc3QuYnBwLmlvL2Zvcm0vbWVkaWNhbF9kdGxzP2Zvcm1pZD1GTzUiLAogICAgICAicmVzdWJtaXQiOiB0cnVlLAogICAgICAibXVsdGlwbGVfc3VtYmlzc2lvbnMiOiBmYWxzZQogICAgfSwKICAgICJyZXF1aXJlZCI6IHRydWUKICB9CiAgaWYgKGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXMpIHsKCiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zPy5mb3JFYWNoKChpdGVtKSA9PiB7CiAgICAgIGlmICghaXRlbT8ueGlucHV0Py5oZWFkKSByZXR1cm47CgogICAgICBpdGVtLnhpbnB1dCA9IHhpbnB1dDsKICAgIH0pOwogIH0KICBpZiAoZGVmYXVsdFBheWxvYWQubWVzc2FnZT8ub3JkZXI/Lml0ZW1zKSB7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcy5tYXAoKGl0ZW0pID0+IHsKICAgICAgaWYgKGl0ZW0ueGlucHV0Py5mb3JtKSB7CiAgICAgICAgaXRlbS54aW5wdXQuZm9ybS5pZCA9IHV1aWR2NCgpCiAgICAgICAgY29uc3QgdXJsID0gY3JlYXRlRm9ybVVSTCgiT05EQzpGSVMxMyIsICJQcm9wb3Nlcl9EZXRhaWxzX2Zvcm0iLCBzZXNzaW9uRGF0YSk7CiAgICAgICAgaXRlbS54aW5wdXQuZm9ybS51cmwgPSB1cmw7CiAgICAgIH0KICAgICAgcmV0dXJuIGl0ZW07CiAgICB9KTsKICB9CgoKCmlmKHNlc3Npb25EYXRhPy5vbl9zZWFyY2hfdGFncyl7CiAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIudGFncyA9IHNlc3Npb25EYXRhLm9uX3NlYXJjaF90YWdzOwp9CgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiT3JkZXIgb2JqZWN0IGlzIG1pc3NpbmcgaW4gcGF5bG9hZCIKICAgIH07CiAgfQoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyPy5pdGVtcz8ubGVuZ3RoKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAiT3JkZXIgaXRlbXMgYXJlIG1pc3NpbmciCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqIAogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKiAKICogQHJldHVybnMge09iamVjdH0geyB2YWxpZDogYm9vbGVhbiwgY29kZTogbnVtYmVyLCBkZXNjcmlwdGlvbjogc3RyaW5nIH0KICovCmZ1bmN0aW9uIG1lZXRzUmVxdWlyZW1lbnRzKHNlc3Npb25EYXRhKSB7CiAgICBpZiAoIXNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMjAzLAogICAgICBkZXNjcmlwdGlvbjogIk5vIHRyYW5zYWN0aW9uX2lkIGF2YWlsYWJsZSBpbiBzZXNzaW9uIGRhdGEiCiAgICB9OwogIH0KCiAgaWYgKAogICAgIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEub25fc2VsZWN0X29yZGVyKSB8fAogICAgc2Vzc2lvbkRhdGEub25fc2VsZWN0X29yZGVyLmxlbmd0aCA9PT0gMAogICkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiAzMDAwLAogICAgICBkZXNjcmlwdGlvbjogIm9uX3NlbGVjdF9vcmRlciBub3QgZm91bmQgaW4gc2Vzc2lvbiBkYXRhIgogICAgfTsKICB9CgogIGlmICgKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnNlbGVjdGVkX2Z1bGZpbGxtZW50cykgfHwKICAgIHNlc3Npb25EYXRhLnNlbGVjdGVkX2Z1bGZpbGxtZW50cy5sZW5ndGggPT09IDAKICApIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJzZWxlY3RlZF9mdWxmaWxsbWVudHMgbm90IGZvdW5kIGluIHNlc3Npb24gZGF0YSIKICAgIH07CiAgfQoKICBpZiAoCiAgICAhQXJyYXkuaXNBcnJheShzZXNzaW9uRGF0YS5wYXltZW50cykgfHwKICAgIHNlc3Npb25EYXRhLnBheW1lbnRzLmxlbmd0aCA9PT0gMAogICkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiAzMDAyLAogICAgICBkZXNjcmlwdGlvbjogInBheW1lbnRzIG5vdCBmb3VuZCBpbiBzZXNzaW9uIGRhdGEiCiAgICB9OwogIH0KCiAgaWYgKAogICAgIUFycmF5LmlzQXJyYXkoc2Vzc2lvbkRhdGEuY29sbGVjdGVkX2J5KSB8fAogICAgc2Vzc2lvbkRhdGEuY29sbGVjdGVkX2J5Lmxlbmd0aCA9PT0gMAogICkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiAzMDAzLAogICAgICBkZXNjcmlwdGlvbjogImNvbGxlY3RlZF9ieSBub3QgZm91bmQgaW4gc2Vzc2lvbiBkYXRhIgogICAgfTsKICB9CgogIGlmICgKICAgICFBcnJheS5pc0FycmF5KHNlc3Npb25EYXRhLnRvdGFsX3ByaWNlKSB8fAogICAgc2Vzc2lvbkRhdGEudG90YWxfcHJpY2UubGVuZ3RoID09PSAwCiAgKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDQsCiAgICAgIGRlc2NyaXB0aW9uOiAidG90YWxfcHJpY2Ugbm90IGZvdW5kIGluIHNlc3Npb24gZGF0YSIKICAgIH07CiAgfQogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiUmVxdWlyZW1lbnRzIG1ldCIgfTsKfQ==
       defaultPayload:
@@ -3320,9 +3297,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_init
-            timestamp: 2026-10-01T09:48:38.441Z
+            timestamp: 2026-11-19T11:38:14.177Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 415c4377-3805-4255-b434-b286beb07752
+            message_id: 51d9ceda-9959-41f2-887e-9b83b1c2ffa6
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3341,7 +3318,7 @@ steps:
                     contact:
                       email: joe.adam@abc.org
                       phone: +91-9999999999
-                  id: 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                  id: 2250f730-1e63-4350-b38e-15d2de989119
                   type: POLICY
                   agent:
                     person:
@@ -3418,7 +3395,7 @@ steps:
                         - NOMINEE_DETAILS
                         - MANUAL_REVIEW
                     form:
-                      id: 97d48cdc-7ede-4b80-998e-30c6c4bd6da8
+                      id: d13169c4-b5fd-4d82-b505-9f1c5a0dcc63
                       mime_type: text/html
                       url: undefined/forms/ONDC:FIS13/Proposer_Details_form/?transaction_id=8a5f94c0-59d7-42a2-9035-d5c725b6fda4&session_id=undefined
                       resubmit: true
@@ -3445,8 +3422,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -3471,14 +3447,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
                   fulfillment_ids:
-                    - 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                    - 2250f730-1e63-4350-b38e-15d2de989119
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -3488,20 +3463,19 @@ steps:
                     bank_code: SBIN0001234
                     currency: INR
                     amount: "2900"
-                  id: b9e12340-5c25-47ab-819b-66fb04ece778
+                  id: 87c6fca7-f1cc-4ba2-8861-1e1a22307399
               provider:
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               quote:
-                id: 13f9decf-c1c3-4946-88b4-b2be9f031db8
+                id: 21db6eac-9196-4493-b63b-3dbb94f0befa
                 breakup:
                   - price:
                       value: "900"
@@ -3552,8 +3526,7 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description:
-          The BPP sends the on_init callback to confirm order initialization
+        description: The BPP sends the on_init callback to confirm order initialization
           and provides the initialized order structure including the insurance
           quote, fulfillment plan, and required proposer information form. This
           response allows the BAP to present the form to the customer and
@@ -3573,21 +3546,21 @@ steps:
       defaultPayload: {}
       saveData: {}
       inputs: {}
-      formHtml: CjwhRE9DVFlQRSBodG1sPgo8aHRtbCBsYW5nPSJlbiI+CiAgPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCIgLz4KICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIiAvPgogICAgPHRpdGxlPkJ1eWVyIERldGFpbHM8L3RpdGxlPgogIDwvaGVhZD4KCiAgPGJvZHk+CiAgICA8Zm9ybSBpZD0iUHJvcG9zZXJfRGV0YWlsc19mb3JtIiBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iPCU9IGFjdGlvblVybCAlPiI+CiAgICAgIDxsYWJlbCBmb3I9ImZpcnN0TmFtZSI+Rmlyc3QgTmFtZSA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0iZmlyc3ROYW1lIiBuYW1lPSJmaXJzdE5hbWUiIHBhdHRlcm49IltBLVphLXpcc117Miw1MH0iIG1heGxlbmd0aD0iNTAiIHRpdGxlPSJOYW1lIG11c3QgY29udGFpbiBvbmx5IGxldHRlcnMgYW5kIHNwYWNlcyAoMi01MCBjaGFyYWN0ZXJzKSIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9Imxhc3ROYW1lIj5MYXN0IE5hbWUgPHNwYW4gc3R5bGU9ImNvbG9yOnJlZCI+Kjwvc3Bhbj48L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9Imxhc3ROYW1lIiBuYW1lPSJsYXN0TmFtZSIgcGF0dGVybj0iW0EtWmEtelxzXXsyLDUwfSIgbWF4bGVuZ3RoPSI1MCIgdGl0bGU9Ik5hbWUgbXVzdCBjb250YWluIG9ubHkgbGV0dGVycyBhbmQgc3BhY2VzICgyLTUwIGNoYXJhY3RlcnMpIiByZXF1aXJlZCAvPgoKICAgICAgPGxhYmVsIGZvcj0iYWRkcmVzcyI+QWRkcmVzcyA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0iYWRkcmVzcyIgbmFtZT0iYWRkcmVzcyIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9ImRvYiI+RGF0ZSBvZiBCaXJ0aCA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJkYXRlIiBpZD0iZG9iIiBuYW1lPSJkb2IiIHJlcXVpcmVkIC8+CgogICAgICA8bGFiZWwgZm9yPSJnZW5kZXIiPkdlbmRlciA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxzZWxlY3QgbmFtZT0iZ2VuZGVyIiBpZD0iZ2VuZGVyIiByZXF1aXJlZD4KICAgICAgICA8b3B0aW9uIHZhbHVlPSIiPi0tIFNlbGVjdCAtLTwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9Im1hbGUiPk1hbGU8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJmZW1hbGUiPkZlbWFsZTwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9InRyYW5zZ2VuZGVyIj5UcmFuc2dlbmRlcjwvb3B0aW9uPgogICAgICA8L3NlbGVjdD4KCiAgICAgPGxhYmVsIGZvcj0icG9saXRpY2FsbHlFeHBvc2VkUGVyc29uIj4KICBQb2xpdGljYWxseSBFeHBvc2VkIFBlcnNvbiA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPgo8L2xhYmVsPgo8aW5wdXQKICB0eXBlPSJjaGVja2JveCIKICBpZD0icG9saXRpY2FsbHlFeHBvc2VkUGVyc29uIgogIG5hbWU9InBvbGl0aWNhbGx5RXhwb3NlZFBlcnNvbiIKICByZXF1aXJlZAovPgoKICAgICAgPGxhYmVsIGZvcj0iZW1haWwiPkVtYWlsIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9ImVtYWlsIiBpZD0iZW1haWwiIG5hbWU9ImVtYWlsIiByZXF1aXJlZCAvPgoKICAgICAgPGxhYmVsIGZvcj0icGhvbmUiPlBob25lIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9InRlbCIgaWQ9InBob25lIiBuYW1lPSJwaG9uZSIgcGF0dGVybj0iWzYtOV1bMC05XXs5fSIgbWF4bGVuZ3RoPSIxMCIgdGl0bGU9IlBob25lIG51bWJlciBtdXN0IGJlIDEwIGRpZ2l0cyBzdGFydGluZyB3aXRoIDYsIDcsIDgsIG9yIDkiIHJlcXVpcmVkIC8+CgogICAgICA8bGFiZWwgZm9yPSJnc3RpbiI+R1NUSU48L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9ImdzdGluIiBuYW1lPSJnc3RpbiIgcGF0dGVybj0iWzAtOV17Mn1bQS1aXXs1fVswLTldezR9W0EtWl17MX1bMS05QS1aXXsxfVpbMC05QS1aXXsxfSIgbWF4bGVuZ3RoPSIxNSIgdGl0bGU9IkVudGVyIGEgdmFsaWQgMTUtY2hhcmFjdGVyIEdTVElOIiAvPgoKICAgICAgPCEtLSBpbnN1cmVkLWRldGFpbHMtZm9ybS1kYXRhIC0tPgogICAgICA8bGFiZWwgZm9yPSJ3ZWlnaHQiPldlaWdodCAoa2cpIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9Im51bWJlciIgaWQ9IndlaWdodCIgbmFtZT0id2VpZ2h0IiBtaW49IjEiIG1heD0iNTAwIiByZXF1aXJlZCAvPgoKICAgICAgPGxhYmVsIGZvcj0iaGVpZ2h0Ij5IZWlnaHQgKGNtKSA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJudW1iZXIiIGlkPSJoZWlnaHQiIG5hbWU9ImhlaWdodCIgbWluPSIxIiBtYXg9IjMwMCIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9InJlbGF0aW9uIj5SZWxhdGlvbnNoaXAgd2l0aCBJbnN1cmVkIFBlcnNvbiA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxzZWxlY3QgbmFtZT0icmVsYXRpb24iIGlkPSJyZWxhdGlvbiIgcmVxdWlyZWQ+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj4tLSBTZWxlY3QgLS08L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJzZWxmIj5TZWxmPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0ic3BvdXNlIj5TcG91c2U8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJzb24iPlNvbjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImRhdWdodGVyIj5EYXVnaHRlcjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImZhdGhlciI+RmF0aGVyPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0ibW90aGVyIj5Nb3RoZXI8L29wdGlvbj4KICAgICAgPC9zZWxlY3Q+CgogICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0iZm9ybUlkIiBuYW1lPSJmb3JtSWQiIHZhbHVlPSI8JT0gZm9ybUlkICU+IiAvPgogICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0idHJhbnNhY3Rpb25JZCIgbmFtZT0idHJhbnNhY3Rpb25JZCIgdmFsdWU9IjwlPSBKU09OLnBhcnNlKHN1Ym1pc3Npb25EYXRhKS50cmFuc2FjdGlvbl9pZCAlPiI+CiAgICAgIDxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJTdWJtaXQiIC8+CiAgICA8L2Zvcm0+CiAgPC9ib2R5Pgo8L2h0bWw+Cg==
+      formHtml: CjwhRE9DVFlQRSBodG1sPgo8aHRtbCBsYW5nPSJlbiI+CiAgPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCIgLz4KICAgIDxtZXRhIG5hbWU9InZpZXdwb3J0IiBjb250ZW50PSJ3aWR0aD1kZXZpY2Utd2lkdGgsIGluaXRpYWwtc2NhbGU9MS4wIiAvPgogICAgPHRpdGxlPkJ1eWVyIERldGFpbHM8L3RpdGxlPgogIDwvaGVhZD4KCiAgPGJvZHk+CiAgICA8Zm9ybSBpZD0iUHJvcG9zZXJfRGV0YWlsc19mb3JtIiBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iPCU9IGFjdGlvblVybCAlPiI+CiAgICAgIDxsYWJlbCBmb3I9ImZpcnN0TmFtZSI+Rmlyc3QgTmFtZSA8L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9ImZpcnN0TmFtZSIgbmFtZT0iZmlyc3ROYW1lIiBwYXR0ZXJuPSJbQS1aYS16XHNdezIsNTB9IiBtYXhsZW5ndGg9IjUwIiB0aXRsZT0iTmFtZSBtdXN0IGNvbnRhaW4gb25seSBsZXR0ZXJzIGFuZCBzcGFjZXMgKDItNTAgY2hhcmFjdGVycykiIHJlcXVpcmVkIC8+CgogICAgICA8bGFiZWwgZm9yPSJsYXN0TmFtZSI+TGFzdCBOYW1lIDwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibGFzdE5hbWUiIG5hbWU9Imxhc3ROYW1lIiBwYXR0ZXJuPSJbQS1aYS16XHNdezIsNTB9IiBtYXhsZW5ndGg9IjUwIiB0aXRsZT0iTmFtZSBtdXN0IGNvbnRhaW4gb25seSBsZXR0ZXJzIGFuZCBzcGFjZXMgKDItNTAgY2hhcmFjdGVycykiIHJlcXVpcmVkIC8+CgogICAgICA8bGFiZWwgZm9yPSJhZGRyZXNzIj5BZGRyZXNzIDwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0iYWRkcmVzcyIgbmFtZT0iYWRkcmVzcyIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9ImRvYiI+RGF0ZSBvZiBCaXJ0aCA8L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0iZGF0ZSIgaWQ9ImRvYiIgbmFtZT0iZG9iIiByZXF1aXJlZCAvPgoKICAgICAgPGxhYmVsIGZvcj0iZ2VuZGVyIj5HZW5kZXIgPC9sYWJlbD4KICAgICAgPHNlbGVjdCBuYW1lPSJnZW5kZXIiIGlkPSJnZW5kZXIiIHJlcXVpcmVkPgogICAgICAgIDxvcHRpb24gdmFsdWU9IiI+LS0gU2VsZWN0IC0tPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0ibWFsZSI+TWFsZTwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImZlbWFsZSI+RmVtYWxlPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0idHJhbnNnZW5kZXIiPlRyYW5zZ2VuZGVyPC9vcHRpb24+CiAgICAgIDwvc2VsZWN0PgoKICAgICA8bGFiZWwgZm9yPSJwb2xpdGljYWxseUV4cG9zZWRQZXJzb24iPgogIFBvbGl0aWNhbGx5IEV4cG9zZWQgUGVyc29uIAo8L2xhYmVsPgo8aW5wdXQKICB0eXBlPSJjaGVja2JveCIKICBpZD0icG9saXRpY2FsbHlFeHBvc2VkUGVyc29uIgogIG5hbWU9InBvbGl0aWNhbGx5RXhwb3NlZFBlcnNvbiIKICByZXF1aXJlZAovPgoKICAgICAgPGxhYmVsIGZvcj0iZW1haWwiPkVtYWlsIDwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJlbWFpbCIgaWQ9ImVtYWlsIiBuYW1lPSJlbWFpbCIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9InBob25lIj5QaG9uZSA8L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0idGVsIiBpZD0icGhvbmUiIG5hbWU9InBob25lIiBwYXR0ZXJuPSJbNi05XVswLTldezl9IiBtYXhsZW5ndGg9IjEwIiB0aXRsZT0iUGhvbmUgbnVtYmVyIG11c3QgYmUgMTAgZGlnaXRzIHN0YXJ0aW5nIHdpdGggNiwgNywgOCwgb3IgOSIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9ImdzdGluIj5HU1RJTjwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0iZ3N0aW4iIG5hbWU9ImdzdGluIiBwYXR0ZXJuPSJbMC05XXsyfVtBLVpdezV9WzAtOV17NH1bQS1aXXsxfVsxLTlBLVpdezF9WlswLTlBLVpdezF9IiBtYXhsZW5ndGg9IjE1IiB0aXRsZT0iRW50ZXIgYSB2YWxpZCAxNS1jaGFyYWN0ZXIgR1NUSU4iIC8+CgogICAgICA8IS0tIGluc3VyZWQtZGV0YWlscy1mb3JtLWRhdGEgLS0+CiAgICAgIDxsYWJlbCBmb3I9IndlaWdodCI+V2VpZ2h0IChrZykgPC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9Im51bWJlciIgaWQ9IndlaWdodCIgbmFtZT0id2VpZ2h0IiBtaW49IjEiIG1heD0iNTAwIiByZXF1aXJlZCAvPgoKICAgICAgPGxhYmVsIGZvcj0iaGVpZ2h0Ij5IZWlnaHQgKGNtKSA8L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0ibnVtYmVyIiBpZD0iaGVpZ2h0IiBuYW1lPSJoZWlnaHQiIG1pbj0iMSIgbWF4PSIzMDAiIHJlcXVpcmVkIC8+CgogICAgICA8bGFiZWwgZm9yPSJyZWxhdGlvbiI+UmVsYXRpb25zaGlwIHdpdGggSW5zdXJlZCBQZXJzb24gPC9sYWJlbD4KICAgICAgPHNlbGVjdCBuYW1lPSJyZWxhdGlvbiIgaWQ9InJlbGF0aW9uIiByZXF1aXJlZD4KICAgICAgICA8b3B0aW9uIHZhbHVlPSIiPi0tIFNlbGVjdCAtLTwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9InNlbGYiPlNlbGY8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJzcG91c2UiPlNwb3VzZTwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9InNvbiI+U29uPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZGF1Z2h0ZXIiPkRhdWdodGVyPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZmF0aGVyIj5GYXRoZXI8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJtb3RoZXIiPk1vdGhlcjwvb3B0aW9uPgogICAgICA8L3NlbGVjdD4KCiAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJmb3JtSWQiIG5hbWU9ImZvcm1JZCIgdmFsdWU9IjwlPSBmb3JtSWQgJT4iIC8+CiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJ0cmFuc2FjdGlvbklkIiBuYW1lPSJ0cmFuc2FjdGlvbklkIiB2YWx1ZT0iPCU9IEpTT04ucGFyc2Uoc3VibWlzc2lvbkRhdGEpLnRyYW5zYWN0aW9uX2lkICU+Ij4KICAgICAgPGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IlN1Ym1pdCIgLz4KICAgIDwvZm9ybT4KICA8L2JvZHk+CjwvaHRtbD4K
     examples:
       - name: example for html_form
         payload:
           firstName: Nikita
           lastName: Sharma
           address: house
-          dob: 2026-10-29
+          dob: 2026-11-24
           gender: female
           politicallyExposedPerson: on
           email: nikita.sharma@test.com
-          phone: "9920294029"
+          phone: "9988998899"
           gstin: ""
-          weight: "60"
-          height: "150"
+          weight: "8"
+          height: "66"
           relation: spouse
           formId: <%= formId %>
           transactionId: <%= JSON.parse(submissionData).transaction_id %>
@@ -3650,9 +3623,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: init
-            timestamp: 2026-10-01T09:49:23.870Z
+            timestamp: 2026-11-19T11:38:39.975Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 3fc93e65-c7ba-47f3-86b0-e6fdd34136e4
+            message_id: 079138e4-9f89-4182-a193-fec763a1dac1
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -3673,17 +3646,17 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                  id: 2250f730-1e63-4350-b38e-15d2de989119
                   type: POLICY
               items:
                 - id: CHILD_ITEM_ID_I1
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 97d48cdc-7ede-4b80-998e-30c6c4bd6da8
+                      id: d13169c4-b5fd-4d82-b505-9f1c5a0dcc63
                     form_response:
                       status: SUCCESS
-                      submission_id: 5384ae64-0f45-4daf-b77b-1f2e4d6b87c7
+                      submission_id: 49a2a916-e1f8-4e93-81ee-30b8e82039fb
                   add_ons:
                     - id: A1
                       descriptor:
@@ -3705,8 +3678,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -3731,14 +3703,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -3761,8 +3732,7 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description:
-          The BAP initiates a health insurance policy order with the BPP,
+        description: The BAP initiates a health insurance policy order with the BPP,
           locking in the selected provider, coverage items, fulfillments, and
           billing information to establish formal commitment for the insurance
           application. This step binds the policyholder's prior selections into
@@ -3772,8 +3742,7 @@ steps:
     owner: BPP
     responseFor: init2
     unsolicited: false
-    description:
-      The BPP sends the initialized order containing the selected health
+    description: The BPP sends the initialized order containing the selected health
       insurance coverage, fulfillment details, premium quote, and required
       e-forms for the BAP to collect policyholder and nominee information.
     mock:
@@ -3805,8 +3774,7 @@ steps:
               descriptor:
                 name: ABC Insurance Ltd.
                 short_desc: "ABC Insurance Ltd. India "
-                long_desc:
-                  ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                   Motor, Marine etc
                 images:
                   - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
@@ -3924,8 +3892,7 @@ steps:
                             value: "50000"
                           - descriptor:
                               code: NOMINEE_DETAILS
-                              short_desc:
-                                Describes the format as 'Salutation | First Name | Middle Name |
+                              short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                 Last Name | Relationship | Contact Number'
                                 represents a full name structure, where the
                                 values are separated by a pipe (|) symbol
@@ -4026,9 +3993,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_init
-            timestamp: 2026-10-01T09:49:23.891Z
+            timestamp: 2026-11-19T11:38:40.005Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 3fc93e65-c7ba-47f3-86b0-e6fdd34136e4
+            message_id: 079138e4-9f89-4182-a193-fec763a1dac1
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4047,7 +4014,7 @@ steps:
                     contact:
                       email: joe.adam@abc.org
                       phone: +91-9999999999
-                  id: 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                  id: 2250f730-1e63-4350-b38e-15d2de989119
                   type: POLICY
                   agent:
                     person:
@@ -4125,7 +4092,7 @@ steps:
                         - NOMINEE_DETAILS
                         - MANUAL_REVIEW
                     form:
-                      id: 060c2558-66c6-4c56-a970-67419b772ee9
+                      id: bc8745e1-d68a-42fa-af02-237d5845800d
                       mime_type: text/html
                       url: undefined/forms/ONDC:FIS13/nominee_details_form/?transaction_id=8a5f94c0-59d7-42a2-9035-d5c725b6fda4&session_id=undefined
                       resubmit: true
@@ -4151,8 +4118,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -4177,14 +4143,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
                   fulfillment_ids:
-                    - 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                    - 2250f730-1e63-4350-b38e-15d2de989119
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -4194,20 +4159,19 @@ steps:
                     bank_code: SBIN0001234
                     currency: INR
                     amount: "2900"
-                  id: b9e12340-5c25-47ab-819b-66fb04ece778
+                  id: 87c6fca7-f1cc-4ba2-8861-1e1a22307399
               provider:
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               quote:
-                id: 13f9decf-c1c3-4946-88b4-b2be9f031db8
+                id: 21db6eac-9196-4493-b63b-3dbb94f0befa
                 breakup:
                   - price:
                       value: "900"
@@ -4258,8 +4222,7 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description:
-          The BPP sends the initialized order containing the selected health
+        description: The BPP sends the initialized order containing the selected health
           insurance coverage, fulfillment details, premium quote, and required
           e-forms for the BAP to collect policyholder and nominee information.
   - api: html_form
@@ -4267,8 +4230,7 @@ steps:
     owner: BPP
     responseFor: null
     unsolicited: false
-    description:
-      The BPP generates and transmits an HTML form to the BAP to collect
+    description: The BPP generates and transmits an HTML form to the BAP to collect
       the applicant's personal, health, and insurance plan preference
       information needed to proceed with health insurance policy application and
       underwriting.
@@ -4279,14 +4241,14 @@ steps:
       defaultPayload: {}
       saveData: {}
       inputs: {}
-      formHtml: CjwhRE9DVFlQRSBodG1sPgo8aHRtbCBsYW5nPSJlbiI+Cgo8aGVhZD4KICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgogIDx0aXRsZT5Ob21pbmVlIERldGFpbHM8L3RpdGxlPgo8L2hlYWQ+Cgo8Ym9keT4KCjxmb3JtIGlkPSJub21pbmVlX2RldGFpbHNfZm9ybSIgbWV0aG9kPSJQT1NUIiBhY3Rpb249IjwlPSBhY3Rpb25VcmwgJT4iPgoKICAgIDwhLS0gTm9taW5lZSAxIC0tPgogICAgPGZpZWxkc2V0PgogICAgICA8bGVnZW5kPjxoMz5Ob21pbmVlIDE8L2gzPjwvbGVnZW5kPgoKICAgICAgPGxhYmVsIGZvcj0ibm9taW5lZTFfZmlyc3ROYW1lIj5GaXJzdCBOYW1lIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJub21pbmVlMV9maXJzdE5hbWUiIG5hbWU9Im5vbWluZWUxX2ZpcnN0TmFtZSIgcGxhY2Vob2xkZXI9IkVudGVyIGZpcnN0IG5hbWUiIHBhdHRlcm49IltBLVphLXpcc117Miw1MH0iIG1heGxlbmd0aD0iNTAiIHRpdGxlPSJOYW1lIG11c3QgY29udGFpbiBvbmx5IGxldHRlcnMgYW5kIHNwYWNlcyIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9Im5vbWluZWUxX2xhc3ROYW1lIj5MYXN0IE5hbWUgPHNwYW4gc3R5bGU9ImNvbG9yOnJlZCI+Kjwvc3Bhbj48L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9Im5vbWluZWUxX2xhc3ROYW1lIiBuYW1lPSJub21pbmVlMV9sYXN0TmFtZSIgcGxhY2Vob2xkZXI9IkVudGVyIGxhc3QgbmFtZSIgcGF0dGVybj0iW0EtWmEtelxzXXsyLDUwfSIgbWF4bGVuZ3RoPSI1MCIgdGl0bGU9Ik5hbWUgbXVzdCBjb250YWluIG9ubHkgbGV0dGVycyBhbmQgc3BhY2VzIiByZXF1aXJlZCAvPgoKICAgICAgPGxhYmVsIGZvcj0ibm9taW5lZTFfZG9iIj5EYXRlIG9mIEJpcnRoIDxzcGFuIHN0eWxlPSJjb2xvcjpyZWQiPio8L3NwYW4+PC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9ImRhdGUiIGlkPSJub21pbmVlMV9kb2IiIG5hbWU9Im5vbWluZWUxX2RvYiIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9Im5vbWluZWUxX3JlbGF0aW9uIj5SZWxhdGlvbnNoaXAgd2l0aCBQcm9wb3NlciA8c3BhbiBzdHlsZT0iY29sb3I6cmVkIj4qPC9zcGFuPjwvbGFiZWw+CiAgICAgIDxzZWxlY3QgbmFtZT0ibm9taW5lZTFfcmVsYXRpb24iIGlkPSJub21pbmVlMV9yZWxhdGlvbiIgcmVxdWlyZWQ+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj4tLSBTZWxlY3QgLS08L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJzcG91c2UiPlNwb3VzZTwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9InNvbiI+U29uPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZGF1Z2h0ZXIiPkRhdWdodGVyPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZmF0aGVyIj5GYXRoZXI8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJtb3RoZXIiPk1vdGhlcjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9Im90aGVyIj5PdGhlcjwvb3B0aW9uPgogICAgICA8L3NlbGVjdD4KCiAgICA8L2ZpZWxkc2V0PgoKICAgIDwhLS0gTm9taW5lZSAyIC0tPgogICAgPGZpZWxkc2V0PgogICAgICA8bGVnZW5kPjxoMz5Ob21pbmVlIDI8L2gzPjwvbGVnZW5kPgoKICAgICAgPGxhYmVsIGZvcj0ibm9taW5lZTJfZmlyc3ROYW1lIj5GaXJzdCBOYW1lPC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJub21pbmVlMl9maXJzdE5hbWUiIG5hbWU9Im5vbWluZWUyX2ZpcnN0TmFtZSIgcGxhY2Vob2xkZXI9IkVudGVyIGZpcnN0IG5hbWUiIHBhdHRlcm49IltBLVphLXpcc117Miw1MH0iIG1heGxlbmd0aD0iNTAiIHRpdGxlPSJOYW1lIG11c3QgY29udGFpbiBvbmx5IGxldHRlcnMgYW5kIHNwYWNlcyIgLz4KCiAgICAgIDxsYWJlbCBmb3I9Im5vbWluZWUyX2xhc3ROYW1lIj5MYXN0IE5hbWU8L2xhYmVsPgogICAgICA8aW5wdXQgdHlwZT0idGV4dCIgaWQ9Im5vbWluZWUyX2xhc3ROYW1lIiBuYW1lPSJub21pbmVlMl9sYXN0TmFtZSIgcGxhY2Vob2xkZXI9IkVudGVyIGxhc3QgbmFtZSIgcGF0dGVybj0iW0EtWmEtelxzXXsyLDUwfSIgbWF4bGVuZ3RoPSI1MCIgdGl0bGU9Ik5hbWUgbXVzdCBjb250YWluIG9ubHkgbGV0dGVycyBhbmQgc3BhY2VzIiAvPgoKICAgICAgPGxhYmVsIGZvcj0ibm9taW5lZTJfZG9iIj5EYXRlIG9mIEJpcnRoPC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9ImRhdGUiIGlkPSJub21pbmVlMl9kb2IiIG5hbWU9Im5vbWluZWUyX2RvYiIgLz4KCiAgICAgIDxsYWJlbCBmb3I9Im5vbWluZWUyX3JlbGF0aW9uIj5SZWxhdGlvbnNoaXAgd2l0aCBQcm9wb3NlcjwvbGFiZWw+CiAgICAgIDxzZWxlY3QgbmFtZT0ibm9taW5lZTJfcmVsYXRpb24iIGlkPSJub21pbmVlMl9yZWxhdGlvbiI+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iIj4tLSBTZWxlY3QgLS08L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJzcG91c2UiPlNwb3VzZTwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9InNvbiI+U29uPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZGF1Z2h0ZXIiPkRhdWdodGVyPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0iZmF0aGVyIj5GYXRoZXI8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJtb3RoZXIiPk1vdGhlcjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9Im90aGVyIj5PdGhlcjwvb3B0aW9uPgogICAgICA8L3NlbGVjdD4KCiAgICAKICAgIDwvZmllbGRzZXQ+CgogICAgPGlucHV0IHR5cGU9ImhpZGRlbiIgaWQ9ImZvcm1JZCIgbmFtZT0iZm9ybUlkIiB2YWx1ZT0iPCU9IGZvcm1JZCAlPiIgLz4KCiAgICAgICAgICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJ0cmFuc2FjdGlvbklkIiBuYW1lPSJ0cmFuc2FjdGlvbklkIiB2YWx1ZT0iPCU9IEpTT04ucGFyc2Uoc3VibWlzc2lvbkRhdGEpLnRyYW5zYWN0aW9uX2lkICU+Ij4KICAgIDxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJTdWJtaXQiIC8+Cgo8L2Zvcm0+Cgo8L2JvZHk+CjwvaHRtbD4KCg==
+      formHtml: CjwhRE9DVFlQRSBodG1sPgo8aHRtbCBsYW5nPSJlbiI+Cgo8aGVhZD4KICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgPG1ldGEgbmFtZT0idmlld3BvcnQiIGNvbnRlbnQ9IndpZHRoPWRldmljZS13aWR0aCwgaW5pdGlhbC1zY2FsZT0xLjAiPgogIDx0aXRsZT5Ob21pbmVlIERldGFpbHM8L3RpdGxlPgo8L2hlYWQ+Cgo8Ym9keT4KCjxmb3JtIGlkPSJub21pbmVlX2RldGFpbHNfZm9ybSIgbWV0aG9kPSJQT1NUIiBhY3Rpb249IjwlPSBhY3Rpb25VcmwgJT4iPgoKICAgIDwhLS0gTm9taW5lZSAxIC0tPgogICAgPGZpZWxkc2V0PgogICAgICA8bGVnZW5kPjxoMz5Ob21pbmVlIDE8L2gzPjwvbGVnZW5kPgoKICAgICAgPGxhYmVsIGZvcj0ibm9taW5lZTFfZmlyc3ROYW1lIj5GaXJzdCBOYW1lIDwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibm9taW5lZTFfZmlyc3ROYW1lIiBuYW1lPSJub21pbmVlMV9maXJzdE5hbWUiIHBsYWNlaG9sZGVyPSJFbnRlciBmaXJzdCBuYW1lIiBwYXR0ZXJuPSJbQS1aYS16XHNdezIsNTB9IiBtYXhsZW5ndGg9IjUwIiB0aXRsZT0iTmFtZSBtdXN0IGNvbnRhaW4gb25seSBsZXR0ZXJzIGFuZCBzcGFjZXMiIHJlcXVpcmVkIC8+CgogICAgICA8bGFiZWwgZm9yPSJub21pbmVlMV9sYXN0TmFtZSI+TGFzdCBOYW1lIDwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibm9taW5lZTFfbGFzdE5hbWUiIG5hbWU9Im5vbWluZWUxX2xhc3ROYW1lIiBwbGFjZWhvbGRlcj0iRW50ZXIgbGFzdCBuYW1lIiBwYXR0ZXJuPSJbQS1aYS16XHNdezIsNTB9IiBtYXhsZW5ndGg9IjUwIiB0aXRsZT0iTmFtZSBtdXN0IGNvbnRhaW4gb25seSBsZXR0ZXJzIGFuZCBzcGFjZXMiIHJlcXVpcmVkIC8+CgogICAgICA8bGFiZWwgZm9yPSJub21pbmVlMV9kb2IiPkRhdGUgb2YgQmlydGggPC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9ImRhdGUiIGlkPSJub21pbmVlMV9kb2IiIG5hbWU9Im5vbWluZWUxX2RvYiIgcmVxdWlyZWQgLz4KCiAgICAgIDxsYWJlbCBmb3I9Im5vbWluZWUxX3JlbGF0aW9uIj5SZWxhdGlvbnNoaXAgd2l0aCBQcm9wb3NlciA8L2xhYmVsPgogICAgICA8c2VsZWN0IG5hbWU9Im5vbWluZWUxX3JlbGF0aW9uIiBpZD0ibm9taW5lZTFfcmVsYXRpb24iIHJlcXVpcmVkPgogICAgICAgIDxvcHRpb24gdmFsdWU9IiI+LS0gU2VsZWN0IC0tPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0ic3BvdXNlIj5TcG91c2U8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJzb24iPlNvbjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImRhdWdodGVyIj5EYXVnaHRlcjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImZhdGhlciI+RmF0aGVyPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0ibW90aGVyIj5Nb3RoZXI8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJvdGhlciI+T3RoZXI8L29wdGlvbj4KICAgICAgPC9zZWxlY3Q+CgogICAgPC9maWVsZHNldD4KCiAgICA8IS0tIE5vbWluZWUgMiAtLT4KICAgIDxmaWVsZHNldD4KICAgICAgPGxlZ2VuZD48aDM+Tm9taW5lZSAyPC9oMz48L2xlZ2VuZD4KCiAgICAgIDxsYWJlbCBmb3I9Im5vbWluZWUyX2ZpcnN0TmFtZSI+Rmlyc3QgTmFtZTwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJ0ZXh0IiBpZD0ibm9taW5lZTJfZmlyc3ROYW1lIiBuYW1lPSJub21pbmVlMl9maXJzdE5hbWUiIHBsYWNlaG9sZGVyPSJFbnRlciBmaXJzdCBuYW1lIiBwYXR0ZXJuPSJbQS1aYS16XHNdezIsNTB9IiBtYXhsZW5ndGg9IjUwIiB0aXRsZT0iTmFtZSBtdXN0IGNvbnRhaW4gb25seSBsZXR0ZXJzIGFuZCBzcGFjZXMiIC8+CgogICAgICA8bGFiZWwgZm9yPSJub21pbmVlMl9sYXN0TmFtZSI+TGFzdCBOYW1lPC9sYWJlbD4KICAgICAgPGlucHV0IHR5cGU9InRleHQiIGlkPSJub21pbmVlMl9sYXN0TmFtZSIgbmFtZT0ibm9taW5lZTJfbGFzdE5hbWUiIHBsYWNlaG9sZGVyPSJFbnRlciBsYXN0IG5hbWUiIHBhdHRlcm49IltBLVphLXpcc117Miw1MH0iIG1heGxlbmd0aD0iNTAiIHRpdGxlPSJOYW1lIG11c3QgY29udGFpbiBvbmx5IGxldHRlcnMgYW5kIHNwYWNlcyIgLz4KCiAgICAgIDxsYWJlbCBmb3I9Im5vbWluZWUyX2RvYiI+RGF0ZSBvZiBCaXJ0aDwvbGFiZWw+CiAgICAgIDxpbnB1dCB0eXBlPSJkYXRlIiBpZD0ibm9taW5lZTJfZG9iIiBuYW1lPSJub21pbmVlMl9kb2IiIC8+CgogICAgICA8bGFiZWwgZm9yPSJub21pbmVlMl9yZWxhdGlvbiI+UmVsYXRpb25zaGlwIHdpdGggUHJvcG9zZXI8L2xhYmVsPgogICAgICA8c2VsZWN0IG5hbWU9Im5vbWluZWUyX3JlbGF0aW9uIiBpZD0ibm9taW5lZTJfcmVsYXRpb24iPgogICAgICAgIDxvcHRpb24gdmFsdWU9IiI+LS0gU2VsZWN0IC0tPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0ic3BvdXNlIj5TcG91c2U8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJzb24iPlNvbjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImRhdWdodGVyIj5EYXVnaHRlcjwvb3B0aW9uPgogICAgICAgIDxvcHRpb24gdmFsdWU9ImZhdGhlciI+RmF0aGVyPC9vcHRpb24+CiAgICAgICAgPG9wdGlvbiB2YWx1ZT0ibW90aGVyIj5Nb3RoZXI8L29wdGlvbj4KICAgICAgICA8b3B0aW9uIHZhbHVlPSJvdGhlciI+T3RoZXI8L29wdGlvbj4KICAgICAgPC9zZWxlY3Q+CgogICAgCiAgICA8L2ZpZWxkc2V0PgoKICAgIDxpbnB1dCB0eXBlPSJoaWRkZW4iIGlkPSJmb3JtSWQiIG5hbWU9ImZvcm1JZCIgdmFsdWU9IjwlPSBmb3JtSWQgJT4iIC8+CgogICAgICAgICAgICA8aW5wdXQgdHlwZT0iaGlkZGVuIiBpZD0idHJhbnNhY3Rpb25JZCIgbmFtZT0idHJhbnNhY3Rpb25JZCIgdmFsdWU9IjwlPSBKU09OLnBhcnNlKHN1Ym1pc3Npb25EYXRhKS50cmFuc2FjdGlvbl9pZCAlPiI+CiAgICA8aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iU3VibWl0IiAvPgoKPC9mb3JtPgoKPC9ib2R5Pgo8L2h0bWw+Cgo=
     examples:
       - name: example for html_form
         payload:
-          nominee1_firstName: NIKITA
-          nominee1_lastName: nikita
-          nominee1_dob: 2026-10-29
-          nominee1_relation: spouse
+          nominee1_firstName: nikita
+          nominee1_lastName: Sharma
+          nominee1_dob: 2026-11-12
+          nominee1_relation: son
           nominee2_firstName: ""
           nominee2_lastName: ""
           nominee2_dob: ""
@@ -4294,8 +4256,7 @@ steps:
           formId: <%= formId %>
           transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
-        description:
-          The BPP generates and transmits an HTML form to the BAP to collect
+        description: The BPP generates and transmits an HTML form to the BAP to collect
           the applicant's personal, health, and insurance plan preference
           information needed to proceed with health insurance policy application
           and underwriting.
@@ -4304,7 +4265,9 @@ steps:
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP submits the nominee details collected from the applicant to the BPP via init, completing the information required before the order proceeds to manual underwriting review.
+    description: The BAP submits the nominee details collected from the applicant to
+      the BPP via init, completing the information required before the order
+      proceeds to manual underwriting review.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCgogIGNvbnN0IHN1Ym1pc3Npb25faWQgPSBzZXNzaW9uRGF0YT8ubm9taW5lZV9kZXRhaWxzX2Zvcm0KICBjb25zdCBmb3JtX3N0YXR1cyA9IHN1Ym1pc3Npb25faWQgPyAiU1VDQ0VTUyIKICAgIDogIlBFTkRJTkciOwoKICBjb25zdCB4aW5wdXQgPSB7CiAgICAiZm9ybSI6IHsKICAgICAgImlkIjogIkYwNyIKICAgIH0sCiAgICAiZm9ybV9yZXNwb25zZSI6IHsKICAgICAgInN0YXR1cyI6ICJTVUNDRVNTIiwKICAgICAgInN1Ym1pc3Npb25faWQiOiAiZjdkZjA4NGEtNDgzYy00MmUyLTlhZWItOWQ2ZTZmOTVhNWU4IgogICAgfQogIH0KICBpZiAoc2Vzc2lvbkRhdGEuaW5pdF9vcmRlcikgewogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlciA9IHNlc3Npb25EYXRhLmluaXRfb3JkZXJbMF07CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50cyA9IHNlc3Npb25EYXRhLm9uX2luaXRfZnVsZmlsbG1lbnRzWzBdOwogICAgZGVsZXRlIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuZnVsZmlsbG1lbnRzWzBdPy5hZ2VudDsKICAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXS5jdXN0b21lciA9IHNlc3Npb25EYXRhPy5jdXN0b21lclswXTsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIucGF5bWVudHNbMF0uaWQgPSBzZXNzaW9uRGF0YS5wYXltZW50c1swXS5pZDsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF0ueGlucHV0ID0geGlucHV0OwoKICB9CgogICAgaWYgKGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2U/Lm9yZGVyPy5pdGVtcykgewogICAgICBjb25zdCBpdGVtID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXTsKCiAgICAgIGl0ZW0ueGlucHV0ID0gaXRlbS54aW5wdXQgfHwge307CgogICAgICBpZiAoaXRlbS54aW5wdXQuZm9ybSkgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm0uaWQgPSBzZXNzaW9uRGF0YS5mb3JtX2lkWzBdIHx8ICJGMDciOwogICAgICB9CgogICAgICBpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlID0gaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZSB8fCB7fTsKCiAgICAgIGlmIChmb3JtX3N0YXR1cykgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3RhdHVzID0gZm9ybV9zdGF0dXM7CiAgICAgIH0KCiAgICAgIGlmIChzdWJtaXNzaW9uX2lkKSB7CiAgICAgICAgaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZS5zdWJtaXNzaW9uX2lkID0gc3VibWlzc2lvbl9pZDsKICAgICAgfQogICAgfQoKCiAgcmV0dXJuIGRlZmF1bHRQYXlsb2FkOwp9
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQ/LnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dC50cmFuc2FjdGlvbl9pZCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICAvLyBWYWxpZGF0ZSBvcmRlcgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXIpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLm9yZGVyIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIC8vIFZhbGlkYXRlIHBheW1lbnQKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyPy5wYXltZW50cz8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAib3JkZXIucGF5bWVudHNbMF0gaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgLy8gVmFsaWRhdGUgZm9ybSByZXNwb25zZQogIGNvbnN0IGl0ZW0gPSB0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXTsKCiAgaWYgKCFpdGVtPy54aW5wdXQ/LmZvcm1fcmVzcG9uc2U/LnN1Ym1pc3Npb25faWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJ4aW5wdXQuZm9ybV9yZXNwb25zZS5zdWJtaXNzaW9uX2lkIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIGlmICghaXRlbT8ueGlucHV0Py5mb3JtX3Jlc3BvbnNlPy5zdGF0dXMpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJ4aW5wdXQuZm9ybV9yZXNwb25zZS5zdGF0dXMgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -4345,9 +4308,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: init
-            timestamp: 2026-10-01T09:49:34.297Z
+            timestamp: 2026-11-19T11:38:48.842Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 98bd1113-cece-4013-8ba7-f176a196be15
+            message_id: f8f10863-dbe7-4136-bacc-addabbd82df1
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4368,17 +4331,17 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                  id: 2250f730-1e63-4350-b38e-15d2de989119
                   type: POLICY
               items:
                 - id: CHILD_ITEM_ID_I1
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 060c2558-66c6-4c56-a970-67419b772ee9
+                      id: bc8745e1-d68a-42fa-af02-237d5845800d
                     form_response:
                       status: SUCCESS
-                      submission_id: aea0ace3-25d1-4eb0-ba37-09ce49d43acd
+                      submission_id: 781aa925-3539-4a90-a5ff-bce0d426fa6a
                   add_ons:
                     - id: A1
                       descriptor:
@@ -4400,8 +4363,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -4426,14 +4388,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -4456,13 +4417,17 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: BAP submits init with nominee details.
+        description: The BAP submits the nominee details collected from the applicant to
+          the BPP via init, completing the information required before the order
+          proceeds to manual underwriting review.
   - api: on_init
     action_id: on_init4
     owner: BPP
     responseFor: init4
     unsolicited: false
-    description: The BPP returns the order updated with the nominee details, along with a manual review form requesting any additional documents needed to complete underwriting.
+    description: The BPP returns the order updated with the nominee details, along
+      with a manual review form requesting any additional documents needed to
+      complete underwriting.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCgoKY29uc3QgeGlucHV0ID0gewogICAgICAgICAgICAicmVxdWlyZWQiOiB0cnVlLAogICAgICAgICAgICAiaGVhZCI6IHsKICAgICAgICAgICAgICAiZGVzY3JpcHRvciI6IHsKICAgICAgICAgICAgICAgICJuYW1lIjogIk1BTlVBTF9SRVZJRVciCiAgICAgICAgICAgICAgfSwKICAgICAgICAgICAgICAiaW5kZXgiOiB7CiAgICAgICAgICAgICAgICAibWluIjogMCwKICAgICAgICAgICAgICAgICJjdXIiOiAyLAogICAgICAgICAgICAgICAgIm1heCI6IDIKICAgICAgICAgICAgICB9LAogICAgICAgICAgICAgICJoZWFkaW5ncyI6IFsKICAgICAgICAgICAgICAgICJQUk9QT1NFUl9ERVRBSUxTIiwKICAgICAgICAgICAgICAgICJOT01JTkVFX0RFVEFJTFMiLAogICAgICAgICAgICAgICAgIk1BTlVBTF9SRVZJRVciCiAgICAgICAgICAgICAgXQogICAgICAgICAgICB9LAogICAgICAgICAgICAiZm9ybSI6IHsKICAgICAgICAgICAgICAiaWQiOiAiRjA3IiwKICAgICAgICAgICAgICAibWltZV90eXBlIjogImFwcGxpY2F0aW9uL2h0bWwiLAogICAgICAgICAgICAgICJ1cmwiOiAiaHR0cHM6Ly9maXMudGVzdC5icHAuaW8vZm9ybS9ub21pbmVlX2R0bHM/Zm9ybWlkPUYwNyIsCiAgICAgICAgICAgICAgInJlc3VibWl0IjogdHJ1ZSwKICAgICAgICAgICAgICAibXVsdGlwbGVfc3VtYmlzc2lvbnMiOiBmYWxzZQogICAgICAgICAgICB9CiAgICAgICAgICB9CmlmKHNlc3Npb25EYXRhLm9uX2luaXRfb3JkZXIpewogIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIgPSBzZXNzaW9uRGF0YS5vbl9pbml0X29yZGVyWzBdOwogIAogIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF0ueGlucHV0ID0geGlucHV0OwoKfQogCgogIC8vIFVwZGF0ZSBmb3JtIFVSTHMgYW5kIGdlbmVyYXRlIGR5bmFtaWMgZm9ybSBJRHMgZm9yIGl0ZW1zCiAgaWYgKGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2U/Lm9yZGVyPy5pdGVtcykgewogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtcyA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXMubWFwKChpdGVtKSA9PiB7CiAgICAgIGlmIChpdGVtLnhpbnB1dD8uZm9ybSkgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm0uaWQgPXV1aWR2NCgpCiAgICAgICAgY29uc3QgdXJsID0gY3JlYXRlRm9ybVVSTCgiT05EQzpGSVMxMyIsIm1hbnVhbF9yZXZpZXdfZm9ybSIsc2Vzc2lvbkRhdGEpKwogICAgICAgICAgICAgICAgJyZiYXBfdXJpPScgKyBlbmNvZGVVUklDb21wb25lbnQoZGVmYXVsdFBheWxvYWQuY29udGV4dC5iYXBfdXJpKTsKICAgICAgICBpdGVtLnhpbnB1dC5mb3JtLnVybCA9IHVybDsKICAgICAgfQogICAgICByZXR1cm4gaXRlbTsKICAgIH0pOwogIH0KCgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQ/LnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dC50cmFuc2FjdGlvbl9pZCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICAvLyBWYWxpZGF0ZSBvcmRlcgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXIpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLm9yZGVyIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIC8vIFZhbGlkYXRlIGl0ZW0KICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAib3JkZXIuaXRlbXNbMF0gaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgLy8gVmFsaWRhdGUgeGlucHV0CiAgY29uc3QgaXRlbSA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXTsKCiAgaWYgKCFpdGVtPy54aW5wdXQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJpdGVtLnhpbnB1dCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICBpZiAoIWl0ZW0/LnhpbnB1dD8uZm9ybT8uaWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJ4aW5wdXQuZm9ybS5pZCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICBpZiAoIWl0ZW0/LnhpbnB1dD8uZm9ybT8udXJsKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAieGlucHV0LmZvcm0udXJsIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJWYWxpZCByZXF1ZXN0IiB9Owp9
@@ -4506,9 +4471,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_init
-            timestamp: 2026-10-01T09:49:34.322Z
+            timestamp: 2026-11-19T11:38:48.885Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 98bd1113-cece-4013-8ba7-f176a196be15
+            message_id: f8f10863-dbe7-4136-bacc-addabbd82df1
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4527,7 +4492,7 @@ steps:
                     contact:
                       email: joe.adam@abc.org
                       phone: +91-9999999999
-                  id: 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                  id: 2250f730-1e63-4350-b38e-15d2de989119
                   type: POLICY
                   agent:
                     person:
@@ -4605,7 +4570,7 @@ steps:
                         - NOMINEE_DETAILS
                         - MANUAL_REVIEW
                     form:
-                      id: f2eae8c5-5ff7-4242-944c-c72faf8040f5
+                      id: e2b9a6d8-505c-4da1-8f41-e1c1aa73952a
                       mime_type: application/html
                       url: undefined/forms/ONDC:FIS13/manual_review_form/?transaction_id=8a5f94c0-59d7-42a2-9035-d5c725b6fda4&session_id=undefined&bap_uri=https%3A%2F%2Fbap.example.com
                       resubmit: true
@@ -4631,8 +4596,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -4657,14 +4621,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
                   fulfillment_ids:
-                    - 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                    - 2250f730-1e63-4350-b38e-15d2de989119
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -4674,20 +4637,19 @@ steps:
                     bank_code: SBIN0001234
                     currency: INR
                     amount: "2900"
-                  id: b9e12340-5c25-47ab-819b-66fb04ece778
+                  id: 87c6fca7-f1cc-4ba2-8861-1e1a22307399
               provider:
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               quote:
-                id: 13f9decf-c1c3-4946-88b4-b2be9f031db8
+                id: 21db6eac-9196-4493-b63b-3dbb94f0befa
                 breakup:
                   - price:
                       value: "900"
@@ -4738,13 +4700,17 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: BPP returns the updated order with the manual review form.
+        description: The BPP returns the order updated with the nominee details, along
+          with a manual review form requesting any additional documents needed
+          to complete underwriting.
   - api: dynamic_form
     action_id: manual_review_form
     owner: BPP
     responseFor: null
     unsolicited: false
-    description: The BPP presents a dynamic form requesting supporting documents from the applicant required for manual underwriting review of the Health Insurance application.
+    description: The BPP presents a dynamic form requesting supporting documents
+      from the applicant required for manual underwriting review of the Health
+      Insurance application.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICByZXR1cm4gZGVmYXVsdFBheWxvYWQ7Cn0=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQ==
@@ -4760,13 +4726,18 @@ steps:
           formId: <%= formId %>
           transactionId: <%= JSON.parse(submissionData).transaction_id %>
         type: request
-        description: BPP serves the manual review form.
+        description: The BPP presents a dynamic form requesting supporting documents
+          from the applicant required for manual underwriting review of the
+          Health Insurance application.
   - api: on_status
     action_id: on_status_unsolicited8
     owner: BPP
     responseFor: null
     unsolicited: true
-    description: The BPP sends an unsolicited status update informing the BAP of the outcome of the manual underwriting review (e.g. approved or requires further action), which determines whether the order can proceed to confirmation.
+    description: The BPP sends an unsolicited status update informing the BAP of the
+      outcome of the manual underwriting review (e.g. approved or requires
+      further action), which determines whether the order can proceed to
+      confirmation.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCgogIGNvbnN0IHN1Ym1pc3Npb25faWQgPSBzZXNzaW9uRGF0YT8ubWFudWFsX3Jldmlld19mb3JtOwogIGNvbnN0IGZvcm1fc3RhdHVzID0gc3VibWlzc2lvbl9pZCA/ICJTVUNDRVNTIgogICAgOiAiUEVORElORyI7CgoKCiAgY29uc3QgeGlucHV0ID0gewogICAgImZvcm0iOiB7CiAgICAgICJpZCI6ICJGMDciCiAgICB9LAogICAgImZvcm1fcmVzcG9uc2UiOiB7CiAgICAgICJzdGF0dXMiOiAiU1VDQ0VTUyIsCiAgICAgICJzdWJtaXNzaW9uX2lkIjogIjZhZTgwZjdkLTFmZTItNGJiMi04ZWFkLThjM2MyZGVkOTM1OCIKICAgIH0KICB9CgogIGlmKHNlc3Npb25EYXRhLm9uX2luaXRfb3JkZXIpewogIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIgPSBzZXNzaW9uRGF0YS5vbl9pbml0X29yZGVyWzBdOwogIAogIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF0ueGlucHV0ID0geGlucHV0OwoKfQoKIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXSkgewogICAgICBjb25zdCBpdGVtID0gZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXTsKCiAgICAgIGl0ZW0ueGlucHV0ID0gaXRlbS54aW5wdXQgfHwge307CgogICAgICBpZiAoaXRlbS54aW5wdXQuZm9ybSkgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm0uaWQgPSBzZXNzaW9uRGF0YS5mb3JtX2lkWzBdIHx8ICJGMDciOwogICAgICB9CgogICAgICBpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlID0gaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZSB8fCB7fTsKCiAgICAgIGlmIChmb3JtX3N0YXR1cykgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3RhdHVzID0gZm9ybV9zdGF0dXM7CiAgICAgIH0KCiAgICAgIGlmIChzdWJtaXNzaW9uX2lkKSB7CiAgICAgICAgaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZS5zdWJtaXNzaW9uX2lkID0gc3VibWlzc2lvbl9pZDsKICAgICAgfQogICAgfQogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQ==
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICAgaWYgKCF0YXJnZXRQYXlsb2FkPy5jb250ZXh0Py50cmFuc2FjdGlvbl9pZCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiAzMDAwLAogICAgICBkZXNjcmlwdGlvbjogImNvbnRleHQudHJhbnNhY3Rpb25faWQgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgLy8gVmFsaWRhdGUgb3JkZXIKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAibWVzc2FnZS5vcmRlciBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICAvLyBWYWxpZGF0ZSBpdGVtCiAgaWYgKCF0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiAzMDAxLAogICAgICBkZXNjcmlwdGlvbjogIm9yZGVyLml0ZW1zWzBdIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIC8vIFZhbGlkYXRlIHhpbnB1dAogIGNvbnN0IGl0ZW0gPSB0YXJnZXRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF07CgogIGlmICghaXRlbT8ueGlucHV0KSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAiaXRlbS54aW5wdXQgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgaWYgKCFpdGVtPy54aW5wdXQ/LmZvcm0/LmlkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAieGlucHV0LmZvcm0uaWQgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAKICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -4807,9 +4778,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: on_status
-            timestamp: 2026-10-01T09:49:36.449Z
+            timestamp: 2026-11-19T11:38:51.488Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: f410cc6e-63c6-47ef-8653-0fb10314c7ba
+            message_id: a544d3ca-b0aa-4f9a-a699-d51320b033fc
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -4828,7 +4799,7 @@ steps:
                     contact:
                       email: joe.adam@abc.org
                       phone: +91-9999999999
-                  id: 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                  id: 2250f730-1e63-4350-b38e-15d2de989119
                   type: POLICY
                   agent:
                     person:
@@ -4894,10 +4865,10 @@ steps:
                     label: TENURE
                   xinput:
                     form:
-                      id: f2eae8c5-5ff7-4242-944c-c72faf8040f5
+                      id: e2b9a6d8-505c-4da1-8f41-e1c1aa73952a
                     form_response:
                       status: SUCCESS
-                      submission_id: 55cae15c-a145-4061-afb5-617c84871e4b
+                      submission_id: ec846f67-b8b3-4e4b-b356-f792cc074c1b
                   add_ons:
                     - id: A1
                       descriptor:
@@ -4919,8 +4890,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -4945,14 +4915,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
                   fulfillment_ids:
-                    - 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                    - 2250f730-1e63-4350-b38e-15d2de989119
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -4962,20 +4931,19 @@ steps:
                     bank_code: SBIN0001234
                     currency: INR
                     amount: "2900"
-                  id: b9e12340-5c25-47ab-819b-66fb04ece778
+                  id: 87c6fca7-f1cc-4ba2-8861-1e1a22307399
               provider:
                 descriptor:
-                  long_desc:
-                    ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
+                  long_desc: ABC Insurance Ltd. Deals in multiple Insurance Services like Health,
                     Motor, Marine etc
                   name: ABC Insurance Ltd.
                   short_desc: "ABC Insurance Ltd. India "
                   images:
                     - url: https://www.abcinsurance.com/content/dam/abc/india/assets/images/header/logo.png
                       size_type: xs
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               quote:
-                id: 13f9decf-c1c3-4946-88b4-b2be9f031db8
+                id: 21db6eac-9196-4493-b63b-3dbb94f0befa
                 breakup:
                   - price:
                       value: "900"
@@ -5026,14 +4994,19 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: please add relevant description
-
+        description: The BPP sends an unsolicited status update informing the BAP of the
+          outcome of the manual underwriting review (e.g. approved or requires
+          further action), which determines whether the order can proceed to
+          confirmation.
   - api: init
     action_id: init5
     owner: BAP
     responseFor: null
     unsolicited: false
-    description: The BAP submits init again now that manual underwriting review is complete, carrying forward the manual review form's completion status (form id and submission_id) in the item's xinput, so the order can proceed to confirmation.
+    description: The BAP submits init again now that manual underwriting review is
+      complete, carrying forward the manual review form's completion status
+      (form id and submission_id) in the item's xinput, so the order can proceed
+      to confirmation.
     mock:
       generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogVGhpcyBmdW5jdGlvbiBhbGxvd3MgY3VzdG9taXphdGlvbiBvZiB0aGUgZGVmYXVsdCBwYXlsb2FkIHVzaW5nIHNlc3Npb24gZGF0YQogKiBmcm9tIHByZXZpb3VzIHN0ZXBzIGFuZCB1c2VyIGlucHV0cy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSBkZWZhdWx0UGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhLnVzZXJfaW5wdXRzIC0gVXNlci1wcm92aWRlZCBpbnB1dCB2YWx1ZXMgZm9yIHRoaXMgc3RlcC4KICogQHBhcmFtIHsqfSBzZXNzaW9uRGF0YS5ba2V5XSAtIEFueSBzYXZlZCBkYXRhIGZyb20gcHJldmlvdXMgc3RlcHMgKGRlZmluZWQgaW4gc2F2ZURhdGEgY29uZmlnKS4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IFRoZSBnZW5lcmF0ZWQgcGF5bG9hZCBvYmplY3QgdG8gYmUgc2VudCBpbiB0aGUgQVBJIHJlcXVlc3QuCiAqLwphc3luYyBmdW5jdGlvbiBnZW5lcmF0ZShkZWZhdWx0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKCgogIGNvbnN0IHN1Ym1pc3Npb25faWQgPSBzZXNzaW9uRGF0YT8ubWFudWFsX3Jldmlld19mb3JtCiAgY29uc3QgZm9ybV9zdGF0dXMgPSBzdWJtaXNzaW9uX2lkID8gIlNVQ0NFU1MiCiAgICA6ICJQRU5ESU5HIjsKCiAgY29uc3QgeGlucHV0ID0gewogICAgImZvcm0iOiB7CiAgICAgICJpZCI6ICJGMDciCiAgICB9LAogICAgImZvcm1fcmVzcG9uc2UiOiB7CiAgICAgICJzdGF0dXMiOiAiU1VDQ0VTUyIsCiAgICAgICJzdWJtaXNzaW9uX2lkIjogImY3ZGYwODRhLTQ4M2MtNDJlMi05YWViLTlkNmU2Zjk1YTVlOCIKICAgIH0KICB9CiAgaWYgKHNlc3Npb25EYXRhLmluaXRfb3JkZXIpIHsKICAgIGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIgPSBzZXNzaW9uRGF0YS5pbml0X29yZGVyWzBdOwogICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHMgPSBzZXNzaW9uRGF0YS5vbl9pbml0X2Z1bGZpbGxtZW50c1swXTsKICAgIGRlbGV0ZSBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLmZ1bGZpbGxtZW50c1swXT8uYWdlbnQ7CiAgICAgZGVmYXVsdFBheWxvYWQubWVzc2FnZS5vcmRlci5mdWxmaWxsbWVudHNbMF0uY3VzdG9tZXIgPSBzZXNzaW9uRGF0YT8uY3VzdG9tZXJbMF07CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLnBheW1lbnRzWzBdLmlkID0gc2Vzc2lvbkRhdGEucGF5bWVudHNbMF0uaWQ7CiAgICBkZWZhdWx0UGF5bG9hZC5tZXNzYWdlLm9yZGVyLml0ZW1zWzBdLnhpbnB1dCA9IHhpbnB1dDsKCiAgfQoKICAgIGlmIChkZWZhdWx0UGF5bG9hZC5tZXNzYWdlPy5vcmRlcj8uaXRlbXMpIHsKICAgICAgY29uc3QgaXRlbSA9IGRlZmF1bHRQYXlsb2FkLm1lc3NhZ2Uub3JkZXIuaXRlbXNbMF07CgogICAgICBpdGVtLnhpbnB1dCA9IGl0ZW0ueGlucHV0IHx8IHt9OwoKICAgICAgaWYgKGl0ZW0ueGlucHV0LmZvcm0pIHsKICAgICAgICBpdGVtLnhpbnB1dC5mb3JtLmlkID0gc2Vzc2lvbkRhdGEuZm9ybV9pZFswXSB8fCAiRjA3IjsKICAgICAgfQoKICAgICAgaXRlbS54aW5wdXQuZm9ybV9yZXNwb25zZSA9IGl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2UgfHwge307CgogICAgICBpZiAoZm9ybV9zdGF0dXMpIHsKICAgICAgICBpdGVtLnhpbnB1dC5mb3JtX3Jlc3BvbnNlLnN0YXR1cyA9IGZvcm1fc3RhdHVzOwogICAgICB9CgogICAgICBpZiAoc3VibWlzc2lvbl9pZCkgewogICAgICAgIGl0ZW0ueGlucHV0LmZvcm1fcmVzcG9uc2Uuc3VibWlzc2lvbl9pZCA9IHN1Ym1pc3Npb25faWQ7CiAgICAgIH0KICAgIH0KCgogIHJldHVybiBkZWZhdWx0UGF5bG9hZDsKfQo=
       validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogCiAqIEBwYXJhbSB7T2JqZWN0fSB0YXJnZXRQYXlsb2FkIC0gVGhlIGluY29taW5nIHJlcXVlc3QgcGF5bG9hZCB0byB2YWxpZGF0ZS4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICogCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiB2YWxpZGF0ZSh0YXJnZXRQYXlsb2FkLCBzZXNzaW9uRGF0YSkgewogICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQ/LnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dC50cmFuc2FjdGlvbl9pZCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICAvLyBWYWxpZGF0ZSBvcmRlcgogIGlmICghdGFyZ2V0UGF5bG9hZD8ubWVzc2FnZT8ub3JkZXIpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJtZXNzYWdlLm9yZGVyIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIC8vIFZhbGlkYXRlIHBheW1lbnQKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyPy5wYXltZW50cz8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAib3JkZXIucGF5bWVudHNbMF0gaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgLy8gVmFsaWRhdGUgZm9ybSByZXNwb25zZQogIGNvbnN0IGl0ZW0gPSB0YXJnZXRQYXlsb2FkPy5tZXNzYWdlPy5vcmRlcj8uaXRlbXM/LlswXTsKCiAgaWYgKCFpdGVtPy54aW5wdXQ/LmZvcm1fcmVzcG9uc2U/LnN1Ym1pc3Npb25faWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJ4aW5wdXQuZm9ybV9yZXNwb25zZS5zdWJtaXNzaW9uX2lkIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIGlmICghaXRlbT8ueGlucHV0Py5mb3JtX3Jlc3BvbnNlPy5zdGF0dXMpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJ4aW5wdXQuZm9ybV9yZXNwb25zZS5zdGF0dXMgaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KICByZXR1cm4geyB2YWxpZDogdHJ1ZSwgY29kZTogMjAwLCBkZXNjcmlwdGlvbjogIlZhbGlkIHJlcXVlc3QiIH07Cn0=
@@ -5074,9 +5047,9 @@ steps:
           context:
             domain: ONDC:FIS13
             action: init
-            timestamp: 2026-10-01T09:49:34.297Z
+            timestamp: 2026-11-19T11:38:51.505Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 98bd1113-cece-4013-8ba7-f176a196be15
+            message_id: 741d755d-0769-4f04-92f1-376a02c61858
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5097,17 +5070,17 @@ steps:
                       phone: +91-9999999999
                     person:
                       name: Joe Adam
-                  id: 4cd9f79a-89cb-4aa2-8499-41eb5d1f112a
+                  id: 2250f730-1e63-4350-b38e-15d2de989119
                   type: POLICY
               items:
                 - id: CHILD_ITEM_ID_I1
                   parent_item_id: I1
                   xinput:
                     form:
-                      id: 060c2558-66c6-4c56-a970-67419b772ee9
+                      id: e2b9a6d8-505c-4da1-8f41-e1c1aa73952a
                     form_response:
                       status: SUCCESS
-                      submission_id: aea0ace3-25d1-4eb0-ba37-09ce49d43acd
+                      submission_id: 5bcf60c4-9c94-45f1-9208-be87897bb199
                   add_ons:
                     - id: A1
                       descriptor:
@@ -5129,8 +5102,7 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
@@ -5155,14 +5127,13 @@ steps:
                               value: "50000"
                             - descriptor:
                                 code: NOMINEE_DETAILS
-                                short_desc:
-                                  Describes the format as 'Salutation | First Name | Middle Name |
+                                short_desc: Describes the format as 'Salutation | First Name | Middle Name |
                                   Last Name | Relationship | Contact Number'
                                   represents a full name structure, where the
                                   values are separated by a pipe (|) symbol
                               value: Mr. | Joe | Wick | Adams | Son | +91-9988776655
               provider:
-                id: b71194d5-1509-4689-8027-e4d237853469
+                id: f228ed28-d290-481f-9edf-0ce321623ff5
               payments:
                 - collected_by: BPP
                   status: NOT-PAID
@@ -5185,16 +5156,21 @@ steps:
                         code: OFFLINE_CONTRACT
                       value: "true"
         type: request
-        description: BAP submits init again after manual underwriting review is complete.
+        description: The BAP submits init again now that manual underwriting review is
+          complete, carrying forward the manual review form's completion status
+          (form id and submission_id) in the item's xinput, so the order can
+          proceed to confirmation.
   - api: on_init
     action_id: on_init5_policy_booking_rejected
     owner: BPP
     responseFor: init5
     unsolicited: false
-    description: The BPP rejects the init request with error code 81208 ("Policy booking rejection"), indicating the insurer failed to continue with the policy booking for offer rejection.
+    description: The BPP rejects the init request with error code 81208 ("Policy
+      booking rejection"), indicating the insurer failed to continue with the
+      policy booking for offer rejection.
     mock:
-      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogTW9zdGx5IHN0YXRpYyBlcnJvciByZXNwb25zZSwgYnV0IHdlIGNhbiB1cGRhdGUgYW5kIHJldHVybiBoZXJlIGlmIG5lZWRlZC4KICoKICogQHBhcmFtIHtPYmplY3R9IGV4aXN0aW5nUGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICoKICogQHJldHVybnMge09iamVjdH0gVGhlIGdlbmVyYXRlZCBwYXlsb2FkIG9iamVjdCB0byBiZSBzZW50IGluIHRoZSBBUEkgcmVxdWVzdC4KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGV4aXN0aW5nUGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCB7IGNvbnRleHQgfSA9IGV4aXN0aW5nUGF5bG9hZDsKICByZXR1cm4gewogICAgY29udGV4dCwKICAgIGVycm9yOiB7CiAgICAgIGNvZGU6ICI4MTIwOCIsCiAgICAgIG1lc3NhZ2U6ICJQb2xpY3kgYm9va2luZyByZWplY3Rpb24iCiAgICB9CiAgfTsKfQo=
-      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICoKICogQHBhcmFtIHtPYmplY3R9IHRhcmdldFBheWxvYWQgLSBUaGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIHRvIHZhbGlkYXRlLgogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKgogKiBAcmV0dXJucyB7T2JqZWN0fSB7IHZhbGlkOiBib29sZWFuLCBjb2RlOiBudW1iZXIsIGRlc2NyaXB0aW9uOiBzdHJpbmcgfQogKi8KZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQ/LnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dC50cmFuc2FjdGlvbl9pZCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAibWVzc2FnZS5vcmRlciBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKICBpZiAoIXRhcmdldFBheWxvYWQ/Lm1lc3NhZ2U/Lm9yZGVyPy5pdGVtcz8uWzBdKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDEsCiAgICAgIGRlc2NyaXB0aW9uOiAib3JkZXIuaXRlbXNbMF0gaXMgcmVxdWlyZWQiCiAgICB9OwogIH0KCiAgY29uc3QgaXRlbSA9IHRhcmdldFBheWxvYWQubWVzc2FnZS5vcmRlci5pdGVtc1swXTsKCiAgaWYgKCFpdGVtPy54aW5wdXQ/LmZvcm1fcmVzcG9uc2U/LnN1Ym1pc3Npb25faWQpIHsKICAgIHJldHVybiB7CiAgICAgIHZhbGlkOiBmYWxzZSwKICAgICAgY29kZTogMzAwMSwKICAgICAgZGVzY3JpcHRpb246ICJ4aW5wdXQuZm9ybV9yZXNwb25zZS5zdWJtaXNzaW9uX2lkIGlzIHJlcXVpcmVkIgogICAgfTsKICB9CgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQo=
+      generate: LyoqCiAqIEdlbmVyYXRlcyB0aGUgbW9jayBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICogTW9zdGx5IHN0YXRpYyBlcnJvciByZXNwb25zZSwgYnV0IHdlIGNhbiB1cGRhdGUgYW5kIHJldHVybiBoZXJlIGlmIG5lZWRlZC4KICoKICogQHBhcmFtIHtPYmplY3R9IGV4aXN0aW5nUGF5bG9hZCAtIFRoZSBiYXNlIHBheWxvYWQgb2JqZWN0IHdpdGggY29udGV4dCBhbHJlYWR5IHBvcHVsYXRlZC4KICogQHBhcmFtIHtPYmplY3R9IHNlc3Npb25EYXRhIC0gRGF0YSBjb2xsZWN0ZWQgZnJvbSBwcmV2aW91cyB0cmFuc2FjdGlvbiBzdGVwcy4KICoKICogQHJldHVybnMge09iamVjdH0gVGhlIGdlbmVyYXRlZCBwYXlsb2FkIG9iamVjdCB0byBiZSBzZW50IGluIHRoZSBBUEkgcmVxdWVzdC4KICovCmFzeW5jIGZ1bmN0aW9uIGdlbmVyYXRlKGV4aXN0aW5nUGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBjb25zdCB7IGNvbnRleHQgfSA9IGV4aXN0aW5nUGF5bG9hZDsKICAgIGNvbnN0IHVzZXJJbnB1dHMgPSBzZXNzaW9uRGF0YS51c2VyX2lucHV0cyB8fCB7fTsKICAgIGlmICh1c2VySW5wdXRzPy5Qb2xpY3lfc3RhdHVzPT0gIlJFSkVDVEVEIikgewogIHJldHVybiB7CiAgICBjb250ZXh0LAogICAgZXJyb3I6IHsKICAgICAgY29kZTogIjgxMjA4IiwKICAgICAgbWVzc2FnZTogIlBvbGljeSBib29raW5nIHJlamVjdGlvbiIKICAgIH0KICB9OwogIH0KIAp9Cg==
+      validate: LyoqCiAqIFZhbGlkYXRlcyB0aGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIGZvciBhbiBBUEkgY2FsbCBpbiB0aGUgdHJhbnNhY3Rpb24gZmxvdy4KICoKICogQHBhcmFtIHtPYmplY3R9IHRhcmdldFBheWxvYWQgLSBUaGUgaW5jb21pbmcgcmVxdWVzdCBwYXlsb2FkIHRvIHZhbGlkYXRlLgogKiBAcGFyYW0ge09iamVjdH0gc2Vzc2lvbkRhdGEgLSBEYXRhIGNvbGxlY3RlZCBmcm9tIHByZXZpb3VzIHRyYW5zYWN0aW9uIHN0ZXBzLgogKgogKiBAcmV0dXJucyB7T2JqZWN0fSB7IHZhbGlkOiBib29sZWFuLCBjb2RlOiBudW1iZXIsIGRlc2NyaXB0aW9uOiBzdHJpbmcgfQogKi8KZnVuY3Rpb24gdmFsaWRhdGUodGFyZ2V0UGF5bG9hZCwgc2Vzc2lvbkRhdGEpIHsKICBpZiAoIXRhcmdldFBheWxvYWQ/LmNvbnRleHQ/LnRyYW5zYWN0aW9uX2lkKSB7CiAgICByZXR1cm4gewogICAgICB2YWxpZDogZmFsc2UsCiAgICAgIGNvZGU6IDMwMDAsCiAgICAgIGRlc2NyaXB0aW9uOiAiY29udGV4dC50cmFuc2FjdGlvbl9pZCBpcyByZXF1aXJlZCIKICAgIH07CiAgfQoKCgogIHJldHVybiB7IHZhbGlkOiB0cnVlLCBjb2RlOiAyMDAsIGRlc2NyaXB0aW9uOiAiVmFsaWQgcmVxdWVzdCIgfTsKfQo=
       requirements: LyoqCiAqIENoZWNrcyBpZiB0aGUgcmVxdWlyZW1lbnRzIGZvciBwcm9jZWVkaW5nIHdpdGggdGhlIEFQSSBjYWxsIGFyZSBtZXQuCiAqCiAqIEBwYXJhbSB7T2JqZWN0fSBzZXNzaW9uRGF0YSAtIERhdGEgY29sbGVjdGVkIGZyb20gcHJldmlvdXMgdHJhbnNhY3Rpb24gc3RlcHMuCiAqCiAqIEByZXR1cm5zIHtPYmplY3R9IHsgdmFsaWQ6IGJvb2xlYW4sIGNvZGU6IG51bWJlciwgZGVzY3JpcHRpb246IHN0cmluZyB9CiAqLwpmdW5jdGlvbiBtZWV0c1JlcXVpcmVtZW50cyhzZXNzaW9uRGF0YSkgewogIGlmICghc2Vzc2lvbkRhdGEudHJhbnNhY3Rpb25JZCkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiAyMDMsCiAgICAgIGRlc2NyaXB0aW9uOiAiTm8gdHJhbnNhY3Rpb25faWQgYXZhaWxhYmxlIGluIHNlc3Npb24gZGF0YSIKICAgIH07CiAgfQoKICBpZiAoIXNlc3Npb25EYXRhLm9uX2luaXRfb3JkZXI/LlswXSkgewogICAgcmV0dXJuIHsKICAgICAgdmFsaWQ6IGZhbHNlLAogICAgICBjb2RlOiAyMDMsCiAgICAgIGRlc2NyaXB0aW9uOiAiTm8gb25faW5pdF9vcmRlciBhdmFpbGFibGUgaW4gc2Vzc2lvbiBkYXRhIgogICAgfTsKICB9CiAgcmV0dXJuIHsgdmFsaWQ6IHRydWUsIGNvZGU6IDIwMCwgZGVzY3JpcHRpb246ICJSZXF1aXJlbWVudHMgbWV0IiB9Owp9Cg==
       defaultPayload:
         context:
@@ -5227,16 +5203,30 @@ steps:
         bppUri: $.context.bpp_uri
         city_code: $.context.location.city.code
         error: $.error
-      inputs: {}
+      inputs:
+        id: fis13_search
+        jsonSchema:
+          $schema: http://json-schema.org/draft-07/schema#
+          type: object
+          properties:
+            Policy_status:
+              type: string
+              title: Policy Status
+              enum:
+                - REJECTED
+              default: REJECTED
+          required:
+            - Policy_status
+          additionalProperties: true
     examples:
       - name: example for on_init
         payload:
           context:
             domain: ONDC:FIS13
             action: on_init
-            timestamp: 2026-10-01T09:49:34.322Z
+            timestamp: 2026-11-19T11:38:53.091Z
             transaction_id: 8a5f94c0-59d7-42a2-9035-d5c725b6fda4
-            message_id: 98bd1113-cece-4013-8ba7-f176a196be15
+            message_id: 741d755d-0769-4f04-92f1-376a02c61858
             bap_id: bap.example.com
             bap_uri: https://bap.example.com
             ttl: PT30S
@@ -5252,8 +5242,9 @@ steps:
             code: "81208"
             message: Policy booking rejection
         type: request
-        description: BPP rejects init with a policy booking rejection (error 81208) after the insurer fails to continue with the policy booking for offer rejection.
-
+        description: The BPP rejects the init request with error code 81208 ("Policy
+          booking rejection"), indicating the insurer failed to continue with
+          the policy booking for offer rejection.
 transaction_history: []
 validationLib: ""
 helperLib: LyoKICBDdXN0b20gaGVscGVyIGZ1bmN0aW9ucyBhdmFpbGFibGUgaW4gYWxsIG1vY2sgZ2VuZXJhdGlvbiBmdW5jdGlvbnMuCiAgdGhlc2UgYXJlIGFwcGVuZGVkIGJlbG93IHRoZSBnZW5lcmF0ZSBmdW5jdGlvbiBmb3IgZWFjaCBzdGVwLgoqLwoKY29uc3QgY3JlYXRlRm9ybVVSTCA9IChkb21haW4sIGZvcm1JZCwgc2Vzc2lvbkRhdGEpID0+IHsKICBjb25zdCBiYXNlVVJMID0gc2Vzc2lvbkRhdGEubW9ja0Jhc2VVcmw7CiAgY29uc3QgdHJhbnNhY3Rpb25JZCA9IHNlc3Npb25EYXRhLnRyYW5zYWN0aW9uSWRbMF07CiAgY29uc3Qgc2Vzc2lvbklkID0gc2Vzc2lvbkRhdGEuc2Vzc2lvbklkOwogIHJldHVybiBgJHtiYXNlVVJMfS9mb3Jtcy8ke2RvbWFpbn0vJHtmb3JtSWR9Lz90cmFuc2FjdGlvbl9pZD0ke3RyYW5zYWN0aW9uSWR9JnNlc3Npb25faWQ9JHtzZXNzaW9uSWR9YDsKfQoKLy8gR2VuZXJhdGVzIGEgVVVJRCB2NApmdW5jdGlvbiB1dWlkdjQoKSB7CiAgcmV0dXJuICd4eHh4eHh4eC14eHh4LTR4eHgteXh4eC14eHh4eHh4eHh4eHgnLnJlcGxhY2UoL1t4eV0vZywgZnVuY3Rpb24gKGMpIHsKICAgIGNvbnN0IHIgPSBNYXRoLnJhbmRvbSgpICogMTYgfCAwOwogICAgY29uc3QgdiA9IGMgPT09ICd4JyA/IHIgOiAociAmIDB4MyB8IDB4OCk7CiAgICByZXR1cm4gdi50b1N0cmluZygxNik7CiAgfSk7Cn0KCi8vIEdlbmVyYXRlIGEgNiBkaWdpdCBzdHJpbmcgSUQKZnVuY3Rpb24gZ2VuZXJhdGU2RGlnaXRJZCgpIHsKICByZXR1cm4gTWF0aC5mbG9vcigxMDAwMDAgKyBNYXRoLnJhbmRvbSgpICogOTAwMDAwKS50b1N0cmluZygpOwp9CgovLyBSZXR1cm5zIHRoZSBjdXJyZW50IElTTyB0aW1lc3RhbXAKZnVuY3Rpb24gY3VycmVudFRpbWVzdGFtcCgpIHsKICByZXR1cm4gbmV3IERhdGUoKS50b0lTT1N0cmluZygpOwp9CgovLyBDb252ZXJ0cyBJU08gODYwMSBkdXJhdGlvbiBzdHJpbmcgdG8gdG90YWwgc2Vjb25kcwpjb25zdCBpc29EdXJUb1NlYyA9IChkdXJhdGlvbikgPT4gewogIGNvbnN0IGR1clJFID0gL1AoKGQrKVkpPygoZCspTSk/KChkKylXKT8oKGQrKUQpP1Q/KChkKylIKT8oKGQrKU0pPygoZCspUyk/LzsKICBjb25zdCBzID0gZHVyUkUuZXhlYyhkdXJhdGlvbik7CiAgaWYgKCFzKSByZXR1cm4gMDsKCiAgcmV0dXJuIChOdW1iZXIocz8uWzJdKSB8fCAwKSAqIDMxNTM2MDAwICsKICAgIChOdW1iZXIocz8uWzRdKSB8fCAwKSAqIDI2MjgyODggKwogICAgKE51bWJlcihzPy5bNl0pIHx8IDApICogNjA0ODAwICsKICAgIChOdW1iZXIocz8uWzhdKSB8fCAwKSAqIDg2NDAwICsKICAgIChOdW1iZXIocz8uWzEwXSkgfHwgMCkgKiAzNjAwICsKICAgIChOdW1iZXIocz8uWzEyXSkgfHwgMCkgKiA2MCArCiAgICAoTnVtYmVyKHM/LlsxNF0pIHx8IDApOwp9OwoKY29uc3Qgc2V0Q2l0eUZyb21JbnB1dHMgPSAocGF5bG9hZCwgaW5wdXRzKSA9PiB7CiAgaWYgKCFpbnB1dHMpIHJldHVybiAiKiI7CiAgbGV0IHZlcnNpb24gPSBwYXlsb2FkLmNvbnRleHQudmVyc2lvbiB8fCBwYXlsb2FkLmNvbnRleHQuY29yZV92ZXJzaW9uIHx8ICIyLjAuMCI7CiAgaWYgKHZlcnNpb24uc3RhcnRzV2l0aCgiMSIpKSB7CiAgICBwYXlsb2FkLmNvbnRleHQuY2l0eSA9IGlucHV0cy5jaXR5X2NvZGUgPz8gIioiOwogIH0gZWxzZSB7CiAgICBwYXlsb2FkLmNvbnRleHQubG9jYXRpb24uY2l0eS5jb2RlID0gaW5wdXRzLmNpdHlfY29kZSA/PyAiKiI7CiAgfQp9Cgo=
