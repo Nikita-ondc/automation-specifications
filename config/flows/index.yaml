@@ -346,11 +346,6 @@ flows:
     meta:
       order: 0
       type: PRIMARY
-      secondary_flows:
-        - Claim_Health_Insurance(Individual)
-        - Renew_Health_Insurance(Individual)
-        - Cancel_Health_Insurance(Individual)
-        - Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
       display:
         preferred: true
         sections:
@@ -535,6 +530,11 @@ flows:
     meta:
       order: 2
       type: PRIMARY
+      secondary_flows:
+        - Claim_Health_Insurance(Individual)
+        - Renew_Health_Insurance(Individual)
+        - Cancel_Health_Insurance(Individual)
+        - Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
     usecase: Health Insurance
     tags:
       - WORKBENCH
@@ -543,6 +543,7 @@ flows:
     description: An individual health insurance applicant searches for available plans, selects a suitable offering, and completes the multi-step application process by providing personal and underwriting information before confirming their enrollment request.
     config:
       $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual_.yaml
+
   - type: playground
     id: Health_Insurance_Application(PRE-ORDER-Individual-With-ManualReview)
     meta:
@@ -556,6 +557,31 @@ flows:
     description: Health insurance application journey for individual applicants, involving plan discovery and selection, progressive completion of health and personal information forms, and submission for manual underwriting review and approval.
     config:
       $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual-With-ManualReview_.yaml
+
+  - type: playground
+    id: Health_Insurance_Application(PRE-ORDER-Individual-With-ManualReview)_Offer_Update
+    meta:
+      order: 26
+      type: PRIMARY
+    usecase: Health Insurance
+    tags:
+      - WORKBENCH
+    description: An individual pre-order health insurance journey (with manual underwriting review) that follows the standard application flow, and after the manual review outcome the BPP issues an additional init/on_init round confirming the reviewed order before enrollment is confirmed.
+    config:
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual-With-ManualReview_Offer_Update.yaml
+
+  - type: playground
+    id: Health_Insurance_Application(PRE-ORDER-Individual-With-ManualReview)_Offer_Update_Rejected
+    meta:
+      order: 27
+      type: PRIMARY
+    usecase: Health Insurance
+    tags:
+      - WORKBENCH
+    description: An individual pre-order health insurance journey (with manual underwriting review) that follows the standard application flow up to the manual review outcome, then the BPP rejects the additional init request with error 81208 (Policy booking rejection), ending the flow without proceeding to confirmation.
+    config:
+      $ref: ./HEALTH INSURANCE/Health_Insurance_Application_PRE-ORDER-Individual-With-ManualReview_Offer_Update_Rejected.yaml
+
   - type: playground
     id: Payment_Failure_Health_Insurance(PRE-ORDER-Family-With-ManualReview)
     meta:
