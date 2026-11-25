@@ -346,6 +346,11 @@ flows:
     meta:
       order: 0
       type: PRIMARY
+      secondary_flows:
+        - Claim_Health_Insurance(Individual)
+        - Renew_Health_Insurance(Individual)
+        - Cancel_Health_Insurance(Individual)
+        - Health_Insurance_Application(Individual)_With_IGM(v-1.0.0)
       display:
         preferred: true
         sections:
