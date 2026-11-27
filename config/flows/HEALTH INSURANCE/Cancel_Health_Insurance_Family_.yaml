@@ -5747,3 +5747,4 @@ extra_steps:
           bppUri: $.context.bpp_uri
           city_code: $.context.location.city.code
           order: $.message.order
+        inputs: {}
